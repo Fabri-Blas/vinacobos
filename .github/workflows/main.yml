@@ -1,28 +1,13 @@
-name: website
+name: pusheos
 
-on: push 
+on: create
 jobs:
-  publish:
+  test:
     runs-on: ubuntu-latest
     steps:
       -
         name: Checkout
         uses: actions/checkout@v2
-      -
-        name: Gen dummy page
-        run: |
-          mkdir public
-          cat > public/index.html <<EOL
-          <!doctype html>
-          <html>
-            <head>
-              <title>GitHub Pages deployed!</title>
-            </head>
-            <body>
-            <p>GitHub Pages with <strong>${{ github.sha }}</strong> commit ID has been deployed through <a href="https://github.com/marketplace/actions/github-pages">GitHub Pages action</a> successfully.</p>
-            </body>
-          </html>
-          EOL
       -
         name: Deploy to GitHub Pages
         if: success()
@@ -30,7 +15,7 @@ jobs:
         with:
           committer: Fabricio Blas <fblas@mobydigital.com>
           fqdn: vinacobos.mobydigital.com
-          commit_message: Desplegando
-          build_dir: public
+          commit_message: Nuevo Push
+          build_dir: build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
