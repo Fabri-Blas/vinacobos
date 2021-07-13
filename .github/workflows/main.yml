@@ -1,6 +1,6 @@
 name: pusheos
 
-on: create
+on: push
 jobs:
   test:
     runs-on: ubuntu-latest
