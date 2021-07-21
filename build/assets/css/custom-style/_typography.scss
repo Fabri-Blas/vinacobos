@@ -1,0 +1,207 @@
+// --------------------------------
+
+// (START) Global editor code https://codyhouse.co/ds/globals/typography
+
+// --------------------------------
+@font-face {
+  font-family: "Gill Sans Regular";
+  src: url(../fonts/gill-sans.otf);
+}
+@font-face {
+  font-family: "Gill Sans Medium";
+  src: url(../fonts/gill-sans-medium.otf);
+}
+@font-face {
+  font-family: "Miller Display Regular";
+  src: url(../fonts/miller-display.otf);
+}
+
+:root {
+  // font family
+  --font-primary: "Miller Display Regular";
+  --font-secondary: "Gill Sans Regular";
+  --font-secondary-medium: "Gill Sans Medium";
+
+  // font size
+  --text-base-size: 0.813em; // body font-size
+  --text-scale-ratio: 1.523; // multiplier used to generate the type scale values 👇
+  
+  // line-height
+  --body-line-height: 1.4;
+  --heading-line-height: 1.2;
+  
+  // capital letters - used in combo with the lhCrop mixin
+  --font-primary-capital-letter: 1;
+
+  // unit - don't modify unless you want to change the typography unit (e.g., from Em to Rem units)
+  --text-unit: 1em; // if not Em units → --text-unit: var(--text-base-size);
+}
+
+:root, * {
+  // type scale
+  --text-xs: 0.35em;
+  --text-sm: 0.695em;
+  --text-md: 1.125em;
+  --text-lg: 1.82em;
+  --text-xl: 2.945em;
+  --text-xxl: 4.765em;
+  --text-xxxl: 7.71em;
+  --text-xxxxl: 12.475em;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+h1, h6 {
+  font-family: var(--font-primary);
+  letter-spacing: 12%;
+}
+h2, h3, h4, h5 {
+  font-family: var(--font-secondary-medium);
+  letter-spacing: 12%;
+}
+
+// font family
+.font-primary { font-family: var(--font-primary); }
+
+// color
+.color-secondary-darker { color: alpha(var(--color-secondary-darker), var(--color-o, 1)); }
+.color-secondary-dark { color: alpha(var(--color-secondary-dark), var(--color-o, 1)); }
+.color-secondary { color: alpha(var(--color-secondary), var(--color-o, 1)); }
+.color-secondary-light { color: alpha(var(--color-secondary-light), var(--color-o, 1)); }
+.color-secondary-lighter { color: alpha(var(--color-secondary-lighter), var(--color-o, 1)); }
+
+.font-primary{
+  font-family: var(--font-primary);
+}
+.font-secondary{
+  font-family: var(--font-secondary);
+}
+.to-upper-case{
+  text-transform: uppercase;
+}
+
+// --------------------------------
+
+// (END) Global editor code
+
+// --------------------------------
+
+// link style
+a, .link {}
+
+mark {
+  background-color: alpha(var(--color-accent), 0.2);
+  color: inherit;
+}
+
+.text-component {
+  --line-height-multiplier: 1;
+  --text-vspace-multiplier: 1;
+
+  blockquote {
+    padding-left: 1em;
+    border-left: 4px solid var(--color-contrast-low);
+  }
+
+  hr {
+    background: var(--color-contrast-low);
+    height: 1px;
+  }
+
+  figcaption {
+    font-size: var(--text-sm);
+    color: var(--color-contrast-medium);
+  }
+}
+
+.article { // e.g., blog posts
+  --body-line-height: 1.58; // set body line-height
+  --text-vspace-multiplier: 1.2; // increase vertical spacing
+}
+
+.fs-big-font{
+  transform: translateY(-20%) translateX(2%);
+  font-size: 450px;
+  color: rgba(0,0,0,.0);
+  letter-spacing: 0.12em;
+  -webkit-text-stroke: 1px rgba(166, 134, 118, .3);
+}
+.fs-big-font2{
+  font-size: 300px;
+  text-align: right;
+  color: rgba(0,0,0,.0);
+  letter-spacing: 0.12em;
+  z-index: 9;
+  -webkit-text-stroke: 1px rgba(166, 134, 118, 1);
+}
+.fs-med-font{
+  transform: translateY(-25%);
+  color: #222222;
+  font-size: 105px;
+  letter-spacing: 0.12em;
+}
+.fs-small-font{
+  font-size: 90px;
+  letter-spacing: 0.17em;
+}
+
+.p-content{
+  color: var(--color-secondary);
+  font-size: 17px;
+  font-family: var(--font-secondary);
+}
+
+@media only screen and (max-width: 1790px) {
+  .fs-big-font{
+    font-size: 250px;
+  }
+  .fs-big-font2{
+    font-size: 250px;
+  }
+  .fs-med-font{
+    font-size: 75px;
+  }
+}
+
+@media only screen and (max-width: 1590px){
+  .fs-small-font{
+    font-size: 70px;
+  }
+}
+@media only screen and (max-width: 1332px) {
+  .fs-big-font{
+    font-size: 150px;
+  }
+  .fs-big-font2{
+    font-size: 150px;
+  }
+  .fs-med-font{
+    font-size: 45px;
+  }
+}
+
+
+@media only screen and (max-width: 1240px){
+  .fs-small-font{
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .fs-small-font{
+    font-size: 55px;
+  }
+}
+
+@media only screen and (max-width: 572px) {
+  .fs-big-font{
+    font-size: 80px;
+  }
+  .fs-big-font2{
+    font-size: 80px;
+  }
+  .fs-med-font{
+    font-size: 25px;
+  }
+}

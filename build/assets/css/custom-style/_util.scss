@@ -1,0 +1,103 @@
+// --------------------------------
+
+// How to create custom utility classes
+
+// --------------------------------
+
+// 👇 your custom utility class
+// .my-util-class { 
+//   property: value;
+// }
+
+// 👇 (optional) create responsive variations - edit only [my-util-class, property, value]
+// @each $breakpoint, $value in $breakpoints { 
+//   @include breakpoint(#{$breakpoint}) {
+//     .my-util-class\@#{$breakpoint} {
+//       property: value;
+//     }
+//   }
+// }
+
+.component-section{
+    position: relative;
+    height: 100vh;
+}
+
+.component-half{
+    height:50vh;
+}
+.inner-component-section-moved{
+    transform: translateY(-15%);
+}
+.component-section-2a{
+    height: 100vh;
+    background: grey;
+}
+.component-section-2b{
+    height: 100vh;
+}
+// .outline-border{
+//     width: 400px;
+//     height: 350px;
+//     background: transparent;
+//     border: 2px solid var(--color-secondary);
+//     position: absolute;
+//     top: 50%;
+//     left: 15%;
+//     transform: translateY(-50%);
+//     z-index: 99;
+// }
+
+
+// .floating-card{
+//     background: var(--color-primary-light);
+//     width: 360px;
+//     height: 300px;
+//     z-index: 99;
+// }
+.video-looping-tab{
+    height: 100vh;
+}
+.model-3d{
+    background: url(../img/3d-model-bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.padding-y-100vh{
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+}
+
+.final-tree{
+    transform: translateY(20%);
+}
+
+footer{
+    z-index: -1;
+}
+
+.line-height-0{
+    line-height: 0;
+}
+#wine-bottle-model{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+#wine-bottle-model canvas{
+    position: absolute;
+    transform: translateX(35%);
+}
+
+#history_img1{
+    width: 100%;
+    transform: scale(1.40) translateX(5%);
+}
+#history_img2{
+    width: 100%;
+    padding: 7%;
+}
+
+

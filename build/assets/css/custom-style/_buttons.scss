@@ -1,0 +1,213 @@
+// --------------------------------
+
+// (START) Global editor code https://codyhouse.co/ds/globals/buttons
+
+// --------------------------------
+
+:root {
+  --btn-font-size: 1em;
+  --btn-padding-x: var(--space-sm);
+  --btn-padding-y: var(--space-xxs);
+  --btn-radius: 0.25em;
+}
+
+button{
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+}
+
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.2;
+  @include fontSmooth;
+  box-shadow: var(--shadow-xs);
+  transition: all 0.2s ease;
+  will-change: transform;
+
+  &:hover {
+    box-shadow: var(--shadow-sm);
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px alpha(var(--color-contrast-higher), 0.15);
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+// themes
+.btn--primary {
+  cursor: pointer;
+  position: absolute;
+  bottom: 7%;
+  left: 8%;
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--color-primary);
+  letter-spacing: 0.12em;
+  width: 120px;
+  text-align: left;
+  background: transparent;
+  text-transform: uppercase;
+  border: 0px;
+  border-bottom: 2px solid black;
+  transition: all 0.5s;
+  padding-bottom: 8px;
+  z-index: 99;
+
+  &:hover{
+    letter-spacing: 0.2em;
+    width: 100px;
+    transition: all 0.5s;
+  }
+}
+.btn--primary-block{
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  letter-spacing: 0.12em;
+  width: 120px;
+  padding-bottom: 8px;
+  padding-left: 0;
+  text-align: left;
+  background: transparent;
+  text-transform: uppercase;
+  border: 0px;
+  border-bottom: 1px solid black;
+  transition: all 0.5s;
+  z-index: 99;
+  &:hover{
+    letter-spacing: 0.2em;
+    width: 100px;
+    transition: all 0.5s;
+  }
+}
+.btn--secondary-block{
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
+  letter-spacing: 0.12em;
+  width: 325px;
+  padding-bottom: 8px;
+  text-align: center;
+  background: transparent;
+  text-transform: uppercase;
+  border: 0px;
+  border-bottom: 1px solid var(--color-secondary);
+  transition: all 0.5s;
+  &:hover{
+    letter-spacing: 0.2em;
+    width: 300px;
+    transition: all 0.5s;
+  }
+}
+.btn--primary-right {
+  cursor: pointer;
+  position: absolute;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+  letter-spacing: 0.12em;
+  width: 110px;
+  text-align: right;
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid var(--color-primary-light);
+  transition: all 0.5s;
+  bottom: 7%;
+  right: 8%;
+  padding-bottom: 8px;
+
+  &:hover{
+    letter-spacing: 0.2em;
+    width: 100px;
+    transition: all 0.5s;
+  }
+}
+
+.btn--nav {
+  font-size: 13px;
+  font-family: var(--font-secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-primary-light) !important;
+  // color: white;
+  letter-spacing: 0;
+  text-align: center;
+  border: 0px;
+  // background: 
+  //     linear-gradient(var(--color-primary-light) 0 0) 
+  //     var(--p, 0) 100% /var(--d, 0) 1px 
+  //     no-repeat;
+  // transition: 0.3s, background-position 0s 0.3s;
+  padding: 0 0 8px 0;
+  margin: 0;
+
+  &:hover{
+    // --d: 100%;
+    // --p: 100%;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.5s;
+    color: var(--color-primary-light) !important;
+  }
+}
+
+.nav--line{
+    background: 
+      linear-gradient(var(--color-primary-light) 0 0) 
+      var(--p, 0) 100% /var(--d, 0) 1px 
+      no-repeat;
+    transition: 0.3s, background-position 0s 0.3s;
+  &:hover {
+    --d: 100%;
+    --p: 100%;
+  }
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: var(--color-white);
+
+  &:hover {
+    background: var(--color-accent-dark);
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px alpha(var(--color-accent), 0.2);
+  }
+}
+
+// feedback
+.btn--disabled, .btn[disabled], .btn[readonly] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+// size
+.btn--sm {
+  font-size: 0.8em;
+}
+
+.btn--md {
+  font-size: 1.2em;
+}
+
+.btn--lg {
+  font-size: 1.4em;
+}
+
+// --------------------------------
+
+// (END) Global editor code
+
+// --------------------------------

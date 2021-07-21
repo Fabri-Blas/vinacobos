@@ -29,19 +29,19 @@
     </div>
 
     <div class="f-header__nav" role="navigation">
-      <div class="f-header__nav-grid justify-between@md container max-width-lg">
+      <div class="f-header__nav-grid justify-between@md container max-width-xxl">
         <div class="f-header__nav-logo-wrapper">
-          <a href="#0" class="f-header__logo">
+          <a href="#0" class="f-header__logo padding-lg">
             <img id="logo" src="./assets/img/logo.svg" alt="Logo">
           </a>
         </div>
 
-        <ul class="f-header__list flex-grow flex-basis-0 justify-center@md">
-          <li class="f-header__item padding-x-md"><a href="#0" class="f-header__link btn--nav">INICIO</a></li>
-          <li class="f-header__item padding-x-md"><a href="#0" class="f-header__link btn--nav">TERROIR</a></li>
-          <li class="f-header__item padding-x-md"><a href="#0" class="f-header__link btn--nav">VINOS</a></li>
-          <li class="f-header__item padding-x-md"><a href="#0" class="f-header__link btn--nav">CONTACTO</a></li>
-          <li class="f-header__item padding-x-md"><a href="#0" class="f-header__link btn--nav">TIENDA</a></li>
+        <ul class="f-header__list padding-top-xl flex-grow flex-basis-0 justify-center@md">
+          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">HISTORIA</a></li>
+          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">TERROIR</a></li>
+          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">VINOS</a></li>
+          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">CONTACTO</a></li>
+          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">TIENDA</a></li>
         </ul>
 
         <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
@@ -54,11 +54,20 @@
   <!-- ================================================MAIN================================================ -->
   <main>
 
+<!-- scroll component -->
+<div class="scroll-indicator-container is-hidden margin-top-xxl display@md" data-title="Meet Couro Azul">
+  <div class="scroll-indicator-wrapper" style="height: 400px;">
+    <div class="scroll-indicator-inner" style="height: 250px;">
+      <span class="scroll-indicator"></span>
+    </div>
+    <div class="title"><h3>Conoce Viña Cobos</h3></div>
+  </div>
+</div>
 
     <!-- -------------------------Componente1y2conreveal------------------------- -->
     <section class="position-relative z-index-2 bg shadow-sm">
       <!-- Componente1 -->
-      <div class="video-bg position-relative">
+      <div id="hero" class="video-bg position-relative">
         <div class="video-bg__media" aria-hidden="true">
           <img src="../../assets/img/video-background-hero-img-1.jpg" alt="Video Preview">
           <video autoplay loop muted playsInline src="./assets/img/video-cobos-malbec_4.mp4"></video>
@@ -78,6 +87,7 @@
     </section>
 
     <section class="revealing-section bg z-index-1 js-revealing-section">
+
       <!-- componente 2 -->
       <div class="model-3d component-section flex flex-column justify-start items-right bg-black text-right">
 
@@ -93,6 +103,32 @@
 
       </div>
     </section>
+
+    <!-- -------------------------Floating Card Mobile------------------------- -->
+    <section class="hide@md">
+      <div class="model-3d">
+        <div class="outline-border flex flex-column justify-center items-center padding-xs">
+          <div class="floating-card flex flex-column justify-center items-center padding-lg">
+            <p class="color-secondary font-primary line-height-lg text-center">Atención al detalle y calidad son
+              nuestros pilares desde el comienzo de Viña Cobos. Un concepto que reflejamos en cada area y cada tarea</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+    <!-- <section class="component-half">
+      <div class="hide@md outline-border flex flex-column justify-center items-center">
+        <div class="floating-card flex flex-column justify-center items-center padding-lg">
+          <h3 class="color-secondary font-primary line-height-lg text-center">
+            Atención al detalle y calidad son nuestros
+             pilares desde el comienzo de Viña Cobos. Un 
+             concepto que reflejamos en cada area y cada 
+             tarea</h3>
+        </div>
+      </div>
+    </section>  -->
 
 
     <!-- -------------------------Double Looping Tabs------------------------- -->
@@ -212,16 +248,25 @@
         </div>
       </div>
 
-      <!-- -------------------------Floating Card------------------------- -->
-      <div class="outline-border flex flex-column justify-center items-center">
+      <!-- -------------------------Floating Card Desktop------------------------- -->
+<!-- 
+      <div class="display@md outline-border flex flex-column justify-center items-center">
         <div class="floating-card flex flex-column justify-center items-center padding-lg">
           <h3 class="color-secondary font-primary line-height-lg text-center">
             Atención al detalle y calidad son nuestros
-             pilares desde el comienzo de Viña Cobos. Un 
-             concepto que reflejamos en cada area y cada 
-             tarea</h3>
+            pilares desde el comienzo de Viña Cobos. Un
+            concepto que reflejamos en cada area y cada
+            tarea</h3>
+        </div>
+      </div> -->
+      <div id="outline-card" class="outline-border flex flex-column justify-center display@md items-center">
+        <svg class="svg-size"><rect id="svg-line" class="svg-border" x="0" y="0" fill="none" stroke="#a68676"></rect></svg>
+        <div id="floating-card" class="floating-card flex flex-column justify-center items-center padding-lg">
+          <h3 id="text-card" class="color-secondary text-uppercase font-primary line-height-lg text-center">
+            Atención al detalle y calidad son nuestros pilares desde el comienzo de Viña Cobos.</h3>
         </div>
       </div>
+
 
       <!-- -------------------------Componente4------------------------- -->
       <div class="component-section-2b">
@@ -330,7 +375,7 @@
                   </li>
                 </ul>
                 <a href="#" class="btn--primary"
-                  style="border-bottom:2px solid var(--color-primary-light) !important; color:var(--color-primary-light) !important">Ver
+                  style="border-bottom:1px solid var(--color-primary-light) !important; color:var(--color-primary-light) !important">Ver
                   Más</a>
               </div>
             </div>
@@ -341,21 +386,22 @@
 
     <!-- -------------------------Componente5------------------------- -->
     <section
-      class="component-section flex flex-column justify-center items-between bg-white text-center padding-top-xxxxl">
-      <h2 class="color-secondary font-primary fs-big-font2">COBOS</h2>
-      <div class="grid padding-x-xxxl">
-        <div class="col-12 col-5@md text-left flex flex-column justify-start padding-bottom-xxxl padding-top-xxl">
+      class="component-section flex flex-column justify-center items-between bg-white text-center margin-top-xxxxl max-width-xxl margin-x-auto">
+      <h2 class="color-secondary font-primary fs-big-font2 margin-bottom-xs@lg">COBOS</h2>
+      <div class="grid padding-x-xxxl@md">
+        <div class="col-12 col-5@lg text-left flex flex-column justify-start padding-bottom-xxxl@md padding-top-xxl">
           <h1 class="letter-spacing-xl">HISTORIA</h1>
           <p class="p-content max-width-xxxs padding-right-xl line-height-lg margin-bottom-lg">Viña Cobos es la visión
             de un soñador que un día asumió el desafío de elaborar vinos como nunca antes en Argentina.</p>
           <a href="#"><button class="btn--primary-block">Ver Más</button></a>
         </div>
-        <div class="col-12 col-7@md">
+        <div class="col-12 col-7@lg padding-x-xxxxl@sm padding-x-xl@md padding-x-md@lg padding-x-0@xl">
           <div class="demo-scroll-fx-grid">
-            <img class="block width-100%" src="./assets/img/historia-parallax-1.png" alt="Image description">
+            <img id="history_img1" class="block" src="./assets/img/historia-parallax-1.png" alt="Image description">
 
-            <img class="block width-100% scroll-fx js-scroll-fx" data-scroll-fx="translateY, -190px, -135px, 0%, 100%"
-              src="./assets/img/historia-parallax-2.png" alt="Image description">
+            <img id="history_img2" class="block scroll-fx js-scroll-fx"
+              data-scroll-fx="translateY, -320px, -250px, 0%, 100%" src="./assets/img/historia-parallax-2.png"
+              alt="Image description">
           </div>
 
         </div>
