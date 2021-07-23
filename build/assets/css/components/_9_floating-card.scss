@@ -1,11 +1,11 @@
 .outline-border{
-    width: 400px;
+    width: 340px;
     height: 350px;
     background: transparent;
     // border: 2px solid var(--color-secondary);
     position: absolute;
     top: 50%;
-    left: 15%;
+    // left: 15%;
     z-index: 99;
     transform: translateY(-50%);
 }
@@ -46,8 +46,8 @@
 
 .floating-card{
     background: var(--color-primary-light);
-    width: 360px;
-    height: 300px;
+    width: 90%;
+    height: 90%;
     z-index: 99;
 }
 

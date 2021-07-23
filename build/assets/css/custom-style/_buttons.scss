@@ -44,7 +44,7 @@ button{
   cursor: pointer;
   position: absolute;
   bottom: 7%;
-  left: 8%;
+  // left: 8%;
   font-size: 13px;
   text-decoration: none;
   color: var(--color-primary);
@@ -61,7 +61,7 @@ button{
 
   &:hover{
     letter-spacing: 0.2em;
-    width: 100px;
+    width: 81px;
     transition: all 0.5s;
   }
 }
@@ -84,7 +84,7 @@ button{
   z-index: 99;
   &:hover{
     letter-spacing: 0.2em;
-    width: 100px;
+    width: 81px;
     transition: all 0.5s;
   }
 }
@@ -129,13 +129,13 @@ button{
 
   &:hover{
     letter-spacing: 0.2em;
-    width: 100px;
+    width: 81px;
     transition: all 0.5s;
   }
 }
 
 .btn--nav {
-  font-size: 13px;
+  font-size: var(--text-md);
   font-family: var(--font-secondary);
   text-decoration: none;
   text-transform: uppercase;

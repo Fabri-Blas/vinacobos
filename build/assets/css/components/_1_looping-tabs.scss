@@ -153,12 +153,13 @@ html:not(.js) {
 
 .loop-position{
   top: 20%;
-  left: 10%;
+  // left: 10%;
   z-index: 3;
 }
 
 .loop-position-right{
   top: 20%;
-  right: 10%;
+  // right: 10%;
   z-index: 3;
+  right: 0;
 }

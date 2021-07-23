@@ -26,3 +26,19 @@ Usage: codyhouse.co/license
     }
   }
 }
+
+// .container-scroll{
+//   scroll-snap-type: y mandatory;
+//   overflow-y: scroll;
+//   height: 100vh;
+//   -ms-overflow-style: none;
+//   scrollbar-width: none;
+
+//   section{
+//     scroll-snap-align: start;
+//   }
+// }
+
+// .container-scroll::-webkit-scrollbar {
+//   display: none;
+// }

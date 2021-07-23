@@ -62,6 +62,7 @@
     background: url(../img/3d-model-bg.png);
     background-position: center;
     background-size: cover;
+    
 }
 
 .padding-y-100vh{
@@ -85,10 +86,18 @@ footer{
     justify-content: center;
     align-items: center;
     z-index: 99;
-}
-#wine-bottle-model canvas{
+    width: 100%;
+    height: 100vh;
     position: absolute;
-    transform: translateX(35%);
+    top: 50%;
+    left: 0;
+    transform: translate(-25%, -50%);
+}
+#wine-bottle-canvas{
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-15deg);
 }
 
 #history_img1{
@@ -99,5 +108,4 @@ footer{
     width: 100%;
     padding: 7%;
 }
-
 

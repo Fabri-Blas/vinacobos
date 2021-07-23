@@ -30,8 +30,8 @@ d.addEventListener('scroll', ()=>{
         }
     }
 
-    sIndicator.setAttribute('style', `height: ${(window.pageYOffset -912) / 30}%`)
-    console.log((window.pageYOffset / 30)-912)
+    sIndicator.setAttribute('style', `height: ${(window.pageYOffset -912) / 40}%`)
+    // console.log((window.pageYOffset -912)/ 40)
 })
 
 

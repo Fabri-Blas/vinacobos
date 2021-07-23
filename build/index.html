@@ -31,17 +31,22 @@
     <div class="f-header__nav" role="navigation">
       <div class="f-header__nav-grid justify-between@md container max-width-xxl">
         <div class="f-header__nav-logo-wrapper">
-          <a href="#0" class="f-header__logo padding-lg">
+          <a href="#0" class="f-header__logo padding-lg margin-top-lg">
             <img id="logo" src="./assets/img/logo.svg" alt="Logo">
           </a>
         </div>
 
-        <ul class="f-header__list padding-top-xl flex-grow flex-basis-0 justify-center@md">
-          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">HISTORIA</a></li>
-          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">TERROIR</a></li>
-          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">VINOS</a></li>
-          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">CONTACTO</a></li>
-          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">TIENDA</a></li>
+        <ul class="f-header__list padding-top-lg margin-left-xl justify-center@md">
+          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0"
+              class="f-header__link btn--nav">HISTORIA</a></li>
+          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0"
+              class="f-header__link btn--nav">TERROIR</a></li>
+          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0"
+              class="f-header__link btn--nav">VINOS</a></li>
+          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0"
+              class="f-header__link btn--nav">CONTACTO</a></li>
+          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0"
+              class="f-header__link btn--nav">TIENDA</a></li>
         </ul>
 
         <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
@@ -54,18 +59,22 @@
   <!-- ================================================MAIN================================================ -->
   <main>
 
-<!-- scroll component -->
-<div class="scroll-indicator-container is-hidden margin-top-xxl display@md" data-title="Meet Couro Azul">
-  <div class="scroll-indicator-wrapper" style="height: 400px;">
-    <div class="scroll-indicator-inner" style="height: 250px;">
-      <span class="scroll-indicator"></span>
+    <!-- scroll component -->
+    <div class="scroll-indicator-container is-hidden margin-top-xxl display@md" data-title="Meet Couro Azul">
+      <div class="scroll-indicator-wrapper" style="height: 400px;">
+        <div class="scroll-indicator-inner" style="height: 250px;">
+          <span class="scroll-indicator"></span>
+        </div>
+        <div class="title">
+          <h3>Conoce Viña Cobos</h3>
+        </div>
+      </div>
     </div>
-    <div class="title"><h3>Conoce Viña Cobos</h3></div>
-  </div>
-</div>
 
     <!-- -------------------------Componente1y2conreveal------------------------- -->
     <section class="position-relative z-index-2 bg shadow-sm">
+      <!-- <div class="container-scroll"> -->
+      <!-- <section> -->
       <!-- Componente1 -->
       <div id="hero" class="video-bg position-relative">
         <div class="video-bg__media" aria-hidden="true">
@@ -87,22 +96,19 @@
     </section>
 
     <section class="revealing-section bg z-index-1 js-revealing-section">
-
+      <!-- <section class="height-100vh"> -->
       <!-- componente 2 -->
-      <div class="model-3d component-section flex flex-column justify-start items-right bg-black text-right">
+      <div id="component-3d" class="model-3d component-section flex flex-column justify-start items-right bg-black text-right">
 
-        <div id="wine-bottle-model" class="position-absolute left-0 top-50% -translate-x-50%"></div>
+        <div id="wine-bottle-model" class="position-absolute top-50% -translate-x-50%"></div>
 
         <div class="padding-x-xxl">
           <h2 class="color-secondary font-primary fs-big-font">1999.</h2>
           <h3 class="color-secondary font-primary fs-med-font">EL VERDADERO REFLEJO</h3>
           <h3 class="color-secondary font-primary fs-med-font">NUESTRO ORIGEN</h3>
         </div>
-
-        <a href="#" class="btn--primary-right">Ver Más</a>
-
-      </div>
-    </section>
+      </section> 
+      <!-- </div>  -->
 
     <!-- -------------------------Floating Card Mobile------------------------- -->
     <section class="hide@md">
@@ -139,24 +145,24 @@
           <div class="width-100%">
             <div>
               <div
-                class="loop-tabs__content loop-position position-absolute flex flex-column justify-center@md text-center text-left@md">
+                class="width-100% width-auto@md loop-tabs__content loop-position margin-left-xxxl@md position-absolute flex flex-column justify-center@md text-center text-left@md">
                 <ul class="loop-tabs__controls js-loop-tabs__controls margin-bottom-lg flex flex-wrap">
-                  <li>
+                  <li class="width-33% width-auto@md">
                     <a href="#timingTab1Panel1"
-                      class="loop-tabs__control loop-tabs__control--selected text-sm padding-md text-uppercase">
-                      <p class="text-base font-secondary color-primary-light">COBOS</p>
+                      class="loop-tabs__control loop-tabs__control--selected text-sm padding-y-md padding-x-lg@md text-uppercase">
+                      <p class="text-md font-secondary color-primary-light">COBOS</p>
                     </a>
                   </li>
 
-                  <li>
-                    <a href="#timingTab1Panel2" class="loop-tabs__control text-sm padding-md text-uppercase">
-                      <p class="text-base font-secondary color-primary-light">V.Designate</p>
+                  <li class="width-33% width-auto@md">
+                    <a href="#timingTab1Panel2" class="loop-tabs__control text-sm padding-y-md padding-x-lg@md text-uppercase">
+                      <p class="text-md font-secondary color-primary-light">V.Designate</p>
                     </a>
                   </li>
 
-                  <li>
-                    <a href="#timingTab1Panel3" class="loop-tabs__control text-sm padding-md text-uppercase">
-                      <p class="text-base font-secondary color-primary-light">VINCULUM</p>
+                  <li class="width-33% width-auto@md">
+                    <a href="#timingTab1Panel3" class="loop-tabs__control text-sm padding-y-md padding-x-lg@md text-uppercase">
+                      <p class="text-md font-secondary color-primary-light">VINCULUM</p>
                     </a>
                   </li>
                 </ul>
@@ -164,7 +170,7 @@
                 <div class="loop-tabs__panels js-loop-tabs__panels margin-bottom-md">
                   <section id="timingTab1Panel1"
                     class="loop-tabs__panel js-loop-tabs__panel text-component loop-tabs__panel--selected">
-                    <p class="text-base font-secondary color-primary-light">La maxima representación de nuestra
+                    <p class="font-secondary color-primary-light" style="font-size:18px">La maxima representación de nuestra
                       <span class="block">filosofía, pasión y maestría</span>
                       <span class="block">combinados para producir un</span>
                       <span class="block">refinado y potente vino. Un icono</span>
@@ -173,7 +179,7 @@
                   </section>
 
                   <section id="timingTab1Panel2" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                    <p class="text-base font-secondary color-primary-light">La maxima representación de nuestra
+                    <p class="font-secondary color-primary-light" style="font-size:18px">La maxima representación de nuestra
                       <span class="block">filosofía, pasión y maestría</span>
                       <span class="block">combinados para producir un</span>
                       <span class="block">refinado y potente vino. Un icono</span>
@@ -182,7 +188,7 @@
                   </section>
 
                   <section id="timingTab1Panel3" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                    <p class="text-base font-secondary color-primary-light">La maxima representación de nuestra
+                    <p class="font-secondary color-primary-light" style="font-size:18px">La maxima representación de nuestra
                       <span class="block">filosofía, pasión y maestría</span>
                       <span class="block">combinados para producir un</span>
                       <span class="block">refinado y potente vino. Un icono</span>
@@ -249,7 +255,7 @@
       </div>
 
       <!-- -------------------------Floating Card Desktop------------------------- -->
-<!-- 
+      <!-- 
       <div class="display@md outline-border flex flex-column justify-center items-center">
         <div class="floating-card flex flex-column justify-center items-center padding-lg">
           <h3 class="color-secondary font-primary line-height-lg text-center">
@@ -259,11 +265,13 @@
             tarea</h3>
         </div>
       </div> -->
-      <div id="outline-card" class="outline-border flex flex-column justify-center display@md items-center">
-        <svg class="svg-size"><rect id="svg-line" class="svg-border" x="0" y="0" fill="none" stroke="#a68676"></rect></svg>
-        <div id="floating-card" class="floating-card flex flex-column justify-center items-center padding-lg">
-          <h3 id="text-card" class="color-secondary text-uppercase font-primary line-height-lg text-center">
-            Atención al detalle y calidad son nuestros pilares desde el comienzo de Viña Cobos.</h3>
+      <div id="outline-card" class="margin-left-xxxl outline-border flex flex-column justify-center display@md items-center">
+        <svg class="svg-size">
+          <rect id="svg-line" class="svg-border" x="0" y="0" fill="none" stroke="#a68676"></rect>
+        </svg>
+        <div id="floating-card" class="floating-card flex  flex-column justify-center items-center padding-lg">
+          <h4 id="text-card" class="text-uppercase font-primary line-height-xl text-center">
+            Atención al detalle y calidad son nuestros pilares desde el comienzo de Viña Cobos.</h4>
         </div>
       </div>
 
@@ -274,24 +282,24 @@
           <div class="width-100%">
             <div>
               <div
-                class="loop-tabs__content loop-position-right position-absolute flex flex-column justify-center@md text-center text-left@md">
+                class="width-100% width-auto@md loop-tabs__content loop-position-right margin-right-xxl@md position-absolute flex flex-column justify-center@md text-center text-left@md">
                 <ul class="loop-tabs__controls js-loop-tabs__controls margin-bottom-lg flex flex-wrap">
-                  <li>
+                  <li class="width-33% width-auto@md">
                     <a href="#timingTab1Panel1"
-                      class="loop-tabs__control loop-tabs__control--selected text-sm padding-md text-uppercase">
-                      <p class="text-base font-secondary color-primary-light">BRAMARE</p>
+                      class="loop-tabs__control loop-tabs__control--selected text-sm padding-y-md padding-x-lg@md text-uppercase">
+                      <h4 class="text-md font-secondary color-primary">BRAMARE</h4>
                     </a>
                   </li>
 
-                  <li>
-                    <a href="#timingTab1Panel2" class="loop-tabs__control text-sm padding-md text-uppercase">
-                      <p class="text-base font-secondary color-primary-light">COCODRILO</p>
+                  <li class="width-33% width-auto@md">
+                    <a href="#timingTab1Panel2" class="loop-tabs__control text-sm padding-y-md padding-x-lg@md text-uppercase">
+                      <h4 class="text-md font-secondary color-primary">COCODRILO</h4>
                     </a>
                   </li>
 
-                  <li>
-                    <a href="#timingTab1Panel3" class="loop-tabs__control text-sm padding-md text-uppercase">
-                      <p class="text-base font-secondary color-primary-light">FELINO</p>
+                  <li class="width-33% width-auto@md">
+                    <a href="#timingTab1Panel3" class="loop-tabs__control text-sm padding-y-md padding-x-lg@md text-uppercase">
+                      <h4 class="text-md font-secondary color-primary">FELINO</h4>
                     </a>
                   </li>
                 </ul>
@@ -299,7 +307,7 @@
                 <div class="loop-tabs__panels js-loop-tabs__panels margin-bottom-md">
                   <section id="timingTab1Panel1"
                     class="loop-tabs__panel js-loop-tabs__panel text-component loop-tabs__panel--selected">
-                    <p class="text-base font-secondary color-primary-light">La maxima representación de nuestra
+                    <p class="font-secondary color-primary" style="font-size:18px">La maxima representación de nuestra
                       <span class="block">filosofía, pasión y maestría</span>
                       <span class="block">combinados para producir un</span>
                       <span class="block">refinado y potente vino. Un icono</span>
@@ -308,7 +316,7 @@
                   </section>
 
                   <section id="timingTab1Panel2" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                    <p class="text-base font-secondary color-primary-light">La maxima representación de nuestra
+                    <p class="font-secondary color-primary" style="font-size:18px">La maxima representación de nuestra
                       <span class="block">filosofía, pasión y maestría</span>
                       <span class="block">combinados para producir un</span>
                       <span class="block">refinado y potente vino. Un icono</span>
@@ -317,7 +325,7 @@
                   </section>
 
                   <section id="timingTab1Panel3" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                    <p class="text-base font-secondary color-primary-light">
+                    <p class="font-secondary color-primary" style="font-size:18px">
                       <span class="block">filosofía, pasión y maestría</span>
                       <span class="block">combinados para producir un</span>
                       <span class="block">refinado y potente vino. Un icono</span>
@@ -339,7 +347,7 @@
 
                       <figure class="hero-video-bg__video" aria-hidden="true">
                         <video class="video-looping-tab" autoplay loop muted playsInline
-                          src="./assets/img/video-cobos-malbec_2.mp4"></video>
+                          src="./assets/img/video-cobos-malbec_5.mp4"></video>
                       </figure>
                     </div>
                   </li>
@@ -354,7 +362,7 @@
 
                       <figure class="hero-video-bg__video" aria-hidden="true">
                         <video class="video-looping-tab" autoplay loop muted playsInline
-                          src="./assets/img/video-cobos-malbec_1.mp4"></video>
+                          src="./assets/img/video-cobos-malbec_5.mp4"></video>
                       </figure>
                     </div>
                   </li>
@@ -369,12 +377,12 @@
 
                       <figure class="hero-video-bg__video" aria-hidden="true">
                         <video class="video-looping-tab" autoplay loop muted playsInline
-                          src="./assets/img/video-cobos-malbec_3.mp4"></video>
+                          src="./assets/img/video-cobos-malbec_5.mp4"></video>
                       </figure>
                     </div>
                   </li>
                 </ul>
-                <a href="#" class="btn--primary"
+                <a href="#" class="btn--primary margin-left-xxl"
                   style="border-bottom:1px solid var(--color-primary-light) !important; color:var(--color-primary-light) !important">Ver
                   Más</a>
               </div>
