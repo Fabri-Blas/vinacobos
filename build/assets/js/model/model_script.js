@@ -47,22 +47,27 @@ setTimeout(() => {
 var originalResize = false;
 
 setTimeout(() => {
+    resizeModel();
     window.addEventListener("resize", () => {
-        if(window.innerWidth < 1024){
-            controls.enabled = false;
-            if (window.innerWidth < 800) {
-                renderer.setSize(window.innerWidth, window.innerWidth);
-                originalResize = false;
-                console.log('3D MODEL RESIZED');
-            }else {
-                if (!originalResize) {
-                    renderer.setSize(800, 800);
-                    originalResize = true;
-                    console.log('ORIGINAL 3D MODEL');
-                }
-            }
-        }else{
-            controls.enabled = true;
-        }
+        resizeModel();
     });
 }, 1500);
+
+function resizeModel(){
+    if(window.innerWidth < 1024){
+        controls.enabled = false;
+        if (window.innerWidth < 800) {
+            renderer.setSize(window.innerWidth, window.innerWidth);
+            originalResize = false;
+            console.log('3D MODEL RESIZED');
+        }else {
+            if (!originalResize) {
+                renderer.setSize(800, 800);
+                originalResize = true;
+                console.log('ORIGINAL 3D MODEL');
+            }
+        }
+    }else{
+        controls.enabled = true;
+    }
+}

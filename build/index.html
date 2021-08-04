@@ -29,23 +29,24 @@
     </div>
 
     <div class="f-header__nav" role="navigation">
-      <div class="f-header__nav-grid justify-between@md container max-width-xxl">
+      <div
+        class="f-header__nav-grid justify-between@md container max-width-xxxl margin-x-auto padding-x-xs@md">
         <div class="f-header__nav-logo-wrapper">
-          <a href="#0" class="f-header__logo padding-lg margin-top-lg">
-            <img id="logo" src="./assets/img/logo.svg" alt="Logo">
+          <a href="#0" class="f-header__logo margin-top-lg">
+            <img style="width: 40px; height: 40px; margin-left: 60px;" id="logo" src="./assets/img/logo.svg" alt="Logo">
           </a>
         </div>
 
-        <ul class="f-header__list padding-top-lg margin-left-xl justify-center@md">
-          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0"
+        <ul class="f-header__list padding-top-lg margin-left-sm justify-center@md">
+          <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
               class="f-header__link btn--nav">HISTORIA</a></li>
-          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0"
+          <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
               class="f-header__link btn--nav">TERROIR</a></li>
-          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0"
+          <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
               class="f-header__link btn--nav">VINOS</a></li>
-          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0"
+          <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
               class="f-header__link btn--nav">CONTACTO</a></li>
-          <li class="f-header__item margin-x-md padding-y-xs nav--line"><a href="#0"
+          <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
               class="f-header__link btn--nav">TIENDA</a></li>
         </ul>
 
@@ -60,7 +61,7 @@
   <main>
 
     <!-- scroll component -->
-    <div class="scroll-indicator-container is-hidden margin-top-xxl display@md" data-title="Meet Couro Azul">
+    <div class="scroll-indicator-container is-hidden margin-top-xxl display@md" data-title="Conoce Viña Cobos">
       <div class="scroll-indicator-wrapper" style="height: 400px;">
         <div class="scroll-indicator-inner" style="height: 250px;">
           <span class="scroll-indicator"></span>
@@ -79,7 +80,7 @@
       <div id="hero" class="video-bg position-relative">
         <div class="video-bg__media" aria-hidden="true">
           <img src="../../assets/img/video-background-hero-img-1.jpg" alt="Video Preview">
-          <video autoplay loop muted playsInline src="./assets/img/video-cobos-malbec_4.mp4"></video>
+          <video autoplay loop muted playsInline src="./assets/img/video-cobos-reveal1.mp4"></video>
         </div>
 
         <div class="container max-width-lg position-relative z-index-2">
@@ -98,7 +99,8 @@
     <section class="revealing-section bg z-index-1 js-revealing-section">
       <!-- <section class="height-100vh"> -->
       <!-- componente 2 -->
-      <div id="component-3d" class="model-3d component-section flex flex-column justify-start items-right bg-black text-right">
+      <div id="component-3d"
+        class="model-3d component-section flex flex-column justify-start items-right bg-black text-right">
 
         <div id="wine-bottle-model" class="position-absolute top-50% -translate-x-50%"></div>
 
@@ -107,8 +109,13 @@
           <h3 class="color-secondary font-primary fs-med-font">EL VERDADERO REFLEJO</h3>
           <h3 class="color-secondary font-primary fs-med-font">NUESTRO ORIGEN</h3>
         </div>
-      </section> 
-      <!-- </div>  -->
+        <div>
+
+          <div
+            class="hide@md position-absolute top-50% left-50% -translate-x-50% -translate-y-50% width-100% height-70% above-model">
+          </div>
+    </section>
+    <!-- </div>  -->
 
     <!-- -------------------------Floating Card Mobile------------------------- -->
     <section class="hide@md">
@@ -145,24 +152,25 @@
           <div class="width-100%">
             <div>
               <div
-                class="width-100% width-auto@md loop-tabs__content loop-position margin-left-xxxl@md position-absolute flex flex-column justify-center@md text-center text-left@md">
+                class="width-100% width-auto@md loop-tabs__content loop-position margin-x-xxl@md padding-x-md@md position-absolute flex flex-column justify-center@md text-center text-left@md">
                 <ul class="loop-tabs__controls js-loop-tabs__controls margin-bottom-lg flex flex-wrap">
                   <li class="width-33% width-auto@md">
                     <a href="#timingTab1Panel1"
-                      class="loop-tabs__control loop-tabs__control--selected text-sm padding-y-md padding-x-lg@md text-uppercase">
-                      <p class="text-md font-secondary color-primary-light">COBOS</p>
+                      class="loop-tabs__control loop-tabs__control--selected  padding-y-md padding-right-lg@md text-uppercase">
+                      <p class=" font-secondary color-primary-light">COBOS</p>
                     </a>
                   </li>
 
                   <li class="width-33% width-auto@md">
-                    <a href="#timingTab1Panel2" class="loop-tabs__control text-sm padding-y-md padding-x-lg@md text-uppercase">
-                      <p class="text-md font-secondary color-primary-light">V.Designate</p>
+                    <a href="#timingTab1Panel2" class="loop-tabs__control  padding-y-md padding-x-lg@md text-uppercase">
+                      <p class=" font-secondary color-primary-light">V.Designate</p>
                     </a>
                   </li>
 
                   <li class="width-33% width-auto@md">
-                    <a href="#timingTab1Panel3" class="loop-tabs__control text-sm padding-y-md padding-x-lg@md text-uppercase">
-                      <p class="text-md font-secondary color-primary-light">VINCULUM</p>
+                    <a href="#timingTab1Panel3"
+                      class="loop-tabs__control  padding-y-md padding-left-lg@md text-uppercase">
+                      <p class=" font-secondary color-primary-light">VINCULUM</p>
                     </a>
                   </li>
                 </ul>
@@ -170,7 +178,8 @@
                 <div class="loop-tabs__panels js-loop-tabs__panels margin-bottom-md">
                   <section id="timingTab1Panel1"
                     class="loop-tabs__panel js-loop-tabs__panel text-component loop-tabs__panel--selected">
-                    <p class="font-secondary color-primary-light" style="font-size:18px">La maxima representación de nuestra
+                    <p class="font-secondary color-primary-light" style="font-size:18px">La maxima representación de
+                      nuestra
                       <span class="block">filosofía, pasión y maestría</span>
                       <span class="block">combinados para producir un</span>
                       <span class="block">refinado y potente vino. Un icono</span>
@@ -179,7 +188,8 @@
                   </section>
 
                   <section id="timingTab1Panel2" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                    <p class="font-secondary color-primary-light" style="font-size:18px">La maxima representación de nuestra
+                    <p class="font-secondary color-primary-light" style="font-size:18px">La maxima representación de
+                      nuestra
                       <span class="block">filosofía, pasión y maestría</span>
                       <span class="block">combinados para producir un</span>
                       <span class="block">refinado y potente vino. Un icono</span>
@@ -188,7 +198,8 @@
                   </section>
 
                   <section id="timingTab1Panel3" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                    <p class="font-secondary color-primary-light" style="font-size:18px">La maxima representación de nuestra
+                    <p class="font-secondary color-primary-light" style="font-size:18px">La maxima representación de
+                      nuestra
                       <span class="block">filosofía, pasión y maestría</span>
                       <span class="block">combinados para producir un</span>
                       <span class="block">refinado y potente vino. Un icono</span>
@@ -245,8 +256,8 @@
                     </div>
                   </li>
                 </ul>
-                <div class="position-relative">
-                  <button class="btn--primary-right z-index-3 margin-bottom-xl margin-right-xxxl">Ver más</button>
+                <div class="">
+                  <button class="btn--primary-right z-index-3 margin-bottom-xl">Ver más</button>
                 </div>
               </div>
             </div>
@@ -265,7 +276,8 @@
             tarea</h3>
         </div>
       </div> -->
-      <div id="outline-card" class="margin-left-xxxl outline-border flex flex-column justify-center display@md items-center">
+      <div id="outline-card"
+        class="margin-left-xxl@md padding-left-sm@md outline-border flex flex-column justify-center display@md items-center">
         <svg class="svg-size">
           <rect id="svg-line" class="svg-border" x="0" y="0" fill="none" stroke="#a68676"></rect>
         </svg>
@@ -278,28 +290,29 @@
 
       <!-- -------------------------Componente4------------------------- -->
       <div class="component-section-2b">
-        <div class="loop-tabs js-loop-tabs">
+        <div id="looping-tabs-white-bg" class="loop-tabs js-loop-tabs">
           <div class="width-100%">
             <div>
               <div
-                class="width-100% width-auto@md loop-tabs__content loop-position-right margin-right-xxl@md position-absolute flex flex-column justify-center@md text-center text-left@md">
+                class="width-100% width-auto@md loop-tabs__content loop-position-right margin-right-xxl@md padding-x-md@md position-absolute flex flex-column justify-center@md text-center text-left@md">
                 <ul class="loop-tabs__controls js-loop-tabs__controls margin-bottom-lg flex flex-wrap">
                   <li class="width-33% width-auto@md">
                     <a href="#timingTab1Panel1"
-                      class="loop-tabs__control loop-tabs__control--selected text-sm padding-y-md padding-x-lg@md text-uppercase">
-                      <h4 class="text-md font-secondary color-primary">BRAMARE</h4>
+                      class="loop-tabs__control padding-y-md text-uppercase js-loop-tabs__trigger padding-right-lg@md">
+                      <p class=" font-secondary color-primary">BRAMARE</p>
                     </a>
                   </li>
 
                   <li class="width-33% width-auto@md">
-                    <a href="#timingTab1Panel2" class="loop-tabs__control text-sm padding-y-md padding-x-lg@md text-uppercase">
-                      <h4 class="text-md font-secondary color-primary">COCODRILO</h4>
+                    <a href="#timingTab1Panel2" class="loop-tabs__control  padding-y-md padding-x-lg@md text-uppercase">
+                      <p class=" font-secondary color-primary">COCODRILO</p>
                     </a>
                   </li>
 
                   <li class="width-33% width-auto@md">
-                    <a href="#timingTab1Panel3" class="loop-tabs__control text-sm padding-y-md padding-x-lg@md text-uppercase">
-                      <h4 class="text-md font-secondary color-primary">FELINO</h4>
+                    <a href="#timingTab1Panel3"
+                      class="loop-tabs__control padding-y-md padding-left-lg@md text-uppercase js-loop-tabs__trigger loop-tabs__control--selected">
+                      <p class=" font-secondary color-primary">FELINO</p>
                     </a>
                   </li>
                 </ul>
@@ -382,9 +395,11 @@
                     </div>
                   </li>
                 </ul>
-                <a href="#" class="btn--primary margin-left-xxl"
-                  style="border-bottom:1px solid var(--color-primary-light) !important; color:var(--color-primary-light) !important">Ver
-                  Más</a>
+                <div class="margin-left-xxxs@md padding-left-lg@md">
+                  <a href="#" class="btn--primary margin-left-xl@md"
+                    style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Ver
+                    Más</a>
+                </div>
               </div>
             </div>
           </div>
@@ -393,7 +408,7 @@
     </section>
 
     <!-- -------------------------Componente5------------------------- -->
-    <section
+    <!-- <section
       class="component-section flex flex-column justify-center items-between bg-white text-center margin-top-xxxxl max-width-xxl margin-x-auto">
       <h2 class="color-secondary font-primary fs-big-font2 margin-bottom-xs@lg">COBOS</h2>
       <div class="grid padding-x-xxxl@md">
@@ -403,7 +418,8 @@
             de un soñador que un día asumió el desafío de elaborar vinos como nunca antes en Argentina.</p>
           <a href="#"><button class="btn--primary-block">Ver Más</button></a>
         </div>
-        <div class="col-12 col-7@lg padding-x-xxxxl@sm padding-x-xl@md padding-x-md@lg padding-x-0@xl">
+        <div
+          class="col-12 col-7@lg padding-x-xxxxl@sm padding-x-xl@md padding-x-md@lg padding-x-0@xl margin-top-xxxxl margin-top-0@md">
           <div class="demo-scroll-fx-grid">
             <img id="history_img1" class="block" src="./assets/img/historia-parallax-1.png" alt="Image description">
 
@@ -412,6 +428,139 @@
               alt="Image description">
           </div>
 
+        </div>
+      </div>
+    </section> -->
+
+    <section class="component-section-full bg-white text-center max-width-xxxl margin-x-auto padding-x-xxl@md margin-bottom-xxxl@md" style="letter-spacing: 10px;">
+      <div class="position-relative z-index-1 overflow-hidden padding-y-xl">
+        <div class="margin-bottom-lg">
+          <h1 class="letter-spacing-lg text-left font-primary">HISTORIA</h1>
+        </div>
+
+        <div class="container max-width-adaptive-lg font-secondary">
+          <div class="v-timeline js-v-timeline" data-animation="on">
+
+            <!-- hidden item -->
+            <section class="v-timeline__section js-v-timeline__section is-hidden">
+              <div class="v-timeline__marker bg-primary" aria-hidden="true">
+              </div>
+
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                </div>
+              </div>
+            </section>
+
+            <!-- start of timeline -->
+            <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <div class="v-timeline__marker bg-primary" aria-hidden="true" style="
+              transform: translateX(-4.5px);">
+              </div>
+
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item">
+                  <div class="v-timeline__date margin-bottom-sm">
+                    <h2 class="grey-number padding-right-xs">1988</h2>
+                  </div>
+
+                  <div class="text-component">
+                    <h2>INSPIRATION</h2>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
+              </div>
+
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item">
+                  <div class="v-timeline__date margin-bottom-sm">
+                    <h2 class="grey-number padding-left-xs">1997</h2>
+                  </div>
+
+                  <div class="text-component">
+                    <h2>BEGINNING</h2>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+
+            <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <div style="transform: translateX(-4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
+              </div>
+
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item">
+                  <div class="v-timeline__date margin-bottom-sm">
+                    <h2 class="grey-number padding-right-xs">1998</h2>
+                  </div>
+
+                  <div class="text-component">
+                    <h2>VINEYARD</h2>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+
+            <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
+              </div>
+
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item">
+                  <div class="v-timeline__date margin-bottom-sm">
+                    <h2 class="grey-number padding-left-xs">1999</h2>
+                  </div>
+
+                  <div class="text-component">
+                    <h2>THE SPARK</h2>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+            
+            <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <div style="transform: translateX(-4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
+              </div>
+
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item">
+                  <div class="v-timeline__date margin-bottom-sm">
+                    <h2 class="grey-number padding-right-xs">2006</h2>
+                  </div>
+
+                  <div class="text-component">
+                    <h2>HOME</h2>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+            
+            <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
+              </div>
+
+              <div class="v-timeline__items-group">
+                <div class="v-timeline__item">
+                  <div class="v-timeline__date margin-bottom-sm">
+                    <h2 class="grey-number padding-left-xs">2017</h2>
+                  </div>
+
+                  <div class="text-component">
+                    <h2>GOING BIG</h2>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </section>
@@ -433,9 +582,6 @@
 
   </footer>
   <!-- ==============================================END-FOOTER============================================== -->
-
-
-
 
 
 

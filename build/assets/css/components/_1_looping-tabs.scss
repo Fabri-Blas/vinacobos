@@ -34,6 +34,7 @@ Usage: codyhouse.co/license
     left: 0;
     width: 100%;
     z-index: 1;
+    font-size: 11.12px;
     // hide asset/description when not selected
     opacity: 0; 
     visibility: hidden;
@@ -102,8 +103,7 @@ Usage: codyhouse.co/license
     &::after {
       transform: scaleX(var(--loop-tabs-filling));
       // background-color: currentColor;
-      background-color: var(--color-primary-light);
-      box-shadow: 0px 0px 15px 1px white;
+      background-color: var(--color-primary-light);    
       height: 2px;
     }
   }
@@ -135,6 +135,23 @@ Usage: codyhouse.co/license
   // }
 }
 
+#looping-tabs-white-bg{
+  .loop-tabs__control{
+    &::before {
+      background-color: var(--color-primary);
+    }
+  }
+  .loop-tabs__control--selected {
+    color: var(--color-primary);
+  
+    &::after {
+      transform: scaleX(var(--loop-tabs-filling));
+      background-color: var(--color-primary);      
+      height: 2px;
+    }
+  }
+}
+
 // style for no-js support
 html:not(.js) {
   .loop-tabs__content {
@@ -155,6 +172,7 @@ html:not(.js) {
   top: 20%;
   // left: 10%;
   z-index: 3;
+  font-size: 11.12px;
 }
 
 .loop-position-right{
@@ -162,4 +180,5 @@ html:not(.js) {
   // right: 10%;
   z-index: 3;
   right: 0;
+  font-size: 11.12px;
 }
