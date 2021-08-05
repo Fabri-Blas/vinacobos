@@ -95,6 +95,27 @@ button{
   font-family: var(--font-primary);
   color: var(--color-secondary);
   letter-spacing: 0.12em;
+  width: 240px;
+  padding-bottom: 8px;
+  text-align: center;
+  background: transparent;
+  text-transform: uppercase;
+  border: 0px;
+  border-bottom: 1px solid var(--color-secondary);
+  transition: all 0.5s;
+  &:hover{
+    letter-spacing: 0.2em;
+    width: 220px;
+    transition: all 0.5s;
+  }
+}
+.btn--secondary-block-2{
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
+  letter-spacing: 0.12em;
   width: 325px;
   padding-bottom: 8px;
   text-align: center;
@@ -105,7 +126,7 @@ button{
   transition: all 0.5s;
   &:hover{
     letter-spacing: 0.2em;
-    width: 300px;
+    width: 290px;
     transition: all 0.5s;
   }
 }

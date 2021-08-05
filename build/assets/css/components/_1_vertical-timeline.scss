@@ -106,7 +106,9 @@ Usage: codyhouse.co/license
         flex-direction: row-reverse;
   
         .v-timeline__marker {
-          margin-right: 0;
+          width: 19px;
+          height: 19px;
+          margin-right: 3.5px;
           margin-left: calc(var(--v-timeline-triangle-size) + var(--space-xxs));
         }
   
