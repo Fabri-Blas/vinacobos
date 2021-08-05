@@ -18,11 +18,16 @@
 //   }
 // }
 
-.autoscroll-container{
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+.custom-scroll-snap{
+    scroll-snap-align: start end;
     min-height: 100vh;
 }
+.parent-scroll-snap{
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
 .component-section{
     position: relative;
     height: 100vh;
@@ -39,6 +44,15 @@
 .component-half{
     height:50vh;
 }
+
+.component-footer{
+    background: url(../img/footer-bg.png) ;
+    background-position: center;
+    background-size: cover;
+    padding-top: 103px;
+    min-height: 520px;
+}
+
 .inner-component-section-moved{
     transform: translateY(-15%);
 }

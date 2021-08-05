@@ -165,6 +165,26 @@ mark {
   }
 }
 
+.font-footer-title {
+  font-family: var(--font-secondary);
+  color: #F1EEE9;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 29.124px;
+  line-height: 47px;
+  letter-spacing: 0.05em;
+
+}
+
+.fonts-footer-colums{
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color:  #F1EEE9;
+}
+
 .article { // e.g., blog posts
   --body-line-height: 1.58; // set body line-height
   --text-vspace-multiplier: 1.2; // increase vertical spacing
@@ -244,6 +264,14 @@ mark {
 @media only screen and (max-width: 1024px){
   .fs-small-font{
     font-size: 55px;
+  }
+  .text-component{
+    & .text-component-title{
+      font-size: 30px;
+    }
+    & .text-component-title-2{
+      font-size: 30px;
+    }
   }
 }
 
