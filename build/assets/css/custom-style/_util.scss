@@ -18,6 +18,9 @@
 //   }
 // }
 
+.dark-nav-custom a{
+    color: var(--color-primary) !important;
+}
 .custom-scroll-snap{
     scroll-snap-align: start end;
     min-height: 100vh;
@@ -25,7 +28,7 @@
 .parent-scroll-snap{
     scroll-snap-type: y mandatory;
     height: 100vh;
-    overflow-y: scroll;
+    overflow: auto;
 }
 
 .component-section{

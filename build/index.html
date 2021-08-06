@@ -14,14 +14,14 @@
   <title>Viña Cobos</title>
 </head>
 
-<body style="overflow-y: hidden;">
+<body class="bg-black">
 
   <!-- ================================================HEADER================================================ -->
   <header class="f-header js-f-header bg-transparent hide-nav js-hide-nav js-hide-nav--main"
     data-nav-target-class="f-header--expanded">
     <div class="f-header__mobile-content container max-width-lg">
       <a href="#0" class="f-header__logo">
-        <img src="./assets/img/logo.svg" alt="Logo">
+        <img src="./assets/img/logo.svg" width="40" height="40" alt="Logo">
       </a>
       <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus" aria-label="Toggle menu">
         <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
@@ -32,8 +32,8 @@
       <div
         class="f-header__nav-grid justify-between@md container max-width-xxxl margin-x-auto padding-x-xs@md">
         <div class="f-header__nav-logo-wrapper">
-          <a href="#0" class="f-header__logo margin-top-lg">
-            <img style="width: 40px; height: 40px; margin-left: 60px;" id="logo" src="./assets/img/logo.svg" alt="Logo">
+          <a href="#0" class="f-header__logo padding-lg margin-top-lg">
+            <img id="logo" src="./assets/img/logo.svg" alt="Logo" class="display@md padding-xxxs">
           </a>
         </div>
 
@@ -57,33 +57,37 @@
   </header>
   <!-- ==============================================END-HEADER============================================== -->
 
+
+
+
+
   <div class="parent-scroll-snap">
     <!-- ================================================MAIN================================================ -->
-    <main>
-
-      <!-- scroll component -->
-      <div class="scroll-indicator-container margin-top-xxl display@md" data-title="Conoce Viña Cobos">
-        <div class="scroll-indicator-wrapper" style="height: 400px;">
-          <div class="scroll-indicator-inner" style="height: 250px;">
-            <span class="scroll-indicator"></span>
-          </div>
-          <div class="title">
-            <h3>Conoce Viña Cobos</h3>
-          </div>
+    <!-- scroll component -->
+    <div class="scroll-indicator-container is-hidden margin-top-xxl display@md" data-title="Conoce Viña Cobos">
+      <div class="scroll-indicator-wrapper" style="height: 400px;">
+        <div class="scroll-indicator-inner" style="height: 250px;">
+          <span class="scroll-indicator"></span>
+        </div>
+        <div class="title">
+          <h3>Conoce Viña Cobos</h3>
         </div>
       </div>
+    </div>
+
+    <main>
 
       <!-- -------------------------Componente1y2conreveal------------------------- -->
 
 
       <section class="position-relative z-index-2 bg shadow-sm custom-scroll-snap">
-
+        <!-- Componente1 -->
         <div id="hero" class="video-bg position-relative">
           <div class="video-bg__media" aria-hidden="true">
             <img src="../../assets/img/video-background-hero-img-1.jpg" alt="Video Preview">
-            <video autoplay loop muted playsInline src="./assets/img/video-cobos-reveal1.mp4"></video>
+            <video autoplay loop muted playsInline src="./assets/img/video-cobos-malbec_4.mp4"></video>
           </div>
-
+  
           <div class="container max-width-lg position-relative z-index-2">
             <div class="flex flex-center padding-y-100vh">
               <div class="text-component text-center">
@@ -97,7 +101,7 @@
         </div>
       </section>
 
-      <section class="revealing-section bg z-index-1 js-revealing-section custom-scroll-snap">
+      <section class="z-index-1 custom-scroll-snap revealing-section bg-black z-index-1 js-revealing-section margin-top-sm">
         <!-- componente 2 -->
         <div id="component-3d"
           class="model-3d component-section flex flex-column justify-start items-right bg-black text-right">
@@ -147,32 +151,18 @@
                   <div class="loop-tabs__panels js-loop-tabs__panels margin-bottom-md">
                     <section id="timingTab1Panel1"
                       class="loop-tabs__panel js-loop-tabs__panel text-component loop-tabs__panel--selected">
-                      <p class="font-secondary color-primary-light" style="font-size:18px">La maxima representación de
-                        nuestra
-                        <span class="block">filosofía, pasión y maestría</span>
-                        <span class="block">combinados para producir un</span>
-                        <span class="block">refinado y potente vino. Un icono</span>
-                        <span class="block">Argentino, nuestra insignia al mundo.</span>
+                      <p class="font-secondary color-primary-light max-width-xxxxs padding-right-lg" style="font-size:18px">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugit ab hic cupiditate! Ducimus commodi vitae sapiente, eaque nam maxime perferendis atque fugiat vero voluptate.
                       </p>
                     </section>
 
                     <section id="timingTab1Panel2" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                      <p class="font-secondary color-primary-light" style="font-size:18px">La maxima representación de
-                        nuestra
-                        <span class="block">filosofía, pasión y maestría</span>
-                        <span class="block">combinados para producir un</span>
-                        <span class="block">refinado y potente vino. Un icono</span>
-                        <span class="block">Argentino, nuestra insignia al mundo.</span>
+                      <p class="font-secondary color-primary-light max-width-xxxxs padding-right-lg" style="font-size:18px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad deleniti perspiciatis eveniet in dolores. Voluptas, repellat velit consequuntur voluptatum molestiae veniam quas nobis molestias rerum quibusdam.
                       </p>
                     </section>
 
                     <section id="timingTab1Panel3" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                      <p class="font-secondary color-primary-light" style="font-size:18px">La maxima representación de
-                        nuestra
-                        <span class="block">filosofía, pasión y maestría</span>
-                        <span class="block">combinados para producir un</span>
-                        <span class="block">refinado y potente vino. Un icono</span>
-                        <span class="block">Argentino, nuestra insignia al mundo.</span>
+                      <p class="font-secondary color-primary-light max-width-xxxxs padding-right-lg" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi fugit sint laudantium molestiae possimus rem, nulla amet dolore nisi corporis, quia numquam. Voluptate debitis repellendus nobis exercitationem molestiae, minus qui aut maiores blanditiis? Dignissimos, ratione.
                       </p>
                     </section>
                   </div>
@@ -281,29 +271,17 @@
                   <div class="loop-tabs__panels js-loop-tabs__panels margin-bottom-md">
                     <section id="timingTab1Panel1"
                       class="loop-tabs__panel js-loop-tabs__panel text-component loop-tabs__panel--selected">
-                      <p class="font-secondary color-primary" style="font-size:18px">La maxima representación de nuestra
-                        <span class="block">filosofía, pasión y maestría</span>
-                        <span class="block">combinados para producir un</span>
-                        <span class="block">refinado y potente vino. Un icono</span>
-                        <span class="block">Argentino, nuestra insignia al mundo.</span>
+                      <p class="font-secondary color-primary max-width-xxxxs padding-right-lg" style="font-size:18px">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur maxime, vero quaerat similique voluptate nemo veniam atque ex esse? Perferendis?
                       </p>
                     </section>
 
                     <section id="timingTab1Panel2" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                      <p class="font-secondary color-primary" style="font-size:18px">La maxima representación de nuestra
-                        <span class="block">filosofía, pasión y maestría</span>
-                        <span class="block">combinados para producir un</span>
-                        <span class="block">refinado y potente vino. Un icono</span>
-                        <span class="block">Argentino, nuestra insignia al mundo.</span>
+                      <p class="font-secondary color-primary max-width-xxxxs padding-right-lg" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus pariatur iste, ea dolore voluptate quaerat vel aperiam facere tenetur esse vero aliquid quam recusandae aspernatur voluptas quo fugit tempora quia!
                       </p>
                     </section>
 
                     <section id="timingTab1Panel3" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                      <p class="font-secondary color-primary" style="font-size:18px">
-                        <span class="block">filosofía, pasión y maestría</span>
-                        <span class="block">combinados para producir un</span>
-                        <span class="block">refinado y potente vino. Un icono</span>
-                        <span class="block">Argentino, nuestra insignia al mundo.</span>
+                      <p class="font-secondary color-primary max-width-xxxxs padding-right-lg" style="font-size:18px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quas optio facilis corporis expedita ad consectetur cum maiores beatae suscipit necessitatibus quasi, sapiente, esse ea.
                       </p>
                     </section>
                   </div>
@@ -369,9 +347,9 @@
       </section>
 
       <section
-        class="component-section-full custom-scroll-snap bg-white text-center max-width-xxxl margin-x-auto padding-x-xxl@md padding-bottom-xxxxl@md"
+        class="component-section-full custom-scroll-snap bg-white text-center max-width-xxxl margin-x-auto padding-bottom-xxxxl@md"
         style="letter-spacing: 10px; background: #F8F8F8;">
-        <div class="position-relative z-index-1 overflow-hidden padding-y-xl">
+        <div class="position-relative z-index-1 overflow-hidden padding-y-xl padding-x-xxl@md">
           <div class="margin-bottom-lg">
             <h1 class="letter-spacing-lg text-left font-primary">HISTORIA</h1>
           </div>
@@ -391,7 +369,7 @@
               </section>
 
               <!-- start of timeline -->
-              <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <section class="v-timeline__section js-v-timeline__section">
                 <div class="v-timeline__marker bg-primary" aria-hidden="true" style="
               transform: translateX(-4.5px);">
                 </div>
@@ -416,7 +394,7 @@
                 </div>
               </section>
 
-              <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <section class="v-timeline__section js-v-timeline__section">
                 <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
                 </div>
 
@@ -426,7 +404,7 @@
                       <h2 class="grey-number padding-left-xs">1997</h2>
                     </div>
 
-                    <div class="text-component text-center padding-top-xs@md padding-right-sm@md">
+                    <div class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
                       <h2 class="text-component-title">BEGINNING</h2>
                       <h3 class="text-component-subtitle">Viña Cobos funding inv. 75k usd</h3>
                       <div class="text-component-animation text-left">
@@ -441,7 +419,7 @@
                 </div>
               </section>
 
-              <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <section class="v-timeline__section js-v-timeline__section">
                 <div style="transform: translateX(-4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
                 </div>
 
@@ -466,7 +444,7 @@
                 </div>
               </section>
 
-              <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <section class="v-timeline__section js-v-timeline__section">
                 <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
                 </div>
 
@@ -477,7 +455,7 @@
                     </div>
 
 
-                    <div class="text-component text-center padding-top-xs@md padding-right-sm@md">
+                    <div class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
                       <h2 class="text-component-title">OUR HOME</h2>
                       <h3 class="text-component-subtitle">Winery construction</h3>
                       <div class="text-component-animation text-left">
@@ -492,7 +470,7 @@
                 </div>
               </section>
 
-              <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <section class="v-timeline__section js-v-timeline__section">
                 <div style="transform: translateX(-4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
                 </div>
 
@@ -503,7 +481,7 @@
                     </div>
 
                     <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
-                      <h2 class="text-component-title-2">IMAGE REVOLUTION</h2>
+                      <h2 class="text-component-title-2" style="transform: translateY(-12px);">IMAGE REVOLUTION</h2>
                       <h3 class="text-component-subtitle">First south american 100 points</h3>
                       <div class="text-component-animation">
                         <p class="text-component-description">Lectus ut duis imperdiet mi nisi, ut. Proin nulla
@@ -517,7 +495,7 @@
                 </div>
               </section>
 
-              <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <section class="v-timeline__section js-v-timeline__section">
                 <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
                 </div>
 
@@ -527,7 +505,7 @@
                       <h2 class="grey-number padding-left-xs">1997</h2>
                     </div>
 
-                    <div class="text-component text-center padding-top-xs@md padding-right-sm@md">
+                    <div class="text-component text-left padding-right-lg@md margin-right-lg@md max-width-xxxxs">
                       <h2 class="text-component-title-2">FLAGSHIP VINEYARD</h2>
                       <h3 class="text-component-subtitle">Chañares Estate acquired</h3>
                       <div class="text-component-animation text-left">
@@ -542,7 +520,7 @@
                 </div>
               </section>
 
-              <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <section class="v-timeline__section js-v-timeline__section">
                 <div style="transform: translateX(-4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
                 </div>
 
@@ -553,7 +531,7 @@
                     </div>
 
                     <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
-                      <h2 class="text-component-title-2">2nd FLAGSHIP VINEYARD</h2>
+                      <h2 class="text-component-title-2" style="transform: translateY(-12px);">2nd FLAGSHIP VINEYARD</h2>
                       <h3 class="text-component-subtitle">First south american 100 points</h3>
                       <div class="text-component-animation">
                         <p class="text-component-description">Lectus ut duis imperdiet mi nisi, ut. Proin nulla
@@ -567,7 +545,7 @@
                 </div>
               </section>
 
-              <section class="v-timeline__section js-v-timeline__section padding-bottom-xxl">
+              <section class="v-timeline__section js-v-timeline__section">
                 <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
                 </div>
 
@@ -577,14 +555,15 @@
                       <h2 class="grey-number padding-left-xs">1997</h2>
                     </div>
 
-                    <div class="text-component text-center padding-top-xs@md padding-right-sm@md">
-                      <h2 class="text-component-title-2">INNOVATION AT IT’S BEST</h2>
+                    <div class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
+                      <h2 class="text-component-title-2" style="transform: translateY(-12px);">INNOVATION<br>AT IT’S BEST</h2>
                       <h3 class="text-component-subtitle">100 points Cobos MB 2017</h3>
                       <div class="text-component-animation text-left">
                         <p class="text-component-description">Lectus ut duis imperdiet mi nisi, ut. Proin nulla
                           imperdiet
-                          odio eget. Leo viverra massa vestibulum, dolor mauris placerat mi hac. Est sit sed penatibus
+                          odio eget. Leo viverra massa vestibulum, dolor mauris placerat mi hac. Est sed penatibus
                           facilisis.</p>
+
                       </div>
                     </div>
 
@@ -611,7 +590,7 @@
         <!-- -------------------------Componente6------------------------- -->
         <div class="component-section text-center flex flex-column justify-center items-center margin-0 padding-0"
           style=" background: #F8F8F8;">
-          <img class="position-absolute left-0 bottom-0 final-tree" src="./assets/img/final-tree.png" alt="">
+          <img class="position-absolute left-0 bottom-0 final-tree" src="./assets/img/final-tree-2.png" alt="">
           <div class="inner-component-section-moved">
             <h1 class="fs-small-font display@xs">AUTÉNTICA EXPRESIÓN<br>DEL TERRUÑO<br>MENDOCINO</h1>
             <h3 class="hide@xs font-primary padding-x-md">AUTÉNTICA EXPRESIÓN DEL TERRUÑO MENDOCINO</h3>
@@ -625,7 +604,8 @@
     <!-- ==============================================END-MAIN============================================== -->
 
     <!-- ================================================FOOTER================================================ -->
-    <footer class="component-footer position-relative custom-scroll-snap padding-bottom-xxxxl padding-bottom-0@md" style="z-index: 10;">
+    <footer class="component-footer position-relative custom-scroll-snap padding-bottom-xxxxl padding-bottom-0@md"
+      style="z-index: 10;">
 
       <div class="flex grid padding-x-lg padding-x-xxl@md">
 
@@ -653,7 +633,8 @@
         </div>
 
       </div>
-      <div class="col-12 flex justify-between items-center position-absolute bottom-0 width-100% padding-x-xxl@md padding-x-md padding-bottom-lg">
+      <div
+        class="col-12 flex justify-between items-center position-absolute bottom-0 width-100% padding-x-lg padding-x-xxl@md padding-bottom-lg">
 
         <a href="#0">
           <img id="logo" src="./assets/img/logo.svg" width="32" height="32" alt="Logo">
@@ -692,6 +673,7 @@
   <script src="./assets/js/model/three.js"></script>
   <script type="module" src="./assets/js/model/GLTFLoader.js"></script>
   <script type="module" src="./assets/js/model/model_script.js"></script>
+  
 </body>
 
 
