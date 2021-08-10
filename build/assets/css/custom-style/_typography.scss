@@ -197,14 +197,15 @@ mark {
   letter-spacing: 0.12em;
   -webkit-text-stroke: 1px rgba(166, 134, 118, .3);
 }
-.fs-big-font2{
-  font-size: 300px;
-  text-align: right;
+.fs-big-font2 {
+  width: 100%;
+  font-size: 305px;
+  font-style: italic;
   color: rgba(0,0,0,.0);
-  letter-spacing: 0.12em;
-  z-index: 9;
-  -webkit-text-stroke: 1px rgba(166, 134, 118, 1);
+  -webkit-text-stroke: 1px rgba(191, 149, 124, .5);
 }
+
+
 .fs-med-font{
   transform: translateY(-25%);
   color: #222222;
@@ -232,7 +233,8 @@ mark {
     font-size: 250px;
   }
   .fs-big-font2{
-    font-size: 250px;
+    font-size: 280px;
+    // padding-top: 75px;
   }
   .fs-med-font{
     font-size: 75px;
@@ -247,9 +249,12 @@ mark {
 @media only screen and (max-width: 1332px) {
   .fs-big-font{
     font-size: 150px;
+    padding-top: 125px;
+    padding-left: 120px;
   }
   .fs-big-font2{
-    font-size: 150px;
+
+    font-size: 147px;
   }
   .fs-med-font{
     font-size: 45px;
@@ -264,7 +269,7 @@ mark {
 }
 @media only screen and (max-width: 1024px){
   .fs-small-font{
-    font-size: 55px;
+    font-size: 70px;
   }
   .text-component{
     & .text-component-title{
@@ -272,18 +277,33 @@ mark {
     }
     & .text-component-title-2{
       font-size: 30px;
+      
     }
+  }
+  .fs-big-font2{
+    text-align: initial;
+    font-size: 95px;
+    // transform: translateY(-35%);
   }
 }
 
-@media only screen and (max-width: 572px) {
+@media only screen and (max-width: 850px){
+  
+}
+
+@media only screen and (max-width: 550px) {
   .fs-big-font{
-    font-size: 80px;
+    font-size: 37px;
   }
   .fs-big-font2{
-    font-size: 80px;
+    font-size: 60px;
+  }
+
+  .history-storyline {
+    font-size: 60px;
   }
   .fs-med-font{
     font-size: 25px;
   }
 }
+
