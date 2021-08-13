@@ -1,71 +1,70 @@
 // --------------------------------
-
 // How to create custom utility classes
-
 // --------------------------------
-
 // 👇 your custom utility class
-// .my-util-class { 
+// .my-util-class {
 //   property: value;
 // }
-
 // 👇 (optional) create responsive variations - edit only [my-util-class, property, value]
-// @each $breakpoint, $value in $breakpoints { 
+// @each $breakpoint, $value in $breakpoints {
 //   @include breakpoint(#{$breakpoint}) {
 //     .my-util-class\@#{$breakpoint} {
 //       property: value;
 //     }
 //   }
 // }
-
-.dark-nav-custom a{
+.dark-nav-custom a {
     color: var(--color-primary) !important;
 }
-.custom-scroll-snap{
+
+.custom-scroll-snap {
     scroll-snap-align: start end;
     min-height: 100vh;
 }
-.parent-scroll-snap{
+
+.parent-scroll-snap {
     scroll-snap-type: y mandatory;
     height: 100vh;
     overflow: auto;
 }
 
-.component-section{
+.component-section {
     position: relative;
     height: 100vh;
 }
-.component-section-full{
+
+.component-section-full {
     position: relative;
     min-height: 100vh;
-
-    & .text-component{
+    & .text-component {
         transform: translateY(-22px);
     }
 }
 
-.component-half{
-    height:50vh;
+.component-half {
+    height: 50vh;
 }
 
-.component-footer{
-    background: url(../img/footer-bg.png) ;
+.component-footer {
+    background: url(../img/footer-bg.png);
     background-position: center;
     background-size: cover;
     padding-top: 103px;
     min-height: 520px;
 }
 
-.inner-component-section-moved{
+.inner-component-section-moved {
     transform: translateY(-15%);
 }
-.component-section-2a{
-    height: 100vh;
-    background: grey;
-}
-.component-section-2b{
+
+.component-section-2a {
     height: 100vh;
 }
+
+.component-section-2b {
+    height: 100vh;
+}
+
 // .outline-border{
 //     width: 400px;
 //     height: 350px;
@@ -77,40 +76,41 @@
 //     transform: translateY(-50%);
 //     z-index: 99;
 // }
-
-
 // .floating-card{
 //     background: var(--color-primary-light);
 //     width: 360px;
 //     height: 300px;
 //     z-index: 99;
 // }
-.video-looping-tab{
+.video-looping-tab {
     height: 100vh;
 }
-.model-3d{
-    background: url(../img/3d-model-bg.png);
+
+.model-3d {
+    background: url(../img/1999-bg.png);
     background-position: center;
     background-size: cover;
+    z-index: -2;
 }
 
-.padding-y-100vh{
+.padding-y-100vh {
     padding-top: 50vh;
     padding-bottom: 50vh;
 }
 
-.final-tree{
+.final-tree {
     transform: translateY(100px);
 }
 
-footer{
+footer {
     z-index: -1;
 }
 
-.line-height-0{
+.line-height-0 {
     line-height: 0;
 }
-#wine-bottle-model{
+
+#wine-bottle-model {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,23 +122,36 @@ footer{
     transform: translate(-25%, -50%);
     z-index: 5;
 }
-#wine-bottle-canvas{
+
+#wine-bottle-canvas {
     display: block;
     width: 100%;
     height: 100%;
     transform: rotate(-15deg);
 }
 
-#history_img1{
+#history_img1 {
     width: 100%;
-    transform: scale(1.40) translateX(5%);
+    transform: scale(1.4) translateX(5%);
 }
-#history_img2{
+
+#history_img2 {
     width: 100%;
     padding: 7%;
 }
 
-.above-model{
+.above-model {
     z-index: 15;
     background-color: transparent;
+}
+
+@media only screen and (max-width: 1024px) {
+    .looping-tabs-header {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+    .component-footer {
+        min-height: 100vh;
+    }
 }

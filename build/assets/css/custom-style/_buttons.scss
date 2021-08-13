@@ -44,7 +44,7 @@ button{
   cursor: pointer;
   position: absolute;
   bottom: 70px;
-  // left: 8%;
+  left: 0px;
   font-size: 13px;
   text-decoration: none;
   color: var(--color-primary);
@@ -225,6 +225,15 @@ button{
 
 .btn--lg {
   font-size: 1.4em;
+}
+
+@media only screen and (max-width: 1024px){
+  .btn--primary-right{
+    right: 25px;
+  }
+  .btn--primary{
+    left: 25px;
+  }
 }
 
 // --------------------------------

@@ -2,231 +2,221 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.getElementsByTagName("html")[0].className += " js";</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
-  <!-- Uncomment the script below if you need to support browsers where CSS Variables have not been implemented (e.g., IE11) -->
-  <!-- <script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        document.getElementsByTagName("html")[0].className += " js";
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+    <!-- Uncomment the script below if you need to support browsers where CSS Variables have not been implemented (e.g., IE11) -->
+    <!-- <script>
     if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
   </script> -->
-  <title>Viña Cobos</title>
+    <title>Viña Cobos</title>
 </head>
 
 <body class="bg-black">
 
-  <!-- ================================================HEADER================================================ -->
-  <header class="f-header js-f-header bg-transparent hide-nav js-hide-nav js-hide-nav--main"
-    data-nav-target-class="f-header--expanded">
-    <div class="f-header__mobile-content container max-width-lg">
-      <a href="#0" class="f-header__logo">
-        <img src="./assets/img/logo.svg" width="40" height="40" alt="Logo">
-      </a>
-      <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus" aria-label="Toggle menu">
+    <!-- ================================================HEADER================================================ -->
+    <header class="f-header js-f-header bg-transparent hide-nav js-hide-nav js-hide-nav--main" data-nav-target-class="f-header--expanded">
+        <div class="f-header__mobile-content container max-width-lg">
+            <a href="#0" class="f-header__logo">
+                <img src="./assets/img/logo.svg" width="40" height="40" alt="Logo">
+            </a>
+            <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus" aria-label="Toggle menu">
         <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
       </button>
-    </div>
-
-    <div class="f-header__nav" role="navigation">
-      <div
-        class="f-header__nav-grid justify-between@md container max-width-xxxl margin-x-auto padding-x-xxl@md">
-        <div class="f-header__nav-logo-wrapper">
-          <a href="#0" class="margin-top-lg">
-            <img id="logo" src="./assets/img/logo.svg" width="38" height="35" alt="Logo" class="display@md">
-          </a>
         </div>
 
-        <ul class="f-header__list padding-top-lg margin-left-sm justify-center@md">
-          <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
-              class="f-header__link btn--nav">HISTORIA</a></li>
-          <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
-              class="f-header__link btn--nav">TERROIR</a></li>
-          <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
-              class="f-header__link btn--nav">VINOS</a></li>
-          <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
-              class="f-header__link btn--nav">CONTACTO</a></li>
-          <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
-              class="f-header__link btn--nav">TIENDA</a></li>
-        </ul>
+        <div class="f-header__nav" role="navigation">
+            <div class="f-header__nav-grid justify-between@md container max-width-xxxl margin-x-auto padding-x-xxl@md">
+                <div class="f-header__nav-logo-wrapper">
+                    <a href="#0" class="margin-top-lg">
+                        <img id="logo" src="./assets/img/logo.svg" width="38" height="35" alt="Logo" class="display@md">
+                    </a>
+                </div>
 
-        <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
-        </ul>
-      </div>
-    </div>
-  </header>
-  <!-- ==============================================END-HEADER============================================== -->
+                <ul class="f-header__list padding-top-lg margin-left-sm justify-center@md">
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">HISTORIA</a></li>
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">TERROIR</a></li>
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">VINOS</a></li>
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">CONTACTO</a></li>
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0" class="f-header__link btn--nav">TIENDA</a></li>
+                </ul>
+
+                <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- ==============================================END-HEADER============================================== -->
 
 
 
 
 
-  <!-- <div class="parent-scroll-snap"> -->
+    <!-- <div class="parent-scroll-snap"> -->
     <!-- ================================================MAIN================================================ -->
     <!-- scroll component -->
     <div class="scroll-indicator-container margin-top-xxl display@md" data-title="Conoce Viña Cobos">
-      <div class="scroll-indicator-wrapper" style="height: 400px;">
-        <div class="scroll-indicator-inner" style="height: 250px;">
-          <span class="scroll-indicator"></span>
+        <div class="scroll-indicator-wrapper" style="height: 400px;">
+            <div class="scroll-indicator-inner" style="height: 250px;">
+                <span class="scroll-indicator"></span>
+            </div>
+            <div class="title">
+                <h3>Conoce Viña Cobos</h3>
+            </div>
         </div>
-        <div class="title">
-          <h3>Conoce Viña Cobos</h3>
-        </div>
-      </div>
     </div>
 
     <main>
 
-      <!-- -------------------------Componente1y2conreveal------------------------- -->
+        <!-- -------------------------Componente1y2conreveal------------------------- -->
 
 
-      <section class="position-relative z-index-2 bg shadow-sm ">
-        <!-- Componente1 -->
-        <div id="hero" class="video-bg position-relative">
-          <div class="video-bg__media" aria-hidden="true">
-            <img src="../../assets/img/video-background-hero-img-1.jpg" alt="Video Preview">
-            <video autoplay loop muted playsInline src="./assets/img/video-cobos-malbec_4.mp4"></video>
-          </div>
-  
-          <div class="container max-width-lg position-relative z-index-2">
-            <div class="flex flex-center padding-y-100vh">
-              <div class="text-component text-center">
-                <div id="scroll-helper" class="position-absolute">
-                  <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
-                  <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
+        <section class="position-relative z-index-2 bg shadow-sm ">
+            <!-- Componente1 -->
+            <div id="hero" class="video-bg position-relative">
+                <div class="video-bg__media" aria-hidden="true">
+                    <img src="../../assets/img/video-background-hero-img-1.jpg" alt="Video Preview">
+                    <video autoplay loop muted playsInline src="./assets/img/video-cobos-malbec_4.mp4"></video>
                 </div>
-              </div>
+
+                <div class="container max-width-lg position-relative z-index-2">
+                    <div class="flex flex-center padding-y-100vh">
+                        <div class="text-component text-center">
+                            <div id="scroll-helper" class="position-absolute">
+                                <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+                                <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="z-index-1  revealing-section bg-black z-index-1 js-revealing-section margin-top-sm">
-        <!-- componente 2 -->
-        <div id="component-3d"
-          class="model-3d component-section flex flex-column justify-start items-right bg-black text-right">
+        <section class="revealing-section bg-black js-revealing-section margin-top-sm">
+            <!-- componente 2 -->
+            <div id="component-3d" class="model-3d component-section flex flex-column justify-center items-center bg-black text-center">
 
-          <div class="padding-x-xxl">
-            <h2 class="color-secondary font-primary fs-big-font">1999.</h2>
-            <h3 class="color-secondary font-primary fs-med-font">EL VERDADERO REFLEJO</h3>
-            <h3 class="color-secondary font-primary fs-med-font">NUESTRO ORIGEN</h3>
-          </div>
-          <div>
+                <div class="padding-x-xxl">
+                    <div class="z-index-overlay">
+                        <h3 class="fs-med-font font-primary">Un sueño nos impulsó, como</h3>
+                        <h3 class="fs-med-font font-primary">elaborarlos nos difenció</h3>
+                    </div>
+                    <h2 class="font-primary position-absolute fs-big-font">1999</h2>
 
-      </section>
-
-
-      <!-- -------------------------Double Looping Tabs------------------------- -->
-      <section class="position-relative">
-        <!-- -------------------------Componente3------------------------- -->
-        <div class="component-section-2a ">
-          <div class="loop-tabs js-loop-tabs">
-            <div class="width-100%">
-              <div>
-                <div
-                  class="width-100% width-auto@md loop-tabs__content loop-position margin-x-xxl@md padding-x-md@md position-absolute flex flex-column justify-center@md text-center text-left@md">
-                  <ul class="loop-tabs__controls js-loop-tabs__controls margin-bottom-lg flex flex-wrap">
-                    <li class="width-33% width-auto@md">
-                      <a href="#timingTab1Panel1"
-                        class="loop-tabs__control loop-tabs__control--selected  padding-y-md padding-right-lg@md text-uppercase">
-                        <p class=" font-secondary color-primary-light">COBOS</p>
-                      </a>
-                    </li>
-
-                    <li class="width-33% width-auto@md">
-                      <a href="#timingTab1Panel2"
-                        class="loop-tabs__control  padding-y-md padding-x-lg@md text-uppercase">
-                        <p class=" font-secondary color-primary-light">V.Designate</p>
-                      </a>
-                    </li>
-
-                    <li class="width-33% width-auto@md">
-                      <a href="#timingTab1Panel3"
-                        class="loop-tabs__control  padding-y-md padding-left-lg@md text-uppercase">
-                        <p class=" font-secondary color-primary-light">VINCULUM</p>
-                      </a>
-                    </li>
-                  </ul>
-
-                  <div class="loop-tabs__panels js-loop-tabs__panels margin-bottom-md">
-                    <section id="timingTab1Panel1"
-                      class="loop-tabs__panel js-loop-tabs__panel text-component loop-tabs__panel--selected">
-                      <p class="font-secondary color-primary-light max-width-xxxxs padding-right-lg" style="font-size:18px">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugit ab hic cupiditate! Ducimus commodi vitae sapiente, eaque nam maxime perferendis atque fugiat vero voluptate.
-                      </p>
-                    </section>
-
-                    <section id="timingTab1Panel2" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                      <p class="font-secondary color-primary-light max-width-xxxxs padding-right-lg" style="font-size:18px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad deleniti perspiciatis eveniet in dolores. Voluptas, repellat velit consequuntur voluptatum molestiae veniam quas nobis molestias rerum quibusdam.
-                      </p>
-                    </section>
-
-                    <section id="timingTab1Panel3" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                      <p class="font-secondary color-primary-light max-width-xxxxs padding-right-lg" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi fugit sint laudantium molestiae possimus rem, nulla amet dolore nisi corporis, quia numquam. Voluptate debitis repellendus nobis exercitationem molestiae, minus qui aut maiores blanditiis? Dignissimos, ratione.
-                      </p>
-                    </section>
-                  </div>
                 </div>
 
-                <div class="loop-tabs__media position-relative width-100%" aria-hidden="true">
-                  <ul class="loop-tabs__assets js-loop-tabs__assets width-100%">
-                    <li class="loop-tabs__asset loop-tabs__asset--selected">
-                      <div class="hero-video-bg position-relative padding-y-100vh">
-                        <div class="container max-width-adaptive-sm">
-                          <div class="position-relative z-index-2 text-center">
-                            <div class="position-absolute" style="height: 1px; width: 1px;"></div>
-                          </div>
+                <div>
+
+        </section>
+
+
+        <!-- -------------------------Double Looping Tabs------------------------- -->
+        <section class="position-relative">
+            <!-- -------------------------Componente3------------------------- -->
+            <div class="component-section-2a ">
+                <div class="loop-tabs js-loop-tabs">
+                    <div class="width-100%">
+                        <div>
+                            <div class="looping-tabs-header width-100% width-auto@md loop-tabs__content loop-position margin-x-xxl@md padding-x-md@md position-absolute flex flex-column justify-center@md text-center text-left@md">
+                                <ul class="loop-tabs__controls js-loop-tabs__controls margin-bottom-lg flex flex-wrap">
+                                    <li class="width-33% width-auto@md">
+                                        <a href="#timingTab1Panel1" class="loop-tabs__control loop-tabs__control--selected  padding-y-md padding-right-lg@md text-uppercase">
+                                            <p class=" font-secondary color-primary-light">COBOS</p>
+                                        </a>
+                                    </li>
+
+                                    <li class="width-33% width-auto@md">
+                                        <a href="#timingTab1Panel2" class="loop-tabs__control  padding-y-md padding-x-lg@md text-uppercase">
+                                            <p class=" font-secondary color-primary-light">V.Designate</p>
+                                        </a>
+                                    </li>
+
+                                    <li class="width-33% width-auto@md">
+                                        <a href="#timingTab1Panel3" class="loop-tabs__control  padding-y-md padding-left-lg@md text-uppercase">
+                                            <p class=" font-secondary color-primary-light">VINCULUM</p>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="loop-tabs__panels js-loop-tabs__panels margin-bottom-md">
+                                    <section id="timingTab1Panel1" class="loop-tabs__panel js-loop-tabs__panel text-component loop-tabs__panel--selected">
+                                        <p class="font-secondary color-primary-light max-width-xxxxs padding-left-xl padding-left-0@md padding-right-lg@md looping-tabs-content" style="font-size:18px">
+                                            Un vino que nace de una amalgama de nuestra filosofía, pasión y maestría. Un icono argentino. Nuestra insignia para el mundo.
+                                        </p>
+                                    </section>
+
+                                    <section id="timingTab1Panel2" class="loop-tabs__panel js-loop-tabs__panel text-component">
+                                        <p class="font-secondary color-primary-light max-width-xxxxs padding-left-xl padding-left-0@md padding-right-lg@md" style="font-size:18px">Estudio intensivo de los sitios Grand Cru para descubrir qué los hace únicos y trasmitir eso al vino.
+                                        </p>
+                                    </section>
+
+                                    <section id="timingTab1Panel3" class="loop-tabs__panel js-loop-tabs__panel text-component">
+                                        <p class="font-secondary color-primary-light max-width-xxxxs padding-left-xl padding-left-0@md padding-right-lg@md" style="font-size:18px">Celebra la conexión entre viña cobos y sus viticultores, eslabón fundamental forjado en el intercambio de conocimientos que lleva a la creación de vinos excepcionales
+                                        </p>
+                                    </section>
+                                </div>
+                            </div>
+
+                            <div class="loop-tabs__media position-relative width-100%" aria-hidden="true">
+                                <ul class="loop-tabs__assets js-loop-tabs__assets width-100%">
+                                    <li class="loop-tabs__asset loop-tabs__asset--selected">
+                                        <div class="hero-video-bg position-relative padding-y-100vh">
+                                            <div class="container max-width-adaptive-sm">
+                                                <div class="position-relative z-index-2 text-center">
+                                                    <div class="position-absolute" style="height: 1px; width: 1px;"></div>
+                                                </div>
+                                            </div>
+
+                                            <figure class="hero-video-bg__video" aria-hidden="true">
+                                                <video class="video-looping-tab" autoplay loop muted playsInline src="./assets/img/video-cobos-malbec_1.mp4"></video>
+                                            </figure>
+                                        </div>
+                                    </li>
+
+                                    <li class="loop-tabs__asset">
+                                        <div class="hero-video-bg position-relative padding-y-100vh">
+                                            <div class="container max-width-adaptive-sm">
+                                                <div class="position-relative z-index-2 text-center">
+                                                    <div class="position-absolute" style="height: 1px; width: 1px;"></div>
+                                                </div>
+                                            </div>
+
+                                            <figure class="hero-video-bg__video" aria-hidden="true">
+                                                <video class="video-looping-tab" autoplay loop muted playsInline src="./assets/img/video-cobos-malbec_2.mp4"></video>
+                                            </figure>
+                                        </div>
+                                    </li>
+
+                                    <li class="loop-tabs__asset">
+                                        <div class="hero-video-bg position-relative padding-y-100vh">
+                                            <div class="container max-width-adaptive-sm">
+                                                <div class="position-relative z-index-2 text-center">
+                                                    <div class="position-absolute" style="height: 1px; width: 1px;"></div>
+                                                </div>
+                                            </div>
+
+                                            <figure class="hero-video-bg__video" aria-hidden="true">
+                                                <video class="video-looping-tab" autoplay loop muted playsInline src="./assets/img/video-cobos-malbec_3.mp4"></video>
+                                            </figure>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="">
+                                    <button class="btn--primary-right z-index-3 margin-bottom-xl">Ver más</button>
+                                </div>
+                            </div>
                         </div>
-
-                        <figure class="hero-video-bg__video" aria-hidden="true">
-                          <video class="video-looping-tab" autoplay loop muted playsInline
-                            src="./assets/img/video-cobos-malbec_1.mp4"></video>
-                        </figure>
-                      </div>
-                    </li>
-
-                    <li class="loop-tabs__asset">
-                      <div class="hero-video-bg position-relative padding-y-100vh">
-                        <div class="container max-width-adaptive-sm">
-                          <div class="position-relative z-index-2 text-center">
-                            <div class="position-absolute" style="height: 1px; width: 1px;"></div>
-                          </div>
-                        </div>
-
-                        <figure class="hero-video-bg__video" aria-hidden="true">
-                          <video class="video-looping-tab" autoplay loop muted playsInline
-                            src="./assets/img/video-cobos-malbec_2.mp4"></video>
-                        </figure>
-                      </div>
-                    </li>
-
-                    <li class="loop-tabs__asset">
-                      <div class="hero-video-bg position-relative padding-y-100vh">
-                        <div class="container max-width-adaptive-sm">
-                          <div class="position-relative z-index-2 text-center">
-                            <div class="position-absolute" style="height: 1px; width: 1px;"></div>
-                          </div>
-                        </div>
-
-                        <figure class="hero-video-bg__video" aria-hidden="true">
-                          <video class="video-looping-tab" autoplay loop muted playsInline
-                            src="./assets/img/video-cobos-malbec_3.mp4"></video>
-                        </figure>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="">
-                    <button class="btn--primary-right z-index-3 margin-bottom-xl">Ver más</button>
-                  </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- -------------------------Floating Card Desktop------------------------- -->
+            <!-- -------------------------Floating Card Desktop------------------------- -->
 
-        <!-- <div id="outline-card"
+            <!-- <div id="outline-card"
         class="margin-left-xxl@md padding-left-sm@md outline-border flex flex-column justify-center display@md items-center">
         <svg class="svg-size">
           <rect id="svg-line" class="svg-border" x="0" y="0" fill="none" stroke="#a68676"></rect>
@@ -238,422 +228,431 @@
       </div> -->
 
 
-        <!-- -------------------------Componente4------------------------- -->
-        <div class="component-section-2b ">
-          <div id="looping-tabs-white-bg" class="loop-tabs js-loop-tabs">
-            <div class="width-100%">
-              <div>
-                <div
-                  class="width-100% width-auto@md loop-tabs__content loop-position-right margin-right-xxl@md padding-x-md@md position-absolute flex flex-column justify-center@md text-center text-left@md">
-                  <ul class="loop-tabs__controls js-loop-tabs__controls margin-bottom-lg flex flex-wrap">
-                    <li class="width-33% width-auto@md">
-                      <a href="#timingTab1Panel1"
-                        class="loop-tabs__control padding-y-md text-uppercase js-loop-tabs__trigger padding-right-lg@md">
-                        <p class=" font-secondary color-primary">BRAMARE</p>
-                      </a>
-                    </li>
+            <!-- -------------------------Componente4------------------------- -->
+            <div class="component-section-2b ">
+                <div id="looping-tabs-white-bg" class="loop-tabs js-loop-tabs">
+                    <div class="width-100%">
+                        <div>
+                            <div class="looping-tabs-header width-100% width-auto@md loop-tabs__content loop-position-right margin-right-xxl@md padding-x-md@md position-absolute flex flex-column justify-center@md text-center text-left@md">
+                                <ul class="loop-tabs__controls js-loop-tabs__controls margin-bottom-lg flex flex-wrap">
+                                    <li class="width-33% width-auto@md">
+                                        <a href="#timingTab1Panel1" class="loop-tabs__control padding-y-md text-uppercase js-loop-tabs__trigger padding-right-lg@md">
+                                            <p class=" font-secondary color-primary">BRAMARE</p>
+                                        </a>
+                                    </li>
 
-                    <li class="width-33% width-auto@md">
-                      <a href="#timingTab1Panel2"
-                        class="loop-tabs__control  padding-y-md padding-x-lg@md text-uppercase">
-                        <p class=" font-secondary color-primary">COCODRILO</p>
-                      </a>
-                    </li>
+                                    <li class="width-33% width-auto@md">
+                                        <a href="#timingTab1Panel2" class="loop-tabs__control  padding-y-md padding-x-lg@md text-uppercase">
+                                            <p class=" font-secondary color-primary">COCODRILO</p>
+                                        </a>
+                                    </li>
 
-                    <li class="width-33% width-auto@md">
-                      <a href="#timingTab1Panel3"
-                        class="loop-tabs__control padding-y-md padding-left-lg@md text-uppercase js-loop-tabs__trigger loop-tabs__control--selected">
-                        <p class=" font-secondary color-primary">FELINO</p>
-                      </a>
-                    </li>
-                  </ul>
+                                    <li class="width-33% width-auto@md">
+                                        <a href="#timingTab1Panel3" class="loop-tabs__control padding-y-md padding-left-lg@md text-uppercase js-loop-tabs__trigger loop-tabs__control--selected">
+                                            <p class=" font-secondary color-primary">FELINO</p>
+                                        </a>
+                                    </li>
+                                </ul>
 
-                  <div class="loop-tabs__panels js-loop-tabs__panels margin-bottom-md">
-                    <section id="timingTab1Panel1"
-                      class="loop-tabs__panel js-loop-tabs__panel text-component loop-tabs__panel--selected">
-                      <p class="font-secondary color-primary max-width-xxxxs padding-right-lg" style="font-size:18px">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur maxime, vero quaerat similique voluptate nemo veniam atque ex esse? Perferendis?
-                      </p>
-                    </section>
+                                <div class="loop-tabs__panels js-loop-tabs__panels margin-bottom-md">
+                                    <section id="timingTab1Panel1" class="loop-tabs__panel js-loop-tabs__panel text-component loop-tabs__panel--selected">
+                                        <p class="font-secondary color-primary max-width-xxxxs padding-left-xl padding-left-0@md padding-right-lg@md" style="font-size:18px">
+                                            Los primeros pasos hacia la exploración del terroir
+                                        </p>
+                                    </section>
 
-                    <section id="timingTab1Panel2" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                      <p class="font-secondary color-primary max-width-xxxxs padding-right-lg" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus pariatur iste, ea dolore voluptate quaerat vel aperiam facere tenetur esse vero aliquid quam recusandae aspernatur voluptas quo fugit tempora quia!
-                      </p>
-                    </section>
+                                    <section id="timingTab1Panel2" class="loop-tabs__panel js-loop-tabs__panel text-component">
+                                        <p class="font-secondary color-primary max-width-xxxxs padding-left-xl padding-left-0@md padding-right-lg@md" style="font-size:18px">
+                                            Nuestro compromiso con el Cabernet Sauvignon de alta calidad producido en Argentina
+                                        </p>
+                                    </section>
 
-                    <section id="timingTab1Panel3" class="loop-tabs__panel js-loop-tabs__panel text-component">
-                      <p class="font-secondary color-primary max-width-xxxxs padding-right-lg" style="font-size:18px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quas optio facilis corporis expedita ad consectetur cum maiores beatae suscipit necessitatibus quasi, sapiente, esse ea.
-                      </p>
-                    </section>
-                  </div>
+                                    <section id="timingTab1Panel3" class="loop-tabs__panel js-loop-tabs__panel text-component">
+                                        <p class="font-secondary color-primary max-width-xxxxs padding-left-xl padding-left-0@md padding-right-lg@md" style="font-size:18px">
+                                            La más distintiva y pura expresión de nuestro terroir.
+                                        </p>
+                                    </section>
+                                </div>
+                            </div>
+
+                            <div class="position-relative width-100%" aria-hidden="true">
+                                <ul class="loop-tabs__assets js-loop-tabs__assets width-100%">
+                                    <li class="loop-tabs__asset loop-tabs__asset--selected">
+                                        <div class="hero-video-bg position-relative padding-y-100vh">
+                                            <div class="container max-width-adaptive-sm">
+                                                <div class="position-relative z-index-2 text-center">
+                                                    <div class="position-absolute" style="height: 1px; width: 1px;"></div>
+                                                </div>
+                                            </div>
+
+                                            <figure class="hero-video-bg__video" aria-hidden="true">
+                                                <video class="video-looping-tab" autoplay loop muted playsInline src="./assets/img/video-cobos-malbec_5.mp4"></video>
+                                            </figure>
+                                        </div>
+                                    </li>
+
+                                    <li class="loop-tabs__asset">
+                                        <div class="hero-video-bg position-relative padding-y-100vh">
+                                            <div class="container max-width-adaptive-sm">
+                                                <div class="position-relative z-index-2 text-center">
+                                                    <div class="position-absolute" style="height: 1px; width: 1px;"></div>
+                                                </div>
+                                            </div>
+
+                                            <figure class="hero-video-bg__video" aria-hidden="true">
+                                                <video class="video-looping-tab" autoplay loop muted playsInline src="./assets/img/video-cobos-malbec_5.mp4"></video>
+                                            </figure>
+                                        </div>
+                                    </li>
+
+                                    <li class="loop-tabs__asset">
+                                        <div class="hero-video-bg position-relative padding-y-100vh">
+                                            <div class="container max-width-adaptive-sm">
+                                                <div class="position-relative z-index-2 text-center">
+                                                    <div class="position-absolute" style="height: 1px; width: 1px;"></div>
+                                                </div>
+                                            </div>
+
+                                            <figure class="hero-video-bg__video" aria-hidden="true">
+                                                <video class="video-looping-tab" autoplay loop muted playsInline src="./assets/img/video-cobos-malbec_5.mp4"></video>
+                                            </figure>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="margin-left-xxxs@md padding-left-lg@md">
+                                    <a href="#" class="btn--primary margin-left-xl@md" style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Ver
+                    Más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="position-relative width-100%" aria-hidden="true">
-                  <ul class="loop-tabs__assets js-loop-tabs__assets width-100%">
-                    <li class="loop-tabs__asset loop-tabs__asset--selected">
-                      <div class="hero-video-bg position-relative padding-y-100vh">
-                        <div class="container max-width-adaptive-sm">
-                          <div class="position-relative z-index-2 text-center">
-                            <div class="position-absolute" style="height: 1px; width: 1px;"></div>
-                          </div>
-                        </div>
-
-                        <figure class="hero-video-bg__video" aria-hidden="true">
-                          <video class="video-looping-tab" autoplay loop muted playsInline
-                            src="./assets/img/video-cobos-malbec_5.mp4"></video>
-                        </figure>
-                      </div>
-                    </li>
-
-                    <li class="loop-tabs__asset">
-                      <div class="hero-video-bg position-relative padding-y-100vh">
-                        <div class="container max-width-adaptive-sm">
-                          <div class="position-relative z-index-2 text-center">
-                            <div class="position-absolute" style="height: 1px; width: 1px;"></div>
-                          </div>
-                        </div>
-
-                        <figure class="hero-video-bg__video" aria-hidden="true">
-                          <video class="video-looping-tab" autoplay loop muted playsInline
-                            src="./assets/img/video-cobos-malbec_5.mp4"></video>
-                        </figure>
-                      </div>
-                    </li>
-
-                    <li class="loop-tabs__asset">
-                      <div class="hero-video-bg position-relative padding-y-100vh">
-                        <div class="container max-width-adaptive-sm">
-                          <div class="position-relative z-index-2 text-center">
-                            <div class="position-absolute" style="height: 1px; width: 1px;"></div>
-                          </div>
-                        </div>
-
-                        <figure class="hero-video-bg__video" aria-hidden="true">
-                          <video class="video-looping-tab" autoplay loop muted playsInline
-                            src="./assets/img/video-cobos-malbec_5.mp4"></video>
-                        </figure>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="margin-left-xxxs@md padding-left-lg@md">
-                    <a href="#" class="btn--primary margin-left-xl@md"
-                      style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Ver
-                      Más</a>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section
-        class="component-section-full  bg-white text-center max-width-xxxl margin-x-auto padding-bottom-xxxxl@md"
-        style="letter-spacing: 10px; background: #F8F8F8;">
-        
-           <h6 class="position-absolute@md text-left fs-big-font2 ">Viña Cobos </h6>
-        
-        <div class="position-relative z-index-1 overflow-hidden padding-top-xxxxl@md padding-bottom-xl padding-x-xxl@md">
-          <div class="margin-bottom-lg">
-            <!-- <p class="position-absolute text-left fs-big-font2 "> Viña Cobos</p> -->
-            <h1 class="history-storiline letter-spacing-lg text-left font-primary padding-left-md@md ">HISTORIA</h1>
-          </div>
+        <section class="component-section-full  bg-white text-center max-width-xxxl margin-x-auto padding-bottom-xxxxl@md" style="letter-spacing: 10px; background: #F8F8F8;">
 
-          <div class="container max-width-adaptive-lg font-secondary">
-            <div class="v-timeline js-v-timeline" data-animation="on">
+            <h6 class="position-absolute text-left fs-big-font2 ">Viña Cobos </h6>
 
-              <!-- hidden item -->
-              <section class="v-timeline__section js-v-timeline__section is-hidden">
-                <div class="v-timeline__marker bg-primary" aria-hidden="true">
+            <div class="position-relative z-index-1 overflow-hidden padding-top-xxxxl@md padding-bottom-xl padding-x-xxl@md">
+                <div class="margin-y-xxl padding-top-xl">
+                    <!-- <p class="position-absolute text-left fs-big-font2 "> Viña Cobos</p> -->
+                    <h1 class="history-storiline letter-spacing-lg text-left font-primary padding-left-md@md ">HISTORIA</h1>
                 </div>
 
-                <div class="v-timeline__items-group">
-                  <div class="v-timeline__item bg padding-md radius-md shadow-xs">
-                  </div>
-                </div>
-              </section>
+                <div class="container max-width-adaptive-lg font-secondary">
+                    <div class="v-timeline js-v-timeline" data-animation="on">
 
-              <!-- start of timeline -->
-              <section class="v-timeline__section js-v-timeline__section">
-                <div class="v-timeline__marker bg-primary" aria-hidden="true" style="
+                        <!-- hidden item -->
+                        <section class="v-timeline__section js-v-timeline__section is-hidden">
+                            <div class="v-timeline__marker bg-primary" aria-hidden="true">
+                            </div>
+
+                            <div class="v-timeline__items-group">
+                                <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- start of timeline -->
+                        <section class="v-timeline__section js-v-timeline__section">
+                            <div class="v-timeline__marker bg-primary" aria-hidden="true" style="
               transform: translateX(-4.5px);">
-                </div>
+                            </div>
 
-                <div class="v-timeline__items-group">
-                  <div class="v-timeline__item">
-                    <div class="v-timeline__date margin-bottom-sm">
-                      <h2 class="grey-number padding-right-xs">1988</h2>
+                            <div class="v-timeline__items-group">
+                                <div class="v-timeline__item">
+                                    <div class="v-timeline__date margin-bottom-sm">
+                                        <h2 class="grey-number padding-right-xs">1988</h2>
+                                    </div>
+
+                                    <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                        <h2 class="text-component-title">EXPLORACIÓN</h2>
+                                        <h3 class="text-component-subtitle">Llegada de Paul a Mendoza</h3>
+                                        <div class="text-component-animation">
+                                            <p class="text-component-description">Paul Hobbs, fundador y enólogo de Viña Cobos, trabaja desde 1988 en la exploración de los distintos terroirs de Mendoza, buscando las regiones más destacadas dentro de Luján de Cuyo y Valle de Uco, para la elaboración
+                                                de vinos únicos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="v-timeline__section js-v-timeline__section">
+                            <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
+                            </div>
+
+                            <div class="v-timeline__items-group">
+                                <div class="v-timeline__item">
+                                    <div class="v-timeline__date margin-bottom-sm">
+                                        <h2 class="grey-number padding-left-xs">1997</h2>
+                                    </div>
+
+                                    <div class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
+                                        <h2 class="text-component-title">COMIENZO</h2>
+                                        <h3 class="text-component-subtitle">Creación del proyecto Viña Cobos</h3>
+                                        <div class="text-component-animation text-left">
+                                            <p class="text-component-description">Enamorado del paisaje de la tierra mendocina, Paul junto a dos enólogos locales. Deciden comenzar su sueño de posicionar el malbec en el mundo.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="v-timeline__section js-v-timeline__section">
+                            <div style="transform: translateX(-4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
+                            </div>
+
+                            <div class="v-timeline__items-group">
+                                <div class="v-timeline__item">
+                                    <div class="v-timeline__date margin-bottom-sm">
+                                        <h2 class="grey-number padding-right-xs">1999</h2>
+                                    </div>
+
+                                    <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                        <h2 class="text-component-title">IMPULSO</h2>
+                                        <h3 class="text-component-subtitle">Cobos malbec Inaugural</h3>
+                                        <div class="text-component-animation">
+                                            <p class="text-component-description">Desde la primera cosecha de Cobos Malbec en 1999, Viña Cobos ha marcado un hito en la vitivinicultura, desafiando los límites de la calidad para ubicar a la Argentina al lado de los grandes productores del mundo.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="v-timeline__section js-v-timeline__section">
+                            <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
+                            </div>
+
+                            <div class="v-timeline__items-group">
+                                <div class="v-timeline__item">
+                                    <div class="v-timeline__date margin-bottom-sm">
+                                        <h2 class="grey-number padding-left-xs">2006</h2>
+                                    </div>
+
+
+                                    <div class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
+                                        <h2 class="text-component-title">BODEGA</h2>
+                                        <h3 class="text-component-subtitle">Construcción de la bodega</h3>
+                                        <div class="text-component-animation text-left">
+                                            <p class="text-component-description">Construido en el año 2006, el edificio, con orientación este, se encuentra enfrentado al viñedo Marchiori, y con su lado oeste mirando hacia el Volcán Tupungato. De estilo minimalista y de líneas simples, propone
+                                                ser tanto moderno como funcional.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="v-timeline__section js-v-timeline__section">
+                            <div style="transform: translateX(-4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
+                            </div>
+
+                            <div class="v-timeline__items-group">
+                                <div class="v-timeline__item">
+                                    <div class="v-timeline__date margin-bottom-sm">
+                                        <h2 class="grey-number padding-right-xs">2014</h2>
+                                    </div>
+
+                                    <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                        <h2 class="text-component-title" style="transform: translateY(-12px);">PIONERO</h2>
+                                        <h3 class="text-component-subtitle">Primeros 100 puntos de sudamérica</h3>
+                                        <div class="text-component-animation">
+                                            <p class="text-component-description">Cobos Marchiori Malbec 2011 fue el primer vino Sudamericano en obtener 100 puntos por la crítica internacional. Confirmando a Argentina entre los líderes a nivel mundial.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="v-timeline__section js-v-timeline__section">
+                            <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
+                            </div>
+
+                            <div class="v-timeline__items-group">
+                                <div class="v-timeline__item">
+                                    <div class="v-timeline__date margin-bottom-sm">
+                                        <h2 class="grey-number padding-left-xs">1997</h2>
+                                    </div>
+
+                                    <div class="text-component text-left padding-right-lg@md margin-right-lg@md max-width-xxxxs">
+                                        <h2 class="text-component-title-2">1er VIÑEDO PROPIO</h2>
+                                        <h3 class="text-component-subtitle">Adquisición de Chañares Estate</h3>
+                                        <div class="text-component-animation text-left">
+                                            <p class="text-component-description">Adquirido por Paul Hobbs en el año 2013, conservando su diseño y naturaleza. Chañares tiene la particularidad de mantener entre sus viñedos diversos bosques nativos de chañares (árbol típico de esta región).
+                                                Suman 5 bosques de chañares, en total más de 1,5ha, un 10% de la superficie plantada.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="v-timeline__section js-v-timeline__section">
+                            <div style="transform: translateX(-4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
+                            </div>
+
+                            <div class="v-timeline__items-group">
+                                <div class="v-timeline__item">
+                                    <div class="v-timeline__date margin-bottom-sm">
+                                        <h2 class="grey-number padding-right-xs">2017</h2>
+                                    </div>
+
+                                    <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                        <h2 class="text-component-title-2" style="transform: translateY(-12px);">2do VIÑEDO PROPIO</h2>
+                                        <h3 class="text-component-subtitle">Adquisición de Zingaretti Estate</h3>
+                                        <div class="text-component-animation">
+                                            <p class="text-component-description">Ubicado en el distrito de Villa Bastías, Tupungato. Se destaca por sus antiguas vides de Malbec, 4,4 ha de más de 80 años. En su superficie plantada también se pueden encontrar vides de Chardonnay</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="v-timeline__section js-v-timeline__section">
+                            <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
+                            </div>
+
+                            <div class="v-timeline__items-group">
+                                <div class="v-timeline__item">
+                                    <div class="v-timeline__date margin-bottom-sm">
+                                        <h2 class="grey-number padding-left-xs">1997</h2>
+                                    </div>
+
+                                    <div class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
+                                        <h2 class="text-component-title" style="transform: translateY(-12px);">INNOVACIÓN</h2>
+                                        <h3 class="text-component-subtitle">100 puntos Cobos MB 2017</h3>
+                                        <div class="text-component-animation text-left">
+                                            <p class="text-component-description">En el año de su lanzamiento Cobos Malbec obtuvo 100 puntos por la crítica internacional. Reconocimiento al desafiante cambio estratégico de la línea icono.
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
                     </div>
-
-                    <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
-                      <h2 class="text-component-title">EXPLORACIÓN</h2>
-                      <h3 class="text-component-subtitle">Llegada de Paul a Mendoza</h3>
-                      <div class="text-component-animation">
-                        <p class="text-component-description">Paul Hobbs, fundador y enólogo de Viña Cobos, trabaja desde 1988 en la exploración de los distintos terroirs de Mendoza, buscando las regiones más destacadas dentro de Luján de Cuyo y Valle de Uco, para la elaboración de vinos únicos.</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </section>
-
-              <section class="v-timeline__section js-v-timeline__section">
-                <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
-                </div>
-
-                <div class="v-timeline__items-group">
-                  <div class="v-timeline__item">
-                    <div class="v-timeline__date margin-bottom-sm">
-                      <h2 class="grey-number padding-left-xs">1997</h2>
-                    </div>
-
-                    <div class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
-                      <h2 class="text-component-title">COMIENZO</h2>
-                      <h3 class="text-component-subtitle">Creación del proyecto Viña Cobos</h3>
-                      <div class="text-component-animation text-left">
-                        <p class="text-component-description">Enamorado del paisaje de la tierra mendocina, Paul junto a dos enólogos locales. Deciden comenzar su sueño de posicionar el malbec en el mundo.</p>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </section>
-
-              <section class="v-timeline__section js-v-timeline__section">
-                <div style="transform: translateX(-4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
-                </div>
-
-                <div class="v-timeline__items-group">
-                  <div class="v-timeline__item">
-                    <div class="v-timeline__date margin-bottom-sm">
-                      <h2 class="grey-number padding-right-xs">1999</h2>
-                    </div>
-
-                    <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
-                      <h2 class="text-component-title">IMPULSO</h2>
-                      <h3 class="text-component-subtitle">Cobos malbec Inaugural</h3>
-                      <div class="text-component-animation">
-                        <p class="text-component-description">Desde la primera cosecha de Cobos Malbec en 1999, Viña Cobos ha marcado un hito en la vitivinicultura, desafiando los límites de la calidad para ubicar a la Argentina al lado de los grandes productores del mundo.</p>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </section>
-
-              <section class="v-timeline__section js-v-timeline__section">
-                <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
-                </div>
-
-                <div class="v-timeline__items-group">
-                  <div class="v-timeline__item">
-                    <div class="v-timeline__date margin-bottom-sm">
-                      <h2 class="grey-number padding-left-xs">2006</h2>
-                    </div>
-
-
-                    <div class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
-                      <h2 class="text-component-title">BODEGA</h2>
-                      <h3 class="text-component-subtitle">Construcción de la bodega</h3>
-                      <div class="text-component-animation text-left">
-                        <p class="text-component-description">Construido en el año 2006, el edificio, con orientación este, se encuentra enfrentado al viñedo Marchiori, y con su lado oeste mirando hacia el Volcán Tupungato. De estilo minimalista y de líneas simples, propone ser tanto moderno como funcional.</p>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </section>
-
-              <section class="v-timeline__section js-v-timeline__section">
-                <div style="transform: translateX(-4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
-                </div>
-
-                <div class="v-timeline__items-group">
-                  <div class="v-timeline__item">
-                    <div class="v-timeline__date margin-bottom-sm">
-                      <h2 class="grey-number padding-right-xs">2014</h2>
-                    </div>
-
-                    <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
-                      <h2 class="text-component-title" style="transform: translateY(-12px);">PIONERO</h2>
-                      <h3 class="text-component-subtitle">Primeros 100 puntos de sudamérica</h3>
-                      <div class="text-component-animation">
-                        <p class="text-component-description">Cobos Marchiori Malbec 2011 fue el primer vino Sudamericano en obtener 100 puntos por la crítica internacional. Confirmando a Argentina entre los líderes a nivel mundial.</p>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </section>
-
-              <section class="v-timeline__section js-v-timeline__section">
-                <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
-                </div>
-
-                <div class="v-timeline__items-group">
-                  <div class="v-timeline__item">
-                    <div class="v-timeline__date margin-bottom-sm">
-                      <h2 class="grey-number padding-left-xs">1997</h2>
-                    </div>
-
-                    <div class="text-component text-left padding-right-lg@md margin-right-lg@md max-width-xxxxs">
-                      <h2 class="text-component-title-2">1er VIÑEDO PROPIO</h2>
-                      <h3 class="text-component-subtitle">Adquisición de Chañares Estate</h3>
-                      <div class="text-component-animation text-left">
-                        <p class="text-component-description">Adquirido por Paul Hobbs en el año 2013, conservando su diseño y naturaleza. Chañares tiene la particularidad de mantener entre sus viñedos diversos bosques nativos de chañares (árbol típico de esta región). Suman 5 bosques de chañares, en total más de 1,5ha, un 10% de la superficie plantada.</p>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </section>
-
-              <section class="v-timeline__section js-v-timeline__section">
-                <div style="transform: translateX(-4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
-                </div>
-
-                <div class="v-timeline__items-group">
-                  <div class="v-timeline__item">
-                    <div class="v-timeline__date margin-bottom-sm">
-                      <h2 class="grey-number padding-right-xs">2017</h2>
-                    </div>
-
-                    <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
-                      <h2 class="text-component-title-2" style="transform: translateY(-12px);">2do VIÑEDO PROPIO</h2>
-                      <h3 class="text-component-subtitle">Adquisición de Zingaretti Estate</h3>
-                      <div class="text-component-animation">
-                        <p class="text-component-description">Ubicado en el distrito de Villa Bastías, Tupungato. Se destaca por sus antiguas vides de Malbec, 4,4 ha de más de 80 años. En su superficie plantada también se pueden encontrar vides de Chardonnay</p>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </section>
-
-              <section class="v-timeline__section js-v-timeline__section">
-                <div style="transform: translateX(4.5px);" class="v-timeline__marker bg-primary" aria-hidden="true">
-                </div>
-
-                <div class="v-timeline__items-group">
-                  <div class="v-timeline__item">
-                    <div class="v-timeline__date margin-bottom-sm">
-                      <h2 class="grey-number padding-left-xs">1997</h2>
-                    </div>
-
-                    <div class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
-                      <h2 class="text-component-title" style="transform: translateY(-12px);">INNOVACIÓN</h2>
-                      <h3 class="text-component-subtitle">100 puntos Cobos MB 2017</h3>
-                      <div class="text-component-animation text-left">
-                        <p class="text-component-description">En el año de su lanzamiento Cobos Malbec obtuvo 100 puntos por la crítica internacional. Reconocimiento al desafiante cambio estratégico de la línea icono.</p>
-
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </section>
-
             </div>
-          </div>
-        </div>
-        <img class="display@md" src="./assets/img/storyline-polygon.svg" width="26" height="26" alt=""
-          style="transform: translateY(-56px);">
+            <img class="display@md" src="./assets/img/storyline-polygon.svg" width="26" height="26" alt="" style="transform: translateY(-56px);">
 
-        <div style="transform: translateY(-40px);">
-          <h2 class="text-component-title">THE NEXT STEP</h2>
-          <h2 class="text-component-title">2021</h2>
-          <a href="#"><button class="btn--secondary-block margin-top-lg">NUESTRA HISTORIA</button></a>
-        </div>
+            <div style="transform: translateY(-40px);">
+                <h2 class="text-component-title">THE NEXT STEP</h2>
+                <h2 class="text-component-title">2021</h2>
+                <a href="#"><button class="btn--secondary-block margin-top-lg">NUESTRA HISTORIA</button></a>
+            </div>
 
 
 
 
 
-        <!-- -------------------------Componente6------------------------- -->
-        <div class="component-section text-center flex flex-column justify-center items-center margin-0 padding-0"
-          style=" background: #F8F8F8;">
-          <img class="position-absolute left-0 bottom-0 final-tree" src="./assets/img/final-tree-2.png" alt="">
-          <div class="inner-component-section-moved">
-            <h1 class="fs-small-font display@xs">AUTÉNTICA EXPRESIÓN<br>DEL TERRUÑO<br>MENDOCINO</h1>
-            <h3 class="hide@xs font-primary padding-x-md">AUTÉNTICA EXPRESIÓN DEL TERRUÑO MENDOCINO</h3>
-            <a href="#"><button class="btn--secondary-block-2 margin-top-xxl">Conocé nuestro Legado</button></a>
-          </div>
-        </div>
+            <!-- -------------------------Componente6------------------------- -->
+            <div class="component-section text-center flex flex-column justify-center items-center margin-0 padding-0" style=" background: #F8F8F8;">
+                <img class="position-absolute left-0 bottom-0 final-tree" src="./assets/img/final-tree-2.png" alt="">
+                <div class="inner-component-section-moved">
+                    <h1 class="fs-small-font display@xs">AUTÉNTICA EXPRESIÓN<br>DEL TERRUÑO<br>MENDOCINO</h1>
+                    <h3 class="hide@xs font-primary padding-x-md">AUTÉNTICA EXPRESIÓN DEL TERRUÑO MENDOCINO</h3>
+                    <a href="#"><button class="btn--secondary-block-2 margin-top-xxl">Conocé nuestro Legado</button></a>
+                </div>
+            </div>
 
-      </section>
+        </section>
 
     </main>
     <!-- ==============================================END-MAIN============================================== -->
 
     <!-- ================================================FOOTER================================================ -->
-    <footer class="component-footer position-relative  padding-bottom-xxxxl padding-bottom-0@md"
-      style="z-index: 10;">
+    <footer class="component-footer position-relative  padding-bottom-xxxxl padding-bottom-0@md" style="z-index: 10;">
 
-      <div class="flex grid padding-x-lg padding-x-xxl@md">
+        <div class="flex grid padding-x-lg padding-x-xxl@md">
 
-        <div class="flex col-12 col-9@md font-footer-title margin-bottom-lg margin-bottom-0@md">
-          <p class="">
-            <span class="block">EL ORIGEN</span>
-            <span class="block">NOS DETERMINA</span>
-          </p>
-        </div>
-        <div class="col-12 col-1@md fonts-footer-colums padding-left-lg@md">
-          <ul class="grid gap-xs">
-            <li><a class="footer-v5__link" href="#0">Historia</a></li>
-            <li><a class="footer-v5__link" href="#0">Terroir</a></li>
-            <li><a class="footer-v5__link" href="#0">Vinos</a></li>
-            <li><a class="footer-v5__link" href="#0">Contacto</a></li>
-            <li><a class="footer-v5__link" href="#0">Tienda</a></li>
-          </ul>
-        </div>
-        <div class="col-12 col-2@md fonts-footer-colums">
-          <ul class="grid gap-xs padding-left-xxl@md">
-            <li><a class="footer-v5__link" href="#0">Paul Hobbs selection</a></li>
-            <li><a class="footer-v5__link" href="#0">Legal</a></li>
-            <li><a class="footer-v5__link" href="#0">Recibir Noticias</a></li>
-          </ul>
-        </div>
-
-      </div>
-      <div
-        class="col-12 flex justify-between items-center position-absolute bottom-0 width-100% padding-x-lg padding-x-xxl@md padding-bottom-lg">
-
-        <a href="#0">
-          <img id="logo" src="./assets/img/logo.svg" width="32" height="32" alt="Logo">
-        </a>
-
-        <div>
-          <!--facebook-->
-          <a href="#0">
-            <img id="logo" src="./assets/img/facebook-logo.svg" width="32" height="32" alt="Logo" class="padding-xxxs">
-          </a>
-
-          <!-- twitter icon -->
-          <a href="#0">
-            <img id="logo" src="./assets/img/twitter.svg" width="32" height="32" alt="Logo" class="padding-xxxs">
-          </a>
-
-          <!-- instagram -->
-          <a href="#0">
-            <img id="logo" src="./assets/img/instagram-logo.svg" width="32" height="32" alt="Logo" class="padding-xxxs">
-          </a>
+            <div class="flex col-12 col-9@md font-footer-title margin-bottom-lg margin-bottom-0@md">
+                <p class="">
+                    <span class="block">EL ORIGEN</span>
+                    <span class="block">NOS DETERMINA</span>
+                </p>
+            </div>
+            <div class="col-12 col-1@md fonts-footer-colums padding-left-lg@md">
+                <ul class="grid gap-md gap-xs@md">
+                    <li><a class="footer-v5__link" href="#0">Historia</a></li>
+                    <li><a class="footer-v5__link" href="#0">Terroir</a></li>
+                    <li><a class="footer-v5__link" href="#0">Vinos</a></li>
+                    <li><a class="footer-v5__link" href="#0">Contacto</a></li>
+                    <li><a class="footer-v5__link" href="#0">Tienda</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-2@md fonts-footer-colums">
+                <ul class="grid gap-md gap-xs@md padding-left-xxl@md">
+                    <li><a class="footer-v5__link" href="#0">Paul Hobbs selection</a></li>
+                    <li><a class="footer-v5__link" href="#0">Legal</a></li>
+                    <li><a class="footer-v5__link" href="#0">Recibir Noticias</a></li>
+                </ul>
+            </div>
 
         </div>
-      </div>
+        <div class="col-12 flex justify-between items-center position-absolute bottom-0 width-100% padding-x-lg padding-x-xxl@md padding-bottom-lg">
+
+            <a href="#0">
+                <img id="logo" src="./assets/img/logo.svg" width="32" height="32" alt="Logo">
+            </a>
+
+            <div class="display@md">
+                <!--facebook-->
+                <a href="#0">
+                    <img id="logo" src="./assets/img/facebook-logo.svg" width="32" height="32" alt="Logo" class="padding-xxxs">
+                </a>
+
+                <!-- twitter icon -->
+                <a href="#0">
+                    <img id="logo" src="./assets/img/twitter.svg" width="32" height="32" alt="Logo" class="padding-xxxs">
+                </a>
+
+                <!-- instagram -->
+                <a href="#0">
+                    <img id="logo" src="./assets/img/instagram-logo.svg" width="32" height="32" alt="Logo" class="padding-xxxs">
+                </a>
+            </div>
+
+
+            <div class="hide@md">
+                <!--facebook-->
+                <a href="#0" class="margin-x-xxxs">
+                    <img id="logo" src="./assets/img/facebook-logo.svg" width="25" height="auto" alt="Logo" class="padding-xxxs">
+                </a>
+
+                <!-- twitter icon -->
+                <a href="#0" class="margin-x-xxxs">
+                    <img id="logo" src="./assets/img/twitter.svg" width="25" height="auto" alt="Logo" class="padding-xxxs">
+                </a>
+
+                <!-- instagram -->
+                <a href="#0" class="margin-x-xxxs">
+                    <img id="logo" src="./assets/img/instagram-logo.svg" width="25" height="auto" alt="Logo" class="padding-xxxs">
+                </a>
+            </div>
+        </div>
     </footer>
 
-  </div>
+    </div>
 
 
-  <!-- </div> -->
-  <!-- ==============================================END-FOOTER============================================== -->
+    <!-- </div> -->
+    <!-- ==============================================END-FOOTER============================================== -->
 
 
 
 
-  <script src="./assets/js/scripts.js"></script>
-  <script src="./assets/js/model/three.js"></script>
-  <script type="module" src="./assets/js/model/GLTFLoader.js"></script>
-  <script type="module" src="./assets/js/model/model_script.js"></script>
-  
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/model/three.js"></script>
+    <script type="module" src="./assets/js/model/GLTFLoader.js"></script>
+    <script type="module" src="./assets/js/model/model_script.js"></script>
+
 </body>
 
 
