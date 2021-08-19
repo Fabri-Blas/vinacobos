@@ -148,6 +148,7 @@ Usage: codyhouse.co/license
   
     .v-timeline__section--is-hidden {
       opacity: 0; // used in JS to hide section before the animation
+      filter: blur(50px);
     }
   
     .v-timeline__date {
@@ -161,13 +162,15 @@ Usage: codyhouse.co/license
       .v-timeline[data-animation="on"] {
         .v-timeline__marker {
           opacity: 0;
+          filter: blur(50px);
           transform: scale(0.5);
-          transition: transform .6s var(--ease-out), opacity .6s;
+          transition: transform 1.7s var(--ease-out), opacity, filter 1.2s;
         }
     
         .v-timeline__item {
           opacity: 0;
-          transition: transform .6s var(--ease-out), opacity .6s;
+          filter: blur(50px);
+          transition: transform 1.7s var(--ease-out), opacity, filter 1.2s;
         }
     
         .v-timeline__section {
@@ -184,11 +187,13 @@ Usage: codyhouse.co/license
           .v-timeline__item {
             transform: translateX(0) !important;
             opacity: 1;
+            filter: blur(0px);
           }
     
           .v-timeline__marker {
             transform: scale(1);
             opacity: 1;
+            filter: blur(0px);
           }
         }
       }
