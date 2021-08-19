@@ -31,12 +31,12 @@ function inViewport(el){
     return !(bb.top > innerHeight || bb.bottom < 0);
 }
 
-document.addEventListener('scroll',(e)=>{
-    // if(window.pageYOffset < 500){
-    //     e.preventDefault
-    //     console.log('scrolleando')
-    //     smoothScroll('.model-3d', 1000)
-    //  }
-    // console.log('pageoffset', window.pageYOffset)
-})
+// document.addEventListener('scroll',(e)=>{
+//     // if(window.pageYOffset < 500){
+//     //     e.preventDefault
+//     //     console.log('scrolleando')
+//     //     smoothScroll('.model-3d', 1000)
+//     //  }
+//     // console.log('pageoffset', window.pageYOffset)
+// })
 

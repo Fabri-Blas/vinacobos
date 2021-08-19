@@ -13,6 +13,10 @@
 //     }
 //   }
 // }
+.f-header__nav--is-visible{
+    background-color: rgba(0,0,0,.5) !important;
+    padding-top: 23px !important;
+}
 .dark-nav-custom a {
     color: var(--color-primary) !important;
 }
