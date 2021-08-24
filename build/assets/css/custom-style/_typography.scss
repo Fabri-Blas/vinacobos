@@ -68,6 +68,9 @@ h5 {
 .font-primary {
   font-family: var(--font-primary);
 }
+.font-secondary {
+  font-family: var(--font-secondary);
+}
 
 // color
 .color-secondary-darker {
@@ -88,14 +91,6 @@ h5 {
 
 .color-secondary-lighter {
   color: alpha(var(--color-secondary-lighter), var(--color-o, 1));
-}
-
-.font-primary {
-  font-family: var(--font-primary);
-}
-
-.font-secondary {
-  font-family: var(--font-secondary);
 }
 
 .to-upper-case {
@@ -295,9 +290,11 @@ mark {
 }
 
 .grey-number {
+  font-family: var(--font-secondary);
   color: #878581;
   font-size: 47.12px;
   &-mobile {
+    font-family: var(--font-secondary);
     color: #878581;
     font-size: 18px;
     width: 43px;
@@ -309,6 +306,9 @@ mark {
 
 .looping-tab-description {
   font-size: 18px;
+}
+.looping-tab-description2{
+  font-size: 11.12px;
 }
 
 @media only screen and (max-width: 1790px) {

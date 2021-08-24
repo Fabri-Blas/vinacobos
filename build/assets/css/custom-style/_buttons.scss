@@ -44,7 +44,7 @@ button {
   cursor: pointer;
   position: absolute;
   bottom: 70px;
-  left: 0px;
+  left: 35px;
   font-size: 13px;
   text-decoration: none;
   color: var(--color-primary);
@@ -163,7 +163,7 @@ button {
       transition: all 0.5s;
     }
   }
-  &:hover ~ .btn--secondary-block-2-borderbottom2-desktop{
+  &:hover ~ .btn--secondary-block-2-borderbottom2-desktop {
     transition: all 0.5s;
     width: 120px;
   }
@@ -211,6 +211,26 @@ button {
   padding: 0 0 8px 0;
   margin: 0;
 
+  &-black {
+    font-size: 11.12px;
+    font-family: var(--font-secondary);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black !important;
+    // color: white;
+    letter-spacing: 0;
+    text-align: center;
+    border: 0px;
+    padding: 0 0 8px 0;
+    margin: 0;
+
+    &:hover {
+      cursor: pointer;
+      transition: all 0.5s;
+      color: black !important;
+    }
+  }
+
   &:hover {
     // --d: 100%;
     // --p: 100%;
@@ -227,6 +247,15 @@ button {
   &:hover {
     --d: 100%;
     --p: 100%;
+  }
+
+  &-black{
+    background: linear-gradient(black 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
+    transition: 0.3s, background-position 0s 0.3s;
+    &:hover {
+      --d: 100%;
+      --p: 100%;
+    }
   }
 }
 

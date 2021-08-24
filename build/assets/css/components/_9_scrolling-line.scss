@@ -32,10 +32,10 @@
 }
 
 .scroll-indicator-container .scroll-indicator-wrapper .title h3 {
-    font-family: "millerdisplay-lightitalicRg";
+    font-family: var(--font-primary);
     font-size: 15px;
     color: #a68676;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
 }
 
 .scroll-indicator-container .scroll-indicator-wrapper .scroll-indicator-inner {
