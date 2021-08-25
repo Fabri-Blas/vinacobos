@@ -44,7 +44,9 @@ setTimeout(() => {
 
         let actPos = calcActPos(felino.offsetTop - compsect2b);
 
+
         if (paseFelino && actPos < 0) {
+            // ============ CAMBIO AL COLOR BLANCO DEL HEADER ============
             logo.setAttribute('src', './assets/img/logo.svg');
 
             fHeaders.forEach(header => {
@@ -58,6 +60,7 @@ setTimeout(() => {
             paseFelino = false;
         } else {
             if (!paseFelino && actPos >= 0) {
+                // ============ CAMBIO AL COLOR NEGRO DEL HEADER ============
                 logo.setAttribute('src', './assets/img/logo-black.svg');
 
                 fHeaders.forEach(header => {

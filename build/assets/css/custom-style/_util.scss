@@ -150,20 +150,43 @@ footer {
     background-color: transparent;
 }
 
-#felino-home{
-    background-image: url('../img/felino-bg.jpeg');
+#felino-home {
+    background-image: url("../img/felino-bg.jpeg");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 
-    &-content{
+    &-content {
         width: 99%;
     }
-}
 
+    &-mobile {
+        background-image: url("../img/felino-bg-mobile.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+#cobos-home {
+    background-image: url("../img/cobos-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-content {
+        width: 99%;
+    }
+
+    &-mobile {
+        background-image: url("../img/cobos-bg-mobile.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
 .felino {
-    &-title{
-        font-family: var(--font-secondary);
+    &-title {
+        font-family: var(--font-primary);
         font-weight: 500;
         font-size: 47.11px;
         font-style: normal;
@@ -171,15 +194,16 @@ footer {
     }
 
     &-subtitle {
-        font-family: var(--font-secondary);
+        font-family: var(--font-primary);
         font-weight: 500;
         font-size: 18px;
         font-style: normal;
         transform: translateY(17px);
         letter-spacing: 0.12em;
         width: 110px;
+        color: #878581;
 
-        &-2{
+        &-2 {
             font-family: var(--font-secondary);
             font-weight: 500;
             font-size: 18px;
@@ -187,13 +211,14 @@ footer {
             transform: translateY(17px);
             letter-spacing: 0.12em;
             width: 110px;
+            color: #878581;
         }
     }
 
-    &-description{
+    &-description {
         font-family: var(--font-secondary);
         font-weight: normal;
-        font-size: 18px;
+        font-size: 13px;
         font-style: normal;
         transform: translateY(17px);
         letter-spacing: 0.12em;
@@ -202,22 +227,76 @@ footer {
     &-small-line {
         border-bottom: 3px solid #1c1c1c;
         width: 30px;
-        transform: translateY(-30px);
+        transform: translateY(-27px);
         margin: 0px 30px;
     }
 
-    &-big-line{
+    &-big-line {
         border-bottom: 3px solid #1c1c1c;
         width: 50%;
-        transform: translateY(-30px);
+        transform: translateY(-27px);
         margin-left: 30px;
+    }
+
+    &-links {
+        padding-bottom: 50px;
     }
 }
 
-@media only screen and (max-width: 1458px){
-    .felino{
+.cobos {
+    &-title {
+        font-family: var(--font-primary);
+        font-weight: 500;
+        font-size: 47.11px;
+        font-style: normal;
+        letter-spacing: 0.12em;
+        color: white;
+    }
+
+    &-subtitle {
+        font-family: var(--font-primary);
+        font-weight: 500;
+        font-size: 18px;
+        font-style: normal;
+        transform: translateY(17px);
+        letter-spacing: 0.12em;
+        width: 110px;
+        color: rgba(241, 238, 233, .5);
+    }
+
+    &-description {
+        font-family: var(--font-secondary);
+        font-weight: normal;
+        font-size: 13px;
+        font-style: normal;
+        transform: translateY(17px);
+        letter-spacing: 0.12em;
+        color: var(--color-primary-light);
+    }
+
+    &-small-line {
+        border-bottom: 3px solid rgba(241, 238, 233, 0.5);
+        width: 30px;
+        transform: translateY(-27px);
+        margin: 0px 30px;
+    }
+
+    &-big-line {
+        border-bottom: 3px solid rgba(241, 238, 233, 0.5);
+        width: 100%;
+        transform: translateY(-27px);
+        margin-left: 30px;
+    }
+
+    &-links {
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 1458px) {
+    .felino {
         &-subtitle {
-            &-2{
+            &-2 {
                 transform: translateY(-4px);
             }
         }
@@ -230,6 +309,33 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         min-width: 150px;
+    }
+    .felino {
+        &-title {
+            font-family: var(--font-primary);
+            font-weight: 500;
+            font-size: 47.12px;
+            font-style: normal;
+            letter-spacing: 0.12em;
+        }
+        &-description {
+            font-family: var(--font-secondary);
+            font-weight: normal;
+            font-size: 13px;
+            font-style: normal;
+            transform: translateY(17px);
+            letter-spacing: 0.12em;
+        }
+        &-subtitle {
+            font-family: var(--font-primary);
+            font-weight: 500;
+            font-size: 18px;
+            font-style: normal;
+            transform: translateY(17px);
+            letter-spacing: 0.12em;
+            width: 110px;
+            color: #878581;
+        }
     }
     .component-footer {
         min-height: 100vh;
