@@ -229,6 +229,10 @@ button {
       transition: all 0.5s;
       color: black !important;
     }
+
+    &-mobile{
+      color:white!important;
+    }
   }
 
   &:hover {

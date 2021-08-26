@@ -209,6 +209,16 @@ Usage: codyhouse.co/license
     .v-timeline__marker{
       height: 18px !important;
       width: 18px !important;
+      margin-top: 4px;
+      }
+    .v-timeline__section:nth-child(odd) {
+        .v-timeline__marker {
+          width: 12px !important;
+          height: 12px !important;
+          margin-right: 21px;
+          margin-left: 4px;
+          margin-top: 6px;
+        }
     }
     .v-timeline__item {
       transform: translateY(-7px);

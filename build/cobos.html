@@ -17,14 +17,18 @@
     <!-- ================================================HEADER================================================ -->
     <header class="f-header js-f-header bg-transparent hide-nav js-hide-nav js-hide-nav--main"
         data-nav-target-class="f-header--expanded">
-        <div class="f-header__mobile-content container max-width-lg padding-top-lg padding-top-0@md">
-            <a href="#0" class="f-header__logo">
-                <img src="./assets/img/logo.svg" width="30" height="27" alt="Logo">
-            </a>
-            <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
-                aria-label="Toggle menu">
-                <img src="./assets/img/hamburguer.svg" width="25" height="9" alt="">
-            </button>
+        <div class="f-header__mobile-content container max-width-lg padding-top-lg padding-top-0@md flex flex-column">
+            <div class="position-relative width-100% padding-top-lg" style="height: 150px;">
+                <a href="#0" class="position-absolute left-0 top-50% -translate-y-50%">
+                    <img src="./assets/img/logo.svg" width="30" height="27" alt="Logo">
+                </a>
+                <button onclick="changeHeaderColorsCobos()" class="position-absolute right-0 top-50% -translate-y-50% reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
+                    aria-label="Toggle menu">
+                    <img src="./assets/img/hamburguer.svg" width="25" height="9" alt="">
+                </button>
+            </div>
+            <input type="text" name="text" class="input-buscar width-100% margin-top-xl is-hidden"
+                placeholder="Buscar">
         </div>
 
         <div class="f-header__nav" role="navigation">
@@ -35,7 +39,7 @@
                     </a>
                 </div>
 
-                <ul class="f-header__list padding-top-lg margin-left-sm justify-center@md">
+                <ul class="f-header__list padding-top-lg margin-left-sm justify-center@md display@md">
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
                             class="f-header__link btn--nav">HISTORIA</a></li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
@@ -49,6 +53,24 @@
                 </ul>
 
                 <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
+                </ul>
+
+                <ul class="f-header__list padding-top-lg justify-center@md hide@md">
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-">TIENDA</a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -33,6 +33,8 @@ setTimeout(() => {
     const fHeaders = document.querySelectorAll('.f-header__item');
     const fLinks = document.querySelectorAll('.f-header__link');
     const logo = document.getElementById("logo");
+    const logoMobile = document.getElementById("logo-mobile");
+    const hamburguer = document.getElementById("hamburguer");
 
     let paseFelino = false;
 
@@ -48,6 +50,9 @@ setTimeout(() => {
         if (paseFelino && actPos < 0) {
             // ============ CAMBIO AL COLOR BLANCO DEL HEADER ============
             logo.setAttribute('src', './assets/img/logo.svg');
+            logoMobile.setAttribute('src', './assets/img/logo.svg');
+            hamburguer.setAttribute('src', './assets/img/hamburguer.svg');
+
 
             fHeaders.forEach(header => {
                 header.classList.remove('nav--line-black');
@@ -62,6 +67,8 @@ setTimeout(() => {
             if (!paseFelino && actPos >= 0) {
                 // ============ CAMBIO AL COLOR NEGRO DEL HEADER ============
                 logo.setAttribute('src', './assets/img/logo-black.svg');
+                logoMobile.setAttribute('src', './assets/img/logo-black.svg');
+                hamburguer.setAttribute('src', './assets/img/hamburguer-black.svg')
 
                 fHeaders.forEach(header => {
                     header.classList.remove('nav--line');
