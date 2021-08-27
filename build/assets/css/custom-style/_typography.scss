@@ -179,7 +179,7 @@ mark {
     font-family: var(--font-secondary);
     font-style: normal;
     font-weight: 500;
-    font-size: 11.12px;
+    font-size: 13px;
     letter-spacing: 0.5px;
     line-height: 13px;
     color: #878581;
@@ -309,7 +309,7 @@ mark {
   font-size: 18px;
 }
 .looping-tab-description2{
-  font-size: 11.12px;
+  font-size: 13px;
 }
 
 @media only screen and (max-width: 1790px) {
@@ -337,7 +337,7 @@ mark {
 
 @media only screen and (max-width: 1366px) {
   .looping-tab-description {
-    font-size: 11.12px;
+    font-size: 13px;
   }
 }
 
@@ -385,6 +385,7 @@ mark {
     font-size: 60px;
     padding: 80px 40px;
     z-index: 3 !important;
+
 
     &-mobile {
       font-size: 47.1px;

@@ -3694,31 +3694,35 @@ function resetFocusTabsStyle() {
 	}
 }());
 
-const input_buscar = document.querySelector(".input-buscar");
-const logo = document.querySelector(".logo-mobile-1");
-const hamburguer = document.querySelector(".hamburguer-mobile-1");
-let header_open = false;
+const headerGlobal = document.getElementById('header-global');
 
-function changeHeaderColors() {
-	if(!header_open){
-		header_open = !header_open;
-		input_buscar.classList.remove("is-hidden");
-		logo.setAttribute("src", "./assets/img/logo.svg");
-		hamburguer.setAttribute("src", "./assets/img/hamburguer.svg");
+checkBackdropBlur();
+
+document.addEventListener('scroll', () => {
+	checkBackdropBlur();
+});
+
+function checkBackdropBlur(){
+	if(window.pageYOffset === 0){
+		headerGlobal.classList.remove('backdrop-blur-10');
+		headerGlobal.style.backgroundColor = 'rgba(0,0,0,0)';
 	}else{
-		header_open = !header_open;
-		input_buscar.classList.add("is-hidden");
-		logo.setAttribute("src", "./assets/img/logo-black.svg");
-		hamburguer.setAttribute("src", "./assets/img/hamburguer-black.svg");
+		if(window.pageYOffset > 0){
+			headerGlobal.classList.add('backdrop-blur-10');
+			headerGlobal.style.backgroundColor = 'rgba(0,0,0,0.8)';
+		}
 	}
 }
-function changeHeaderColorsCobos() {
-	if(!header_open){
-		header_open = !header_open;
-		input_buscar.classList.remove("is-hidden");
+
+checkWindowSize();
+
+function checkWindowSize(){
+	if(window.pageXOffset > 1024){
+		headerGlobal.classList.add("js-hide-nav", "js-hide-nav--main");
 	}else{
-		header_open = !header_open;
-		input_buscar.classList.add("is-hidden");
+		if(window.pageXOffset <= 1024){
+			headerGlobal.classList.remove("js-hide-nav", "js-hide-nav--main");
+		}
 	}
 }
 // File#: _2_modal-video
@@ -4104,67 +4108,6 @@ document.addEventListener('scroll', () => {
 
     sIndicator.setAttribute('style', `height: ${(window.pageYOffset - 912) / 40}%`);
 })
-
-setTimeout(() => {
-
-    console.log('iniciado');
-
-    const felino = document.getElementById("felino-section");
-    const compsect2b = document.querySelector('.component-section-2b').clientHeight;
-    const fHeaders = document.querySelectorAll('.f-header__item');
-    const fLinks = document.querySelectorAll('.f-header__link');
-    const logo = document.getElementById("logo");
-    const logoMobile = document.getElementById("logo-mobile");
-    const hamburguer = document.getElementById("hamburguer");
-
-    let paseFelino = false;
-
-    function calcActPos(offsetTop) {
-        return (window.pageYOffset - offsetTop);
-    }
-
-    document.addEventListener("scroll", () => {
-
-        let actPos = calcActPos(felino.offsetTop - compsect2b);
-
-
-        if (paseFelino && actPos < 0) {
-            // ============ CAMBIO AL COLOR BLANCO DEL HEADER ============
-            logo.setAttribute('src', './assets/img/logo.svg');
-            logoMobile.setAttribute('src', './assets/img/logo.svg');
-            hamburguer.setAttribute('src', './assets/img/hamburguer.svg');
-
-
-            fHeaders.forEach(header => {
-                header.classList.remove('nav--line-black');
-                header.classList.add('nav--line');
-            });
-            fLinks.forEach(link => {
-                link.classList.remove('btn--nav-black');
-                link.classList.add('btn--nav');
-            });
-            paseFelino = false;
-        } else {
-            if (!paseFelino && actPos >= 0) {
-                // ============ CAMBIO AL COLOR NEGRO DEL HEADER ============
-                logo.setAttribute('src', './assets/img/logo-black.svg');
-                logoMobile.setAttribute('src', './assets/img/logo-black.svg');
-                hamburguer.setAttribute('src', './assets/img/hamburguer-black.svg')
-
-                fHeaders.forEach(header => {
-                    header.classList.remove('nav--line');
-                    header.classList.add('nav--line-black');
-                });
-                fLinks.forEach(link => {
-                    link.classList.remove('btn--nav');
-                    link.classList.add('btn--nav-black');
-                });
-
-                paseFelino = true;
-            }
-        }
-    });
-}, 500);
 var hero = document.getElementById('hero')
 
 function smoothScroll(starget, duration){

@@ -49,7 +49,7 @@ button {
   text-decoration: none;
   color: var(--color-primary);
   letter-spacing: 0.12em;
-  width: 120px;
+  width: 110px;
   text-align: left;
   background: transparent;
   text-transform: uppercase;
@@ -58,7 +58,7 @@ button {
   transition: all 0.5s;
   padding-bottom: 8px;
   z-index: 99;
-
+  font-family: var(--font-secondary-medium);
   &:hover {
     letter-spacing: 0.2em;
     width: 81px;
@@ -185,6 +185,7 @@ button {
   bottom: 17px;
   right: 90px;
   padding-bottom: 8px;
+  padding-right: 0;
 
   &:hover {
     letter-spacing: 0.2em;
@@ -194,7 +195,7 @@ button {
 }
 
 .btn--nav {
-  font-size: 11.12px;
+  font-size: 13px;
   font-family: var(--font-secondary);
   text-decoration: none;
   text-transform: uppercase;
@@ -229,10 +230,9 @@ button {
       transition: all 0.5s;
       color: black !important;
     }
-
-    &-mobile{
-      color:white!important;
-    }
+  }
+  &-mobile{
+    color:white!important;
   }
 
   &:hover {

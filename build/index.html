@@ -17,28 +17,28 @@
 <body class="bg-black">
 
     <!-- ================================================HEADER================================================ -->
-    <header id="header-global" class="f-header js-f-header bg-transparent hide-nav js-hide-nav js-hide-nav--main"
+    <header id="header-global" class="f-header js-f-header bg-transparent hide-nav backdrop-blur-10 padding-y-lg padding-y-0@md"
         data-nav-target-class="f-header--expanded">
-        <div class="f-header__mobile-content container max-width-lg padding-top-lg padding-top-0@md">
-            <a href="#0" class="f-header__logo">
-                <img id="logo-mobile" src="./assets/img/logo.svg" width="30" height="27" alt="Logo">
+        <div class="f-header__mobile-content container max-width-lg padding-top-0@md flex flex-column">
+            <a href="#0" class="position-absolute left-0 top-50% -translate-y-50%">
+                <img src="./assets/img/logo.svg" width="30" height="27" alt="Logo" class="logo-mobile-1">
             </a>
-            <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
+            <button class="position-absolute right-0 top-50% -translate-y-50% reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
                 aria-label="Toggle menu">
-                <img id="hamburguer" src="./assets/img/hamburguer.svg" width="25" height="9" alt="">
-                
+                <img src="./assets/img/hamburguer.svg" width="25" height="9" alt="" class="hamburguer-mobile-1">
             </button>
         </div>
 
         <div class="f-header__nav" role="navigation">
             <div class="f-header__nav-grid justify-between@md container max-width-xxxl margin-x-auto padding-x-xxl@md">
                 <div class="f-header__nav-logo-wrapper">
-                    <a href="#0" class="margin-top-lg">
+                    <a href="#0" class="">
                         <img id="logo" src="./assets/img/logo.svg" width="38" height="35" alt="Logo" class="display@md">
                     </a>
                 </div>
 
-                <ul class="f-header__list padding-top-lg margin-left-sm justify-center@md">
+                <ul id="desktop-header"
+                    class="f-header__list margin-left-sm justify-center@md display@md">
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
                             class="f-header__link btn--nav">HISTORIA</a></li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
@@ -52,13 +52,28 @@
                 </ul>
                 <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
                 </ul>
+
+                <ul class="f-header__list padding-top-lg justify-center@md hide@md">
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TIENDA</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
     <!-- ==============================================END-HEADER============================================== -->
-
-
-
 
 
 
@@ -142,7 +157,8 @@
                                     <li class="width-33% width-auto@md">
                                         <a href="#timingTab1Panel1"
                                             class="loop-tabs__control loop-tabs__control--selected  padding-y-md padding-right-lg@md text-uppercase">
-                                            <p class=" font-secondary color-primary-light looping-tab-description2">COBOS
+                                            <p class=" font-secondary color-primary-light looping-tab-description2">
+                                                COBOS
                                             </p>
                                         </a>
                                     </li>
@@ -265,7 +281,8 @@
                                     <li class="width-33% width-auto@md">
                                         <a href="#timingTab1Panel1"
                                             class="loop-tabs__control padding-y-md text-uppercase js-loop-tabs__trigger padding-right-lg@md">
-                                            <p class=" font-secondary color-primary looping-tab-description2">BRAMARE</p>
+                                            <p class=" font-secondary color-primary looping-tab-description2">BRAMARE
+                                            </p>
                                         </a>
                                     </li>
 
@@ -284,7 +301,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                                
+
                                 <div class="loop-tabs__panels js-loop-tabs__panels margin-bottom-md">
                                     <section id="timingTab1Panel1"
                                         class="loop-tabs__panel js-loop-tabs__panel text-component loop-tabs__panel--selected">
@@ -298,7 +315,7 @@
                                         class="loop-tabs__panel js-loop-tabs__panel text-component">
                                         <p
                                             class="font-secondary color-primary max-width-xxxxs margin-x-auto padding-left-0@md padding-right-lg@md looping-tab-description">
-                                            Nuestro compromiso con el Cabernet Sauvignon de alta calidad producido en
+                                            Nuestro compromiso con el Cabernet Sauvignon de<br>alta calidad producido en
                                             Argentina
                                         </p>
                                     </section>
@@ -393,9 +410,9 @@
                 </div>
                 <div
                     class="position-relative z-index-1 overflow-hidden padding-top-xxxxl@md padding-bottom-xl padding-x-xxl@md">
-                    <div class="margin-y-xxl@md padding-top-xxxl@md">
+                    <div class="margin-y-lg@md padding-top-xxxl@md">
                         <h1
-                            class="display@md history-storyline letter-spacing-lg text-left font-primary padding-left-md">
+                            class="display@md history-storyline letter-spacing-lg text-left font-primary padding-left-xxxxs">
                             HISTORIA
                         </h1>
                         <h2 class="hide@md history-storyline-mobile text-left font-primary ">
@@ -434,9 +451,11 @@
 
                                         <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
                                             <h2 class="text-component-title">EXPLORACIÓN</h2>
-                                            <h3 class="text-component-subtitle">Llegada de Paul a Mendoza</h3>
+                                            <h3 class="text-component-subtitle padding-left-xxxxs">Llegada de Paul a
+                                                Mendoza</h3>
                                             <div class="text-component-animation">
-                                                <p class="text-component-description">Paul Hobbs, fundador y enólogo de
+                                                <p class="text-component-description padding-left-xxxs">Paul Hobbs,
+                                                    fundador y enólogo de
                                                     Viña Cobos, trabaja desde 1988 en la exploración de los distintos
                                                     terroirs de Mendoza, buscando las regiones más destacadas dentro de
                                                     Luján de Cuyo y Valle de Uco, para
@@ -486,7 +505,8 @@
                                             <h2 class="text-component-title">COMIENZO</h2>
                                             <h3 class="text-component-subtitle">Creación del proyecto Viña Cobos</h3>
                                             <div class="text-component-animation text-left">
-                                                <p class="text-component-description">Enamorado del paisaje de la tierra
+                                                <p class="text-component-description padding-left-xxxxs">Enamorado del
+                                                    paisaje de la tierra
                                                     mendocina, Paul junto a dos enólogos locales. Deciden comenzar su
                                                     sueño de posicionar el malbec en el mundo.</p>
                                             </div>
@@ -533,7 +553,8 @@
                                             <h2 class="text-component-title">IMPULSO</h2>
                                             <h3 class="text-component-subtitle">Cobos malbec Inaugural</h3>
                                             <div class="text-component-animation">
-                                                <p class="text-component-description">Desde la primera cosecha de Cobos
+                                                <p class="text-component-description padding-left-xxxxs">Desde la
+                                                    primera cosecha de Cobos
                                                     Malbec en 1999, Viña Cobos ha marcado un hito en la vitivinicultura,
                                                     desafiando los límites de la calidad para ubicar a la Argentina al
                                                     lado de los grandes productores del
@@ -587,7 +608,8 @@
                                             <h2 class="text-component-title">LA BODEGA</h2>
                                             <h3 class="text-component-subtitle">Construcción de la bodega</h3>
                                             <div class="text-component-animation text-left">
-                                                <p class="text-component-description">Construido en el año 2006, el
+                                                <p class="text-component-description padding-left-xxxxs">Construido en
+                                                    el año 2006, el
                                                     edificio, con orientación este, se encuentra enfrentado al viñedo
                                                     Marchiori, y con su lado oeste mirando hacia el Volcán Tupungato. De
                                                     estilo minimalista y de líneas simples,
@@ -639,7 +661,8 @@
                                             </h2>
                                             <h3 class="text-component-subtitle">Primeros 100 puntos de sudamérica</h3>
                                             <div class="text-component-animation">
-                                                <p class="text-component-description">Cobos Marchiori Malbec 2011 fue el
+                                                <p class="text-component-description padding-left-xxxxs">Cobos Marchiori
+                                                    Malbec 2011 fue el
                                                     primer vino Sudamericano en obtener 100 puntos por la crítica
                                                     internacional. Confirmando a Argentina entre los líderes a nivel
                                                     mundial.
@@ -686,13 +709,13 @@
                                             <h2 class="grey-number padding-left-xs">2014</h2>
                                         </div>
 
-                                        <div
-                                            style="padding: 4px;" 
+                                        <div style="padding: 4px;"
                                             class="text-component text-left padding-right-sm@md max-width-xxxs">
                                             <h2 class="text-component-title-2">1er VIÑEDO PROPIO</h2>
                                             <h3 class="text-component-subtitle">Adquisición de Chañares Estate</h3>
                                             <div class="text-component-animation text-left">
-                                                <p class="text-component-description">Adquirido por Paul Hobbs en el año
+                                                <p class="text-component-description padding-left-xxxxs">Adquirido por
+                                                    Paul Hobbs en el año
                                                     2013, conservando su diseño y naturaleza. Chañares tiene la
                                                     particularidad de mantener entre sus viñedos diversos bosques
                                                     nativos de chañares (árbol típico de esta región).
@@ -710,7 +733,8 @@
                                             <div
                                                 class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
                                                 <h2 class="text-component-title-mobile">1er VIÑEDO PROPIO</h2>
-                                                <h3 class="text-component-subtitle-mobile">Adquisición de Chañares Estate
+                                                <h3 class="text-component-subtitle-mobile">Adquisición de Chañares
+                                                    Estate
                                                 </h3>
                                                 <div class="text-component-animation-mobile">
                                                     <p class="text-component-description-mobile">Adquirido por Paul
@@ -745,7 +769,8 @@
                                                 VIÑEDO PROPIO</h2>
                                             <h3 class="text-component-subtitle">Adquisición de Zingaretti Estate</h3>
                                             <div class="text-component-animation">
-                                                <p class="text-component-description">Ubicado en el distrito de Villa
+                                                <p class="text-component-description padding-left-xxxxs">Ubicado en el
+                                                    distrito de Villa
                                                     Bastías, Tupungato. Se destaca por sus antiguas vides de Malbec, 4,4
                                                     ha de más de 80 años. En su superficie plantada también se pueden
                                                     encontrar vides de Chardonnay</p>
@@ -763,7 +788,8 @@
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
                                             <h2 class="text-component-title-mobile">2do VIÑEDO PROPIO</h2>
-                                            <h3 class="text-component-subtitle-mobile">Adquisición de Zingaretti Estate</h3>
+                                            <h3 class="text-component-subtitle-mobile">Adquisición de Zingaretti Estate
+                                            </h3>
                                             <div class="text-component-animation-mobile">
                                                 <p class="text-component-description-mobile">Ubicado en el distrito de
                                                     Villa Bastías, Tupungato. Se destaca por sus antiguas vides de
@@ -796,7 +822,8 @@
                                                 INNOVACIÓN</h2>
                                             <h3 class="text-component-subtitle">100 puntos Cobos MB 2017</h3>
                                             <div class="text-component-animation text-left">
-                                                <p class="text-component-description">En el año de su lanzamiento Cobos
+                                                <p class="text-component-description padding-left-xxxxs">En el año de su
+                                                    lanzamiento Cobos
                                                     Malbec obtuvo 100 puntos por la crítica internacional.
                                                     Reconocimiento al desafiante cambio estratégico de la línea icono.
                                                 </p>
@@ -833,7 +860,7 @@
                 <img class="display@md" src="./assets/img/storyline-polygon.svg" width="26" height="26" alt=""
                     style="transform: translateY(-56px);">
                 <img class="hide@md" src="./assets/img/storyline-polygon.svg" width="26" height="26" alt=""
-                    style="transform: translate(-164px, -45px);"> 
+                    style="transform: translate(-164px, -45px);">
 
 
 
@@ -973,10 +1000,10 @@
     <!-- ==============================================END-FOOTER============================================== -->
 
 
-  
+
     <script src="./assets/js/scripts.js"></script>
 
 </body>
 
- 
+
 </html>
