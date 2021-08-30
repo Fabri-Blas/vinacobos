@@ -228,7 +228,6 @@
                                             </figure>
                                         </div>
                                     </li>
-
                                     <li class="loop-tabs__asset">
                                         <div class="hero-video-bg position-relative padding-y-100vh">
                                             <div class="container max-width-adaptive-sm">
@@ -399,7 +398,7 @@
             style="letter-spacing: 10px; background: #F8F8F8;">
 
             <img class="position-absolute left-0 bottom-0 final-tree" src="./assets/img/final-tree-2.png" alt=""
-                style="z-index: -1;">
+                style="z-index: -5 !important;">
 
             <div class="z-index-3">
 
@@ -420,7 +419,7 @@
                         </h2>
                     </div>
 
-                    <div class="container max-width-adaptive-lg font-secondary">
+                    <div class="container max-width-lg font-secondary">
                         <div class="v-timeline js-v-timeline" data-animation="on">
 
                             <!-- hidden item -->
@@ -439,7 +438,7 @@
                                 <div class="display@md v-timeline__marker bg-primary" aria-hidden="true" style="
               transform: translateX(-4.5px);">
                                 </div>
-                                <div class="hide@md v-timeline__marker bg-primary" aria-hidden="true" style="
+                                <div class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y" aria-hidden="true" style="
               transform: translateX(-2px);">
                                 </div>
 
@@ -490,7 +489,7 @@
                                 <div style="transform: translateX(4.5px);"
                                     class="display@md v-timeline__marker bg-primary" aria-hidden="true">
                                 </div>
-                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary"
+                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true">
                                 </div>
 
@@ -539,7 +538,7 @@
                                 <div style="transform: translateX(-4.5px);"
                                     class="display@md v-timeline__marker bg-primary" aria-hidden="true">
                                 </div>
-                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary"
+                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true">
                                 </div>
 
@@ -592,7 +591,7 @@
                                 <div style="transform: translateX(4.5px);"
                                     class="display@md v-timeline__marker bg-primary" aria-hidden="true">
                                 </div>
-                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary"
+                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true">
                                 </div>
 
@@ -645,7 +644,7 @@
                                 <div style="transform: translateX(-4.5px);"
                                     class="display@md v-timeline__marker bg-primary" aria-hidden="true">
                                 </div>
-                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary"
+                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true">
                                 </div>
 
@@ -699,7 +698,7 @@
                                 <div style="transform: translateX(4.5px);"
                                     class="display@md v-timeline__marker bg-primary" aria-hidden="true">
                                 </div>
-                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary"
+                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true">
                                 </div>
 
@@ -754,7 +753,7 @@
                                 <div style="transform: translateX(-4.5px);"
                                     class="display@md v-timeline__marker bg-primary" aria-hidden="true">
                                 </div>
-                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary"
+                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true">
                                 </div>
 
@@ -806,7 +805,7 @@
                                 <div style="transform: translateX(4.5px);"
                                     class="display@md v-timeline__marker bg-primary" aria-hidden="true">
                                 </div>
-                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary"
+                                <div style="transform: translateX(-2px);" class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true">
                                 </div>
 
@@ -860,12 +859,13 @@
                 <img class="display@md" src="./assets/img/storyline-polygon.svg" width="26" height="26" alt=""
                     style="transform: translateY(-56px);">
                 <img class="hide@md" src="./assets/img/storyline-polygon.svg" width="26" height="26" alt=""
-                    style="transform: translate(-164px, -45px);">
+                    style="width: 26px;height: auto;float: left;transform: translate(11px, -43px);">
 
 
 
                 <div style="z-index: 10 !important;">
-                    <h2 class="text-component-title">PRÓXIMOS PASOS</h2>
+                    <h2 class="display@md text-component-title">PRÓXIMOS PASOS</h2>
+                    <h2 class="hide@md text-component-title">PRÓXIMOS<br>PASOS</h2>                  
                     <h2 class="text-component-title">2021</h2>
                     <a href="#">
                         <button class="btn--secondary-block margin-top-lg">NUESTRA HISTORIA</button>
@@ -875,24 +875,24 @@
                 </div>
 
             </div>
-
+            <div class="component-section text-center flex flex-column justify-center items-center margin-0 padding-0"
+                style="z-index: -2 !important;">
+                <div class="inner-component-section-moved z-index-2">
+                    <h1 class="fs-small-font display@xs z-index-2" >AUTÉNTICA EXPRESIÓN<br>DEL<br>TERROIR</h1>
+                    <h3 class="hide@xs font-primary padding-x-md z-index-2"
+                        style="font-size: 29.124px; font-weight: 500; font-style: normal; line-height: 47px; letter-spacing: 1px;">
+                        AUTÉNTICA<br>EXPRESIÓN<br>DEL<br>TERROIR</h3>
+                    <a href="#">
+                        <button class="btn--secondary-block-2 margin-top-xxl">CONOCER MÁS</button>
+                        <div class="display@md btn--secondary-block-2-borderbottom2-desktop"></div>
+                        <div class="hide@md btn--secondary-block-2-borderbottom2"></div>
+                    </a>
+                </div>
+            </div>
         </section>
 
         <!-- -------------------------Componente6------------------------- -->
-        <section class="component-section text-center flex flex-column justify-center items-center margin-0 padding-0"
-            style=" background: #F8F8F8;">
-            <div class="inner-component-section-moved">
-                <h1 class="fs-small-font display@xs">AUTÉNTICA EXPRESIÓN<br>DEL<br>TERROIR</h1>
-                <h3 class="hide@xs font-primary padding-x-md"
-                    style="font-size: 29.124px; font-weight: 500; font-style: normal; line-height: 47px; letter-spacing: 1px;">
-                    AUTÉNTICA<br>EXPRESIÓN<br>DEL<br>TERROIR</h3>
-                <a href="#">
-                    <button class="btn--secondary-block-2 margin-top-xxl">CONOCER MÁS</button>
-                    <div class="display@md btn--secondary-block-2-borderbottom2-desktop"></div>
-                    <div class="hide@md btn--secondary-block-2-borderbottom2"></div>
-                </a>
-            </div>
-        </section>
+        
 
     </main>
     <!-- ==============================================END-MAIN============================================== -->
@@ -984,7 +984,7 @@
                     <img id="logo" src="./assets/img/twitter.svg" width="25" height="auto" alt="Logo"
                         class="padding-xxxs">
                 </a>
-
+ 
                 <!-- instagram -->
                 <a href="#0" class="margin-x-xxxs">
                     <img id="logo" src="./assets/img/instagram-logo.svg" width="25" height="auto" alt="Logo"
