@@ -58,7 +58,7 @@ button {
   transition: all 0.5s;
   padding-bottom: 8px;
   z-index: 99;
-  font-family: var(--font-secondary-medium);
+  font-family: var(--font-primary);
   &:hover {
     letter-spacing: 0.2em;
     width: 81px;
@@ -186,6 +186,7 @@ button {
   right: 90px;
   padding-bottom: 8px;
   padding-right: 0;
+  font-family: var(--font-primary);
 
   &:hover {
     letter-spacing: 0.2em;

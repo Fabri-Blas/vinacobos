@@ -108,6 +108,51 @@ mark {
   color: inherit;
 }
 
+#vinos-caption {
+  & h2 {
+    color: #3e3937;
+    max-width: 1152px;
+    max-height: 112px;
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 47.1162px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+}
+
+.vinos-especiales-unicos {
+  & .inner-vinos {
+    &-title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 76.2px;
+      line-height: 123px;
+      letter-spacing: 0.12em;
+      color: #1c1c1c;
+    }
+    &-subtitle {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 29.1px;
+      line-height: 35px;
+      letter-spacing: 0.0025em;
+      color: #1c1c1c;
+    }
+    &-paragraph {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      color: #878581;
+      max-width: 398px;
+    }
+  }
+}
+
 .text-component {
   --line-height-multiplier: 1;
   --text-vspace-multiplier: 1;
@@ -181,7 +226,7 @@ mark {
     font-weight: 500;
     font-size: 13px;
     letter-spacing: 0.5px;
-    line-height: 13px;
+    line-height: 15.6px;
     color: #878581;
     width: 297px;
     &-mobile {
@@ -191,17 +236,20 @@ mark {
       font-weight: 500;
       font-size: 13px !important;
       letter-spacing: 0.05em;
-      line-height: 16px;
+      line-height: 15.6px;
       text-align: justify;
     }
   }
 }
 
+.text-component-title-3{
+  letter-spacing: 0.25em;
+}
 .font-footer-title {
   font-family: var(--font-secondary);
   color: #f1eee9;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 300px;
   font-size: 29.124px;
   line-height: 47px;
   letter-spacing: 0.05em;
@@ -229,18 +277,19 @@ mark {
   font-weight: 500;
   color: rgba(28, 28, 28, 0.7);
   font-size: 500px;
+  line-height: 457.08px;
   letter-spacing: 0.12em;
   font-style: italic;
   z-index: -1;
 }
 
 .fs-big-font2 {
-  top: 6%;
-  left: 25%;
-  transform: translateX(-30%) translateY(-27%);
-  padding-top: 140px;
+
+
+ 
+  transform: translateY(-50px);
   width: 100%;
-  font-size: 305px;
+  font-size: 340px;
   font-style: italic;
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 1px rgba(191, 149, 124, 0.5);
@@ -262,6 +311,9 @@ mark {
     width: 100%;
     height: 220px;
   }
+}
+.history-storyline {
+  transform: translateX(15px) translateY(8px);
 }
 
 .fs-med-font {
@@ -314,9 +366,12 @@ mark {
 
 @media only screen and (max-width: 1790px) {
   .fs-big-font2 {
-    padding-top: 194px;
-    font-size: 245px;
+    padding-top: 10px;
+    font-size: 280px;
     // padding-top: 75px;
+  }
+  .history-storyline {
+    transform: translateX(100px) translateY(-40px);
   }
   .fs-med-font {
     font-size: 76.2px;
@@ -324,8 +379,11 @@ mark {
 }
 @media only screen and (max-width: 1422px) {
   .fs-big-font2 {
-    font-size: 200px;
+    font-size: 250px;
     // padding-top: 75px;
+  }
+  .history-storyline {
+    transform: translateX(-30px) translateY(-65px);
   }
 }
 
@@ -336,8 +394,43 @@ mark {
 }
 
 @media only screen and (max-width: 1366px) {
+  .fs-big-font2 {
+    font-size: 250px;
+  }
+  .history-storyline {
+    transform: translateX(-65px) translateY(-65px);
+  }
   .looping-tab-description {
     font-size: 13px;
+  }
+  .vinos-especiales-unicos {
+    & .inner-vinos {
+      &-title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 47.1162px;
+        line-height: 76px;
+        letter-spacing: 0.12em;
+        color: #1c1c1c;
+      }
+      &-subtitle {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.0025em;
+        color: #1c1c1c;
+      }
+      &-paragraph {
+        font-family: var(--font-secondary);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #878581;
+        max-width: 398px;
+      }
+    }
   }
 }
 
@@ -346,8 +439,8 @@ mark {
     font-size: 290px;
   }
   .fs-big-font2 {
-    padding-top: 263px;
-    font-size: 168px;
+    top: 20px;
+    font-size: 200px;
   }
   .fs-med-font {
     font-size: 50px;
@@ -377,13 +470,13 @@ mark {
   }
   .fs-big-font2 {
     text-align: initial;
-    font-size: 189px;
-    padding-top: 0;
+    font-size: 185px;
+    padding-top: 20px;
     // transform: translateY(-35%);
   }
   .history-storyline {
     font-size: 60px;
-    padding: 80px 40px;
+    transform: translateX(-70px) translateY(-100px);
     z-index: 3 !important;
 
 
@@ -417,6 +510,9 @@ mark {
   }
   .text-component-title {
     font-size:29.1px;
+  }
+  .text-component-title-3{
+    letter-spacing: 0.22em;
   }
 }
 

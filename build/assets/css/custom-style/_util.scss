@@ -15,22 +15,11 @@
 // }
 
 .f-header__nav--is-visible {
-    background-color:#020907 !important;
+    background-color: #020907 !important;
     padding-top: 23px !important;
 }
 .dark-nav-custom a {
     color: var(--color-primary) !important;
-}
-
-.custom-scroll-snap {
-    scroll-snap-align: start end;
-    min-height: 100vh;
-}
-
-.parent-scroll-snap {
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-    overflow: auto;
 }
 
 .component-section {
@@ -150,6 +139,38 @@ footer {
     background-color: transparent;
 }
 
+#vinos-home {
+    background-image: url("../img/vinos-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    & h2 {
+        font-family: var(--font-primary);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 123.3px;
+        line-height: 145px;
+        letter-spacing: 0.12em;
+        max-width: 787px;
+        padding-left: 100px;
+    }
+}
+.especiales-content{
+    justify-content: space-around;
+}
+.vinos{
+    &-foto{
+        max-width: 876px;
+        width: 100%;
+        height: auto;
+    }
+    &-logo{
+        max-width: 350px;
+        height: auto;
+    }
+}
+
 #felino-home {
     background-image: url("../img/felino-bg.jpeg");
     background-position: center;
@@ -204,7 +225,7 @@ footer {
         color: #878581;
 
         &-2 {
-            font-family: var(--font-secondary);
+            font-family: var(--font-primary);
             font-weight: 500;
             font-size: 18px;
             font-style: normal;
@@ -218,7 +239,7 @@ footer {
     &-description {
         font-family: var(--font-secondary);
         font-weight: normal;
-        font-size: 13px;
+        font-size: 18px;
         font-style: normal;
         transform: translateY(17px);
         letter-spacing: 0.12em;
@@ -261,13 +282,13 @@ footer {
         transform: translateY(17px);
         letter-spacing: 0.12em;
         width: 110px;
-        color: rgba(241, 238, 233, .5);
+        color: rgba(241, 238, 233, 0.5);
     }
 
     &-description {
         font-family: var(--font-secondary);
         font-weight: normal;
-        font-size: 13px;
+        font-size: 18px;
         font-style: normal;
         transform: translateY(17px);
         letter-spacing: 0.12em;
@@ -300,6 +321,17 @@ footer {
                 transform: translateY(-4px);
             }
         }
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    #vinos-home h2 {
+        font-weight: 500;
+        font-size: 76.2px;
+        line-height: 90px;
+        letter-spacing: 0.12em;
+        width: 517px;
+        padding-left: 100px;
     }
 }
 
@@ -340,4 +372,16 @@ footer {
     .component-footer {
         min-height: 100vh;
     }
+
+    .cobos  {&-description 
+        {
+        font-family: var(--font-secondary);
+        font-weight: normal;
+        font-size: 13px;
+        font-style: normal;
+        transform: translateY(17px);
+        letter-spacing: 0.12em;
+        color: var(--color-primary-light);
+    }
+}
 }

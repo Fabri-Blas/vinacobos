@@ -13,17 +13,19 @@
 </head>
 
 <body class="bg-black">
- 
+
     <!-- ================================================HEADER================================================ -->
-    <header id="header-global" class="f-header js-f-header bg-transparent hide-nav backdrop-blur-10 padding-y-lg padding-y-0@md"
+    <header id="header-global"
+        class="f-header js-f-header bg-transparent hide-nav backdrop-blur-10 padding-y-lg padding-y-0@md"
         data-nav-target-class="f-header--expanded">
         <div class="f-header__mobile-content container max-width-lg padding-top-0@md flex flex-column">
             <a href="#0" class="position-absolute left-0 top-50% -translate-y-50%">
                 <img src="./assets/img/logo.svg" width="30" height="27" alt="Logo" class="logo-mobile-1">
             </a>
-            <button class="position-absolute right-0 top-50% -translate-y-50% reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
+            <button
+                class="position-absolute right-0 top-50% -translate-y-50% reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
                 aria-label="Toggle menu">
-                <img src="./assets/img/hamburguer.svg" width="25" height="9" alt="" class="hamburguer-mobile-1">
+                <img src="./assets/img/hamburguer.svg" width="25" height="9" alt="Hamburguer" class="hamburguer-mobile-1">
             </button>
         </div>
 
@@ -35,8 +37,7 @@
                     </a>
                 </div>
 
-                <ul id="desktop-header"
-                    class="f-header__list margin-left-sm justify-center@md display@md">
+                <ul id="desktop-header" class="f-header__list margin-left-sm justify-center@md display@md">
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
                             class="f-header__link btn--nav">HISTORIA</a></li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
@@ -74,48 +75,121 @@
     </header>
     <!-- ==============================================END-HEADER============================================== -->
 
+    <!-- ==============================================MAIN============================================== -->
     <main>
 
-        <section id="felino-home" class="display@md component-section bg-white width-100%">
-            <div class="display@md padding-left-xxs">
-                <div id="felino-home-content"
-                    class="position-absolute bottom-0 flex flex-row justify-between color-black padding-left-xxl padding-y-xxxl">
-                    <h1 class="felino-title">Malbec</h1>
-                    <div class="felino-small-line"></div>
-                    <h3 class="felino-subtitle">Cabernet</h3>
-                    <div class="felino-small-line"></div>
-                    <h3 class="felino-subtitle-2">Red Blend</h3>
-                    <div class="felino-small-line"></div>
-                    <h3 class="felino-subtitle">Chardonay</h3>
-                    <div class="felino-big-line"></div>
-                </div>
-                <div class="position-absolute bottom-0 padding-left-xxl padding-y-xl flex flex-column justify-left">
-                    <h3 class="felino-description padding-bottom-xs">BOTELLA</h2>
-                        <h3 class="felino-description">FICHA ENOLÓGICA</h3>
-                </div>
-            </div> 
+        <section id="vinos-home" class="component-section flex items-center">
+            <div class="display@md">
+                <h2 class="color-white">NUESTROS VINOS</h2>
+            </div>
+            <div class="hide@md"></div>
         </section>
-        <section id="felino-home-mobile" class="hide@md component-section bg-white width-100%">
-            <div class="position-absolute bottom-0 -left-0 padding-left-md">
-                <div class="padding-bottom-xxxxs">
-                    <h1 class="felino-title">Malbec</h1>
+
+        <section id="vinos-caption" class="component-half bg-white">
+            <div class="display@md height-100% position-relative flex flex-column justify-center items-center">
+                <img class="position-absolute" src="./assets/img/vinos-bg-logo.png" alt="Vinos - Background Logo" width="340" height="326">
+                <h2 class="font-primary text-center">
+                    “Expresan de forma sublime las características y personalidad de cada terroir”
+                </h2>
+            </div>
+        </section>
+
+        <section class="vinos-especiales-unicos component-section bg-white">
+            <div class="display@md grid padding-x-xl max-width-xxxl margin-x-auto">
+                <div class="col-6 padding-x-md">
+                    <h2 class="font-primary text-center inner-vinos-title margin-top-sm margin-bottom-md">ESPECIALES</h2>
+
+                    <div class="margin-bottom-xxl grid inner-vinos-content">
+                        <div class="col-6 padding-right-xl text-right">
+                            <img class="vinos-logo" src="./assets/img/vinos-cobos.svg" alt="Vinos - Cobos">
+                        </div>
+                        <div class="col-6">
+                            <h5 class="inner-vinos-subtitle">Icónico</h5>
+                            <p class="inner-vinos-paragraph">El pináculo. Un vino que nace de una amalgama de nuestra
+                                filosofía, pasión y maestría. Un icono argentino. Nuestro buque insignia para el mundo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="margin-bottom-xxl grid inner-vinos-content">
+                        <div class="col-6 padding-right-xl text-right">
+                            <img class="vinos-logo" src="./assets/img/vinos-vinacobos-vd.svg" alt="Vinos - VD">
+                        </div>
+                        <div class="col-6">
+                            <h5 class="inner-vinos-subtitle">Micro terroir</h5>
+                            <p class="inner-vinos-paragraph">
+                                Estudio intensivo de los sitios de Grand Cru para descubrir qué hace que cada uno sea
+                                único.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid inner-vinos-content">
+                        <div class="col-6 padding-right-xl text-right">
+                            <img class="vinos-logo" src="./assets/img/vinos-vinacobos-vinculum.svg" alt="Vinos - Vinculum">
+                        </div>
+                        <div class="col-6">
+                            <h5 class="inner-vinos-subtitle">Enfocado en terroir</h5>
+                            <p class="inner-vinos-paragraph">Celebra la conexión con nuestros productores. Un vínculo
+                                fundamental forjado en el intercambio de conocimientos que conduce a la creación de
+                                vinos destacados.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex-column justify-around padding-bottom-xl" style="height:130px;">
-                    <h3 class="felino-subtitle padding-bottom-xxs">Cabernet</h3>
-                    <h3 class="felino-subtitle padding-bottom-xxs">Red Blend</h3>
-                    <h3 class="felino-subtitle padding-bottom-xxs">Chardonay</h3>
-                </div>
-                <div class="felino-links">
-                    <h3 class="felino-description padding-bottom-xs">BOTELLA</h3>
-                    <h3 class="felino-description">FICHA ENOLÓGICA</h3>
+                <div class="col-6 width-100% text-center margin-y-auto flex justify-center items-center">
+                    <img class="vinos-foto padding-lg" src="./assets/img/vinos-especiales.png" alt="Vinos - Especiales">
                 </div>
             </div>
+        </section>
+
+        <section class="vinos-especiales-unicos component-section bg-white">
+            <div class="display@md grid padding-x-xl max-width-xxxl margin-x-auto">
+                <div class="col-6 width-100% text-center margin-y-auto flex justify-center items-center">
+                    <img class="vinos-foto padding-lg" src="./assets/img/vinos-unicos.png" alt="Vinos - Unicos">
+                </div>
+                <div class="col-6 padding-x-md">
+                    <h2 class="font-primary text-center inner-vinos-title margin-top-sm margin-bottom-md">ÚNICOS</h2>
+
+                    <div class="margin-bottom-xxl grid inner-vinos-content">
+                        <div class="col-6 padding-x-lg text-right">
+                            <img class="vinos-logo" src="./assets/img/vinos-bramare.svg" alt="Vinos - Bramare">
+                        </div>
+                        <div class="col-6">
+                            <h5 class="inner-vinos-subtitle">Seleccionado</h5>
+                            <p class="inner-vinos-paragraph">Distintivo. La expresión varietal más pura de nuestro
+                                terruño.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="margin-bottom-xxl grid inner-vinos-content">
+                        <div class="col-6 padding-x-lg text-right">
+                            <img class="vinos-logo" src="./assets/img/vinos-cocodrilo.svg" alt="Vinos - Cocodrilo">
+                        </div>
+                        <div class="col-6">
+                            <h5 class="inner-vinos-subtitle">Blend de estilo bordelés</h5>
+                            <p class="inner-vinos-paragraph">Nuestro compromiso con el Cabernet Sauvignon de alta
+                                calidad producido en Argentina.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid inner-vinos-content">
+                        <div class="col-6 padding-x-lg text-right">
+                            <img class="vinos-logo" src="./assets/img/vinos-felino.svg" alt="Vinos - Felino">
+                        </div>
+                        <div class="col-6">
+                            <h5 class="inner-vinos-subtitle">Expresión Varietal</h5>
+                            <p class="inner-vinos-paragraph">El primer paso de nuestra cartera hacia la exploración de
+                                terruños.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
     </main>
     <!-- ==============================================END-MAIN============================================== -->
 
+    
     <!-- ================================================FOOTER================================================ -->
     <footer class="component-footer position-relative  padding-bottom-xxxxl padding-bottom-0@md" style="z-index: 10;">
 
