@@ -44,7 +44,7 @@ button {
   cursor: pointer;
   position: absolute;
   bottom: 70px;
-  left: 35px;
+  left: 45px;
   font-size: 13px;
   text-decoration: none;
   color: var(--color-primary);
@@ -61,7 +61,7 @@ button {
   font-family: var(--font-primary);
   &:hover {
     letter-spacing: 0.2em;
-    width: 81px;
+    width: 83px;
     transition: all 0.5s;
   }
 }
@@ -183,16 +183,17 @@ button {
   border-bottom: 1px solid var(--color-primary-light);
   transition: all 0.5s;
   bottom: 17px;
-  right: 90px;
+  right: 100px;
   padding-bottom: 8px;
   padding-right: 0;
   font-family: var(--font-primary);
 
   &:hover {
     letter-spacing: 0.2em;
-    width: 81px;
+    width: 83px;
     transition: all 0.5s;
   }
+   
 }
 
 .btn--nav {
@@ -205,16 +206,13 @@ button {
   letter-spacing: 0;
   text-align: center;
   border: 0px;
-  // background:
-  //     linear-gradient(var(--color-primary-light) 0 0)
-  //     var(--p, 0) 100% /var(--d, 0) 1px
-  //     no-repeat;
-  // transition: 0.3s, background-position 0s 0.3s;
+  background: linear-gradient(var(--color-primary-light) 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
+  transition: 0.3s, background-position 0s 0.3s;
   padding: 0 0 8px 0;
   margin: 0;
 
   &-black {
-    font-size: 11.12px;
+    font-size: 13px;
     font-family: var(--font-secondary);
     text-decoration: none;
     text-transform: uppercase;
@@ -225,6 +223,8 @@ button {
     border: 0px;
     padding: 0 0 8px 0;
     margin: 0;
+    background: linear-gradient(black 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
+    transition: 0.3s, background-position 0s 0.3s;
 
     &:hover {
       cursor: pointer;
@@ -232,8 +232,8 @@ button {
       color: black !important;
     }
   }
-  &-mobile{
-    color:white!important;
+  &-mobile {
+    color: white !important;
   }
 
   &:hover {
@@ -254,7 +254,7 @@ button {
     --p: 100%;
   }
 
-  &-black{
+  &-black {
     background: linear-gradient(black 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
     transition: 0.3s, background-position 0s 0.3s;
     &:hover {

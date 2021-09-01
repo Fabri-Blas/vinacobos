@@ -81,35 +81,3 @@
 		};
 	}
 }());
-
-const headerGlobal = document.getElementById('header-global');
-
-checkBackdropBlur();
-
-document.addEventListener('scroll', () => {
-	checkBackdropBlur();
-});
-
-function checkBackdropBlur(){
-	if(window.pageYOffset === 0){
-		headerGlobal.classList.remove('backdrop-blur-10');
-		headerGlobal.style.backgroundColor = 'rgba(0,0,0,0)';
-	}else{
-		if(window.pageYOffset > 0){
-			headerGlobal.classList.add('backdrop-blur-10');
-			headerGlobal.style.backgroundColor = 'rgba(0,0,0,0.8)';
-		}
-	}
-}
-
-checkWindowSize();
-
-function checkWindowSize(){
-	if(window.pageXOffset > 1024){
-		headerGlobal.classList.add("js-hide-nav", "js-hide-nav--main");
-	}else{
-		if(window.pageXOffset <= 1024){
-			headerGlobal.classList.remove("js-hide-nav", "js-hide-nav--main");
-		}
-	}
-}

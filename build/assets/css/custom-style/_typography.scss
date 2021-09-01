@@ -121,7 +121,22 @@ mark {
     text-align: center;
     letter-spacing: 0.05em;
   }
+  &-mobile {
+    h2 {
+      color: #3e3937;
+      max-width: 290px;
+      max-height: 191px;
+      font-family: var(--font-primary);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      text-align: center;
+      letter-spacing: 0.07em;
+    }
+  }
 }
+
 
 .vinos-especiales-unicos {
   & .inner-vinos {
@@ -219,6 +234,22 @@ mark {
       letter-spacing: 1px;
       line-height: 29px;
     }
+    &-2 {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      line-height: 22px;
+      &-mobile{
+        font-family: var(--font-secondary);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        line-height: 22px;
+      }
+    }
   }
   .text-component-description {
     font-family: var(--font-secondary);
@@ -242,7 +273,7 @@ mark {
   }
 }
 
-.text-component-title-3{
+.text-component-title-3 {
   letter-spacing: 0.25em;
 }
 .font-footer-title {
@@ -284,9 +315,6 @@ mark {
 }
 
 .fs-big-font2 {
-
-
- 
   transform: translateY(-50px);
   width: 100%;
   font-size: 340px;
@@ -360,7 +388,7 @@ mark {
 .looping-tab-description {
   font-size: 18px;
 }
-.looping-tab-description2{
+.looping-tab-description2 {
   font-size: 13px;
 }
 
@@ -479,7 +507,6 @@ mark {
     transform: translateX(-70px) translateY(-100px);
     z-index: 3 !important;
 
-
     &-mobile {
       font-size: 47.1px;
       padding-top: 230px;
@@ -509,10 +536,44 @@ mark {
     font-size: 25px;
   }
   .text-component-title {
-    font-size:29.1px;
+    font-size: 29.1px;
   }
-  .text-component-title-3{
+  .text-component-title-3 {
     letter-spacing: 0.22em;
+  }
+
+  .vinos-especiales-unicos {
+    & .inner-vinos {
+      &-title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 47.1162px;
+        line-height: 76px;
+        letter-spacing: 0.12em;
+        color: #1c1c1c;
+      }
+      &-subtitle {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.0025em;
+        color: #1c1c1c;
+      }
+      &-paragraph {
+        font-family: var(--font-secondary);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        text-align: justify;
+        color: #878581;
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 }
 

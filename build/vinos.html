@@ -16,23 +16,24 @@
 
     <!-- ================================================HEADER================================================ -->
     <header id="header-global"
-        class="f-header js-f-header bg-transparent hide-nav backdrop-blur-10 padding-y-lg padding-y-0@md"
+        class="f-header js-f-header bg-transparent hide-nav js-hide-nav js-hide-nav--main backdrop-blur-10 padding-y-lg padding-y-0@md"
         data-nav-target-class="f-header--expanded">
         <div class="f-header__mobile-content container max-width-lg padding-top-0@md flex flex-column">
-            <a href="#0" class="position-absolute left-0 top-50% -translate-y-50%">
+            <a href="./" class="position-absolute left-0 top-50% -translate-y-50%">
                 <img src="./assets/img/logo.svg" width="30" height="27" alt="Logo" class="logo-mobile-1">
             </a>
             <button
                 class="position-absolute right-0 top-50% -translate-y-50% reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
                 aria-label="Toggle menu">
-                <img src="./assets/img/hamburguer.svg" width="25" height="9" alt="Hamburguer" class="hamburguer-mobile-1">
+                <img src="./assets/img/hamburguer.svg" width="25" height="9" alt="Hamburguer"
+                    class="hamburguer-mobile-1">
             </button>
         </div>
 
         <div class="f-header__nav" role="navigation">
             <div class="f-header__nav-grid justify-between@md container max-width-xxxl margin-x-auto padding-x-xxl@md">
                 <div class="f-header__nav-logo-wrapper">
-                    <a href="#0" class="">
+                    <a href="./" class="">
                         <img id="logo" src="./assets/img/logo.svg" width="38" height="35" alt="Logo" class="display@md">
                     </a>
                 </div>
@@ -76,32 +77,63 @@
     <!-- ==============================================END-HEADER============================================== -->
 
     <!-- ==============================================MAIN============================================== -->
-    <main>
 
-        <section id="vinos-home" class="component-section flex items-center">
+    <!-- scroll component -->
+    <div class="scroll-indicator-container margin-top-xxl display@md" data-title="Conoce Viña Cobos">
+        <div class="scroll-indicator-wrapper" style="height: 400px;">
+            <div class="scroll-indicator-inner" style="height: 250px;">
+                <span class="scroll-indicator"></span>
+            </div>
+            <div class="title">
+                <h3>Conoce Viña Cobos</h3>
+            </div>
+        </div>
+    </div>
+
+    <main class="bg-white">
+
+        <!-- VINOS HOME -->
+        <section id="vinos-home" class="display@md component-section flex items-center@md">
             <div class="display@md">
                 <h2 class="color-white">NUESTROS VINOS</h2>
+            </div>            
+        </section>
+        <section id="vinos-home-mobile" class="hide@md component-section flex">
+            <div class="hide@md">
+                <h2 class="color-white">NUESTROS VINOS</h2>
             </div>
-            <div class="hide@md"></div>
         </section>
 
-        <section id="vinos-caption" class="component-half bg-white">
-            <div class="display@md height-100% position-relative flex flex-column justify-center items-center">
-                <img class="position-absolute" src="./assets/img/vinos-bg-logo.png" alt="Vinos - Background Logo" width="340" height="326">
+        <!-- VINOS CAPTION -->
+        <section id="vinos-caption" class="dispplay@md bg-white">
+            <div class="display@md component-half height-100% position-relative flex flex-column justify-center items-center">
+                <img class="position-absolute" src="./assets/img/vinos-bg-logo.png" alt="Vinos - Background Logo"
+                    width="340" height="326">
+                <h2 class="font-primary text-center">
+                    “Expresan de forma sublime las características y personalidad de cada terroir”
+                </h2>
+            </div>
+        </section>
+        <section id="vinos-caption-mobile" class="hide@md component-section bg-white">
+            <div class="height-100% position-relative flex flex-column justify-center items-center">
+                <img class="position-absolute" src="./assets/img/vinos-bg-logo.png" alt="Vinos - Background Logo"
+                    width="340" height="326">
                 <h2 class="font-primary text-center">
                     “Expresan de forma sublime las características y personalidad de cada terroir”
                 </h2>
             </div>
         </section>
 
-        <section class="vinos-especiales-unicos component-section bg-white">
+        <!-- ESPECIALES-->
+        <section class="vinos-especiales-unicos component-section-full z-index-2">
             <div class="display@md grid padding-x-xl max-width-xxxl margin-x-auto">
                 <div class="col-6 padding-x-md">
-                    <h2 class="font-primary text-center inner-vinos-title margin-top-sm margin-bottom-md">ESPECIALES</h2>
+                    <h2 class="font-primary text-center inner-vinos-title margin-top-sm margin-bottom-md">ESPECIALES
+                    </h2>
 
                     <div class="margin-bottom-xxl grid inner-vinos-content">
                         <div class="col-6 padding-right-xl text-right">
-                            <img class="vinos-logo" src="./assets/img/vinos-cobos.svg" alt="Vinos - Cobos">
+                            <img class="vinos-logo-1" src="./assets/img/vinos-cobos.svg" alt="Vinos - Cobos">
                         </div>
                         <div class="col-6">
                             <h5 class="inner-vinos-subtitle">Icónico</h5>
@@ -112,7 +144,7 @@
                     </div>
                     <div class="margin-bottom-xxl grid inner-vinos-content">
                         <div class="col-6 padding-right-xl text-right">
-                            <img class="vinos-logo" src="./assets/img/vinos-vinacobos-vd.svg" alt="Vinos - VD">
+                            <img class="vinos-logo-2" src="./assets/img/vinos-vinacobos-vd.svg" alt="Vinos - VD">
                         </div>
                         <div class="col-6">
                             <h5 class="inner-vinos-subtitle">Micro terroir</h5>
@@ -124,7 +156,8 @@
                     </div>
                     <div class="grid inner-vinos-content">
                         <div class="col-6 padding-right-xl text-right">
-                            <img class="vinos-logo" src="./assets/img/vinos-vinacobos-vinculum.svg" alt="Vinos - Vinculum">
+                            <img class="vinos-logo-2" src="./assets/img/vinos-vinacobos-vinculum.svg"
+                                alt="Vinos - Vinculum">
                         </div>
                         <div class="col-6">
                             <h5 class="inner-vinos-subtitle">Enfocado en terroir</h5>
@@ -139,9 +172,57 @@
                     <img class="vinos-foto padding-lg" src="./assets/img/vinos-especiales.png" alt="Vinos - Especiales">
                 </div>
             </div>
+
+            <!-- Mobile -->
+            <div class="hide@md margin-x-auto">
+                <h2 class="font-primary text-center inner-vinos-title">ESPECIALES
+                </h2>
+                <div class="width-100% text-center flex justify-center items-center">
+                    <img class="vinos-foto padding-xs" src="./assets/img/vinos-especiales.png" alt="Vinos - Especiales">
+                </div>
+                <div>
+                    <div class="margin-bottom-lg inner-vinos-content">
+                        <div class="flex felx-column justify-center padding-top-xl padding-bottom-sm">
+                            <img class="vinos-logo-1" src="./assets/img/vinos-cobos.svg" alt="Vinos - Cobos">
+                        </div>
+                        <div class="flex flex-column justify-center text-center">
+                            <h5 class="inner-vinos-subtitle padding-bottom-xxs">Icónico</h5>
+                            <p class="inner-vinos-paragraph">El pináculo. Un vino que nace de una amalgama de nuestra
+                                filosofía, pasión y maestría. Un icono argentino. Nuestro buque insignia para el mundo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="margin-bottom-lg inner-vinos-content">
+                        <div class="flex felx-column justify-center padding-bottom-sm">
+                            <img class="vinos-logo-2" src="./assets/img/vinos-vinacobos-vd.svg" alt="Vinos - VD">
+                        </div>
+                        <div class="flex flex-column justify-center text-center">
+                            <h5 class="inner-vinos-subtitle padding-bottom-xxs">Micro terroir</h5>
+                            <p class="inner-vinos-paragraph">
+                                Estudio intensivo de los sitios de Grand Cru para descubrir qué hace que cada uno sea
+                                único.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="margin-bottom-lg inner-vinos-content">
+                        <div class="flex felx-column justify-center padding-bottom-sm">
+                            <img class="vinos-logo-2" src="./assets/img/vinos-vinacobos-vinculum.svg"
+                                alt="Vinos - Vinculum">
+                        </div>
+                        <div class="flex flex-column justify-center text-center">
+                            <h5 class="inner-vinos-subtitle padding-bottom-xxs">Enfocado en terroir</h5>
+                            <p class="inner-vinos-paragraph">Celebra la conexión con nuestros productores. Un vínculo
+                                fundamental forjado en el intercambio de conocimientos que conduce a la creación de
+                                vinos destacados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="vinos-especiales-unicos component-section bg-white">
+        <!-- UNICOS -->
+        <section class="vinos-especiales-unicos component-section-full z-index-2">
             <div class="display@md grid padding-x-xl max-width-xxxl margin-x-auto">
                 <div class="col-6 width-100% text-center margin-y-auto flex justify-center items-center">
                     <img class="vinos-foto padding-lg" src="./assets/img/vinos-unicos.png" alt="Vinos - Unicos">
@@ -151,7 +232,7 @@
 
                     <div class="margin-bottom-xxl grid inner-vinos-content">
                         <div class="col-6 padding-x-lg text-right">
-                            <img class="vinos-logo" src="./assets/img/vinos-bramare.svg" alt="Vinos - Bramare">
+                            <img class="vinos-logo-1" src="./assets/img/vinos-bramare.svg" alt="Vinos - Bramare">
                         </div>
                         <div class="col-6">
                             <h5 class="inner-vinos-subtitle">Seleccionado</h5>
@@ -162,7 +243,7 @@
                     </div>
                     <div class="margin-bottom-xxl grid inner-vinos-content">
                         <div class="col-6 padding-x-lg text-right">
-                            <img class="vinos-logo" src="./assets/img/vinos-cocodrilo.svg" alt="Vinos - Cocodrilo">
+                            <img class="vinos-logo-1" src="./assets/img/vinos-cocodrilo.svg" alt="Vinos - Cocodrilo">
                         </div>
                         <div class="col-6">
                             <h5 class="inner-vinos-subtitle">Blend de estilo bordelés</h5>
@@ -173,7 +254,7 @@
                     </div>
                     <div class="grid inner-vinos-content">
                         <div class="col-6 padding-x-lg text-right">
-                            <img class="vinos-logo" src="./assets/img/vinos-felino.svg" alt="Vinos - Felino">
+                            <img class="vinos-logo-1" src="./assets/img/vinos-felino.svg" alt="Vinos - Felino">
                         </div>
                         <div class="col-6">
                             <h5 class="inner-vinos-subtitle">Expresión Varietal</h5>
@@ -183,6 +264,518 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Mobile -->
+            <div class="hide@md margin-x-auto">
+                <h2 class="font-primary text-center inner-vinos-title">ÚNICOS</h2>
+                <div class="width-100% text-center flex justify-center items-center">
+                    <img class="vinos-foto padding-lg" src="./assets/img/vinos-unicos.png" alt="Vinos - Unicos">
+                </div>
+                <div>
+                    <div class="margin-bottom-lg inner-vinos-content">
+                        <div class="flex felx-column justify-center padding-top-lg padding-bottom-sm">
+                            <img class="vinos-logo-1" src="./assets/img/vinos-bramare.svg" alt="Vinos - Bramare">
+                        </div>
+                        <div class="flex flex-column justify-center text-center">
+                            <h5 class="inner-vinos-subtitle padding-bottom-xxs">Seleccionado</h5>
+                            <p class="inner-vinos-paragraph">Distintivo. La expresión varietal más pura de nuestro
+                                terruño.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="margin-bottom-lg inner-vinos-content">
+                        <div class="flex felx-column justify-center padding-bottom-sm">
+                            <img class="vinos-logo-1" src="./assets/img/vinos-cocodrilo.svg" alt="Vinos - Cocodrilo">
+                        </div>
+                        <div class="flex flex-column justify-center text-center">
+                            <h5 class="inner-vinos-subtitle padding-bottom-xxs">Blend de estilo bordelés</h5>
+                            <p class="inner-vinos-paragraph">Nuestro compromiso con el Cabernet Sauvignon de alta
+                                calidad producido en Argentina.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="margin-bottom-lg inner-vinos-content">
+                        <div class="flex felx-column justify-center padding-bottom-sm">
+                            <img class="vinos-logo-1" src="./assets/img/vinos-felino.svg" alt="Vinos - Felino">
+                        </div>
+                        <div class="flex flex-column justify-center text-center">
+                            <h5 class="inner-vinos-subtitle padding-bottom-xxs">Expresión Varietal</h5>
+                            <p class="inner-vinos-paragraph">El primer paso de nuestra cartera hacia la exploración de
+                                terruños.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORYLINE -->
+        <section
+            class="component-section-full text-center max-width-xxxxl margin-x-auto padding-bottom-xxxxl@md bg-white z-index-1"
+            style="letter-spacing: 10px;">
+
+            <img class="position-absolute left-0 bottom-0 vinos-final-tree" src="./assets/img/vinos-tree.png" alt=""
+                style="z-index: -5 !important;">
+
+            <div class="z-index-3">
+
+                <h6 class="display@md position-absolute text-left fs-big-font2 padding-left-xxxs">Hitos</h6>
+                <div class="hide@md position-absolute fs-big-font2-div">
+                    <h6 class="text-left fs-big-font2-mobile">Hitos</h6>
+                </div>
+                <div class="position-relative z-index-1 overflow-hidden padding-top-xxl@md padding-x-xxl@md">
+                    <div class="margin-y-xxl@md padding-top-lg@md padding-bottom-xl@md padding-left-lg@md">
+                        <h1
+                            class="display@md history-storyline letter-spacing-lg text-left font-primary padding-left-xs">
+                            NUESTROS HITOS
+                        </h1>
+                        <h2 class="hide@md history-storyline-mobile text-left font-primary ">
+                            NUESTROS HITOS
+                        </h2>
+                    </div>
+
+                    <div class="container max-width-lg font-secondary">
+                        <div class="v-timeline js-v-timeline" data-animation="on">
+
+                            <!-- hidden item -->
+                            <section class="v-timeline__section js-v-timeline__section is-hidden">
+                                <div class="v-timeline__marker bg-primary" aria-hidden="true">
+                                </div>
+
+                                <div class="v-timeline__items-group">
+                                    <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- start of timeline -->
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__marker bg-primary" aria-hidden="true" style="
+              transform: translateX(-4.5px);">
+                                </div>
+                                <div class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
+                                    aria-hidden="true" style="
+              transform: translateX(-2px);">
+                                </div>
+
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                            <h2 class="grey-number padding-right-xs">1999</h2>
+                                        </div>
+
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            <h2 class="text-component-title">COBOS</h2>
+                                            <h3 class="text-component-subtitle-2 padding-left-xxxxs">Malbec Marchiori
+                                            </h3>
+                                            <h3 class="text-component-subtitle-2 padding-left-xxxxs">Bramare Malbec
+                                                Marchiori</h3>
+                                            <h3 class="text-component-subtitle-2 padding-left-xxxxs">TERROIR PIONEER
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
+                                    <div class="v-timeline__item flex flex-row padding-right-lg">
+                                        <div class="v-timeline__date">
+                                            <h2 class="grey-number-mobile padding-right-xs">1988</h2>
+                                        </div>
+
+                                        <div
+                                            class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
+                                            <h2 class="text-component-title-mobile">COBOS</h2>
+                                            <h3 class="text-component-subtitle-mobile">Malbec Marchiori</h3>
+                                            <h3 class="text-component-subtitle-mobile">Bramare Malbec Marchiori</h3>
+                                            <h3 class="text-component-subtitle-mobile">TERROIR PIONEER</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div style="transform: translateX(4.5px);"
+                                    class="display@md v-timeline__marker bg-primary" aria-hidden="true">
+                                </div>
+                                <div style="transform: translateX(-2px);"
+                                    class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
+                                    aria-hidden="true">
+                                </div>
+
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item flex-row padding-right-lg">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                            <h2 class="grey-number padding-left-xs">1997</h2>
+                                        </div>
+
+                                        <div
+                                            class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
+                                            <h2 class="text-component-title">COMIENZO</h2>
+                                            <h3 class="text-component-subtitle">Creación del proyecto Viña Cobos</h3>
+                                            <div class="text-component-animation text-left">
+                                                <p class="text-component-description padding-left-xxxxs">Enamorado del
+                                                    paisaje de la tierra
+                                                    mendocina, Paul junto a dos enólogos locales. Deciden comenzar su
+                                                    sueño de posicionar el malbec en el mundo.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y ">
+                                    <div class="v-timeline__item flex flex-row padding-right-lg">
+                                        <div class="v-timeline__date">
+                                            <h2 class="grey-number-mobile padding-right-xs">1997</h2>
+                                        </div>
+
+                                        <div
+                                            class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
+                                            <h2 class="text-component-title-mobile">COMIENZO</h2>
+                                            <h3 class="text-component-subtitle-mobile">Creación del proyecto Viña Cobos
+                                            </h3>
+                                            <div class="text-component-animation-mobile">
+                                                <p class="text-component-description-mobile">Enamorado del paisaje de la
+                                                    tierra mendocina, Paul junto a dos enólogos locales. Deciden
+                                                    comenzar su sueño de posicionar el malbec en el mundo.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div style="transform: translateX(-4.5px);"
+                                    class="display@md v-timeline__marker bg-primary" aria-hidden="true">
+                                </div>
+                                <div style="transform: translateX(-2px);"
+                                    class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
+                                    aria-hidden="true">
+                                </div>
+
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                            <h2 class="grey-number padding-right-xs">1999</h2>
+                                        </div>
+
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            <h2 class="text-component-title">IMPULSO</h2>
+                                            <h3 class="text-component-subtitle">Cobos malbec Inaugural</h3>
+                                            <div class="text-component-animation">
+                                                <p class="text-component-description padding-left-xxxxs">Desde la
+                                                    primera cosecha de Cobos
+                                                    Malbec en 1999, Viña Cobos ha marcado un hito en la vitivinicultura,
+                                                    desafiando los límites de la calidad para ubicar a la Argentina al
+                                                    lado de los grandes productores del
+                                                    mundo.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
+                                    <div class="v-timeline__item flex flex-row padding-right-lg">
+                                        <div class="v-timeline__date">
+                                            <h2 class="grey-number-mobile padding-right-xs">1999</h2>
+                                        </div>
+
+                                        <div
+                                            class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
+                                            <h2 class="text-component-title-mobile">IMPULSO</h2>
+                                            <h3 class="text-component-subtitle-mobile">Cobos malbec Inaugural</h3>
+                                            <div class="text-component-animation-mobile">
+                                                <p class="text-component-description-mobile">Desde la primera cosecha de
+                                                    Cobos Malbec en 1999, Viña Cobos ha marcado un hito en la
+                                                    vitivinicultura, desafiando los límites de la calidad para ubicar a
+                                                    la Argentina al lado de los grandes productores del
+                                                    mundo.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div style="transform: translateX(4.5px);"
+                                    class="display@md v-timeline__marker bg-primary" aria-hidden="true">
+                                </div>
+                                <div style="transform: translateX(-2px);"
+                                    class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
+                                    aria-hidden="true">
+                                </div>
+
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                            <h2 class="grey-number padding-left-xs">2006</h2>
+                                        </div>
+
+
+                                        <div
+                                            class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
+                                            <h2 class="text-component-title">LA BODEGA</h2>
+                                            <h3 class="text-component-subtitle">Construcción de la bodega</h3>
+                                            <div class="text-component-animation text-left">
+                                                <p class="text-component-description padding-left-xxxxs">Construido en
+                                                    el año 2006, el
+                                                    edificio, con orientación este, se encuentra enfrentado al viñedo
+                                                    Marchiori, y con su lado oeste mirando hacia el Volcán Tupungato. De
+                                                    estilo minimalista y de líneas simples,
+                                                    propone ser tanto moderno como funcional.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
+                                    <div class="v-timeline__item flex flex-row padding-right-lg">
+                                        <div class="v-timeline__date">
+                                            <h2 class="grey-number-mobile padding-right-xs">2006</h2>
+                                        </div>
+
+                                        <div
+                                            class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
+                                            <h2 class="text-component-title-mobile">LA BODEGA</h2>
+                                            <h3 class="text-component-subtitle-mobile">Construcción de la bodega</h3>
+                                            <div class="text-component-animation-mobile">
+                                                <p class="text-component-description-mobile">Construido en el año 2006,
+                                                    el edificio, con orientación este, se encuentra enfrentado al viñedo
+                                                    Marchiori, y con su lado oeste mirando hacia el Volcán Tupungato. De
+                                                    estilo minimalista y de líneas simples,
+                                                    propone ser tanto moderno como funcional.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div style="transform: translateX(-4.5px);"
+                                    class="display@md v-timeline__marker bg-primary" aria-hidden="true">
+                                </div>
+                                <div style="transform: translateX(-2px);"
+                                    class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
+                                    aria-hidden="true">
+                                </div>
+
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                            <h2 class="grey-number padding-right-xs">2014</h2>
+                                        </div>
+
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            <h2 class="text-component-title" style="transform: translateY(-12px);">
+                                                PIONERO
+                                            </h2>
+                                            <h3 class="text-component-subtitle">Primeros 100 puntos de sudamérica</h3>
+                                            <div class="text-component-animation">
+                                                <p class="text-component-description padding-left-xxxxs">Cobos Marchiori
+                                                    Malbec 2011 fue el
+                                                    primer vino Sudamericano en obtener 100 puntos por la crítica
+                                                    internacional. Confirmando a Argentina entre los líderes a nivel
+                                                    mundial.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
+                                    <div class="v-timeline__item flex flex-row padding-right-lg">
+                                        <div class="v-timeline__date">
+                                            <h2 class="grey-number-mobile padding-right-xs">2014</h2>
+                                        </div>
+
+                                        <div
+                                            class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
+                                            <h2 class="text-component-title-mobile">PIONERO</h2>
+                                            <h3 class="text-component-subtitle-mobile">Primeros 100 puntos de sudamérica
+                                            </h3>
+                                            <div class="text-component-animation-mobile">
+                                                <p class="text-component-description-mobile">Cobos Marchiori Malbec 2011
+                                                    fue el primer vino Sudamericano en obtener 100 puntos por la crítica
+                                                    internacional. Confirmando a Argentina entre los líderes a nivel
+                                                    mundial.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div style="transform: translateX(4.5px);"
+                                    class="display@md v-timeline__marker bg-primary" aria-hidden="true">
+                                </div>
+                                <div style="transform: translateX(-2px);"
+                                    class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
+                                    aria-hidden="true">
+                                </div>
+
+                                <div class="v-timeline__items-group">
+                                    <div class="display@md v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                            <h2 class="grey-number padding-left-xs">2014</h2>
+                                        </div>
+
+                                        <div style="padding: 4px;"
+                                            class="text-component text-left padding-right-sm@md max-width-xxxs">
+                                            <h2 class="text-component-title-2">1er VIÑEDO PROPIO</h2>
+                                            <h3 class="text-component-subtitle">Adquisición de Chañares Estate</h3>
+                                            <div class="text-component-animation text-left">
+                                                <p class="text-component-description padding-left-xxxxs">Adquirido por
+                                                    Paul Hobbs en el año
+                                                    2013, conservando su diseño y naturaleza. Chañares tiene la
+                                                    particularidad de mantener entre sus viñedos diversos bosques
+                                                    nativos de chañares (árbol típico de esta región).
+                                                    Suman 5 bosques de chañares, en total más de 1,5ha, un 10% de la
+                                                    superficie plantada.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
+                                        <div class="v-timeline__item flex flex-row padding-right-lg">
+                                            <div class="v-timeline__date">
+                                                <h2 class="grey-number-mobile padding-right-xs">2014</h2>
+                                            </div>
+                                            <div
+                                                class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
+                                                <h2 class="text-component-title-mobile">1er VIÑEDO PROPIO</h2>
+                                                <h3 class="text-component-subtitle-mobile">Adquisición de Chañares
+                                                    Estate
+                                                </h3>
+                                                <div class="text-component-animation-mobile">
+                                                    <p class="text-component-description-mobile">Adquirido por Paul
+                                                        Hobbs en el año 2013, conservando su diseño y naturaleza.
+                                                        Chañares tiene la particularidad de mantener entre sus viñedos
+                                                        diversos bosques nativos de chañares (árbol típico de esta
+                                                        región). Suman 5 bosques de chañares, en total más de 1,5ha, un
+                                                        10% de la superficie plantada.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div style="transform: translateX(-4.5px);"
+                                    class="display@md v-timeline__marker bg-primary" aria-hidden="true">
+                                </div>
+                                <div style="transform: translateX(-2px);"
+                                    class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
+                                    aria-hidden="true">
+                                </div>
+
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                            <h2 class="grey-number padding-right-xs">2017</h2>
+                                        </div>
+
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            <h2 class="text-component-title-2" style="transform: translateY(-12px);">2do
+                                                VIÑEDO PROPIO</h2>
+                                            <h3 class="text-component-subtitle">Adquisición de Zingaretti Estate</h3>
+                                            <div class="text-component-animation">
+                                                <p class="text-component-description padding-left-xxxxs">Ubicado en el
+                                                    distrito de Villa
+                                                    Bastías, Tupungato. Se destaca por sus antiguas vides de Malbec, 4,4
+                                                    ha de más de 80 años. En su superficie plantada también se pueden
+                                                    encontrar vides de Chardonnay</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
+                                    <div class="v-timeline__item flex flex-row padding-right-lg">
+                                        <div class="v-timeline__date">
+                                            <h2 class="grey-number-mobile padding-right-xs">2017</h2>
+                                        </div>
+
+                                        <div
+                                            class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
+                                            <h2 class="text-component-title-mobile">2do VIÑEDO PROPIO</h2>
+                                            <h3 class="text-component-subtitle-mobile">Adquisición de Zingaretti Estate
+                                            </h3>
+                                            <div class="text-component-animation-mobile">
+                                                <p class="text-component-description-mobile">Ubicado en el distrito de
+                                                    Villa Bastías, Tupungato. Se destaca por sus antiguas vides de
+                                                    Malbec, 4,4 ha de más de 80 años. En su superficie plantada también
+                                                    se pueden encontrar vides de Chardonnay.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div style="transform: translateX(4.5px);"
+                                    class="display@md v-timeline__marker bg-primary" aria-hidden="true">
+                                </div>
+                                <div style="transform: translateX(-2px);"
+                                    class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
+                                    aria-hidden="true">
+                                </div>
+
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                            <h2 class="grey-number padding-left-xs">2020</h2>
+                                        </div>
+
+                                        <div
+                                            class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
+                                            <h2 class="text-component-title" style="transform: translateY(-12px);">
+                                                INNOVACIÓN</h2>
+                                            <h3 class="text-component-subtitle">100 puntos Cobos MB 2017</h3>
+                                            <div class="text-component-animation text-left">
+                                                <p class="text-component-description padding-left-xxxxs">En el año de su
+                                                    lanzamiento Cobos
+                                                    Malbec obtuvo 100 puntos por la crítica internacional.
+                                                    Reconocimiento al desafiante cambio estratégico de la línea icono.
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
+                                    <div class="v-timeline__item flex flex-row padding-right-lg">
+                                        <div class="v-timeline__date">
+                                            <h2 class="grey-number-mobile padding-right-xs">2020</h2>
+                                        </div>
+
+                                        <div
+                                            class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
+                                            <h2 class="text-component-title-mobile">INNOVACIÓN</h2>
+                                            <h3 class="text-component-subtitle-mobile">100 puntos Cobos MB 2017</h3>
+                                            <div class="text-component-animation-mobile">
+                                                <p class="text-component-description-mobile">En el año de su lanzamiento
+                                                    Cobos Malbec obtuvo 100 puntos por la crítica internacional.
+                                                    Reconocimiento al desafiante cambio estratégico de la línea icono.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+                <img class="display@md" src="./assets/img/storyline-polygon.svg" width="26" height="26" alt=""
+                    style="transform: translateY(-2px);">
+                <img class="hide@md" src="./assets/img/storyline-polygon.svg" width="26" height="26" alt=""
+                    style="width: 26px;height: auto;float: left;transform: translate(11px, -2px);">
+
             </div>
         </section>
 
@@ -201,7 +794,7 @@
                     <span class="block">NOS DETERMINA</span>
                 </p>
             </div>
-
+ 
             <div class="col-12 col-1@md fonts-footer-colums padding-left-lg@md" style="transform: translateX(15px);">
                 <ul class="grid gap-md gap-xs@md">
                     <li><a class="footer-v5__link" href="#0">Historia</a></li>
@@ -283,6 +876,7 @@
     <script src="./assets/js/scripts.js"></script>
 
 </body>
+
 
 
 </html>

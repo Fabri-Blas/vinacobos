@@ -155,6 +155,23 @@ footer {
         max-width: 787px;
         padding-left: 100px;
     }
+    &-mobile {
+        background-image: url("../img/vinos-bg-mobile.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        & h2 {
+            font-family: var(--font-primary);
+            font-weight: 500;
+            font-size: 47.1162px;
+            line-height: 56px;
+            letter-spacing: 0.12em;
+            width: 100%;
+            padding-left: 20px;
+            padding-top: 130px;
+        }
+    }
 }
 .especiales-content{
     justify-content: space-around;
@@ -166,7 +183,21 @@ footer {
         height: auto;
     }
     &-logo{
-        max-width: 350px;
+        &-1{
+            max-width: 350px;
+            max-height: 40px;
+            width: auto;
+        }
+        &-2{
+            max-width: 350px;
+            max-height: 75px;
+            width: auto;
+        }
+    }
+    &-final-tree{
+        transform: translateY(135px);
+        max-width: 1400px;
+        width: 100%;
         height: auto;
     }
 }
@@ -382,6 +413,24 @@ footer {
         transform: translateY(17px);
         letter-spacing: 0.12em;
         color: var(--color-primary-light);
+        }
     }
+    
 }
+
+@media only screen and (max-width: 550px) {
+    .vinos {
+        &-logo{
+            &-1{
+                max-width: 149px;
+                max-height: 25px;
+                width: auto;
+            }
+            &-2{
+                max-width: 190px;
+                max-height: 48px;
+                width: auto;
+            }
+        }
+    }
 }
