@@ -57,6 +57,7 @@ button {
   border-bottom: 2px solid black;
   transition: all 0.5s;
   padding-bottom: 8px;
+  margin-left: 65px;
   z-index: 99;
   font-family: var(--font-primary);
   &:hover {
@@ -186,6 +187,7 @@ button {
   right: 100px;
   padding-bottom: 8px;
   padding-right: 0;
+  margin-right: 12px;
   font-family: var(--font-primary);
 
   &:hover {
@@ -205,9 +207,9 @@ button {
   // color: white;
   letter-spacing: 0;
   text-align: center;
-  border: 0px;
-  background: linear-gradient(var(--color-primary-light) 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
-  transition: 0.3s, background-position 0s 0.3s;
+  // border: 0px;
+  // background: linear-gradient(var(--color-primary-light) 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
+  // transition: 0.3s, background-position 0s 0.3s;
   padding: 0 0 8px 0;
   margin: 0;
 
@@ -223,8 +225,8 @@ button {
     border: 0px;
     padding: 0 0 8px 0;
     margin: 0;
-    background: linear-gradient(black 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
-    transition: 0.3s, background-position 0s 0.3s;
+    // background: linear-gradient(black 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
+    // transition: 0.3s, background-position 0s 0.3s;
 
     &:hover {
       cursor: pointer;
@@ -298,16 +300,28 @@ button {
   font-size: 1.4em;
 }
 
-@media only screen and (max-width: 1024px) {
-  .btn--primary-right {
-    font-size: 13px;
-    width: 100px;
-    right: 25px;
+@media only screen and (max-width: 1366px) {
+  .btn--primary{
+    margin-left: 35px;
+
+    &-right{
+      margin-right: -18px;
+    }
   }
+}
+
+@media only screen and (max-width: 1024px) {
   .btn--primary {
     font-size: 13px;
     width: 100px;
-    left: 25px;
+    left: -14px;
+
+    &-right{
+      font-size: 13px;
+      width: 100px;
+      right: 25px;
+      margin-right: 0px;
+    }
   }
 }
 

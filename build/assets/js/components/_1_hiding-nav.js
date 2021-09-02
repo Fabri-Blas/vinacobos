@@ -182,7 +182,8 @@
   actualPage = actualPage.split('.')[0];
   const mainLogo = document.querySelector('.main-logo');
   const desktopHeader = document.getElementById("desktop-header");
-  const itemsDesktop = desktopHeader.querySelectorAll('.f-header__link');
+  const itemsDesktop = desktopHeader.querySelectorAll('.f-header__item');
+  const linksDesktop = desktopHeader.querySelectorAll('.f-header__link');
   const logoMobile = document.querySelector('.logo-mobile-1');
   const hamburguerMobile = document.querySelector('.hamburguer-mobile-1');
   let below = false;
@@ -225,6 +226,10 @@
       hamburguerMobile.setAttribute('src', './assets/img/hamburguer-black.svg');
       if (!below && !doneAbove) {
         itemsDesktop.forEach(item => {
+          item.classList.remove('nav--line');
+          item.classList.add('nav--line-black');
+        });
+        linksDesktop.forEach(item => {
           item.classList.remove('btn--nav');
           item.classList.add('btn--nav-black');
         });
@@ -240,6 +245,10 @@
         hamburguerMobile.setAttribute('src', './assets/img/hamburguer.svg');
         if (!below && !doneBelow) {
           itemsDesktop.forEach(item => {
+            item.classList.remove('nav--line-black');
+            item.classList.add('nav--line');
+          });
+          linksDesktop.forEach(item => {
             item.classList.remove('btn--nav-black');
             item.classList.add('btn--nav');
           });
