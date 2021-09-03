@@ -44,7 +44,7 @@ button {
   cursor: pointer;
   position: absolute;
   bottom: 70px;
-  left: 45px;
+  left: 99px;
   font-size: 13px;
   text-decoration: none;
   color: var(--color-primary);
@@ -57,7 +57,6 @@ button {
   border-bottom: 2px solid black;
   transition: all 0.5s;
   padding-bottom: 8px;
-  margin-left: 65px;
   z-index: 99;
   font-family: var(--font-primary);
   &:hover {
@@ -187,7 +186,6 @@ button {
   right: 100px;
   padding-bottom: 8px;
   padding-right: 0;
-  margin-right: 12px;
   font-family: var(--font-primary);
 
   &:hover {
@@ -302,10 +300,10 @@ button {
 
 @media only screen and (max-width: 1366px) {
   .btn--primary{
-    margin-left: 35px;
+    left: 70px;
 
     &-right{
-      margin-right: -18px;
+      right: 71px;
     }
   }
 }
@@ -314,13 +312,12 @@ button {
   .btn--primary {
     font-size: 13px;
     width: 100px;
-    left: -14px;
+    left: 20px;
 
     &-right{
       font-size: 13px;
       width: 100px;
       right: 25px;
-      margin-right: 0px;
     }
   }
 }
