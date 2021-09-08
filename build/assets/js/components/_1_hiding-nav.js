@@ -221,9 +221,9 @@
       doneBelow = false;
       headerGlobal.classList.remove('backdrop-blur-10');
       headerGlobal.style.backgroundColor = 'rgba(0,0,0,0)';
-      mainLogo.setAttribute('src', './assets/img/logo-black.svg');
-      logoMobile.setAttribute('src', './assets/img/logo-black.svg');
-      hamburguerMobile.setAttribute('src', './assets/img/hamburguer-black.svg');
+      mainLogo.setAttribute('src', '../assets/img/logo-black.svg');
+      logoMobile.setAttribute('src', '../assets/img/logo-black.svg');
+      hamburguerMobile.setAttribute('src', '../assets/img/hamburguer-black.svg');
       if (!below && !doneAbove) {
         itemsDesktop.forEach(item => {
           item.classList.remove('nav--line');
@@ -240,9 +240,9 @@
         doneAbove = false;
         headerGlobal.classList.add('backdrop-blur-10');
         headerGlobal.style.backgroundColor = 'rgba(0,0,0,0.8)';
-        mainLogo.setAttribute('src', './assets/img/logo.svg');
-        logoMobile.setAttribute('src', './assets/img/logo.svg');
-        hamburguerMobile.setAttribute('src', './assets/img/hamburguer.svg');
+        mainLogo.setAttribute('src', '../assets/img/logo.svg');
+        logoMobile.setAttribute('src', '../assets/img/logo.svg');
+        hamburguerMobile.setAttribute('src', '../assets/img/hamburguer.svg');
         if (!below && !doneBelow) {
           itemsDesktop.forEach(item => {
             item.classList.remove('nav--line-black');

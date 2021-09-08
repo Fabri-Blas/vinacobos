@@ -1158,9 +1158,9 @@ function resetFocusTabsStyle() {
       doneBelow = false;
       headerGlobal.classList.remove('backdrop-blur-10');
       headerGlobal.style.backgroundColor = 'rgba(0,0,0,0)';
-      mainLogo.setAttribute('src', './assets/img/logo-black.svg');
-      logoMobile.setAttribute('src', './assets/img/logo-black.svg');
-      hamburguerMobile.setAttribute('src', './assets/img/hamburguer-black.svg');
+      mainLogo.setAttribute('src', '../assets/img/logo-black.svg');
+      logoMobile.setAttribute('src', '../assets/img/logo-black.svg');
+      hamburguerMobile.setAttribute('src', '../assets/img/hamburguer-black.svg');
       if (!below && !doneAbove) {
         itemsDesktop.forEach(item => {
           item.classList.remove('nav--line');
@@ -1177,9 +1177,9 @@ function resetFocusTabsStyle() {
         doneAbove = false;
         headerGlobal.classList.add('backdrop-blur-10');
         headerGlobal.style.backgroundColor = 'rgba(0,0,0,0.8)';
-        mainLogo.setAttribute('src', './assets/img/logo.svg');
-        logoMobile.setAttribute('src', './assets/img/logo.svg');
-        hamburguerMobile.setAttribute('src', './assets/img/hamburguer.svg');
+        mainLogo.setAttribute('src', '../assets/img/logo.svg');
+        logoMobile.setAttribute('src', '../assets/img/logo.svg');
+        hamburguerMobile.setAttribute('src', '../assets/img/hamburguer.svg');
         if (!below && !doneBelow) {
           itemsDesktop.forEach(item => {
             item.classList.remove('nav--line-black');
@@ -4149,25 +4149,38 @@ const sContainer = document.querySelector('.scroll-indicator-container');
 const sIndicator = document.querySelector('.scroll-indicator');
 let scrollH = window.pageYOffset / 23.4;
 
+const vinosHome = document.getElementById("vinos-home");
+const felinoHome = document.getElementById("felino-home");
+
 function inViewport(el) {
     if (el.getBoundingClientRect()) {
         var bb = el.getBoundingClientRect();
         return !(bb.top > innerHeight || bb.bottom < 0);
     }
 }
-document.addEventListener('scroll', () => {
 
-    if (hero) {
-        if (!inViewport(hero)) {
-            sContainer.classList.remove('is-hidden')
-        } else {
-            if (!sContainer.classList.contains('is-hidden')) {
-                sContainer.classList.add('is-hidden')
-            }
+function sContainerCheck(elem){
+    if (!inViewport(elem)) {
+        sContainer.classList.remove('is-hidden')
+    } else {
+        if (!sContainer.classList.contains('is-hidden')) {
+            sContainer.classList.add('is-hidden')
         }
-        sIndicator.setAttribute('style', `height: ${(window.pageYOffset - 912) / 40}%`);
     }
-})
+    sIndicator.setAttribute('style', `height: ${(window.pageYOffset - 912) / 40}%`);
+}
+
+sContainer.classList.add('is-hidden');
+
+document.addEventListener('scroll', () => {
+    if (hero) {
+        sContainerCheck(hero);
+    }else if(vinosHome){
+        sContainerCheck(vinosHome);
+    }else if (felinoHome){
+        sContainerCheck(felinoHome);
+    }
+});
 var hero = document.getElementById('hero')
 
 function smoothScroll(starget, duration){
