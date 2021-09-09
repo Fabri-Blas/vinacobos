@@ -4151,6 +4151,7 @@ let scrollH = window.pageYOffset / 23.4;
 
 const vinosHome = document.getElementById("vinos-home");
 const felinoHome = document.getElementById("felino-home");
+const cobosHome = document.getElementById("cobos-home");
 
 function inViewport(el) {
     if (el.getBoundingClientRect()) {
@@ -4179,6 +4180,8 @@ document.addEventListener('scroll', () => {
         sContainerCheck(vinosHome);
     }else if (felinoHome){
         sContainerCheck(felinoHome);
+    }else if (cobosHome){
+        sContainerCheck(cobosHome);
     }
 });
 var hero = document.getElementById('hero')

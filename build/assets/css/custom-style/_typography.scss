@@ -141,6 +141,7 @@ mark {
 .vinos-especiales-unicos {
   & .inner-vinos {
     &-title {
+      max-width: 185px;
       font-style: normal;
       font-weight: 500;
       font-size: 76.2px;
@@ -163,79 +164,6 @@ mark {
       font-size: 18px;
       line-height: 22px;
       color: #878581;
-      max-width: 398px;
-    }
-  }
-}
-#cobos-icono{
-  & h1{
-    max-width:140px;
-    font-size: 29.124px;
-    line-height: 47px;
-    text-align:center;
-    letter-spacing: 0.12em;
-    color:#f1eee9;
-  }
-}
-
-.varietales {
-  &-title {
-    font-family: var(--font-primary);
-    font-weight: 500;
-    font-size: 47.11px;
-    font-style: normal;
-    letter-spacing: 0.12em;
-    color: white;
-  }
-
-&-subtitle {
-    font-family: var(--font-primary);
-    font-weight: 500;
-    font-size: 18px;
-    font-style: normal;
-    transform: translateY(17px);
-    letter-spacing: 0.12em;
-    width: 110px;
-    color: rgba(241, 238, 233, 0.5);
-  }
-
-&-description {
-    font-family: var(--font-secondary);
-    font-weight: normal;
-    font-size: 18px;
-    font-style: normal;
-    transform: translateY(17px);
-    letter-spacing: 0.12em;
-    color: var(--color-primary-light);
-  }
-}
-  
-.varietales-component {
-
-  & .inner-varietal {
-    &-title {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 76.2px;
-      line-height: 123px;
-      letter-spacing: 0.12em;
-      color: #1c1c1c;
-    }
-    &-subtitle {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 29.1px;
-      line-height: 35px;
-      letter-spacing: 0.0025em;
-      color: #F1EEE9;
-    }
-    &-paragraph {
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 22px;
-      color: rgba(241, 238, 233, 0.7);
       max-width: 398px;
     }
   }
@@ -466,6 +394,81 @@ mark {
   font-size: 13px;
 }
 
+//================VARIETALES==================
+
+#cobos-icono{
+  & h1{
+    max-width:140px;
+    font-size: 29.124px;
+    line-height: 47px;
+    text-align:center;
+    letter-spacing: 0.12em;
+    color:#f1eee9;
+  }
+}
+
+.varietales {
+  &-title {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 47.11px;
+    font-style: normal;
+    letter-spacing: 0.12em;
+    color: white;
+  }
+  &-subtitle {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    transform: translateY(17px);
+    letter-spacing: 0.12em;
+    width: 110px;
+    color: rgba(241, 238, 233, 0.5);
+  }
+  &-description {
+    font-family: var(--font-secondary);
+    font-weight: normal;
+    font-size: 18px;
+    font-style: normal;
+    transform: translateY(17px);
+    letter-spacing: 0.12em;
+    color: var(--color-primary-light);
+  }
+}
+  
+.varietales-component {
+  & .inner-varietal {
+    &-title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 76.2px;
+      line-height: 123px;
+      letter-spacing: 0.12em;
+      color: #878581;
+    }
+    &-subtitle {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 29.1px;
+      line-height: 35px;
+      letter-spacing: 0.0025em;
+      color: #F1EEE9;
+    }
+    &-paragraph {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      color: rgba(241, 238, 233, 0.7);
+      max-width: 398px;
+    }
+  }
+}
+
+//================MEDIA QUERIES=================
+
 @media only screen and (max-width: 1790px) {
   .fs-big-font2 {
     padding-top: 10px;
@@ -594,6 +597,14 @@ mark {
   .varietales-component {
 
     & .inner-varietal {
+      &-title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 29.12px;
+        line-height: 48px;
+        letter-spacing: 0.12em;
+        color: #878581;
+      }
       &-subtitle {
         font-style: normal;
         font-weight: 500;
