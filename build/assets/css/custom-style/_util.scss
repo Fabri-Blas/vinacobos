@@ -592,12 +592,34 @@ footer {
     }
 }
 
+#vinculum-chard-home{
+    &-mobile{
+    background-image:url("../img/Vinculum-Chard-Mobile.jpg") ;
+    }
+}
 #vd-home {
+
+
+   
     &-mobile {
         background-image: url("../img/vd-chanares-mobile.png");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+    &-zingaretti-mobile{
+        background-image: url("../img/vd-zingaretti-mobile.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    &-marchiori-mobile{
+        background-image: url("../img/vd-marchiori-mobile.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
     }
 }
 .vd {
