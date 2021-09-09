@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        document.getElementsByTagName("html")[0].className += " js";
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link id="codyframe" rel="stylesheet" href="../assets/css/style.css">
+    <title>Viña Cobos</title>
+</head>
+
+<body class="bg-black">
+
+    <!-- ================================================HEADER================================================ -->
+    <header id="header-global" class="f-header js-f-header bg-transparent hide-nav js-hide-nav js-hide-nav--main backdrop-blur-10 padding-y-lg padding-y-0@md"
+        data-nav-target-class="f-header--expanded">
+        <div class="f-header__mobile-content container max-width-lg padding-top-0@md flex flex-column">
+            <a href="../" class="position-absolute left-0 top-50% -translate-y-50%">
+                <img src="../assets/img/logo.svg" width="30" height="27" alt="Logo" class="logo-mobile-1">
+            </a>
+            <button class="position-absolute right-0 top-50% -translate-y-50% reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
+                aria-label="Toggle menu">
+                <img src="../assets/img/hamburguer.svg" width="25" height="9" alt="" class="hamburguer-mobile-1">
+            </button>
+        </div>
+
+        <div class="f-header__nav" role="navigation">
+            <div class="f-header__nav-grid justify-between@md container max-width-xxxl margin-x-auto padding-x-xl@md padding-x-xxl@sxl">
+                <div class="f-header__nav-logo-wrapper">
+                    <a href="../" class="">
+                        <img id="logo" src="../assets/img/logo.svg" width="38" height="35" alt="Logo" class="display@md">
+                    </a>
+                </div>
+
+                <ul id="desktop-header"
+                    class="f-header__list margin-left-sm justify-center@md display@md">
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                            class="f-header__link btn--nav">HISTORIA</a></li>
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                            class="f-header__link btn--nav">TERROIR</a></li>
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                            class="f-header__link btn--nav">VINOS</a></li>
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                            class="f-header__link btn--nav">CONTACTO</a></li>
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                            class="f-header__link btn--nav">TIENDA</a></li>
+                </ul>
+
+                <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
+                </ul>
+
+                <ul class="f-header__list padding-top-lg justify-center@md hide@md">
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TIENDA</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- ==============================================END-HEADER============================================== -->
+
+    <!-- =================================================MAIN================================================= -->
+
+    <!-- scroll component -->
+    <div class="scroll-indicator-container display@md" data-title="Conoce Viña Cobos">
+        <div class="scroll-indicator-wrapper" style="height: 400px;">
+            <div class="scroll-indicator-inner" style="height: 250px;">
+                <span class="scroll-indicator"></span>
+            </div>
+            <div class="title">
+                <h3>Conoce Viña Cobos</h3>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <section id="cobos-home" class="display@md component-section bg-white width-100%">
+            <div class="display@md padding-left-xxs">
+                <div id="cobos-home-content"
+                    class="position-absolute bottom-0 flex flex-row justify-left color-black padding-left-xxl padding-y-xxxl">
+                    <h1 class="varietales-title" style="transform: translateY(-10px)">Cobos</h1>
+                    <div class="varietales-small-line"></div>
+                    <h3 class="varietales-subtitle text-center">Volturno</h3>
+                    <div class="varietales-big-line"></div>
+                </div>
+                <div class="position-absolute bottom-0 padding-left-xxl padding-y-xl flex flex-column justify-left">
+                    <h3 class="varietales-description padding-bottom-xs">BOTELLA</h2>
+                    <h3 class="varietales-description">FICHA ENOLÓGICA</h3>
+                </div>
+            </div>
+        </section>
+        <section id="cobos-home-mobile" class="hide@md component-section bg-white width-100%">
+           <div class="position-absolute bottom-0 -left-0 padding-left-md">
+               <div class="padding-bottom-xxxxs">
+                   <h1 class="varietales-title">Cobos</h1>
+               </div>
+               <div class="flex-column justify-around padding-bottom-xl" style="height:130px;">
+                    <h3 class="varietales-subtitle padding-bottom-xxs">Volturno</h3>
+                </div>
+                <div class="varietales-links">
+                   <h3 class="varietales-description padding-bottom-xs">BOTELLA</h3>
+                    <h3 class="varietales-description">FICHA ENOLÓGICA</h3>
+                   </div>
+            </div>
+        </div>
+        </section>
+        <!-- EXPERIENCIA - Mobile -->
+        <section class="hide@md">
+            <div class=" component-section width-100% text-center flex justify-center items-center ">
+             <img class="padding-x-sm varietales-foto" src="../assets/img/cobos-experiencia-mobile.png" alt="cobos-experiencia">
+            </div>
+        </section>    
+
+        <!-- NUESTRO ICONO - Mobile-->
+        <section id="cobos-icono" class="hide@md">
+            <div class="component-half max-width-xs margin-x-auto margin-y-auto">
+                <div class= "grid margin-x-auto">
+                    <div class="col-6 padding-x-sm">
+                        <div class="position-relative bottom-0">
+                            <img class="varietales-foto-icono" src="../assets/img/cobos-malbec-gris-mobile.png" alt="cobos-malbec">
+                        </div>
+                    </div>
+                    <div class="col-6 flex flex-column justify-between">
+                        <h1 class="margin-x-auto margin-y-auto"> Nuestro ícono</h1>
+                        <div class=""> 
+                            <img class="varietales-foto-icono" src="../assets/img/cobos-trebol-mobile.png" alt="cobos-pico">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEPARACION COBOS - Mobile -->
+        <section id="" class="hide@md varietales-component component-section-full">
+            <div class="flex justify-center margin-y-xxl">
+                <img class="" src="../assets/img/vina_cobos_mobile_black.svg" alt="cobos-logo-mobile">
+            </div>
+            <div class="margin-x-auto">
+                <img class="padding-x-sm varietales-foto" src="../assets/img/cobos-malbec-mobile.png" alt="">
+            </div>
+            <div class="margin-bottom-xxxl">
+                <div class="margin-bottom-lg margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                    <div class="margin-x-auto padding-y-xl"
+                        style="width: 210px;">
+                        <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 472.44 73.61">
+                            <defs>
+                                <style>.cls-1{fill:#F1EEE9;}</style>
+                            </defs>
+                            <path class="cls-1" d="M86.18,74a26.93,26.93,0,0,1-12.93,10.7c-5.5,2.34-10.86,2.74-17.61,2.74-25.59,0-37.82-19.22-37.82-34.05,
+                                0-32.26,26-39.4,37.41-39.4,4.8,0,7.71,1,13.47,2.88,3.31,1.1,4.13,1.38,7,1.38a10.54,10.54,0,0,0,5-1.1c0,4.94,2.19,7.69,
+                                2.19,13.59a22.24,22.24,0,0,1-.68,5.77c-.28-.14-.83-.14-1.24-.28a10,10,0,0,0,.56-3c0-7.68-14.58-16.75-25.87-16.75C43.54,16.47,
+                                27,25.54,27,49c0,16.75,8.39,35.85,31.36,35.85a40.32,40.32,0,0,0,13.07-2.07c5.77-1.78,11-5.49,13.21-9.33Z" 
+                                transform="translate(-17.82 -14)"/>
+                                <path class="cls-1" d="M191.8,55.46c0,17-11.41,29.66-28.74,29.66-21.73,0-31.63-20.32-31.63-35.42,0-19.23,12.38-33.37,
+                                29.16-33.37C184.09,16.33,191.8,41.73,191.8,55.46Zm7.58-5.07c0-22.25-15.55-36.39-37.56-36.39-21.31,0-38,18.4-38,37.89,
+                                0,18.83,12.8,35.71,38.25,35.71C186.58,87.6,199.38,65.76,199.38,50.39Z" 
+                                transform="translate(-17.82 -14)"/>
+                                <path class="cls-1" d="M255.9,21.14c0-3.44,2.89-3.44,7.29-3.44,12.1,0,15.95,6.19,15.95,13.74,0,10.71-7.84,13.17-16.63,
+                                13.17H255.9Zm-7,51.35a61.08,61.08,0,0,1-.28,6.88,12.26,12.26,0,0,1-3.31,5.49,17.57,17.57,0,0,1-3.16.41,18.32,18.32,
+                                0,0,1-2.47-.28v1.64a16.07,16.07,0,0,0,2.62.15c4.81,0,7.56-.68,10.45-.68,1.92,0,6.19.68,16.09.68,19.38,0,23.78-15.52,
+                                23.78-20.46,0-12.1-11-19.23-20.77-20.47v-.27c4.55-.68,15.55-5.91,15.55-16.2,0-4.13-1.92-14.42-19-14.42-6.6,
+                                0-11.82.69-15.52.69-2.08,0-5.38-.69-8.95-.69h-3.58v1.51c.69,0,1.52-.14,2.2-.14,4.68-.13,6.33,3.57,6.33,9.07Zm7-25.26c5.78,
+                                0,12.51,0,17.6,2.06,7,2.88,10.45,10.16,10.45,16.89,0,12.08-7,18.81-17.87,18.81a30.66,30.66,0,0,1-10.18-1.51Z" 
+                                transform="translate(-17.82 -14)"/>
+                                <path class="cls-1" d="M402.25,55.46c0,17-11.42,29.66-28.75,29.66-21.74,0-31.64-20.32-31.64-35.42,0-19.23,12.37-33.37,
+                                29.16-33.37C394.54,16.33,402.25,41.73,402.25,55.46Zm7.55-5.07C409.8,28.14,394.26,14,372.26,14c-21.33,0-38,18.4-38,
+                                37.89,0,18.83,12.79,35.71,38.23,35.71C397,87.6,409.8,65.76,409.8,50.39Z" 
+                                transform="translate(-17.82 -14)"/>
+                                <path class="cls-1" d="M478,47.5c8.38,6.87,12.23,13.45,12.23,21.28,0,6-3.58,18.14-22,18.14-8.24,0-12.1-4.13-18.15-4.13,
+                                0-3.71-1.92-9.2-1.92-12.9a13.26,13.26,0,0,1,.55-4.54H450a28.46,28.46,0,0,0-.27,3.43,15.42,15.42,0,0,0,1,6A35.25,
+                                35.25,0,0,0,457.11,81a17.78,17.78,0,0,0,11.7,3.85c8.25,0,15.13-5.64,15.13-14.14,
+                                0-8.8-7.56-15.26-12.38-19.38l-5.63-4.8c-8.12-6.87-12.54-10.71-12.54-18.26,0-6.45,5.51-14.15,15.7-14.15,4.25,
+                                0,6.46.83,14.43,3.85a17.49,17.49,0,0,1,1,6.46,20.58,20.58,0,0,1-1,6.59h-1.37a50.46,50.46,0,0,0,
+                                .68-5.91c0-.56-4.67-8.79-13.19-8.79-5.79,0-10.46,3.71-10.46,9.07,0,2.88.69,7.13,13.34,17.56Z" 
+                                transform="translate(-17.82 -14)"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-column justify-center text-center">
+                        <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Seleccion</h5>
+                        <p class="inner-varietal-paragraph margin-x-auto">Una seleccion de viñas y racimos de las uvas Malbec de la mas alta calidad provenientes de terroir seleccionado.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom-lg margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                    <div class="flex flex-column justify-center text-center">
+                        <h5 class="inner-varietal-subtitle padding-bottom-xxs">Crianza y puesta en botellas</h5>
+                        <p class="inner-varietal-paragraph margin-x-auto ">
+                            Criado durante 18 meses en barricas de roble frances Tarasaund (63%) y de segundo uso (37%).Sin clarificar ni filtrar.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom-lg margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                    <div class="flex flex-column justify-center text-center">
+                        <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Notas de degustacion</h5>
+                        <p class="inner-varietal-paragraph margin-x-auto ">Color violeta intenso, saturado y brillante.
+                         En nariz es concentrado. En el paladar,
+                         muestra gran estructura y textura y
+                         diferentes capas. Es redondo, tenso y mineral
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- SECCION ICONICO -Mobile -->
+        <section class="hide@md component-section-full width-100% ">
+            <div class="position-absolute flex justify-center height-100%">
+                <img class="varietales-iconico-title margin-y-auto" src="../assets/img/cobos-iconico.svg" alt="ICÓNICO">
+            </div>
+            <img class="position-absolte left-0 bottom-0 varietales-final-varietal" style="z-index: -5 !important;" src="../assets/img/cobos-mobile.png" alt="">
+        </section>
+
+
+    </main>
+    <!-- ==============================================END-MAIN============================================== -->
+
+    <!-- ================================================FOOTER================================================ -->
+    <footer class="component-footer position-relative  padding-bottom-xxxxl padding-bottom-0@md" style="z-index: 10;">
+
+        <div class="flex grid padding-x-lg padding-x-xxl@sxl padding-x-xl@md">
+
+            <div class="flex col-12 col-9@md font-footer-title margin-bottom-lg margin-bottom-0@md">
+                <p class="padding-left-xxs@md">
+                    <span class="block">EL ORIGEN</span>
+                    <span class="block">NOS DETERMINA</span>
+                </p>
+            </div>
+            <div class="display@md col-12 col-1@md fonts-footer-colums padding-left-lg@sxl"
+                style="transform: translateX(15px);">
+                <ul class="grid gap-md gap-xs@md">
+                    <li><a class="footer-v5__link" href="#0">Historia</a></li>
+                    <li><a class="footer-v5__link" href="#0">Terroir</a></li>
+                    <li><a class="footer-v5__link" href="#0">Vinos</a></li>
+                    <li><a class="footer-v5__link" href="#0">Contacto</a></li>
+                    <li><a class="footer-v5__link" href="#0">Tienda</a></li>
+                </ul>
+            </div>
+            <div class="display@md col-12 col-2@md fonts-footer-colums padding-left-xxs@sxl padding-left-xs@md">
+                <ul class="grid gap-md gap-xs@md padding-left-xxl@sxl padding-left-md@md">
+                    <li><a class="footer-v5__link" href="#0">Paul Hobbs selection</a></li>
+                    <li><a class="footer-v5__link" href="#0">Legal</a></li>
+                    <li><a class="footer-v5__link" href="#0">Recibir Noticias</a></li>
+                </ul>
+            </div>
+
+            <div class="hide@md">
+                <div class="col-12 fonts-footer-colums">
+                    <ul class="grid gap-md">
+                        <li><a class="footer-v5__link" href="#0">Historia</a></li>
+                        <li><a class="footer-v5__link" href="#0">Terroir</a></li>
+                        <li><a class="footer-v5__link" href="#0">Vinos</a></li>
+                        <li><a class="footer-v5__link" href="#0">Contacto</a></li>
+                        <li><a class="footer-v5__link" href="#0">Tienda</a></li>
+                        <li><a class="footer-v5__link" href="#0">Paul Hobbs selection</a></li>
+                        <li><a class="footer-v5__link" href="#0">Legal</a></li>
+                        <li><a class="footer-v5__link" href="#0">Recibir Noticias</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+
+        </div>
+
+
+        <div
+            class="col-12 flex justify-between items-center position-absolute bottom-0 width-100% padding-x-lg padding-x-xxl@sxl padding-x-xl@md padding-bottom-xl">
+
+            <a href="#0" class="padding-left-sm@md">
+                <img id="logo" src="../assets/img/logo.svg" width="32" height="32" alt="Logo">
+            </a>
+
+            <div class="display@md flex gap-sm">
+                <!--facebook-->
+                <a href="#0">
+                    <img id="logo" src="../assets/img/facebook-logo.svg" width="25" height="25" alt="Logo"
+                    class="padding-xxxs margin-x-xxxs"  >
+                </a>
+
+                <!-- twitter icon -->
+                <a href="#0">
+                    <img id="logo" src="../assets/img/twitter.svg" width="25" height="25" alt="Logo"
+                      class="padding-xxxs margin-x-xxxs"  >
+                </a>
+
+                <!-- instagram -->
+                <a href="#0">
+                    <img id="logo" src="../assets/img/instagram-logo.svg" width="25" height="25" alt="Logo"
+                    class="padding-xxxs margin-x-xxxs"  >
+                </a>
+            </div>
+
+
+            <div class="hide@md">
+                <!--facebook-->
+                <a href="#0" class="margin-x-xxxs">
+                    <img id="logo" src="../assets/img/facebook-logo.svg" width="25" height="auto" alt="Logo"
+                        class="padding-xxxs">
+                </a>
+
+                <!-- twitter icon -->
+                <a href="#0" class="margin-x-xxxs">
+                    <img id="logo" src="../assets/img/twitter.svg" width="25" height="auto" alt="Logo"
+                        class="padding-xxxs">
+                </a>
+
+                <!-- instagram -->
+                <a href="#0" class="margin-x-xxxs">
+                    <img id="logo" src="../assets/img/instagram-logo.svg" width="25" height="auto" alt="Logo"
+                        class="padding-xxxs">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+
+    <!-- ==============================================END-FOOTER============================================== -->
+
+
+
+
+    <script src="../assets/js/scripts.js"></script>
+
+</body>
+
+
+</html>
