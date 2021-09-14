@@ -13,8 +13,8 @@
 </head>
 
 <body class="bg-black">
+    <!---------------------HEADER------------------------------>
 
-    <!-- ================================================HEADER================================================ -->
     <header id="header-global"
         class="f-header js-f-header bg-transparent hide-nav js-hide-nav js-hide-nav--main backdrop-blur-10 padding-y-lg padding-y-0@md"
         data-nav-target-class="f-header--expanded">
@@ -75,56 +75,23 @@
             </div>
         </div>
     </header>
-    <!-- ==============================================END-HEADER============================================== -->
-
-    <!-- =================================================MAIN================================================= -->
-
-    <!-- scroll component -->
-    <div class="scroll-indicator-container display@md" data-title="Conoce Viña Cobos">
-        <div class="scroll-indicator-wrapper" style="height: 400px;">
-            <div class="scroll-indicator-inner" style="height: 250px;">
-                <span class="scroll-indicator"></span>
-            </div>
-            <div class="title">
-                <h3>Conoce Viña Cobos</h3>
-            </div>
-        </div>
-    </div>
 
     <main>
 
-
         <!-- _________________________________________________________________________________________ -->
-        <!-- VINCULUM HOME DESKTOP -->
-        <section id="vinculum-home-2" class="display@md component-section width-100%">
+        <!-- VD CHAÑARES HOME DESKTOP -->
+        <section id="vd-home" class="display@md component-section bg-white width-100%">
             <div class="display@md padding-left-xxs">
                 <div id="cobos-home-content"
                     class="position-absolute bottom-0 flex flex-row justify-left color-black padding-left-xxl padding-y-xxxl">
-                    <h1 class="varietales-subtitle">Malbec</h1>
+                    <h1 class="varietales-title" style="transform: translateY(-10px)">Chañares</h1>
                     <div class="varietales-small-line"></div>
-                    <h3 class="varietales-title" style="transform: translateY(-10px)">Chardonnay</h3>
+                    <h3 class="varietales-subtitle text-center">Zingaretti</h3>
+                    <div class="varietales-small-line"></div>
+                    <h3 class="varietales-subtitle text-center">Marchiori</h3>
                     <div class="varietales-big-line"></div>
                 </div>
                 <div class="position-absolute bottom-0 padding-left-xxl padding-y-xl flex flex-column justify-left">
-                    <h3 class="varietales-description padding-bottom-xs">BOTELLA</h2>
-                        <h3 class="varietales-description">FICHA ENOLÓGICA</h3>
-                </div>
-            </div>
-        </section>
-        <!-- _________________________________________________________________________________________ -->
-
-
-        <!-- _________________________________________________________________________________________ -->
-        <!-- VINCULUM CHARDONNAY HOME MOBILE-->
-        <section id="vinculum-chard-home-mobile" class="hide@md component-section bg-white width-100%">
-            <div class="position-absolute bottom-0 -left-0 padding-left-md">
-                <div class="padding-bottom-xxxxs">
-                    <h1 class="varietales-title">Chardonnay</h1>
-                </div>
-                <div class="flex-column justify-around padding-bottom-xl" style="height:130px;">
-                    <h3 class="varietales-subtitle padding-bottom-xxs">Malbec</h3>
-                </div>
-                <div class="varietales-links">
                     <h3 class="varietales-description padding-bottom-xs">BOTELLA</h3>
                     <h3 class="varietales-description">FICHA ENOLÓGICA</h3>
                 </div>
@@ -135,12 +102,35 @@
 
 
         <!-- _________________________________________________________________________________________ -->
-        <!-- CONEXION - Desktop -->
+        <!-- VD CHAÑARES HOME MOBILE -->
+        <section id="vd-home-mobile" class="hide@md component-section bg-white width-100%">
+            <div class="position-absolute bottom-0 -left-0 padding-left-md">
+                <div class="padding-bottom-xxxxs">
+                    <h1 class="varietales-title">Chañares</h1>
+                </div>
+                <div class="flex-column justify-around padding-bottom-xl" style="height:120px;">
+                    <h3 class="varietales-subtitle padding-bottom-xxs">Zingaretti</h3>
+                    <h3 class="varietales-subtitle padding-y-xxs">Marchiori</h3>
+                </div>
+                <div class="varietales-links">
+                    <h3 class="varietales-description padding-bottom-xs">BOTELLA</h3>
+                    <h3 class="varietales-description">FICHA ENOLÓGICA</h3>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- _________________________________________________________________________________________ -->
+
+
+
+
+        <!-- _________________________________________________________________________________________ -->
+        <!-- COMPRENSION - Desktop -->
         <section id="cobos-experiencia-desktop"
             class="display@md component-section-full flex flex-column justify-center items-center padding-md@md padding-lg@sxl">
-            <img class="padding-xl@md padding-xxl@sxl" src="../assets/img/vinculum/desktop/vinculum-conexion.png"
+            <img class="padding-xl@md padding-xxl@sxl" src="../assets/img/vd/desktop/vd-comprension.png"
                 alt="Cobos - Experiencia">
-            <img src="../assets/img/vinculum/desktop/vinculum-conexion-texto.png"
+            <img src="../assets/img/vd/desktop/vd-comprension-texto.svg"
                 class="experiencia-fullscreen-text position-absolute bottom-0 left-50% -translate-x-50% width-80%"
                 alt="">
         </section>
@@ -148,33 +138,34 @@
 
 
 
+
         <!-- _________________________________________________________________________________________ -->
-        <!-- CONEXION - Mobile -->
+        <!-- COMPRENSION MOBILE -->
         <section class="hide@md">
             <div class=" component-section width-100% text-center flex justify-center items-center ">
-                <img class="padding-x-md varietales-foto scroll-fx js-scroll-fx" 
+                <img class="padding-x-md varietales-foto scroll-fx js-scroll-fx"
                     data-scroll-fx="opacity, 0, 1, 25%, 35%"
-                    src="../assets/img/vinculum-malbec-experiencia-mobile.png"
-                    alt="vinculum-conexion">
+                    src="../assets/img/vd/mobile/vd-chanares-experiencia-mobile.png" alt="Chañares Experiencia">
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
 
 
-        <!-- ESENCIA DE CULTURA - Desktop-->
+
+
+        <!-- _________________________________________________________________________________________ -->
+        <!-- EXPRESION DEL TERROIR - Desktop-->
         <section id="cobos-nuestroicono-desktop"
             class="display@md component-section-full grid padding-lg@md padding-xxl@sxl margin-x-xs@md margin-x-0@sxl">
             <div class="col-6 flex justify-center items-end">
-                <img class="padding-lg margin-bottom-xxs" src="../assets/img/vinculum/desktop/vinculum-esencia-1.png"
-                    alt="">
+                <img class="padding-lg margin-bottom-xxs" src="../assets/img/vd/desktop/vd-expresion-1.png" alt="">
             </div>
             <div class="col-6 flex flex-column justify-end items-center">
                 <div class="text-center margin-x-auto">
-                    <h3 class="font-primary">Esencia de<br>cultura</h3>
+                    <h3 class="font-primary">Expresión<br>del terroir</h3>
                 </div>
                 <div class="width-100%">
-                    <img class="padding-lg margin-top-xxl@md"
-                        src="../assets/img/vinculum/desktop/vinculum-esencia-2.png" alt="">
+                    <img class="padding-lg margin-top-xxl@md" src="../assets/img/vd/desktop/vd-expresion-2.png" alt="">
                 </div>
             </div>
         </section>
@@ -182,8 +173,9 @@
 
 
 
+
         <!-- _________________________________________________________________________________________ -->
-        <!-- ESENCIA DE CULTURA - Mobile-->
+        <!-- EXPRESION DEL TERROIR MOBILE-->
         <section id="cobos-icono" class="hide@md">
             <div class="max-width-xs margin-x-auto margin-y-auto">
                 <div class="grid margin-x-auto padding-x-md">
@@ -191,18 +183,18 @@
                         <div class="position-relative bottom-0">
                             <img class="varietales-foto-icono padding-right-xs scroll-fx js-scroll-fx"
                                 data-scroll-fx="opacity, 0, 1, 25%, 35%"
-                                src="../assets/img/vinculum/mobile/vinculum-2-malbec-mobile.png" alt="vinculum-malbec">
+                                src="../assets/img/vd/mobile/vd-chanares-icono-mobile.png" alt="Vd Chañares Icono">
                         </div>
                     </div>
                     <div class="col-6 flex flex-column justify-between padding-left-xs">
                         <h1 class="margin-x-auto margin-y-auto scroll-fx js-scroll-fx"
                             data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                            Esencia de cultura</h1>
+                            Nuestro ícono
+                        </h1>
                         <div class="">
                             <img class="varietales-foto-icono scroll-fx js-scroll-fx"
                                 data-scroll-fx="opacity, 0, 1, 25%, 35%"
-                                src="../assets/img/vinculum/mobile/viculum-malbec-etiqueta-mobile.png"
-                                alt="vinculum-malbec-etiqueta">
+                                src="../assets/img/vd/mobile/vd-chanares-etiqueta-mobile.png" alt="Vd - Etiqueta">
                         </div>
                     </div>
                 </div>
@@ -210,20 +202,41 @@
         </section>
         <!-- _________________________________________________________________________________________ -->
 
+
+
         <!-- _________________________________________________________________________________________ -->
-        <!-- ICÓNICO - Desktop -->
+        <!-- VARIEDAD - Desktop -->
         <section id="cobos-iconico" class="display@md component-section-full margin-bottom-xxxl">
             <div class="grid gap-lg grid gap-lg padding-x-lg@md padding-x-xxl@sxl margin-x-xxxxs@md margin-x-0@sxl">
                 <div class="col-12 text-center">
                     <img class="text-center" src="../assets/img/vd/desktop/vd-logo.svg" width="484" height="80"
                         alt="VD">
                 </div>
+                <p class="max-width-lg margin-x-auto padding-top-md margin-bottom-xxxl">Poda a cordón pitoneado. Riego por goteo. La exposición norte con una pendiente oeste-este de 2,7°
+                    favorece a la circulación del aire y las condiciones de sanidad del viñedo.
+                </p>
+                <div
+                    class=" col-12 grid gap-x-lg padding-left-lg@md padding-right-xxl@md padding-left-xxl@sxl padding-right-xxl@sxl padding-bottom-lg">
+                    <div class="col-4">
+                        <h2 class="font-primary">Malbec</h2>
+                    </div>
+                    <div class="col-4">
+                        <h3>Crianza y puesta en botella</h3>
+                        <p class="max-width-xxxs text-justify">Criado durante 18 meses en barricas de roble francés
+                            Taransaud (63%) y de segundo uso (37%). Sin clarificar ni filtrar</p>
+                    </div>
+                    <div class="col-4">
+                        <h3>Notas de degustación</h3>
+                        <p class="max-width-xxxs text-justify">Color violeta intenso, saturado y brillante. En nariz es
+                            concentrado. En el paladar, muestra gran estructura y textura y diferentes capas. Es
+                            redondo, tenso, mineral</p>
+                    </div>
+                </div>
                 <div
                     class="col-12 grid gap-x-lg padding-left-lg@md padding-right-xxl@md padding-left-xxl@sxl padding-right-xxl@sxl padding-bottom-lg">
                     <div class="col-4">
-                        <h3>Selección</h3>
-                        <p class="max-width-xxxs text-justify">Una selección de viñas y racimos de las uvas Malbec de la
-                            más alta calidad provenientes de terroir seleccionado</p>
+                        <h2 class="font-primary">Cabernet</h2>
+                        <h2 class="font-primary">Franc</h2>
                     </div>
                     <div class="col-4">
                         <h3>Crianza y puesta en botella</h3>
@@ -240,12 +253,14 @@
                 <div class="col-12 flex justify-left items-center">
                     <img src="../assets/img/vd/desktop/vd-variedad.png" width="auto" height="auto" alt="Cobos - Icónico"
                         class="width-90%">
-                    <img class="cobos-sidetext" src="../assets/img/vinculum/desktop/vinculum-esencia.svg" width="auto"
+                    <img class="cobos-sidetext" src="../assets/img/vd/desktop/vd-variedad-vertical.svg" width="auto"
                         height="auto" alt="Cobos - Icónico">
                 </div>
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+
+
 
         <!-- _________________________________________________________________________________________ -->
         <!-- VIÑA COBOS BLACK -->
@@ -255,42 +270,68 @@
             </div>
             <div class="flex justify-center padding-x-md margin-x-auto scroll-fx js-scroll-fx"
                 data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                <img class="varietales-foto" src="../assets/img/cobos-malbec-mobile.png" alt="">
+                <img class="varietales-foto" src="../assets/img/vd-chanares-separacion-mobile.png" alt="">
             </div>
-            <div class="margin-bottom-xxxl">
-                <div class="margin-bottom-lg margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx"
-                    data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                    <div class="margin-x-auto padding-top-xxl padding-bottom-lg scroll-fx js-scroll-fx"
-                        data-scroll-fx="opacity, 0, 1, 25%, 35%" style="width: 265px;">
-                        <img src="../assets/img/vinculum/mobile/vinos-vinacobos-vinculum.svg" alt="">
+            <div class="margin-bottom-xxl">
+                <div class="padding-top-xxl padding-bottom-lg flex flex-column justify-center text-center">
+                    <div class="margin-x-auto scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%"
+                        style="width: 302px;">
+                        <img src="../assets/img/vinos-vinacobos-vd-white.svg" alt="Viña Cobos - Vineyard Designate">
                     </div>
-                    <div class="flex flex-column justify-center text-center">
-                        <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Viñedo</h5>
-                        <p class="inner-varietal-paragraph margin-x-auto">Viñedos de Lujan de Cuyo, Tupungato,
-                            Tanuyan y San Carlos. Altitud entre 1050 - 1197 m.s.n.m. Clima semidesértico.
+                    <div class="flex justify-center padding-top-md">
+                        <p class="inner-varietal-paragraph scroll-fx js-scroll-fx"
+                            data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                            Poda a cordón pitoneado. Riego por goteo. La exposición norte con una pendiente oeste-este
+                            de
+                            2,7° favorece a la circulación del aire y las condiciones de sanidad del viñedo.
                         </p>
                     </div>
                 </div>
-                <div class="margin-bottom-lg margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx"
-                    data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                    <div class="flex flex-column justify-center text-center">
-                        <h5 class="inner-varietal-subtitle padding-bottom-xxs">Crianza y puesta en botellas</h5>
-                        <p class="inner-varietal-paragraph margin-x-auto ">
-                            Criado durante 12 meses en barricas de roble frances nuevo (15%) y en tanques de acero
-                            inoxidable (85%).Fermentacion malolactica (15%). Sin clarificar.
-                        </p>
+                <div class="flex flex-column justify-center text-center">
+                    <h1 class="inner-varietal-title scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                        MALBEC
+                    </h1>
+                    <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                        <div class="flex flex-column justify-center text-center">
+                            <h5 class="inner-varietal-subtitle padding-bottom-xxs">Crianza y puesta en botella</h5>
+                            <p class="inner-varietal-paragraph margin-x-auto ">
+                                Criado durante 18 meses en barricas roble frances nuevo (53%) y de segundo uso (47%).
+                                Embotellado en noviembre de 2019.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                        <div class="flex flex-column justify-center text-center">
+                            <h5 class="inner-varietal-subtitle padding-bottom-xxs">Notas de degustacion</h5>
+                            <p class="inner-varietal-paragraph margin-x-auto ">
+                                De color brillante y agradables tonos violetaceos. En nariz es fresco, concentrado,
+                                con notas de tomillo , jarrilla y moras maduras. Los taninos son aterciopelados
+                                pero firmes. Es un vino carnoso y de largo final.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="margin-bottom-lg margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx"
-                    data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                    <div class="flex flex-column justify-center text-center">
-                        <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Notas de degustacion</h5>
-                        <p class="inner-varietal-paragraph margin-x-auto ">
-                            Color amarillo intenso con tonos verdosos. En nariz muestra notas de pera, manzana verde,
-                            albirocoque y toques de canela, logrando una gran pureza e intensidad .
-                            Este vino es rico, mineral y texturizado en boca, sostenido por una notable frescura y
-                            un largo final.
-                        </p>
+                <div class="flex flex-column justify-center text-center">
+                    <h1 class="inner-varietal-title scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                        CABERNET<br>FRANC</h1>
+                    <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                        <div class="flex flex-column justify-center text-center">
+                            <h5 class="inner-varietal-subtitle padding-bottom-xxs">Crianza y puesta en botella</h5>
+                            <p class="inner-varietal-paragraph margin-x-auto ">
+                                Criado durante 18 meses en barricas de roble francés nuevo (54%) y de segundo 
+                                uso (46%). Embotellado en noviembre de 2019.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                        <div class="flex flex-column justify-center text-center">
+                            <h5 class="inner-varietal-subtitle padding-bottom-xxs">Notas de degustacion</h5>
+                            <p class="inner-varietal-paragraph margin-x-auto ">
+                                De color rojo vivo, con tonalidades oscuras. En nariz aparecen hierbas andinas, 
+                                pimiento morrón y notas de caja de cigarros. En boca, muestra una fuerte presencia 
+                                de taninos, una textura horizontal y un final largo.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -298,17 +339,20 @@
         </section>
         <!-- _________________________________________________________________________________________ -->
 
+
+
+
         <!-- _________________________________________________________________________________________ -->
-        <!-- ESENCIA -Mobile -->
+        <!-- VARIEDAD - Mobile -->
         <section class="hide@md component-section-full width-100% ">
             <div class="position-absolute flex justify-center height-100%">
-                <img class="varietales-iconico-title margin-y-auto" src="../assets/img/viculum-malbec-esencia.svg"
-                    alt="ESENCIA">
+                <img class="varietales-iconico-title margin-y-auto" src="../assets/img/vd-variedad.png" alt="VARIEDAD">
             </div>
             <img class="position-absolte left-0 bottom-0 varietales-final-varietal" style="z-index: -5 !important;"
                 src="../assets/img/cobos-mobile.png" alt="">
         </section>
         <!-- _________________________________________________________________________________________ -->
+
 
 
 
@@ -321,8 +365,8 @@
         </section>
         <!-- _________________________________________________________________________________________ -->
 
-
     </main>
+
     <!-- ==============================================END-MAIN============================================== -->
 
     <!-- ================================================FOOTER================================================ -->
@@ -429,11 +473,7 @@
     <!-- ==============================================END-FOOTER============================================== -->
 
 
-
-
     <script src="../assets/js/scripts.js"></script>
-
 </body>
-
 
 </html>

@@ -137,7 +137,6 @@ mark {
   }
 }
 
-
 .vinos-especiales-unicos {
   & .inner-vinos {
     &-title {
@@ -242,7 +241,7 @@ mark {
       font-size: 18px;
       letter-spacing: 0.1em;
       line-height: 22px;
-      &-mobile{
+      &-mobile {
         font-family: var(--font-secondary);
         font-style: normal;
         font-weight: 700;
@@ -395,14 +394,14 @@ mark {
 
 //================VARIETALES==================
 
-#cobos-icono{
-  & h1{
-    max-width:140px;
+#cobos-icono {
+  & h1 {
+    max-width: 140px;
     font-size: 29.124px;
     line-height: 47px;
-    text-align:center;
+    text-align: center;
     letter-spacing: 0.12em;
-    color:#f1eee9;
+    color: #f1eee9;
   }
 }
 
@@ -435,7 +434,7 @@ mark {
     color: var(--color-primary-light);
   }
 }
-  
+
 .varietales-component {
   & .inner-varietal {
     &-title {
@@ -452,7 +451,7 @@ mark {
       font-size: 29.1px;
       line-height: 35px;
       letter-spacing: 0.0025em;
-      color: #F1EEE9;
+      color: #f1eee9;
     }
     &-paragraph {
       font-family: var(--font-secondary);
@@ -595,7 +594,6 @@ mark {
     }
   }
   .varietales-component {
-
     & .inner-varietal {
       &-title {
         font-style: normal;
@@ -611,7 +609,7 @@ mark {
         font-size: 18px;
         line-height: 28px;
         letter-spacing: 0.0025em;
-        color: #F1EEE9;
+        color: #f1eee9;
       }
       &-paragraph {
         font-family: var(--font-secondary);
@@ -624,17 +622,17 @@ mark {
       }
     }
   }
-  .varietales  {
+  .varietales {
     &-description {
-    font-family: var(--font-secondary);
-    font-weight: normal;
-    font-size: 13px;
-    font-style: normal;
-    transform: translateY(17px);
-    letter-spacing: 0.12em;
-    color: var(--color-primary-light);
+      font-family: var(--font-secondary);
+      font-weight: normal;
+      font-size: 13px;
+      font-style: normal;
+      transform: translateY(17px);
+      letter-spacing: 0.12em;
+      color: var(--color-primary-light);
     }
-}
+  }
 }
 
 // @media only screen and (max-width: 850px) {}

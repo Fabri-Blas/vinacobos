@@ -17,48 +17,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
 
 .f-header__nav--is-visible {
-    background-color: #020907 !important;
-    padding-top: 23px !important;
+  background-color: #020907 !important;
+  padding-top: 23px !important;
 }
 .dark-nav-custom a {
-    color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
 }
 
 .component-section {
-    position: relative;
-    height: 100vh;
+  position: relative;
+  height: 100vh;
 }
 
 .component-section-full {
-    position: relative;
-    min-height: 100vh;
-    & .text-component {
-        transform: translateY(-22px);
-    }
+  position: relative;
+  min-height: 100vh;
+  & .text-component {
+    transform: translateY(-22px);
+  }
 }
 
 .component-half {
-    height: 50vh;
+  height: 50vh;
 }
 
 .component-footer {
-    background: url(../img/footer-bg.png);
-    background-position: center;
-    background-size: cover;
-    padding-top: 103px;
-    min-height: 520px;
+  background: url(../img/footer-bg.png);
+  background-position: center;
+  background-size: cover;
+  padding-top: 103px;
+  min-height: 520px;
 }
 
 .inner-component-section-moved {
-    transform: translateY(-15%);
+  transform: translateY(-15%);
 }
 
 .component-section-2a {
-    height: 100vh;
+  height: 100vh;
 }
 
 .component-section-2b {
-    height: 100vh;
+  height: 100vh;
 }
 
 // .outline-border{
@@ -79,833 +79,863 @@
 //     z-index: 99;
 // }
 .video-looping-tab {
-    height: 100vh;
+  height: 100vh;
 }
 
 .model-3d {
-    background: url(../img/1999-bg.png);
-    background-position: center;
-    background-size: cover;
-    z-index: -2;
+  background: url(../img/1999-bg.png);
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
 }
 
 .padding-y-100vh {
-    padding-top: 50vh;
-    padding-bottom: 50vh;
+  padding-top: 50vh;
+  padding-bottom: 50vh;
 }
 
 .final-tree {
-    transform: translateY(135px);
+  transform: translateY(135px);
 }
 
 .storyline-logo {
-    width: 95%;
-    height: auto;
-    opacity: 0.3;
+  width: 95%;
+  height: auto;
+  opacity: 0.3;
 }
 
 footer {
-    z-index: -1;
+  z-index: -1;
 }
 
 .line-height-0 {
-    line-height: 0;
+  line-height: 0;
 }
 
 #wine-bottle-model {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-25%, -50%);
-    z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-25%, -50%);
+  z-index: 5;
 }
 
 #wine-bottle-canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-15deg);
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-15deg);
 }
 
 #history_img1 {
-    width: 100%;
-    transform: scale(1.4) translateX(5%);
+  width: 100%;
+  transform: scale(1.4) translateX(5%);
 }
 
 #history_img2 {
-    width: 100%;
-    padding: 7%;
+  width: 100%;
+  padding: 7%;
 }
 
 .above-model {
-    z-index: 15;
-    background-color: transparent;
+  z-index: 15;
+  background-color: transparent;
 }
 
 #vinos-home {
-    background-image: url("../img/vinos-bg.png");
+  background-image: url("../img/vinos-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  & h2 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 123.3px;
+    line-height: 145px;
+    letter-spacing: 0.12em;
+    max-width: 787px;
+    padding-left: 100px;
+  }
+  &-mobile {
+    background-image: url("../img/vinos-bg-mobile.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
     & h2 {
-        font-family: var(--font-primary);
-        font-style: normal;
-        font-weight: 500;
-        font-size: 123.3px;
-        line-height: 145px;
-        letter-spacing: 0.12em;
-        max-width: 787px;
-        padding-left: 100px;
+      font-family: var(--font-primary);
+      font-weight: 500;
+      font-size: 47.1162px;
+      line-height: 56px;
+      letter-spacing: 0.12em;
+      width: 100%;
+      padding-left: 20px;
+      padding-top: 130px;
     }
-    &-mobile {
-        background-image: url("../img/vinos-bg-mobile.png");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        & h2 {
-            font-family: var(--font-primary);
-            font-weight: 500;
-            font-size: 47.1162px;
-            line-height: 56px;
-            letter-spacing: 0.12em;
-            width: 100%;
-            padding-left: 20px;
-            padding-top: 130px;
-        }
-    }
+  }
 }
 .especiales-content {
-    justify-content: space-around;
+  justify-content: space-around;
 }
 .vinos {
-    &-foto {
-        max-width: 876px;
-        width: 100%;
-        height: auto;
-    }
-    &-logo {
-        &-1 {
-            max-width: 350px;
-            max-height: 40px;
-            width: auto;
-            transform: scale(1) translateY(-12px);
-            transition: all 0.3s;
+  &-foto {
+    max-width: 876px;
+    width: 100%;
+    height: auto;
+  }
+  &-logo {
+    &-1 {
+      max-width: 350px;
+      max-height: 40px;
+      width: auto;
+      transform: scale(1) translateY(-12px);
+      transition: all 0.3s;
 
-            &:hover {
-                transition: all 0.3s;
-                transform: scale(1.05);
-                cursor: pointer;
-            }
-        }
-        &-2 {
-            max-width: 350px;
-            max-height: 75px;
-            width: auto;
-            transform: scale(1) translateY(-15px);
-            transition: all 0.3s;
-            &:hover {
-                transition: all 0.3s;
-                transform: scale(1.05);
-                cursor: pointer;
-            }
-        }
+      &:hover {
+        transition: all 0.3s;
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+    }
+    &-2 {
+      max-width: 350px;
+      max-height: 75px;
+      width: auto;
+      transform: scale(1) translateY(-15px);
+      transition: all 0.3s;
+      &:hover {
+        transition: all 0.3s;
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+    }
 
-        &-3 {
-            max-width: 350px;
-            max-height: 75px;
-            width: auto;
-            transform: scale(1) translateY(-9px);
-            transition: all 0.3s;
-            &:hover {
-                transition: all 0.3s;
-                transform: scale(1.05);
-                cursor: pointer;
-            }
-        }
+    &-3 {
+      max-width: 350px;
+      max-height: 75px;
+      width: auto;
+      transform: scale(1) translateY(-9px);
+      transition: all 0.3s;
+      &:hover {
+        transition: all 0.3s;
+        transform: scale(1.05);
+        cursor: pointer;
+      }
     }
-    &-final-tree {
-        transform: translateY(135px);
-        max-width: 1400px;
-        width: 100%;
-        height: auto;
-    }
+  }
+  &-final-tree {
+    transform: translateY(135px);
+    max-width: 1400px;
+    width: 100%;
+    height: auto;
+  }
 }
 
 // ===============SECCION VARIETALES===============
 
 #cobos-experiencia-desktop {
-    & .experiencia-fullscreen-text {
-        max-width: 1227px;
-        left: 50.3%;
-        transform: translateX(-50%) translateY(-115px);
-    }
+  & .experiencia-fullscreen-text {
+    max-width: 1227px;
+    left: 50.3%;
+    transform: translateX(-50%) translateY(-115px);
+  }
 }
 #cobos-nuestroicono-desktop {
-    & img {
-        width: 100%;
-    }
-    & h3 {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 123.3px;
-        line-height: 145px;
-        text-align: center;
-        letter-spacing: 0.12em;
-        color: #f1eee9;
-    }
+  & img {
+    width: 100%;
+  }
+  & h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 123.3px;
+    line-height: 145px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    color: #f1eee9;
+  }
 }
 #cobos-iconico {
-    & h3 {
-        font-family: var(--font-secondary) !important;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 29.1px;
-        line-height: 35px;
-        letter-spacing: 0.0025em;
-        color: #f1eee9;
-    }
-    & p {
-        font-family: var(--font-secondary) !important;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 22px;
-        text-align: justify;
-        letter-spacing: 0.07em;
-        color: rgba(241, 238, 233, 0.7);
-    }
-    & .cobos-sidetext {
-        height: 622px;
-        width: 141px;
-    }
+  & h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29.124px;
+    line-height: 47px;
+    text-align: justify;
+    letter-spacing: 0.12em;
+    color: #878581;
+    text-transform: uppercase;
+  }
+  & h3 {
+    font-family: var(--font-secondary) !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29.1px;
+    line-height: 35px;
+    letter-spacing: 0.0025em;
+    color: #f1eee9;
+  }
+  & p {
+    font-family: var(--font-secondary) !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    letter-spacing: 0.07em;
+    color: rgba(241, 238, 233, 0.7);
+  }
+  & .cobos-sidetext {
+    height: 622px;
+    width: 141px;
+  }
 }
 
 #felino-home {
-    background-image: url("../img/felino-bg.jpeg");
+  background-image: url("../img/felino-bg.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-content {
+    width: 99%;
+  }
+  &-mobile {
+    background-image: url("../img/felino-bg-mobile.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
-    &-content {
-        width: 99%;
-    }
-    &-mobile {
-        background-image: url("../img/felino-bg-mobile.png");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+  }
 }
 
 #felino-parallax {
-    background: white;
-    height: 100vw;
-    width: 100%;
-    position: relative;
+  background: white;
+  height: 100vw;
+  width: 100%;
+  position: relative;
 
-    & img {
-        position: absolute;
-        filter: grayscale(100%) brightness(90%);
-    }
-    & svg {
-        position: absolute;
-        top: 400px;
-    }
+  & img {
+    position: absolute;
+    filter: grayscale(100%) brightness(90%);
+  }
+  & svg {
+    position: absolute;
+    top: 400px;
+  }
 }
 #felino-momentos {
-    background: linear-gradient(to bottom, #dadada, #ffffff);
+  background: linear-gradient(to bottom, #dadada, #ffffff);
+
+  & h2 {
+    color: #404040;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 123.3px;
+    line-height: 145px;
+    letter-spacing: 0.1em;
+  }
+
+  & h6 {
+    font-family: "Nothing You Could Do", cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #3e3937;
+    padding: 10px 3px;
+  }
+
+  & .custom-card {
+    &-1 {
+      width: 305px;
+      height: 368px;
+      background: rgb(228, 229, 231);
+      transform: translate(75px, 135px) rotate(-15deg);
+    }
+    &-2 {
+      width: 305px;
+      height: 368px;
+      background: rgb(228, 229, 231);
+      transform: rotate(5deg);
+    }
+    &-3 {
+      width: 305px;
+      height: 368px;
+      background: rgb(228, 229, 231);
+      transform: translate(150px, -95px) rotate(-7deg);
+    }
+  }
+
+  & .card-image {
+    width: 263px;
+    height: 271px;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+}
+#felino-detalles {
+  & .felino-detalles-img {
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+  & .felino-detalles-img:nth-child(odd) {
+    width: 491px;
+    height: 652px;
+  }
+  & .felino-detalles-img:nth-child(even) {
+    width: 652px;
+    height: 863px;
+  }
+  & .felino-detalles-sidetext {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: translate(-487px, -50%) rotate(-90deg);
 
     & h2 {
-        color: #404040;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 123.3px;
-        line-height: 145px;
-        letter-spacing: 0.1em;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 199.5px;
+      line-height: 323px;
+      letter-spacing: 0.12em;
+      color: rgba(28, 28, 28, 0.1);
     }
+  }
+}
+#felino-fresco {
+  & .felino-fresco-sidetext {
+    position: absolute;
+    bottom: 265px;
+    right: -100px;
+    transform: rotate(-90deg) translate(-42px, -10px);
 
-    & h6 {
-        font-family: "Nothing You Could Do", cursive;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 30px;
-        line-height: 40px;
-        letter-spacing: 0.05em;
-        color: #3e3937;
-        padding: 10px 3px;
+    & h2 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 120px;
+      line-height: 199px;
+      letter-spacing: 0.12em;
+      color: rgba(28, 28, 28, 0.3);
     }
+  }
+  & h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29.1px;
+    line-height: 35px;
+    letter-spacing: 0.0025em;
+    color: #1c1c1c;
+  }
+  & p {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    letter-spacing: 0.05em;
+    color: #878581;
+  }
+}
+#felino-fresco-mobile {
+  & .felino-fresco-sidetext {
+    position: absolute;
+    bottom: 265px;
+    right: -100px;
+    transform: rotate(-90deg) translate(-42px, -10px);
 
+    & h2 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 120px;
+      line-height: 199px;
+      letter-spacing: 0.12em;
+      color: rgba(28, 28, 28, 0.3);
+    }
+  }
+  & h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6px;
+    letter-spacing: 0.0025em;
+    color: #1c1c1c;
+  }
+  & p {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15.6px;
+    text-align: justify;
+    letter-spacing: 0.05em;
+    color: #878581;
+    max-width: 250px;
+  }
+}
+
+#cobos-home {
+  background-image: url("../img/cobos-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-content {
+    width: 99%;
+  }
+  &-mobile {
+    background-image: url("../img/cobos/mobile/cobos-bg-mobile.jfif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.felino {
+  &-title {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 47.11px;
+    font-style: normal;
+    letter-spacing: 0.12em;
+  }
+  &-subtitle {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    transform: translateY(17px);
+    letter-spacing: 0.12em;
+    width: 110px;
+    color: #878581;
+
+    &-2 {
+      font-family: var(--font-primary);
+      font-weight: 500;
+      font-size: 18px;
+      font-style: normal;
+      transform: translateY(17px);
+      letter-spacing: 0.12em;
+      width: 110px;
+      color: #878581;
+    }
+  }
+  &-description {
+    font-family: var(--font-secondary);
+    font-weight: normal;
+    font-size: 18px;
+    font-style: normal;
+    transform: translateY(17px);
+    letter-spacing: 0.12em;
+  }
+  &-small-line {
+    border-bottom: 3px solid #1c1c1c;
+    width: 30px;
+    transform: translateY(-27px);
+    margin: 0px 30px;
+  }
+  &-big-line {
+    border-bottom: 3px solid #1c1c1c;
+    width: 50%;
+    transform: translateY(-27px);
+    margin-left: 30px;
+  }
+  &-links {
+    padding-bottom: 50px;
+  }
+}
+
+.varietales {
+  &-small-line {
+    border-bottom: 3px solid rgba(241, 238, 233, 0.5);
+    width: 30px;
+    transform: translateY(-27px);
+    margin: 0px 30px;
+  }
+  &-big-line {
+    border-bottom: 3px solid rgba(241, 238, 233, 0.5);
+    width: 100%;
+    transform: translateY(-27px);
+    margin-left: 30px;
+  }
+  &-links {
+    padding-bottom: 50px;
+  }
+  &-iconico-title {
+    transform: translateX(15px);
+    height: 90%;
+    width: auto;
+  }
+  &-foto {
+    max-width: 608px;
+    width: 100%;
+    height: auto;
+
+    &-icono {
+      max-width: 292px;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-final-varietal {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#vinculum-home {
+  background-image: url("../img/vinculum/desktop/vinculum-home-background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+
+  &-2 {
+    background-image: url("../img/vinculum/desktop/vinculum-home-background-2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+  }
+
+  &-malbec-mobile {
+    background-image: url("../img/vinculum/mobile/vinculum-malbec-mobile.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &-marchiori-mobile {
+    background-image: url("../img/vd/mobile/vd-marchiori-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.vinculum {
+  &-title {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 47.11px;
+    font-style: normal;
+    letter-spacing: 0.12em;
+    color: white;
+  }
+
+  &-subtitle {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    transform: translateY(17px);
+    letter-spacing: 0.12em;
+    width: 110px;
+    color: rgba(241, 238, 233, 0.5);
+  }
+  &-description {
+    font-family: var(--font-secondary);
+    font-weight: normal;
+    font-size: 18px;
+    font-style: normal;
+    transform: translateY(17px);
+    letter-spacing: 0.12em;
+    color: var(--color-primary-light);
+  }
+  &-links {
+    padding-bottom: 50px;
+  }
+}
+
+#vinculum-chard-home {
+  &-mobile {
+    background-image: url("../img/Vinculum-Chard-Mobile.jpg");
+  }
+}
+#vd-home {
+  background-image: url("../img/vd/desktop/vd-home-background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+
+  &-mobile {
+    background-image: url("../img/vd/mobile/vd-chanares-mobile.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &-zingaretti-mobile {
+    background-image: url("../img/vd/mobile/vd-zingaretti-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &-marchiori-mobile {
+    background-image: url("../img/vd/mobile/vd-marchiori-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.vd {
+  &-title {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 47.11px;
+    font-style: normal;
+    letter-spacing: 0.12em;
+    color: white;
+  }
+
+  &-subtitle {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    transform: translateY(17px);
+    letter-spacing: 0.12em;
+    width: 110px;
+    color: rgba(241, 238, 233, 0.5);
+  }
+  &-description {
+    font-family: var(--font-secondary);
+    font-weight: normal;
+    font-size: 18px;
+    font-style: normal;
+    transform: translateY(17px);
+    letter-spacing: 0.12em;
+    color: var(--color-primary-light);
+  }
+  &-links {
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 1458px) {
+  .felino {
+    &-subtitle {
+      &-2 {
+        transform: translateY(-4px);
+      }
+    }
+  }
+  #felino-momentos {
+    & .felino-momentos-grid {
+      transform: scale(0.8);
+    }
     & .custom-card {
-        &-1 {
-            width: 305px;
-            height: 368px;
-            background: rgb(228, 229, 231);
-            transform: translate(75px, 135px) rotate(-15deg);
-        }
-        &-2 {
-            width: 305px;
-            height: 368px;
-            background: rgb(228, 229, 231);
-            transform: rotate(5deg);
-        }
-        &-3 {
-            width: 305px;
-            height: 368px;
-            background: rgb(228, 229, 231);
-            transform: translate(150px, -95px) rotate(-7deg);
-        }
+      &-1 {
+        width: 305px;
+        height: 368px;
+        background: rgb(228, 229, 231);
+        transform: translate(-85px, 111px) rotate(-15deg);
+      }
+      &-2 {
+        width: 305px;
+        height: 368px;
+        background: rgb(228, 229, 231);
+        transform: translate(-75px, 0px) rotate(5deg);
+      }
+      &-3 {
+        width: 305px;
+        height: 368px;
+        background: rgb(228, 229, 231);
+        transform: translate(53px, -103px) rotate(-7deg);
+      }
     }
+  }
+}
 
-    & .card-image {
+@media only screen and (max-width: 1366px) {
+  #vinos-home h2 {
+    font-weight: 500;
+    font-size: 76.2px;
+    line-height: 90px;
+    letter-spacing: 0.12em;
+    width: 517px;
+    padding-left: 70px;
+  }
+  #cobos-experiencia-desktop {
+    & .experiencia-fullscreen-text {
+      transform: translateX(-50%) translateY(-72px);
+    }
+  }
+  #cobos-nuestroicono-desktop {
+    & h3 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 80px;
+      line-height: 99px;
+      text-align: center;
+      letter-spacing: 0.12em;
+      color: #f1eee9;
+    }
+  }
+  #cobos-iconico {
+    & p {
+      font-size: 13px;
+      line-height: 16px;
+    }
+    & .cobos-sidetext {
+      height: 466px;
+      width: 131px;
+    }
+  }
+  #felino-momentos {
+    & .custom-card {
+      width: 297px;
+      height: 368px;
+      background: rgb(228, 229, 231);
+
+      & .card-image {
         width: 263px;
         height: 271px;
         background-position: center !important;
         background-size: cover !important;
         background-repeat: no-repeat !important;
+      }
     }
-}
-#felino-detalles {
-    & .felino-detalles-img {
-        background-position: center !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
+  }
+  #felino-fresco {
+    & p {
+      font-size: 13px;
+      line-height: 16px;
+      text-align: justify;
+      letter-spacing: 0.05em;
     }
+    .felino-fresco-sidetext {
+      bottom: 358px;
+      right: -75px;
+      transform: rotate(-90deg) translate(-168px, -30px);
+      & h2 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 90px;
+        line-height: 199px;
+        letter-spacing: 0.12em;
+      }
+    }
+  }
+  #felino-detalles {
     & .felino-detalles-img:nth-child(odd) {
-        width: 491px;
-        height: 652px;
+      max-width: 341px;
+      max-height: 452px;
     }
     & .felino-detalles-img:nth-child(even) {
-        width: 652px;
-        height: 863px;
+      max-width: 452px;
+      max-height: 600px;
     }
     & .felino-detalles-sidetext {
-        position: absolute;
-        top: 40%;
-        left: 0;
-        transform: translate(-487px, -50%) rotate(-90deg);
-
-        & h2 {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 199.5px;
-            line-height: 323px;
-            letter-spacing: 0.12em;
-            color: rgba(28, 28, 28, 0.1);
-        }
-    }
-}
-#felino-fresco {
-    & .felino-fresco-sidetext {
-        position: absolute;
-        bottom: 265px;
-        right: -100px;
-        transform: rotate(-90deg) translate(-42px, -10px);
-
-        & h2 {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 120px;
-            line-height: 199px;
-            letter-spacing: 0.12em;
-            color: rgba(28, 28, 28, 0.3);
-        }
-    }
-    & h3 {
+      transform: translate(-288px, -50%) rotate(-90deg);
+      & h2 {
         font-style: normal;
         font-weight: 500;
-        font-size: 29.1px;
-        line-height: 35px;
-        letter-spacing: 0.0025em;
-        color: #1c1c1c;
+        font-size: 123.3px;
+        line-height: 145px;
+        letter-spacing: 0.12em;
+        color: rgba(28, 28, 28, 0.1);
+      }
+    }
+    & .felino-detalles-title-mobile {
+      font-family: var(--font-primary);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 47.1162px;
+      line-height: 56px;
+      letter-spacing: 0.07em;
+      color: rgba(62, 57, 55, 0.2);
     }
     & p {
-        font-family: var(--font-secondary);
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 22px;
-        text-align: justify;
-        letter-spacing: 0.05em;
-        color: #878581;
-     
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: justify;
+      letter-spacing: 0.05em;
+      color: #878581;
     }
-
-}
-#felino-fresco-mobile {
-    & .felino-fresco-sidetext {
-        position: absolute;
-        bottom: 265px;
-        right: -100px;
-        transform: rotate(-90deg) translate(-42px, -10px);
-
-        & h2 {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 120px;
-            line-height: 199px;
-            letter-spacing: 0.12em;
-            color: rgba(28, 28, 28, 0.3);
-        }
-    }
-    & h3 {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1.6px;
-        letter-spacing: 0.0025em;
-        color: #1c1c1c;
-    }
-    & p {
-        font-family: var(--font-secondary);
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 15.6px;
-        text-align: justify;
-        letter-spacing: 0.05em;
-        color: #878581;
-        max-width: 250px;
-    }
-}
-
-#cobos-home {
-    background-image: url("../img/cobos-bg.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    &-content {
-        width: 99%;
-    }
-    &-mobile {
-        background-image: url("../img/cobos/mobile/cobos-bg-mobile.jfif");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-}
-
-.felino {
-    &-title {
-        font-family: var(--font-primary);
-        font-weight: 500;
-        font-size: 47.11px;
-        font-style: normal;
-        letter-spacing: 0.12em;
-    }
-    &-subtitle {
-        font-family: var(--font-primary);
-        font-weight: 500;
-        font-size: 18px;
-        font-style: normal;
-        transform: translateY(17px);
-        letter-spacing: 0.12em;
-        width: 110px;
-        color: #878581;
-
-        &-2 {
-            font-family: var(--font-primary);
-            font-weight: 500;
-            font-size: 18px;
-            font-style: normal;
-            transform: translateY(17px);
-            letter-spacing: 0.12em;
-            width: 110px;
-            color: #878581;
-        }
-    }
-    &-description {
-        font-family: var(--font-secondary);
-        font-weight: normal;
-        font-size: 18px;
-        font-style: normal;
-        transform: translateY(17px);
-        letter-spacing: 0.12em;
-    }
-    &-small-line {
-        border-bottom: 3px solid #1c1c1c;
-        width: 30px;
-        transform: translateY(-27px);
-        margin: 0px 30px;
-    }
-    &-big-line {
-        border-bottom: 3px solid #1c1c1c;
-        width: 50%;
-        transform: translateY(-27px);
-        margin-left: 30px;
-    }
-    &-links {
-        padding-bottom: 50px;
-    }
-}
-
-.varietales {
-    &-small-line {
-        border-bottom: 3px solid rgba(241, 238, 233, 0.5);
-        width: 30px;
-        transform: translateY(-27px);
-        margin: 0px 30px;
-    }
-    &-big-line {
-        border-bottom: 3px solid rgba(241, 238, 233, 0.5);
-        width: 100%;
-        transform: translateY(-27px);
-        margin-left: 30px;
-    }
-    &-links {
-        padding-bottom: 50px;
-    }
-    &-iconico-title {
-        transform: translateX(15px);
-        height: 90%;
-        width: auto;
-    }
-    &-foto {
-        max-width: 608px;
-        width: 100%;
-        height: auto;
-
-        &-icono {
-            max-width: 292px;
-            width: 100%;
-            height: auto;
-        }
-    }
-    &-final-varietal {
-        width: 100%;
-        height: auto;
-    }
-}
-
-#vinculum-home {
-    background-image: url("../img/vinculum/desktop/vinculum-home-background.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black;
-
-    &-malbec-mobile {
-        background-image: url("../img/vinculum/mobile/vinculum-malbec-mobile.png");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    &-marchiori-mobile{
-        background-image: url("../img/vd/mobile/vd-marchiori-mobile.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-    }
-}
-.vinculum {
-    &-title {
-        font-family: var(--font-primary);
-        font-weight: 500;
-        font-size: 47.11px;
-        font-style: normal;
-        letter-spacing: 0.12em;
-        color: white;
-    }
-
-    &-subtitle {
-        font-family: var(--font-primary);
-        font-weight: 500;
-        font-size: 18px;
-        font-style: normal;
-        transform: translateY(17px);
-        letter-spacing: 0.12em;
-        width: 110px;
-        color: rgba(241, 238, 233, 0.5);
-    }
-    &-description {
-        font-family: var(--font-secondary);
-        font-weight: normal;
-        font-size: 18px;
-        font-style: normal;
-        transform: translateY(17px);
-        letter-spacing: 0.12em;
-        color: var(--color-primary-light);
-    }
-    &-links {
-        padding-bottom: 50px;
-    }
-}
-
-#vinculum-chard-home{
-    &-mobile{
-    background-image:url("../img/Vinculum-Chard-Mobile.jpg") ;
-    }
-}
-#vd-home {
-    background-image: url("../img/vd/desktop/vd-home-background.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black;
-    
-    &-mobile {
-        background-image: url("../img/vd/mobile/vd-chanares-mobile.png");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    &-zingaretti-mobile{
-        background-image: url("../img/vd/mobile/vd-zingaretti-mobile.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-    }
-    &-marchiori-mobile{
-        background-image: url("../img/vd/mobile/vd-marchiori-mobile.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-    }
-}
-.vd {
-    &-title {
-        font-family: var(--font-primary);
-        font-weight: 500;
-        font-size: 47.11px;
-        font-style: normal;
-        letter-spacing: 0.12em;
-        color: white;
-    }
-
-    &-subtitle {
-        font-family: var(--font-primary);
-        font-weight: 500;
-        font-size: 18px;
-        font-style: normal;
-        transform: translateY(17px);
-        letter-spacing: 0.12em;
-        width: 110px;
-        color: rgba(241, 238, 233, 0.5);
-    }
-    &-description {
-        font-family: var(--font-secondary);
-        font-weight: normal;
-        font-size: 18px;
-        font-style: normal;
-        transform: translateY(17px);
-        letter-spacing: 0.12em;
-        color: var(--color-primary-light);
-    }
-    &-links {
-        padding-bottom: 50px;
-    }
-}
-
-@media only screen and (max-width: 1458px) {
-    .felino {
-        &-subtitle {
-            &-2 {
-                transform: translateY(-4px);
-            }
-        }
-    }
-    #felino-momentos {
-        & .felino-momentos-grid {
-            transform: scale(0.8);
-        }
-        & .custom-card {
-            &-1 {
-                width: 305px;
-                height: 368px;
-                background: rgb(228, 229, 231);
-                transform: translate(-85px, 111px) rotate(-15deg);
-            }
-            &-2 {
-                width: 305px;
-                height: 368px;
-                background: rgb(228, 229, 231);
-                transform: translate(-75px, 0px) rotate(5deg);
-            }
-            &-3 {
-                width: 305px;
-                height: 368px;
-                background: rgb(228, 229, 231);
-                transform: translate(53px, -103px) rotate(-7deg);
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 1366px) {
-    #vinos-home h2 {
-        font-weight: 500;
-        font-size: 76.2px;
-        line-height: 90px;
-        letter-spacing: 0.12em;
-        width: 517px;
-        padding-left: 70px;
-    }
-    #cobos-experiencia-desktop {
-        & .experiencia-fullscreen-text {
-            transform: translateX(-50%) translateY(-72px);
-        }
-    }
-    #cobos-nuestroicono-desktop {
-        & h3 {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 80px;
-            line-height: 99px;
-            text-align: center;
-            letter-spacing: 0.12em;
-            color: #f1eee9;
-        }
-    }
-    #cobos-iconico {
-        & p {
-            font-size: 13px;
-            line-height: 16px;
-        }
-        & .cobos-sidetext {
-            height: 466px;
-            width: 131px;
-        }
-    }
-    #felino-momentos {
-        & .custom-card {
-            width: 297px;
-            height: 368px;
-            background: rgb(228, 229, 231);
-
-            & .card-image {
-                width: 263px;
-                height: 271px;
-                background-position: center !important;
-                background-size: cover !important;
-                background-repeat: no-repeat !important;
-            }
-        }
-    }
-    #felino-fresco {
-        & p {
-            font-size: 13px;
-            line-height: 16px;
-            text-align: justify;
-            letter-spacing: 0.05em;
-        }
-        .felino-fresco-sidetext {
-            bottom: 358px;
-            right: -75px;
-            transform: rotate(-90deg) translate(-168px, -30px);
-            & h2 {
-                font-style: normal;
-                font-weight: 500;
-                font-size: 90px;
-                line-height: 199px;
-                letter-spacing: 0.12em;
-            }
-        }
-    }
-    #felino-detalles {
-        & .felino-detalles-img:nth-child(odd) {
-            max-width: 341px;
-            max-height: 452px;
-        }
-        & .felino-detalles-img:nth-child(even) {
-            max-width: 452px;
-            max-height: 600px;
-        }
-        & .felino-detalles-sidetext {
-            transform: translate(-288px, -50%) rotate(-90deg);
-            & h2 {
-                font-style: normal;
-                font-weight: 500;
-                font-size: 123.3px;
-                line-height: 145px;
-                letter-spacing: 0.12em;
-                color: rgba(28, 28, 28, 0.1);
-            }
-        }
-        & .felino-detalles-title-mobile{
-            font-family: var(--font-primary);
-            font-style: normal;
-            font-weight: 500;
-            font-size: 47.1162px;
-            line-height: 56px;
-            letter-spacing: 0.07em;
-            color: rgba(62, 57, 55, 0.2);
-        }
-        & p {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 13px;
-            line-height: 16px;
-            text-align: justify;
-            letter-spacing: 0.05em;
-            color: #878581;
-        }
-    }
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    .looping-tabs-header {
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        min-width: 150px;
+
+
+  .looping-tabs-header {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 150px;
+  }
+
+
+  .felino {
+
+    &-title {
+      font-family: var(--font-primary);
+      font-weight: 500;
+      font-size: 47.12px;
+      font-style: normal;
+      letter-spacing: 0.12em;
     }
-    .felino {
-        &-title {
-            font-family: var(--font-primary);
-            font-weight: 500;
-            font-size: 47.12px;
-            font-style: normal;
-            letter-spacing: 0.12em;
-        }
-        &-description {
-            font-family: var(--font-secondary);
-            font-weight: normal;
-            font-size: 13px;
-            font-style: normal;
-            transform: translateY(17px);
-            letter-spacing: 0.12em;
-        }
-        &-subtitle {
-            font-family: var(--font-primary);
-            font-weight: 500;
-            font-size: 18px;
-            font-style: normal;
-            transform: translateY(17px);
-            letter-spacing: 0.12em;
-            width: 110px;
-            color: #878581;
-        }
-       
+
+    &-description {
+      font-family: var(--font-secondary);
+      font-weight: normal;
+      font-size: 13px;
+      font-style: normal;
+      transform: translateY(17px);
+      letter-spacing: 0.12em;
     }
-    .component-footer {
-        height: 100vh;
-        padding-top: 40px;
+
+    &-subtitle {
+      font-family: var(--font-primary);
+      font-weight: 500;
+      font-size: 18px;
+      font-style: normal;
+      transform: translateY(17px);
+      letter-spacing: 0.12em;
+      width: 110px;
+      color: #878581;
     }
+
+  }
+
+
+
+  .component-footer {
+    height: 100vh;
+    padding-top: 40px;
+  }
+
 }
 
 @media only screen and (max-width: 550px) {
-    .vinos {
-        &-logo {
-            &-1 {
-                max-width: 149px;
-                max-height: 25px;
-                width: auto;
-            }
-            &-2 {
-                max-width: 190px;
-                max-height: 48px;
-                width: auto;
-            }
-        }
+
+  .vinos {
+
+    &-logo {
+
+      &-1 {
+        max-width: 149px;
+        max-height: 25px;
+        width: auto;
+      }
+
+      &-2 {
+        max-width: 190px;
+        max-height: 48px;
+        width: auto;
+      }
+
     }
+    
+  }
 }
