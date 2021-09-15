@@ -82,6 +82,11 @@
   height: 100vh;
 }
 
+.video-cobos {
+  width: 100%;
+  height: auto;
+}
+
 .model-3d {
   background: url(../img/1999-bg.png);
   background-position: center;
@@ -157,8 +162,8 @@ footer {
     font-family: var(--font-primary);
     font-style: normal;
     font-weight: 500;
-    font-size: 123.3px;
-    line-height: 145px;
+    font-size: 76.2px;
+    line-height: 89.76px;
     letter-spacing: 0.12em;
     max-width: 787px;
     padding-left: 100px;
@@ -242,9 +247,9 @@ footer {
 
 #cobos-experiencia-desktop {
   & .experiencia-fullscreen-text {
-    max-width: 1227px;
+    width: 85%;
     left: 50.3%;
-    transform: translateX(-50%) translateY(-115px);
+    transform: translateX(-50%) translateY(-120px);
   }
 }
 #cobos-nuestroicono-desktop {
@@ -254,8 +259,8 @@ footer {
   & h3 {
     font-style: normal;
     font-weight: 500;
-    font-size: 123.3px;
-    line-height: 145px;
+    font-size: 90px;
+    line-height: 106.02px;
     text-align: center;
     letter-spacing: 0.12em;
     color: #f1eee9;
@@ -413,9 +418,8 @@ footer {
 }
 #felino-fresco {
   & .felino-fresco-sidetext {
-    position: absolute;
-    bottom: 265px;
-    right: -100px;
+    bottom: 228px;
+    right: -300px;
     transform: rotate(-90deg) translate(-42px, -10px);
 
     & h2 {
@@ -483,6 +487,7 @@ footer {
   }
 }
 
+
 #cobos-home {
   background-image: url("../img/cobos-bg.png");
   background-position: center;
@@ -493,7 +498,7 @@ footer {
     width: 99%;
   }
   &-mobile {
-    background-image: url("../img/cobos/mobile/cobos-bg-mobile.jfif");
+    background-image: url("../img/cobos/mobile/cobos-volturno-mobile.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -719,6 +724,67 @@ footer {
   }
 }
 
+
+// ===============SECCION HISTORIA ===============
+#historia-home {
+  background-image: url("../img/historia/historia-fondo-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  & h2 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72.2px;
+    line-height: 89,76px;
+    letter-spacing: 0.12em;
+    max-width: 787px;
+    padding-left: 100px;
+  }
+
+  
+}
+.historia{
+  &-final-tree {
+    transform: translateY(213px);
+    max-width: 492px;
+    width: 100%;
+    height: auto;
+  }
+  &-foto {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+#paul-hobbs-fondo {
+  background-image: url("../img/historia/paul-hobbs-fondo-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.paul-foto{
+  transform: translateY(275px);
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin-left:1550px;
+
+}
+
+#historia-fondo {
+  background-image: url("../img/historia/historia-2-fondo-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
 @media only screen and (max-width: 1458px) {
   .felino {
     &-subtitle {
@@ -765,7 +831,7 @@ footer {
   }
   #cobos-experiencia-desktop {
     & .experiencia-fullscreen-text {
-      transform: translateX(-50%) translateY(-72px);
+      transform: translateX(-50%) translateY(-105px);
     }
   }
   #cobos-nuestroicono-desktop {
@@ -812,8 +878,8 @@ footer {
       letter-spacing: 0.05em;
     }
     .felino-fresco-sidetext {
-      bottom: 358px;
-      right: -75px;
+      bottom: 268px;
+      right: -245px;
       transform: rotate(-90deg) translate(-168px, -30px);
       & h2 {
         font-style: normal;
