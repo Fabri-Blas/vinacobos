@@ -41,6 +41,10 @@
   height: 50vh;
 }
 
+.component-60 {
+  height: 60vh;
+}
+
 .component-footer {
   background: url(../img/footer-bg.png);
   background-position: center;
@@ -243,65 +247,7 @@ footer {
   }
 }
 
-// ===============SECCION VARIETALES===============
-
-#cobos-experiencia-desktop {
-  & .experiencia-fullscreen-text {
-    width: 85%;
-    left: 50.3%;
-    transform: translateX(-50%) translateY(-120px);
-  }
-}
-#cobos-nuestroicono-desktop {
-  & img {
-    width: 100%;
-  }
-  & h3 {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 90px;
-    line-height: 106.02px;
-    text-align: center;
-    letter-spacing: 0.12em;
-    color: #f1eee9;
-  }
-}
-#cobos-iconico {
-  & h2 {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 29.124px;
-    line-height: 47px;
-    text-align: justify;
-    letter-spacing: 0.12em;
-    color: #878581;
-    text-transform: uppercase;
-  }
-  & h3 {
-    font-family: var(--font-secondary) !important;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 29.1px;
-    line-height: 35px;
-    letter-spacing: 0.0025em;
-    color: #f1eee9;
-  }
-  & p {
-    font-family: var(--font-secondary) !important;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: justify;
-    letter-spacing: 0.07em;
-    color: rgba(241, 238, 233, 0.7);
-  }
-  & .cobos-sidetext {
-    height: 622px;
-    width: 141px;
-  }
-}
-
+// =================SECCION FELINO=================
 #felino-home {
   background-image: url("../img/felino-bg.jpeg");
   background-position: center;
@@ -486,25 +432,6 @@ footer {
     max-width: 250px;
   }
 }
-
-
-#cobos-home {
-  background-image: url("../img/cobos-bg.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  &-content {
-    width: 99%;
-  }
-  &-mobile {
-    background-image: url("../img/cobos/mobile/cobos-volturno-mobile.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
 .felino {
   &-title {
     font-family: var(--font-primary);
@@ -556,6 +483,83 @@ footer {
   }
   &-links {
     padding-bottom: 50px;
+  }
+}
+
+
+// ===============SECCION VARIETALES===============
+
+#cobos-experiencia-desktop {
+  & .experiencia-fullscreen-text {
+    width: 85%;
+  }
+}
+#cobos-nuestroicono-desktop {
+  & img {
+    width: 100%;
+  }
+  & h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 90px;
+    line-height: 106.02px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    color: #f1eee9;
+  }
+}
+#cobos-iconico {
+  & h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29.124px;
+    line-height: 47px;
+    text-align: justify;
+    letter-spacing: 0.12em;
+    color: #878581;
+    text-transform: uppercase;
+  }
+  & h3 {
+    font-family: var(--font-secondary) !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29.1px;
+    line-height: 35px;
+    letter-spacing: 0.0025em;
+    color: #f1eee9;
+  }
+  & p {
+    font-family: var(--font-secondary) !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    letter-spacing: 0.07em;
+    color: rgba(241, 238, 233, 0.7);
+    max-width: 380px;
+  }
+  & .cobos-sidetext {
+    height: 622px;
+    width: 141px;
+  }
+}
+
+
+#cobos-home {
+  background-image: url("../img/cobos/desktop/cobos-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-content {
+    width: 99%;
+  }
+  &-mobile {
+    background-image: url("../img/cobos/mobile/cobos-volturno-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -724,66 +728,247 @@ footer {
   }
 }
 
-
 // ===============SECCION HISTORIA ===============
 #historia-home {
-  background-image: url("../img/historia/historia-fondo-desktop.png");
+  background-image: url("../img/historia/desktop/historia-fondo-desktop.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  
+
   & h2 {
     font-family: var(--font-primary);
     font-style: normal;
     font-weight: 500;
     font-size: 72.2px;
-    line-height: 89,76px;
+    line-height: 89, 76px;
     letter-spacing: 0.12em;
     max-width: 787px;
     padding-left: 100px;
   }
 
-  
+  &-mobile {
+    background-image: url("../img/historia/mobile/historia-mobile-home.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    & h1 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 47.1162px;
+      line-height: 56px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.12em;
+      color: #f1eee9;
+    }
+  }
 }
-.historia{
+#historia-leyenda {
+  &-mobile {
+    & h3 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      text-align: center;
+      letter-spacing: 0.07em;
+      color: #3e3937;
+    }
+  }
+}
+#historia-paulhobbs {
+  &-mobile {
+    h2 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 47.1162px;
+      line-height: 56px;
+      letter-spacing: 0.07em;
+      color: #3e3937;
+      transform: translateY(-33px);
+    }
+  }
+}
+#historia-inicio {
+  &-mobile {
+    background-image: url("../img/historia/mobile/historia-mobile-inicio-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h2 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 47.1162px;
+      line-height: 56px;
+      letter-spacing: 0.07em;
+      color: #3e3937;
+      transform: translateY(-33px);
+    }
+  }
+}
+#historia-leyenda2 {
+  &-mobile {
+    & h3 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.07em;
+      color: #3e3937;
+    }
+  }
+}
+#historia-leyenda3 {
+  &-mobile {
+    background-image: url("../img/historia/mobile/historia-mobile-inicio-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    & h3 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.07em;
+      color: #3e3937;
+    }
+  }
+}
+#historia-uncambio{
+  &-mobile{
+    background-image: url("../img/historia/mobile/historia-mobile-uncambio-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.historia-custom-h2-mobile {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 47.1162px;
+  line-height: 56px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.07em;
+  color: #3e3937;
+}
+.historia-parrafos-mobile {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #3e3937;
+}
+.historia {
   &-final-tree {
-    transform: translateY(213px);
-    max-width: 492px;
-    width: 100%;
     height: auto;
+    width:45vw;
+    transform: translateY(-200px);
   }
-  &-foto {
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-  }
-}
-
-#paul-hobbs-fondo {
-  background-image: url("../img/historia/paul-hobbs-fondo-desktop.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-}
-
-.paul-foto{
-  transform: translateY(275px);
-  max-width: 500px;
-  width: 100%;
+  &-photo {
+  max-width: 700px;
   height: auto;
-  margin-left:1550px;
-
+  }
+  &-quote {
+    position: absolute;
+    top: 280px;
+    left: 400px;
+  }
+  &-big-line {
+    border-bottom: 2px solid #000000;
+    width: 771px;
+  }
+  &-small-line {
+    border-bottom: 0.5px solid #404040;
+    width: 18px;
+    transform: translateY(-15px);
+    margin: 0px 10px;
+  }
 }
 
-#historia-fondo {
-  background-image: url("../img/historia/historia-2-fondo-desktop.png");
+#historia-paul-hobbs {
+  background-image: url("../img/historia/desktop/paul-hobbs-fondo-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  .paul-photo{
+    max-width: 952px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+#historia-inicio {
+  background-image: url("../img/historia/desktop/historia-2-fondo-desktop.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
 }
 
+#argentina-quote {
+  background-image: url("../img/historia/desktop/argentina-fondo-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+#visita-argentina {
+  background-image: url("../img/historia/desktop/argentina-visita-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#argentina-cambio {
+
+  background-image: url("../img/historia/desktop/argentina-mapa-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.title-inicio{
+  font-family: var(--font-primary);
+  font-weight:500;
+  font-size:76.2px;
+  line-height: 123.29px;
+ letter-spacing: 0.12em;
+}
+
+.cuadro-texto{
+  max-width: 805px;
+  height: auto;
+}
+
+#linea-de-tiempo-1,
+#linea-de-tiempo-2, 
+#linea-de-tiempo-3{
+  background-image: url("../img/historia/desktop/linea-arbol-desktop.png");
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.story-logo {
+  width: 60%;
+  height: auto;
+  opacity: 0.3;
+}
 
 @media only screen and (max-width: 1458px) {
   .felino {
@@ -831,7 +1016,7 @@ footer {
   }
   #cobos-experiencia-desktop {
     & .experiencia-fullscreen-text {
-      transform: translateX(-50%) translateY(-105px);
+      transform: translateX(-50%) translateY(-15px);
     }
   }
   #cobos-nuestroicono-desktop {
@@ -849,6 +1034,7 @@ footer {
     & p {
       font-size: 13px;
       line-height: 16px;
+      max-width: 280px;
     }
     & .cobos-sidetext {
       height: 466px;
@@ -929,11 +1115,36 @@ footer {
       color: #878581;
     }
   }
+  
+  //==============HISTORIA==========
+  .historia {
+    &-final-tree {
+      height: auto;
+      width:40vw;
+      transform: translateY(-100px);
+    }
+    &-photo {
+    max-width: 523px;
+    height: auto;
+    }
+    &-quote {
+      position: absolute;
+      top: 95px;
+      left: 310px;
+      width: 279.68px;
+      height: auto;
+    }
+  }
+  #historia-paul-hobbs {   
+    .paul-photo{
+      max-width: 600px;
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-
-
   .looping-tabs-header {
     top: 0;
     left: 50%;
@@ -941,9 +1152,7 @@ footer {
     min-width: 150px;
   }
 
-
   .felino {
-
     &-title {
       font-family: var(--font-primary);
       font-weight: 500;
@@ -971,24 +1180,17 @@ footer {
       width: 110px;
       color: #878581;
     }
-
   }
-
-
 
   .component-footer {
     height: 100vh;
     padding-top: 40px;
   }
-
 }
 
 @media only screen and (max-width: 550px) {
-
   .vinos {
-
     &-logo {
-
       &-1 {
         max-width: 149px;
         max-height: 25px;
@@ -1000,8 +1202,13 @@ footer {
         max-height: 48px;
         width: auto;
       }
-
     }
-    
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #historia-home-mobile h1 {
+    font-size: 34px;
+    line-height: 47px;
   }
 }

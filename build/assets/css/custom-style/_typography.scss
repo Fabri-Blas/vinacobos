@@ -392,6 +392,176 @@ mark {
   font-size: 13px;
 }
 
+//=================FELINO=====================
+#felino-momentos-mobile {
+  & h2 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 47.12px;
+    line-height: 76.24px;
+    letter-spacing: 0.07em;
+    color: #1C1C1C;
+    width: 279px;
+  }
+}
+
+//================HISTORIA====================
+#historia-prologo {
+  & h2 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 140px;
+    line-height: 165px;
+    color: rgba(28, 28, 28, 0.2);
+    letter-spacing: 0.12em;
+  }
+  & p {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    letter-spacing: 0.05em;
+    color: #3E3937;
+    width: 805px;
+  }
+}
+#historia-paul-hobbs {
+  & h2 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 123.29px;
+    line-height: 145.24px;
+    color: rgba(28, 28, 28, 0.2);
+    letter-spacing: 0.12em;
+  }
+  & h3 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 76.2px;
+    line-height: 123.29px;
+    letter-spacing: 0.12em;
+    color: #3E3937;
+  }
+  & p {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    color: #3E3937;
+    width: 908px;
+  }
+}
+#historia-inicio {
+  & h2 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 123.29px;
+    line-height: 145.24px;
+    color: rgba(28, 28, 28, 0.2);
+    letter-spacing: 0.12em;
+  }
+  & h3 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 76.2px;
+    line-height: 123.29px;
+    letter-spacing: 0.12em;
+    color: #3E3937;
+  }
+  & p {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    color: #3E3937;
+    width: 1100px;
+  }
+}
+#argentina-quote {
+  & h3 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 47.12px;
+    line-height: 55.5px;
+    letter-spacing: 0.07em;
+    color: #3E3937;
+    width: 696px;
+  }
+  & h4 {
+    font-family: var(--font-primary);
+    font-weight:500;
+    font-size:18px;
+    line-height: 30px;
+    letter-spacing: 0.07em;
+  }
+  & p {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.025em;
+    color: #3E3937;
+    width: 1100px;
+  }
+}
+#visita-argentina {
+  & h3 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 47.12px;
+    line-height: 55.5px;
+    letter-spacing: 0.07em;
+    color: #3E3937;
+    width: 315px;
+  }
+  & p {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.025em;
+    color: #3E3937;
+    width: 413px;
+  }
+}
+#argentina-cambio {
+  & h3 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 47.12px;
+    line-height: 55.5px;
+    letter-spacing: 0.07em;
+    color: #3E3937;
+  }
+  & p {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.025em;
+    color: #3E3937;
+    width: 953px;
+  }
+}
+
+
 //================VARIETALES==================
 
 #cobos-icono {
@@ -534,6 +704,114 @@ mark {
         color: #878581;
         max-width: 398px;
       }
+    }
+  }
+
+  //================HISTORIA====================
+  #historia-prologo {
+    & h2 {
+      font-family: var(--font-primary);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 123.29px;
+      line-height: 145.24px;
+      color: rgba(28, 28, 28, 0.2);
+      letter-spacing: 0.12em;
+    }
+    & p {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21.6px;
+      letter-spacing: 0.05em;
+      color: #3E3937;
+      width: 633px;
+    }
+  }
+
+  #historia-inicio {
+    & p {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 29px;
+      letter-spacing: 0.05em;
+      color: #3E3937;
+      width: 1000px;
+    }
+  }
+  #argentina-quote {
+    & h3 {
+      font-family: var(--font-primary);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 47.12px;
+      letter-spacing: 0.07em;
+      color: #3E3937;
+      width: 617px;
+    }
+    & h4 {
+      font-family: var(--font-primary);
+      font-weight:500;
+      font-size:13px;
+      line-height: 30px;
+      letter-spacing: 0.07em;
+    }
+    & p {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 29px;
+      letter-spacing: 0.025em;
+      color: #3E3937;
+      width: 1000px;
+    }
+  }
+  #visita-argentina {
+    & h3 {
+      font-family: var(--font-primary);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 47.12px;
+      letter-spacing: 0.07em;
+      color: #3E3937;
+      width: 224px;
+    }
+    & p {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 29px;
+      letter-spacing: 0.025em;
+      color: #3E3937;
+      width: 413px;
+    }
+  }
+  #argentina-cambio {
+    & h3 {
+      font-family: var(--font-primary);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 47.12px;
+      line-height: 55.5px;
+      letter-spacing: 0.07em;
+      color: #3E3937;
+    }
+    & p {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 29px;
+      letter-spacing: 0.025em;
+      color: #3E3937;
+      width: 1000px;
     }
   }
 }
