@@ -79,20 +79,43 @@
 
     <!-- ==============================================MAIN============================================== -->
 
+    <!-- scroll component -->
+    <div class="scroll-indicator-container display@md" data-title="Conoce Viña Cobos">
+        <div class="scroll-indicator-wrapper" style="height: 400px;">
+            <div class="scroll-indicator-inner" style="height: 250px;">
+                <span class="scroll-indicator"></span>
+            </div>
+            <div class="title">
+                <h3>Conoce Viña Cobos</h3>
+            </div>
+        </div>
+    </div>
+    <!-- _________________________________________________________________________________________ -->
 
     <main class="bg-white">
-
-
         <!-- _________________________________________________________________________________________ -->
         <!-- DESARROLLO DESKTOP -->
-        <section id="historia-home" class="display@md component-section flex items-center@md">
+        <section id="historia-home" class="display@md component-section z-index-2 bg shadow-sm">
             <div class="display@md">
-                <h2 class="color-white">NUESTRA HISTORIA</h2>
+                <h2 class="title color-white">NUESTRA HISTORIA</h2>
+            </div>
+            <div id="hero" class="video-bg position-relative" style="z-index: -5 !important;">
+                <div class="video-bg__media" aria-hidden="true">
+                    <video autoplay loop muted playsInline src="./assets/img/historia/desktop/historia-cinemagraph.MOV"></video>
+                </div>
+
+                <div class="container max-width-lg position-relative z-index-2">
+                    <div class="flex flex-center padding-y-100vh">
+                        <div class="text-component text-center">
+                            <div id="scroll-helper" class="position-absolute">
+                                <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+                                <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        
-
-
 
         <!-- HISTORIA CAPTION -->
         <section id="vinos-caption" class="display@md bg-white scroll-fx js-scroll-fx"
@@ -106,6 +129,7 @@
                 </h2>
             </div>
         </section>
+        <!-- _________________________________________________________________________________________ -->
 
 
 
@@ -146,8 +170,7 @@
                 </div>
             </div>
         </section>
-
-
+        <!-- _________________________________________________________________________________________ -->
 
 
         <!---SECCION PAUL HOBBS -->
@@ -174,8 +197,7 @@
                     alt="Paul Hobbs">
             </div>
         </section>
-
-
+        <!-- _________________________________________________________________________________________ -->
 
 
         <!-- SECCCION HISTORIA TEXTO -->
@@ -201,9 +223,7 @@
                 </p>
             </div>
         </section>
-
-
-
+        <!-- _________________________________________________________________________________________ -->
 
 
         <!-- SECCION ARGENTINA HISTORIA-->
@@ -234,8 +254,7 @@
                 </div>
             </div>
         </section>
-
-
+        <!-- _________________________________________________________________________________________ -->
 
 
         <!-- PRIMERA VISITA ARGENTINA-->
@@ -271,6 +290,7 @@
                 </div>
             </div>
         </section>
+        <!-- _________________________________________________________________________________________ -->
 
 
 
@@ -296,18 +316,20 @@
                 </div>
             </div>
         </section>
+        <!-- _________________________________________________________________________________________ -->
+
 
 
 
         <!-- PRIMERA LINEA DE TIEMPO- desktop -->
         <section id="linea-de-tiempo-1"
-            class=" display@md component-section-full text-center max-width-xxxxl margin-x-auto padding-bottom-xxxxl bg-white z-index-1"
+            class=" display@md component-section margin-y-auto text-center max-width-xxxxl margin-x-auto  bg-white z-index-1"
             style="letter-spacing: 10px;">
             <div class="z-index-3">
                 <div class="position-relative z-index-1 overflow-hidden ">
                     <div class="container max-width-lg font-secondary">
                         <div class="v-timeline js-v-timeline" data-animation="on">
-
+                           
                             <!-- hidden item -->
                             <section class="v-timeline__section js-v-timeline__section is-hidden">
                                 <div class="v-timeline__marker bg-primary" aria-hidden="true">
@@ -317,8 +339,56 @@
                                     </div>
                                 </div>
                             </section>
-
+                           
                             <!-- start of timeline -->
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                             <section class="v-timeline__section js-v-timeline__section">
                                 <div class="display@md v-timeline__marker bg-primary" aria-hidden="true"
                                     style="transform: translateX(-4.5px);">
@@ -378,7 +448,6 @@
                                     </div>
                                 </div>
                             </section>
-
                             <section class="v-timeline__section js-v-timeline__section">
                                 <div style="transform: translateX(4.5px);"
                                     class="display@md v-timeline__marker bg-primary" aria-hidden="true">
@@ -392,30 +461,54 @@
                                             class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
                                             <h2 class="text-component-title" style="color: var(--color-secondary);">
                                                 IMPULSO</h2>
-                                            <h3 class="text-component-subtitle">Inauguracion de Cobos Malbec.</h3>
+                                            <h3 class="text-component-subtitle">Inauguracion de Cobos Malbec</h3>
+                                          
                                         </div>
                                     </div>
                                 </div>
                             </section>
+                            
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-
-
-
         <!-- SEGUNDA LINEA DE TIEMPO- Desktop -->
         <section id="linea-de-tiempo-2"
-            class=" display@md component-section-full text-center max-width-xxxxl margin-x-auto padding-bottom-xxxxl bg-white z-index-1"
+            class=" display@md component-section   text-center max-width-xxxxl margin-x-auto  bg-white z-index-1"
             style="letter-spacing: 10px;">
             <div class="z-index-3">
 
                 <div class="position-relative z-index-1 overflow-hidden ">
                     <div class="container max-width-lg font-secondary">
                         <div class="v-timeline js-v-timeline" data-animation="on">
-
+                           
                             <!-- hidden item -->
                             <section class="v-timeline__section js-v-timeline__section is-hidden">
                                 <div class="v-timeline__marker bg-primary" aria-hidden="true">
@@ -425,8 +518,31 @@
                                     </div>
                                 </div>
                             </section>
-
                             <!-- start of timeline -->
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                             <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                             <section class="v-timeline__section js-v-timeline__section">
                                 <div class="display@md v-timeline__marker bg-primary" aria-hidden="true"
                                     style="transform: translateX(-4.5px);">
@@ -436,6 +552,7 @@
                                         <div class="v-timeline__date margin-bottom-sm">
                                             <h2 class="grey-number padding-right-xs">2006</h2>
                                         </div>
+
                                         <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
                                             <h2 class="text-component-title" style="color: var(--color-secondary);">LA
                                                 BODEGA</h2>
@@ -503,17 +620,101 @@
                                     </div>
                                 </div>
                             </section>
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="v-timeline__section js-v-timeline__section">
+                                <div class="display@md v-timeline__items-group">
+                                    <div class="v-timeline__item">
+                                        <div class="v-timeline__date margin-bottom-sm">
+                                          
+                                        </div>
+                                        <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-
-
         <!-- TERCERA LINEA DE TIEMPO - Desktop-->
         <section id="linea-de-tiempo-3"
-            class=" display@md component-section-full text-center max-width-xxxxl margin-x-auto padding-bottom-xxxxl bg-white z-index-1"
+            class=" display@md component-section-full  text-center max-width-xxxxl margin-x-auto bg-white z-index-1"
             style="letter-spacing: 10px;">
             <div class="z-index-3">
                 <div class="position-relative z-index-1 overflow-hidden ">
@@ -531,6 +732,7 @@
                             </section>
 
                             <!-- start of timeline -->
+                            
                             <section class="v-timeline__section js-v-timeline__section">
                                 <div class="display@md v-timeline__marker bg-primary" aria-hidden="true"
                                     style="transform: translateX(-4.5px);">
@@ -619,17 +821,20 @@
                     </h2>
                     <h2 class=" display@md text-component-title-3">2021</h2>
                 </div>
-                <div class="display@md margin-x-auto position-absolute width-100%">
+                <div class="display@md margin-x-auto width-100%">
                     <img class="padding-top-xl story-logo" src="./assets/img/historia/desktop/2021-historia-desktop.svg"
                         alt="2021">
                 </div>
             </div>
         </section>
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> dev
         <!-- _________________________________________________________________________________________ -->
         <!-- DESARROLLO MOBILE -->
 
@@ -640,6 +845,7 @@
                 <h1>HISTORIA</h1>
             </div>
         </section>
+
 
 
         <section id="historia-leyenda-mobile" class="hide@md component-section flex justify-center items-center">
@@ -718,7 +924,7 @@
             </div>
 
             <div>
-                <p class="historia-parrafos-mobile padding-top-xxl text-center padding-x-xl margin-x-sm">Paul obtuvo su licenciatura en
+                <p class="historia-parrafos-mobile text-center padding-x-xl margin-x-sm">Paul obtuvo su licenciatura en
                     química de la Universidad de Notre Dame en 1975, y su maestría en
                     viticultura y enología de la Universidad de California, Davis en 1978. Poco después, se convirtió en
                     miembro del equipo de enología de la bodega Robert Mondavi, y un año más tarde, a instancias del
@@ -780,7 +986,7 @@
 
 
         <section id="historia-uncambio-mobile" class="hide@md component-section">
-            <h2 class="font-primary historia-custom-h2-mobile padding-top-sm padding-left-xs">Un<br>cambio
+            <h2 class="font-primary historia-custom-h2-mobile padding-top-lg padding-left-xs">Un<br>cambio
                 en<br>Argentina</h2>
 
             <p class="text-center historia-parrafos-mobile margin-bottom-xl padding-x-lg margin-x-md padding-top-lg">

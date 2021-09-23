@@ -162,6 +162,12 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
 
+  .title {
+    position: absolute;
+    left: 100px;
+    top: 300px;
+  }
+
   & h2 {
     font-family: var(--font-primary);
     font-style: normal;
@@ -170,7 +176,6 @@ footer {
     line-height: 89.76px;
     letter-spacing: 0.12em;
     max-width: 787px;
-    padding-left: 100px;
   }
   &-mobile {
     background-image: url("../img/vinos-bg-mobile.png");
@@ -485,7 +490,12 @@ footer {
     padding-bottom: 50px;
   }
 }
-
+#felino-field-mobile {
+  & img {
+    width: 100%;
+    height: auto;
+  }
+}
 
 // ===============SECCION VARIETALES===============
 
@@ -552,11 +562,17 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
 
+  .bottle {
+    position: absolute;
+    bottom: -58px;
+    right: 503px;
+  }
+
   &-content {
     width: 99%;
   }
   &-mobile {
-    background-image: url("../img/cobos/mobile/cobos-volturno-mobile.jpg");
+    background-image: url("../img/cobos/mobile/cobos-bg-mobile.jfif");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -735,15 +751,20 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
 
+  .title {
+    position: absolute;
+    left: 100px;
+    top: 300px;
+  }
+
   & h2 {
     font-family: var(--font-primary);
     font-style: normal;
     font-weight: 500;
-    font-size: 72.2px;
+    font-size: 76.2px;
     line-height: 89, 76px;
     letter-spacing: 0.12em;
     max-width: 787px;
-    padding-left: 100px;
   }
 
   &-mobile {
@@ -970,6 +991,73 @@ footer {
   opacity: 0.3;
 }
 
+// ===============SECCION TERROIR ===============
+
+.vinedo-title{
+font-family:var(--font-primary);
+font-style: normal;
+font-weight: 500;
+font-size: 76.2px;
+line-height: 90px;
+letter-spacing: 0.12em;
+}
+
+#frutos-caption{
+  & h2 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 76.2px;
+    line-height: 89.76px;
+    letter-spacing: 0.05em;
+    color: #3E3937;
+    max-width: 1400px;
+  }
+  & img {
+    position: absolute;
+    top: -320px;
+    right: 0;
+    max-width: 80%;  
+    height: auto;
+  }
+}
+
+.sliding-title{
+  font-family:var(--font-primary);
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 38px;
+letter-spacing: 0.07em;
+}
+.sliding-titles{
+  font-family:  var(--font-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 47.1162px;
+  line-height: 76px;
+  letter-spacing: 0.12em;
+}
+
+.sliding-paragraph{
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+//===== SECCCION CONTACTO =======
+
+#contacto-home{
+  background-image: url("../img/contacto/desktop/contacto-desktop-fondo.png");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
 @media only screen and (max-width: 1458px) {
   .felino {
     &-subtitle {
@@ -1006,13 +1094,20 @@ footer {
 }
 
 @media only screen and (max-width: 1366px) {
-  #vinos-home h2 {
-    font-weight: 500;
-    font-size: 76.2px;
-    line-height: 90px;
-    letter-spacing: 0.12em;
-    width: 517px;
-    padding-left: 70px;
+  #vinos-home {
+    .title {
+      position: absolute;
+      left: 70px;
+      top: 160px;
+    }
+  }
+  #cobos-home {  
+    .bottle {
+      position: absolute;
+      bottom: -46px;
+      right: 354px;
+      max-width: 177px;
+    }
   }
   #cobos-experiencia-desktop {
     & .experiencia-fullscreen-text {
@@ -1117,6 +1212,13 @@ footer {
   }
   
   //==============HISTORIA==========
+  #historia-home {
+    .title {
+      position: absolute;
+      left: 70px;
+      top: 160px;
+    }
+  }
   .historia {
     &-final-tree {
       height: auto;
@@ -1139,6 +1241,27 @@ footer {
     .paul-photo{
       max-width: 600px;
       width: 100%;
+      height: auto;
+    }
+  }
+
+  //===============TERROIR=================
+  #frutos-caption{
+    & h2 {
+      font-family: var(--font-primary);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 47.12px;
+      line-height: 55.5px;
+      letter-spacing: 0.07em;
+      color: #3E3937;
+      max-width: 1083px;
+    }
+    & img {
+      position: absolute;
+      top: -290px;
+      right: 0;
+      max-width: 80%;  
       height: auto;
     }
   }

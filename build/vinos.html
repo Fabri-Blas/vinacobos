@@ -39,13 +39,13 @@
                 </div>
 
                 <ul id="desktop-header" class="f-header__list margin-left-sm justify-center@md display@md">
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./historia"
                             class="f-header__link btn--nav">HISTORIA</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./terroir"
                             class="f-header__link btn--nav">TERROIR</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./vinos"
                             class="f-header__link btn--nav">VINOS</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./contacto"
                             class="f-header__link btn--nav">CONTACTO</a></li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
                             class="f-header__link btn--nav">TIENDA</a></li>
@@ -56,16 +56,16 @@
 
                 <ul class="f-header__list padding-top-lg justify-center@md hide@md">
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
+                        <a href="./historia" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
+                        <a href="./terroir" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
+                        <a href="./vinos" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
+                        <a href="./contacto" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
                         <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TIENDA</a>
@@ -89,62 +89,99 @@
             </div>
         </div>
     </div>
+    <!-- _________________________________________________________________________________________ -->
 
     <main class="bg-white">
 
-        <!-- VINOS HOME -->
-        <section id="vinos-home" class="display@md component-section flex items-center@md">
+        <!-- VINOS HOME - Desktop-->
+        <section id="vinos-home" class="display@md component-section z-index-2 bg shadow-sm">            
             <div class="display@md">
-                <h2 class="color-white">NUESTROS VINOS</h2>
+                <h2 class="title color-white">NUESTROS VINOS</h2>                
             </div>            
+            <div id="hero" class="video-bg position-relative" style="z-index: -5 !important;">
+                <div class="video-bg__media" aria-hidden="true">
+                    <video autoplay loop muted playsInline src="./assets/img/vinos/desktop/vinos-cinemagraph.MOV"></video>
+                </div>
+
+                <div class="container max-width-lg position-relative z-index-2">
+                    <div class="flex flex-center padding-y-100vh">
+                        <div class="text-component text-center">
+                            <div id="scroll-helper" class="position-absolute">
+                                <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+                                <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        <!-- _________________________________________________________________________________________ -->
+
+
+        <!-- VINOS HOME - Mobile -->
         <section id="vinos-home-mobile" class="hide@md component-section flex">
             <div class="hide@md">
                 <h2 class="color-white">NUESTROS VINOS</h2>
             </div>
         </section>
+        <!-- _________________________________________________________________________________________ -->
 
-        <!-- VINOS CAPTION -->
-        <section id="vinos-caption" class="dispplay@md bg-white scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+
+        <!-- VINOS CAPTION - Desktop -->
+        <section id="vinos-caption" class="dispplay@md bg-white scroll-fx js-scroll-fx" 
+            data-scroll-fx="opacity, 0, 1, 25%, 35%">
             <div class="display@md component-half height-100% position-relative flex flex-column justify-center items-center">
-                <img class="position-absolute reveal-fx reveal-fx--clip-x" src="./assets/img/vinos-bg-logo.png" alt="Vinos - Background Logo"
+                <img class="position-absolute reveal-fx reveal-fx--clip-x" 
+                    src="./assets/img/vinos-bg-logo.png" alt="Vinos - Background Logo"
                     width="340" height="326">
                 <h2 class="font-primary text-center reveal-fx reveal-fx--clip-x">
                     “Expresan de forma sublime las características y personalidad de cada terroir”
                 </h2>
             </div>
         </section>
-        <section id="vinos-caption-mobile" class="hide@md component-section bg-white scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
-            <div class="height-100% position-relative flex flex-column justify-center items-center">
-                <img class="position-absolute reveal-fx reveal-fx--clip-x" src="./assets/img/vinos-bg-logo.png" alt="Vinos - Background Logo"
-                    width="340" height="326">
-                <h2 class="font-primary text-center reveal-fx reveal-fx--clip-x">
-                    “Expresan de forma sublime las características y personalidad de cada terroir”
-                </h2>
-            </div>
-        </section>
+        <!-- _________________________________________________________________________________________ -->
 
-        <!-- ESPECIALES-->
+
+        <!-- VINOS CAPTION - Mobile -->
+        <section id="vinos-caption-mobile" class="hide@md component-section bg-white scroll-fx js-scroll-fx" 
+            data-scroll-fx="opacity, 0, 1, 25%, 35%">
+            <div class="height-100% position-relative flex flex-column justify-center items-center">
+                <img class="position-absolute reveal-fx reveal-fx--clip-x" 
+                    src="./assets/img/vinos-bg-logo.png" alt="Vinos - Background Logo"
+                    width="340" height="326">
+                <h2 class="font-primary text-center reveal-fx reveal-fx--clip-x">
+                    “Expresan de forma sublime las características y personalidad de cada terroir”
+                </h2>
+            </div>
+        </section>
+        <!-- _________________________________________________________________________________________ -->
+
+
+        <!-- ESPECIALES - Desktop -->
         <section class="vinos-especiales-unicos component-section-full z-index-2 padding-x-lg@sxl padding-x-xxxxs@md">
             <div class="display@md grid padding-x-xl max-width-xxxl margin-x-auto">
                 <div class="col-6 padding-x-md">
-                    <h2 class="font-primary inner-vinos-title text-center margin-top-xs margin-top-xxxxs@sxl margin-bottom-sm">ESPECIALES
+                    <h2 class="font-primary inner-vinos-title text-center margin-top-xs margin-top-xxxxs@sxl margin-bottom-sm">
+                        ESPECIALES
                     </h2>
 
                     <div class="margin-bottom-xxl grid inner-vinos-content">
                         <div class="col-6 padding-right-xl text-right">
-                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-x" src="./assets/img/vinos-cobos.svg" alt="Vinos - Cobos">
+                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-x" 
+                                src="./assets/img/vinos/desktop/vinos-cobos.svg" alt="Vinos - Cobos">
                         </div>
                         <div class="col-6">
                             <h5 class="inner-vinos-subtitle reveal-fx reveal-fx--clip-x">Icónico</h5>
-                            <p class="inner-vinos-paragraph reveal-fx reveal-fx--clip-x">El pináculo. Un vino que nace de una amalgama de nuestra
-                                filosofía, pasión y maestría. Un icono argentino. Nuestro buque insignia para el mundo.
+                            <p class="inner-vinos-paragraph reveal-fx reveal-fx--clip-x">
+                                El pináculo. Un vino que nace de una amalgama de nuestra filosofía, pasión y 
+                                maestría. Un icono argentino. Nuestro buque insignia para el mundo.
                             </p>
                         </div>
                     </div>
                     <div class="margin-bottom-xxl grid inner-vinos-content">
                         <div class="col-6 padding-right-xl text-right">
-                            <img class="vinos-logo-2 reveal-fx reveal-fx--clip-x" src="./assets/img/vinos-vinacobos-vd.svg" alt="Vinos - VD">
+                            <img class="vinos-logo-2 reveal-fx reveal-fx--clip-x" 
+                                src="./assets/img/vinos/desktop/vinos-vinacobos-vd.svg" alt="Vinos - VD">
                         </div>
                         <div class="col-6">
                             <h5 class="inner-vinos-subtitle reveal-fx reveal-fx--clip-x">Micro terroir</h5>
@@ -156,45 +193,57 @@
                     </div>
                     <div class="grid inner-vinos-content">
                         <div class="col-6 padding-right-xl text-right">
-                            <img class="vinos-logo-3 reveal-fx reveal-fx--clip-x" src="./assets/img/vinos-vinacobos-vinculum.svg"
+                            <img class="vinos-logo-3 reveal-fx reveal-fx--clip-x" 
+                                src="./assets/img/vinos/desktop/vinos-vinacobos-vinculum.svg"
                                 alt="Vinos - Vinculum">
                         </div>
                         <div class="col-6">
                             <h5 class="inner-vinos-subtitle reveal-fx reveal-fx--clip-x">Enfocado en terroir</h5>
-                            <p class="inner-vinos-paragraph reveal-fx reveal-fx--clip-x">Celebra la conexión con nuestros productores. Un vínculo
-                                fundamental forjado en el intercambio de conocimientos que conduce a la creación de
-                                vinos destacados.
+                            <p class="inner-vinos-paragraph reveal-fx reveal-fx--clip-x">
+                                Celebra la conexión con nuestros productores. Un vínculo fundamental forjado en el 
+                                intercambio de conocimientos que conduce a la creación de vinos destacados.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 width-100% text-center flex justify-center items-start">
-                    <img class="vinos-foto padding-lg padding-y-lg@md padding-left-lg@md padding-right-xs@md" src="./assets/img/vinos-especiales.png" alt="Vinos - Especiales">
+                    <img class="vinos-foto padding-lg padding-y-lg@md padding-left-lg@md padding-right-xs@md" 
+                        src="./assets/img/vinos/desktop/vinos-especiales.png" 
+                        alt="Vinos - Especiales">
                 </div>
             </div>
+            <!-- _________________________________________________________________________________________ -->
 
-            <!-- Mobile -->
+
+            <!-- ESPECIALES - Mobile -->
             <div class="hide@md margin-x-auto">
-                <h2 class="font-primary text-center inner-vinos-title reveal-fx reveal-fx--clip-y scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">ESPECIALES
+                <h2 class="font-primary text-center inner-vinos-title reveal-fx reveal-fx--clip-y scroll-fx js-scroll-fx" 
+                    data-scroll-fx="opacity, 0, 1, 25%, 35%">ESPECIALES
                 </h2>
                 <div class="width-100% text-center flex justify-center items-center">
-                    <img class="vinos-foto padding-xs reveal-fx reveal-fx--clip-y scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%" src="./assets/img/vinos-especiales.png" alt="Vinos - Especiales">
+                    <img class="vinos-foto padding-xs reveal-fx reveal-fx--clip-y scroll-fx js-scroll-fx" 
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%" 
+                        src="./assets/img/vinos/desktop/vinos-especiales.png" alt="Vinos - Especiales">
                 </div>
                 <div>
-                    <div class="margin-bottom-xxl margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                    <div class="margin-bottom-xxl margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx" 
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%">
                         <div class="flex justify-center padding-top-xl padding-bottom-sm">
-                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-y" src="./assets/img/vinos-cobos.svg" alt="Vinos - Cobos">
+                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-y" 
+                                src="./assets/img/vinos/desktop/vinos-cobos.svg" alt="Vinos - Cobos">
                         </div>
                         <div class="flex flex-column justify-center text-center">
                             <h5 class="inner-vinos-subtitle padding-bottom-xxs reveal-fx reveal-fx--clip-y">Icónico</h5>
-                            <p class="inner-vinos-paragraph margin-x-auto reveal-fx reveal-fx--clip-y">El pináculo. Un vino que nace de una amalgama de nuestra
-                                filosofía, pasión y maestría. Un icono argentino. Nuestro buque insignia para el mundo.
+                            <p class="inner-vinos-paragraph margin-x-auto reveal-fx reveal-fx--clip-y">
+                                El pináculo. Un vino que nace de una amalgama de nuestra filosofía, pasión y 
+                                maestría. Un icono argentino. Nuestro buque insignia para el mundo.
                             </p>
                         </div>
                     </div>
                     <div class="margin-bottom-xxl margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
                         <div class="flex justify-center padding-bottom-sm">
-                            <img class="vinos-logo-2 reveal-fx reveal-fx--clip-y" src="./assets/img/vinos-vinacobos-vd.svg" alt="Vinos - VD">
+                            <img class="vinos-logo-2 reveal-fx reveal-fx--clip-y" 
+                                src="./assets/img/vinos/desktop/vinos-vinacobos-vd.svg" alt="Vinos - VD">
                         </div>
                         <div class="flex flex-column justify-center text-center">
                             <h5 class="inner-vinos-subtitle padding-bottom-xxs reveal-fx reveal-fx--clip-y">Micro terroir</h5>
@@ -204,114 +253,137 @@
                             </p>
                         </div>
                     </div>
-                    <div class="margin-bottom-xxl margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                    <div class="margin-bottom-xxl margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx" 
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%">
                         <div class="flex justify-center padding-bottom-sm">
-                            <img class="vinos-logo-2 reveal-fx reveal-fx--clip-y" src="./assets/img/vinos-vinacobos-vinculum.svg"
+                            <img class="vinos-logo-2 reveal-fx reveal-fx--clip-y" 
+                                src="./assets/img/vinos/desktop/vinos-vinacobos-vinculum.svg"
                                 alt="Vinos - Vinculum">
                         </div>
                         <div class="flex flex-column justify-center text-center">
-                            <h5 class="inner-vinos-subtitle padding-bottom-xxs reveal-fx reveal-fx--clip-y">Enfocado en terroir</h5>
-                            <p class="inner-vinos-paragraph margin-x-auto reveal-fx reveal-fx--clip-y">Celebra la conexión con nuestros productores. Un vínculo
-                                fundamental forjado en el intercambio de conocimientos que conduce a la creación de
-                                vinos destacados.
+                            <h5 class="inner-vinos-subtitle padding-bottom-xxs reveal-fx reveal-fx--clip-y">
+                                Enfocado en terroir
+                            </h5>
+                            <p class="inner-vinos-paragraph margin-x-auto reveal-fx reveal-fx--clip-y">
+                                Celebra la conexión con nuestros productores. Un vínculo fundamental forjado en el 
+                                intercambio de conocimientos que conduce a la creación de vinos destacados.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- _________________________________________________________________________________________ -->
 
-        <!-- UNICOS -->
+
+        <!-- UNICOS - Desktop-->
         <section class="vinos-especiales-unicos component-section-full z-index-2 padding-x-lg@sxl padding-x-xxxxs@md">
             <div class="display@md grid padding-x-xl max-width-xxxl margin-x-auto">
                 <div class="col-6 width-100% text-center flex justify-center items-start">
-                    <img class="vinos-foto padding-y-lg@md padding-right-lg@md padding-left-xs@md" src="./assets/img/vinos-unicos.png" alt="Vinos - Unicos">
+                    <img class="vinos-foto padding-y-lg@md padding-right-lg@md padding-left-xs@md" src="./assets/img/vinos/desktop/vinos-unicos.png" alt="Vinos - Unicos">
                 </div>
                 <div class="col-6 padding-x-md">
                     <h2 class="font-primary text-center inner-vinos-title margin-top-xs margin-top-xxxxs@sxl margin-bottom-sm">ÚNICOS</h2>
 
                     <div class="margin-bottom-xxl grid inner-vinos-content">
                         <div class="col-6 padding-x-lg text-right">
-                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-x" src="./assets/img/vinos-bramare.svg" alt="Vinos - Bramare">
+                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-x" 
+                                src="./assets/img/vinos/desktop/vinos-bramare.svg" alt="Vinos - Bramare">
                         </div>
                         <div class="col-6">
                             <h5 class="inner-vinos-subtitle reveal-fx reveal-fx--clip-x">Seleccionado</h5>
-                            <p class="inner-vinos-paragraph reveal-fx reveal-fx--clip-x">Distintivo. La expresión varietal más pura de nuestro
+                            <p class="inner-vinos-paragraph reveal-fx reveal-fx--clip-x">
+                                Distintivo. La expresión varietal más pura de nuestro
                                 terruño.
                             </p>
                         </div>
                     </div>
                     <div class="margin-bottom-xxl grid inner-vinos-content">
                         <div class="col-6 padding-x-lg text-right">
-                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-x" src="./assets/img/vinos-cocodrilo.svg" alt="Vinos - Cocodrilo">
+                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-x" 
+                            src="./assets/img/vinos/desktop/vinos-cocodrilo.svg" alt="Vinos - Cocodrilo">
                         </div>
                         <div class="col-6">
                             <h5 class="inner-vinos-subtitle reveal-fx reveal-fx--clip-x">Blend de estilo bordelés</h5>
-                            <p class="inner-vinos-paragraph reveal-fx reveal-fx--clip-x">Nuestro compromiso con el Cabernet Sauvignon de alta
+                            <p class="inner-vinos-paragraph reveal-fx reveal-fx--clip-x">
+                                Nuestro compromiso con el Cabernet Sauvignon de alta
                                 calidad producido en Argentina.
                             </p>
                         </div>
                     </div>
                     <div class="grid inner-vinos-content">
                         <div class="col-6 padding-x-lg text-right">
-                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-x" src="./assets/img/vinos-felino.svg" alt="Vinos - Felino">
+                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-x" 
+                                src="./assets/img/vinos-felino.svg" alt="Vinos - Felino">
                         </div>
                         <div class="col-6">
                             <h5 class="inner-vinos-subtitle reveal-fx reveal-fx--clip-x">Expresión Varietal</h5>
-                            <p class="inner-vinos-paragraph reveal-fx reveal-fx--clip-x">El primer paso de nuestra cartera hacia la exploración de
-                                terruños.
+                            <p class="inner-vinos-paragraph reveal-fx reveal-fx--clip-x">
+                                El primer paso de nuestra cartera hacia la exploración de terruños.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- _________________________________________________________________________________________ -->
 
             
-            <!-- Mobile -->
+            <!-- UNICOS - Mobile -->
             <div class="hide@md margin-x-auto">
-                <h2 class="font-primary text-center inner-vinos-title reveal-fx reveal-fx--clip-y scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">ÚNICOS</h2>
+                <h2 class="font-primary text-center inner-vinos-title reveal-fx reveal-fx--clip-y scroll-fx js-scroll-fx" 
+                    data-scroll-fx="opacity, 0, 1, 25%, 35%">ÚNICOS</h2>
                 <div class="width-100% text-center flex justify-center items-center">
-                    <img class="vinos-foto padding-lg reveal-fx reveal-fx--clip-y scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%" src="./assets/img/vinos-unicos.png" alt="Vinos - Unicos">
+                    <img class="vinos-foto padding-lg reveal-fx reveal-fx--clip-y scroll-fx js-scroll-fx" 
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%" 
+                        src="./assets/img/vinos/desktop/vinos-unicos.png" alt="Vinos - Unicos">
                 </div>
                 <div>
                     <div class="margin-bottom-xxl margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
                         <div class="flex justify-center padding-top-lg padding-bottom-sm">
-                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-y" src="./assets/img/vinos-bramare.svg" alt="Vinos - Bramare">
+                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-y" 
+                                src="./assets/img/vinos/desktop/vinos-bramare.svg" alt="Vinos - Bramare">
                         </div>
                         <div class="flex flex-column justify-center text-center">
                             <h5 class="inner-vinos-subtitle padding-bottom-xxs reveal-fx reveal-fx--clip-y">Seleccionado</h5>
-                            <p class="inner-vinos-paragraph margin-x-auto reveal-fx reveal-fx--clip-y">Distintivo. La expresión varietal más pura de nuestro
-                                terruño.
+                            <p class="inner-vinos-paragraph margin-x-auto reveal-fx reveal-fx--clip-y">
+                                Distintivo. La expresión varietal más pura de nuestro terruño.
                             </p>
                         </div>
                     </div>
                     <div class="margin-bottom-xxl margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
                         <div class="flex justify-center padding-bottom-sm">
-                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-y" src="./assets/img/vinos-cocodrilo.svg" alt="Vinos - Cocodrilo">
+                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-y" 
+                                src="./assets/img/vinos/desktop/vinos-cocodrilo.svg" alt="Vinos - Cocodrilo">
                         </div>
                         <div class="flex flex-column justify-center text-center">
-                            <h5 class="inner-vinos-subtitle padding-bottom-xxs reveal-fx reveal-fx--clip-y">Blend de estilo bordelés</h5>
-                            <p class="inner-vinos-paragraph margin-x-auto reveal-fx reveal-fx--clip-y">Nuestro compromiso con el Cabernet Sauvignon de alta
-                                calidad producido en Argentina.
+                            <h5 class="inner-vinos-subtitle padding-bottom-xxs reveal-fx reveal-fx--clip-y">
+                                Blend de estilo bordelés
+                            </h5>
+                            <p class="inner-vinos-paragraph margin-x-auto reveal-fx reveal-fx--clip-y">
+                                Nuestro compromiso con el Cabernet Sauvignon de alta calidad producido en Argentina.
                             </p>
                         </div>
                     </div>
-                    <div class="margin-bottom-xxl margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                    <div class="margin-bottom-xxl margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx" 
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%">
                         <div class="flex justify-center padding-bottom-sm">
-                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-y" src="./assets/img/vinos-felino.svg" alt="Vinos - Felino">
+                            <img class="vinos-logo-1 reveal-fx reveal-fx--clip-y" 
+                                src="./assets/img/vinos-felino.svg" alt="Vinos - Felino">
                         </div>
                         <div class="flex flex-column justify-center text-center">
                             <h5 class="inner-vinos-subtitle padding-bottom-xxs reveal-fx reveal-fx--clip-y">Expresión Varietal</h5>
-                            <p class="inner-vinos-paragraph margin-x-auto reveal-fx reveal-fx--clip-y">El primer paso de nuestra cartera hacia la exploración de
-                                terruños.
+                            <p class="inner-vinos-paragraph margin-x-auto reveal-fx reveal-fx--clip-y">
+                                El primer paso de nuestra cartera hacia la exploración de terruños.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- _________________________________________________________________________________________ -->
 
-        <!-- STORYLINE -->
+
+        <!-- STORYLINE - Desktop -->
         <section
             class="component-section-full text-center max-width-xxxxl margin-x-auto padding-bottom-xxxxl bg-white z-index-1"
             style="letter-spacing: 10px;">
@@ -386,10 +458,14 @@
 
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">COBOS</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec Marchiori</h3>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Bramare Malbec Marchiori</h3>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%"
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">COBOS</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec Marchiori</h3>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Bramare Malbec Marchiori</h3>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%"
                                                 style="color: var(--color-secondary);">TERROIR PIONEER</h3>
                                         </div>
                                     </div>
@@ -423,13 +499,16 @@
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y ">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2000</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2000</h2>
                                         </div>
 
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">FELINO</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">FELINO</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec
                                             </h3>
                                          
                                         </div>
@@ -463,14 +542,16 @@
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2003</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2003</h2>
                                         </div>
 
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">FELINO</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Cab. Suav.</h3>
-                                            
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">FELINO</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Cab. Suav.</h3>                                            
                                         </div>
                                     </div>
                                 </div>
@@ -503,14 +584,16 @@
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2004</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2004</h2>
                                         </div>
 
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">MARCHIORI</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Chardonnay</h3>
-                                    
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">MARCHIORI</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Chardonnay</h3>                                    
                                         </div>
                                     </div>
                                 </div>
@@ -545,15 +628,18 @@
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2005</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2005</h2>
                                         </div>
 
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">COBOS</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Cobos Volturno</h3>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Bramare Malbec y Cab. Suav. Luján de Cuyo</h3>
-                                            
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">COBOS</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Cobos Volturno</h3>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Bramare Malbec y Cab. Suav. Luján de Cuyo</h3>                                            
                                         </div>
                                     </div>
                                 </div>
@@ -585,13 +671,15 @@
                                     <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
                                         <div class="v-timeline__item flex flex-row padding-right-lg">
                                             <div class="v-timeline__date">
-                                                <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2006</h2>
+                                                <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                    data-scroll-fx="opacity, 0, 1, 25%, 35%">2006</h2>
                                             </div>
                                             <div
                                                 class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                                <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">FELINO</h2>
-                                                <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Chardonnay</h3>
-                                      
+                                                <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                    data-scroll-fx="opacity, 0, 1, 25%, 35%">FELINO</h2>
+                                                <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                    data-scroll-fx="opacity, 0, 1, 25%, 35%">Chardonnay</h3>                                      
                                             </div>
                                         </div>
                                     </div>
@@ -615,26 +703,24 @@
 
                                         <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
                                             <h2 class="text-component-title-2" style="transform: translateY(-12px);">BRAMARE</h2>
-                                            <h3 class="text-component-subtitle">Malbec Valle de Uco</h3>
-                                         
-                                            
+                                            <h3 class="text-component-subtitle">Malbec Valle de Uco</h3>                                                                                     
                                         </div>
-
                                     </div>
                                 </div>
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2007</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2007</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">
                                                 Malbec Valle de Uco
-                                            </h3>
-                                            
+                                            </h3>                                            
                                         </div>
                                     </div>
                                 </div>
@@ -648,50 +734,48 @@
                                     class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true">
                                 </div>
-
                                 <div class="display@md v-timeline__items-group">
                                     <div class="v-timeline__item">
                                         <div class="v-timeline__date margin-bottom-sm">
                                             <h2 class="grey-number padding-left-xs">2008</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
                                             <h2 class="text-component-title">
                                                 BRAMARE</h2>
                                             <h3 class="text-component-subtitle">Malbec Reborn</h3>
                                         </div>
-
                                     </div>
                                 </div>
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2008</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2008</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec Reborn</h3>
-                                            
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec Reborn</h3>                                            
                                         </div>
                                     </div>
                                 </div>
                             </section>
+
                             <section class="v-timeline__section js-v-timeline__section">
-                                <div class="display@md v-timeline__marker bg-primary" aria-hidden="true" style="transform: translateX(-4.5px);">
+                                <div class="display@md v-timeline__marker bg-primary" aria-hidden="true" 
+                                    style="transform: translateX(-4.5px);">
                                 </div>
                                 <div class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true" style="transform: translateX(-2px);">
                                 </div>
-
                                 <div class="display@md v-timeline__items-group">
                                     <div class="v-timeline__item">
                                         <div class="v-timeline__date margin-bottom-sm">
                                             <h2 class="grey-number padding-right-xs">2012</h2>
                                         </div>
-
                                         <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
                                             <h2 class="text-component-title">BRAMARE</h2>
                                             <h3 class="text-component-subtitle-2 padding-left-xxxxs">Malbec Tousa & Zingaretti
@@ -704,19 +788,22 @@
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2012</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2012</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec Tousa & Zingaretti</h3>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Cocodrilo Corte</h3>
-                                           
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec Tousa & Zingaretti</h3>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Cocodrilo Corte</h3>                                           
                                         </div>
                                     </div>
                                 </div>
                             </section>
+
                             <section class="v-timeline__section js-v-timeline__section">
                                 <div style="transform: translateX(4.5px);"
                                     class="display@md v-timeline__marker bg-primary" aria-hidden="true">
@@ -725,54 +812,52 @@
                                     class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true">
                                 </div>
-
                                 <div class="display@md v-timeline__items-group">
                                     <div class="v-timeline__item flex-row padding-right-lg">
                                         <div class="v-timeline__date margin-bottom-sm">
                                             <h2 class="grey-number padding-left-xs">2014</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
                                             <h2 class="text-component-title">COBOS</h2>
-                                            <h3 class="text-component-subtitle">Malbec Chañares</h3>
-                                        
+                                            <h3 class="text-component-subtitle">Malbec Chañares</h3>                                        
                                         </div>
-
                                     </div>
                                 </div>
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y ">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2014</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2014</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">COBOS</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec Chañares
-                                            </h3>
-                                         
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">COBOS</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec Chañares
+                                            </h3>                                         
                                         </div>
                                     </div>
                                 </div>
                             </section>
+
                             <section class="v-timeline__section js-v-timeline__section">
-                                <div class="display@md v-timeline__marker bg-primary" aria-hidden="true" style="transform: translateX(-4.5px);">
+                                <div class="display@md v-timeline__marker bg-primary" aria-hidden="true" 
+                                    style="transform: translateX(-4.5px);">
                                 </div>
                                 <div class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true" style="transform: translateX(-2px);">
                                 </div>
-
                                 <div class="display@md v-timeline__items-group">
                                     <div class="v-timeline__item">
                                         <div class="v-timeline__date margin-bottom-sm">
                                             <h2 class="grey-number padding-right-xs">2015</h2>
                                         </div>
-
                                         <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
                                             <h2 class="text-component-title">BRAMARE</h2>
-                                            <h3 class="text-component-subtitle-2 padding-left-xxxxs">Malbec y Cab. Franc Chañares
+                                            <h3 class="text-component-subtitle-2 padding-left-xxxxs">
+                                                Malbec y Cab. Franc Chañares
                                             </h3>
                                         </div>
                                     </div>
@@ -780,17 +865,20 @@
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2015</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2015</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec y Cab. Franc Chañares</h3>
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec y Cab. Franc Chañares</h3>
                                         </div>
                                     </div>
                                 </div>
                             </section>
+
                             <section class="v-timeline__section js-v-timeline__section">
                                 <div style="transform: translateX(4.5px);"
                                     class="display@md v-timeline__marker bg-primary" aria-hidden="true">
@@ -799,79 +887,77 @@
                                     class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true">
                                 </div>
-
                                 <div class="display@md v-timeline__items-group">
                                     <div class="v-timeline__item flex-row padding-right-lg">
                                         <div class="v-timeline__date margin-bottom-sm">
                                             <h2 class="grey-number padding-left-xs">2016</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
                                             <h2 class="text-component-title">BRAMARE</h2>
                                             <h3 class="text-component-subtitle">Pinor Noir Valle de Uco</h3>
-                                            <h3 class="text-component-subtitle">Chardonnay Los Arbolitos</h3>
-                                        
+                                            <h3 class="text-component-subtitle">Chardonnay Los Arbolitos</h3>                                        
                                         </div>
-
                                     </div>
                                 </div>
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y ">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2016</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2016</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Pinot Noir Valle de Uco
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Pinot Noir Valle de Uco
                                             </h3>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Chardonnay Los Arbolitos
-                                            </h3>
-                                            
-                                         
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Chardonnay Los Arbolitos
+                                            </h3>                                                                                     
                                         </div>
                                     </div>
                                 </div>
                             </section>
+
                             <section class="v-timeline__section js-v-timeline__section">
-                                <div class="display@md v-timeline__marker bg-primary" aria-hidden="true" style="transform: translateX(-4.5px);">
+                                <div class="display@md v-timeline__marker bg-primary" aria-hidden="true" 
+                                style="transform: translateX(-4.5px);">
                                 </div>
                                 <div class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true" style="transform: translateX(-2px);">
                                 </div>
-
                                 <div class="display@md v-timeline__items-group">
                                     <div class="v-timeline__item">
                                         <div class="v-timeline__date margin-bottom-sm">
                                             <h2 class="grey-number padding-right-xs">2017</h2>
                                         </div>
-
                                         <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
                                             <h2 class="text-component-title">COBOS</h2>
-                                            <h3 class="text-component-subtitle-2 padding-left-xxxxs">Malbec & Volturno (New concept)
-                                            </h3>
-                                          
+                                            <h3 class="text-component-subtitle-2 padding-left-xxxxs">
+                                                Malbec & Volturno (New concept)
+                                            </h3>                                          
                                         </div>
                                     </div>
                                 </div>
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2017</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2017</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">COBOS</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec & Volturno (New concept)</h3>
-                                           
-                                           
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">COBOS</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Malbec & Volturno (New concept)</h3>                                                                                      
                                         </div>
                                     </div>
                                 </div>
                             </section>
+
                             <section class="v-timeline__section js-v-timeline__section">
                                 <div style="transform: translateX(4.5px);"
                                     class="display@md v-timeline__marker bg-primary" aria-hidden="true">
@@ -880,51 +966,48 @@
                                     class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true">
                                 </div>
-
                                 <div class="display@md v-timeline__items-group">
                                     <div class="v-timeline__item flex-row padding-right-lg">
                                         <div class="v-timeline__date margin-bottom-sm">
                                             <h2 class="grey-number padding-left-xs">2017</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-top-xs@md padding-right-lg@md margin-right-sm@md">
                                             <h2 class="text-component-title">BRAMARE</h2>
-                                            <h3 class="text-component-subtitle">Chardonnay</h3>
-                                        
+                                            <h3 class="text-component-subtitle">Chardonnay</h3>                                        
                                         </div>
-
                                     </div>
                                 </div>
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y ">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2017</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2017</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Chardonnay
-                                            </h3>
-                                         
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Chardonnay
+                                            </h3>                                         
                                         </div>
                                     </div>
                                 </div>
                             </section>
+
                             <section class="v-timeline__section js-v-timeline__section">
-                                <div class="display@md v-timeline__marker bg-primary" aria-hidden="true" style="transform: translateX(-4.5px);">
+                                <div class="display@md v-timeline__marker bg-primary" aria-hidden="true" 
+                                    style="transform: translateX(-4.5px);">
                                 </div>
                                 <div class="hide@md v-timeline__marker bg-primary reveal-fx reveal-fx--clip-y"
                                     aria-hidden="true" style="transform: translateX(-2px);">
                                 </div>
-
                                 <div class="display@md v-timeline__items-group">
                                     <div class="v-timeline__item">
                                         <div class="v-timeline__date margin-bottom-sm">
                                             <h2 class="grey-number padding-right-xs">2020</h2>
                                         </div>
-
                                         <div class="text-component text-left padding-top-xs@md padding-left-xl@md">
                                             <h2 class="text-component-title">BRAMARE</h2>
                                             <h3 class="text-component-subtitle-2 padding-left-xxxxs">Pinot Noir Patagonia
@@ -935,20 +1018,19 @@
                                 <div class="hide@md v-timeline__items-group reveal-fx reveal-fx--clip-y">
                                     <div class="v-timeline__item flex flex-row padding-right-lg">
                                         <div class="v-timeline__date">
-                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">2020</h2>
+                                            <h2 class="grey-number-mobile padding-right-xs scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">2020</h2>
                                         </div>
-
                                         <div
                                             class="text-component text-left padding-left-sm padding-top-md margin-top-xxs">
-                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
-                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">Pinot Noir Patagonia</h3>
+                                            <h2 class="text-component-title-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">BRAMARE</h2>
+                                            <h3 class="text-component-subtitle-mobile scroll-fx js-scroll-fx" 
+                                                data-scroll-fx="opacity, 0, 1, 25%, 35%">Pinot Noir Patagonia</h3>
                                         </div>
                                     </div>
                                 </div>
                             </section>
-
-
-
                         </div>
                     </div>
                 </div>
@@ -959,6 +1041,8 @@
 
             </div>
         </section>
+        <!-- _________________________________________________________________________________________ -->
+
 
     </main>
     <!-- ==============================================END-MAIN============================================== -->

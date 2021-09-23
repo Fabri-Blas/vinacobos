@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        document.getElementsByTagName("html")[0].className += " js";
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link id="codyframe" rel="stylesheet" href="../assets/css/style.css">
+    <title>Viña Cobos</title>
+</head>
+
+<body class="bg-white">
+    <!---------------------HEADER------------------------------>
+
+    <!-- ================================================HEADER================================================ -->
+    <header id="header-global"
+        class="f-header js-f-header hide-nav js-hide-nav js-hide-nav--main backdrop-blur-10 padding-y-lg padding-y-0@md"
+        data-nav-target-class="f-header--expanded">
+        <div class="f-header__mobile-content container max-width-lg padding-top-0@md flex flex-column">
+            <a href="./" class="position-absolute left-0 top-50% -translate-y-50%">
+                <img src="./assets/img/logo.svg" width="30" height="27" alt="Logo" class="logo-mobile-1">
+            </a>
+            <button
+                class="position-absolute right-0 top-50% -translate-y-50% reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
+                aria-label="Toggle menu">
+                <img src="./assets/img/hamburguer.svg" width="25" height="9" alt="" class="hamburguer-mobile-1">
+            </button>
+        </div>
+
+        <div class="f-header__nav" role="navigation">
+            <div
+                class="f-header__nav-grid justify-between@md container max-width-xxxl margin-x-auto padding-x-xl@md padding-x-xxl@sxl">
+                <div class="f-header__nav-logo-wrapper">
+                    <a href="./" class="">
+                        <img id="logo" src="./assets/img/logo.svg" width="38" height="35" alt="Logo" class="display@md">
+                    </a>
+                </div>
+
+                <ul id="desktop-header" class="f-header__list margin-left-sm justify-center@md display@md">
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                            class="f-header__link btn--nav">HISTORIA</a></li>
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                            class="f-header__link btn--nav">TERROIR</a></li>
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./vinos"
+                            class="f-header__link btn--nav">VINOS</a></li>
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                            class="f-header__link btn--nav">CONTACTO</a></li>
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                            class="f-header__link btn--nav">TIENDA</a></li>
+                </ul>
+                <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
+                </ul>
+
+                <ul class="f-header__list padding-top-lg justify-center@md hide@md">
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
+                    </li>
+                    <li class="f-header__item padding-y-xs margin-x-sm">
+                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TIENDA</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- ==============================================END-HEADER============================================== -->
+
+
+
+    <!-- ================================================MAIN================================================ -->
+
+
+    <!-- scroll component -->
+    <div class="scroll-indicator-container display@md" data-title="Conoce Viña Cobos">
+        <div class="scroll-indicator-wrapper" style="height: 400px;">
+            <div class="scroll-indicator-inner" style="height: 250px;">
+                <span class="scroll-indicator"></span>
+            </div>
+            <div class="title">
+                <h3>Conoce Viña Cobos</h3>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- ------------------------- NUESTROS VIÑEDOS ------------------------- -->
+
+
+        <section class="display@md component-section z-index-2 bg shadow-sm  ">
+            
+            <!-- Componente1 -->
+            <div id="hero" class="video-bg position-relative">
+                <div class="video-bg__media" aria-hidden="true">
+                    <video autoplay loop muted playsInline src="./assets/img/terroir/desktop/cinemagraph-terroir.MOV"
+                        alt="cinema-video" style="filter: grayscale(100%);"></video>
+                </div>
+              
+                    <h1 class="vinedo-title position-absolute top-50% -translate-y-50% padding-left-sm">NUESTROS<br>VIÑEDOS </h1>    
+                <div class="container max-width-lg position-relative z-index-2">
+                    <div class="flex flex-center padding-y-100vh">
+                        <div class="text-component text-center">
+                            <div id="scroll-helper" class="position-absolute">
+                                <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+                                <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- _________________________________________________________________________________________ -->
+
+        <!--SECCION FRUTOS-->
+        <section id="frutos-caption" class="display@md component-section">
+            <div
+                class="display@md height-100% position-relative flex flex-column justify-center items-center">
+                <h2 class="text-center reveal-fx reveal-fx--clip-x">
+                    “Cosechamos los frutos de nuestro anhelo y esfuerzo, mientras que continuamos creando vinos”
+                </h2>
+                <div class="container index-2">
+                    <div class="flex flex-center">
+                        <div class="text-component text-center">
+                            <div id="scroll-helper" class="position-absolute">
+                                <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+                                <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="assets/img/terroir/desktop/terroir-arbol-fondo.png" class="display@sxl" alt="terroir-arbol">
+            <img src="assets/img/terroir/desktop/arbol-1366.png" class="display@md hide@sxl" alt="terroir-arbol">
+        </section>
+        <!-- _________________________________________________________________________________________ -->
+
+        <!-- SECCION SLIDING  PANELS -->
+        <section id="panels" class="display@md component-section-full">
+            <div class="s-panels js-s-panels">
+                <a href="#panels">
+                    <button class="reset s-panels__nav-control js-s-panels__nav-control js-tab-focus"
+                        aria-label="Toggle navigation">
+                        <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                            <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2">
+                                <line x1="2" y1="6" x2="22" y2="6" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <line x1="2" y1="18" x2="22" y2="18" />
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+
+
+
+                <!-- preview panels -->
+                <!-- ⚠️ don't remove the bg-opacity-0 class (toggled in JS) - the background color (bg-black) should be equal to the one of the .s-panels__project-figure elements -->
+                <ul class="s-panels__projects-list js-s-panels__projects-list bg-black bg-opacity-0">
+
+                    <!-- project 1 preview -->
+                    <li class="s-panels__project-preview js-s-panels__project-preview ">
+                        <div class="s-panels__project-intro">
+                            <div
+                                class="s-panels__text-component text-component text-center padding-x-md color-white font-smooth text-shadow-lg">
+                                <h3 class="color-inherit sliding-title">CHAÑARES<br>ESTATE </h3>
+
+                            </div>
+
+                            <a class="s-panels__project-control js-s-panels__project-control" href="#project-1">Open
+                                Project
+                                1</a>
+                        </div>
+
+                        <figure class="s-panels__project-figure bg-black">
+                            <img class="s-panels__project-img" src="./assets/img/terroir/desktop/chanares-estate.jpg"
+                                alt="Image description">
+                        </figure>
+
+                        <div class="s-panels__project-title-wrapper padding-bottom-lg padding-top-xl">
+                            <div class="container max-width-md">
+                                <h1 class="s-panels__project-title text-center text-xxxl color-white text-shadow-md">
+                                    Chañares Estate</h1>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- project 2 preview -->
+                    <li class="s-panels__project-preview js-s-panels__project-preview ">
+                        <div class="s-panels__project-intro">
+                            <div
+                                class="s-panels__text-component text-component text-center padding-x-md color-white font-smooth text-shadow-lg">
+                                <h3 class="color-inherit sliding-title">ZINGARETTI<br>ESTATE </h3>
+
+                            </div>
+
+                            <a class="s-panels__project-control js-s-panels__project-control" href="#project-2">Open
+                                Project
+                                2</a>
+                        </div>
+
+                        <figure class="s-panels__project-figure bg-black">
+                            <img class="s-panels__project-img" src="./assets/img/terroir/desktop/zingaretti-estate.jpg"
+                                alt="Image description">
+                        </figure>
+
+                        <div class="s-panels__project-title-wrapper padding-bottom-lg padding-top-xl">
+                            <div class="container max-width-md">
+                                <h1 class="s-panels__project-title text-center text-xxxl color-white text-shadow-md">
+                                    Zingaretti Estate</h1>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- project 3 preview -->
+                    <li class="s-panels__project-preview js-s-panels__project-preview">
+                        <div class="s-panels__project-intro">
+                            <div
+                                class="s-panels__text-component text-component text-center padding-x-md color-white font-smooth text-shadow-lg">
+                                <h3 class="color-inherit sliding-title">MARCHIORI<br>ESTATE </h3>
+
+                            </div>
+
+                            <a class="s-panels__project-control js-s-panels__project-control" href="#project-3">Open
+                                Project
+                                3</a>
+                        </div>
+
+                        <figure class="s-panels__project-figure bg-black">
+                            <img class="s-panels__project-img" src="./assets/img/terroir/desktop/marchiori-estate.jpg"
+                                alt="Image description">
+                        </figure>
+
+                        <div class="s-panels__project-title-wrapper padding-bottom-lg padding-top-xl">
+                            <div class="container max-width-md">
+                                <h1 class="s-panels__project-title text-center text-xxxl color-white text-shadow-md">
+                                    Marchiori Estate</h1>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- project 4 preview -->
+                    
+                </ul>
+
+                <!-- main navigation -->
+                <div class="s-panels__nav-wrapper bg-contrast-higher font-smooth is-hidden js-s-panels__nav-wrapper">
+                    <div class="container height-100% padding-top-xxxl padding-bottom-md padding-y-md@sm">
+                        <div class="grid height-100%">
+                            <nav class="margin-bottom-md margin-bottom-0@sm col-6@sm flex@sm" aria-label="Main">
+                                <ul class="flex flex-column gap-sm margin-top-auto@sm">
+                                    <li><a class="s-panels__nav-link text-xxl text-xxxl@sm" href="#0">About</a></li>
+                                    <li><a class="s-panels__nav-link text-xxl text-xxxl@sm" href="#0">Work</a></li>
+                                    <li><a class="s-panels__nav-link text-xxl text-xxxl@sm" href="#0">Blog</a></li>
+                                    <li><a class="s-panels__nav-link text-xxl text-xxxl@sm" href="#0">Get in touch</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <div class="margin-top-auto col-6@sm">
+                                <ul class="flex flex-column gap-xs flex-row@sm justify-end@sm">
+                                    <li><a class="s-panels__social-link text-sm@sm" href="#0">Twitter</a></li>
+                                    <li><a class="s-panels__social-link text-sm@sm" href="#0">Instagram</a></li>
+                                    <li><a class="s-panels__social-link text-sm@sm" href="#0">Newsletter</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- project 1 -->
+                <section id="project-1" class="s-panels__project-content bg padding-y-lg is-hidden">
+                    <article class="article text-component container max-width-sm">
+                        <h3 class="sliding-titles">CHAÑARES ESTATE</h3>
+
+                        <p class="sliding-paragraph"> Esta propiedad tiene una superficie plantada de 17,3 ha de Malbec,
+                            Cabernet Franc y Cabernet Sauvignon.
+                            La zona se caracteriza por tener suelo de origen aluvial, pobre, pedregoso y de buen
+                            drenaje. En
+                            cuanto a la topografía, el viñedo tiene una exposición norte, con una pendiente oeste-este
+                            de
+                            2,7%, que favorece la circulación de aire y las condiciones de sanidad del viñedo.
+                            Durante la época de maduración, la amplitud térmica es de 14,4º C.
+                            Para la irrigación se utiliza goteo. Este sistema, junto con la alta permeabilidad del
+                            suelo,
+                            permite controlar el vigor del viñedo durante el desarrollo vegetativo y la madurez de las
+                            uvas.
+                            La poda se realiza a cordón pitoneado.
+                            Una de las particularidades de este viñedo es que conserva diversos bosques nativos de
+                            chañares
+                            -árbol típico de esta región- como reserva natural de flora y fauna autóctonas.
+                            El viñedo fue adquirido por Paul Hobbs en el año 2013, conservando su diseño y naturaleza.
+                            Chañares tiene la particularidad de mantener entre sus viñedos diversos bosques nativos de
+                            chañares (árbol típico de esta región). Suman 5 bosques de chañares, en total más de 1,5ha,
+                            un
+                            10% de la superficie plantada. Estos bosques funcionan como refugio de fauna nativa y banco
+                            de
+                            semillas de flora autóctona. Se pueden encontrar diferentes especies de pasturas, arbustos y
+                            árboles.</p>
+                    </article>
+                </section>
+
+                <!-- project 2 -->
+                <section id="project-2" class="s-panels__project-content bg padding-y-lg is-hidden">
+                    <article class="article text-component container max-width-sm">
+                        <h3 class="sliding-titles">ZINGARETTI ESTATE</h3>
+                        <p class="sliding-paragraph"> A finales del 1800 el abuelo de Quito Zingaretti llegó con su
+                            familia
+                            desde Italia y se instaló en Maipú. Al poco tiempo compró el terreno donde hoy está ubicada
+                            la
+                            finca. Desde Maipú, viajaban en carreta durante todo un día hasta Tupungato, permanecían
+                            trabajando en la propiedad durante una semana y luego volvían a Maipú. De esta forma fueron
+                            desarrollando la finca hasta que pudieron instalarse allí definitivamente. Fueron, junto a
+                            otras
+                            pocas familias, los primeros viticultores de esa zona.
+                            Américo Zingaretti, llamado así porque fue el primero de la familia en nacer en América, le
+                            dejó
+                            a su hijo “AmeriQuito” Zingaretti la mitad sur de la finca, donde hoy en día se encuentran
+                            4,4
+                            ha de un espaldero de Malbec, anteriores a 1930 (se considera de 1930 porque es el año en el
+                            cuál se comenzó a llevar registro de los viñedos).
+                            Los suelos en general son de textura gruesa, franco-arenosos en donde las rocas aparecen a
+                            distintas profundidades. Dentro de este viñedo encontramos diferencias en el suelo muy
+                            marcadas.
+                            Zonas más fresca que el resto del Valle de Uco, posiblemente por la proximidad a una cadena
+                            de
+                            cerros ubicados hacia el norte que encajonan el aire frío que baja desde la montaña. Esto
+                            nos
+                            llevó a buscar potenciar el chardonnay. La pendiente es algo pronunciada y gracias a la
+                            orientación de las hileras permite un buen flujo de aire que ayuda a mantener la sanidad.
+                            Estas
+                            se orientan de este a oeste a diferencia del resto de los viñedos que suele ser de norte a
+                            sur.
+
+                        </p>
+
+
+                    </article>
+                </section>
+
+                <!-- project 3 -->
+                <section id="project-3" class="s-panels__project-content bg padding-y-lg is-hidden">
+                    <article class="article text-component container max-width-sm">
+                        <h3 class="sliding-titles">MARCHIORI ESTATE</h3>
+                        <p class="sliding-paragraph"> El viñedo Marchiori es una parte importante de la historia de Viña
+                            Cobos. De aquí provinieron las uvas de la cosecha inaugural de la bodega, Cobos Malbec 1999.
+                            Una
+                            de sus dueñas, Andrea Marchiori, fue socia de Viña Cobos durante 18 años.
+
+                            El suelo es variable según el lugar de la finca. Generalmente encontramos una primera capa
+                            de
+                            suelo más pesado con mayor proporción de arcilla que abarca entre los 10 y 40 primeros cm.
+                            Luego
+                            aparece una textura franco arenosa que permite un buen drenaje del agua. Además, presenta
+                            cantos
+                            rodados de diversos tamaños que en algunos sectores son abundantes. Se trata de viñedos
+                            antiguos, con una población de plantas, la mayoría de más de 80 años.</p>
+
+
+                    </article>
+                </section>
+
+                <!-- project 4 -->
+                <section id="project-4" class="s-panels__project-content bg padding-y-lg is-hidden">
+                    <article class="article text-component container max-width-sm">
+                        <p class="color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum
+                            voluptate nam sunt vitae id quos illo autem temporibus. Et qui quidem magni architecto modi
+                            pariatur vel libero, a consequuntur dignissimos omnis hic accusantium nesciunt consequatur
+                            quam soluta autem tenetur. Quidem odit accusantium, sequi nulla minima natus adipisci,
+                            labore sint recusandae ullam quasi magnam totam eveniet cupiditate perferendis non
+                            aspernatur, tenetur temporibus incidunt consequuntur accusamus iste quae distinctio eum?
+                            Atque distinctio illo nam maiores, veniam non officia laborum porro aperiam pariatur?</p>
+
+                        <p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                            nulla inventore maxime itaque fugiat. Blanditiis officiis illum nostrum, sit possimus ut
+                            omnis ullam iste aspernatur nisi nesciunt molestias maiores ratione? Dolore soluta, cum
+                            officia aliquam quae natus eligendi quis nostrum?</p>
+
+                        <p class="color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum
+                            voluptate nam sunt vitae id quos illo autem temporibus. Et qui quidem magni architecto modi
+                            pariatur vel libero, a consequuntur dignissimos omnis hic accusantium nesciunt consequatur
+                            quam soluta autem tenetur. Quidem odit accusantium, sequi nulla minima natus adipisci,
+                            labore sint recusandae ullam quasi magnam totam eveniet cupiditate perferendis non
+                            aspernatur, tenetur temporibus incidunt consequuntur accusamus iste quae distinctio eum?
+                            Atque distinctio illo nam maiores, veniam non officia laborum porro aperiam pariatur?</p>
+                    </article>
+                </section>
+
+
+                <!-- transition overlay layer -->
+                <div class="s-panels__overlay-layer bg-black js-s-panels__overlay-layer" aria-hidden="true"></div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- _______________________________DESAROLLO MOBILE_________________________________________________________ -->
+
+
+    </main>
+    <!-- ==============================================END-MAIN============================================== -->
+
+    <!-- ================================================FOOTER================================================ -->
+    <footer class="component-footer position-relative  padding-bottom-xxxxl padding-bottom-0@md" style="z-index: 10;">
+
+        <div class="flex grid padding-x-lg padding-x-xxl@sxl padding-x-xl@md">
+
+            <div class="flex col-12 col-9@md font-footer-title margin-bottom-lg margin-bottom-0@md">
+                <p class="padding-left-xxs@md">
+                    <span class="block">EL ORIGEN</span>
+                    <span class="block">NOS DETERMINA</span>
+                </p>
+            </div>
+            <div class="display@md col-12 col-1@md fonts-footer-colums padding-left-lg@sxl"
+                style="transform: translateX(15px);">
+                <ul class="grid gap-md gap-xs@md">
+                    <li><a class="footer-v5__link" href="#0">Historia</a></li>
+                    <li><a class="footer-v5__link" href="#0">Terroir</a></li>
+                    <li><a class="footer-v5__link" href="#0">Vinos</a></li>
+                    <li><a class="footer-v5__link" href="#0">Contacto</a></li>
+                    <li><a class="footer-v5__link" href="#0">Tienda</a></li>
+                </ul>
+            </div>
+            <div class="display@md col-12 col-2@md fonts-footer-colums padding-left-xxs@sxl padding-left-xs@md">
+                <ul class="grid gap-md gap-xs@md padding-left-xxl@sxl padding-left-md@md">
+                    <li><a class="footer-v5__link" href="#0">Paul Hobbs selection</a></li>
+                    <li><a class="footer-v5__link" href="#0">Legal</a></li>
+                    <li><a class="footer-v5__link" href="#0">Recibir Noticias</a></li>
+                </ul>
+            </div>
+
+            <div class="hide@md">
+                <div class="col-12 fonts-footer-colums">
+                    <ul class="grid gap-md">
+                        <li><a class="footer-v5__link" href="#0">Historia</a></li>
+                        <li><a class="footer-v5__link" href="#0">Terroir</a></li>
+                        <li><a class="footer-v5__link" href="#0">Vinos</a></li>
+                        <li><a class="footer-v5__link" href="#0">Contacto</a></li>
+                        <li><a class="footer-v5__link" href="#0">Tienda</a></li>
+                        <li><a class="footer-v5__link" href="#0">Paul Hobbs selection</a></li>
+                        <li><a class="footer-v5__link" href="#0">Legal</a></li>
+                        <li><a class="footer-v5__link" href="#0">Recibir Noticias</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div
+            class="col-12 flex justify-between items-center position-absolute bottom-0 width-100% padding-x-lg padding-x-xxl@sxl padding-x-xl@md padding-bottom-xl">
+
+            <a href="#0" class="padding-left-sm@md">
+                <img id="logo" src="../assets/img/logo.svg" width="32" height="32" alt="Logo">
+            </a>
+
+            <div class="display@md flex gap-sm">
+                <!--facebook-->
+                <a href="#0">
+                    <img id="logo" src="../assets/img/facebook-logo.svg" width="25" height="25" alt="Logo"
+                        class="padding-xxxs margin-x-xxxs">
+                </a>
+
+                <!-- twitter icon -->
+                <a href="#0">
+                    <img id="logo" src="../assets/img/twitter.svg" width="25" height="25" alt="Logo"
+                        class="padding-xxxs margin-x-xxxs">
+                </a>
+
+                <!-- instagram -->
+                <a href="#0">
+                    <img id="logo" src="../assets/img/instagram-logo.svg" width="25" height="25" alt="Logo"
+                        class="padding-xxxs margin-x-xxxs">
+                </a>
+            </div>
+
+
+            <div class="hide@md">
+                <!--facebook-->
+                <a href="#0" class="margin-x-xxxs">
+                    <img id="logo" src="../assets/img/facebook-logo.svg" width="25" height="auto" alt="Logo"
+                        class="padding-xxxs">
+                </a>
+
+                <!-- twitter icon -->
+                <a href="#0" class="margin-x-xxxs">
+                    <img id="logo" src="../assets/img/twitter.svg" width="25" height="auto" alt="Logo"
+                        class="padding-xxxs">
+                </a>
+
+                <!-- instagram -->
+                <a href="#0" class="margin-x-xxxs">
+                    <img id="logo" src="../assets/img/instagram-logo.svg" width="25" height="auto" alt="Logo"
+                        class="padding-xxxs">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- ==============================================END-FOOTER============================================== -->
+
+    <script src="../assets/js/scripts.js"></script>
+</body>
+
+</html>
