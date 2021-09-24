@@ -35,6 +35,9 @@
   & .text-component {
     transform: translateY(-22px);
   }
+  & .text-component-2 {
+    transform: translateY(-250px);
+  }
 }
 
 .component-half {
@@ -84,11 +87,6 @@
 // }
 .video-looping-tab {
   height: 100vh;
-}
-
-.video-cobos {
-  width: 100%;
-  height: auto;
 }
 
 .model-3d {
@@ -369,18 +367,10 @@ footer {
 }
 #felino-fresco {
   & .felino-fresco-sidetext {
-    bottom: 228px;
-    right: -300px;
-    transform: rotate(-90deg) translate(-42px, -10px);
-
-    & h2 {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 120px;
-      line-height: 199px;
-      letter-spacing: 0.12em;
-      color: rgba(28, 28, 28, 0.3);
-    }
+    position: absolute;
+    right: 110px;
+    height: 500px;
+    width: auto;
   }
   & h3 {
     font-style: normal;
@@ -499,9 +489,42 @@ footer {
 
 // ===============SECCION VARIETALES===============
 
+#cobos-home {
+  background-image: url("../img/cobos/desktop/cobos-bg.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .bottle {
+    position: absolute;
+    bottom: -58px;
+    right: 503px;
+  }
+
+  &-content {
+    width: 99%;
+  }
+  &-mobile {
+    background-image: url("../img/cobos/mobile/cobos-bg-mobile.jfif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 #cobos-experiencia-desktop {
   & .experiencia-fullscreen-text {
     width: 85%;
+    z-index: 2;
+  }
+  .video-cobos {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 110px;
+    width: 1700px;
+    height: 860px;
+    overflow: hidden;
   }
 }
 #cobos-nuestroicono-desktop {
@@ -550,15 +573,24 @@ footer {
     max-width: 380px;
   }
   & .cobos-sidetext {
-    height: 622px;
-    width: 141px;
+    position: absolute;
+    right: 110px;
+    height: 500px;
+    width: auto;
+  }
+  & .video-iconico {
+    position: absolute;
+    z-index: 1;
+    left: 110px;
+    width: 1551px;
+    height: 500px;
+    overflow: hidden;
   }
 }
 
-
-#cobos-home {
-  background-image: url("../img/cobos/desktop/cobos-bg.jpg");
-  background-position: center;
+#volturno-home {
+  background-image: url("../img/volturno/desktop/volturno-bg.jpg");
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -572,7 +604,7 @@ footer {
     width: 99%;
   }
   &-mobile {
-    background-image: url("../img/cobos/mobile/cobos-bg-mobile.jfif");
+    background-image: url("../img/volturno/mobile/cobos-volturno-mobile.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -836,20 +868,21 @@ footer {
       font-weight: 500;
       font-size: 32px;
       line-height: 38px;
-      display: flex;
-      align-items: center;
-      text-align: center;
       letter-spacing: 0.07em;
       color: #3e3937;
+    }
+    & h6 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 30px;
+      letter-spacing: 0.07em;
+      color: #404040;
     }
   }
 }
 #historia-leyenda3 {
   &-mobile {
-    background-image: url("../img/historia/mobile/historia-mobile-inicio-background.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     & h3 {
       font-style: normal;
       font-weight: 500;
@@ -863,13 +896,19 @@ footer {
     }
   }
 }
-#historia-uncambio{
-  &-mobile{
+#historia-uncambio {
+  &-mobile {
     background-image: url("../img/historia/mobile/historia-mobile-uncambio-background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
+}
+#historia-mobile-timeline {
+  background-image: url("../img/final-tree.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .historia-custom-h2-mobile {
@@ -894,12 +933,12 @@ footer {
 .historia {
   &-final-tree {
     height: auto;
-    width:45vw;
+    width: 45vw;
     transform: translateY(-200px);
   }
   &-photo {
-  max-width: 700px;
-  height: auto;
+    max-width: 700px;
+    height: auto;
   }
   &-quote {
     position: absolute;
@@ -923,21 +962,19 @@ footer {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  
-  .paul-photo{
+
+  .paul-photo {
     max-width: 952px;
     width: 100%;
     height: auto;
   }
 }
 
-
 #historia-inicio {
   background-image: url("../img/historia/desktop/historia-2-fondo-desktop.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 
 #argentina-quote {
@@ -945,7 +982,6 @@ footer {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 
 #visita-argentina {
@@ -956,30 +992,28 @@ footer {
 }
 
 #argentina-cambio {
-
   background-image: url("../img/historia/desktop/argentina-mapa-desktop.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-
-.title-inicio{
+.title-inicio {
   font-family: var(--font-primary);
-  font-weight:500;
-  font-size:76.2px;
+  font-weight: 500;
+  font-size: 76.2px;
   line-height: 123.29px;
- letter-spacing: 0.12em;
+  letter-spacing: 0.12em;
 }
 
-.cuadro-texto{
+.cuadro-texto {
   max-width: 805px;
   height: auto;
 }
 
 #linea-de-tiempo-1,
-#linea-de-tiempo-2, 
-#linea-de-tiempo-3{
+#linea-de-tiempo-2,
+#linea-de-tiempo-3 {
   background-image: url("../img/historia/desktop/linea-arbol-desktop.png");
   background-position: right;
   background-size: contain;
@@ -992,46 +1026,52 @@ footer {
 }
 
 // ===============SECCION TERROIR ===============
+#terroir-home {
+  & .title {
+    position: absolute;
+    left: 100px;
+    top: 300px;
+  }
 
-.vinedo-title{
-font-family:var(--font-primary);
-font-style: normal;
-font-weight: 500;
-font-size: 76.2px;
-line-height: 90px;
-letter-spacing: 0.12em;
-}
-
-#frutos-caption{
   & h2 {
     font-family: var(--font-primary);
     font-style: normal;
     font-weight: 500;
     font-size: 76.2px;
-    line-height: 89.76px;
-    letter-spacing: 0.05em;
-    color: #3E3937;
-    max-width: 1400px;
-  }
-  & img {
-    position: absolute;
-    top: -320px;
-    right: 0;
-    max-width: 80%;  
-    height: auto;
+    line-height: 89, 76px;
+    letter-spacing: 0.12em;
+    max-width: 787px;
   }
 }
 
-.sliding-title{
-  font-family:var(--font-primary);
-font-style: normal;
-font-weight: 500;
-font-size: 32px;
-line-height: 38px;
-letter-spacing: 0.07em;
+.vinedo-title {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 76.2px;
+  line-height: 90px;
+  letter-spacing: 0.12em;
 }
-.sliding-titles{
-  font-family:  var(--font-primary);
+
+#frutos-caption {
+  & img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 50%;
+  }
+}
+
+.sliding-title {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.07em;
+}
+.sliding-titles {
+  font-family: var(--font-primary);
   font-style: normal;
   font-weight: 500;
   font-size: 47.1162px;
@@ -1039,7 +1079,7 @@ letter-spacing: 0.07em;
   letter-spacing: 0.12em;
 }
 
-.sliding-paragraph{
+.sliding-paragraph {
   font-family: var(--font-secondary);
   font-style: normal;
   font-weight: normal;
@@ -1047,16 +1087,132 @@ letter-spacing: 0.07em;
   line-height: 29px;
 }
 
-//===== SECCCION CONTACTO =======
+#terroir-mobile {
+  &-home {
+    background-image: url("../img/terroir/mobile/terroir-mobile-home.png");
+    background-position: center;
+    background-size: cover;
+  }
 
-#contacto-home{
-  background-image: url("../img/contacto/desktop/contacto-desktop-fondo.png");
-  background-position: right;
-  background-size: cover;
-  background-repeat: no-repeat;
-
+  &-leyenda {
+    & h3 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      text-align: center;
+      letter-spacing: 0.07em;
+      color: #3e3937;
+    }
+  }
 }
 
+#contacto-mobile {
+  &-home {
+    background-image: url("../img/contacto/mobile/contacto-mobile-home.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  &-leyenda {
+    background: #181818;
+
+    & h3 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      text-align: center;
+      letter-spacing: 0.07em;
+      color: #f1eee9;
+    }
+  }
+}
+
+//===== SECCCION CONTACTO =======
+
+#contacto-home {
+  background-image: url("../img/contacto/desktop/contacto-desktop-fondo-1920.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#vinos-origen {
+  background-color: #181818;
+}
+
+.vinos-origen-text {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 76.2px;
+  line-height: 90px;
+  color: #f1eee9;
+  letter-spacing: 0.05em;
+}
+.contact-box {
+  background-color: #f8f8f8;
+  width: 377px;
+  height: 410px;
+
+  & li {
+    cursor: pointer;
+  }
+
+  & .contact-section-selected {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.07em;
+    color: #1c1c1c;
+  }
+  & .contact-section-inactive {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.07em;
+    color: #878581;
+  }
+}
+
+.border-box {
+  border: 2px solid #a68676;
+  width: 432px;
+  height: 468px;
+}
+
+.contacto-text {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.07em;
+}
+
+.input-style {
+  border: 1px solid #3e3937;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 32px;
+}
+
+.form-text {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+}
+
+//=================================================================================
+//
+//                                  MEDIA QUERIES
+//=================================================================================
 
 @media only screen and (max-width: 1458px) {
   .felino {
@@ -1101,7 +1257,7 @@ letter-spacing: 0.07em;
       top: 160px;
     }
   }
-  #cobos-home {  
+  #cobos-home {
     .bottle {
       position: absolute;
       bottom: -46px;
@@ -1112,6 +1268,15 @@ letter-spacing: 0.07em;
   #cobos-experiencia-desktop {
     & .experiencia-fullscreen-text {
       transform: translateX(-50%) translateY(-15px);
+    }
+    .video-cobos {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 70px;
+      width: 1226px;
+      height: 570px;
+      overflow: hidden;
     }
   }
   #cobos-nuestroicono-desktop {
@@ -1132,8 +1297,18 @@ letter-spacing: 0.07em;
       max-width: 280px;
     }
     & .cobos-sidetext {
-      height: 466px;
-      width: 131px;
+      position: absolute;
+      right: 70px;
+      height: 317px;
+      width: auto;
+    }
+    & .video-iconico {
+      position: absolute;
+      z-index: 1;
+      left: 70px;
+      width: 1119px;
+      height: 317px;
+      overflow: hidden;
     }
   }
   #felino-momentos {
@@ -1210,7 +1385,7 @@ letter-spacing: 0.07em;
       color: #878581;
     }
   }
-  
+
   //==============HISTORIA==========
   #historia-home {
     .title {
@@ -1222,12 +1397,12 @@ letter-spacing: 0.07em;
   .historia {
     &-final-tree {
       height: auto;
-      width:40vw;
+      width: 40vw;
       transform: translateY(-100px);
     }
     &-photo {
-    max-width: 523px;
-    height: auto;
+      max-width: 523px;
+      height: auto;
     }
     &-quote {
       position: absolute;
@@ -1237,16 +1412,43 @@ letter-spacing: 0.07em;
       height: auto;
     }
   }
-  #historia-paul-hobbs {   
-    .paul-photo{
+  #historia-paul-hobbs {
+    .paul-photo {
       max-width: 600px;
       width: 100%;
       height: auto;
     }
   }
+  //===========CONTACTO=========
+  .vinos-origen-text {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 47.1162px;
+    line-height: 56px;
+    color: #f1eee9;
+    letter-spacing: 0.07em;
+  }
 
   //===============TERROIR=================
-  #frutos-caption{
+  #terroir-home {
+    .title {
+      position: absolute;
+      left: 70px;
+      top: 160px;
+    }
+
+    & h2 {
+      font-family: var(--font-primary);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 76.2px;
+      line-height: 89, 76px;
+      letter-spacing: 0.12em;
+      max-width: 787px;
+    }
+  }
+  #frutos-caption {
     & h2 {
       font-family: var(--font-primary);
       font-style: normal;
@@ -1254,14 +1456,14 @@ letter-spacing: 0.07em;
       font-size: 47.12px;
       line-height: 55.5px;
       letter-spacing: 0.07em;
-      color: #3E3937;
+      color: #3e3937;
       max-width: 1083px;
     }
     & img {
       position: absolute;
       top: -290px;
       right: 0;
-      max-width: 80%;  
+      max-width: 80%;
       height: auto;
     }
   }

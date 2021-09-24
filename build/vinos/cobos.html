@@ -40,13 +40,13 @@
                 </div>
 
                 <ul id="desktop-header" class="f-header__list margin-left-sm justify-center@md display@md">
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./historia"
                             class="f-header__link btn--nav">HISTORIA</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./terroir"
                             class="f-header__link btn--nav">TERROIR</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./vinos"
                             class="f-header__link btn--nav">VINOS</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./contacto"
                             class="f-header__link btn--nav">CONTACTO</a></li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
                             class="f-header__link btn--nav">TIENDA</a></li>
@@ -57,16 +57,16 @@
 
                 <ul class="f-header__list padding-top-lg justify-center@md hide@md">
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
+                        <a href="./historia" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
+                        <a href="./terroir" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
+                        <a href="./vinos" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
+                        <a href="./contacto" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
                         <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TIENDA</a>
@@ -110,8 +110,8 @@
                         <h3 class="varietales-description">FICHA ENOLÓGICA</h3>
                 </div>
             </div>
-            <div class="bottle">
-                <img src="../assets/img/cobos/desktop/cobos-bottle.png" alt="Botella">
+            <div class="position-absolute bottom-0">
+                <img src="../assets/img/cobos/desktop/cobos-bg-bottle.png" alt="">
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
@@ -145,13 +145,16 @@
         <!-- _________________________________________________________________________________________ -->
         <!-- EXPERIENCIA - Desktop -->
         <section id="cobos-experiencia-desktop"
-            class="display@md component-section-full flex flex-column justify-center items-center margin-x-md">
+            class="display@md component-section-full flex flex-column justify-center items-center">
             <div class="video-cobos padding-x-xl@md padding-x-xxl@sxl" aria-hidden="true">
-                <video id="video-experiencia" autoplay loop muted playsInline 
-                    src="../assets/img/cobos/desktop/experiencia-3d.mp4"></video>
+                <div class="video-feature__video-wrapper">
+                    <video id="video-experiencia" autoplay loop muted playsInline 
+                        src="../assets/img/cobos/desktop/experiencia-3d.mp4"></video>
+
+                </div>
             </div>
             <img class="experiencia-fullscreen-text position-absolute bottom-0 scroll-fx js-scroll-fx"
-                data-scroll-fx="translateY, 0px, -400px, 0%, 100%"
+                data-scroll-fx="translateY, -80px, -300px, 0%, 100%"
                 src="../assets/img/cobos/desktop/experiencia-texto.svg"                
                 alt="">
         </section>
@@ -257,9 +260,11 @@
                             redondo, tenso, mineral</p>
                     </div>
                 </div>
-                <div class="col-12 flex justify-left items-center">
-                    <div class="video-cobos" aria-hidden="true">
-                        <video autoplay loop muted playsInline src="../assets/img/cobos/desktop/cobos-iconico.mp4"></video>
+                <div class="flex">
+                    <div class="video-iconico" aria-hidden="true">
+                        <div class="video-feature__video-wrapper">
+                            <video autoplay loop muted playsInline src="../assets/img/cobos/desktop/cobos-iconico.mp4"></video>
+                        </div>
                     </div>
                     <img class="cobos-sidetext scroll-fx js-scroll-fx" 
                         data-scroll-fx="translateY, 100px, -200px, 0%, 100%"
@@ -329,7 +334,7 @@
         <!-- _________________________________________________________________________________________ -->
         <!-- SECCION ICONICO -Mobile -->
         <section class="hide@md component-section-full width-100% ">
-            <div class="position-absolute flex justify-center height-100%">
+            <div class="position-absolute flex justify-center height-100vh">
                 <img class="varietales-iconico-title margin-y-auto" src="../assets/img/cobos/mobile/cobos-iconico.svg"
                     alt="ICÓNICO">
             </div>

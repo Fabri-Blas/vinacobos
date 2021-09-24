@@ -95,22 +95,205 @@
 
     <main>
 
-        <!-- ------------------------- NUESTROS VIÑEDOS ------------------------- -->
+        <!-- ------------------------- CONTACTO HOMEPAGE------------------------- -->
 
 
-       <section id="contacto-home"class="display@md component-section">
+        <section id="contacto-home" class="display@md component-section">
 
 
-       </section>
+        </section>
 
+        <!---- VINOS -Desktop-->
+        <section id="vinos-origen" class="display@md component-half">
+            <div>
+                <h3 class="vinos-origen-text text-center padding-top-lg reveal-fx reveal-fx--clip-x">
+                    Vinos que son el fiel reflejo de nuestro origen
+                </h3>
+            </div>
+
+        </section>
+
+
+        <!-- SECCION FORMULARIOS-->
+
+        <section id="" class="display@md component-section">
+            <div class="position-absolute" style="z-index:-5 !important;">
+                <img src="assets/img/contacto/desktop/arbol-fondo-1920.png" class="historia-final-tree"
+                    alt="arbol-fondo">
+            </div>
+
+
+            <div class="grid margin-x-xxl margin-top-xxxl">
+                <div class="col-6">
+                    <div class="border-box flex justify-center items-center">
+                        <div class="contact-box">
+                            <ul class="padding-left-lg">
+                                <li id="box-contacto" class="contacto-text padding-top-lg contact-section-selected"
+                                    onclick="resetForms(event)">
+                                    Contacto
+                                </li>
+                                <li id="box-visitas" class="contacto-text padding-top-sm contact-section-inactive"
+                                    onclick="showVisitas(event)">
+                                    Visitas
+                                </li>
+                                <li id="box-administracion" class="contacto-text padding-top-sm contact-section-inactive"
+                                    onclick="showAdministracion(event)">
+                                    Administración
+                                </li>
+                                <li id="box-ubicacion" class="contacto-text padding-top-sm contact-section-inactive"
+                                    onclick="showUbicacion(event)">
+                                    Ubicación
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="form-contacto" class="col-6">
+                    <form class="contacto" action="" method="POST">
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Nombre CONTACTO *</label>
+                            <input type="text" id="contacto-nombre" name="contacto-nombre" class="input-style">
+                        </div>
+
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Apellido *</label>
+                            <input type="text" id="contacto-apellido" name="contacto-apellido" class="input-style">
+                        </div>
+
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Email *</label>
+                            <input type="email" id="contacto-email" name="contacto-email" class="input-style">
+                        </div>
+
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Teléfono</label>
+                            <input type="tel" id="contacto-telefono" name="contacto-telefono" class="input-style">
+                        </div>
+
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Mensaje *</label>
+                            <textarea id="contacto-mensaje" name="contacto-mensaje" rows="6"></textarea>
+                        </div>
+
+                        <div class="">
+                            <a href="./vinos"><button class="btn--primary-right z-index-3 margin-bottom-xxxxl"
+                                    style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="form-visitas" class="is-hidden col-6">
+                    <form class="contacto grid gap-md" action="" method="POST">
+                        <div class="col-6 margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Nombre VISITAS *</label>
+                            <input type="text" id="contacto-nombre" name="contacto-nombre" class="input-style">
+                        </div>
+
+                        <div class="col-6 margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Apellido *</label>
+                            <input type="text" id="contacto-apellido" name="contacto-apellido" class="input-style">
+                        </div>
+
+                        <div class="col-6 margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Teléfono</label>
+                            <input type="tel" id="contacto-telefono" name="contacto-telefono" class="input-style">
+                        </div>
+
+                        <div class="col-6 margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Email *</label>
+                            <input type="email" id="contacto-email" name="contacto-email" class="input-style">
+                        </div>
+
+                        <div class="col-12 margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Mensaje *</label>
+                            <textarea id="contacto-mensaje" name="contacto-mensaje" rows="6"></textarea>
+                        </div>
+
+                        <div class="">
+                            <a href="./vinos"><button class="btn--primary-right z-index-3 margin-bottom-xxxxl"
+                                    style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="info-administracion" class="is-hidden col-6">
+                    <form class="contacto" action="" method="POST">
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Nombre ADMINISTRACIÓN *</label>
+                            <input type="text" id="contacto-nombre" name="contacto-nombre" class="input-style">
+                        </div>
+
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Apellido *</label>
+                            <input type="text" id="contacto-apellido" name="contacto-apellido" class="input-style">
+                        </div>
+
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Email *</label>
+                            <input type="email" id="contacto-email" name="contacto-email" class="input-style">
+                        </div>
+
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Teléfono</label>
+                            <input type="tel" id="contacto-telefono" name="contacto-telefono" class="input-style">
+                        </div>
+
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Mensaje *</label>
+                            <textarea id="contacto-mensaje" name="contacto-mensaje" rows="6"></textarea>
+                        </div>
+
+                        <div class="">
+                            <a href="./vinos"><button class="btn--primary-right z-index-3 margin-bottom-xxxxl"
+                                    style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="info-ubicacion" class="is-hidden col-6">
+                    <form class="contacto" action="" method="POST">
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Nombre UBICACION *</label>
+                            <input type="text" id="contacto-nombre" name="contacto-nombre" class="input-style">
+                        </div>
+
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Apellido *</label>
+                            <input type="text" id="contacto-apellido" name="contacto-apellido" class="input-style">
+                        </div>
+
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Email *</label>
+                            <input type="email" id="contacto-email" name="contacto-email" class="input-style">
+                        </div>
+
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Teléfono</label>
+                            <input type="tel" id="contacto-telefono" name="contacto-telefono" class="input-style">
+                        </div>
+
+                        <div class="margin-y-lg flex flex-column">
+                            <label class="padding-left-lg text-uppercase form-text">Mensaje *</label>
+                            <textarea id="contacto-mensaje" name="contacto-mensaje" rows="6"></textarea>
+                        </div>
+
+                        <div class="">
+                            <a href="./vinos"><button class="btn--primary-right z-index-3 margin-bottom-xxxxl"
+                                    style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
 
 
         <!-- _________________________________________________________________________________________ -->
 
-       
+
         <!-- _________________________________________________________________________________________ -->
 
-        
+
 
 
 
@@ -122,6 +305,19 @@
 
 
         <!-- _______________________________DESAROLLO MOBILE_________________________________________________________ -->
+
+
+        <section id="contacto-mobile-home" class="hide@md component-section width-100%">
+            <div class="position-absolute" style="top: 100px; left: 27px;">
+                <img src="./assets/img/contacto/mobile/contacto-mobile-home-text.svg" alt="">
+            </div>
+        </section>
+
+
+        <section id="contacto-mobile-leyenda"
+            class="component-section flex flex-column justify-center items-center text-center">
+            <h3 class="font-primary padding-x-lg">Vinos que son el fiel reflejo de nuestro origen</h3>
+        </section>
 
 
     </main>

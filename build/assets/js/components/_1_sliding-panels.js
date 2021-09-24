@@ -198,3 +198,22 @@
     }
   }
 }());
+
+
+
+const slidingPanelsBtn = document.getElementById("sliding-panels-btn");
+let slidingPanelsBtnState = false; // False = hidden | True = show
+
+function showSlidingPanelsBtn() {
+  if (!slidingPanelsBtnState) {
+    slidingPanelsBtn.classList.remove('is-hidden');
+    slidingPanelsBtnState = true;
+  }
+}
+
+function hideSlidingPanelsBtn() {
+  if (slidingPanelsBtnState) {
+    slidingPanelsBtn.classList.add('is-hidden');
+    slidingPanelsBtnState = false;
+  }
+}
