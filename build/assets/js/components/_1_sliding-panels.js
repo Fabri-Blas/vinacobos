@@ -201,6 +201,7 @@
 
 
 
+// Custom Desktop Functions
 const slidingPanelsBtn = document.getElementById("sliding-panels-btn");
 let slidingPanelsBtnState = false; // False = hidden | True = show
 
@@ -216,4 +217,35 @@ function hideSlidingPanelsBtn() {
     slidingPanelsBtn.classList.add('is-hidden');
     slidingPanelsBtnState = false;
   }
+}
+
+// Custom Mobile Functions
+const terroirMobileCustompanels = document.getElementById('terroir-mobile-custompanels');
+const slidingpanelsMobile = document.getElementById('terroir-mobile-slidingpanels');
+const panelMobileChanares = document.getElementById('slidingpanel-chanares');
+const panelMobileZingaretti = document.getElementById('slidingpanel-zingaretti');
+const panelMobileMarchiori = document.getElementById('slidingpanel-marchiori');
+let actualOpenPanel;
+
+function openMobilePanel(panel) {
+  terroirMobileCustompanels.scrollIntoView({behavior: 'smooth'});
+  slidingpanelsMobile.classList.remove('is-hidden');
+  slidingpanelsMobile.classList.remove('close-panel-animation');
+  slidingpanelsMobile.classList.add('open-panel-animation');
+  panel.classList.remove('is-hidden');
+  console.log('OPEN PANEL');
+
+  actualOpenPanel = panel;
+
+  document.body.style.overflowY = "hidden";
+}
+function closeMobilePanel(panel) {
+  slidingpanelsMobile.classList.remove('open-panel-animation');
+  slidingpanelsMobile.classList.add('close-panel-animation');
+  setTimeout(() => {
+    panel.classList.add('is-hidden');
+    slidingpanelsMobile.classList.add('is-hidden');
+    document.body.style.overflowY = "scroll";
+  }, 450);
+  console.log('CLOSE PANEL');
 }

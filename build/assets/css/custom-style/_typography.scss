@@ -493,11 +493,11 @@ mark {
     font-family: var(--font-primary);
     font-style: normal;
     font-weight: 500;
-    font-size: 47.12px;
-    line-height: 55.5px;
+    font-size: 76px;
+    line-height: 90px;
     letter-spacing: 0.07em;
     color: #3E3937;
-    width: 696px;
+    width: 1070px;
   }
   & h4 {
     font-family: var(--font-primary);
@@ -522,11 +522,11 @@ mark {
     font-family: var(--font-primary);
     font-style: normal;
     font-weight: 500;
-    font-size: 47.12px;
-    line-height: 55.5px;
-    letter-spacing: 0.07em;
+    font-size: 76px;
+    line-height: 90px;
+    letter-spacing: 0.05em;
     color: #3E3937;
-    width: 315px;
+    
   }
   & p {
     font-family: var(--font-secondary);
@@ -635,6 +635,8 @@ mark {
     }
   }
 }
+
+//=============CONTACTO================
 
 //================MEDIA QUERIES=================
 
@@ -776,8 +778,8 @@ mark {
       font-family: var(--font-primary);
       font-style: normal;
       font-weight: 500;
-      font-size: 40px;
-      line-height: 47.12px;
+      font-size: 47.1162px;
+      line-height: 56px;
       letter-spacing: 0.07em;
       color: #3E3937;
       width: 224px;

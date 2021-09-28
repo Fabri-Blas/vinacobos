@@ -40,13 +40,13 @@
                 </div>
 
                 <ul id="desktop-header" class="f-header__list margin-left-sm justify-center@md display@md">
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./historia"
                             class="f-header__link btn--nav">HISTORIA</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./terroir"
                             class="f-header__link btn--nav">TERROIR</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./vinos"
                             class="f-header__link btn--nav">VINOS</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./contacto"
                             class="f-header__link btn--nav">CONTACTO</a></li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
                             class="f-header__link btn--nav">TIENDA</a></li>
@@ -57,16 +57,16 @@
 
                 <ul class="f-header__list padding-top-lg justify-center@md hide@md">
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
+                        <a href="./historia" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
+                        <a href="./terroir" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
+                        <a href="./vinos" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
+                        <a href="./contacto" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
                         <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TIENDA</a>
@@ -80,7 +80,7 @@
 
         <!-- _________________________________________________________________________________________ -->
         <!-- VD CHAÑARES HOME DESKTOP -->
-        <section id="vd-home" class="display@md component-section bg-white width-100%">
+        <section id="vd-chanares-home" class="display@md component-section bg-white width-100%">
             <div class="display@md padding-left-xxs">
                 <div id="cobos-home-content"
                     class="position-absolute bottom-0 flex flex-row justify-left color-black padding-left-xxl padding-y-xxxl">
@@ -96,14 +96,19 @@
                     <h3 class="varietales-description">FICHA ENOLÓGICA</h3>
                 </div>
             </div>
+            <div class="position-absolute bottom-0">
+                <img src="../assets/img/vd/desktop/chanares/vd-bottle.png" alt="">
+            </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
 
 
 
         <!-- _________________________________________________________________________________________ -->
         <!-- VD CHAÑARES HOME MOBILE -->
-        <section id="vd-home-mobile" class="hide@md component-section bg-white width-100%">
+        <section id="vd-chanares-home-mobile" class="hide@md component-section bg-white width-100%">
             <div class="position-absolute bottom-0 -left-0 padding-left-md">
                 <div class="padding-bottom-xxxxs">
                     <h1 class="varietales-title">Chañares</h1>
@@ -126,15 +131,22 @@
 
         <!-- _________________________________________________________________________________________ -->
         <!-- COMPRENSION - Desktop -->
-        <section id="cobos-experiencia-desktop"
-            class="display@md component-section-full flex flex-column justify-center items-center padding-md@md padding-lg@sxl">
-            <img class="padding-xl@md padding-xxl@sxl" src="../assets/img/vd/desktop/vd-comprension.png"
-                alt="Cobos - Experiencia">
+        <section id="vd-comprension-desktop"
+            class="display@md component-section-full flex flex-column justify-center items-center">
+            <div class="video-vd padding-x-xl@md padding-x-xxl@sxl" aria-hidden="true">
+                <figure class="video-feature__video-wrapper" aria-hidden="true">
+                    <img src="../assets/img/vd/desktop/chanares/comprension-preload.png" alt="Video Preview">
+                    <video autoplay loop muted playsInline src="../assets/img/vd/desktop/chanares/comprension-3d.mp4"></video>
+                </figure>
+            </div>
             <img src="../assets/img/vd/desktop/vd-comprension-texto.svg"
-                class="experiencia-fullscreen-text position-absolute bottom-0 left-50% -translate-x-50% width-80%"
-                alt="">
+                    class="comprension-fullscreen-text position-absolute bottom-0 scroll-fx js-scroll-fx"
+                    data-scroll-fx="translateY, -80px, -300px, 0%, 100%"
+                    alt="Texto Comprensión">
         </section>
         <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
 
 
 
@@ -145,7 +157,7 @@
             <div class=" component-section width-100% text-center flex justify-center items-center ">
                 <img class="padding-x-md varietales-foto scroll-fx js-scroll-fx"
                     data-scroll-fx="opacity, 0, 1, 25%, 35%"
-                    src="../assets/img/vd/mobile/vd-chanares-experiencia-mobile.png" alt="Chañares Experiencia">
+                    src="../assets/img/vd/mobile/chanares/vd-chanares-comprension-mobile.png" alt="Chañares Experiencia">
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
@@ -156,20 +168,24 @@
         <!-- _________________________________________________________________________________________ -->
         <!-- EXPRESION DEL TERROIR - Desktop-->
         <section id="cobos-nuestroicono-desktop"
-            class="display@md component-section-full grid padding-lg@md padding-xxl@sxl margin-x-xs@md margin-x-0@sxl">
-            <div class="col-6 flex justify-center items-end">
-                <img class="padding-lg margin-bottom-xxs" src="../assets/img/vd/desktop/vd-expresion-1.png" alt="">
-            </div>
-            <div class="col-6 flex flex-column justify-end items-center">
-                <div class="text-center margin-x-auto">
-                    <h3 class="font-primary">Expresión<br>del terroir</h3>
+            class="display@md component-section-full margin-x-md">
+            <div class="grid padding-x-xl@sxl padding-x-md@md">
+                <div class="col-6 flex justify-center items-end">
+                    <img class="padding-left-lg padding-right-sm" src="../assets/img/vd/desktop/chanares/vd-chanares-exp-1.png" alt="">
                 </div>
-                <div class="width-100%">
-                    <img class="padding-lg margin-top-xxl@md" src="../assets/img/vd/desktop/vd-expresion-2.png" alt="">
+                <div class="col-6 flex flex-column justify-end items-center">
+                    <div class="text-center margin-x-auto margin-y-auto">
+                        <h3 class="font-primary">Expresión<br>del terroir</h3>
+                    </div>
+                    <div>
+                        <img class="padding-right-lg padding-left-sm" src="../assets/img/vd/desktop/chanares/vd-chanares-exp-2.png" alt="">
+                    </div>
                 </div>
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
 
 
 
@@ -208,15 +224,18 @@
         <!-- VARIEDAD - Desktop -->
         <section id="cobos-iconico" class="display@md component-section-full margin-bottom-xxxl">
             <div class="grid gap-lg grid gap-lg padding-x-lg@md padding-x-xxl@sxl margin-x-xxxxs@md margin-x-0@sxl">
-                <div class="col-12 text-center">
-                    <img class="text-center" src="../assets/img/vd/desktop/vd-logo.svg" width="484" height="80"
-                        alt="VD">
+                <div class="col-12 text-center padding-bottom-md">
+                    <img class="text-center" 
+                        src="../assets/img/vd/desktop/vd-logo.svg" width="484" height="80"
+                        alt="Cobos">
                 </div>
-                <p class="max-width-lg margin-x-auto padding-top-md margin-bottom-xxxl">Poda a cordón pitoneado. Riego por goteo. La exposición norte con una pendiente oeste-este de 2,7°
-                    favorece a la circulación del aire y las condiciones de sanidad del viñedo.
+                <p class="margin-x-auto padding-top-md margin-bottom-xxxl flex justify-center"
+                    style="max-width: 940px;">
+                    Una selección de viñas y racimos de las uvas Malbec de la más alta calidad provenientes 
+                    de terroir seleccionado.
                 </p>
                 <div
-                    class=" col-12 grid gap-x-lg padding-left-lg@md padding-right-xxl@md padding-left-xxl@sxl padding-right-xxl@sxl padding-bottom-lg">
+                    class=" col-12 grid gap-x-lg padding-left-lg@md padding-bottom-lg">
                     <div class="col-4">
                         <h2 class="font-primary">Malbec</h2>
                     </div>
@@ -233,7 +252,7 @@
                     </div>
                 </div>
                 <div
-                    class="col-12 grid gap-x-lg padding-left-lg@md padding-right-xxl@md padding-left-xxl@sxl padding-right-xxl@sxl padding-bottom-lg">
+                    class="col-12 grid gap-x-lg padding-left-lg@md padding-bottom-xl">
                     <div class="col-4">
                         <h2 class="font-primary">Cabernet</h2>
                         <h2 class="font-primary">Franc</h2>
@@ -250,15 +269,19 @@
                             redondo, tenso, mineral</p>
                     </div>
                 </div>
-                <div class="col-12 flex justify-left items-center">
-                    <img src="../assets/img/vd/desktop/vd-variedad.png" width="auto" height="auto" alt="Cobos - Icónico"
-                        class="width-90%">
-                    <img class="cobos-sidetext" src="../assets/img/vd/desktop/vd-variedad-vertical.svg" width="auto"
+                <div class="flex">
+                    <img src="../assets/img/vd/desktop/chanares/vd-chanares-variedad.png" width="auto" height="auto" alt="Cobos - Icónico"
+                        class="vd-variedad">
+                    <img class="cobos-sidetext scroll-fx js-scroll-fx" 
+                        data-scroll-fx="translateY, 100px, -200px, 0%, 100%"
+                        src="../assets/img/vd/desktop/vd-variedad-vertical.svg" width="auto"
                         height="auto" alt="Cobos - Icónico">
                 </div>
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
 
 
 
@@ -345,11 +368,14 @@
         <!-- _________________________________________________________________________________________ -->
         <!-- VARIEDAD - Mobile -->
         <section class="hide@md component-section-full width-100% ">
-            <div class="position-absolute flex justify-center height-100%">
-                <img class="varietales-iconico-title margin-y-auto" src="../assets/img/vd-variedad.png" alt="VARIEDAD">
+            <div class="position-absolute flex justify-center height-100vh">
+                <img class="varietales-iconico-title margin-y-auto" 
+                    src="../assets/img/vd-variedad.png" alt="VARIEDAD">
             </div>
             <img class="position-absolte left-0 bottom-0 varietales-final-varietal" style="z-index: -5 !important;"
                 src="../assets/img/cobos-mobile.png" alt="">
+            <!-- SEPARADOR -->
+            <div class="hide@md" style="height: 140px;"></div>
         </section>
         <!-- _________________________________________________________________________________________ -->
 
@@ -364,6 +390,8 @@
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
 
     </main>
 

@@ -298,6 +298,33 @@ button {
   font-size: 1.4em;
 }
 
+// BTN CONTACTO
+.btn--contacto {
+  cursor: pointer;
+  position: absolute;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+  letter-spacing: 0.12em;
+  width: 110px;
+  text-align: right;
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid var(--color-primary-light);
+  transition: all 0.5s;
+  bottom: 17px;
+  right: 190px;
+  padding-bottom: 8px;
+  padding-right: 0;
+  font-family: var(--font-primary);
+
+  &:hover {
+    letter-spacing: 0.2em;
+    width: 83px;
+    transition: all 0.5s;
+  }
+}
 @media only screen and (max-width: 1366px) {
   .btn--primary{
     left: 70px;
@@ -305,6 +332,10 @@ button {
     &-right{
       right: 71px;
     }
+  }
+  .btn--contacto{
+    right: 185px;
+    bottom:-102px;
   }
 }
 

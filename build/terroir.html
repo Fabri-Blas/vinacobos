@@ -23,10 +23,9 @@
             <a href="./" class="position-absolute left-0 top-50% -translate-y-50%">
                 <img src="./assets/img/logo.svg" width="30" height="27" alt="Logo" class="logo-mobile-1">
             </a>
-            <button
-                class="position-absolute right-0 top-50% -translate-y-50% reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
+            <button class="position-absolute top-50% -translate-y-50% right-0 reset anim-menu-btn color-contrast-high js-anim-menu-btn js-tab-focus"
                 aria-label="Toggle menu">
-                <img src="./assets/img/hamburguer.svg" width="25" height="9" alt="" class="hamburguer-mobile-1">
+                <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
             </button>
         </div>
 
@@ -150,7 +149,8 @@
         <!-- SECCION SLIDING  PANELS -->
         <section id="panels" class="display@md component-section-full">
             <div class="s-panels js-s-panels">
-                <a id="sliding-panels-btn" class="is-hidden padding-top-xl" onclick="hideSlidingPanelsBtn()" href="#panels">
+                <a id="sliding-panels-btn" class="is-hidden padding-top-xl" onclick="hideSlidingPanelsBtn()"
+                    href="#panels">
                     <button class="reset s-panels__nav-control js-s-panels__nav-control js-tab-focus"
                         aria-label="Toggle navigation" style="margin-top: 80px; margin-right: 18px;">
                         <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
@@ -178,7 +178,8 @@
 
                             </div>
 
-                            <a onclick="showSlidingPanelsBtn()" class="s-panels__project-control js-s-panels__project-control" href="#project-1">Open
+                            <a onclick="showSlidingPanelsBtn()"
+                                class="s-panels__project-control js-s-panels__project-control" href="#project-1">Open
                                 Project
                                 1</a>
                         </div>
@@ -205,13 +206,14 @@
 
                             </div>
 
-                            <a onclick="showSlidingPanelsBtn()" class="s-panels__project-control js-s-panels__project-control" href="#project-2">Open
+                            <a onclick="showSlidingPanelsBtn()"
+                                class="s-panels__project-control js-s-panels__project-control" href="#project-2">Open
                                 Project
                                 2</a>
                         </div>
 
                         <figure class="s-panels__project-figure bg-black">
-                            <img class="s-panels__project-img" src="./assets/img/terroir/desktop/zingaretti-estate.jpg"
+                            <img class="s-panels__project-img" src="./assets/img/terroir/desktop/zigaretti-estate.jpg"
                                 alt="Image description">
                         </figure>
 
@@ -232,7 +234,8 @@
 
                             </div>
 
-                            <a onclick="showSlidingPanelsBtn()" class="s-panels__project-control js-s-panels__project-control" href="#project-3">Open
+                            <a onclick="showSlidingPanelsBtn()"
+                                class="s-panels__project-control js-s-panels__project-control" href="#project-3">Open
                                 Project
                                 3</a>
                         </div>
@@ -259,21 +262,11 @@
                     <div class="container height-100% padding-top-xxxl padding-bottom-md padding-y-md@sm">
                         <div class="grid height-100%">
                             <nav class="margin-bottom-md margin-bottom-0@sm col-6@sm flex@sm" aria-label="Main">
-                                <ul class="flex flex-column gap-sm margin-top-auto@sm">
-                                    <li><a class="s-panels__nav-link text-xxl text-xxxl@sm" href="#0">About</a></li>
-                                    <li><a class="s-panels__nav-link text-xxl text-xxxl@sm" href="#0">Work</a></li>
-                                    <li><a class="s-panels__nav-link text-xxl text-xxxl@sm" href="#0">Blog</a></li>
-                                    <li><a class="s-panels__nav-link text-xxl text-xxxl@sm" href="#0">Get in touch</a>
-                                    </li>
-                                </ul>
+
                             </nav>
 
                             <div class="margin-top-auto col-6@sm">
-                                <ul class="flex flex-column gap-xs flex-row@sm justify-end@sm">
-                                    <li><a class="s-panels__social-link text-sm@sm" href="#0">Twitter</a></li>
-                                    <li><a class="s-panels__social-link text-sm@sm" href="#0">Instagram</a></li>
-                                    <li><a class="s-panels__social-link text-sm@sm" href="#0">Newsletter</a></li>
-                                </ul>
+
                             </div>
                         </div>
                     </div>
@@ -427,7 +420,8 @@
 
         <section id="terroir-mobile-leyenda" class="hide@md component-section flex justify-center items-center">
             <div class="text-center padding-x-xl">
-                <h3 class="font-primary">“Cosechamos los frutos de nuestro anhelo y esfuerzo, mientras que continuamos creando vinos”</h3>
+                <h3 class="font-primary">“Cosechamos los frutos de nuestro anhelo y esfuerzo, mientras que continuamos
+                    creando vinos”</h3>
             </div>
             <div class="position-absolute top-50% left-50% -translate-x-50% -translate-y-50% width-100% text-center">
                 <img src="./assets/img/historia/mobile/historia-mobile-logo-background.svg" alt="">
@@ -435,11 +429,98 @@
         </section>
 
 
+        <section id="terroir-mobile-custompanels" class="hide@md flex flex-column justify-center items-center">
+            <div class="custompanel custompanel-1" onclick="openMobilePanel(panelMobileChanares)">
+                <h3 class="font-primary">Chañares<br>Estate</h3>
+                <p>+</p>
+            </div>
+
+            <div class="custompanel custompanel-2" onclick="openMobilePanel(panelMobileZingaretti)">
+                <h3 class="font-primary">Zingaretti<br>Estate</h3>
+                <p>+</p>
+            </div>
+
+            <div class="custompanel custompanel-3" onclick="openMobilePanel(panelMobileMarchiori)">
+                <h3 class="font-primary">Marchiori<br>Estate</h3>
+                <p>+</p>
+            </div>
+        </section>
+
     </main>
+
+    <section id="terroir-mobile-slidingpanels"
+        class="hide@md is-hidden flex-column justify-start items-center">
+
+        <button class="position-absolute top-0 right-0" onclick="closeMobilePanel(actualOpenPanel)">X</button>
+
+        <div id="slidingpanel-chanares" class="is-hidden slidingpanel padding-y-xl padding-x-lg">
+            <h2 class="padding-y-md">CHAÑARES ESTATE</h2>
+            <p class="padding-y-md text-justify font-secondary">Esta propiedad tiene una superficie plantada de 17,3 ha
+                de Malbec, Cabernet Franc y Cabernet Sauvignon.
+                La zona se caracteriza por tener suelo de origen aluvial, pobre, pedregoso y de buen drenaje. En cuanto
+                a la topografía, el viñedo tiene una exposición norte, con una pendiente oeste-este de 2,7%, que
+                favorece la circulación de aire y las condiciones de sanidad del viñedo.
+                Durante la época de maduración, la amplitud térmica es de 14,4º C.
+                Para la irrigación se utiliza goteo. Este sistema, junto con la alta permeabilidad del suelo, permite
+                controlar el vigor del viñedo durante el desarrollo vegetativo y la madurez de las uvas. La poda se
+                realiza a cordón pitoneado.
+                Una de las particularidades de este viñedo es que conserva diversos bosques nativos de chañares -árbol
+                típico de esta región- como reserva natural de flora y fauna autóctonas.
+                El viñedo fue adquirido por Paul Hobbs en el año 2013, conservando su diseño y naturaleza. Chañares
+                tiene la particularidad de mantener entre sus viñedos diversos bosques nativos de chañares (árbol típico
+                de esta región). Suman 5 bosques de chañares, en total más de 1,5ha, un 10% de la superficie plantada.
+                Estos bosques funcionan como refugio de fauna nativa y banco de semillas de flora autóctona. Se pueden
+                encontrar diferentes especies de pasturas, arbustos y árboles.</p>
+            <h6 class="padding-y-xs font-secondary">DISTRITO: LOS ARBOLES</h6>
+            <h6 class="padding-y-xs font-secondary">Región: Tunuyán, Valle de Uco · Mendoza, Argentina</h6>
+            <h6 class="padding-top-xs padding-bottom-xxl font-secondary">Altitud media: 1.184 metros</h6>
+        </div>
+
+        <div id="slidingpanel-zingaretti" class="is-hidden slidingpanel padding-y-xl padding-x-lg">
+            <h2 class="padding-y-md">ZINGARETTI ESTATE</h2>
+            <p class="padding-y-md text-justify font-secondary">A finales del 1800 el abuelo de Quito Zingaretti llegó
+                con su familia desde Italia y se instaló en Maipú. Al poco tiempo compró el terreno donde hoy está
+                ubicada la finca. Desde Maipú, viajaban en carreta durante todo un día hasta Tupungato, permanecían
+                trabajando en la propiedad durante una semana y luego volvían a Maipú. De esta forma fueron
+                desarrollando la finca hasta que pudieron instalarse allí definitivamente. Fueron, junto a otras pocas
+                familias, los primeros viticultores de esa zona.
+                Américo Zingaretti, llamado así porque fue el primero de la familia en nacer en América, le dejó a su
+                hijo “AmeriQuito” Zingaretti la mitad sur de la finca, donde hoy en día se encuentran 4,4 ha de un
+                espaldero de Malbec, anteriores a 1930 (se considera de 1930 porque es el año en el cuál se comenzó a
+                llevar registro de los viñedos).
+                Los suelos en general son de textura gruesa, franco-arenosos en donde las rocas aparecen a distintas
+                profundidades. Dentro de este viñedo encontramos diferencias en el suelo muy marcadas. Zonas más fresca
+                que el resto del Valle de Uco, posiblemente por la proximidad a una cadena de cerros ubicados hacia el
+                norte que encajonan el aire frío que baja desde la montaña. Esto nos llevó a buscar potenciar el
+                chardonnay. La pendiente es algo pronunciada y gracias a la orientación de las hileras permite un buen
+                flujo de aire que ayuda a mantener la sanidad. Estas se orientan de este a oeste a diferencia del resto
+                de los viñedos que suele ser de norte a sur.
+            </p>
+            <h6 class="padding-y-xs font-secondary">DISTRITO: Villa Bastías</h6>
+            <h6 class="padding-y-xs font-secondary">Región: Tunuyán, Valle de Uco · Mendoza, Argentina</h6>
+            <h6 class="padding-top-xs padding-bottom-xxl font-secondary">Altitud media: 1.150 metros</h6>
+        </div>
+
+        <div id="slidingpanel-marchiori" class="is-hidden slidingpanel padding-y-xl padding-x-lg">
+            <h2 class="padding-y-md">MARCHIORI ESTATE</h2>
+            <p class="padding-y-md text-justify font-secondary">El viñedo Marchiori es una parte importante de la
+                historia de Viña Cobos. De aquí provinieron las uvas de la cosecha inaugural de la bodega, Cobos Malbec
+                1999. Una de sus dueñas, Andrea Marchiori, fue socia de Viña Cobos durante 18 años.<br>
+
+                El suel es variable según el lugar de la finca. Generalmente encontramos una primera capa de suelo más
+                pesado con mayor proporción de arcilla que abarca entre los 10 y 40 primeros cm. Luego aparece una
+                textura franco arenosa que permite un buen drenaje del agua. Además, presenta cantos rodados de diversos
+                tamaños que en algunos sectores son abundantes. Se trata de viñedos antiguos, con una población de
+                plantas, la mayoría de más de 80 años.</p>
+            <h6 class="padding-y-xs font-secondary">DISTRITO: Perdriel</h6>
+            <h6 class="padding-y-xs font-secondary">Región: Luján de Cuyo · Mendoza, Argentina</h6>
+            <h6 class="padding-top-xs padding-bottom-xxl font-secondary">Altitud media: 995 metros</h6>
+        </div>
+    </section>
     <!-- ==============================================END-MAIN============================================== -->
 
     <!-- ================================================FOOTER================================================ -->
-    <footer class="component-footer position-relative  padding-bottom-xxxxl padding-bottom-0@md" style="z-index: 10;">
+    <footer class="component-footer position-relative  padding-bottom-xxxxl padding-bottom-0@md" style="z-index: 7;">
 
         <div class="flex grid padding-x-lg padding-x-xxl@sxl padding-x-xl@md">
 

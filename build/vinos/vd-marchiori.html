@@ -40,13 +40,13 @@
                 </div>
 
                 <ul id="desktop-header" class="f-header__list margin-left-sm justify-center@md display@md">
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./historia"
                             class="f-header__link btn--nav">HISTORIA</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./terroir"
                             class="f-header__link btn--nav">TERROIR</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./vinos"
                             class="f-header__link btn--nav">VINOS</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./contacto"
                             class="f-header__link btn--nav">CONTACTO</a></li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
                             class="f-header__link btn--nav">TIENDA</a></li>
@@ -57,16 +57,16 @@
 
                 <ul class="f-header__list padding-top-lg justify-center@md hide@md">
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
+                        <a href="./historia" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
+                        <a href="./terroir" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
+                        <a href="./vinos" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
+                        <a href="./contacto" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
                         <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TIENDA</a>
@@ -80,7 +80,7 @@
 
         <!-- _________________________________________________________________________________________ -->
         <!-- VD MARCHIORI HOME DESKTOP -->
-        <section id="vd-home" class="display@md component-section bg-white width-100%">
+        <section id="vd-marchiori-home" class="display@md component-section bg-white width-100%">
             <div class="display@md padding-left-xxs">
                 <div id="cobos-home-content"
                     class="position-absolute bottom-0 flex flex-row justify-left color-black padding-left-xxl padding-y-xxxl">
@@ -96,12 +96,19 @@
                         <h3 class="varietales-description">FICHA ENOLÓGICA</h3>
                 </div>
             </div>
+            <div class="position-absolute bottom-0">
+                <img src="../assets/img/vd/desktop/marchiori/vd-marchiori-bottle.png" alt="">
+            </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
+
+
 
         <!-- _________________________________________________________________________________________ -->
         <!-- VD MARCHIORI HOME MOBILE -->
-        <section id="vd-home-marchiori-mobile" class="hide@md component-section bg-white width-100%">
+        <section id="vd-marchiori-home-mobile" class="hide@md component-section bg-white width-100%">
             <div class="position-absolute bottom-0 -left-0 padding-left-md">
                 <div class="padding-bottom-xxxxs">
                     <h1 class="varietales-title">Marchiori</h1>
@@ -121,17 +128,25 @@
 
 
 
+
         <!-- _________________________________________________________________________________________ -->
         <!-- COMPRENSION - Desktop -->
-        <section id="cobos-experiencia-desktop"
-            class="display@md component-section-full flex flex-column justify-center items-center padding-md@md padding-lg@sxl">
-            <img class="padding-xl@md padding-xxl@sxl" src="../assets/img/vd/desktop/vd-comprension-3.png"
-                alt="Cobos - Experiencia">
+        <section id="vd-comprension-desktop"
+            class="display@md component-section flex flex-column justify-center items-center">
+            <div class="video-vd padding-x-xl@md padding-x-xxl@sxl" aria-hidden="true">
+                <figure class="video-feature__video-wrapper" aria-hidden="true">
+                    <img src="../assets/img/vd/desktop/marchiori/comprension-preload.png" alt="Video Preview">
+                    <video autoplay loop muted playsInline src="../assets/img/vd/desktop/marchiori/comprension-3d.mp4"></video>
+                </figure>
+            </div>
             <img src="../assets/img/vd/desktop/vd-comprension-texto.svg"
-                class="experiencia-fullscreen-text position-absolute bottom-0 left-50% -translate-x-50% width-80%"
-                alt="">
+                    class="comprension-fullscreen-text position-absolute bottom-0 scroll-fx js-scroll-fx"
+                    data-scroll-fx="translateY, -80px, -300px, 0%, 100%"
+                    alt="Texto Comprensión">            
         </section>
         <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
 
 
 
@@ -142,30 +157,36 @@
             <div class=" component-section width-100% text-center flex justify-center items-center ">
                 <img class="padding-x-md varietales-foto scroll-fx js-scroll-fx"
                     data-scroll-fx="opacity, 0, 1, 25%, 35%"
-                    src="../assets/img/vd/mobile/vd-chanares-experiencia-mobile.png" alt="Chañares Experiencia">
+                    src="../assets/img/vd/mobile/chanares/vd-chanares-comprension-mobile.png" alt="Chañares Experiencia">
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+
 
 
 
         <!-- _________________________________________________________________________________________ -->
         <!-- EXPRESION DEL TERROIR - Desktop-->
         <section id="cobos-nuestroicono-desktop"
-            class="display@md component-section-full grid padding-lg@md padding-xxl@sxl margin-x-xs@md margin-x-0@sxl">
-            <div class="col-6 flex justify-center items-end">
-                <img class="padding-lg margin-bottom-xxs" src="../assets/img/vd/desktop/vd-expresion-1.png" alt="">
-            </div>
-            <div class="col-6 flex flex-column justify-end items-center">
-                <div class="text-center margin-x-auto">
-                    <h3 class="font-primary">Expresión<br>del terroir</h3>
+            class="display@md component-section-full margin-x-md">
+            <div class="grid padding-x-xl@sxl padding-x-md@md">
+                <div class="col-6 flex justify-center items-end">
+                    <img class="padding-left-lg padding-right-sm" src="../assets/img/vd/desktop/chanares/vd-chanares-exp-1.png" alt="">
                 </div>
-                <div class="width-100%">
-                    <img class="padding-lg margin-top-xxl@md" src="../assets/img/vd/desktop/vd-expresion-2.png" alt="">
+                <div class="col-6 flex flex-column justify-end items-center">
+                    <div class="text-center margin-x-auto margin-y-auto">
+                        <h3 class="font-primary">Expresión<br>del terroir</h3>
+                    </div>
+                    <div>
+                        <img class="padding-right-lg padding-left-sm" src="../assets/img/vd/desktop/chanares/vd-chanares-exp-2.png" alt="">
+                    </div>
                 </div>
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
+
 
 
 
@@ -199,65 +220,76 @@
 
 
 
+        <!-- _________________________________________________________________________________________ -->
+        <!-- VARIEDAD - Desktop -->
         <section id="cobos-iconico" class="display@md component-section-full margin-bottom-xxxl">
             <div class="grid gap-lg grid gap-lg padding-x-lg@md padding-x-xxl@sxl margin-x-xxxxs@md margin-x-0@sxl">
-                <div class="col-12 text-center">
-                    <img class="text-center" src="../assets/img/vd/desktop/vd-logo.svg" width="484" height="80"
-                        alt="VD">
+                <div class="col-12 text-center padding-bottom-md">
+                    <img class="text-center" 
+                        src="../assets/img/vd/desktop/vd-logo.svg" width="484" height="80"
+                        alt="Cobos">
                 </div>
-                <p class="max-width-lg margin-x-auto padding-top-md margin-bottom-xxxl">Poda a cordón pitoneado. Riego
-                    por goteo. La exposición norte con una pendiente oeste-este de 2,7°
-                    favorece a la circulación del aire y las condiciones de sanidad del viñedo.
+                <p class="margin-x-auto padding-top-md margin-bottom-xxxl flex justify-center"
+                    style="max-width: 940px;">
+                    Sistema de poda a cordón pitoneado bilateral, riego tradicional por surcos con pendiente y buen desarrollo 
+                    de raíces en todo el perfil. Este vino proviene de vides de más de 50 años.
                 </p>
                 <div
-                    class=" col-12 grid gap-x-lg padding-left-lg@md padding-right-xxl@md padding-left-xxl@sxl padding-right-xxl@sxl padding-bottom-lg">
+                    class=" col-12 grid gap-x-lg padding-left-lg@md padding-bottom-lg">
                     <div class="col-4">
                         <h2 class="font-primary">Malbec</h2>
                     </div>
                     <div class="col-4">
                         <h3>Crianza y puesta en botella</h3>
-                        <p class="max-width-xxxs text-justify">Criado durante 18 meses en barricas de roble francés
-                            Taransaud (63%) y de segundo uso (37%). Sin clarificar ni filtrar</p>
+                        <p class="max-width-xxxs text-justify">
+                            Criado durante 18 meses en barricas de roble francés nuevo (52%) y de segundo uso (48%). Sin clarificar ni filtrar.    
+                        </p>
                     </div>
                     <div class="col-4">
                         <h3>Notas de degustación</h3>
-                        <p class="max-width-xxxs text-justify">Color violeta intenso, saturado y brillante. En nariz es
-                            concentrado. En el paladar, muestra gran estructura y textura y diferentes capas. Es
-                            redondo, tenso, mineral</p>
+                        <p class="max-width-xxxs text-justify">
+                            Color rojo rubí, con buena intesisdad. En nariz aparecen ciruelas, pimienta blanca y notas de grafito. En boca es elegante, 
+                            redondo, con taninos sedosos y un final largo.
+                        </p>
                     </div>
                 </div>
                 <div
-                    class="col-12 grid gap-x-lg padding-left-lg@md padding-right-xxl@md padding-left-xxl@sxl padding-right-xxl@sxl padding-bottom-lg">
+                    class="col-12 grid gap-x-lg padding-left-lg@md padding-bottom-xl">
                     <div class="col-4">
-                        <h2 class="font-primary">Cabernet</h2>
-                        <h2 class="font-primary">Sauvignon</h2>
-
+                        <h2 class="font-primary">Cabernet<br>Sauvignon</h2>v                    
                     </div>
                     <div class="col-4">
                         <h3>Crianza y puesta en botella</h3>
-                        <p class="max-width-xxxs text-justify">Criado durante 18 meses en barricas de roble francés
-                            Taransaud (63%) y de segundo uso (37%). Sin clarificar ni filtrar</p>
+                        <p class="max-width-xxxs text-justify">
+                            Criado durante 18 meses en barricas de roble francés nuevo (57%) y de segundo uso (43%). Sin clarificar ni filtrar.
+                        </p>
                     </div>
                     <div class="col-4">
                         <h3>Notas de degustación</h3>
-                        <p class="max-width-xxxs text-justify">Color violeta intenso, saturado y brillante. En nariz es
-                            concentrado. En el paladar, muestra gran estructura y textura y diferentes capas. Es
-                            redondo, tenso, mineral</p>
+                        <p class="max-width-xxxs text-justify">
+                            Color violeta intenso, saturado y brillante. En nariz es concentrado. En el paladar, muestra 
+                            gran estructura y textura y diferentes capas. Es redondo, tenso, mineral.
+                        </p>
                     </div>
                 </div>
-                <div class="col-12 flex justify-left items-center">
-                    <img src="../assets/img/vd/desktop/vd-variedad.png" width="auto" height="auto" alt="Cobos - Icónico"
-                        class="width-90%">
-                    <img class="cobos-sidetext" src="../assets/img/vd/desktop/vd-variedad-vertical.svg" width="auto"
+                <div class="flex">
+                    <img src="../assets/img/vd/desktop/chanares/vd-chanares-variedad.png" width="auto" height="auto" alt="Cobos - Icónico"
+                        class="vd-variedad">
+                    <img class="cobos-sidetext scroll-fx js-scroll-fx" 
+                        data-scroll-fx="translateY, 100px, -200px, 0%, 100%"
+                        src="../assets/img/vd/desktop/vd-variedad-vertical.svg" width="auto"
                         height="auto" alt="Cobos - Icónico">
                 </div>
             </div>
         </section>
+        <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
 
 
 
         <!-- _________________________________________________________________________________________ -->
-        <!-- VIÑA COBOS MOBILE -->
+        <!-- VIÑA COBOS BLACK -->
         <section id="" class="hide@md varietales-component component-section-full">
             <div class="flex justify-center padding-top-xl padding-bottom-xxl">
                 <img class="padding-x-xl varietales-foto" src="../assets/img/vina_cobos_mobile_black.svg" alt="cobos-logo-mobile">
@@ -275,9 +307,8 @@
                     <div class="flex justify-center padding-top-md">
                         <p class="inner-varietal-paragraph scroll-fx js-scroll-fx"
                             data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                            Poda a cordón pitoneado. Riego por goteo. La exposición norte con una pendiente oeste-este
-                            de
-                            2,7° favorece a la circulación del aire y las condiciones de sanidad del viñedo.
+                            Sistema de poda a cordón pitoneado bilateral, riego tradicional por surcos con pendiente y buen desarrollo 
+                            de raíces en todo el perfil. Este vino proviene de vides de más de 50 años.
                         </p>
                     </div>
                 </div>
@@ -289,8 +320,8 @@
                         <div class="flex flex-column justify-center text-center">
                             <h5 class="inner-varietal-subtitle padding-bottom-xxs">Crianza y puesta en botella</h5>
                             <p class="inner-varietal-paragraph margin-x-auto ">
-                                Criado durante 18 meses en barricas roble frances nuevo (53%) y de segundo uso (47%).
-                                Embotellado en noviembre de 2019.
+                                Criado durante 18 meses en barricas de roble francés nuevo (52%) y de segundo uso (48%). 
+                                Sin clarificar ni filtrar. 
                             </p>
                         </div>
                     </div>
@@ -298,22 +329,20 @@
                         <div class="flex flex-column justify-center text-center">
                             <h5 class="inner-varietal-subtitle padding-bottom-xxs">Notas de degustacion</h5>
                             <p class="inner-varietal-paragraph margin-x-auto ">
-                                De color brillante y agradables tonos violetaceos. En nariz es fresco, concentrado,
-                                con notas de tomillo , jarrilla y moras maduras. Los taninos son aterciopelados
-                                pero firmes. Es un vino carnoso y de largo final.
+                                Color rojo rubí, con buena intesisdad. En nariz aparecen ciruelas, pimienta blanca y notas de grafito. En boca es elegante, 
+                                redondo, con taninos sedosos y un final largo.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="flex flex-column justify-center text-center">
                     <h1 class="inner-varietal-title scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                        CABERNET<br>FRANC</h1>
+                        CABERNET<br>SAUVIGNON</h1>
                     <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
                         <div class="flex flex-column justify-center text-center">
                             <h5 class="inner-varietal-subtitle padding-bottom-xxs">Crianza y puesta en botella</h5>
                             <p class="inner-varietal-paragraph margin-x-auto ">
-                                Criado durante 18 meses en barricas de roble francés nuevo (54%) y de segundo uso
-                                (46%). Embotellado en noviembre de 2019
+                                Criado durante 18 meses en barricas de roble francés nuevo (57%) y de segundo uso (43%). Sin clarificar ni filtrar.
                             </p>
                         </div>
                     </div>
@@ -321,9 +350,8 @@
                         <div class="flex flex-column justify-center text-center">
                             <h5 class="inner-varietal-subtitle padding-bottom-xxs">Notas de degustacion</h5>
                             <p class="inner-varietal-paragraph margin-x-auto ">
-                                De color rojo vivo, con tonalidades oscuras. En nariz aparecen hierbas andinas,
-                                pimiento morrón y notas de caja de cigarros. En boca, muestra una fuerte presencia
-                                de taninos, una textura horizontal y un final largo.
+                                De color profundo, de tonos violetas y negros. En nariz se presentan aromas de té negro, violetas, arándanos y frutos 
+                                del bosque. En boca muestra frescura, taninos finos y mineralidad.
                             </p>
                         </div>
                     </div>
@@ -339,13 +367,16 @@
         <!-- _________________________________________________________________________________________ -->
         <!-- VARIEDAD - Mobile -->
         <section class="hide@md component-section-full width-100% ">
-            <div class="position-absolute flex justify-center height-100%">
+            <div class="position-absolute flex justify-center height-100vh">
                 <img class="varietales-iconico-title margin-y-auto" src="../assets/img/vd-variedad.png" alt="VARIEDAD">
             </div>
             <img class="position-absolte left-0 bottom-0 varietales-final-varietal" style="z-index: -5 !important;"
                 src="../assets/img/cobos-mobile.png" alt="">
+            <!-- SEPARADOR -->
+            <div class="hide@md" style="height: 140px;"></div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+
 
 
 
@@ -357,9 +388,8 @@
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
-
-
-
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
 
     </main>
 

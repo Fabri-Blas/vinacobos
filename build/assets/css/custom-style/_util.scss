@@ -24,6 +24,11 @@
   color: var(--color-primary) !important;
 }
 
+.f-header__mobile-content > button > i {
+  color: white;
+  font-size: 27px;
+}
+
 .component-section {
   position: relative;
   height: 100vh;
@@ -85,6 +90,7 @@
 //     height: 300px;
 //     z-index: 99;
 // }
+
 .video-looping-tab {
   height: 100vh;
 }
@@ -190,6 +196,49 @@ footer {
       width: 100%;
       padding-left: 20px;
       padding-top: 130px;
+    }
+  }
+}
+#vinos-grid {
+  & h3 {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29.1px;
+    line-height: 35px;
+    letter-spacing: 0.0025em;
+    color: #1c1c1c;
+  }
+  & p {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #878581;
+  }
+
+  &-mobile {
+    & h3 {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.0025em;
+      color: #1c1c1c;
+    }
+
+    & p {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: justify;
+      letter-spacing: 0.05em;
+      color: #1c1c1c;
     }
   }
 }
@@ -649,35 +698,58 @@ footer {
   }
 }
 
-#vinculum-home {
-  background-image: url("../img/vinculum/desktop/vinculum-home-background.png");
-  background-position: center;
+#vinculum-malbec-home {
+  background-image: url("../img/vinculum/desktop/malbec/vinculum-malbec-bg.jpg");
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
 
-  &-2 {
-    background-image: url("../img/vinculum/desktop/vinculum-home-background-2.png");
+  &-mobile {
+    background-image: url("../img/vinculum/mobile/malbec/vinculum-malbec-mobile.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: black;
   }
+}
+#vinculum-chardonnay-home {
+  background-image: url("../img/vinculum/desktop/chardonnay/vinculum-chardonnay-bg.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
 
-  &-malbec-mobile {
-    background-image: url("../img/vinculum/mobile/vinculum-malbec-mobile.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  &-marchiori-mobile {
-    background-image: url("../img/vd/mobile/vd-marchiori-mobile.jpg");
+  &-mobile {
+    background-image: url("../img/vinculum/mobile/chardonnay/vinculum-chardonnay-mobile.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
 .vinculum {
+  &-conexion {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 110px;
+    width: 1700px;
+    height: 860px;
+    overflow: hidden;
+  }
+  &-fullscreen-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+  }
+  &-esencia {
+    position: absolute;
+    left: 187px;
+    width: 1500px;
+    height: 500px;
+  }
   &-title {
     font-family: var(--font-primary);
     font-weight: 500;
@@ -711,38 +783,71 @@ footer {
   }
 }
 
-#vinculum-chard-home {
-  &-mobile {
-    background-image: url("../img/Vinculum-Chard-Mobile.jpg");
-  }
-}
-#vd-home {
-  background-image: url("../img/vd/desktop/vd-home-background.png");
-  background-position: center;
+// ===============SECCION VD===============
+#vd-chanares-home {
+  background-image: url("../img/vd/desktop/chanares/vd-chanares.jpg");
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
 
   &-mobile {
-    background-image: url("../img/vd/mobile/vd-chanares-mobile.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  &-zingaretti-mobile {
-    background-image: url("../img/vd/mobile/vd-zingaretti-mobile.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  &-marchiori-mobile {
-    background-image: url("../img/vd/mobile/vd-marchiori-mobile.jpg");
+    background-image: url("../img/vd/mobile/chanares/vd-chanares-mobile.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
+#vd-zingaretti-home {
+  background-image: url("../img/vd/desktop/zingaretti/vd-zingaretti.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  
+  &-mobile {
+    background-image: url("../img/vd/mobile/zingaretti/vd-zingaretti-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+#vd-marchiori-home {
+  background-image: url("../img/vd/desktop/marchiori/vd-marchiori.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+
+  &-mobile {
+    background-image: url("../img/vd/mobile/marchiori/vd-marchiori-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+#vd-comprension-desktop {
+  & .comprension-fullscreen-text {
+    width: 85%;
+    z-index: 2;
+  }
+  .video-vd {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 110px;
+    width: 1700px;
+    height: 860px;
+    overflow: hidden;
+  }
+}
 .vd {
+  &-variedad {
+    position: absolute;
+    left: 187px;
+    width: 1500px;
+    height: 500px;
+  }
   &-title {
     font-family: var(--font-primary);
     font-weight: 500;
@@ -815,6 +920,17 @@ footer {
       letter-spacing: 0.12em;
       color: #f1eee9;
     }
+  }
+}
+#historia-caption {
+  & h2 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 76.2px;
+    line-height: 90px;
+    letter-spacing: 0.05em;
+    max-width: 1436px;
   }
 }
 #historia-leyenda {
@@ -1060,6 +1176,16 @@ footer {
     right: 0;
     max-width: 50%;
   }
+  & h2 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 76.2px;
+    line-height: 90px;
+    letter-spacing: 0.05em;
+    color: #3e3937;
+    max-width: 1400px;
+  }
 }
 
 .sliding-title {
@@ -1105,8 +1231,153 @@ footer {
       color: #3e3937;
     }
   }
+
+  &-custompanels {
+    & .custompanel {
+      width: 100%;
+      height: 33vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+
+      & h3 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 38px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.07em;
+        color: #f1eee9;
+        text-transform: uppercase;
+      }
+
+      & p {
+        color: white;
+        font-weight: lighter;
+        font-size: 32px;
+        padding: 7px 0px;
+      }
+    }
+
+    & .custompanel-1::before {
+      content: "";
+      background-image: url("../img/terroir/mobile/terroir-mobile-panel1.png");
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      filter: brightness(0.25);
+    }
+
+    & .custompanel-2::before {
+      content: "";
+      background-image: url("../img/terroir/mobile/terroir-mobile-panel2.png");
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      filter: brightness(0.25);
+    }
+
+    & .custompanel-3::before {
+      content: "";
+      background-image: url("../img/terroir/mobile/terroir-mobile-panel3.png");
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      filter: brightness(0.25);
+    }
+  }
+
+  &-slidingpanels {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+    overflow-y: scroll;
+
+    & button {
+      border: 0px;
+      color: white;
+      background-color: black;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 25px;
+      transform: translateX(-20px) translateY(17px);
+    }
+
+    & .slidingpanel {
+      height: 100vh;
+    }
+  }
+}
+.open-panel-animation {
+  animation: sliding-panel-open 0.5s ease-in-out;
+}
+.close-panel-animation {
+  animation: sliding-panel-close 0.5s ease-in-out;
+}
+@keyframes sliding-panel-open {
+  0% {
+    left: 150%;
+  }
+  100% {
+    left: 50%;
+  }
 }
 
+@keyframes sliding-panel-close {
+  0% {
+    left: 50%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+//===== SECCCION CONTACTO =======
+
+#contacto-home {
+  background-image: url("../img/contacto/desktop/contacto-desktop-fondo-1920.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#contacto-home .title {
+  color: white;
+  position: absolute;
+  left: 100px;
+  top: 300px;
+}
+#contacto-home h2 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 76px;
+  line-height: 89px;
+  letter-spacing: 0.12em;
+  max-width: 787px;
+}
 #contacto-mobile {
   &-home {
     background-image: url("../img/contacto/mobile/contacto-mobile-home.png");
@@ -1129,15 +1400,6 @@ footer {
   }
 }
 
-//===== SECCCION CONTACTO =======
-
-#contacto-home {
-  background-image: url("../img/contacto/desktop/contacto-desktop-fondo-1920.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 #vinos-origen {
   background-color: #181818;
 }
@@ -1150,6 +1412,13 @@ footer {
   line-height: 90px;
   color: #f1eee9;
   letter-spacing: 0.05em;
+}
+.contacto {
+  &-final-tree {
+    height: auto;
+    width: 48vw;
+    transform: translateY(-213px);
+  }
 }
 .contact-box {
   background-color: #f8f8f8;
@@ -1207,6 +1476,51 @@ footer {
   font-size: 13px;
   line-height: 16px;
   letter-spacing: 0.05em;
+}
+.contac-admin {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.01em;
+}
+
+.number-text {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.07em;
+}
+.administracion-text {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.07em;
+}
+
+.sub-text {
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
+  color: #878581;
+}
+
+.text-ubicacion {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  color: #000000;
 }
 
 //=================================================================================
@@ -1311,6 +1625,56 @@ footer {
       overflow: hidden;
     }
   }
+  .vd {
+    &-comprension {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 70px;
+      width: 1226px;
+      height: 690px;
+      overflow: hidden;
+    }
+    &-fullscreen-text {
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 2;
+    }
+    &-variedad {
+      position: absolute;
+      left: 124px;
+      width: 1068px;
+      height: 432px;
+    }
+  }
+  .vinculum {
+    &-conexion {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 70px;
+      width: 1226px;
+      height: 690px;
+      overflow: hidden;
+    }
+    &-fullscreen-text {
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 2;
+    }
+    &-esencia {
+      position: absolute;
+      left: 124px;
+      width: 1068px;
+      height: 432px;
+    }
+  }
   #felino-momentos {
     & .custom-card {
       width: 297px;
@@ -1412,6 +1776,16 @@ footer {
       height: auto;
     }
   }
+  #historia-caption {
+    & h2 {
+      font-family: var(--font-primary);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 47.1162px;
+      line-height: 56px;
+      letter-spacing: 0.07em;
+    }
+  }
   #historia-paul-hobbs {
     .paul-photo {
       max-width: 600px;
@@ -1427,6 +1801,22 @@ footer {
     font-size: 47.1162px;
     line-height: 56px;
     color: #f1eee9;
+    letter-spacing: 0.07em;
+  }
+  .contacto {
+    &-final-tree {
+      height: auto;
+      width: 60vw;
+      transform: translateY(-330px);
+    }
+  }
+
+  .administracion-text {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38px;
     letter-spacing: 0.07em;
   }
 

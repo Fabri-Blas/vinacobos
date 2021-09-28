@@ -40,13 +40,13 @@
                 </div>
 
                 <ul id="desktop-header" class="f-header__list margin-left-sm justify-center@md display@md">
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./historia"
                             class="f-header__link btn--nav">HISTORIA</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./terroir"
                             class="f-header__link btn--nav">TERROIR</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./vinos"
                             class="f-header__link btn--nav">VINOS</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./contacto"
                             class="f-header__link btn--nav">CONTACTO</a></li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
                             class="f-header__link btn--nav">TIENDA</a></li>
@@ -57,16 +57,16 @@
 
                 <ul class="f-header__list padding-top-lg justify-center@md hide@md">
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
+                        <a href="./historia" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
+                        <a href="./terroir" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
+                        <a href="./vinos" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
+                        <a href="./contacto" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
                         <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TIENDA</a>
@@ -95,8 +95,8 @@
 
 
         <!-- _________________________________________________________________________________________ -->
-        <!-- VINCULUM HOME DESKTOP -->
-        <section id="vinculum-home-2" class="display@md component-section width-100%">
+        <!-- VINCULUM-CHARDONNAY HOME DESKTOP -->
+        <section id="vinculum-chardonnay-home" class="display@md component-section width-100%">
             <div class="display@md padding-left-xxs">
                 <div id="cobos-home-content"
                     class="position-absolute bottom-0 flex flex-row justify-left color-black padding-left-xxl padding-y-xxxl">
@@ -109,14 +109,20 @@
                     <h3 class="varietales-description padding-bottom-xs">BOTELLA</h2>
                         <h3 class="varietales-description">FICHA ENOLÓGICA</h3>
                 </div>
+                <div class="position-absolute bottom-0">
+                    <img src="../assets/img/vinculum/desktop/chardonnay/vinculum-chardonnay-bottle.png" alt="">
+                </div>
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
+
 
 
         <!-- _________________________________________________________________________________________ -->
         <!-- VINCULUM CHARDONNAY HOME MOBILE-->
-        <section id="vinculum-chard-home-mobile" class="hide@md component-section bg-white width-100%">
+        <section id="vinculum-chardonnay-home-mobile" class="hide@md component-section bg-white width-100%">
             <div class="position-absolute bottom-0 -left-0 padding-left-md">
                 <div class="padding-bottom-xxxxs">
                     <h1 class="varietales-title">Chardonnay</h1>
@@ -137,53 +143,63 @@
         <!-- _________________________________________________________________________________________ -->
         <!-- CONEXION - Desktop -->
         <section id="cobos-experiencia-desktop"
-            class="display@md component-section-full flex flex-column justify-center items-center padding-md@md padding-lg@sxl">
-            <img class="padding-xl@md padding-xxl@sxl" src="../assets/img/vinculum/desktop/vinculum-conexion.png"
-                alt="Cobos - Experiencia">
-            <img src="../assets/img/vinculum/desktop/vinculum-conexion-texto.png"
-                class="experiencia-fullscreen-text position-absolute bottom-0 left-50% -translate-x-50% width-80%"
-                alt="">
+            class="display@md component-section-full flex flex-column justify-center items-center">
+            <div class="vinculum-conexion">
+                <img class="width-100%" src="../assets/img/vinculum/desktop/chardonnay/vinculum-chardonnay-conexion.png"
+                    alt="Vinculum - Conexion">
+                <img src="../assets/img/vinculum/desktop/conexion-text.svg"
+                    class="vinculum-fullscreen-text scroll-fx js-scroll-fx"
+                    data-scroll-fx="translateY, 30px, -150px, 0%, 100%"
+                    alt="Texto Conexión">
+            </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
+
 
 
 
         <!-- _________________________________________________________________________________________ -->
-        <!-- CONEXION - Mobile -->
+        <!-- CONEXION MOBILE -->
         <section class="hide@md">
             <div class=" component-section width-100% text-center flex justify-center items-center ">
-                <img class="padding-x-md varietales-foto scroll-fx js-scroll-fx" 
+                <img class="padding-x-md varietales-foto scroll-fx js-scroll-fx"
                     data-scroll-fx="opacity, 0, 1, 25%, 35%"
-                    src="../assets/img/vinculum-malbec-experiencia-mobile.png"
-                    alt="vinculum-conexion">
+                    src="../assets/img/vinculum/mobile/malbec/vinculum-conexion-mobile.png" alt="vinculum - conexion">
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
 
-
+        <!-- _________________________________________________________________________________________ -->
         <!-- ESENCIA DE CULTURA - Desktop-->
         <section id="cobos-nuestroicono-desktop"
-            class="display@md component-section-full grid padding-lg@md padding-xxl@sxl margin-x-xs@md margin-x-0@sxl">
-            <div class="col-6 flex justify-center items-end">
-                <img class="padding-lg margin-bottom-xxs" src="../assets/img/vinculum/desktop/vinculum-esencia-1.png"
-                    alt="">
-            </div>
-            <div class="col-6 flex flex-column justify-end items-center">
-                <div class="text-center margin-x-auto">
-                    <h3 class="font-primary">Esencia de<br>cultura</h3>
+            class="display@md component-section-full margin-x-md">
+            <div class="grid padding-x-xl@sxl padding-x-md@md">
+                <div class="col-6 flex justify-center items-end">
+                    <img class="padding-left-lg padding-right-sm" 
+                        src="../assets/img/vinculum/desktop/chardonnay/vinculum-chardonnay-esencia-1.png"
+                        alt="">
                 </div>
-                <div class="width-100%">
-                    <img class="padding-lg margin-top-xxl@md"
-                        src="../assets/img/vinculum/desktop/vinculum-esencia-2.png" alt="">
+                <div class="col-6 flex flex-column justify-end items-center">
+                    <div class="text-center margin-x-auto margin-y-auto">
+                        <h3 class="font-primary">Esencia de<br>cultura</h3>
+                    </div>
+                    <div>
+                        <img class="padding-right-lg padding-left-sm"
+                            src="../assets/img/vinculum/desktop/chardonnay/vinculum-chardonnay-esencia-2.png" alt="">
+                    </div>
                 </div>
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
 
 
 
         <!-- _________________________________________________________________________________________ -->
-        <!-- ESENCIA DE CULTURA - Mobile-->
+        <!-- ESENCIA DE CULTURA - MOBILE-->
         <section id="cobos-icono" class="hide@md">
             <div class="max-width-xs margin-x-auto margin-y-auto">
                 <div class="grid margin-x-auto padding-x-md">
@@ -191,18 +207,20 @@
                         <div class="position-relative bottom-0">
                             <img class="varietales-foto-icono padding-right-xs scroll-fx js-scroll-fx"
                                 data-scroll-fx="opacity, 0, 1, 25%, 35%"
-                                src="../assets/img/vinculum/mobile/vinculum-2-malbec-mobile.png" alt="vinculum-malbec">
+                                src="../assets/img/vinculum/mobile/chardonnay/vinculum-chardonnay-esencia-1-mobile.png" 
+                                alt="VINCULUM-Chardonnay">
                         </div>
                     </div>
                     <div class="col-6 flex flex-column justify-between padding-left-xs">
                         <h1 class="margin-x-auto margin-y-auto scroll-fx js-scroll-fx"
                             data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                            Esencia de cultura</h1>
+                            Esencia de cultura
+                        </h1>
                         <div class="">
                             <img class="varietales-foto-icono scroll-fx js-scroll-fx"
                                 data-scroll-fx="opacity, 0, 1, 25%, 35%"
-                                src="../assets/img/vinculum/mobile/viculum-malbec-etiqueta-mobile.png"
-                                alt="vinculum-malbec-etiqueta">
+                                src="../assets/img/vinculum/mobile/chardonnay/vinculum-chardonnay-esencia-2-mobile.png" 
+                                alt="vinculum-Chardonnay-etiqueta">
                         </div>
                     </div>
                 </div>
@@ -210,86 +228,99 @@
         </section>
         <!-- _________________________________________________________________________________________ -->
 
+
+
         <!-- _________________________________________________________________________________________ -->
-        <!-- ICÓNICO - Desktop -->
-        <section id="cobos-iconico" class="display@md component-section-full margin-bottom-xxxl">
+        <!-- ESENCIA - Desktop -->
+        <section id="cobos-iconico" class="display@md component-section margin-bottom-xxxl">
             <div class="grid gap-lg grid gap-lg padding-x-lg@md padding-x-xxl@sxl margin-x-xxxxs@md margin-x-0@sxl">
                 <div class="col-12 text-center">
-                    <img class="text-center" src="../assets/img/vd/desktop/vd-logo.svg" width="484" height="80"
+                    <img class="text-center" src="../assets/img/vinculum/desktop/vinculum-logo.svg" width="484" height="80"
                         alt="VD">
                 </div>
                 <div
-                    class="col-12 grid gap-x-lg padding-left-lg@md padding-right-xxl@md padding-left-xxl@sxl padding-right-xxl@sxl padding-bottom-lg">
+                    class="col-12 grid gap-x-lg padding-left-lg@md padding-bottom-xl">
                     <div class="col-4">
-                        <h3>Selección</h3>
-                        <p class="max-width-xxxs text-justify">Una selección de viñas y racimos de las uvas Malbec de la
-                            más alta calidad provenientes de terroir seleccionado</p>
+                        <h3>Viñedo</h3>
+                        <p class="max-width-xxxs text-justify">
+                            Viñedos de Luján de Cuyo, Tupungato, Tunuyán y San Carlos. Altitud entre 1050 - 1197 m.s.n.m. 
+                            Clima semidesértico.
+                        </p>
                     </div>
                     <div class="col-4">
                         <h3>Crianza y puesta en botella</h3>
-                        <p class="max-width-xxxs text-justify">Criado durante 18 meses en barricas de roble francés
-                            Taransaud (63%) y de segundo uso (37%). Sin clarificar ni filtrar</p>
+                        <p class="max-width-xxxs text-justify">
+                            Criado durante 12 meses en barricas de roble francés nuevo (15%) y en tanques de acero inoxidable (85%). 
+                            Fermentación maloláctica (15%). Sin clarificar
+                        </p>
                     </div>
                     <div class="col-4">
                         <h3>Notas de degustación</h3>
-                        <p class="max-width-xxxs text-justify">Color violeta intenso, saturado y brillante. En nariz es
-                            concentrado. En el paladar, muestra gran estructura y textura y diferentes capas. Es
-                            redondo, tenso, mineral</p>
+                        <p class="max-width-xxxs text-justify">
+                            Color amarillo intenso con tonos verdosos. En nariz muestra notas de pera, manzana verde, albaricoque y 
+                            toques de canela, logrando una gran pureza e intensidad. Este vino es rico, mineral y texturizado en boca, 
+                            sostenido por una notable frescura y un largo final.
+                        </p>
                     </div>
                 </div>
-                <div class="col-12 flex justify-left items-center">
-                    <img src="../assets/img/vd/desktop/vd-variedad.png" width="auto" height="auto" alt="Cobos - Icónico"
-                        class="width-90%">
-                    <img class="cobos-sidetext" src="../assets/img/vinculum/desktop/vinculum-esencia.svg" width="auto"
-                        height="auto" alt="Cobos - Icónico">
+                <div class="flex">
+                    <img src="../assets/img/vd/desktop/chanares/vd-chanares-variedad.png" width="auto" height="auto" alt="Cobos - Icónico"
+                        class="vinculum-esencia">
+                    <img class="cobos-sidetext scroll-fx js-scroll-fx" 
+                        data-scroll-fx="translateY, 100px, -200px, 0%, 100%"
+                        src="../assets/img/vinculum/desktop/vinculum-esencia.svg" width="auto"
+                        height="auto" alt="Vinculum - Esencia">
                 </div>
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
+
+
 
         <!-- _________________________________________________________________________________________ -->
-        <!-- VIÑA COBOS BLACK -->
+        <!-- VIÑA COBOS BLACK - Mobile -->
         <section id="" class="hide@md varietales-component component-section-full">
             <div class="flex justify-center padding-top-xl padding-bottom-xxl">
                 <img class="padding-x-xl varietales-foto" src="../assets/img/vina_cobos_mobile_black.svg" alt="cobos-logo-mobile">
             </div>
-            <div class="flex justify-center padding-x-md margin-x-auto scroll-fx js-scroll-fx"
+            <div class="flex justify-center margin-x-auto padding-x-md scroll-fx js-scroll-fx"
                 data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                <img class="varietales-foto" src="../assets/img/cobos-malbec-mobile.png" alt="">
+                <img class="varietales-foto" src="../assets/img/cobos/mobile/cobos-malbec-mobile.png"
+                    alt="">
             </div>
             <div class="margin-bottom-xxxl">
-                <div class="margin-bottom-lg margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx"
-                    data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                <div class="margin-bottom-lg">
                     <div class="margin-x-auto padding-top-xxl padding-bottom-lg scroll-fx js-scroll-fx"
                         data-scroll-fx="opacity, 0, 1, 25%, 35%" style="width: 265px;">
-                        <img src="../assets/img/vinculum/mobile/vinos-vinacobos-vinculum.svg" alt="">
+                        <img src="../assets/img/vinculum/mobile/malbec/vinos-vinacobos-vinculum.svg" alt="">
                     </div>
-                    <div class="flex flex-column justify-center text-center">
+                    <div class="flex flex-column justify-center text-center scroll-fx js-scroll-fx"
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%">
                         <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Viñedo</h5>
-                        <p class="inner-varietal-paragraph margin-x-auto">Viñedos de Lujan de Cuyo, Tupungato,
-                            Tanuyan y San Carlos. Altitud entre 1050 - 1197 m.s.n.m. Clima semidesértico.
+                        <p class="inner-varietal-paragraph margin-x-auto">Viñedos de Lujan de Cuyo, Tupungato , Tunuyan
+                            y
+                            San Carlos. Altitud entre 1050 - 1197 m.s.n.m. Clima Semidesertico.
                         </p>
                     </div>
                 </div>
-                <div class="margin-bottom-lg margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx"
-                    data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
                     <div class="flex flex-column justify-center text-center">
                         <h5 class="inner-varietal-subtitle padding-bottom-xxs">Crianza y puesta en botellas</h5>
                         <p class="inner-varietal-paragraph margin-x-auto ">
-                            Criado durante 12 meses en barricas de roble frances nuevo (15%) y en tanques de acero
-                            inoxidable (85%).Fermentacion malolactica (15%). Sin clarificar.
+                            Criado durante 12 meses en barricas de roble francés nuevo (15%) y en tanques de acero inoxidable (85%). 
+                            Fermentación maloláctica (15%). Sin clarificar
                         </p>
                     </div>
                 </div>
-                <div class="margin-bottom-lg margin-bottom-lg@md inner-vinos-content scroll-fx js-scroll-fx"
-                    data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
                     <div class="flex flex-column justify-center text-center">
                         <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Notas de degustacion</h5>
                         <p class="inner-varietal-paragraph margin-x-auto ">
-                            Color amarillo intenso con tonos verdosos. En nariz muestra notas de pera, manzana verde,
-                            albirocoque y toques de canela, logrando una gran pureza e intensidad .
-                            Este vino es rico, mineral y texturizado en boca, sostenido por una notable frescura y
-                            un largo final.
+                            Color amarillo intenso con tonos verdosos. En nariz muestra notas de pera, manzana verde, albaricoque y 
+                            toques de canela, logrando una gran pureza e intensidad. Este vino es rico, mineral y texturizado en boca, 
+                            sostenido por una notable frescura y un largo final.
                         </p>
                     </div>
                 </div>
@@ -299,18 +330,18 @@
         <!-- _________________________________________________________________________________________ -->
 
         <!-- _________________________________________________________________________________________ -->
-        <!-- ESENCIA -Mobile -->
+        <!-- ESENCIA - MOBILE -->
         <section class="hide@md component-section-full width-100% ">
-            <div class="position-absolute flex justify-center height-100%">
-                <img class="varietales-iconico-title margin-y-auto" src="../assets/img/viculum-malbec-esencia.svg"
-                    alt="ESENCIA">
+            <div class="position-absolute flex justify-center height-100vh">
+                <img class="varietales-iconico-title margin-y-auto" 
+                    src="../assets/img/viculum-malbec-esencia.svg" alt="ESCENCIA">
             </div>
-            <img class="position-absolte left-0 bottom-0 varietales-final-varietal" style="z-index: -5 !important;"
+            <img class="position-absolute left-0 bottom-0 varietales-final-varietal" style="z-index: -5 !important;"
                 src="../assets/img/cobos-mobile.png" alt="">
         </section>
+        <!-- SEPARADOR -->
+        <div class="hide@md" style="height: 140px;"></div>
         <!-- _________________________________________________________________________________________ -->
-
-
 
         <!-- _________________________________________________________________________________________ -->
         <!-- FINAL - Desktop -->
@@ -320,7 +351,8 @@
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
-
+        <!-- SEPARADOR -->
+        <div class="display@md" style="height: 300px;"></div>
 
     </main>
     <!-- ==============================================END-MAIN============================================== -->
@@ -368,8 +400,6 @@
                     </ul>
                 </div>
             </div>
-
-
         </div>
 
 
@@ -428,12 +458,7 @@
 
     <!-- ==============================================END-FOOTER============================================== -->
 
-
-
-
     <script src="../assets/js/scripts.js"></script>
-
 </body>
-
 
 </html>

@@ -2893,6 +2893,7 @@ function resetFocusTabsStyle() {
 
 
 
+// Custom Desktop Functions
 const slidingPanelsBtn = document.getElementById("sliding-panels-btn");
 let slidingPanelsBtnState = false; // False = hidden | True = show
 
@@ -2909,6 +2910,38 @@ function hideSlidingPanelsBtn() {
     slidingPanelsBtnState = false;
   }
 }
+
+// Custom Mobile Functions
+const terroirMobileCustompanels = document.getElementById('terroir-mobile-custompanels');
+const slidingpanelsMobile = document.getElementById('terroir-mobile-slidingpanels');
+const panelMobileChanares = document.getElementById('slidingpanel-chanares');
+const panelMobileZingaretti = document.getElementById('slidingpanel-zingaretti');
+const panelMobileMarchiori = document.getElementById('slidingpanel-marchiori');
+let actualOpenPanel;
+
+function openMobilePanel(panel) {
+  terroirMobileCustompanels.scrollIntoView({behavior: 'smooth'});
+  slidingpanelsMobile.classList.remove('is-hidden');
+  slidingpanelsMobile.classList.remove('close-panel-animation');
+  slidingpanelsMobile.classList.add('open-panel-animation');
+  panel.classList.remove('is-hidden');
+  console.log('OPEN PANEL');
+
+  actualOpenPanel = panel;
+
+  document.body.style.overflowY = "hidden";
+}
+function closeMobilePanel(panel) {
+  slidingpanelsMobile.classList.remove('open-panel-animation');
+  slidingpanelsMobile.classList.add('close-panel-animation');
+  setTimeout(() => {
+    panel.classList.add('is-hidden');
+    slidingpanelsMobile.classList.add('is-hidden');
+    document.body.style.overflowY = "scroll";
+  }, 450);
+  console.log('CLOSE PANEL');
+}
+
 // File#: _1_sticky-hero
 // Usage: codyhouse.co/license
 (function() {
@@ -4499,6 +4532,9 @@ let scrollH = window.pageYOffset / 23.4;
 const vinosHome = document.getElementById("vinos-home");
 const felinoHome = document.getElementById("felino-home");
 const cobosHome = document.getElementById("cobos-home");
+const contactoHome = document.getElementById("contacto-home");
+const terroirHome = document.getElementById("terroir-home");
+const historiaHome = document.getElementById("historia-home");
 
 function inViewport(el) {
     if (el.getBoundingClientRect()) {
@@ -4529,6 +4565,15 @@ document.addEventListener('scroll', () => {
         sContainerCheck(felinoHome);
     }else if (cobosHome){
         sContainerCheck(cobosHome);
+    }
+    else if (contactoHome){
+        sContainerCheck(contactoHome);
+    }
+    else if (terroirHome){
+        sContainerCheck(terroirHome);
+    }
+    else if (historiaHome){
+        sContainerCheck(historiaHome);
     }
 });
 const felinoMomentos = document.getElementById('felino-momentos-first');
