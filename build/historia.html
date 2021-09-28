@@ -94,7 +94,8 @@
 
     <main class="bg-white">
         <!-- _________________________________________________________________________________________ -->
-        <!-- DESARROLLO DESKTOP -->
+       
+                  <!-- DESARROLLO DESKTOP -->
         <section id="historia-home" class="display@md component-section z-index-2 bg shadow-sm">
             <div class="display@md">
                 <h2 class="title color-white">NUESTRA HISTORIA</h2>
@@ -119,15 +120,19 @@
         </section>
 
         <!-- HISTORIA CAPTION -->
-        <section id="historia-caption" class="display@md bg-white scroll-fx js-scroll-fx"
+        <section id="historia-caption" class="display@md bg-white scroll-fx js-scroll-fx component-section-full"
             data-scroll-fx="opacity, 0, 1, 25%, 35%">
             <div
                 class="display@md component-section height-100% position-relative flex flex-column justify-center items-center">
                 <img class="position-absolute reveal-fx reveal-fx--clip-x" src="./assets/img/vinos-bg-logo.png"
                     alt="Historia- Background Logo" width="340" height="326">
                 <h2 class="font-primary text-center reveal-fx reveal-fx--clip-x">
-                    “Nuestro sueño se transformó en un desafío, elevar al Malbec como emblema de Mendoza”
-                </h2>
+                    “Nuestro sueño se transformó en un desafío, elevar al Malbec como emblema de Mendoza”        
+                </h2>  
+            </div>
+            <div id="scroll-helper" class="position-absolute">
+                <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+                <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
@@ -135,7 +140,7 @@
 
 
         <!-- VIÑA COBOS PROLOGO-->
-        <section id="historia-prologo" class=" display@md vinos-especiales-unicos component-section z-index-2">
+        <section id="historia-prologo" class=" display@md vinos-especiales-unicos component-section-full z-index-2">
 
             <div class="position-absolute" style="z-index:-5 !important;">
                 <img src="assets/img/historia/desktop/arbol-desktop.png" class="historia-final-tree" alt="arbol-fondo">
@@ -170,12 +175,16 @@
                     </div>
                 </div>
             </div>
+            <div id="scroll-helper" class="position-absolute">
+                <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+                <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
+            </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
 
 
         <!---SECCION PAUL HOBBS -->
-        <section id="visita-argentina" class="display@md component-section grid">
+        <section id="visita-argentina" class="display@md component-section-full grid">
             <div class="grid padding-x-md max-width-xxxl margin-x-auto">
                 <div class="grid col-12 margin-y-auto">
                     <div class="col-6 flex justify-center">
@@ -196,13 +205,17 @@
                     </div>
                 </div>
             </div>
+            <div id="scroll-helper" class="position-absolute">
+                <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+                <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
+            </div>
         </section>
        
         <!-- _________________________________________________________________________________________ -->
 
 
         <!-- SECCCION HISTORIA TEXTO -->
-        <section id="historia-inicio" class=" display@md component-section">
+        <section id="historia-inicio" class=" display@md component-section-full">
             <div class="flex flex-column justify-center items-center height-100% padding-left-xxl">
                 <h2 style="transform: translateY(100px);">HISTORIA</h2>
                 <h3>Inicio</h3>
@@ -223,43 +236,16 @@
                     invitado a formar parte del equipo inaugural de Opus One.
                 </p>
             </div>
-        </section>
-        <!-- _________________________________________________________________________________________ -->
-
-
-        <!-- SECCION ARGENTINA HISTORIA-->
-        <section id="argentina-quote" class="display@md component-section flex justify-center items-center z-index-2">
-            <div class="historia-quote" style="z-index: -5 !important">
-                <img src="./assets/img/historia/desktop/comillas.svg" alt="quotes">
-            </div>
-            <div class="flex flex-column items-center justify-center">
-                <div class="text-center">
-                    <h3 class="text-center">
-                        “Argentina no es mi segundo país. Para mí, de algún modo es mi hogar.”
-                    </h3>
-                </div>
-                <div class="flex justify-end width-70%">
-                    <div class="historia-small-line"></div>
-                    <h4 class="padding-top-lg">Paul Hobbs</h4>
-                </div>
-                <div class="flex flex-column justify-center text-center padding-top-xxl">
-                    <p class="">
-                        Paul Hobbs es el soñador incansable que logró con su pionero Cobos Malbec 1999 ubicar a
-                        Argentina en el podio de
-                        los exclusivos vinos ultra premium del mundo. Hoy Viña Cobos expresa el carácter, personalidad y
-                        estilo de su
-                        fundador, que sigue con su sueño inagotable de elaborar los mejores vinos de este rincón del
-                        mundo.
-
-                    </p>
-                </div>
+            <div id="scroll-helper" class="position-absolute">
+                <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+                <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
 
 
         <!-- PRIMERA VISITA ARGENTINA-->
-        <section id="visita-argentina" class="display@md component-section grid">
+        <section id="visita-argentina" class="display@md component-section-full grid">
             <div class="grid padding-x-md max-width-xxxl margin-x-auto">
                 <div class="grid col-12 margin-y-auto">
                     <div class="col-6 flex justify-center">
@@ -290,6 +276,45 @@
                     </div>
                 </div>
             </div>
+            <div id="scroll-helper" class="position-absolute">
+                <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+                <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
+            </div>
+        </section>
+        <!-- _________________________________________________________________________________________ -->
+
+
+        <!-- SECCION ARGENTINA HISTORIA-->
+        <section id="argentina-quote" class="display@md component-section-full flex justify-center items-center z-index-2">
+            <div class="historia-quote" style="z-index: -5 !important">
+                <img src="./assets/img/historia/desktop/comillas.svg" alt="quotes">
+            </div>
+            <div class="flex flex-column items-center justify-center">
+                <div class="text-center">
+                    <h3 class="text-center">
+                        “Argentina no es mi segundo país. Para mí, de algún modo es mi hogar.”
+                    </h3>
+                </div>
+                <div class="flex justify-end width-70%">
+                    <div class="historia-small-line"></div>
+                    <h4 class="padding-top-lg">Paul Hobbs</h4>
+                </div>
+                <div class="flex flex-column justify-center text-center padding-top-xxl">
+                    <p class="">
+                        Paul Hobbs es el soñador incansable que logró con su pionero Cobos Malbec 1999 ubicar a
+                        Argentina en el podio de
+                        los exclusivos vinos ultra premium del mundo. Hoy Viña Cobos expresa el carácter, personalidad y
+                        estilo de su
+                        fundador, que sigue con su sueño inagotable de elaborar los mejores vinos de este rincón del
+                        mundo.
+
+                    </p>
+                </div>
+            </div>
+            <div id="scroll-helper" class="position-absolute">
+                <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+                <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
+            </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
 
@@ -298,7 +323,7 @@
 
 
         <!-- ARGENTINA  CAMBIO DESKTOP -->
-        <section id="argentina-cambio" class="display@md component-section flex justify-center">
+        <section id="argentina-cambio" class="display@md component-section-full flex justify-center">
             <div class="flex flex-column justify-center">
                 <h3 class="text-center">Un cambio en Argentina</h3>
                 <div class="historia-big-line margin-x-auto margin-y-md"></div>
@@ -315,6 +340,10 @@
                 <div class="flex justify-center padding-top-lg">
                     <img src="./assets/img/historia/desktop/paul-hobbs-logo.png" alt="paul-firma">
                 </div>
+            </div>
+            <div id="scroll-helper" class="position-absolute">
+                <span class="scroll-line init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+                <span class="scroll-word" style="visibility: inherit; opacity: 1;">Scroll</span>
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
