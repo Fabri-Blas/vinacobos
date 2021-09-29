@@ -302,6 +302,7 @@ button {
 .btn--contacto {
   cursor: pointer;
   position: absolute;
+  right: 230px;
   font-size: 13px;
   text-decoration: none;
   text-transform: uppercase;
@@ -312,9 +313,7 @@ button {
   background: transparent;
   border: 0px;
   border-bottom: 1px solid var(--color-primary-light);
-  transition: all 0.5s;
-  bottom: 17px;
-  right: 190px;
+  transition: all 0.5s;  
   padding-bottom: 8px;
   padding-right: 0;
   font-family: var(--font-primary);
@@ -325,6 +324,7 @@ button {
     transition: all 0.5s;
   }
 }
+
 @media only screen and (max-width: 1366px) {
   .btn--primary{
     left: 70px;
@@ -334,8 +334,7 @@ button {
     }
   }
   .btn--contacto{
-    right: 185px;
-    bottom:-102px;
+    right: 180px;
   }
 }
 

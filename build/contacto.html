@@ -40,13 +40,13 @@
                 </div>
 
                 <ul id="desktop-header" class="f-header__list margin-left-sm justify-center@md display@md">
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./historia"
                             class="f-header__link btn--nav">HISTORIA</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./terroir"
                             class="f-header__link btn--nav">TERROIR</a></li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./vinos"
                             class="f-header__link btn--nav">VINOS</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./contacto"
                             class="f-header__link btn--nav">CONTACTO</a></li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
                             class="f-header__link btn--nav">TIENDA</a></li>
@@ -56,16 +56,16 @@
 
                 <ul class="f-header__list padding-top-lg justify-center@md hide@md">
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
+                        <a href="./historia" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
+                        <a href="./terroir" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
+                        <a href="./vinos" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
+                        <a href="./contacto" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
                         <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TIENDA</a>
@@ -123,207 +123,210 @@
                     alt="arbol-fondo">
             </div>
 
-
-            <div class="grid margin-x-xxl margin-top-xxxl">
-                <div class="col-5">
-                    <div class="border-box flex justify-center items-center">
-                        <div class="contact-box">
-                            <ul class="padding-left-lg">
-                                <li id="box-contacto" class="contacto-text padding-top-lg contact-section-selected"
-                                    onclick="resetForms(event)">
-                                    Contacto
-                                </li>
-                                <li id="box-visitas" class="contacto-text padding-top-sm contact-section-inactive"
-                                    onclick="showVisitas(event)">
-                                    Visitas
-                                </li>
-                                <li id="box-administracion"
-                                    class="contacto-text padding-top-sm contact-section-inactive"
-                                    onclick="showAdministracion(event)">
-                                    Administración
-                                </li>
-                                <li id="box-ubicacion" class="contacto-text padding-top-sm contact-section-inactive"
-                                    onclick="showUbicacion(event)">
-                                    Ubicación
-                                </li>
-                            </ul>
+            <div class="height-100vh grid flex items-center">
+                <div class="grid margin-x-xxl margin-y-auto">
+                    <div class="col-5">
+                        <div class="border-box flex justify-center items-center">
+                            <div class="contact-box">
+                                <ul class="padding-left-lg">
+                                    <li id="box-contacto" class="contacto-text padding-top-lg contact-section-selected"
+                                        onclick="resetForms(event)">
+                                        Contacto
+                                    </li>
+                                    <li id="box-visitas" class="contacto-text padding-top-sm contact-section-inactive"
+                                        onclick="showVisitas(event)">
+                                        Visitas
+                                    </li>
+                                    <li id="box-administracion"
+                                        class="contacto-text padding-top-sm contact-section-inactive"
+                                        onclick="showAdministracion(event)">
+                                        Administración
+                                    </li>
+                                    <li id="box-ubicacion" class="contacto-text padding-top-sm contact-section-inactive"
+                                        onclick="showUbicacion(event)">
+                                        Ubicación
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+    
+    
+                    <!--FORM CONTACTO -Desktop -->
+                    <div id="form-contacto" class="col-6">
+                        <form class="contacto" action="" method="POST">
+                            <div class="margin-y-lg flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text">Nombre *</label>
+                                <input type="text" id="contacto-nombre" name="contacto-nombre" class="input-style">
+                            </div>
+    
+                            <div class="margin-y-lg flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text">Apellido *</label>
+                                <input type="text" id="contacto-apellido" name="contacto-apellido" class="input-style">
+                            </div>
+    
+                            <div class="margin-y-lg flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text">Email *</label>
+                                <input type="email" id="contacto-email" name="contacto-email" class="input-style">
+                            </div>
+    
+                            <div class="margin-y-lg flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text">Teléfono</label>
+                                <input type="tel" id="contacto-telefono" name="contacto-telefono" class="input-style">
+                            </div>
+    
+                            <div class="margin-y-lg flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text">Mensaje *</label>
+                                <textarea id="contacto-mensaje" name="contacto-mensaje" rows="6"></textarea>
+                            </div>
+    
+                            <div class="">
+                                <a href="./vinos"><button class="btn--contacto z-index-3"
+                                        style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
+                            </div>
+                        </form>
+    
+                        <div class="form-footer">
+                            <p class="contac-admin"> ADMINISTRACIÓN</p>
+                            <p class="number-text">+54 9 261 6043832</p>
+                        </div>
+                    </div>
+    
+                    <!--FORM VISITAS-Desktop-->
+                    <div id="form-visitas" class="is-hidden col-6">
+                        <form class="contacto grid gap-md" action="" method="POST">
+                            <div class="col-6 margin-y-xs flex flex-column">
+                                <label class="padding-left-lg@sxl padding-lef-sm@md text-uppercase form-text">Nombre
+                                    *</label>
+                                <input type="text" id="visitas-nombre" name="visita-nombre" class="input-style">
+                            </div>
+    
+                            <div class="col-6 margin-y-xs flex flex-column">
+                                <label class="padding-left-lg@sxl  text-uppercase form-text">Apellido *</label>
+                                <input type="text" id="visitas-apellido" name="visita-apellido" class="input-style">
+                            </div>
+    
+                            <div class="col-6 margin-y-xs flex flex-column">
+                                <label class="padding-left-lg@sxl  text-uppercase form-text">Teléfono</label>
+                                <input type="tel" id="visitas-telefono" name="visita-telefono" class="input-style">
+                            </div>
+    
+                            <div class="col-6 margin-y-xs flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text">Email *</label>
+                                <input type="email" id="visitas-email" name="visita-email" class="input-style">
+                            </div>
+                            <div class="col-6 margin-y-xs flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text">Fecha</label>
+                                <input type="date" id="visitas-fecha" name="visita-fecha" class="input-style">
+                            </div>
+    
+                            <div class="col-6 margin-y-xs flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text">Horario </label>
+                                <input type="email" id="visitas-horario" name="visita-horario" class="input-style">
+                            </div>
+                            <div class="col-6 margin-y-xs flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text">Cantidad de personas *</label>
+                                <input type="number" id="visitas-cantidad" name="visita-telefono" class="input-style">
+                            </div>
+    
+                            <div class="col-6 margin-y-xs flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text">¿Incluye menores de edad? </label>
+                                <input type="email" id="visitas-menores" name="visita-menores" class="input-style">
+                            </div>
+                            <div class="col-6 margin-y-xs flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text">¿Existe alguna dificultad
+                                    motriz?</label>
+                                <input type="text" id="visitas-motriz" name="visita-telefono" class="input-style">
+                            </div>
+    
+                            <div class="col-6 margin-y-xs flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text"> Idioma </label>
+                                <input type="text" id="visitas-idioma" name="visita-email" class="input-style">
+                            </div>
+    
+                            <div class="col-12 margin-y-lg flex flex-column">
+                                <label class="padding-left-lg text-uppercase form-text">Mensaje *</label>
+                                <textarea id="visita-mensaje" name="visitas-mensaje" rows="6"></textarea>
+                            </div>
+    
+                            <div class="">
+                                <a href="./vinos"><button class="btn--contacto z-index-3 margin-bottom-xxxxl"
+                                        style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
+                            </div>
+                        </form>
+                        <div class="form-footer">
+                            <p class="contac-admin"> RESERVA TURISMO</p>
+                            <p class="number-text ">+54 9 261 6746689 </p>
+                        </div>
+                    </div>
+    
+                    <!--INFO ADMINISTRACION-Desktop-->
+                    <div id="info-administracion" class="is-hidden col-6">
+    
+                        <div class="margin-y-md flex flex-column">
+                            <p class="administracion-text padding-left-lg ">PAUL HOBBS</p>
+                            <p class="sub-text padding-left-xxl">Descargar</p>
+                        </div>
+    
+                        <div class="margin-y-md flex flex-column">
+                            <p class="administracion-text padding-left-lg">BROCHURE INSTITUCIONAL</p>
+                            <p class="sub-text padding-left-xxl">Descargar</p>
+    
+                        </div>
+    
+                        <div class="margin-y-md flex flex-column">
+                            <p class="administracion-text padding-left-lg">CRÍTICA INTERNACIONAL</p>
+                            <p class="sub-text padding-left-xxl">Descargar</p>
+                        </div>
+                        <div class="grid padding-top-xxl">
+                            <div class="col-9 margin-y-xs">
+                                <p class="administracion-text padding-left-lg ">RECURSOS HUMANOS</p>
+                                <p class="sub-text padding-left-xxl">recursoshumanos@vinacobos.com</p>
+                            </div>
+                            <div class="col-3 margin-y-xs">
+                                <p class="administracion-text padding-left-lg">COMERCIAL</p>
+                                <p class="sub-text padding-left-xxl">sales@vinacobos.com</p>
+                            </div>
+                            <div class="col-9 margin-y-xs">
+                                <p class="administracion-text padding-left-lg ">RELACIONES PUBLICAS</p>
+                                <p class="sub-text padding-left-xxl">macarenaesteller@vinacobos.com</p>
+                            </div>
+                            <div class="col-3 margin-y-xs">
+                                <p class="administracion-text padding-left-lg">PROVEEDORES</p>
+                                <p class="sub-text padding-left-xxl">proveedors@vinacobos.com</p>
+                            </div>
+    
+                        </div>
+    
+    
+    
+    
+                    </div>
+    
+    
+    
+                    <!--INFO UBICACION-->
+                    <div id="info-ubicacion" class="is-hidden col-7">
+    
+                        <div class="contacto-mapa">
+                            <img src="./assets/img/contacto/desktop/ubicacion-desktop.png" alt="mapa">
+                        </div>
+                        <div class="text-center">
+                            <p class="text-ubicacion">Viña Cobos</p>
+                            <p class="text-ubicacion">Costa Flores y Ruta 7, Pedriel, Luján de Cuyo - Mendoza - Argentina
+                            </p>
+    
+                        </div>
+    
+                    </div>
+    
+    
+    
                 </div>
-
-
-                <!--FORM CONTACTO -Desktop -->
-                <div id="form-contacto" class="col-6">
-                    <form class="contacto" action="" method="POST">
-                        <div class="margin-y-lg flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text">Nombre *</label>
-                            <input type="text" id="contacto-nombre" name="contacto-nombre" class="input-style">
-                        </div>
-
-                        <div class="margin-y-lg flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text">Apellido *</label>
-                            <input type="text" id="contacto-apellido" name="contacto-apellido" class="input-style">
-                        </div>
-
-                        <div class="margin-y-lg flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text">Email *</label>
-                            <input type="email" id="contacto-email" name="contacto-email" class="input-style">
-                        </div>
-
-                        <div class="margin-y-lg flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text">Teléfono</label>
-                            <input type="tel" id="contacto-telefono" name="contacto-telefono" class="input-style">
-                        </div>
-
-                        <div class="margin-y-lg flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text">Mensaje *</label>
-                            <textarea id="contacto-mensaje" name="contacto-mensaje" rows="6"></textarea>
-                        </div>
-
-                        <div class="">
-                            <a href="./vinos"><button class="btn--contacto -right z-index-3 margin-bottom-xxxxl"
-                                    style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
-                        </div>
-                    </form>
-
-                    <div class="padding-top-xxl@sxl">
-                        <p class="contac-admin"> ADMINISTRACIÓN</p>
-                        <p class="number-text">+54 9 261 6043832</p>
-                    </div>
-                </div>
-
-                <!--FORM VISITAS-Desktop-->
-                <div id="form-visitas" class="is-hidden col-6">
-                    <form class="contacto grid gap-md" action="" method="POST">
-                        <div class="col-6 margin-y-xs flex flex-column">
-                            <label class="padding-left-lg@sxl padding-lef-sm@md text-uppercase form-text">Nombre
-                                *</label>
-                            <input type="text" id="visitas-nombre" name="visita-nombre" class="input-style">
-                        </div>
-
-                        <div class="col-6 margin-y-xs flex flex-column">
-                            <label class="padding-left-lg@sxl  text-uppercase form-text">Apellido *</label>
-                            <input type="text" id="visitas-apellido" name="visita-apellido" class="input-style">
-                        </div>
-
-                        <div class="col-6 margin-y-xs flex flex-column">
-                            <label class="padding-left-lg@sxl  text-uppercase form-text">Teléfono</label>
-                            <input type="tel" id="visitas-telefono" name="visita-telefono" class="input-style">
-                        </div>
-
-                        <div class="col-6 margin-y-xs flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text">Email *</label>
-                            <input type="email" id="visitas-email" name="visita-email" class="input-style">
-                        </div>
-                        <div class="col-6 margin-y-xs flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text">Fecha</label>
-                            <input type="date" id="visitas-fecha" name="visita-fecha" class="input-style">
-                        </div>
-
-                        <div class="col-6 margin-y-xs flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text">Horario </label>
-                            <input type="email" id="visitas-horario" name="visita-horario" class="input-style">
-                        </div>
-                        <div class="col-6 margin-y-xs flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text">Cantidad de personas *</label>
-                            <input type="number" id="visitas-cantidad" name="visita-telefono" class="input-style">
-                        </div>
-
-                        <div class="col-6 margin-y-xs flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text">¿Incluye menores de edad? </label>
-                            <input type="email" id="visitas-menores" name="visita-menores" class="input-style">
-                        </div>
-                        <div class="col-6 margin-y-xs flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text">¿Existe alguna dificultad
-                                motriz?</label>
-                            <input type="text" id="visitas-motriz" name="visita-telefono" class="input-style">
-                        </div>
-
-                        <div class="col-6 margin-y-xs flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text"> Idioma </label>
-                            <input type="text" id="visitas-idioma" name="visita-email" class="input-style">
-                        </div>
-
-                        <div class="col-12 margin-y-lg flex flex-column">
-                            <label class="padding-left-lg text-uppercase form-text">Mensaje *</label>
-                            <textarea id="visita-mensaje" name="visitas-mensaje" rows="6"></textarea>
-                        </div>
-
-                        <div class="">
-                            <a href="./vinos"><button class="btn--contacto z-index-3 margin-bottom-xxxxl"
-                                    style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
-                        </div>
-                    </form>
-                    <div class="padding-top-xxxl@sxl">
-                        <p class="contac-admin"> RESERVA TURISMO</p>
-                        <p class="number-text ">+54 9 261 6746689 </p>
-                    </div>
-                </div>
-
-                <!--INFO ADMINISTRACION-Desktop-->
-                <div id="info-administracion" class="is-hidden col-6">
-
-                    <div class="margin-y-lg flex flex-column">
-                        <p class="administracion-text padding-left-lg ">PAUL HOBBS</p>
-                        <p class="sub-text padding-left-xxl">Descargar</p>
-                    </div>
-
-                    <div class="margin-y-lg flex flex-column">
-                        <p class="administracion-text padding-left-lg">BROCHURE INSTITUCIONAL</p>
-                        <p class="sub-text padding-left-xxl">Descargar</p>
-
-                    </div>
-
-                    <div class="margin-y-lg flex flex-column">
-                        <p class="administracion-text padding-left-lg">CRÍTICA INTERNACIONAL</p>
-                        <p class="sub-text padding-left-xxl">Descargar</p>
-                    </div>
-                    <div class="grid gap-md">
-                        <div class="col-9 margin-y-lg ">
-                            <p class="administracion-text padding-left-lg ">RECURSOS HUMANOS</p>
-                            <p class="sub-text padding-left-xxl">recursoshumanos@vinacobos.com</p>
-                        </div>
-                        <div class="col-3 margin-y-lg">
-                            <p class="administracion-text padding-left-lg">COMERCIAL</p>
-                            <p class="sub-text padding-left-xxl">sales@vinacobos.com</p>
-                        </div>
-                        <div class="col-9 margin-y-lg ">
-                            <p class="administracion-text padding-left-lg ">RELACIONES PUBLICAS</p>
-                            <p class="sub-text padding-left-xxl">macarenaesteller@vinacobos.com</p>
-                        </div>
-                        <div class="col-3 margin-y-lg">
-                            <p class="administracion-text padding-left-lg">PROVEEDORES</p>
-                            <p class="sub-text padding-left-xxl">proveedors@vinacobos.com</p>
-                        </div>
-
-                    </div>
-
-
-
-
-                </div>
-
-
-
-                <!--INFO UBICACION-->
-                <div id="info-ubicacion" class="is-hidden col-7">
-
-                    <div class="margin-y-lg flex flex-column">
-                        <img src="./assets/img/contacto/desktop/ubicacion-desktop.png" alt="mapa">
-                    </div>
-                    <div class="text-center">
-                        <p class="text-ubicacion">Viña Cobos</p>
-                        <p class="text-ubicacion">Costa Flores y Ruta 7, Pedriel, Luján de Cuyo - Mendoza - Argentina
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
+    
             </div>
 
+            
 
         </section>
 
