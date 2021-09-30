@@ -491,20 +491,11 @@ footer {
     font-style: normal;
     transform: translateY(17px);
     letter-spacing: 0.12em;
-    width: 110px;
-    color: #878581;
-
-    &-2 {
-      font-family: var(--font-primary);
-      font-weight: 500;
-      font-size: 18px;
-      font-style: normal;
-      transform: translateY(17px);
-      letter-spacing: 0.12em;
-      width: 110px;
-      color: #878581;
-    }
+    min-width: 110px;
+    text-align: center;
+    color: black;
   }
+  
   &-description {
     font-family: var(--font-secondary);
     font-weight: normal;
@@ -533,6 +524,48 @@ footer {
   & img {
     width: 100%;
     height: auto;
+  }
+}
+
+#bramare-home {
+  background-image: url("../img/bramare/desktop/bramare-desktop-background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-content {
+    width: 99%;
+  }
+  &-mobile {
+    background-image: url("../img/bramare/mobile/bramare-mobile-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+#cocodrilo-home {
+  background-image: url("../img/cocodrilo/desktop/cocodrilo-desktop-background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-content {
+    width: 99%;
+  }
+  &-mobile {
+    background-image: url("../img/cocodrilo/mobile/cocodrilo-mobile-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.cocodrilo {
+  &-big-line {
+    border-bottom: 3px solid #1c1c1c;
+    width: 89%;
+    transform: translateY(-27px);
+    margin-left: 30px;
   }
 }
 
@@ -2066,7 +2099,7 @@ footer {
       transform: translateY(17px);
       letter-spacing: 0.12em;
       width: 110px;
-      color: #878581;
+      color: black;
     }
   }
 
