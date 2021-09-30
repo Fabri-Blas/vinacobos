@@ -881,6 +881,21 @@ footer {
   }
 }
 
+#vinculum-conexion-desktop {
+  & .conexion-fullscreen-text {
+    width: 85%;
+    z-index: 2;
+  }
+  .video-vd {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 110px;
+    width: 1700px;
+    height: 860px;
+    overflow: hidden;
+  }
+}
 // ===============SECCION HISTORIA ===============
 #historia-home {
   background-image: url("../img/historia/desktop/historia-fondo-desktop.png");
@@ -1793,6 +1808,22 @@ footer {
       left: 124px;
       width: 1068px;
       height: 432px;
+    }
+  }
+  #vinculum-conexion-desktop {
+    & .conexion-fullscreen-text {
+      width: 85%;
+      z-index: 2;
+      transform: translateX(-50%) translateY(-15px);
+    }
+    .video-vd {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 70px;
+      width: 1226px;
+      height: 570px;
+      overflow: hidden;
     }
   }
   #felino-momentos {
