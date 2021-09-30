@@ -150,8 +150,8 @@
                             </div>
                         </div>
                     </div>
-    
-    
+
+
                     <!--FORM CONTACTO -Desktop -->
                     <div id="form-contacto" class="col-6">
                         <form class="contacto" action="" method="POST">
@@ -159,39 +159,39 @@
                                 <label class="padding-left-lg text-uppercase form-text">Nombre *</label>
                                 <input type="text" id="contacto-nombre" name="contacto-nombre" class="input-style">
                             </div>
-    
+
                             <div class="margin-y-lg flex flex-column">
                                 <label class="padding-left-lg text-uppercase form-text">Apellido *</label>
                                 <input type="text" id="contacto-apellido" name="contacto-apellido" class="input-style">
                             </div>
-    
+
                             <div class="margin-y-lg flex flex-column">
                                 <label class="padding-left-lg text-uppercase form-text">Email *</label>
                                 <input type="email" id="contacto-email" name="contacto-email" class="input-style">
                             </div>
-    
+
                             <div class="margin-y-lg flex flex-column">
                                 <label class="padding-left-lg text-uppercase form-text">Teléfono</label>
                                 <input type="tel" id="contacto-telefono" name="contacto-telefono" class="input-style">
                             </div>
-    
+
                             <div class="margin-y-lg flex flex-column">
                                 <label class="padding-left-lg text-uppercase form-text">Mensaje *</label>
                                 <textarea id="contacto-mensaje" name="contacto-mensaje" rows="6"></textarea>
                             </div>
-    
+
                             <div class="">
                                 <a href="./vinos"><button class="btn--contacto z-index-3"
                                         style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
                             </div>
                         </form>
-    
+
                         <div class="form-footer">
                             <p class="contac-admin"> ADMINISTRACIÓN</p>
                             <p class="number-text">+54 9 261 6043832</p>
                         </div>
                     </div>
-    
+
                     <!--FORM VISITAS-Desktop-->
                     <div id="form-visitas" class="is-hidden col-6">
                         <form class="contacto grid gap-md" action="" method="POST">
@@ -200,17 +200,17 @@
                                     *</label>
                                 <input type="text" id="visitas-nombre" name="visita-nombre" class="input-style">
                             </div>
-    
+
                             <div class="col-6 margin-y-xs flex flex-column">
                                 <label class="padding-left-lg@sxl  text-uppercase form-text">Apellido *</label>
                                 <input type="text" id="visitas-apellido" name="visita-apellido" class="input-style">
                             </div>
-    
+
                             <div class="col-6 margin-y-xs flex flex-column">
                                 <label class="padding-left-lg@sxl  text-uppercase form-text">Teléfono</label>
                                 <input type="tel" id="visitas-telefono" name="visita-telefono" class="input-style">
                             </div>
-    
+
                             <div class="col-6 margin-y-xs flex flex-column">
                                 <label class="padding-left-lg text-uppercase form-text">Email *</label>
                                 <input type="email" id="visitas-email" name="visita-email" class="input-style">
@@ -219,36 +219,65 @@
                                 <label class="padding-left-lg text-uppercase form-text">Fecha</label>
                                 <input type="date" id="visitas-fecha" name="visita-fecha" class="input-style">
                             </div>
-    
+
                             <div class="col-6 margin-y-xs flex flex-column">
                                 <label class="padding-left-lg text-uppercase form-text">Horario </label>
-                                <input type="email" id="visitas-horario" name="visita-horario" class="input-style">
+                                <select id="visitas-horario" name="visita-horario-mobile" name=" visita-horario"
+                                    class="input-style">
+                                    <option value="0800">08:00</option>
+                                    <option value="0900">09:00</option>
+                                    <option value="1000">10:00</option>
+                                    <option value="1100">11:00</option>
+                                    <option value="1200">12:00</option>
+                                    <option value="1300">13:00</option>
+                                    <option value="1400">14:00</option>
+                                    <option value="1500">15:00</option>
+                                    <option value="1600">16:00</option>
+                                    <option value="1700">17:00</option>
+                                </select>
                             </div>
                             <div class="col-6 margin-y-xs flex flex-column">
                                 <label class="padding-left-lg text-uppercase form-text">Cantidad de personas *</label>
-                                <input type="number" id="visitas-cantidad" name="visita-telefono" class="input-style">
+                                <select id="visitas-cantidad" name="visita-telefono" class="input-style">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
                             </div>
-    
+
                             <div class="col-6 margin-y-xs flex flex-column">
-                                <label class="padding-left-lg text-uppercase form-text">¿Incluye menores de edad? </label>
-                                <input type="email" id="visitas-menores" name="visita-menores" class="input-style">
+                                <label class="padding-left-lg text-uppercase form-text">¿Incluye menores de edad?
+                                </label>
+                                <select id="visitas-menores" name="visita-menores" class="input-style">
+                                    <option value="no">No</option>
+                                    <option value="si">Si</option>
+                                </select>
                             </div>
                             <div class="col-6 margin-y-xs flex flex-column">
                                 <label class="padding-left-lg text-uppercase form-text">¿Existe alguna dificultad
                                     motriz?</label>
-                                <input type="text" id="visitas-motriz" name="visita-telefono" class="input-style">
+                                <select id="visitas-motriz" name="visita-telefono" class="input-style">
+                                    <option value="no">No</option>
+                                    <option value="si">Si</option>
+                                </select>
                             </div>
-    
+
                             <div class="col-6 margin-y-xs flex flex-column">
                                 <label class="padding-left-lg text-uppercase form-text"> Idioma </label>
-                                <input type="text" id="visitas-idioma" name="visita-email" class="input-style">
+                                <select id="visitas-idioma" name="visita-email" class="input-style">
+                                    <option value="es">Español</option>
+                                    <option value="en">Inglés</option>
+                                    <option value="pt">Portugués</option>
+                                </select>
                             </div>
-    
+
                             <div class="col-12 margin-y-lg flex flex-column">
                                 <label class="padding-left-lg text-uppercase form-text">Mensaje *</label>
                                 <textarea id="visita-mensaje" name="visitas-mensaje" rows="6"></textarea>
                             </div>
-    
+
                             <div class="">
                                 <a href="./vinos"><button class="btn--contacto z-index-3 margin-bottom-xxxxl"
                                         style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
@@ -259,21 +288,21 @@
                             <p class="number-text ">+54 9 261 6746689 </p>
                         </div>
                     </div>
-    
+
                     <!--INFO ADMINISTRACION-Desktop-->
                     <div id="info-administracion" class="is-hidden col-6">
-    
+
                         <div class="margin-y-md flex flex-column">
                             <p class="administracion-text padding-left-lg ">PAUL HOBBS</p>
                             <p class="sub-text padding-left-xxl">Descargar</p>
                         </div>
-    
+
                         <div class="margin-y-md flex flex-column">
                             <p class="administracion-text padding-left-lg">BROCHURE INSTITUCIONAL</p>
                             <p class="sub-text padding-left-xxl">Descargar</p>
-    
+
                         </div>
-    
+
                         <div class="margin-y-md flex flex-column">
                             <p class="administracion-text padding-left-lg">CRÍTICA INTERNACIONAL</p>
                             <p class="sub-text padding-left-xxl">Descargar</p>
@@ -295,38 +324,29 @@
                                 <p class="administracion-text padding-left-lg">PROVEEDORES</p>
                                 <p class="sub-text padding-left-xxl">proveedors@vinacobos.com</p>
                             </div>
-    
                         </div>
-    
-    
-    
-    
                     </div>
-    
-    
-    
+
+
+
                     <!--INFO UBICACION-->
                     <div id="info-ubicacion" class="is-hidden col-7">
-    
+
                         <div class="contacto-mapa">
                             <img src="./assets/img/contacto/desktop/ubicacion-desktop.png" alt="mapa">
                         </div>
                         <div class="text-center">
                             <p class="text-ubicacion">Viña Cobos</p>
-                            <p class="text-ubicacion">Costa Flores y Ruta 7, Pedriel, Luján de Cuyo - Mendoza - Argentina
+                            <p class="text-ubicacion">Costa Flores y Ruta 7, Pedriel, Luján de Cuyo - Mendoza -
+                                Argentina
                             </p>
-    
-                        </div>
-    
-                    </div>
-    
-    
-    
-                </div>
-    
-            </div>
 
-            
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
 
         </section>
 
