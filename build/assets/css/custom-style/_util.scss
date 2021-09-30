@@ -301,8 +301,56 @@ footer {
 
 // =================SECCION FELINO=================
 #felino-home {
-  background-image: url("../img/felino/desktop/felino-desktop-background.png");
-  background-position: center;
+  background-image: url("../img/felino/desktop/malbec/felino-malbec-bg.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-content {
+    width: 99%;
+  }
+  &-mobile {
+    background-image: url("../img/felino/mobile/felino-mobile-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+#felino-cabernet-home {
+  background-image: url("../img/felino/desktop/cabernet/felino-cabernet-bg.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-content {
+    width: 99%;
+  }
+  &-mobile {
+    background-image: url("../img/felino/mobile/felino-mobile-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+#felino-chardonnay-home {
+  background-image: url("../img/felino/desktop/chardonnay/felino-chardonnay-bg.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-content {
+    width: 99%;
+  }
+  &-mobile {
+    background-image: url("../img/felino/mobile/felino-mobile-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+#felino-redblend-home {
+  background-image: url("../img/felino/desktop/redblend/felino-redblend-bg.jpg");
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -529,7 +577,7 @@ footer {
 
 #bramare-home {
   background-image: url("../img/bramare/desktop/bramare-desktop-background.png");
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -546,7 +594,7 @@ footer {
 
 #cocodrilo-home {
   background-image: url("../img/cocodrilo/desktop/cocodrilo-desktop-background.png");
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -947,7 +995,7 @@ footer {
     font-style: normal;
     font-weight: 500;
     font-size: 76.2px;
-    line-height: 89, 76px;
+    line-height: 76.2px;
     letter-spacing: 0.12em;
     max-width: 787px;
   }
@@ -967,6 +1015,11 @@ footer {
       align-items: center;
       letter-spacing: 0.12em;
       color: #1c1c1c;
+    }
+    .title {
+      position: absolute;
+      left: 20px;
+      top: 120px;
     }
   }
 }
@@ -2128,8 +2181,15 @@ footer {
 }
 
 @media only screen and (max-width: 320px) {
-  #historia-home-mobile h1 {
-    font-size: 34px;
-    line-height: 47px;
-  }
+  #historia-home-mobile 
+    & h1 {
+      font-size: 34px;
+      line-height: 47px;
+    }
+    .title {
+      position: absolute;
+      left: 20px;
+      top: 120px;
+    }
+  
 }
