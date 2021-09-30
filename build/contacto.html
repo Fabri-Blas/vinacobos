@@ -363,6 +363,220 @@
         </section>
 
 
+        <section id="contacto-mobile-formularios" class="hide@md bg-white component-section-full padding-y-xxl">
+
+            <div class="padding-y-sm margin-x-md" style="border: 1px solid #A68676;">
+                <ul class="flex flex-row items-center padding-y-md padding-x-sm margin-x-lg"
+                    style="justify-content: space-around; background-color: white;">
+                    <li id="box-contacto-mobile" onclick="resetFormsMobile(event)">Contacto
+                    </li>
+                    <li id="box-visitas-mobile" onclick="showVisitasMobile(event)">Visitas
+                    </li>
+                    <li id="box-administracion-mobile" onclick="showAdministracionMobile(event)">Administración
+                    </li>
+                    <li id="box-ubicacion-mobile" onclick="showUbicacionMobile(event)">Ubicación
+                    </li>
+                </ul>
+            </div>
+
+            <div class="grid padding-x-xl padding-y-lg">
+
+                <div id="form-contacto-mobile" class="col-12">
+                    <form action="" method="POST" class="">
+                        <div class="flex flex-column margin-y-md">
+                            <label for="contacto-nombre-mobile">Nombre *</label>
+                            <input type="text" name="contacto-nombre-mobile" id="contacto-nombre-mobile">
+                        </div>
+
+                        <div class="flex flex-column margin-y-md">
+                            <label for="contacto-apellido-mobile">Apellido *</label>
+                            <input type="text" name="contacto-apellido-mobile" id="contacto-apellido-mobile">
+                        </div>
+
+                        <div class="grid gap-sm margin-y-md">
+                            <div class="col-3 flex flex-column">
+                                <label for="contacto-pais-mobile">Teléfono *</label>
+                                <input type="number" name="contacto-pais-mobile" id="contacto-pais-mobile">
+                            </div>
+                            <div class="col-9 flex flex-column justify-end">
+                                <input type="tel" name="contacto-telefono-mobile" id="contacto-telefono-mobile">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-column margin-y-md">
+                            <label for="contacto-mensaje-mobile">Mensaje</label>
+                            <textarea name="mensaje" id="contacto-mensaje-mobile" cols="30" rows="7"></textarea>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <a href="vinos"><button class="btn--contacto-mobile z-index-3 margin-bottom-xl"
+                                    style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
+                        </div>
+
+                        <div class="flex flex-column text-center font-secondary">
+                            <h2>ADMINISTRACIÓN</h2>
+                            <p>+54 9 261 6043832</p>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="form-visitas-mobile" class="is-hidden col-12">
+                    <form action="" method="POST" class="">
+                        <div class="flex flex-column margin-y-md">
+                            <label for="visitas-nombre-mobile">Nombre *</label>
+                            <input type="text" name="visitas-nombre-mobile" id="visitas-nombre-mobile">
+                        </div>
+
+                        <div class="flex flex-column margin-y-md">
+                            <label for="visitas-apellido-mobile">Apellido *</label>
+                            <input type="text" name="visitas-apellido-mobile" id="visitas-apellido-mobile">
+                        </div>
+
+                        <div class="grid gap-sm margin-y-md">
+                            <div class="col-3 flex flex-column">
+                                <label for="visitas-pais-mobile">Teléfono *</label>
+                                <input type="number" name="visitas-pais-mobile" id="visitas-pais-mobile">
+                            </div>
+                            <div class="col-9 flex flex-column justify-end">
+                                <input type="tel" name="visitas-telefono-mobile" id="visitas-telefono-mobile">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-column margin-y-md">
+                            <label for="visitas-email-mobile">Email *</label>
+                            <input type="email" name="visitas-email-mobile" id="visitas-email-mobile">
+                        </div>
+
+                        <div class="flex flex-column margin-y-md">
+                            <label for="visitas-fecha-mobile">Fecha</label>
+                            <input type="date" id="visitas-fecha-mobile" name="visita-fecha-mobile">
+                        </div>
+
+                        <div class="flex flex-column margin-y-md">
+                            <label for="visitas-horario-mobile">Horario</label>
+                            <select id="visitas-horario-mobile" name="visita-horario-mobile">
+                                <option value="0800">08:00</option>
+                                <option value="0900">09:00</option>
+                                <option value="1000">10:00</option>
+                                <option value="1100">11:00</option>
+                                <option value="1200">12:00</option>
+                                <option value="1300">13:00</option>
+                                <option value="1400">14:00</option>
+                                <option value="1500">15:00</option>
+                                <option value="1600">16:00</option>
+                                <option value="1700">17:00</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-column margin-y-md">
+                            <label for="visitas-cantidadpersonas-mobile">Cantidad de Personas *</label>
+                            <select id="visitas-cantidadpersonas-mobile" name="visita-cantidadpersonas-mobile">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-column margin-y-md">
+                            <label for="visitas-menoresedad-mobile">¿Incluye menores de edad? *</label>
+                            <select id="visitas-menoresedad-mobile" name="visita-menoresedad-mobile">
+                                <option value="no">No</option>
+                                <option value="si">Si</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-column margin-y-md">
+                            <label for="visitas-dificultadmotriz-mobile">¿Existe alguna dificultad motriz? *</label>
+                            <select id="visitas-dificultadmotriz-mobile" name="visita-dificultadmotriz-mobile">
+                                <option value="no">No</option>
+                                <option value="si">Si</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-column margin-y-md">
+                            <label for="visitas-dificultadmotriz-mobile">Idioma</label>
+                            <select id="visitas-dificultadmotriz-mobile" name="visita-dificultadmotriz-mobile">
+                                <option value="es">Español</option>
+                                <option value="en">Inglés</option>
+                                <option value="pt">Portugués</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-column margin-y-md">
+                            <label for="visitas-mensaje-mobile">Mensaje</label>
+                            <textarea name="visitas-mensaje-mobile" id="visitas-mensaje-mobile" cols="30"
+                                rows="7"></textarea>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <a href="vinos"><button class="btn--contacto-mobile z-index-3 margin-bottom-xl"
+                                    style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
+                        </div>
+
+                        <div class="flex flex-column text-center font-secondary">
+                            <h2>RESERVAS<br>TURISMO</h2>
+                            <p>+54 9 261 6746689</p>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="info-administracion-mobile" class="is-hidden col-12">
+                    <div class="grid font-secondary text-center">
+                        <div class="col-12 padding-y-md">
+                            <h2>TURISMO</h2>
+                            <p>descargar</p>
+                        </div>
+
+                        <div class="col-12 padding-y-md">
+                            <h2>BROCHURE<br>INSTITUCIONAL</h2>
+                            <p>descargar</p>
+                        </div>
+
+                        <div class="col-12 padding-y-md margin-bottom-xxxl">
+                            <h2>CRÍTICA<br>INSTITUCIONAL</h2>
+                            <p>descargar</p>
+                        </div>
+
+                        <div class="col-12 padding-y-md">
+                            <h2>RECURSOS<br>HUMANOS</h2>
+                            <p>recursoshumanos@vinacobos.com</p>
+                        </div>
+
+                        <div class="col-12 padding-y-md">
+                            <h2>RELACIONES<br>PÚBLICAS</h2>
+                            <p>macarenaesteller@vinacobos.com</p>
+                        </div>
+
+                        <div class="col-12 padding-y-md">
+                            <h2>COMERCIAL</h2>
+                            <p>sales@vinacobos.com</p>
+                        </div>
+
+                        <div class="col-12 padding-y-md">
+                            <h2>PROVEEDORES</h2>
+                            <p>proveedores@vinacobos.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="info-ubicacion-mobile" class="is-hidden col-12">
+                    <div class="text-center">
+                        <img src="./assets/img/contacto/mobile/contacto-mobile-mapa.png" alt="">
+                    </div>
+
+                    <div class="text-center contacto-mobile-customparagraph padding-top-lg">
+                        <p>Viña Cobos</p>
+                        <p>Costa Flores y Ruta 7, Perdriel,<br>Luján de Cuyo – Mendoza – Argentina</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
     </main>
     <!-- ==============================================END-MAIN============================================== -->
 

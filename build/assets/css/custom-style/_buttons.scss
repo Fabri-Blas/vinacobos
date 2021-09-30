@@ -193,7 +193,6 @@ button {
     width: 83px;
     transition: all 0.5s;
   }
-   
 }
 
 .btn--nav {
@@ -247,7 +246,8 @@ button {
 }
 
 .nav--line {
-  background: linear-gradient(var(--color-primary-light) 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
+  background: linear-gradient(var(--color-primary-light) 0 0) var(--p, 0) 100% /
+    var(--d, 0) 1px no-repeat;
   transition: 0.3s, background-position 0s 0.3s;
   &:hover {
     --d: 100%;
@@ -255,7 +255,8 @@ button {
   }
 
   &-black {
-    background: linear-gradient(black 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
+    background: linear-gradient(black 0 0) var(--p, 0) 100% / var(--d, 0) 1px
+      no-repeat;
     transition: 0.3s, background-position 0s 0.3s;
     &:hover {
       --d: 100%;
@@ -323,13 +324,31 @@ button {
     width: 83px;
     transition: all 0.5s;
   }
+
+  &-mobile {
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-primary-light);
+    letter-spacing: 0.12em;
+    width: 110px;
+    text-align: right;
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid var(--color-primary-light);
+    transition: all 0.5s;
+    padding-bottom: 8px;
+    padding-right: 0;
+    font-family: var(--font-primary);
+  }
 }
 
 @media only screen and (max-width: 1366px) {
-  .btn--primary{
+  .btn--primary {
     left: 70px;
 
-    &-right{
+    &-right {
       right: 71px;
     }
   }
@@ -344,7 +363,7 @@ button {
     width: 100px;
     left: 20px;
 
-    &-right{
+    &-right {
       font-size: 13px;
       width: 100px;
       right: 25px;

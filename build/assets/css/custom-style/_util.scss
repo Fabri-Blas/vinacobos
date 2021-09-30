@@ -182,7 +182,7 @@ footer {
     max-width: 787px;
   }
   &-mobile {
-    background-image: url("../img/vinos-bg-mobile.png");
+    background-image: url("../img/vinos-home-mobile.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -301,7 +301,7 @@ footer {
 
 // =================SECCION FELINO=================
 #felino-home {
-  background-image: url("../img/felino-bg.jpeg");
+  background-image: url("../img/felino/desktop/felino-desktop-background.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -310,7 +310,7 @@ footer {
     width: 99%;
   }
   &-mobile {
-    background-image: url("../img/felino-bg-mobile.png");
+    background-image: url("../img/felino/mobile/felino-mobile-background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -325,7 +325,7 @@ footer {
 
   & img {
     position: absolute;
-    filter: grayscale(100%) brightness(90%);
+    filter: brightness(90%);
   }
   & svg {
     position: absolute;
@@ -946,6 +946,7 @@ footer {
     }
   }
 }
+
 #historia-paulhobbs {
   &-mobile {
     h2 {
@@ -1038,13 +1039,14 @@ footer {
   color: #3e3937;
 }
 .historia-parrafos-mobile {
+  font-family: var(--font-secondary);
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 16px;
   text-align: center;
   letter-spacing: 0.05em;
-  color: #3e3937;
+  color: #1c1c1c;
 }
 .historia {
   &-final-tree {
@@ -1086,6 +1088,13 @@ footer {
   }
 }
 
+#historia-paulhobbs-mobile {
+  background-image: url("../img/historia/mobile/fondo-paul-hobbs-mobile.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #historia-inicio {
   background-image: url("../img/historia/desktop/historia-2-fondo-desktop.png");
   background-position: center;
@@ -1094,7 +1103,14 @@ footer {
 }
 
 #argentina-quote {
-  background-image: url("../img/historia/desktop/argentina-fondo-desktop.png");
+  background-image: url("../img/historia/desktop/argentina-quote-fondo-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#historia-leyenda-argentina-mobile {
+  background-image: url("../img/historia/mobile/argentina-quote-fondo-mobile.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1102,6 +1118,21 @@ footer {
 
 #visita-argentina {
   background-image: url("../img/historia/desktop/argentina-visita-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+  #paul-argentina {
+    background-image: url("../img/historia/desktop/paul-fondo-argentina-desktop.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#historia-primeravisita-mobile {
+  background-image: url("../img/historia/mobile/primera-visita-fondo-mobile.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1142,6 +1173,13 @@ footer {
 }
 
 // ===============SECCION TERROIR ===============
+#terroir-home {
+  background-image: url("../img/terroir/desktop/terroir-fondo-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #terroir-home {
   & .title {
     position: absolute;
@@ -1215,7 +1253,7 @@ footer {
 
 #terroir-mobile {
   &-home {
-    background-image: url("../img/terroir/mobile/terroir-mobile-home.png");
+    background-image: url("../img/terroir/mobile/terroir-home-mobile.png");
     background-position: center;
     background-size: cover;
   }
@@ -1396,6 +1434,76 @@ footer {
       text-align: center;
       letter-spacing: 0.07em;
       color: #f1eee9;
+    }
+  }
+
+  &-formularios {
+    background-image: url("../img/contacto/mobile/contacto-mobile-arbol.png");
+    background-position: center;
+    background-size: cover;
+
+    & li {
+      text-decoration: none;
+      font-family: var(--font-primary);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+      color: #3e3937;
+    }
+
+    & label {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 16px;
+      letter-spacing: 0.05em;
+      color: #3e3937;
+      padding-left: 14px;
+    }
+
+    & input,
+    textarea,
+    select {
+      font-family: var(--font-secondary);
+      border-radius: 4px;
+      border: 1px solid #3e3937;
+      background-color: rgba(0, 0, 0, 0);
+      padding: 7px 3px;
+    }
+
+    & h2 {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 27px;
+      line-height: 32px;
+      text-align: center;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #3e3937;
+    }
+
+    & p {
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      color: #878581;
+    }
+
+    & .contacto-mobile-customparagraph p{
+      font-family: var(--font-primary);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+      color: #3e3937;
     }
   }
 }
