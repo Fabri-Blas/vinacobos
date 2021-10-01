@@ -1255,7 +1255,7 @@ function resetFocusTabsStyle() {
   let doneAbove = false;
   let doneBelow = false;
 
-  if (actualPage === 'felino') {
+if (actualPage === 'felino'||actualPage === 'historia'||actualPage === 'felino-cabernet'||actualPage === 'felino-red-blend'||actualPage === 'felino-chardonnay'||actualPage === 'bramare'||actualPage === 'cocodrilo') {
     checkBackdropBlur2();
 
     document.addEventListener('scroll', () => {
@@ -1268,6 +1268,9 @@ function resetFocusTabsStyle() {
       checkBackdropBlur();
     });
   }
+  
+ 
+  
 
   function checkBackdropBlur() {
     if (window.pageYOffset === 0) {
