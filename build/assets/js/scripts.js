@@ -4520,6 +4520,12 @@ function closeMobilePanel(panel) {
 		return (element.offsetWidth || element.offsetHeight || element.getClientRects().length);
 	};
 }());
+const cinemagraphs = document.querySelectorAll('.cinemagraph-speed');
+if(cinemagraphs.length > 0){
+    cinemagraphs.forEach(graph => {
+        graph.playbackRate = 0.75;
+    });
+}
 const firstComponentScrolleable = document.getElementsByClassName('first-component-scrolleable')[0];
 const secondComponentScrolleable = document.getElementsByClassName('second-component-scrolleable')[0];
 let inSecondComponent = false;
