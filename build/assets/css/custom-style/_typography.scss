@@ -947,6 +947,37 @@ mark {
       }
     }
   }
+  .varietales-component-baja {
+    & .inner-varietal {
+      &-title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 29.12px;
+        line-height: 48px;
+        letter-spacing: 0.12em;
+        color: #1C1C1C;
+        ;
+      }
+      &-subtitle {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.01em;
+        color:#1C1C1C;
+      }
+      &-paragraph {
+        font-family: var(--font-secondary);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #1C1C1C;
+        max-width: 250px;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
   .varietales {
     &-description {
       font-family: var(--font-secondary);
