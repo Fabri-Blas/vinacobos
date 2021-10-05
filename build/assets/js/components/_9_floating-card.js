@@ -8,11 +8,22 @@ const sIndicator = document.querySelector('.scroll-indicator');
 let scrollH = window.pageYOffset / 23.4;
 
 const vinosHome = document.getElementById("vinos-home");
-const felinoHome = document.getElementById("felino-home");
 const cobosHome = document.getElementById("cobos-home");
 const contactoHome = document.getElementById("contacto-home");
 const terroirHome = document.getElementById("terroir-home");
 const historiaHome = document.getElementById("historia-home");
+const volturnoHome = document.getElementById("volturno-home");
+const vdChanaresHome = document.getElementById("vd-chanares-home");
+const vdZingarettiHome = document.getElementById("vd-zingaretti-home");
+const vdMarchioriHome = document.getElementById("vd-marchiori-home");
+const vinculumHome = document.getElementById("vinculum-malbec-home");
+const vinculumChardonnayHome = document.getElementById("vinculum-chardonnay-home");
+const felinoHome = document.getElementById("felino-home");
+const felinoCabernetHome = document.getElementById("felino-cabernet-home");
+const felinoChardonnayHome = document.getElementById("felino-chardonnay-home");
+const felinoRedBlendHome = document.getElementById("felino-redblend-home");
+const bramareHome = document.getElementById("bramare-home");
+const cocodriloHome = document.getElementById("cocodrilo-home");
 
 function inViewport(el) {
     if (el.getBoundingClientRect()) {
@@ -43,14 +54,33 @@ document.addEventListener('scroll', () => {
         sContainerCheck(felinoHome);
     }else if (cobosHome){
         sContainerCheck(cobosHome);
-    }
-    else if (contactoHome){
+    }else if (contactoHome){
         sContainerCheck(contactoHome);
-    }
-    else if (terroirHome){
+    }else if (terroirHome){
         sContainerCheck(terroirHome);
-    }
-    else if (historiaHome){
+    }else if (historiaHome){
         sContainerCheck(historiaHome);
+    }else if (volturnoHome){
+        sContainerCheck(volturnoHome);
+    }else if (vdChanaresHome){
+        sContainerCheck(vdChanaresHome);
+    }else if (vdZingarettiHome){
+        sContainerCheck(vdZingarettiHome);
+    }else if (vdMarchioriHome){
+        sContainerCheck(vdMarchioriHome);
+    }else if (vinculumHome){
+        sContainerCheck(vinculumHome);
+    }else if (vinculumChardonnayHome){
+        sContainerCheck(vinculumChardonnayHome);
+    }else if (felinoCabernetHome){
+        sContainerCheck(felinoCabernetHome);
+    }else if (felinoChardonnayHome){
+        sContainerCheck(felinoChardonnayHome);
+    }else if (felinoRedBlendHome){
+        sContainerCheck(felinoRedBlendHome);
+    }else if (bramareHome){
+        sContainerCheck(bramareHome);
+    }else if (cocodriloHome){
+        sContainerCheck(cocodriloHome);
     }
 });
