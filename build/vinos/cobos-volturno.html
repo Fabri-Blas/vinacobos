@@ -23,9 +23,9 @@
                 <img src="../assets/img/logo.svg" width="30" height="27" alt="Logo" class="logo-mobile-1">
             </a>
             <button
-                class="position-absolute right-0 top-50% -translate-y-50% reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
+                class="position-absolute top-50% -translate-y-50% right-0 reset anim-menu-btn color-contrast-high js-anim-menu-btn js-tab-focus"
                 aria-label="Toggle menu">
-                <img src="../assets/img/hamburguer.svg" width="25" height="9" alt="" class="hamburguer-mobile-1">
+                <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
             </button>
         </div>
 
@@ -100,7 +100,9 @@
             <div class="display@md padding-left-xxs">
                 <div id="cobos-home-content"
                     class="position-absolute bottom-0 flex flex-row justify-left color-black padding-left-xxl padding-y-xxxl">
-                    <a href="./cobos" style="z-index: 2; text-decoration: none;"><h1 class="varietales-subtitle text-center">Cobos</h1></a>
+                    <a href="./cobos.html" style="z-index: 2; text-decoration: none;">
+                        <h1 class="varietales-subtitle text-center">Cobos</h1>
+                    </a>
                     <div class="varietales-small-line"></div>
                     <h3 class="varietales-title" style="transform: translateY(-10px)">Volturno</h3>
                     <div class="varietales-big-line"></div>
@@ -142,7 +144,7 @@
 
 
 
-     
+
         <!-- _________________________________________________________________________________________ -->
         <!-- EVOLUCION - Desktop -->
         <section id="cobos-experiencia-desktop"
@@ -155,8 +157,7 @@
             </div>
             <img class="experiencia-fullscreen-text position-absolute bottom-0 scroll-fx js-scroll-fx"
                 data-scroll-fx="translateY, -80px, -300px, 0%, 100%"
-                src="../assets/img/volturno/desktop/evolucion-texto.svg"                
-                alt="">
+                src="../assets/img/volturno/desktop/evolucion-texto.svg" alt="">
         </section>
         <!-- _________________________________________________________________________________________ -->
         <!-- SEPARADOR -->
@@ -181,8 +182,7 @@
 
         <!-- _________________________________________________________________________________________ -->
         <!-- NUESTRO ICONO - Desktop-->
-        <section id="cobos-nuestroicono-desktop"
-            class="display@md component-section-full margin-x-md">
+        <section id="cobos-nuestroicono-desktop" class="display@md component-section-full margin-x-md">
             <div class="grid padding-x-xl@sxl padding-x-md@md">
                 <div class="col-6 flex justify-center items-end">
                     <img class="padding-left-lg padding-right-sm reveal-fx reveal-fx--translate-right"
@@ -239,27 +239,32 @@
         <!-- _________________________________________________________________________________________ -->
         <!-- ICÓNICO - Desktop -->
         <section id="cobos-iconico" class="display@md component-section-full">
-            <div class="grid gap-lg grid gap-lg padding-x-lg@md padding-x-xxl@sxl margin-x-xxxxs@md margin-x-0@sxl">                
+            <div class="grid gap-lg grid gap-lg padding-x-lg@md padding-x-xxl@sxl margin-x-xxxxs@md margin-x-0@sxl">
                 <div class="col-12 text-center padding-bottom-md">
-                    <img class="text-center" 
-                        src="../assets/img/cobos/desktop/logo-cobos.svg" width="484" height="80"
+                    <img class="text-center" src="../assets/img/cobos/desktop/logo-cobos.svg" width="484" height="80"
                         alt="Cobos">
                 </div>
                 <div
-                    class="flex flex-row justify-between">
+                    class="flex flex-row justify-between reveal-fx">
                     <div class="col-4">
-                        <h3 class="padding-bottom-xs@md">Selección</h3>
-                        <p class="max-width-xxxs text-justify">Una selección de viñas y racimos de las uvas Malbec de la
+                        <h3 class="padding-bottom-xs@md reveal-fx scroll-fx js-scroll-fx"
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%">Selección</h3>
+                        <p class="max-width-xxxs text-justify reveal-fx scroll-fx js-scroll-fx"
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%">Una selección de viñas y racimos de las uvas Malbec de la
                             más alta calidad provenientes de terroir seleccionado</p>
                     </div>
                     <div class="col-4">
-                        <h3 class="padding-bottom-xs@md">Crianza y puesta en botella</h3>
-                        <p class="max-width-xxxs text-justify">Criado durante 18 meses en barricas de roble francés
+                        <h3 class="padding-bottom-xs@md reveal-fx scroll-fx js-scroll-fx"
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%">Crianza y puesta en botella</h3>
+                        <p class="max-width-xxxs text-justify reveal-fx scroll-fx js-scroll-fx"
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%">Criado durante 18 meses en barricas de roble francés
                             Taransaud (63%) y de segundo uso (37%). Sin clarificar ni filtrar</p>
                     </div>
                     <div class="col-4">
-                        <h3 class="padding-bottom-xs@md">Notas de degustación</h3>
-                        <p class="max-width-xxxs text-justify">Color violeta intenso, saturado y brillante. En nariz es
+                        <h3 class="padding-bottom-xs@md reveal-fx scroll-fx js-scroll-fx"
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%">Notas de degustación</h3>
+                        <p class="max-width-xxxs text-justify reveal-fx scroll-fx js-scroll-fx"
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%">Color violeta intenso, saturado y brillante. En nariz es
                             concentrado. En el paladar, muestra gran estructura y textura y diferentes capas. Es
                             redondo, tenso, mineral</p>
                     </div>
@@ -267,15 +272,16 @@
                 <div class="flex">
                     <div class="video-iconico" aria-hidden="true">
                         <div class="video-feature__video-wrapper">
-                            <video autoplay loop muted playsInline src="../assets/img/volturno/desktop/volturno-iconico.mp4"></video>
+                            <video autoplay loop muted playsInline
+                                src="../assets/img/volturno/desktop/volturno-iconico.mp4"></video>
                         </div>
                     </div>
-                    <img class="cobos-sidetext scroll-fx js-scroll-fx" 
+                    <img class="cobos-sidetext scroll-fx js-scroll-fx"
                         data-scroll-fx="translateY, 100px, -200px, 0%, 100%"
-                        src="../assets/img/cobos/desktop/iconico-vertical.svg" width="auto"
-                        height="auto" alt="Cobos - Icónico">
+                        src="../assets/img/cobos/desktop/iconico-vertical.svg" width="auto" height="auto"
+                        alt="Cobos - Icónico">
                 </div>
-            </div>            
+            </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
         <!-- SEPARADOR -->
@@ -288,48 +294,48 @@
         <!-- VIÑA COBOS BLACK - Mobile -->
         <section id="" class="hide@md varietales-component component-section-full">
             <div class="flex justify-center padding-top-xl padding-bottom-xxl">
-                <img class=" padding-x-xl varietales-foto" src="../assets/img/vina_cobos_mobile_black.svg" alt="cobos-logo-mobile">
+                <img class=" padding-x-xl varietales-foto" src="../assets/img/vina_cobos_mobile_black.svg"
+                    alt="cobos-logo-mobile">
             </div>
             <div class="flex justify-center margin-x-auto padding-x-md scroll-fx js-scroll-fx"
                 data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                <img class="varietales-foto" src="../assets/img/cobos/mobile/cobos-malbec-mobile.png"
-                    alt="">
+                <img class="varietales-foto" src="../assets/img/cobos/mobile/cobos-malbec-mobile.png" alt="">
             </div>
-                <div class="margin-bottom-xxxl">
-                    <div class="margin-bottom-lg">
-                        <div class="margin-x-auto padding-top-xxl padding-bottom-lg scroll-fx js-scroll-fx"
-                            data-scroll-fx="opacity, 0, 1, 25%, 35%" style="width: 210px;">
-                            <img src="../assets/img/cobos/mobile/logo-cobos.svg" alt="">
-                        </div>
-                        <div class="flex flex-column justify-center text-center scroll-fx js-scroll-fx"
-                            data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                            <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Seleccion</h5>
-                            <p class="inner-varietal-paragraph margin-x-auto">Una seleccion de viñas y racimos de las uvas
-                                Malbec de la mas alta calidad provenientes de terroir seleccionado.
-                            </p>
-                        </div>
+            <div class="margin-bottom-xxxl">
+                <div class="margin-bottom-lg">
+                    <div class="margin-x-auto padding-top-xxl padding-bottom-lg scroll-fx js-scroll-fx"
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%" style="width: 210px;">
+                        <img src="../assets/img/cobos/mobile/logo-cobos.svg" alt="">
                     </div>
-                    <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                        <div class="flex flex-column justify-center text-center">
-                            <h5 class="inner-varietal-subtitle padding-bottom-xxs">Crianza y puesta en botellas</h5>
-                            <p class="inner-varietal-paragraph margin-x-auto ">
-                                Criado durante 18 meses en barricas de roble frances Tarasaund (63%) y de segundo uso
-                                (37%).Sin clarificar ni filtrar.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
-                        <div class="flex flex-column justify-center text-center">
-                            <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Notas de degustación</h5>
-                            <p class="inner-varietal-paragraph margin-x-auto ">Color violeta intenso, saturado y brillante.
-                                En nariz es concentrado. En el paladar,
-                                muestra gran estructura y textura y
-                                diferentes capas. Es redondo, tenso y mineral.
-                            </p>
-                        </div>
+                    <div class="flex flex-column justify-center text-center scroll-fx js-scroll-fx"
+                        data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                        <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Seleccion</h5>
+                        <p class="inner-varietal-paragraph margin-x-auto">Una seleccion de viñas y racimos de las uvas
+                            Malbec de la mas alta calidad provenientes de terroir seleccionado.
+                        </p>
                     </div>
                 </div>
-            </div>            
+                <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                    <div class="flex flex-column justify-center text-center">
+                        <h5 class="inner-varietal-subtitle padding-bottom-xxs">Crianza y puesta en botellas</h5>
+                        <p class="inner-varietal-paragraph margin-x-auto ">
+                            Criado durante 18 meses en barricas de roble frances Tarasaund (63%) y de segundo uso
+                            (37%).Sin clarificar ni filtrar.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 25%, 35%">
+                    <div class="flex flex-column justify-center text-center">
+                        <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Notas de degustación</h5>
+                        <p class="inner-varietal-paragraph margin-x-auto ">Color violeta intenso, saturado y brillante.
+                            En nariz es concentrado. En el paladar,
+                            muestra gran estructura y textura y
+                            diferentes capas. Es redondo, tenso y mineral.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
 
@@ -357,7 +363,7 @@
         <section class="display@md">
             <div class="component-section"
                 style="background: url('../assets/img/cobos/desktop/fullscreen-final.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
-            </div>            
+            </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
         <!-- SEPARADOR -->

@@ -481,16 +481,39 @@ footer {
     width: 1550px;
     height: auto;
 
-    &-actual img{
+    &-actual img {
       transition: all 0.9s;
     }
 
-    &-preview{
+    &-preview,
+    &-preview img {
       transition: all 0.4s;
       transform: scale(1);
-      &:hover{
+      border-radius: 4px;
+      box-shadow: none;
+
+      &:hover {
         transition: all 0.4s;
-        transform: scale(1.1);
+        transform: scale(1.05);
+        border-radius: 4px;
+      }
+    }
+
+    &-preview-selected {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: all 0.4s;
+      transform: translate(-50%, -50%);
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+
+      & img{
+        transition: all 0.7s;
+        opacity: 0;
+        width: 25px;
+        transform: scale(0.5) rotate(-360deg); 
       }
     }
   }
@@ -549,6 +572,43 @@ footer {
     color: #878581;
     max-width: 250px;
   }
+  .gallery {
+    &-actual-mobile img {
+      transition: all 0.9s;
+    }
+
+    &-preview,
+    &-preview img {
+      transition: all 0.4s;
+      transform: scale(1);
+      border-radius: 4px;
+
+      &:hover,
+      &:active {
+        transition: all 0.4s;
+        transform: scale(1.05);
+        border-radius: 4px;
+      }
+    }
+
+    &-preview-selected-mobile {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: all 0.4s;
+      transform: translate(-50%, -50%);
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+
+      & img{
+        transition: all 0.7s;
+        opacity: 0;
+        width: 20px;
+        transform: scale(0.5) rotate(-360deg); 
+      }
+    }
+  }
 }
 .felino {
   &-title {
@@ -603,8 +663,8 @@ footer {
 
 #bramare-home {
   background-image: url("../img/bramare/desktop/bramare-desktop-background.png");
-  background-position: bottom;
-  background-size: cover;
+  background-position:bottom;
+  background-size:bottom;
   background-repeat: no-repeat;
 
   &-content {
@@ -1769,6 +1829,11 @@ footer {
     height: 100%;
   }
 }
+
+
+
+
+
 
 //=================================================================================
 //

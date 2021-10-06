@@ -19,13 +19,13 @@
         class="f-header js-f-header bg-transparent hide-nav js-hide-nav js-hide-nav--main backdrop-blur-10 padding-y-lg padding-y-0@md"
         data-nav-target-class="f-header--expanded">
         <div class="f-header__mobile-content container max-width-lg padding-top-0@md flex flex-column">
-            <a href="#0" class="position-absolute left-0 top-50% -translate-y-50%">
+            <a href="../" class="position-absolute left-0 top-50% -translate-y-50%">
                 <img src="../assets/img/logo.svg" width="30" height="27" alt="Logo" class="logo-mobile-1">
             </a>
             <button
-                class="position-absolute right-0 top-50% -translate-y-50% reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
+                class="position-absolute top-50% -translate-y-50% right-0 reset anim-menu-btn color-contrast-high js-anim-menu-btn js-tab-focus"
                 aria-label="Toggle menu">
-                <img src="../assets/img/hamburguer.svg" width="25" height="9" alt="" class="hamburguer-mobile-1">
+                <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
             </button>
         </div>
 
@@ -33,7 +33,7 @@
             <div
                 class="f-header__nav-grid justify-between@md container max-width-xxxl margin-x-auto padding-x-xl@md padding-x-xxl@sxl">
                 <div class="f-header__nav-logo-wrapper">
-                    <a href="#0" class="">
+                    <a href="../" class="">
                         <img id="logo" src="../assets/img/logo.svg" width="38" height="35" alt="Logo"
                             class="display@md main-logo">
                     </a>
@@ -228,7 +228,8 @@
                     </div>
                 </div>
                 <div class="col-6 flex flex-column justify-center items-left">
-                    <div class="text-left padding-left-xxl@sxl padding-left-lg@md padding-bottom-xxl@md">
+                    <div class="text-left padding-left-xxl@sxl padding-left-lg@md padding-bottom-xxl@md reveal-fx scroll-fx js-scroll-fx"
+                    data-scroll-fx="opacity, 0, 1, 25%, 35%">
                         <h2 class="felino-momento-text-test font-primary" data-speed="5">Máxima</h2>
                         <h2 class="felino-momento-text-test font-primary" data-speed="-5">expresión</h2>
                         <h2 class="felino-momento-text-test font-primary" data-speed="2">varietal</h2>
@@ -242,23 +243,28 @@
 
             <!-- FELINO FRESCO - Desktop -->
             <div id="felino-fresco" class="display@md component-section-full">
-                <div class="grid gap-lg grid gap-lg padding-x-lg@md padding-x-xxl@sxl margin-x-xxxxs@md padding-bottom-xxl@md margin-x-0@sxl">
+                <div
+                    class="grid gap-lg grid gap-lg padding-x-lg@md padding-x-xxl@sxl margin-x-xxxxs@md padding-bottom-xxl@md margin-x-0@sxl">
                     <div class="col-12 text-center padding-bottom-md">
                         <img class="text-center" src="../assets/img/felino/desktop/felino.svg" width="484" height="80"
                             alt="Felino">
                     </div>
                     <div class="col-12 flex flex-row justify-between">
                         <div class="col-4">
-                            <h3 class="padding-bottom-xs@md">Viñedo</h3>
-                            <p class="max-width-xxxxs text-justify">
+                            <h3 class="padding-bottom-xs@md reveal-fx scroll-fx js-scroll-fx"
+                            data-scroll-fx="opacity, 0, 1, 25%, 35%">Viñedo</h3>
+                            <p class="max-width-xxxxs text-justify reveal-fx scroll-fx js-scroll-fx"
+                            data-scroll-fx="opacity, 0, 1, 25%, 35%">
                                 Viñedos de Lujan de Cuyo, Tupungato, Tunuyán y San Carlos, Altitud entre 703-1197
                                 m.s.b.m.
                                 Clima semidesértico.
                             </p>
                         </div>
                         <div class="col-4">
-                            <h3 class="padding-bottom-xs@md">Crianza y puesta en botella</h3>
-                            <p class="max-width-xxxxs text-justify">
+                            <h3 class="padding-bottom-xs@md reveal-fx scroll-fx js-scroll-fx"
+                            data-scroll-fx="opacity, 0, 1, 25%, 35%">Crianza y puesta en botella</h3>
+                            <p class="max-width-xxxxs text-justify reveal-fx scroll-fx js-scroll-fx"
+                            data-scroll-fx="opacity, 0, 1, 25%, 35%">
                                 Fermentación con levaduras seleccionadas en tanques de acero inoxidable de 8 y 18
                                 toneladas. Crianza en
                                 roble americano (10% nuevo) por 8 meses. Puesto en botella en febrero de 2020. Sin
@@ -266,8 +272,10 @@
                             </p>
                         </div>
                         <div class="col-4">
-                            <h3 class="padding-bottom-xs@md">Notas de degustación</h3>
-                            <p class="max-width-xxxxs text-justify">
+                            <h3 class="padding-bottom-xs@md reveal-fx scroll-fx js-scroll-fx"
+                            data-scroll-fx="opacity, 0, 1, 25%, 35%">Notas de degustación</h3>
+                            <p class="max-width-xxxxs text-justify reveal-fx scroll-fx js-scroll-fx"
+                            data-scroll-fx="opacity, 0, 1, 25%, 35%">
                                 Rojo violáceo brillante con tonos negros. Aromáticamente, expresa fruta negra fresca,
                                 ciruela y notas de grafico.
                                 En boca es persistente, equilibrado y fulzura de taninos.
@@ -280,25 +288,49 @@
                                 src="../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-1.png" alt="">
                         </div>
                         <div class="gallery-previews padding-top-xs@md">
-                            <div class="gallery-preview gallery-preview-1 padding-bottom-xxs">
+                            <div class="gallery-preview gallery-preview-1 margin-bottom-md position-relative">
                                 <img class="width-100%"
                                     src="../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-5.png"
                                     alt="">
+
+                                <div
+                                    class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
+                                    <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
+                                        alt="">
+                                </div>
                             </div>
-                            <div class="gallery-preview gallery-preview-2 padding-y-xxs">
+                            <div class="gallery-preview gallery-preview-2 margin-y-md position-relative">
                                 <img class="width-100%"
                                     src="../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-6.png"
                                     alt="">
+
+                                <div
+                                    class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
+                                    <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
+                                        alt="">
+                                </div>
                             </div>
-                            <div class="gallery-preview gallery-preview-3 padding-y-xxs">
+                            <div class="gallery-preview gallery-preview-3 margin-y-md position-relative">
                                 <img class="width-100%"
                                     src="../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-7.png"
                                     alt="">
+
+                                <div
+                                    class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
+                                    <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
+                                        alt="">
+                                </div>
                             </div>
-                            <div class="gallery-preview gallery-preview-4 padding-y-xxs">
+                            <div class="gallery-preview gallery-preview-4 margin-y-md position-relative">
                                 <img class="width-100%"
                                     src="../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-8.png"
                                     alt="">
+
+                                <div
+                                    class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
+                                    <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
+                                        alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -386,15 +418,42 @@
             </div>
         </section>
 
-        <!-- SECCION BRAMARETE ETIQUETA FINAL-->
-        <section class="hide@md padding-top-xxl reveal-fx reveal-fx--clip-x">
-            <div class="width-100% text-center flex justify-center items-center ">
+        <!-- GALERIA MOBILE-->
+        <section id="felino-fresco-mobile"
+            class="hide@md padding-y-xxl component-section-full reveal-fx reveal-fx--clip-x">
+            <div class="gallery-actual-mobile width-100% text-center flex justify-center items-center">
                 <img class="padding-x-md varietales-foto"
-                    src="../assets/img/felino/mobile/etiqueta-felino-mobile.png" alt="etiqueta- mobile">
+                    src="../assets/img/felino/mobile/malbec/gallery/felino-mobile-gallery-1.png" alt="etiqueta- mobile">
             </div>
-            <div class="text-center flex justify-center items-center padding-top-xs">
-                <img class="padding-x-md  padding-top-xs padding-bottom-xxl" src="../assets/img/felino/mobile/felino-group-mobile.png"
-                    alt="felino- conexion">
+            <div class="gallery-previews flex flex-row gap-md justify-center items-center padding-x-md padding-top-sm">
+                <div class="gallery-preview gallery-mobile-preview-1 margin-y-xxs position-relative">
+                    <img class="width-100%"
+                        src="../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-5.png" alt="">
+                    <div class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
+                        <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="">
+                    </div>
+                </div>
+                <div class="gallery-preview gallery-mobile-preview-2 margin-y-xxs position-relative">
+                    <img class="width-100%"
+                        src="../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-6.png" alt="">
+                    <div class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
+                        <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="">
+                    </div>
+                </div>
+                <div class="gallery-preview gallery-mobile-preview-3 margin-y-xxs position-relative">
+                    <img class="width-100%"
+                        src="../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-7.png" alt="">
+                    <div class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
+                        <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="">
+                    </div>
+                </div>
+                <div class="gallery-preview gallery-mobile-preview-4 margin-y-xxs position-relative">
+                    <img class="width-100%"
+                        src="../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-8.png" alt="">
+                    <div class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
+                        <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="">
+                    </div>
+                </div>
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
