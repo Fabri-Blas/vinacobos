@@ -662,7 +662,7 @@ footer {
 }
 
 #bramare-home {
-  background-image: url("../img/bramare/desktop/bramare-desktop-background.png");
+  background-image: url("../img/bramare/desktop/cabernet/bramare-cabernet-bg.png");
   background-position:bottom;
   background-size:bottom;
   background-repeat: no-repeat;
@@ -676,6 +676,12 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
   }
+}
+#bramare-patagonia{
+  background-image: url("../img/bramare/desktop/bramare-patagonia-background-desktop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #cocodrilo-home {
@@ -866,7 +872,7 @@ footer {
 }
 
 #vinculum-malbec-home {
-  background-image: url("../img/vinculum/desktop/malbec/vinculum-malbec-bg.jpg");
+  background-image: url("../img/vinculum/desktop/malbec/vinculum-malbec-bg.png");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;

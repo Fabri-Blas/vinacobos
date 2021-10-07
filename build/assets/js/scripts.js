@@ -1254,7 +1254,7 @@ function resetFocusTabsStyle() {
   let doneAbove = false;
   let doneBelow = false;
 
-if (actualPage === 'felino'||actualPage === 'historia'||actualPage === 'felino-cabernet'||actualPage === 'felino-red-blend'||actualPage === 'felino-chardonnay'||actualPage === 'bramare'||actualPage === 'cocodrilo') {
+if (actualPage === 'felino'||actualPage === 'historia'||actualPage === 'felino-cabernet'||actualPage === 'felino-red-blend'||actualPage === 'felino-chardonnay'||actualPage === 'bramare'||actualPage === 'bramare-patagonia'||actualPage === 'bramare-valle-de-uco'||actualPage === 'cocodrilo') {
     checkBackdropBlur2();
 
     document.addEventListener('scroll', () => {
