@@ -4526,71 +4526,68 @@ if(cinemagraphs.length > 0){
         graph.playbackRate = 0.75;
     });
 }
+// =================================GALLERY CLASS=================================
+class galleryPreview {
+    constructor(preview, path, selected) {
+        this.preview = preview;
+        this.path = path;
+        this.selected = selected;
+    }
+}
+
+
 // =================================GALLERY VARS=================================
 let galleryActual = document.querySelector('.gallery-actual');
 let galleryActualMobile = document.querySelector('.gallery-actual-mobile');
-
-let selected = null;
-let previous = null;
 
 // =================================DESKTOP GALLERY=================================
 if (galleryActual) {
 
     galleryActual = galleryActual.firstElementChild;
     let galleryPreviewBackdrop = document.querySelectorAll('.gallery-preview-selected');
-    
+
     clearGalleryBackdrops();
 
-    galleryPreviewBackdrop.forEach(preview => {
-        preview.addEventListener('click', () => {
+    galleryPreviewBackdrop.forEach(previewBackdrop => {
+        previewBackdrop.addEventListener('click', () => {
             clearGalleryBackdrops();
-            preview.style.opacity = '1';
-            preview.firstElementChild.setAttribute('style', 'transform: scale(1) rotate(0deg); opacity: 1;');
+            setGalleryBackdrops(previewBackdrop);
         });
     });
 
-    const gallery1 = {
-        preview: document.querySelector('.gallery-preview-1'),
-        path: '../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-1.png',
-        selected: false
-    }
-    const gallery2 = {
-        preview: document.querySelector('.gallery-preview-2'),
-        path: '../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-2.png',
-        selected: false
-    }
-    const gallery3 = {
-        preview: document.querySelector('.gallery-preview-3'),
-        path: '../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-3.png',
-        selected: false
-    }
-    const gallery4 = {
-        preview: document.querySelector('.gallery-preview-4'),
-        path: '../assets/img/felino/desktop/malbec/gallery/felino-desktop-gallery-4.png',
-        selected: false
+    const allGalleryPreviews = document.querySelectorAll('.gallery-preview');
+    const previewsCont = allGalleryPreviews.length / 2;
+
+    const galleryObjects = [];
+
+    for (let i = 0; i < previewsCont; i++) {
+        const galleryObject = new galleryPreview(
+            preview = allGalleryPreviews[i],
+            path = allGalleryPreviews[i].childNodes[3].getAttribute('gallery-src'),
+            false
+        );
+        galleryObjects.push(galleryObject);
     }
 
-    initGalleryPaths();
+    galleryObjects.forEach(gallery => {
+        galleryClickEvent(gallery);
+    });
 
-    galleryClickEvent(gallery1);
-    galleryClickEvent(gallery2);
-    galleryClickEvent(gallery3);
-    galleryClickEvent(gallery4);
-
-    gallerySelect(gallery1);
-
-    function initGalleryPaths() {
-        galleryActual.setAttribute('src', gallery2.path);
-        galleryActual.setAttribute('src', gallery3.path);
-        galleryActual.setAttribute('src', gallery4.path);
-        galleryActual.setAttribute('src', gallery1.path);
-    }
+    clearGalleryBackdrops();
+    clearGallerySelect();
+    galleryObjects[0].preview.click();
+    setGalleryBackdrops(galleryPreviewBackdrop[0]);
 
     function clearGalleryBackdrops() {
         galleryPreviewBackdrop.forEach(preview => {
             preview.style.opacity = '0';
             preview.firstElementChild.setAttribute('style', 'transform: scale(0.5) rotate(-360deg); opacity: 0;');
         });
+    }
+
+    function setGalleryBackdrops(preview) {
+        preview.style.opacity = '1';
+        preview.firstElementChild.setAttribute('style', 'transform: scale(1) rotate(0deg); opacity: 1;');
     }
 
     function galleryClickEvent(gallery) {
@@ -4603,15 +4600,10 @@ if (galleryActual) {
     }
 
     function clearGallerySelect() {
-        gallery1.preview.firstElementChild.style.boxShadow = "none";
-        gallery2.preview.firstElementChild.style.boxShadow = "none";
-        gallery3.preview.firstElementChild.style.boxShadow = "none";
-        gallery4.preview.firstElementChild.style.boxShadow = "none";
-
-        gallery1.selected = false;
-        gallery2.selected = false;
-        gallery3.selected = false;
-        gallery4.selected = false;
+        galleryObjects.forEach(gallery => {
+            gallery.preview.firstElementChild.style.boxShadow = "none";
+            gallery.selected = false;
+        });
     }
 
     function gallerySelect(gallery) {
@@ -4641,47 +4633,34 @@ if (galleryActualMobile) {
     galleryPreviewBackdropMobile.forEach(preview => {
         preview.addEventListener('click', () => {
             clearGalleryBackdropsMobile();
-            preview.style.opacity = '1';
-            preview.firstElementChild.setAttribute('style', 'transform: scale(1) rotate(0deg); opacity: 1;');
+            setGalleryBackdropsMobile(preview);
         });
     });
 
-    const gallery1Mobile = {
-        preview: document.querySelector('.gallery-mobile-preview-1'),
-        path: '../assets/img/felino/mobile/malbec/gallery/felino-mobile-gallery-1.png',
-        selected: false
-    }
-    const gallery2Mobile = {
-        preview: document.querySelector('.gallery-mobile-preview-2'),
-        path: '../assets/img/felino/mobile/malbec/gallery/felino-mobile-gallery-2.png',
-        selected: false
-    }
-    const gallery3Mobile = {
-        preview: document.querySelector('.gallery-mobile-preview-3'),
-        path: '../assets/img/felino/mobile/malbec/gallery/felino-mobile-gallery-3.png',
-        selected: false
-    }
-    const gallery4Mobile = {
-        preview: document.querySelector('.gallery-mobile-preview-4'),
-        path: '../assets/img/felino/mobile/malbec/gallery/felino-mobile-gallery-4.png',
-        selected: false
+
+    const galleryObjectsMobile = [];
+
+    const allGalleryPreviewsMobile = document.querySelectorAll('.gallery-preview');
+    const previewsContMobile = allGalleryPreviewsMobile.length / 2;
+
+    for (let i = previewsContMobile * 2 - 1; i >= previewsContMobile; i--) {
+        const galleryObject = new galleryPreview(
+            preview = allGalleryPreviewsMobile[i],
+            path = allGalleryPreviewsMobile[i].childNodes[3].getAttribute('gallery-src'),
+            false
+        )
+        galleryObjectsMobile.unshift(galleryObject);
     }
 
-    initGalleryPathsMobile();
 
-    galleryClickEventMobile(gallery1Mobile);
-    galleryClickEventMobile(gallery2Mobile);
-    galleryClickEventMobile(gallery3Mobile);
-    galleryClickEventMobile(gallery4Mobile);
+    galleryObjectsMobile.forEach(gallery => {
+        galleryClickEventMobile(gallery);
+    });
 
-    gallerySelectMobile(gallery1Mobile);
-
-    function initGalleryPathsMobile() {
-        galleryActualMobile.setAttribute('src', gallery2Mobile.path);
-        galleryActualMobile.setAttribute('src', gallery3Mobile.path);
-        galleryActualMobile.setAttribute('src', gallery4Mobile.path);
-        galleryActualMobile.setAttribute('src', gallery1Mobile.path);
-    }
+    clearGalleryBackdropsMobile();
+    clearGallerySelectMobile();
+    galleryObjectsMobile[0].preview.click();
+    setGalleryBackdropsMobile(galleryPreviewBackdropMobile[0]);
 
     function galleryClickEventMobile(gallery) {
         gallery.preview.addEventListener('click', () => {
@@ -4693,10 +4672,9 @@ if (galleryActualMobile) {
     }
 
     function clearGallerySelectMobile() {
-        gallery1Mobile.selected = false;
-        gallery2Mobile.selected = false;
-        gallery3Mobile.selected = false;
-        gallery4Mobile.selected = false;
+        galleryObjectsMobile.forEach(gallery => {
+            gallery.selected = false;
+        });
     }
 
     function clearGalleryBackdropsMobile() {
@@ -4704,6 +4682,10 @@ if (galleryActualMobile) {
             preview.style.opacity = '0';
             preview.firstElementChild.setAttribute('style', 'transform: scale(0.5) rotate(-360deg); opacity: 0;');
         });
+    }
+    function setGalleryBackdropsMobile(preview) {
+        preview.style.opacity = '1';
+        preview.firstElementChild.setAttribute('style', 'transform: scale(1) rotate(0deg); opacity: 1;');
     }
 
     function gallerySelectMobile(gallery) {
