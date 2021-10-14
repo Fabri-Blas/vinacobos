@@ -654,6 +654,51 @@ footer {
     padding-bottom: 50px;
   }
 }
+.bramare {
+  &-title {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 47.11px;
+    font-style: normal;
+    letter-spacing: 0.12em;
+  }
+  &-subtitle {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    transform: translateY(17px);
+    letter-spacing: 0.12em;
+    //min-width: 110px;
+    text-align: center;
+    color: black;
+  }
+
+  &-description {
+    font-family: var(--font-secondary);
+    font-weight: normal;
+    font-size: 18px;
+    font-style: normal;
+    transform: translateY(17px);
+    letter-spacing: 0.12em;
+  }
+  &-small-line {
+    border-bottom: 3px solid #1c1c1c;
+    width: 30px;
+    transform: translateY(-27px);
+    margin: 0px 30px;
+  }
+  &-big-line {
+    border-bottom: 3px solid #1c1c1c;
+    width: 50%;
+    transform: translateY(-27px);
+    margin-left: 30px;
+  }
+  &-links {
+    padding-bottom: 50px;
+  }
+}
+
 #felino-field-mobile {
   & img {
     width: 100%;
@@ -1253,8 +1298,8 @@ footer {
   }
   &-quote {
     position: absolute;
-    top: 280px;
-    left: 400px;
+    top: 207px;
+    left: 211px;
   }
   &-big-line {
     border-bottom: 2px solid #000000;
@@ -1697,6 +1742,23 @@ footer {
       letter-spacing: 0.05em;
       color: #3e3937;
     }
+
+    & .contact-section-selected {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+      color: #1c1c1c;
+    }
+    & .contact-section-inactive {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+      color: #878581;
+    }
   }
 }
 
@@ -2087,7 +2149,74 @@ footer {
       color: #878581;
     }
   }
-
+  .bramare {
+    &-title {
+      font-family: var(--font-primary);
+      font-weight: 500;
+      font-size: 47.11px;
+      font-style: normal;
+      letter-spacing: 0.12em;
+      width: 415px;
+      max-width: max-content;
+    }
+    &-subtitle {
+      font-family: var(--font-primary);
+      font-weight: 500;
+      font-size: 18px;
+      font-style: normal;
+      transform: translateY(17px);
+      letter-spacing: 0.12em;
+      text-align: center;
+      color: black;
+      width: max-content;
+    }
+    &-small-line {
+      border-bottom: 3px solid #1c1c1c;
+      width: 30px;
+      transform: translateY(-27px);
+      margin: 0px 10px;
+    }
+    &-big-line {
+      border-bottom: 3px solid #1c1c1c;
+      width: 50%;
+      transform: translateY(-27px);
+      margin-left: 10px;
+    }
+  }
+  .felino {
+    &-title {
+      font-family: var(--font-primary);
+      font-weight: 500;
+      font-size: 47.11px;
+      font-style: normal;
+      letter-spacing: 0.12em;
+      width: 290px;
+      max-width: max-content;
+    }
+    &-subtitle {
+      font-family: var(--font-primary);
+      font-weight: 500;
+      font-size: 18px;
+      font-style: normal;
+      transform: translateY(17px);
+      letter-spacing: 0.12em;
+      text-align: center;
+      color: black;
+      width: max-content;
+    }
+    &-small-line {
+      border-bottom: 3px solid #1c1c1c;
+      width: 30px;
+      transform: translateY(-27px);
+      margin: 0px 10px;
+    }
+    &-big-line {
+      border-bottom: 3px solid #1c1c1c;
+      width: 50%;
+      transform: translateY(-27px);
+      margin-left: 10px;
+    }
+  }
   //==============HISTORIA==========
   #historia-home {
     .title {
@@ -2108,8 +2237,8 @@ footer {
     }
     &-quote {
       position: absolute;
-      top: 95px;
-      left: 310px;
+      top: 140px;
+      left: 180px;
       width: 279.68px;
       height: auto;
     }

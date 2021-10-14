@@ -17,11 +17,11 @@
 
     <!-- ================================================HEADER================================================ -->
     <header id="header-global"
-        class="f-header js-f-header hide-nav js-hide-nav js-hide-nav--main backdrop-blur-10 padding-y-lg padding-y-0@md"
+        class="f-header js-f-header bg-transparent hide-nav js-hide-nav js-hide-nav--main backdrop-blur-10 padding-y-lg padding-y-0@md"
         data-nav-target-class="f-header--expanded">
         <div class="f-header__mobile-content container max-width-lg padding-top-0@md flex flex-column">
-            <a href="./" class="position-absolute left-0 top-50% -translate-y-50%">
-                <img src="./assets/img/logo.svg" width="30" height="27" alt="Logo" class="logo-mobile-1">
+            <a href="../" class="position-absolute left-0 top-50% -translate-y-50%">
+                <img src="../assets/img/logo.svg" width="30" height="27" alt="Logo" class="logo-mobile-1">
             </a>
             <button
                 class="position-absolute top-50% -translate-y-50% right-0 reset anim-menu-btn color-contrast-high js-anim-menu-btn js-tab-focus"
@@ -34,38 +34,40 @@
             <div
                 class="f-header__nav-grid justify-between@md container max-width-xxxl margin-x-auto padding-x-xl@md padding-x-xxl@sxl">
                 <div class="f-header__nav-logo-wrapper">
-                    <a href="./" class="">
-                        <img id="logo" src="./assets/img/logo.svg" width="38" height="35" alt="Logo" class="display@md">
+                    <a href="../" class="">
+                        <img id="logo" src="../assets/img/logo.svg" width="38" height="35" alt="Logo"
+                            class="display@md main-logo">
                     </a>
                 </div>
 
                 <ul id="desktop-header" class="f-header__list margin-left-sm justify-center@md display@md">
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./historia"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line-black"><a href="../historia"
                             class="f-header__link btn--nav">HISTORIA</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./terroir"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line-black"><a href="../terroir"
                             class="f-header__link btn--nav">TERROIR</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./vinos"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line-black"><a href="../vinos"
                             class="f-header__link btn--nav">VINOS</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="./contacto"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line-black"><a href="../contacto"
                             class="f-header__link btn--nav">CONTACTO</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line"><a href="#0"
+                    <li class="f-header__item margin-x-lg padding-y-xs nav--line-black"><a href="#0"
                             class="f-header__link btn--nav">TIENDA</a></li>
                 </ul>
+
                 <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
                 </ul>
 
                 <ul class="f-header__list padding-top-lg justify-center@md hide@md">
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="./historia" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
+                        <a href="../historia" class="f-header__link margin-x-md btn--nav-mobile">HISTORIA</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="./historia" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
+                        <a href="../terroir" class="f-header__link margin-x-md btn--nav-mobile">TERROIR</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="./vinos" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
+                        <a href="../vinos" class="f-header__link margin-x-md btn--nav-mobile">VINOS</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
-                        <a href="./contacto" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
+                        <a href="../contacto" class="f-header__link margin-x-md btn--nav-mobile">CONTACTO</a>
                     </li>
                     <li class="f-header__item padding-y-xs margin-x-sm">
                         <a href="#0" class="f-header__link margin-x-md btn--nav-mobile">TIENDA</a>
@@ -384,13 +386,14 @@
         </section>
 
 
-        <section id="terroir-mobile-leyenda" class="hide@md component-section flex justify-center items-center">
+        <section id="terroir-mobile-leyenda"
+            class="hide@md component-section flex flex-column justify-center items-center">
             <div class="text-center padding-x-xl">
                 <h3 class="font-primary">“Cosechamos los frutos de nuestro anhelo y esfuerzo, mientras que continuamos
                     creando vinos”</h3>
             </div>
-            <div class="position-absolute top-50% left-50% -translate-x-50% -translate-y-50% width-100% text-center">
-                <img src="./assets/img/historia/mobile/historia-mobile-logo-background.svg" alt="">
+            <div class="margin-top-xl">
+                <img src="./assets/img/logo-black.svg" width="35" height="auto" alt="">
             </div>
         </section>
 
@@ -418,68 +421,97 @@
 
         <button class="position-absolute top-0 right-0" onclick="closeMobilePanel(actualOpenPanel)">X</button>
 
-        <div id="slidingpanel-chanares" class="is-hidden slidingpanel padding-y-xl padding-x-lg">
-            <h2 class="padding-y-md">CHAÑARES ESTATE</h2>
-            <p class="padding-y-md text-justify font-secondary">Esta propiedad tiene una superficie plantada de 17,3 ha
-                de Malbec, Cabernet Franc y Cabernet Sauvignon.
-                La zona se caracteriza por tener suelo de origen aluvial, pobre, pedregoso y de buen drenaje. En cuanto
-                a la topografía, el viñedo tiene una exposición norte, con una pendiente oeste-este de 2,7%, que
-                favorece la circulación de aire y las condiciones de sanidad del viñedo.
-                Durante la época de maduración, la amplitud térmica es de 14,4º C.
-                Para la irrigación se utiliza goteo. Este sistema, junto con la alta permeabilidad del suelo, permite
-                controlar el vigor del viñedo durante el desarrollo vegetativo y la madurez de las uvas. La poda se
-                realiza a cordón pitoneado.
-                Una de las particularidades de este viñedo es que conserva diversos bosques nativos de chañares -árbol
-                típico de esta región- como reserva natural de flora y fauna autóctonas.
-                El viñedo fue adquirido por Paul Hobbs en el año 2013, conservando su diseño y naturaleza. Chañares
-                tiene la particularidad de mantener entre sus viñedos diversos bosques nativos de chañares (árbol típico
-                de esta región). Suman 5 bosques de chañares, en total más de 1,5ha, un 10% de la superficie plantada.
-                Estos bosques funcionan como refugio de fauna nativa y banco de semillas de flora autóctona. Se pueden
-                encontrar diferentes especies de pasturas, arbustos y árboles.</p>
-            <h6 class="padding-y-xs font-secondary">DISTRITO: LOS ARBOLES</h6>
-            <h6 class="padding-y-xs font-secondary">Región: Tunuyán, Valle de Uco · Mendoza, Argentina</h6>
-            <h6 class="padding-top-xs padding-bottom-xxl font-secondary">Altitud media: 1.184 metros</h6>
+        <div id="slidingpanel-chanares" class="is-hidden slidingpanel">
+            <img class="width-100%" src="./assets/img/terroir/mobile/terroir-mobile-panel1.png" alt="">
+            <div class="padding-x-lg" style="transform: translateY(-145px);">
+                <h2 class="padding-top-md padding-bottom-sm color-white" style="min-height: 156px;">CHAÑARES ESTATE</h2>
+                <p class="padding-y-sm text-justify font-secondary">Esta propiedad tiene una superficie plantada de 17,3
+                    ha
+                    de Malbec, Cabernet Franc y Cabernet Sauvignon.
+                    La zona se caracteriza por tener suelo de origen aluvial, pobre, pedregoso y de buen drenaje. En
+                    cuanto
+                    a la topografía, el viñedo tiene una exposición norte, con una pendiente oeste-este de 2,7%, que
+                    favorece la circulación de aire y las condiciones de sanidad del viñedo.
+                    Durante la época de maduración, la amplitud térmica es de 14,4º C.
+                    Para la irrigación se utiliza goteo. Este sistema, junto con la alta permeabilidad del suelo,
+                    permite
+                    controlar el vigor del viñedo durante el desarrollo vegetativo y la madurez de las uvas. La poda se
+                    realiza a cordón pitoneado.
+                    Una de las particularidades de este viñedo es que conserva diversos bosques nativos de chañares
+                    -árbol
+                    típico de esta región- como reserva natural de flora y fauna autóctonas.
+                    El viñedo fue adquirido por Paul Hobbs en el año 2013, conservando su diseño y naturaleza. Chañares
+                    tiene la particularidad de mantener entre sus viñedos diversos bosques nativos de chañares (árbol
+                    típico
+                    de esta región). Suman 5 bosques de chañares, en total más de 1,5ha, un 10% de la superficie
+                    plantada.
+                    Estos bosques funcionan como refugio de fauna nativa y banco de semillas de flora autóctona. Se
+                    pueden
+                    encontrar diferentes especies de pasturas, arbustos y árboles.</p>
+                <h6 class="padding-y-xs font-secondary">DISTRITO: LOS ARBOLES</h6>
+                <h6 class="padding-y-xs font-secondary">Región: Tunuyán, Valle de Uco · Mendoza, Argentina</h6>
+                <h6 class="padding-top-xs padding-bottom-xxl font-secondary">Altitud media: 1.184 metros</h6>
+            </div>
         </div>
 
-        <div id="slidingpanel-zingaretti" class="is-hidden slidingpanel padding-y-xl padding-x-lg">
-            <h2 class="padding-y-md">ZINGARETTI ESTATE</h2>
-            <p class="padding-y-md text-justify font-secondary">A finales del 1800 el abuelo de Quito Zingaretti llegó
-                con su familia desde Italia y se instaló en Maipú. Al poco tiempo compró el terreno donde hoy está
-                ubicada la finca. Desde Maipú, viajaban en carreta durante todo un día hasta Tupungato, permanecían
-                trabajando en la propiedad durante una semana y luego volvían a Maipú. De esta forma fueron
-                desarrollando la finca hasta que pudieron instalarse allí definitivamente. Fueron, junto a otras pocas
-                familias, los primeros viticultores de esa zona.
-                Américo Zingaretti, llamado así porque fue el primero de la familia en nacer en América, le dejó a su
-                hijo “AmeriQuito” Zingaretti la mitad sur de la finca, donde hoy en día se encuentran 4,4 ha de un
-                espaldero de Malbec, anteriores a 1930 (se considera de 1930 porque es el año en el cuál se comenzó a
-                llevar registro de los viñedos).
-                Los suelos en general son de textura gruesa, franco-arenosos en donde las rocas aparecen a distintas
-                profundidades. Dentro de este viñedo encontramos diferencias en el suelo muy marcadas. Zonas más fresca
-                que el resto del Valle de Uco, posiblemente por la proximidad a una cadena de cerros ubicados hacia el
-                norte que encajonan el aire frío que baja desde la montaña. Esto nos llevó a buscar potenciar el
-                chardonnay. La pendiente es algo pronunciada y gracias a la orientación de las hileras permite un buen
-                flujo de aire que ayuda a mantener la sanidad. Estas se orientan de este a oeste a diferencia del resto
-                de los viñedos que suele ser de norte a sur.
-            </p>
-            <h6 class="padding-y-xs font-secondary">DISTRITO: Villa Bastías</h6>
-            <h6 class="padding-y-xs font-secondary">Región: Tunuyán, Valle de Uco · Mendoza, Argentina</h6>
-            <h6 class="padding-top-xs padding-bottom-xxl font-secondary">Altitud media: 1.150 metros</h6>
+        <div id="slidingpanel-zingaretti" class="is-hidden slidingpanel">
+            <img class="width-100%" src="./assets/img/terroir/mobile/terroir-mobile-panel2.png" alt="">
+            <div class="padding-x-lg" style="transform: translateY(-145px);">
+                <h2 class="padding-top-md padding-bottom-sm color-white" style="min-height: 156px;">ZINGARETTI ESTATE
+                </h2>
+                <p class="padding-y-md text-justify font-secondary">A finales del 1800 el abuelo de Quito Zingaretti
+                    llegó
+                    con su familia desde Italia y se instaló en Maipú. Al poco tiempo compró el terreno donde hoy está
+                    ubicada la finca. Desde Maipú, viajaban en carreta durante todo un día hasta Tupungato, permanecían
+                    trabajando en la propiedad durante una semana y luego volvían a Maipú. De esta forma fueron
+                    desarrollando la finca hasta que pudieron instalarse allí definitivamente. Fueron, junto a otras
+                    pocas
+                    familias, los primeros viticultores de esa zona.
+                    Américo Zingaretti, llamado así porque fue el primero de la familia en nacer en América, le dejó a
+                    su
+                    hijo “AmeriQuito” Zingaretti la mitad sur de la finca, donde hoy en día se encuentran 4,4 ha de un
+                    espaldero de Malbec, anteriores a 1930 (se considera de 1930 porque es el año en el cuál se comenzó
+                    a
+                    llevar registro de los viñedos).
+                    Los suelos en general son de textura gruesa, franco-arenosos en donde las rocas aparecen a distintas
+                    profundidades. Dentro de este viñedo encontramos diferencias en el suelo muy marcadas. Zonas más
+                    fresca
+                    que el resto del Valle de Uco, posiblemente por la proximidad a una cadena de cerros ubicados hacia
+                    el
+                    norte que encajonan el aire frío que baja desde la montaña. Esto nos llevó a buscar potenciar el
+                    chardonnay. La pendiente es algo pronunciada y gracias a la orientación de las hileras permite un
+                    buen
+                    flujo de aire que ayuda a mantener la sanidad. Estas se orientan de este a oeste a diferencia del
+                    resto
+                    de los viñedos que suele ser de norte a sur.
+                </p>
+                <h6 class="padding-y-xs font-secondary">DISTRITO: Villa Bastías</h6>
+                <h6 class="padding-y-xs font-secondary">Región: Tunuyán, Valle de Uco · Mendoza, Argentina</h6>
+                <h6 class="padding-top-xs padding-bottom-xxl font-secondary">Altitud media: 1.150 metros</h6>
+            </div>
+
         </div>
 
-        <div id="slidingpanel-marchiori" class="is-hidden slidingpanel padding-y-xl padding-x-lg">
-            <h2 class="padding-y-md">MARCHIORI ESTATE</h2>
-            <p class="padding-y-md text-justify font-secondary">El viñedo Marchiori es una parte importante de la
-                historia de Viña Cobos. De aquí provinieron las uvas de la cosecha inaugural de la bodega, Cobos Malbec
-                1999. Una de sus dueñas, Andrea Marchiori, fue socia de Viña Cobos durante 18 años.<br>
+        <div id="slidingpanel-marchiori" class="is-hidden slidingpanel">
+            <img class="width-100%" src="./assets/img/terroir/mobile/terroir-mobile-panel3.png" alt="">
+            <div class="padding-x-lg" style="transform: translateY(-145px);">
+                <h2 class="padding-top-md padding-bottom-sm color-white" style="min-height: 156px;">MARCHIORI ESTATE</h2>
+                <p class="padding-y-md text-justify font-secondary">El viñedo Marchiori es una parte importante de la
+                    historia de Viña Cobos. De aquí provinieron las uvas de la cosecha inaugural de la bodega, Cobos
+                    Malbec
+                    1999. Una de sus dueñas, Andrea Marchiori, fue socia de Viña Cobos durante 18 años.<br>
 
-                El suel es variable según el lugar de la finca. Generalmente encontramos una primera capa de suelo más
-                pesado con mayor proporción de arcilla que abarca entre los 10 y 40 primeros cm. Luego aparece una
-                textura franco arenosa que permite un buen drenaje del agua. Además, presenta cantos rodados de diversos
-                tamaños que en algunos sectores son abundantes. Se trata de viñedos antiguos, con una población de
-                plantas, la mayoría de más de 80 años.</p>
-            <h6 class="padding-y-xs font-secondary">DISTRITO: Perdriel</h6>
-            <h6 class="padding-y-xs font-secondary">Región: Luján de Cuyo · Mendoza, Argentina</h6>
-            <h6 class="padding-top-xs padding-bottom-xxl font-secondary">Altitud media: 995 metros</h6>
+                    El suel es variable según el lugar de la finca. Generalmente encontramos una primera capa de suelo
+                    más
+                    pesado con mayor proporción de arcilla que abarca entre los 10 y 40 primeros cm. Luego aparece una
+                    textura franco arenosa que permite un buen drenaje del agua. Además, presenta cantos rodados de
+                    diversos
+                    tamaños que en algunos sectores son abundantes. Se trata de viñedos antiguos, con una población de
+                    plantas, la mayoría de más de 80 años.</p>
+                <h6 class="padding-y-xs font-secondary">DISTRITO: Perdriel</h6>
+                <h6 class="padding-y-xs font-secondary">Región: Luján de Cuyo · Mendoza, Argentina</h6>
+                <h6 class="padding-top-xs padding-bottom-xxl font-secondary">Altitud media: 995 metros</h6>
+            </div>
         </div>
     </section>
     <!-- ==============================================END-MAIN============================================== -->

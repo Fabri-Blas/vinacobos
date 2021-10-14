@@ -1242,6 +1242,7 @@ function resetFocusTabsStyle() {
     if (Util.hasClass(mainNav[0], 'hide-nav--fixed')) Util.addClass(mainNav[0], 'hide-nav--has-bg');
   }
 
+
   var path = window.location.pathname;
   let actualPage = path.split("/").pop();
   actualPage = actualPage.split('.')[0];
@@ -1254,22 +1255,22 @@ function resetFocusTabsStyle() {
   let doneAbove = false;
   let doneBelow = false;
 
-if (actualPage === 'felino'||actualPage === 'historia'||actualPage === 'felino-cabernet'||actualPage === 'felino-red-blend'||actualPage === 'felino-chardonnay'||actualPage === 'bramare'||actualPage === 'bramare-patagonia'||actualPage === 'bramare-valle-de-uco'||actualPage === 'cocodrilo') {
-    checkBackdropBlur2();
+  
 
+  if (actualPage === 'felino' || actualPage === 'historia' || actualPage ==='terroir' || actualPage === 'felino-cabernet' || actualPage === 'felino-red-blend' || actualPage === 'felino-chardonnay' || actualPage === 'bramare' || actualPage === 'bramare-patagonia' || actualPage === 'bramare-valle-de-uco' || actualPage === 'cocodrilo') {
+    checkBackdropBlur2();
     document.addEventListener('scroll', () => {
       checkBackdropBlur2();
     });
   } else {
     checkBackdropBlur();
-
     document.addEventListener('scroll', () => {
       checkBackdropBlur();
     });
   }
-  
- 
-  
+
+
+
 
   function checkBackdropBlur() {
     if (window.pageYOffset === 0) {
@@ -4811,6 +4812,19 @@ document.addEventListener('scroll', () => {
         sContainerCheck(cocodriloHome);
     }
 });
+const vinoVolturno = document.getElementById("vino-volturno-img");
+const logoVolturno = document.getElementById("vino-volturno-logo");
+
+logoVolturno.addEventListener('mouseover',() =>{
+    vinoVolturno.style.opacity = '1';
+
+});
+
+logoVolturno.addEventListener('mouseout',() =>{
+    vinoVolturno.style.opacity = '0';
+
+});
+
 const felinoMomentos = document.getElementById('felino-momentos-first');
 
 if (felinoMomentos) {

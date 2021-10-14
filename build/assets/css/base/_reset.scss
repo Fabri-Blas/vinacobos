@@ -28,10 +28,12 @@
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden !important;
   }
 
   body {
     background-color: var(--color-bg, white);
+    overflow-x: hidden !important;
   }
 
   article, aside, details, figcaption, figure, 
