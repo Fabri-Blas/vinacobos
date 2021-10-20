@@ -4723,7 +4723,7 @@ if (firstComponentAnimation && secondComponentReveal && window.innerWidth > 1024
 
         if (window.scrollY == 0 && !firstComponentHidden && getDelta() < 0) {
             setTimeout(() => {
-                document.body.style.overflowY = 'scroll';
+                document.body.style.overflowY = 'overlay';
                 firstComponentHidden = true;
             }, 800);
             firstComponentAnimation.style.top = '-52%';
