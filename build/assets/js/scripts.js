@@ -4704,28 +4704,44 @@ if (galleryActualMobile) {
 }
 
 
-const firstComponentScrolleable = document.getElementsByClassName('first-component-scrolleable')[0];
-const secondComponentScrolleable = document.getElementsByClassName('second-component-scrolleable')[0];
-let inSecondComponent = false;
-let animationDone = false;
+const firstComponentAnimation = document.getElementById("first-component-animation");
+const secondComponentReveal = document.getElementById("second-component-reveal");
+
+let firstComponentHidden = false;
 
 
 window.addEventListener('scroll', () => {
-    if (firstComponentScrolleable && secondComponentScrolleable) {
-        var actualPageY = window.scrollY;
-        if (actualPageY === 0) {
-            animationDone = false;
-            inSecondComponent = false;
-        } else if (actualPageY > 0 && !animationDone) {
-            secondComponentScrolleable.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
-            animationDone = true;
-            document.body.style.overflowY = 'hidden';
-        } else if (!inSecondComponent && window.scrollY + 10 > (firstComponentScrolleable.offsetTop + firstComponentScrolleable.offsetHeight)) {
+    revealFirstComponent();
+});
+
+window.addEventListener('wheel', (e) => {
+    revealFirstComponent();
+
+    if (window.scrollY == 0 && !firstComponentHidden && getDelta() < 0){
+        setTimeout(() => {
             document.body.style.overflowY = 'scroll';
-            inSecondComponent = true;
-        }
+            firstComponentHidden = true;
+        }, 800);
+        firstComponentAnimation.style.top = '-52%';
+        secondComponentReveal.style.backgroundColor = 'transparent';
+        secondComponentReveal.style.backdropFilter = 'blur(0px)';
     }
 });
+
+function revealFirstComponent() {
+    if (window.scrollY == 0 && getDelta() > 0) {
+        firstComponentAnimation.style.top = "50%";
+        secondComponentReveal.style.backgroundColor = 'black';
+        secondComponentReveal.style.backdropFilter = 'blur(15px)';
+        document.body.style.overflowY = 'hidden';
+        firstComponentHidden = false;
+    }
+}
+
+function getDelta(){
+    var e = window.event || e;
+    return Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+}
 const body = document.getElementsByTagName('body');
 const outline = document.getElementById('outline-card');
 const cardContainer = document.getElementById('floating-card');

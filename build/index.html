@@ -14,7 +14,7 @@
 
 <!-- BRANCH DEV -->
 
-<body class="bg-black">
+<body class="bg-black" style="overflow-y: hidden;">
 
     <!-- ================================================HEADER================================================ -->
     <header id="header-global"
@@ -97,7 +97,7 @@
         <!-- -------------------------Componente1y2conreveal------------------------- -->
 
 
-        <section class="component-section z-index-2 bg shadow-sm">
+        <section id="first-component-animation" style="transition: ease-in-out 0.8s;" class="position-fixed height-100vh width-100% z-index-2 bg shadow-sm top-50% left-50% -translate-x-50% -translate-y-50%">
             <!-- Componente1 -->
             <div id="hero" class="video-bg position-relative">
                 <div class="video-bg__media" aria-hidden="true">
@@ -122,12 +122,12 @@
             <div id="component-3d"
                 class="model-3d component-section flex flex-column justify-center items-center bg-black text-center">
 
+                <div id="second-component-reveal" class="position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-3" style="transition: ease-in-out 0.8s;opacity: 1;background-color: black;backdrop-filter: blur(15px);"></div>
+
                 <div class="padding-x-xxl@md padding-x-sm">
                     <div class="z-index-overlay">
                         <div class="display@sm">
-                            <h3 class="fs-med-font font-primary reveal-fx reveal-fx--clip-x">Un sueño nos impulsó, como
-                            </h3>
-                            <h3 class="fs-med-font font-primary reveal-fx reveal-fx--clip-x">elaborarlos nos diferenció
+                            <h3 class="fs-med-font font-primary reveal-fx reveal-fx--clip-x">El origen nos determina
                             </h3>
                         </div>
                         <div class="hide@sm reveal-fx reveal-fx--clip-x">
@@ -141,6 +141,7 @@
 
                 </div>
 
+                
                 <div>
 
         </section>

@@ -27,7 +27,7 @@
                 class="position-absolute top-50% -translate-y-50% right-0 reset anim-menu-btn color-contrast-high js-anim-menu-btn js-tab-focus"
                 aria-label="Toggle menu">
                 <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
-            </button> 
+            </button>
         </div>
 
         <div class="f-header__nav" role="navigation">
@@ -121,25 +121,24 @@
             </div>
 
             <div class="height-100vh grid flex items-center">
-                <div class="grid margin-x-xxl margin-y-auto">
-                    <div class="col-5">
+                <div class="grid gap-x-md margin-x-xxl margin-y-auto">
+                    <div class="col-5@md col-4@sxl flex items-center">
                         <div class="border-box flex justify-center items-center">
                             <div class="contact-box">
-                                <ul class="padding-left-lg">
-                                    <li id="box-contacto" class="contacto-text padding-top-lg contact-section-selected"
+                                <ul class="padding-left-lg padding-y-lg height-100% flex flex-column justify-between">
+                                    <li id="box-contacto" class="contacto-text contact-section-selected"
                                         onclick="resetForms(event)">
                                         Contacto
                                     </li>
-                                    <li id="box-visitas" class="contacto-text padding-top-sm contact-section-inactive"
+                                    <li id="box-visitas" class="contacto-text contact-section-inactive"
                                         onclick="showVisitas(event)">
                                         Visitas
                                     </li>
-                                    <li id="box-administracion"
-                                        class="contacto-text padding-top-sm contact-section-inactive"
+                                    <li id="box-administracion" class="contacto-text contact-section-inactive"
                                         onclick="showAdministracion(event)">
                                         Administración
                                     </li>
-                                    <li id="box-ubicacion" class="contacto-text padding-top-sm contact-section-inactive"
+                                    <li id="box-ubicacion" class="contacto-text contact-section-inactive"
                                         onclick="showUbicacion(event)">
                                         Ubicación
                                     </li>
@@ -150,9 +149,9 @@
 
 
                     <!--FORM CONTACTO -Desktop -->
-                    <div id="form-contacto" class="col-6">
+                    <div id="form-contacto" class="col-7@md col-8@sxl padding-x-xl@md padding-x-xxxl@sxl flex flex-column height-100% justify-center">
                         <form class="contacto" action="" method="POST">
-                            <div class="margin-y-lg flex flex-column">
+                            <div class="margin-bottom-lg flex flex-column">
                                 <label class="padding-left-lg  form-text">Nombre *</label>
                                 <input type="text" id="contacto-nombre" name="contacto-nombre" class="input-style">
                             </div>
@@ -177,28 +176,28 @@
                                 <textarea id="contacto-mensaje" name="contacto-mensaje" rows="6"></textarea>
                             </div>
 
-                            <div class="">
+                            <div class="flex justify-end">
                                 <a href="./vinos"><button class="btn--contacto z-index-3"
-                                        style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
+                                        style="position: unset !important; border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
                             </div>
                         </form>
 
-                        <div class="form-footer">
+                        <div>
                             <p class="contac-admin"> ADMINISTRACIÓN</p>
                             <p class="number-text">+54 9 261 6043832</p>
                         </div>
                     </div>
 
                     <!--FORM VISITAS-Desktop-->
-                    <div id="form-visitas" class="is-hidden col-6">
+                    <div id="form-visitas" class="is-hidden col-7@md col-8@sxl padding-x-xl@md padding-x-xxxl@sxl">
                         <form class="contacto grid gap-md" action="" method="POST">
-                            <div class="col-6 margin-y-xs flex flex-column">
+                            <div class="col-6 margin-bottom-xs flex flex-column">
                                 <label class="padding-left-lg@sxl padding-lef-sm@md  form-text">Nombre
                                     *</label>
                                 <input type="text" id="visitas-nombre" name="visita-nombre" class="input-style">
                             </div>
 
-                            <div class="col-6 margin-y-xs flex flex-column">
+                            <div class="col-6 margin-bottom-xs flex flex-column">
                                 <label class="padding-left-lg@sxl form-text">Apellido *</label>
                                 <input type="text" id="visitas-apellido" name="visita-apellido" class="input-style">
                             </div>
@@ -275,60 +274,55 @@
                                 <textarea id="visita-mensaje" name="visitas-mensaje" rows="6"></textarea>
                             </div>
 
-                            <div class="">
-                                <a href="./vinos"><button class="btn--contacto z-index-3 margin-bottom-xxxxl"
-                                        style="border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button></a>
+                            <div class="flex justify-end">
+                                <a href="./vinos">
+                                    <button class="btn--contacto z-index-3"
+                                        style="position: unset !important; border-bottom:1px solid var(--color-primary) !important; color:var(--color-primary) !important">Enviar</button>
+                                </a>
                             </div>
                         </form>
-                        <div class="form-footer">
+                        <div>
                             <p class="contac-admin"> RESERVA TURISMO</p>
                             <p class="number-text ">+54 9 261 6746689 </p>
                         </div>
                     </div>
 
                     <!--INFO ADMINISTRACION-Desktop-->
-                    <div id="info-administracion" class="is-hidden col-6">
+                    <div id="info-administracion" class="is-hidden col-7@md col-8@sxl padding-x-xl@md padding-x-xxxl@sxl flex flex-column justify-center">
 
-                        <div class="margin-y-md flex flex-column">
-                            <p class="administracion-text padding-left-lg ">RECUROS HUMANOS</p>
-                            <p class="sub-text padding-left-xxl">recursoshumanos@vinacobos.com</p>
+                        <div class="flex flex-column justify-between height-100% padding-y-xl padding-left-md@md padding-left-xxxl@sxl">
+                            <div class="">
+                                <p class="administracion-text padding-left-lg ">RECURSOS HUMANOS</p>
+                                <p class="sub-text padding-left-xxl">recursoshumanos@vinacobos.com</p>
+                            </div>
+                            <div class="">
+                                <p class="administracion-text padding-left-lg">COMERCIAL</p>
+                                <p class="sub-text padding-left-xxl">sales@vinacobos.com</p>
+                            </div>
+                            <div class="">
+                                <p class="administracion-text padding-left-lg ">RELACIONES PUBLICAS</p>
+                                <p class="sub-text padding-left-xxl">macarenaesteller@vinacobos.com</p>
+                            </div>
+                            <div class="">
+                                <p class="administracion-text padding-left-lg">PROVEEDORES</p>
+                                <p class="sub-text padding-left-xxl">proveedors@vinacobos.com</p>
+                            </div>
                         </div>
-
-                        <div class="margin-y-md flex flex-column">
-                            <p class="administracion-text padding-left-lg">RELACIONES PUBLICAS</p>
-                            <p class="sub-text padding-left-xxl">macarenaesteller@vinacobos.com
-                            </p>
-
-                        </div>
-
-                        <div class="margin-y-md flex flex-column">
-                            <p class="administracion-text padding-left-lg">COMERCIAL</p>
-                            <p class="sub-text padding-left-xxl">sales@vinacobos.com
-                            </p>
-                        </div>
-                        
-                        <div class="margin-y-md flex flex-column">
-                            <p class="administracion-text padding-left-lg">PROVEEDORES</p>
-                            <p class="sub-text padding-left-xxl">proveedores@vinacobos.com
-                            </p>
-                        </div>
-                        
                     </div>
 
 
 
                     <!--INFO UBICACION-->
-                    <div id="info-ubicacion" class="is-hidden col-7">
+                    <div id="info-ubicacion" class="is-hidden col-7@md col-8@sxl flex flex-column justify-center position-relative">
 
-                        <div class="contacto-mapa">
-                            <iframe class="width-100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3342.448900725683!2d-68.92664348440918!3d-33.097280386860255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967ddf45e662edf1%3A0x1a5ff0b645f0b641!2sVi%C3%B1a%20Cobos%20S.A.!5e0!3m2!1ses!2sar!4v1634583016078!5m2!1ses!2sar" style="border:0; height: 430px;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                        <div class="text-center">
+                        <iframe class="width-100% height-100%"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3342.448900725683!2d-68.92664348440918!3d-33.097280386860255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967ddf45e662edf1%3A0x1a5ff0b645f0b641!2sVi%C3%B1a%20Cobos%20S.A.!5e0!3m2!1ses!2sar!4v1634583016078!5m2!1ses!2sar"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <div class="text-center position-absolute left-50% -translate-x-50%" style="bottom: -87px;">
                             <p class="text-ubicacion">Viña Cobos</p>
                             <p class="text-ubicacion">Costa Flores y Ruta 7, Pedriel, Luján de Cuyo - Mendoza -
                                 Argentina
                             </p>
-
                         </div>
 
                     </div>
@@ -571,7 +565,9 @@
 
                 <div id="info-ubicacion-mobile" class="is-hidden col-12">
                     <div class="text-center">
-                        <iframe class="width-100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3342.448900725683!2d-68.92664348440918!3d-33.097280386860255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967ddf45e662edf1%3A0x1a5ff0b645f0b641!2sVi%C3%B1a%20Cobos%20S.A.!5e0!3m2!1ses!2sar!4v1634583016078!5m2!1ses!2sar" style="border:0; height: 430px;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe class="width-100%"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3342.448900725683!2d-68.92664348440918!3d-33.097280386860255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967ddf45e662edf1%3A0x1a5ff0b645f0b641!2sVi%C3%B1a%20Cobos%20S.A.!5e0!3m2!1ses!2sar!4v1634583016078!5m2!1ses!2sar"
+                            style="border:0; height: 430px;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
 
                     <div class="text-center contacto-mobile-customparagraph padding-top-lg">
@@ -579,7 +575,7 @@
                         <p>Costa Flores y Ruta 7, Perdriel,<br>Luján de Cuyo – Mendoza – Argentina</p>
                     </div>
                 </div>
-                
+
 
 
             </div>
