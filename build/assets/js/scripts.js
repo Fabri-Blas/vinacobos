@@ -4707,40 +4707,43 @@ if (galleryActualMobile) {
 const firstComponentAnimation = document.getElementById("first-component-animation");
 const secondComponentReveal = document.getElementById("second-component-reveal");
 
-let firstComponentHidden = false;
+if (firstComponentAnimation && secondComponentReveal) {
+    let firstComponentHidden = false;
 
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
-window.addEventListener('scroll', () => {
-    revealFirstComponent();
-});
+    window.addEventListener('scroll', () => {
+        revealFirstComponent();
+    });
 
-window.addEventListener('wheel', (e) => {
-    revealFirstComponent();
+    window.addEventListener('wheel', (e) => {
+        revealFirstComponent();
 
-    if (window.scrollY == 0 && !firstComponentHidden && getDelta() < 0){
-        setTimeout(() => {
-            document.body.style.overflowY = 'scroll';
-            firstComponentHidden = true;
-        }, 800);
-        firstComponentAnimation.style.top = '-52%';
-        secondComponentReveal.style.backgroundColor = 'transparent';
-        secondComponentReveal.style.backdropFilter = 'blur(0px)';
+        if (window.scrollY == 0 && !firstComponentHidden && getDelta() < 0) {
+            setTimeout(() => {
+                document.body.style.overflowY = 'scroll';
+                firstComponentHidden = true;
+            }, 800);
+            firstComponentAnimation.style.top = '-52%';
+            secondComponentReveal.style.backgroundColor = 'transparent';
+            secondComponentReveal.style.backdropFilter = 'blur(0px)';
+        }
+    });
+
+    function revealFirstComponent() {
+        if (window.scrollY == 0 && getDelta() > 0) {
+            firstComponentAnimation.style.top = "50%";
+            secondComponentReveal.style.backgroundColor = 'black';
+            secondComponentReveal.style.backdropFilter = 'blur(15px)';
+            document.body.style.overflowY = 'hidden';
+            firstComponentHidden = false;
+        }
     }
-});
 
-function revealFirstComponent() {
-    if (window.scrollY == 0 && getDelta() > 0) {
-        firstComponentAnimation.style.top = "50%";
-        secondComponentReveal.style.backgroundColor = 'black';
-        secondComponentReveal.style.backdropFilter = 'blur(15px)';
-        document.body.style.overflowY = 'hidden';
-        firstComponentHidden = false;
+    function getDelta() {
+        var e = window.event || e;
+        return Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
     }
-}
-
-function getDelta(){
-    var e = window.event || e;
-    return Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
 }
 const body = document.getElementsByTagName('body');
 const outline = document.getElementById('outline-card');
