@@ -4707,7 +4707,9 @@ if (galleryActualMobile) {
 const firstComponentAnimation = document.getElementById("first-component-animation");
 const secondComponentReveal = document.getElementById("second-component-reveal");
 
-if (firstComponentAnimation && secondComponentReveal) {
+if (firstComponentAnimation && secondComponentReveal && window.innerWidth > 1024) {
+    document.body.style.overflowY = 'hidden';
+
     let firstComponentHidden = false;
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
