@@ -468,7 +468,8 @@ footer {
     }
   }
 }
-#felino-fresco {
+#felino-fresco,
+.main-gallery {
   & .felino-sidetext {
     position: absolute;
     right: 110px;
@@ -509,11 +510,11 @@ footer {
       background-color: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(4px);
 
-      & img{
+      & img {
         transition: all 0.7s;
         opacity: 0;
         width: 25px;
-        transform: scale(0.5) rotate(-360deg); 
+        transform: scale(0.5) rotate(-360deg);
       }
     }
   }
@@ -521,8 +522,8 @@ footer {
   & h3 {
     font-style: normal;
     font-weight: 500;
-    font-size: 29.1px;
-    line-height: 35px;
+    font-size: 32px;
+    line-height: 38px;
     letter-spacing: 0.01em;
     color: #1c1c1c;
   }
@@ -535,10 +536,11 @@ footer {
     text-align: justify;
     letter-spacing: 0.01em;
     color: #878581;
-    max-width:380px;
+    max-width: 380px;
   }
 }
-#felino-fresco-mobile {
+#felino-fresco-mobile,
+.main-gallery-mobile {
   & .felino-fresco-sidetext {
     position: absolute;
     bottom: 265px;
@@ -602,11 +604,11 @@ footer {
       background-color: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(4px);
 
-      & img{
+      & img {
         transition: all 0.7s;
         opacity: 0;
         width: 20px;
-        transform: scale(0.5) rotate(-360deg); 
+        transform: scale(0.5) rotate(-360deg);
       }
     }
   }
@@ -700,6 +702,7 @@ footer {
   }
 }
 
+
 #felino-field-mobile {
   & img {
     width: 100%;
@@ -709,8 +712,8 @@ footer {
 
 #bramare-home {
   background-image: url("../img/bramare/desktop/cabernet/bramare-cabernet-bg.png");
-  background-position:bottom;
-  background-size:bottom;
+  background-position: bottom;
+  background-size: bottom;
   background-repeat: no-repeat;
 
   &-content {
@@ -723,7 +726,7 @@ footer {
     background-repeat: no-repeat;
   }
 }
-#bramare-patagonia{
+#bramare-patagonia {
   background-image: url("../img/bramare/desktop/bramare-patagonia-background-desktop.png");
   background-position: center;
   background-size: cover;
@@ -1410,6 +1413,15 @@ footer {
   opacity: 0.3;
 }
 
+.paul-firma{
+  transition: width 3s, height 3s, transform 3s;
+}
+
+.paul-firma:hover{
+  transform : scale(0.8);
+
+}
+
 // ===============SECCION TERROIR ===============
 #terroir-home {
   background-image: url("../img/terroir/desktop/terroir-fondo-desktop.png");
@@ -1587,9 +1599,9 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+    height: 100vh;
     z-index: 10;
     background-color: white;
-    overflow-y: scroll;
 
     & button {
       border: 0px;
@@ -1603,7 +1615,77 @@ footer {
     }
 
     & .slidingpanel {
-      height: 100vh;
+      position: relative;
+      min-height: 100vh;
+      overflow-y: scroll !important;
+
+      &-title {
+        position: relative;
+        width: 100%;
+
+        & img {
+          width: 100%;
+        }
+        & h2 {
+          font-family: var(--font-primary);
+          font-style: normal;
+          font-weight: 500;
+          font-size: 47.1162px;
+          line-height: 56px;
+          letter-spacing: 0.07em;
+          color: #f1eee9;
+          position: absolute;
+          bottom: 24px;
+          width: 100%;
+          color: white;
+          text-align: center;
+        }
+      }
+
+      &-info {
+        & p {
+          font-family: var(--font-secondary);
+          font-style: normal;
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 16px;
+          letter-spacing: 0.05em;
+          color: #1c1c1c;
+        }
+        & p::first-letter {
+          padding-left: 7px;
+        }
+      }
+
+      &-divisor {
+        & h2 {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+          letter-spacing: 0.12em;
+          color: #3e3937;
+        }
+        &-border-left {
+          border-top: 1px solid rgba(62, 57, 55, 0.3);
+        }
+        &-border-right {
+          border-top: 1px solid rgba(62, 57, 55, 0.3);
+        }
+      }
+
+      &-fullbackground {
+        position: absolute;
+        top: 0;
+        width: 100% !important;
+        height: 100% !important;
+        background-image: url("../img/terroir/mobile/terroir-mobile-panel-background.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateY(-7px);
+        z-index: -2;
+      }
     }
   }
 }
@@ -1899,11 +1981,6 @@ footer {
   }
 }
 
-
-
-
-
-
 //=================================================================================
 //
 //                                  MEDIA QUERIES
@@ -2110,7 +2187,7 @@ footer {
       line-height: 16px;
       text-align: justify;
       letter-spacing: 0.05em;
-      max-width:280px;
+      max-width: 280px;
     }
   }
   #felino-detalles {
