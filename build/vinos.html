@@ -95,7 +95,7 @@
     <main class="bg-white">
 
         <!-- VINOS HOME - Desktop-->
-        <section id="vinos-home" class="display@md component-section z-index-2 bg shadow-sm">
+        <section id="vinos-home" style="transition: ease-in-out 0.8s;" class="first-component-animation display@md position-fixed height-100vh width-100% z-index-2 bg shadow-sm top-50% left-50% -translate-x-50% -translate-y-50%">
             <div class="display@md">
                 <h2 class="title color-white">NUESTROS VINOS</h2>
             </div>
@@ -130,10 +130,14 @@
 
 
         <!-- VINOS CAPTION - Desktop -->
-        <section id="vinos-caption" class="dispplay@md bg-white scroll-fx js-scroll-fx"
+        <section id="vinos-caption" class="display@md bg-white scroll-fx js-scroll-fx"
             data-scroll-fx="opacity, 0, 1, 25%, 35%">
             <div
                 class="display@md component-section height-100% position-relative flex flex-column justify-center items-center">
+                <div id="second-component-reveal"
+                    class="display@md position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-1"
+                    style="transition: ease-in-out 0.8s;opacity: 1;background-color: black;backdrop-filter: blur(15px);">
+                </div>
                 <img class="position-absolute reveal-fx reveal-fx--clip-x"
                     src="./assets/img/vinos/desktop/vino-trebol.png" alt="Vinos - Background Logo"
                     style="transform: translateY(100px);">

@@ -1,4 +1,4 @@
-const firstComponentAnimation = document.getElementById("first-component-animation");
+const firstComponentAnimation = document.querySelector(".first-component-animation");
 const secondComponentReveal = document.getElementById("second-component-reveal");
 
 if (firstComponentAnimation && secondComponentReveal && window.innerWidth > 1024) {

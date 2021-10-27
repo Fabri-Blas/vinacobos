@@ -100,7 +100,8 @@
         <!-- ------------------------- NUESTROS VIÑEDOS ------------------------- -->
 
 
-        <section id="terroir-home" class="display@md component-section z-index-2 bg shadow-sm">
+        <section id="terroir-home" style="transition: ease-in-out 0.8s;"
+            class="first-component-animation display@md position-fixed height-100vh width-100% z-index-2 bg shadow-sm top-50% left-50% -translate-x-50% -translate-y-50%">
 
             <!-- Componente1 -->
             <div id="hero" class="video-bg position-relative">
@@ -130,6 +131,10 @@
 
         <!--SECCION FRUTOS-->
         <section id="frutos-caption" class="display@md component-section">
+            <div id="second-component-reveal"
+                class="display@md position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-1"
+                style="transition: ease-in-out 0.8s;opacity: 1;background-color: black;backdrop-filter: blur(15px);">
+            </div>
             <div class="display@md height-100% position-relative flex flex-column justify-center items-center">
                 <h2 class="text-center reveal-fx reveal-fx--clip-x">
                     “Cosechamos los frutos de nuestro anhelo y esfuerzo, mientras que continuamos creando vinos”
