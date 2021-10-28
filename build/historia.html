@@ -17,7 +17,7 @@
 
     <header id="header-global"
         class="f-header js-f-header bg-transparent hide-nav js-hide-nav js-hide-nav--main backdrop-blur-10 padding-y-lg padding-y-0@md"
-        data-nav-target-class="f-header--expanded">
+        data-nav-target-class="f-header--expanded" style="z-index: 20;">
         <div class="f-header__mobile-content container max-width-lg padding-top-0@md flex flex-column">
             <a href="./" class="position-absolute left-0 top-50% -translate-y-50%">
                 <img src="../assets/img/logo.svg" width="30" height="27" alt="Logo" class="logo-mobile-1">
@@ -96,7 +96,7 @@
         <!-- _________________________________________________________________________________________ -->
 
         <!-- DESARROLLO DESKTOP -->
-        <section id="historia-home" class="display@md component-section z-index-2 bg shadow-sm">
+        <section id="historia-home" class="display@md fs-slider" style="z-index: 15;">
             <div class="display@md">
                 <h2 class="title color-black">NUESTRA HISTORIA</h2>
             </div>
@@ -121,8 +121,9 @@
         </section>
 
         <!-- HISTORIA CAPTION -->
-        <section id="historia-caption" class="display@md bg-white scroll-fx js-scroll-fx component-section-full"
-            data-scroll-fx="opacity, 0, 1, 25%, 35%">
+        <section id="historia-caption" class="display@md bg-white fs-slider"
+            data-scroll-fx="opacity, 0, 1, 25%, 35%" style="z-index: 14;">
+            <div class="fs-slider-reveal display@md position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-3" style="transition: ease-in-out 0.8s;opacity: 1;background-color: white;backdrop-filter: blur(15px);"></div>
             <div
                 class="display@md component-section height-100% position-relative flex flex-column justify-center items-center">
                 <h2 class="font-primary text-center reveal-fx reveal-fx--clip-x">
@@ -139,7 +140,8 @@
 
 
         <!-- VIÑA COBOS PROLOGO-->
-        <section id="historia-prologo" class=" display@md vinos-especiales-unicos component-section-full z-index-2">
+        <section id="historia-prologo" class=" display@md bg-white vinos-especiales-unicos fs-slider">
+            <div class="fs-slider-reveal display@md position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-3" style="transition: ease-in-out 0.8s;opacity: 1;background-color: white; backdrop-filter: blur(15px);"></div>
 
             <div class="position-absolute" style="z-index:-5 !important;">
                 <img src="assets/img/historia/desktop/arbol-desktop.png" class="historia-final-tree" alt="arbol-fondo">
@@ -183,7 +185,8 @@
 
 
         <!---SECCION PAUL HOBBS -->
-        <section id="paul-argentina" class="display@md component-section-full grid z-index-2">
+        <section id="paul-argentina" class="display@md bg-white fs-slider grid">
+            <div class="fs-slider-reveal display@md position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-3" style="transition: ease-in-out 0.8s;opacity: 1;background-color: white;backdrop-filter: blur(15px);"></div>
             <div class="grid padding-x-md@sxl padding-x-sm@md max-width-xxxl margin-x-auto">
                 <div class="grid col-12 margin-y-auto">
                     <div class="col-7 flex justify-center">
@@ -223,7 +226,8 @@
 
 
         <!-- SECCCION HISTORIA TEXTO -->
-        <section id="historia-inicio" class=" display@md component-section-full">
+        <section id="historia-inicio" class="display@md bg-white fs-slider">
+            <div class="fs-slider-reveal display@md position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-3" style="transition: ease-in-out 0.8s;opacity: 1;background-color: white;backdrop-filter: blur(15px);"></div>
             <div class="flex flex-column justify-center items-center height-100% padding-left-xxl">
                 <h2 style="transform: translateY(100px);">HISTORIA</h2>
                 <h3>Inicio</h3>
@@ -253,7 +257,8 @@
 
 
         <!-- PRIMERA VISITA ARGENTINA-->
-        <section id="visita-argentina" class="display@md component-section-full grid">
+        <section id="visita-argentina" class="display@md bg-white fs-slider grid">
+            <div class="fs-slider-reveal display@md position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-3" style="transition: ease-in-out 0.8s;opacity: 1;background-color: white;backdrop-filter: blur(15px);"></div>
             <div class="grid padding-x-md@sxl padding-x-sm@md max-width-xxxl margin-x-auto">
                 <div class="grid col-12 margin-y-auto">
                     <div class="col-7 flex justify-center">
@@ -294,7 +299,8 @@
 
         <!-- SECCION ARGENTINA HISTORIA-->
         <section id="argentina-quote"
-            class="display@md component-section-full flex justify-center items-center z-index-2">
+            class="display@md bg-white fs-slider flex justify-center items-center">
+            <div class="fs-slider-reveal display@md position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-3" style="transition: ease-in-out 0.8s;opacity: 1;background-color: white;backdrop-filter: blur(15px);"></div>
             <div class="flex flex-column items-center justify-center">
                 <div class="historia-quote" style="z-index: -5 !important">
                     <img src="./assets/img/historia/desktop/comillas.svg" alt="quotes">
@@ -332,7 +338,8 @@
 
 
         <!-- ARGENTINA  CAMBIO DESKTOP -->
-        <section id="argentina-cambio" class="display@md component-section-full flex justify-center">
+        <section id="argentina-cambio" class="display@md bg-white fs-slider flex justify-center">
+            <div class="fs-slider-reveal display@md position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-1" style="transition: ease-in-out 0.8s;opacity: 1;background-color: white;backdrop-filter: blur(15px);"></div>
             <div class="flex flex-column justify-center">
                 <h3 class="text-center">Un cambio en Argentina</h3>
                 <div class="historia-big-line margin-x-auto margin-y-md"></div>
@@ -346,7 +353,7 @@
                     en Argentina, Chile, Uruguay, Canadá, España,
                     Francia y Hungría, entre otros.
                 </p>
-                <div class="flex justify-center padding-top-lg">
+                <div class="flex justify-center padding-top-lg z-index-2">
                     <a href="https://www.paulhobbs.com/" target="_blank">
                         <img class="paul-firma" src="./assets/img/historia/desktop/paul-hobbs-logo.png"
                             alt="paul-firma">
@@ -544,7 +551,8 @@
     <!-- ==============================================END-MAIN============================================== -->
 
     <!-- ================================================FOOTER================================================ -->
-    <footer class="component-footer position-relative  padding-bottom-xxxxl padding-bottom-0@md" style="z-index: 10;">
+    <footer class="component-footer position-relative  padding-bottom-xxxxl padding-bottom-0@md fs-slider">
+        <div class="fs-slider-reveal display@md position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-3" style="transition: ease-in-out 0.8s;opacity: 1;background-color: white;backdrop-filter: blur(15px);"></div>
 
         <div class="flex grid padding-x-lg padding-x-xxl@sxl padding-x-xl@md">
 
@@ -592,7 +600,7 @@
 
 
         <div
-            class="col-12 flex justify-between items-center position-absolute bottom-0 width-100% padding-x-lg padding-x-xxl@sxl padding-x-xl@md padding-bottom-xl">
+            class="flex justify-between items-center position-absolute bottom-0 width-100% padding-x-lg padding-x-xxl@sxl padding-x-xl@md padding-bottom-xl">
 
             <a href="./" class="padding-left-sm@md">
                 <img id="logo" src="../assets/img/logo.svg" width="32" height="32" alt="Logo">

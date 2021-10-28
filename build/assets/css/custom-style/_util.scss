@@ -1292,8 +1292,8 @@ footer {
 }
 .historia {
   &-final-tree {
-    height: auto;
-    width: 45vw;
+    height: 100%;
+    width: auto;
     transform: translateY(-200px);
   }
   &-photo {
@@ -1893,7 +1893,6 @@ footer {
 }
 
 .border-box {
-  border: 2px solid #a68676;
   width: 432px;
   height: 468px;
 }
@@ -1979,6 +1978,16 @@ footer {
     width: 100%;
     height: 100%;
   }
+}
+
+.fs-slider{
+  transition: ease-in-out 0.8s;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 //=================================================================================
@@ -2307,7 +2316,7 @@ footer {
   }
   .historia {
     &-final-tree {
-      height: auto;
+      height: 100%;
       width: 40vw;
       transform: translateY(-100px);
     }

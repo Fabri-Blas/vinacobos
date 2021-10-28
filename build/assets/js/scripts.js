@@ -4793,7 +4793,7 @@ function inViewport(el) {
     }
 }
 
-function sContainerCheck(elem){
+function sContainerCheck(elem) {
     if (!inViewport(elem)) {
         sContainer.classList.remove('is-hidden')
     } else {
@@ -4807,44 +4807,150 @@ function sContainerCheck(elem){
 sContainer.classList.add('is-hidden');
 
 document.addEventListener('scroll', () => {
+
     if (hero) {
         sContainerCheck(hero);
-    }else if(vinosHome){
+    } else if (vinosHome) {
         sContainerCheck(vinosHome);
-    }else if (felinoHome){
+    } else if (felinoHome) {
         sContainerCheck(felinoHome);
-    }else if (cobosHome){
+    } else if (cobosHome) {
         sContainerCheck(cobosHome);
-    }else if (contactoHome){
+    } else if (contactoHome) {
         sContainerCheck(contactoHome);
-    }else if (terroirHome){
+    } else if (terroirHome) {
         sContainerCheck(terroirHome);
-    }else if (historiaHome){
+    } else if (historiaHome) {
         sContainerCheck(historiaHome);
-    }else if (volturnoHome){
+    } else if (volturnoHome) {
         sContainerCheck(volturnoHome);
-    }else if (vdChanaresHome){
+    } else if (vdChanaresHome) {
         sContainerCheck(vdChanaresHome);
-    }else if (vdZingarettiHome){
+    } else if (vdZingarettiHome) {
         sContainerCheck(vdZingarettiHome);
-    }else if (vdMarchioriHome){
+    } else if (vdMarchioriHome) {
         sContainerCheck(vdMarchioriHome);
-    }else if (vinculumHome){
+    } else if (vinculumHome) {
         sContainerCheck(vinculumHome);
-    }else if (vinculumChardonnayHome){
+    } else if (vinculumChardonnayHome) {
         sContainerCheck(vinculumChardonnayHome);
-    }else if (felinoCabernetHome){
+    } else if (felinoCabernetHome) {
         sContainerCheck(felinoCabernetHome);
-    }else if (felinoChardonnayHome){
+    } else if (felinoChardonnayHome) {
         sContainerCheck(felinoChardonnayHome);
-    }else if (felinoRedBlendHome){
+    } else if (felinoRedBlendHome) {
         sContainerCheck(felinoRedBlendHome);
-    }else if (bramareHome){
+    } else if (bramareHome) {
         sContainerCheck(bramareHome);
-    }else if (cocodriloHome){
+    } else if (cocodriloHome) {
         sContainerCheck(cocodriloHome);
     }
 });
+
+const contactBox = document.querySelector('.contact-box');
+
+if (contactBox && svgLine) {
+    svgLine.style.strokeWidth = "5";
+    svgLine.style.strokeDasharray = "2305";
+    svgLine.style.strokeDashoffset = "2305";
+    svgLine.style.width = "100%";
+    svgLine.style.height = "100%";
+    svgLine.style.opacity = "0";
+    svgLine.style.transition = "ease-in-out 1.5s";
+
+    contactBox.style.transform = "scale(0.9)";
+    contactBox.style.filter = "blur(5px)";
+    contactBox.style.opacity = "0";
+    contactBox.style.transition = "ease-in-out 1.5s";
+
+    window.addEventListener('scroll', () => {
+        console.log(inViewport(svgLine));
+
+        if (inViewport(svgLine)) {
+            svgLine.style.strokeDashoffset = "507";
+            svgLine.style.opacity = "1";
+
+            contactBox.style.transform = "scale(1)";
+            contactBox.style.filter = "blur(0px)";
+            contactBox.style.opacity = "1";
+        } else {
+            svgLine.style.strokeDashoffset = "2305";
+            svgLine.style.opacity = "0";
+
+            contactBox.style.transform = "scale(0.9)";
+            contactBox.style.filter = "blur(5px)";
+            contactBox.style.opacity = "0";
+        }
+    });
+}
+const fs_slider = document.querySelectorAll(".fs-slider");
+const fs_slider_reveal = document.querySelectorAll(".fs-slider-reveal");
+let actualSlider = 0;
+let inAnimation = false;
+
+console.log(fs_slider[actualSlider]);
+
+if (fs_slider.length > 0 && window.innerWidth > 1024) {
+    let fsSliderLenght = fs_slider.length;
+    fs_slider.forEach(slider => slider.style.zIndex = `${fsSliderLenght--}`);
+    fs_slider.forEach(slider => (fs_slider.length--) > 0 ? slider.style.top = '65%' : console.log('slider component init'));
+    fs_slider_reveal.forEach(reveal => {
+        reveal.style.backgroundColor = 'white';
+        reveal.style.backdropFilter = 'blur(15px)';
+    });
+
+    document.body.style.overflowY = 'hidden';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    fs_slider[0].style.top = '50%';
+
+    window.addEventListener('wheel', (e) => {
+
+        if (actualSlider == 1 && !inAnimation && getDelta == 1) {
+            inAnimation = true;
+            fs_slider[0].style.top = '50%';
+            setTimeout(() => inAnimation = false, 780);
+        } else {
+            if (actualSlider == fs_slider.length && !inAnimation && getDelta == -1) {
+                inAnimation = true;
+                fs_slider[fs_slider.length].style.top = '50%';
+                fs_slider_reveal[fs_slider.length].style.backgroundColor = 'transparent';
+                fs_slider_reveal[fs_slider.length].style.backdropFilter = 'blur(0px)';
+                setTimeout(() => inAnimation = false, 780);
+            } else {
+                switch (getDelta()) {
+                    case -1:
+                        if (actualSlider < fs_slider.length && fs_slider[actualSlider + 1] && !inAnimation) {
+                            inAnimation = true;
+                            fs_slider[actualSlider].style.top = '-52%';
+                            fs_slider[actualSlider + 1].style.top = '50%';
+                            fs_slider_reveal[actualSlider].style.backgroundColor = 'transparent';
+                            fs_slider_reveal[actualSlider].style.backdropFilter = 'blur(0px)';
+                            actualSlider++;
+                            setTimeout(() => inAnimation = false, 780);
+                        }
+                        break;
+                    case 1:
+                        if (actualSlider >= 0 && fs_slider[actualSlider - 1] && !inAnimation) {
+                            inAnimation = true;
+                            fs_slider[actualSlider - 1].style.top = '50%';
+                            fs_slider[actualSlider].style.top = '65%';
+                            fs_slider_reveal[actualSlider - 1].style.backgroundColor = 'white';
+                            fs_slider_reveal[actualSlider - 1].style.backdropFilter = 'blur(15px)';
+                            actualSlider--;
+                            setTimeout(() => inAnimation = false, 780);
+                        }
+                        break;
+                }
+            }
+        }
+    });
+
+    function getDelta() {
+        var e = window.event || e;
+        return Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+    }
+}
 const logoVolturno = document.getElementById("vino-volturno-logo");
 const logoCobos = document.getElementById("vino-cobos-logo");
 
