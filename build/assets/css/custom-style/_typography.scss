@@ -1007,6 +1007,14 @@ color: #1C1C1C
     }
   }
 }
+#vinos-grid-mobile h6{
+  font-family:var(--font-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 21px;
+  color: #1C1C1C
+  }
 
 // @media only screen and (max-width: 850px) {}
 @media only screen and (max-width: 550px) {
