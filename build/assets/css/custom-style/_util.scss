@@ -305,6 +305,14 @@ footer {
   }
 }
 
+.vinos-hover{
+  transition: width 3s, height 3s, transform 3s;
+}
+
+.vinos-hover:hover{
+  transform : scale(0.8);
+
+}
 // =================SECCION FELINO=================
 #felino-home {
   background-image: url("../img/felino/desktop/malbec/felino-fondo.png");

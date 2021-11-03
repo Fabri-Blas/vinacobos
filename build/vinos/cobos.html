@@ -26,7 +26,7 @@
                 class="position-absolute top-50% -translate-y-50% right-0 reset anim-menu-btn color-contrast-high js-anim-menu-btn js-tab-focus"
                 aria-label="Toggle menu">
                 <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
-            </button> 
+            </button>
         </div>
 
         <div class="f-header__nav" role="navigation">
@@ -99,19 +99,23 @@
         <section id="cobos-home" class="display@md component-section width-100%">
             <div class="display@md padding-left-xxs">
                 <div id="cobos-home-content"
-                    class="position-absolute bottom-0 flex flex-row justify-left color-black padding-left-xxl padding-y-xxxl">
+                    class="position-absolute flex flex-row justify-left color-black padding-left-xxl padding-y-xxxl"
+                    style="bottom: 50px;">
                     <h1 class="varietales-title" style="transform: translateY(-10px)">Cobos</h1>
                     <div class="varietales-small-line"></div>
-                    <a href="./cobos-volturno" style="z-index: 2; text-decoration: none;"><h3 class="varietales-subtitle text-center">Volturno</h3></a>
+                    <a href="./cobos-volturno" style="z-index: 2; text-decoration: none;">
+                        <h3 class="varietales-subtitle text-center">Volturno</h3>
+                    </a>
                     <div class="varietales-big-line"></div>
+                </div>
+
+                <div class="position-absolute left-0 width-100% height-100%"
+                    style="background-image: url('../assets/img/cobos/desktop/cobos-bg-bottle-2.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
                 </div>
                 <div class="position-absolute bottom-0 padding-left-xxl padding-y-xl flex flex-column justify-left">
                     <h3 class="varietales-description padding-bottom-xs">BOTELLA</h2>
                         <h3 class="varietales-description">FICHA ENOLÓGICA</h3>
                 </div>
-            </div>
-            <div class="position-absolute ">
-                <img src="../assets/img/cobos/desktop/cobos-bg-bottle-2.png" alt="">
             </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
@@ -129,7 +133,7 @@
                 </div>
                 <div class="flex-column justify-around padding-bottom-xl" style="height:130px;">
                     <a href="cobos-volturno.html">
-                    <h3 class="varietales-subtitle padding-bottom-xxs">Volturno</h3>
+                        <h3 class="varietales-subtitle padding-bottom-xxs">Volturno</h3>
                     </a>
                 </div>
                 <div class="varietales-links">
@@ -152,12 +156,11 @@
                 <figure class="video-feature__video-wrapper" aria-hidden="true">
                     <img src="../assets/img/cobos/desktop/experiencia-preload.png" alt="Video Preview">
                     <video autoplay loop muted playsInline src="../assets/img/cobos/desktop/experiencia-3d.mp4" class="cinemagraph-speed"></video>
-                </figure>                
+                </figure>
             </div>
             <img class="experiencia-fullscreen-text position-absolute bottom-0 scroll-fx js-scroll-fx"
                 data-scroll-fx="translateY, -80px, -300px, 0%, 100%"
-                src="../assets/img/cobos/desktop/experiencia-texto.svg"                
-                alt="">
+                src="../assets/img/cobos/desktop/experiencia-texto.svg" alt="">
         </section>
         <!-- _________________________________________________________________________________________ -->
         <!-- SEPARADOR -->
@@ -182,22 +185,19 @@
 
         <!-- _________________________________________________________________________________________ -->
         <!-- NUESTRO ICONO - Desktop-->
-        <section id="cobos-nuestroicono-desktop"
-            class="display@md component-section-full margin-x-md">
+        <section id="cobos-nuestroicono-desktop" class="display@md component-section-full margin-x-md">
             <div class="grid padding-x-xl@sxl padding-x-md@md">
                 <div class="col-6 flex justify-center items-end">
-                    <img class="padding-left-lg padding-right-sm reveal-fx reveal-fx--translate-right" 
-                        data-reveal-fx-delay="100"
-                        src="../assets/img/cobos/desktop/nuestro-icono-1.png" alt="">
+                    <img class="padding-left-lg padding-right-sm reveal-fx reveal-fx--translate-right"
+                        data-reveal-fx-delay="100" src="../assets/img/cobos/desktop/nuestro-icono-1.png" alt="">
                 </div>
                 <div class="col-6 flex flex-column justify-end items-center">
                     <div class="text-center margin-x-auto margin-y-auto">
                         <h3 class="font-primary">Nuestro<br>Ícono</h3>
                     </div>
                     <div>
-                        <img class="padding-right-lg padding-left-sm reveal-fx reveal-fx--translate-left" 
-                            data-reveal-fx-delay="100"
-                            src="../assets/img/cobos/desktop/nuestro-icono-2.png" alt="">
+                        <img class="padding-right-lg padding-left-sm reveal-fx reveal-fx--translate-left"
+                            data-reveal-fx-delay="100" src="../assets/img/cobos/desktop/nuestro-icono-2.png" alt="">
                     </div>
                 </div>
             </div>
@@ -240,33 +240,34 @@
         <!-- _________________________________________________________________________________________ -->
         <!-- ICÓNICO - Desktop -->
         <section id="cobos-iconico" class="display@md component-section-full">
-            <div class="grid gap-lg grid gap-lg padding-x-lg@md padding-x-xxl@sxl margin-x-xxxxs@md margin-x-0@sxl">                
+            <div class="grid gap-lg grid gap-lg padding-x-lg@md padding-x-xxl@sxl margin-x-xxxxs@md margin-x-0@sxl">
                 <div class="col-12 text-center padding-bottom-md">
-                    <img class="text-center" 
-                        src="../assets/img/cobos/desktop/logo-cobos.svg" width="484" height="80"
+                    <img class="text-center" src="../assets/img/cobos/desktop/logo-cobos.svg" width="484" height="80"
                         alt="Cobos">
                 </div>
-                <div
-                    class="flex flex-row justify-between">
+                <div class="flex flex-row justify-between">
                     <div class="col-4">
                         <h3 class="padding-bottom-xs@md reveal-fx scroll-fx js-scroll-fx"
-                        data-scroll-fx="opacity, 0, 1, 15%, 25%">Selección</h3>
+                            data-scroll-fx="opacity, 0, 1, 15%, 25%">Selección</h3>
                         <p class="max-width-xxxs text-justify reveal-fx scroll-fx js-scroll-fx"
-                        data-scroll-fx="opacity, 0, 1, 15%, 25%">Una selección de viñas y racimos de las uvas Malbec de la
+                            data-scroll-fx="opacity, 0, 1, 15%, 25%">Una selección de viñas y racimos de las uvas Malbec
+                            de la
                             más alta calidad provenientes de terroir seleccionado</p>
                     </div>
                     <div class="col-4">
                         <h3 class="padding-bottom-xs@md reveal-fx scroll-fx js-scroll-fx"
-                        data-scroll-fx="opacity, 0, 1, 15%, 25%">Crianza y puesta en botella</h3>
+                            data-scroll-fx="opacity, 0, 1, 15%, 25%">Crianza y puesta en botella</h3>
                         <p class="max-width-xxxs text-justify reveal-fx scroll-fx js-scroll-fx"
-                        data-scroll-fx="opacity, 0, 1, 15%, 25%">Criado durante 18 meses en barricas de roble francés
+                            data-scroll-fx="opacity, 0, 1, 15%, 25%">Criado durante 18 meses en barricas de roble
+                            francés
                             Taransaud (63%) y de segundo uso (37%). Sin clarificar ni filtrar</p>
                     </div>
                     <div class="col-4">
                         <h3 class="padding-bottom-xs@md reveal-fx scroll-fx js-scroll-fx"
-                        data-scroll-fx="opacity, 0, 1, 15%, 25%">Notas de degustación</h3>
+                            data-scroll-fx="opacity, 0, 1, 15%, 25%">Notas de degustación</h3>
                         <p class="max-width-xxxs text-justify reveal-fx scroll-fx js-scroll-fx"
-                        data-scroll-fx="opacity, 0, 1, 15%, 25%">Color violeta intenso, saturado y brillante. En nariz es
+                            data-scroll-fx="opacity, 0, 1, 15%, 25%">Color violeta intenso, saturado y brillante. En
+                            nariz es
                             concentrado. En el paladar, muestra gran estructura y textura y diferentes capas. Es
                             redondo, tenso, mineral</p>
                     </div>
@@ -274,15 +275,16 @@
                 <div class="flex">
                     <div class="video-iconico" aria-hidden="true">
                         <div class="video-feature__video-wrapper">
-                            <video autoplay  muted playsInline src="../assets/img/cobos/desktop/cobos-iconico.mp4"></video>
+                            <video autoplay muted playsInline
+                                src="../assets/img/cobos/desktop/cobos-iconico.mp4"></video>
                         </div>
                     </div>
-                    <img class="cobos-sidetext scroll-fx js-scroll-fx" 
+                    <img class="cobos-sidetext scroll-fx js-scroll-fx"
                         data-scroll-fx="translateY, 100px, -200px, 0%, 100%"
-                        src="../assets/img/cobos/desktop/iconico-vertical.svg" width="auto"
-                        height="auto" alt="Cobos - Icónico">
+                        src="../assets/img/cobos/desktop/iconico-vertical.svg" width="auto" height="auto"
+                        alt="Cobos - Icónico">
                 </div>
-            </div>            
+            </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
         <!-- SEPARADOR -->
@@ -294,49 +296,50 @@
         <!-- _________________________________________________________________________________________ -->
         <!-- VIÑA COBOS BLACK - Mobile -->
         <section id="" class="hide@md varietales-component component-section-full">
-            <div class="flex justify-center padding-top-xl padding-bottom-xxl scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 15%, 25%">
-                <img class=" padding-x-xl varietales-foto" src="../assets/img/vina_cobos_mobile_black.svg" alt="cobos-logo-mobile" style="filter: brightness(2);">
+            <div class="flex justify-center padding-top-xl padding-bottom-xxl scroll-fx js-scroll-fx"
+                data-scroll-fx="opacity, 0, 1, 15%, 25%">
+                <img class=" padding-x-xl varietales-foto" src="../assets/img/vina_cobos_mobile_black.svg"
+                    alt="cobos-logo-mobile" style="filter: brightness(2);">
             </div>
             <div class="flex justify-center margin-x-auto padding-x-md scroll-fx js-scroll-fx"
                 data-scroll-fx="opacity, 0, 1, 15%, 25%">
-                <img class="varietales-foto" src="../assets/img/cobos/mobile/cobos-malbec-mobile.png"
-                    alt="">
+                <img class="varietales-foto" src="../assets/img/cobos/mobile/cobos-malbec-mobile.png" alt="">
             </div>
-                <div class="margin-bottom-xxxl">
-                    <div class="margin-bottom-lg">
-                        <div class="margin-x-auto padding-top-xxl padding-bottom-lg scroll-fx js-scroll-fx"
-                            data-scroll-fx="opacity, 0, 1, 15%, 25%" style="width: 210px;">
-                            <img src="../assets/img/cobos/mobile/logo-cobos.svg" alt="">
-                        </div>
-                        <div class="flex flex-column justify-center text-center scroll-fx js-scroll-fx"
-                            data-scroll-fx="opacity, 0, 1, 15%, 25%">
-                            <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Selección</h5>
-                            <p class="inner-varietal-paragraph margin-x-auto">Una seleccion de viñas y racimos de las uvas
-                                Malbec de la mas alta calidad provenientes de terroir seleccionado.
-                            </p>
-                        </div>
+            <div class="margin-bottom-xxxl">
+                <div class="margin-bottom-lg">
+                    <div class="margin-x-auto padding-top-xxl padding-bottom-lg scroll-fx js-scroll-fx"
+                        data-scroll-fx="opacity, 0, 1, 15%, 25%" style="width: 210px;">
+                        <img src="../assets/img/cobos/mobile/logo-cobos.svg" alt="">
                     </div>
-                    <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 15%, 25%">
-                        <div class="flex flex-column justify-center text-center">
-                            <h5 class="inner-varietal-subtitle padding-bottom-xxs">Crianza y puesta en botellas</h5>
-                            <p class="inner-varietal-paragraph margin-x-auto ">
-                                Criado durante 18 meses en barricas de roble frances Tarasaund (63%) y de segundo uso
-                                (37%).Sin clarificar ni filtrar.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 15%, 25%">
-                        <div class="flex flex-column justify-center text-center">
-                            <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Notas de degustación</h5>
-                            <p class="inner-varietal-paragraph margin-x-auto ">Color violeta intenso, saturado y brillante.
-                                En nariz es concentrado. En el paladar,
-                                muestra gran estructura y textura y
-                                diferentes capas. Es redondo, tenso y mineral.
-                            </p>
-                        </div>
+                    <div class="flex flex-column justify-center text-center scroll-fx js-scroll-fx"
+                        data-scroll-fx="opacity, 0, 1, 15%, 25%">
+                        <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Selección</h5>
+                        <p class="inner-varietal-paragraph margin-x-auto">Una seleccion de viñas y racimos de las uvas
+                            Malbec de la mas alta calidad provenientes de terroir seleccionado.
+                        </p>
                     </div>
                 </div>
-            </div>            
+                <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 15%, 25%">
+                    <div class="flex flex-column justify-center text-center">
+                        <h5 class="inner-varietal-subtitle padding-bottom-xxs">Crianza y puesta en botellas</h5>
+                        <p class="inner-varietal-paragraph margin-x-auto ">
+                            Criado durante 18 meses en barricas de roble frances Tarasaund (63%) y de segundo uso
+                            (37%).Sin clarificar ni filtrar.
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-bottom-lg scroll-fx js-scroll-fx" data-scroll-fx="opacity, 0, 1, 15%, 25%">
+                    <div class="flex flex-column justify-center text-center">
+                        <h5 class="inner-varietal-subtitle padding-bottom-xxs ">Notas de degustación</h5>
+                        <p class="inner-varietal-paragraph margin-x-auto ">Color violeta intenso, saturado y brillante.
+                            En nariz es concentrado. En el paladar,
+                            muestra gran estructura y textura y
+                            diferentes capas. Es redondo, tenso y mineral.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
 
@@ -364,7 +367,7 @@
         <section class="display@md padding-x-xl">
             <div class="component-section"
                 style="background: url('../assets/img/cobos/desktop/fullscreen-final.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
-            </div>            
+            </div>
         </section>
         <!-- _________________________________________________________________________________________ -->
         <!-- SEPARADOR -->
