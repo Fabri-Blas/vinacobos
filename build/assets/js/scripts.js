@@ -1246,11 +1246,10 @@ function resetFocusTabsStyle() {
   var path = window.location.pathname;
   let actualPage = path.split("/").pop();
   actualPage = actualPage.split('.')[0];
-  const mainLogo = document.querySelector('.main-logo');
   const desktopHeader = document.getElementById("desktop-header");
   const itemsDesktop = desktopHeader.querySelectorAll('.f-header__item');
   const linksDesktop = desktopHeader.querySelectorAll('.f-header__link');
-  const logoMobile = document.querySelector('.logo-mobile-1');
+  const headerLogo = document.querySelectorAll('.vinacobos-logo');
   let below = false;
   let doneAbove = false;
   let doneBelow = false;
@@ -1289,8 +1288,7 @@ function resetFocusTabsStyle() {
       doneBelow = false;
       headerGlobal.classList.remove('backdrop-blur-10');
       headerGlobal.style.backgroundColor = 'rgba(0,0,0,0)';
-      mainLogo.setAttribute('src', '../assets/img/logo-black.svg');
-      logoMobile.setAttribute('src', '../assets/img/logo-black.svg');
+      headerLogo[0].style.fill = "black"; headerLogo[1].style.fill = "black";
       if (!below && !doneAbove) {
         itemsDesktop.forEach(item => {
           item.classList.remove('nav--line');
@@ -1307,8 +1305,7 @@ function resetFocusTabsStyle() {
         doneAbove = false;
         headerGlobal.classList.add('backdrop-blur-10');
         headerGlobal.style.backgroundColor = 'rgba(0,0,0,0.8)';
-        mainLogo.setAttribute('src', '../assets/img/logo.svg');
-        logoMobile.setAttribute('src', '../assets/img/logo.svg');
+        headerLogo[0].style.fill = "white"; headerLogo[1].style.fill = "white";
         if (!below && !doneBelow) {
           itemsDesktop.forEach(item => {
             item.classList.remove('nav--line-black');

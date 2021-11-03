@@ -90,6 +90,15 @@
 //     height: 300px;
 //     z-index: 99;
 // }
+#vinacobos-header-logo {
+  transition: ease-in-out 0.7s;
+  transform: rotate(0deg);
+
+  &:hover {
+    transition: ease-in-out 0.7s;
+    transform: rotate(180deg);
+  }
+}
 
 .video-looping-tab {
   height: 100vh;
@@ -305,13 +314,12 @@ footer {
   }
 }
 
-.vinos-hover{
+.vinos-hover {
   transition: width 3s, height 3s, transform 3s;
 }
 
-.vinos-hover:hover{
-  transform : scale(0.8);
-
+.vinos-hover:hover {
+  transform: scale(0.8);
 }
 // =================SECCION FELINO=================
 #felino-home {
@@ -578,7 +586,7 @@ footer {
     font-weight: normal;
     font-size: 13px;
     line-height: 15.6px;
-    text-align: justify;
+    text-align: left;
     letter-spacing: 0.05em;
     color: #878581;
     max-width: 325px;
@@ -709,7 +717,6 @@ footer {
     padding-bottom: 50px;
   }
 }
-
 
 #felino-field-mobile {
   & img {
@@ -846,10 +853,9 @@ footer {
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
-    text-align: justify;
+    text-align: left;
     letter-spacing: 0.01em;
     color: rgba(241, 238, 233, 0.7);
-    
   }
   & .cobos-sidetext {
     position: absolute;
@@ -1421,13 +1427,12 @@ footer {
   opacity: 0.3;
 }
 
-.paul-firma{
+.paul-firma {
   transition: width 3s, height 3s, transform 3s;
 }
 
-.paul-firma:hover{
-  transform : scale(0.8);
-
+.paul-firma:hover {
+  transform: scale(0.8);
 }
 
 // ===============SECCION TERROIR ===============
@@ -1988,7 +1993,7 @@ footer {
   }
 }
 
-.fs-slider{
+.fs-slider {
   transition: ease-in-out 0.8s;
   position: fixed;
   height: 100vh;
@@ -2201,7 +2206,7 @@ footer {
     & p {
       font-size: 13px;
       line-height: 16px;
-      text-align: justify;
+      text-align: left;
       letter-spacing: 0.05em;
       max-width: 280px;
     }
@@ -2296,7 +2301,7 @@ footer {
       font-style: normal;
       transform: translateY(17px);
       letter-spacing: 0.12em;
-      text-align: center;
+      text-align: left;
       color: black;
       width: max-content;
     }
