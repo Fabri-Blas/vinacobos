@@ -8,7 +8,7 @@ Usage: codyhouse.co/license
 
 -------------------------------- */
 
-$s-panels-projects: 4; // number of projects - edit to change the layout
+$s-panels-projects: 3; // number of projects - edit to change the layout
 
 .s-panels {}
 
@@ -226,7 +226,7 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   position: absolute;
   top: 0;
   left: 0;
-  width: 133.4%;
+  width: 100%;
   height: 100%;
 }
 
@@ -291,7 +291,7 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   }
 
   .s-panels__project-intro {
-    width: 130%/$s-panels-projects;
+    width: 100%/$s-panels-projects;
   }
 }
 

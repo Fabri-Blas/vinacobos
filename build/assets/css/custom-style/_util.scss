@@ -245,7 +245,7 @@ footer {
       font-weight: normal;
       font-size: 13px;
       line-height: 16px;
-      text-align: justify;
+      text-align: left !important;
       letter-spacing: 0.05em;
       color: #1c1c1c;
     }
@@ -549,10 +549,9 @@ footer {
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
-    text-align: justify;
+    text-align: left !important;
     letter-spacing: 0.01em;
     color: #878581;
-    max-width: 380px;
   }
 }
 #felino-fresco-mobile,
@@ -804,12 +803,9 @@ footer {
     z-index: 2;
   }
   .video-cobos {
-    position: absolute;
     z-index: 1;
-    top: 0;
-    left: 110px;
-    width: 1700px;
-    height: 860px;
+    width: 100%;
+    height: auto;
     overflow: hidden;
   }
 }
@@ -833,7 +829,7 @@ footer {
     font-weight: 500;
     font-size: 29.124px;
     line-height: 47px;
-    text-align: justify;
+    text-align: left !important;
     letter-spacing: 0.12em;
     color: #f1eee9;
     text-transform: uppercase;
@@ -864,10 +860,8 @@ footer {
     width: auto;
   }
   & .video-iconico {
-    position: absolute;
     z-index: 1;
-    left: 110px;
-    width: 1551px;
+    width: 100%;
     height: 500px;
     overflow: hidden;
   }
@@ -1365,7 +1359,7 @@ footer {
   background-repeat: no-repeat;
 }
 
-#historia-leyenda-argentina-mobile {
+#historia-leyenda-mobile {
   background-image: url("../img/historia/mobile/argentina-quote-fondo-mobile.png");
   background-position: center;
   background-size: cover;
@@ -1729,7 +1723,7 @@ footer {
 //===== SECCCION CONTACTO =======
 
 #contacto-home {
-  background-image: url("../img/contacto/desktop/contacto-desktop-fondo-1920.png");
+  background-image: url("../img/contacto/desktop/");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2064,12 +2058,9 @@ footer {
       transform: translateX(-50%) translateY(-15px);
     }
     .video-cobos {
-      position: absolute;
       z-index: 1;
-      top: 0;
-      left: 70px;
-      width: 1226px;
-      height: 570px;
+      width: 100%;
+      height: auto;
       overflow: hidden;
     }
   }
@@ -2097,10 +2088,8 @@ footer {
       width: auto;
     }
     & .video-iconico {
-      position: absolute;
       z-index: 1;
-      left: 70px;
-      width: 1119px;
+      width: 100%;
       height: 317px;
       overflow: hidden;
     }
@@ -2206,9 +2195,7 @@ footer {
     & p {
       font-size: 13px;
       line-height: 16px;
-      text-align: left;
       letter-spacing: 0.05em;
-      max-width: 280px;
     }
   }
   #felino-detalles {
