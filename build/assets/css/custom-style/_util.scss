@@ -1196,6 +1196,18 @@ footer {
     }
   }
 }
+#historia-leyenda-argentina-mobile{
+    & h3 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      text-align: center;
+      letter-spacing: 0.07em;
+      color: #3e3937;
+    }
+  }
+
 
 #historia-paulhobbs {
   &-mobile {
@@ -1359,7 +1371,7 @@ footer {
   background-repeat: no-repeat;
 }
 
-#historia-leyenda-mobile {
+#historia-leyenda-argentina-mobile {
   background-image: url("../img/historia/mobile/argentina-quote-fondo-mobile.png");
   background-position: center;
   background-size: cover;
@@ -1428,6 +1440,17 @@ footer {
 .paul-firma:hover {
   transform: scale(0.8);
 }
+
+.paul-firma-mobile{
+  transition: width 1s, height 1s, transform 1s;
+  
+}
+.paul-firma-mobile:hover {
+  transform: scale(0.9);
+}
+
+
+
 
 // ===============SECCION TERROIR ===============
 #terroir-home {
