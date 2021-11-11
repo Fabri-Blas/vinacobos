@@ -484,10 +484,13 @@ footer {
 }
 #felino-fresco,
 .main-gallery {
+  position: relative;
+
   & .felino-sidetext {
     position: absolute;
     right: 110px;
     height: 500px;
+    bottom: 520px;
     width: auto;
   }
   & .gallery {
