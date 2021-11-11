@@ -1320,8 +1320,8 @@ footer {
   }
   &-quote {
     position: absolute;
-    top: 207px;
-    left: 211px;
+    top: -61px;
+    left: -184px;
   }
   &-big-line {
     border-bottom: 2px solid #000000;
@@ -2345,10 +2345,9 @@ footer {
       height: auto;
     }
     &-quote {
-      position: absolute;
-      top: 140px;
-      left: 180px;
-      width: 279.68px;
+      top: -45px !important;
+      left: -170px !important;
+      width: 280px !important;
       height: auto;
     }
   }
