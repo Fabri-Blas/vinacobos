@@ -1744,6 +1744,21 @@ footer {
   }
 }
 
+.terroir-line{
+  border-bottom:1px solid;
+  transform:translateY(17px);
+  width:420px;
+  margin:0 166px;
+  color:#3e3937
+}
+
+.terroir-line-right{
+  border-bottom:1px solid;
+  transform:translateY(-5px);
+  width:430px;
+  margin-left: 775px;
+  color:#3e3937
+}
 //===== SECCCION CONTACTO =======
 
 #contacto-home {
@@ -2471,9 +2486,10 @@ footer {
     &-title {
       font-family: var(--font-primary);
       font-weight: 500;
-      font-size: 47.12px;
+      font-size: 32px;
       font-style: normal;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.07em;
+      line-height: 38px;
     }
 
     &-description {
@@ -2493,7 +2509,7 @@ footer {
       transform: translateY(17px);
       letter-spacing: 0.12em;
       width: 110px;
-      color: black;
+      color: #878581
     }
   }
 
