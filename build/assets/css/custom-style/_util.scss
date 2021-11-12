@@ -1197,18 +1197,17 @@ footer {
     }
   }
 }
-#historia-leyenda-argentina-mobile{
-    & h3 {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 32px;
-      line-height: 38px;
-      text-align: center;
-      letter-spacing: 0.07em;
-      color: #3e3937;
-    }
+#historia-leyenda-argentina-mobile {
+  & h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 0.07em;
+    color: #3e3937;
   }
-
+}
 
 #historia-paulhobbs {
   &-mobile {
@@ -1442,16 +1441,12 @@ footer {
   transform: scale(0.8);
 }
 
-.paul-firma-mobile{
+.paul-firma-mobile {
   transition: width 1s, height 1s, transform 1s;
-  
 }
 .paul-firma-mobile:hover {
   transform: scale(0.9);
 }
-
-
-
 
 // ===============SECCION TERROIR ===============
 #terroir-home {
@@ -1744,20 +1739,18 @@ footer {
   }
 }
 
-.terroir-line{
-  border-bottom:1px solid;
-  transform:translateY(17px);
-  width:420px;
-  margin:0 166px;
-  color:#3e3937
+.terroir-line {
+  border-bottom: 1px solid;
+  width: 420px;
+  color: #3e3937;
+  width: 43%;
 }
 
-.terroir-line-right{
-  border-bottom:1px solid;
-  transform:translateY(-5px);
-  width:430px;
-  margin-left: 775px;
-  color:#3e3937
+.terroir-line-right {
+  border-bottom: 1px solid;
+  width: 430px;
+  color: #3e3937;
+  width: 43%;
 }
 //===== SECCCION CONTACTO =======
 
@@ -2472,6 +2465,20 @@ footer {
       transform: translateY(-220px);
     }
   }
+
+  .terroir-line {
+    border-bottom: 1px solid;
+    width: 420px;
+    color: #3e3937;
+    width: 40%;
+  }
+
+  .terroir-line-right {
+    border-bottom: 1px solid;
+    width: 430px;
+    color: #3e3937;
+    width: 40%;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -2509,7 +2516,7 @@ footer {
       transform: translateY(17px);
       letter-spacing: 0.12em;
       width: 110px;
-      color: #878581
+      color: #878581;
     }
   }
 

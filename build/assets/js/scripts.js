@@ -4524,6 +4524,7 @@ if(cinemagraphs.length > 0){
         graph.playbackRate = 0.75;
     });
 }
+const terroirContenedor = document.getElementById('origen-contenedor');
 // =================================GALLERY CLASS=================================
 class galleryPreview {
     constructor(preview, path, selected) {
