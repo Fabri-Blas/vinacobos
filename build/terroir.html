@@ -18,7 +18,7 @@
     <!-- ================================================HEADER================================================ -->
     <header id="header-global"
         class="f-header js-f-header bg-transparent hide-nav js-hide-nav js-hide-nav--main backdrop-blur-10 padding-y-lg padding-y-0@md"
-        data-nav-target-class="f-header--expanded">
+        data-nav-target-class="f-header--expanded" style="z-index: 5 !important;">
         <div class="f-header__mobile-content container max-width-lg padding-top-0@md flex flex-column">
             <a href="../" class="position-absolute left-0 top-50% -translate-y-50%">
                 <svg id="vinacobos-header-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="30"
@@ -132,8 +132,8 @@
         <!-- ------------------------- NUESTROS VIÑEDOS ------------------------- -->
 
 
-        <section id="terroir-home" style="transition: ease-in-out 0.8s;"
-            class="first-component-animation display@md position-fixed height-100vh width-100% z-index-2 bg shadow-sm top-50% left-50% -translate-x-50% -translate-y-50%">
+        <section id="terroir-home" style="transition: ease-in-out 0.8s; z-index: 4 !important;"
+            class="first-component-animation display@md position-fixed height-100vh width-100% bg shadow-sm top-50% left-50% -translate-x-50% -translate-y-50%">
 
             <!-- Componente1 -->
             <div id="hero" class="video-bg position-relative">
@@ -183,7 +183,7 @@
                 <a id="sliding-panels-btn" class="is-hidden padding-top-xl" onclick="hideSlidingPanelsBtn()"
                     href="#panels">
                     <button class="reset s-panels__nav-control js-s-panels__nav-control js-tab-focus"
-                        aria-label="Toggle navigation" style="margin-top: 80px; margin-right: 18px;">
+                        aria-label="Toggle navigation" style="margin-top: 80px; margin-right: 18px; z-index: 3 !important;">
                         <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
                             <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round"
                                 stroke-linejoin="round" stroke-width="2">
@@ -335,37 +335,48 @@
                             de
                             semillas de flora autóctona. Se pueden encontrar diferentes especies de pasturas, arbustos y
                             árboles.</p>
-                        <h6 class="padding-y-xs font-secondary" style="color: #878581;">DISTRITO: LOS ARBOLES</h6>
-                        <h6 class="padding-y-xs font-secondary" style="color: #878581;">REGIÓN: TUNUYÁN, VALLE DE UCO ·
+                        <h6 class="margin-top-lg padding-y-xs font-secondary" style="color: #3E3937;">DISTRITO: LOS
+                            ARBOLES</h6>
+                        <h6 class="padding-y-xs font-secondary" style="color: #3E3937;">REGIÓN: TUNUYÁN, VALLE DE UCO ·
                             MENDOZA, ARGENTINA</h6>
-                        <h6 class="padding-top-xs padding-bottom-xxl font-secondary" style="color: #878581;">ALTITUD
+                        <h6 class="padding-top-xs padding-bottom-xxl font-secondary" style="color: #3E3937;">ALTITUD
                             MEDIA: 1.184 METROS</h6>
                     </article>
-                    
-                     <div class="origen-contenedor padding-bottom-xxxl  padding-x-xxxl margin-x-md flex flex-row justify-between items-center reveal-fx reveal-fx--clip-x">
-                     <div class="terroir-line"></div>                     
-                     <div class="text-center">
-                        <h3 class="terroir-origen-text">Nuestro Origen</h3> 
-                     </div>
-                     <div class="terroir-line-right"></div>
-                      </div>
 
+                    <div
+                        class="origen-contenedor padding-bottom-xxxl  padding-x-xxxl margin-x-md flex flex-row justify-between items-center">
+                        <div class="terroir-line"></div>
+                        <div class="text-center">
+                            <h3 class="terroir-origen-text reveal-fx reveal-fx--clip-x">Nuestro Origen</h3>
+                        </div>
+                        <div class="terroir-line-right"></div>
+                    </div>
+
+                    <div class="is-hidden">
+                        <img src="./assets/img/terroir/desktop/gallery/panel1/panel1-etiqueta-1.png" alt="preload">
+                        <img src="./assets/img/terroir/desktop/gallery/panel1/panel1-etiqueta-2.png" alt="preload">
+                        <img src="./assets/img/terroir/desktop/gallery/panel1/panel1-etiqueta-3.png" alt="preload">
+                        <img src="./assets/img/terroir/desktop/gallery/panel1/panel1-etiqueta-4.png" alt="preload">
+                        <img src="./assets/img/terroir/desktop/gallery/panel1/panel1-etiqueta-5.png" alt="preload">
+                    </div>
 
                     <div class="main-gallery flex flex-row justify-center padding-x-xxxl margin-x-xs">
                         <div class="gallery-actual padding-x-sm width-100%">
                             <img class="width-100%"
-                                src="./assets/img/terroir/desktop/gallery/panel1/panel1-etiqueta-1.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/desktop/gallery/panel1/panel1-etiqueta-1.png" alt=""
+                                loading="lazy">
                         </div>
-                        <div class="gallery-previews padding-x-sm padding-top-xxs@md padding-top-sm@xl">
+                        <div class="gallery-previews padding-x-sm">
                             <div class="gallery-preview margin-bottom-md position-relative">
                                 <img class="width-100%"
-                                    src="./assets/img/terroir/desktop/gallery/panel1/panel1-preview-1.png" alt="" loading="lazy">
+                                    src="./assets/img/terroir/desktop/gallery/panel1/panel1-preview-1.png" alt=""
+                                    loading="lazy">
                                 <span class="is-hidden"
                                     gallery-src="./assets/img/terroir/desktop/gallery/panel1/panel1-etiqueta-1.png"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                             <div class="gallery-preview margin-y-md position-relative">
@@ -375,30 +386,32 @@
                                     gallery-src="./assets/img/terroir/desktop/gallery/panel1/panel1-etiqueta-2.png"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                             <div class="gallery-preview margin-y-md position-relative">
                                 <img class="width-100%"
-                                    src="./assets/img/terroir/desktop/gallery/panel1/panel1-preview-3.png" alt="" loading="lazy">
+                                    src="./assets/img/terroir/desktop/gallery/panel1/panel1-preview-3.png" alt=""
+                                    loading="lazy">
                                 <span class="is-hidden"
                                     gallery-src="./assets/img/terroir/desktop/gallery/panel1/panel1-etiqueta-3.png"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                             <div class="gallery-preview margin-y-md position-relative">
                                 <img class="width-100%"
-                                    src="./assets/img/terroir/desktop/gallery/panel1/panel1-preview-4.png" alt="" loading="lazy">
+                                    src="./assets/img/terroir/desktop/gallery/panel1/panel1-preview-4.png" alt=""
+                                    loading="lazy">
                                 <span class="is-hidden"
                                     gallery-src="./assets/img/terroir/desktop/gallery/panel1/panel1-etiqueta-4.png"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                             <div class="gallery-preview margin-y-md position-relative">
@@ -408,8 +421,8 @@
                                     gallery-src="./assets/img/terroir/desktop/gallery/panel1/panel1-etiqueta-5.png"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -419,7 +432,8 @@
                 <!-- project 2 -->
                 <section id="project-2" class="s-panels__project-content bg padding-y-xxxl is-hidden">
                     <div class="width-100% height-100% position-absolute top-0"
-                        style="background-image: url('assets/img/terroir/desktop/terroir-arbol-fondo.png'); background-position: right 77%; background-repeat: no-repeat; z-index: -1;"loading="lazy">
+                        style="background-image: url('assets/img/terroir/desktop/terroir-arbol-fondo.png'); background-position: right 77%; background-repeat: no-repeat; z-index: -1;"
+                        loading="lazy">
                     </div>
                     <article class="padding-x-xxxl margin-x-md">
                         <p class="sliding-paragraph"> A finales del 1800 el abuelo de Quito Zingaretti llegó con su
@@ -450,79 +464,95 @@
                             se orientan de este a oeste a diferencia del resto de los viñedos que suele ser de norte a
                             sur.
                         </p>
-                        <h6 class="padding-y-xs font-secondary" style="color: #878581;">DISTRITO: VILLA BASTÍAS</h6>
-                        <h6 class="padding-y-xs font-secondary" style="color: #878581;">REGIÓN: TUNUYÁN, VALLE DE UCO ·
+                        <h6 class="margin-top-lg padding-y-xs font-secondary" style="color: #3E3937;">DISTRITO: VILLA
+                            BASTÍAS</h6>
+                        <h6 class="padding-y-xs font-secondary" style="color: #3E3937;">REGIÓN: TUNUYÁN, VALLE DE UCO ·
                             MENDOZA, ARGENTINA</h6>
-                        <h6 class="padding-top-xs padding-bottom-xxl font-secondary" style="color: #878581;">ALTITUD
+                        <h6 class="padding-top-xs padding-bottom-xxl font-secondary" style="color: #3E3937;">ALTITUD
                             MEDIA: 1.150 METROS</h6>
                     </article>
-                    <div class="padding-bottom-xxxl  padding-x-xxxl margin-x-md flex flex-row justify-between items-center reveal-fx reveal-fx--clip-x">
-                        <div class="terroir-line"></div>                     
+                    <div
+                        class="padding-bottom-xxxl  padding-x-xxxl margin-x-md flex flex-row justify-between items-center reveal-fx reveal-fx--clip-x">
+                        <div class="terroir-line"></div>
                         <div class="text-center">
-                           <h3 class="terroir-origen-text">Nuestro Origen</h3> 
+                            <h3 class="terroir-origen-text">Nuestro Origen</h3>
                         </div>
                         <div class="terroir-line-right"></div>
-                         </div>
+                    </div>
+
+                    <div class="is-hidden">
+                        <img src="./assets/img/terroir/desktop/gallery/panel2/panel2-etiqueta-1.png" alt="preload">
+                        <img src="./assets/img/terroir/desktop/gallery/panel2/panel2-etiqueta-2.png" alt="preload">
+                        <img src="./assets/img/terroir/desktop/gallery/panel2/panel2-etiqueta-3.png" alt="preload">
+                        <img src="./assets/img/terroir/desktop/gallery/panel2/panel2-etiqueta-4.png" alt="preload">
+                        <img src="./assets/img/terroir/desktop/gallery/panel2/panel2-etiqueta-5.png" alt="preload">
+                    </div>
 
                     <div class="main-gallery flex flex-row justify-center padding-x-xxxl margin-x-xs">
                         <div class="gallery-actual padding-x-sm width-100%">
                             <img class="width-100%"
-                                src="./assets/img/terroir/desktop/gallery/panel2/panel2-etiqueta-1.png" alt=""loading="lazy"> 
+                                src="./assets/img/terroir/desktop/gallery/panel2/panel2-etiqueta-1.png" alt=""
+                                loading="lazy">
                         </div>
-                        <div class="gallery-previews padding-x-sm padding-top-xxs@md padding-top-sm@xl">
+                        <div class="gallery-previews padding-x-sm">
                             <div class="gallery-preview margin-bottom-md position-relative">
                                 <img class="width-100%"
-                                    src="./assets/img/terroir/desktop/gallery/panel2/panel2-preview-1.png" alt="" loading="lazy">
+                                    src="./assets/img/terroir/desktop/gallery/panel2/panel2-preview-1.png" alt=""
+                                    loading="lazy">
                                 <span class="is-hidden"
                                     gallery-src="./assets/img/terroir/desktop/gallery/panel2/panel2-etiqueta-1.png"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                             <div class="gallery-preview margin-y-md position-relative">
                                 <img class="width-100%"
-                                    src="./assets/img/terroir/desktop/gallery/panel2/panel2-preview-2.png" alt="" loading="lazy">
+                                    src="./assets/img/terroir/desktop/gallery/panel2/panel2-preview-2.png" alt=""
+                                    loading="lazy">
                                 <span class="is-hidden"
                                     gallery-src="./assets/img/terroir/desktop/gallery/panel2/panel2-etiqueta-2.png"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                             <div class="gallery-preview margin-y-md position-relative">
                                 <img class="width-100%"
-                                    src="./assets/img/terroir/desktop/gallery/panel2/panel2-preview-3.png" alt="" loading="lazy">
+                                    src="./assets/img/terroir/desktop/gallery/panel2/panel2-preview-3.png" alt=""
+                                    loading="lazy">
                                 <span class="is-hidden"
                                     gallery-src="./assets/img/terroir/desktop/gallery/panel2/panel2-etiqueta-3.png"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                             <div class="gallery-preview margin-y-md position-relative">
                                 <img class="width-100%"
-                                    src="./assets/img/terroir/desktop/gallery/panel2/panel2-preview-4.png" alt="" loading="lazy">
+                                    src="./assets/img/terroir/desktop/gallery/panel2/panel2-preview-4.png" alt=""
+                                    loading="lazy">
                                 <span class="is-hidden"
                                     gallery-src="./assets/img/terroir/desktop/gallery/panel2/panel2-etiqueta-4.png"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                             <div class="gallery-preview margin-y-md position-relative">
                                 <img class="width-100%"
-                                    src="./assets/img/terroir/desktop/gallery/panel2/panel2-preview-5.png" alt="" loading="lazy">
+                                    src="./assets/img/terroir/desktop/gallery/panel2/panel2-preview-5.png" alt=""
+                                    loading="lazy">
                                 <span class="is-hidden"
                                     gallery-src="./assets/img/terroir/desktop/gallery/panel2/panel2-etiqueta-5.png"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -532,7 +562,8 @@
                 <!-- project 3 -->
                 <section id="project-3" class="s-panels__project-content bg padding-y-xxxl is-hidden">
                     <div class="width-100% height-100% position-absolute top-0"
-                        style="background-image: url('assets/img/terroir/desktop/terroir-arbol-fondo.png'); background-position: right 77%; background-repeat: no-repeat; z-index: -1;" loading="lazy">
+                        style="background-image: url('assets/img/terroir/desktop/terroir-arbol-fondo.png'); background-position: right 77%; background-repeat: no-repeat; z-index: -1;"
+                        loading="lazy">
                     </div>
                     <article class="padding-x-xxxl margin-x-md">
                         <p class="sliding-paragraph"> El viñedo Marchiori es una parte importante de la historia de Viña
@@ -548,69 +579,87 @@
                             cantos
                             rodados de diversos tamaños que en algunos sectores son abundantes. Se trata de viñedos
                             antiguos, con una población de plantas, la mayoría de más de 80 años.</p>
-                        <h6 class="padding-y-xs font-secondary" style="color: #878581;">DISTRITO: PERDIEL</h6>
-                        <h6 class="padding-y-xs font-secondary" style="color: #878581;">REGIÓN: LUJÁN DE CUYO · MENDOZA,
+                        <h6 class="margin-top-lg padding-y-xs font-secondary" style="color: #3E3937;">DISTRITO: PERDIEL
+                        </h6>
+                        <h6 class="padding-y-xs font-secondary" style="color: #3E3937;">REGIÓN: LUJÁN DE CUYO · MENDOZA,
                             ARGENTINA</h6>
-                        <h6 class="padding-top-xs padding-bottom-xxl font-secondary" style="color: #878581;">ALTITUD
+                        <h6 class="padding-top-xs padding-bottom-xxl font-secondary" style="color: #3E3937;">ALTITUD
                             MEDIA: 995 METROS</h6>
                     </article>
-                    
-                    <div class="padding-bottom-xxxl padding-x-xxxl margin-x-md flex flex-row justify-between items-center reveal-fx reveal-fx--clip-x">
-                        <div class="terroir-line"></div>                     
+
+                    <div
+                        class="padding-bottom-xxxl padding-x-xxxl margin-x-md flex flex-row justify-between items-center reveal-fx reveal-fx--clip-x">
+                        <div class="terroir-line"></div>
                         <div class="text-center">
-                           <h3 class="terroir-origen-text">Nuestro Origen</h3> 
+                            <h3 class="terroir-origen-text">Nuestro Origen</h3>
                         </div>
                         <div class="terroir-line-right"></div>
-                         </div>
+                    </div>
+
+                    <div class="is-hidden">
+                        <img src="./assets/img/terroir/desktop/gallery/panel3/panel2-etiqueta-1.png" alt="preload">
+                        <img src="./assets/img/terroir/desktop/gallery/panel3/panel2-etiqueta-2.png" alt="preload">
+                        <img src="./assets/img/terroir/desktop/gallery/panel3/panel2-etiqueta-3.png" alt="preload">
+                        <img src="./assets/img/terroir/desktop/gallery/panel3/panel2-etiqueta-4.png" alt="preload">
+                    </div>
 
                     <div class="main-gallery flex flex-row justify-center padding-x-xxxl margin-x-xs">
                         <div class="gallery-actual padding-x-sm width-100%">
                             <img class="width-100%"
-                                src="./assets/img/terroir/desktop/gallery/panel3/panel3-etiqueta-1.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/desktop/gallery/panel3/panel3-etiqueta-1.png" alt=""
+                                loading="lazy">
                         </div>
-                        <div class="gallery-previews padding-x-sm padding-top-xxs@md padding-top-sm@xl">
+                        <div class="gallery-previews padding-x-sm">
                             <div class="gallery-preview margin-bottom-md position-relative">
                                 <img class="width-100%"
-                                    src="./assets/img/terroir/desktop/gallery/panel3/panel3-preview-1.png" alt="" loading="lazy">
+                                    src="./assets/img/terroir/desktop/gallery/panel3/panel3-preview-1.png" alt=""
+                                    loading="lazy">
                                 <span class="is-hidden"
-                                    gallery-src="./assets/img/terroir/desktop/gallery/panel3/panel3-etiqueta-1.png" loading="lazy"></span>
+                                    gallery-src="./assets/img/terroir/desktop/gallery/panel3/panel3-etiqueta-1.png"
+                                    loading="lazy"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                             <div class="gallery-preview margin-y-md position-relative">
                                 <img class="width-100%"
-                                    src="./assets/img/terroir/desktop/gallery/panel3/panel3-preview-2.png" alt="" loading="lazy">
+                                    src="./assets/img/terroir/desktop/gallery/panel3/panel3-preview-2.png" alt=""
+                                    loading="lazy">
                                 <span class="is-hidden"
-                                    gallery-src="./assets/img/terroir/desktop/gallery/panel3/panel3-etiqueta-2.png" loading="lazy"></span>
+                                    gallery-src="./assets/img/terroir/desktop/gallery/panel3/panel3-etiqueta-2.png"
+                                    loading="lazy"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                             <div class="gallery-preview margin-y-md position-relative">
                                 <img class="width-100%"
-                                    src="./assets/img/terroir/desktop/gallery/panel3/panel3-preview-3.png" alt="" loading="lazy">
+                                    src="./assets/img/terroir/desktop/gallery/panel3/panel3-preview-3.png" alt=""
+                                    loading="lazy">
                                 <span class="is-hidden"
-                                    gallery-src="./assets/img/terroir/desktop/gallery/panel3/panel3-etiqueta-3.png" loading="lazy"></span>
+                                    gallery-src="./assets/img/terroir/desktop/gallery/panel3/panel3-etiqueta-3.png"
+                                    loading="lazy"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                             <div class="gallery-preview margin-y-md position-relative">
                                 <img class="width-100%"
-                                    src="./assets/img/terroir/desktop/gallery/panel3/panel3-preview-4.png" alt="" loading="lazy">
+                                    src="./assets/img/terroir/desktop/gallery/panel3/panel3-preview-4.png" alt=""
+                                    loading="lazy">
                                 <span class="is-hidden"
-                                    gallery-src="./assets/img/terroir/desktop/gallery/panel3/panel3-etiqueta-4.png" loading="lazy"></span>
+                                    gallery-src="./assets/img/terroir/desktop/gallery/panel3/panel3-etiqueta-4.png"
+                                    loading="lazy"></span>
                                 <div
                                     class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
-                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35"
-                                        alt="" loading="lazy">
+                                    <img src="./assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -726,7 +775,7 @@
                         metros</h6>
                 </div>
 
-                <div class="slidingpanel-divisor width-100% margin-bottom-lg">
+                <div class="slidingpanel-divisor width-100% margin-bottom-lg reveal-fx reveal-fx--clip-x">
                     <h2 class="font-primary text-center">Nuestro origen</h2>
                     <div class="slidingpanel-divisor-border-right width-90% float-right margin-top-sm margin-bottom-xs">
                     </div>
@@ -743,52 +792,65 @@
                         class="gallery-previews flex flex-row gap-md justify-center items-center padding-x-md padding-top-sm">
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel1/panel1-preview-1.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel1/panel1-preview-1.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
                                 gallery-src="./assets/img/terroir/mobile/gallery/panel1/panel1-etiqueta-1.png"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel1/panel1-preview-2.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel1/panel1-preview-2.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
-                                gallery-src="./assets/img/terroir/mobile/gallery/panel1/panel1-etiqueta-2.png" loading="lazy"></span>
+                                gallery-src="./assets/img/terroir/mobile/gallery/panel1/panel1-etiqueta-2.png"
+                                loading="lazy"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel1/panel1-preview-3.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel1/panel1-preview-3.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
-                                gallery-src="./assets/img/terroir/mobile/gallery/panel1/panel1-etiqueta-3.png" loading="lazy"></span>
+                                gallery-src="./assets/img/terroir/mobile/gallery/panel1/panel1-etiqueta-3.png"
+                                loading="lazy"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel1/panel1-preview-4.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel1/panel1-preview-4.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
                                 gallery-src="./assets/img/terroir/mobile/gallery/panel1/panel1-etiqueta-4.png"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel1/panel1-preview-5.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel1/panel1-preview-5.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
-                                gallery-src="./assets/img/terroir/mobile/gallery/panel1/panel1-etiqueta-5.png" loading="lazy"></span>
+                                gallery-src="./assets/img/terroir/mobile/gallery/panel1/panel1-etiqueta-5.png"
+                                loading="lazy"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -850,52 +912,64 @@
                         class="gallery-previews flex flex-row gap-md justify-center items-center padding-x-md padding-top-sm">
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-1.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-1.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
-                                gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-1.png" loading="lazy"></span>
+                                gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-1.png"
+                                loading="lazy"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy"> 
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-2.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-2.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
-                                gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-2.png" loading="lazy"></span>
+                                gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-2.png"
+                                loading="lazy"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-3.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-3.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
                                 gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-3.png"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-4.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-4.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
                                 gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-4.png"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-5.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-5.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
                                 gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-5.png"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -946,42 +1020,52 @@
                         class="gallery-previews flex flex-row gap-md justify-center items-center padding-x-md padding-top-sm">
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-1.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-1.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
                                 gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-1.png"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-2.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-2.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
-                                gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-2.png" loading="lazy"></span>
+                                gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-2.png"
+                                loading="lazy"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-3.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-3.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
-                                gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-3.png" loading="lazy"></span>
+                                gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-3.png"
+                                loading="lazy"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                         <div class="gallery-preview margin-y-xxs position-relative">
                             <img class="width-100%"
-                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-4.png" alt="" loading="lazy">
+                                src="./assets/img/terroir/mobile/gallery/panel2/panel2-preview-4.png" alt=""
+                                loading="lazy">
                             <span class="is-hidden"
                                 gallery-src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-4.png"></span>
                             <div
                                 class="width-100% height-100% flex justify-center items-center gallery-preview-selected-mobile">
-                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt="" loading="lazy">
+                                <img src="../assets/img/felino/desktop/malbec/gallery/selected.svg" width="35" alt=""
+                                    loading="lazy">
                             </div>
                         </div>
                     </div>
