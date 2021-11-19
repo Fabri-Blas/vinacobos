@@ -185,13 +185,16 @@
   const itemsDesktop = desktopHeader.querySelectorAll('.f-header__item');
   const linksDesktop = desktopHeader.querySelectorAll('.f-header__link');
   const headerLogo = document.querySelectorAll('.vinacobos-logo');
+
+
+
   let below = false;
   let doneAbove = false;
   let doneBelow = false;
 
   
 
-  if (actualPage === 'felino' || actualPage === 'historia' || actualPage ==='terroir' || actualPage === 'felino-cabernet' || actualPage === 'felino-red-blend' || actualPage === 'felino-chardonnay' || actualPage === 'bramare' || actualPage === 'bramare-patagonia' || actualPage === 'bramare-valle-de-uco' || actualPage === 'cocodrilo') {
+  if (actualPage === 'historia' || actualPage ==='terroir' || actualPage === 'contacto' || actualPage === 'felino' || actualPage === 'felino-cabernet' || actualPage === 'felino-red-blend' || actualPage === 'felino-chardonnay' || actualPage === 'bramare' || actualPage === 'bramare-patagonia' || actualPage === 'bramare-valle-de-uco' || actualPage === 'cocodrilo') {
     checkBackdropBlur2();
     document.addEventListener('scroll', () => {
       checkBackdropBlur2();
