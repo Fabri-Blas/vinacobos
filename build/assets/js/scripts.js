@@ -4531,6 +4531,7 @@ const cinemagraphs = document.querySelectorAll('.cinemagraph-speed');
 if(cinemagraphs.length > 0){
     cinemagraphs.forEach(graph => {
         graph.playbackRate = 0.75;
+        console.log(graph.playbackRate);
     });
 }
 const terroirContenedor = document.getElementById('origen-contenedor');
