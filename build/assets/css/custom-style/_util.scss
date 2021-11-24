@@ -321,11 +321,11 @@ footer {
   transform: scale(0.8);
 }
 
-.tabs-custom-hover{
+.tabs-custom-hover {
   transition: ease-in-out 0.5s;
   transform: scale(1);
 
-  &:hover{
+  &:hover {
     transition: ease-in-out 0.5s;
     transform: scale(1.2);
   }
@@ -345,6 +345,25 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    &-cabernet {
+      background-image: url("../img/felino/mobile/cabernet/Felino-Cabernet-9-21.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &-redblend {
+      background-image: url("../img/felino/mobile/redblend/Felino-Red-Blend-9-21.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &-chardonnay {
+      background-image: url("../img/felino/mobile/chardonnay/Felino-chardonnay-9-21.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 }
 #felino-cabernet-home {
@@ -750,6 +769,19 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    &-valledeuco {
+      background-image: url("../img/bramare/mobile/valledeuco/Bramare-malbec-9-21.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &-patagonia {
+      background-image: url("../img/bramare/mobile/patagonia/Bramare-Pinot-9-21.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 }
 #bramare-patagonia {
