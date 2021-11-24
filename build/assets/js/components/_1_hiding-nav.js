@@ -192,9 +192,9 @@
   let doneAbove = false;
   let doneBelow = false;
 
-  
 
-  if (actualPage === 'historia' || actualPage ==='terroir' || actualPage === 'contacto' || actualPage === 'felino' || actualPage === 'felino-cabernet' || actualPage === 'felino-red-blend' || actualPage === 'felino-chardonnay' || actualPage === 'bramare' || actualPage === 'bramare-patagonia' || actualPage === 'bramare-valle-de-uco' || actualPage === 'cocodrilo') {
+
+  if (actualPage === 'historia' || actualPage === 'terroir' || actualPage === 'contacto' || actualPage === 'felino' || actualPage === 'felino-cabernet' || actualPage === 'felino-red-blend' || actualPage === 'felino-chardonnay' || actualPage === 'bramare' || actualPage === 'bramare-patagonia' || actualPage === 'bramare-valle-de-uco' || actualPage === 'cocodrilo') {
     checkBackdropBlur2();
     document.addEventListener('scroll', () => {
       checkBackdropBlur2();
@@ -229,8 +229,13 @@
       headerLogo[0].style.fill = "black"; headerLogo[1].style.fill = "black";
       if (!below && !doneAbove) {
         itemsDesktop.forEach(item => {
-          item.classList.remove('nav--line');
-          item.classList.add('nav--line-black');
+          if (item.classList.contains('nav--line-selected')) {
+            item.classList.remove('nav--line-selected');
+            item.classList.add('nav--line-selected-black');
+          } else {
+            item.classList.remove('nav--line');
+            item.classList.add('nav--line-black');
+          }
         });
         linksDesktop.forEach(item => {
           item.classList.remove('btn--nav');
@@ -246,8 +251,13 @@
         headerLogo[0].style.fill = "white"; headerLogo[1].style.fill = "white";
         if (!below && !doneBelow) {
           itemsDesktop.forEach(item => {
-            item.classList.remove('nav--line-black');
-            item.classList.add('nav--line');
+            if (item.classList.contains('nav--line-selected-black')) {
+              item.classList.remove('nav--line-selected-black');
+              item.classList.add('nav--line-selected');
+            } else {
+              item.classList.remove('nav--line-black');
+              item.classList.add('nav--line');
+            }
           });
           linksDesktop.forEach(item => {
             item.classList.remove('btn--nav-black');

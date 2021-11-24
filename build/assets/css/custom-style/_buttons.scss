@@ -246,8 +246,7 @@ button {
 }
 
 .nav--line {
-  background: linear-gradient(var(--color-primary-light) 0 0) var(--p, 0) 100% /
-    var(--d, 0) 1px no-repeat;
+  background: linear-gradient(var(--color-primary-light) 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
   transition: 0.3s, background-position 0s 0.3s;
   &:hover {
     --d: 100%;
@@ -255,12 +254,31 @@ button {
   }
 
   &-black {
-    background: linear-gradient(black 0 0) var(--p, 0) 100% / var(--d, 0) 1px
-      no-repeat;
+    background: linear-gradient(black 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
     transition: 0.3s, background-position 0s 0.3s;
     &:hover {
       --d: 100%;
       --p: 100%;
+    }
+  }
+
+  &-selected {
+    background: linear-gradient(var(--color-primary-light) 0 0) var(--p, 35%) 100% / var(--d, 35%) 1px no-repeat;
+    background-position: center 37px;
+    transition: 0.3s, background-position 0s 0.3s;
+    &:hover {
+      --d: 100%;
+      --p: 100%;
+    }
+
+    &-black {
+      background: linear-gradient(black 0 0) var(--p, 35%) 100% / var(--d, 35%) 1px no-repeat;
+      background-position: center 37px;
+      transition: 0.3s, background-position 0s 0.3s;
+      &:hover {
+        --d: 100%;
+        --p: 100%;
+      }
     }
   }
 }
@@ -314,7 +332,7 @@ button {
   background: transparent;
   border: 0px;
   border-bottom: 1px solid var(--color-primary-light);
-  transition: all 0.5s;  
+  transition: all 0.5s;
   padding-bottom: 8px;
   padding-right: 0;
   font-family: var(--font-primary);
@@ -352,7 +370,7 @@ button {
       right: 71px;
     }
   }
-  .btn--contacto{
+  .btn--contacto {
     right: 180px;
   }
 }
