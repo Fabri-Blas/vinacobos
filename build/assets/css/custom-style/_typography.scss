@@ -273,7 +273,7 @@ mark {
   }
 }
 
-.timeline-vinos h3{
+.timeline-vinos h3 {
   margin-top: 0;
 }
 
@@ -396,6 +396,16 @@ mark {
   font-size: 13px;
 }
 
+.expresion-text {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 76.2px;
+  line-height: 90px;
+  letter-spacing: 0.05em;
+  color: #1c1c1c;
+}
+
 //=================FELINO=====================
 #felino-momentos-mobile {
   & h2 {
@@ -405,7 +415,7 @@ mark {
     font-size: 47.12px;
     line-height: 76.24px;
     letter-spacing: 0.07em;
-    color: #1C1C1C;
+    color: #1c1c1c;
     width: 279px;
   }
 }
@@ -431,7 +441,7 @@ mark {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.01em;
-    color: #3E3937;
+    color: #3e3937;
   }
 }
 #historia-paul-hobbs {
@@ -451,7 +461,7 @@ mark {
     font-size: 76.2px;
     line-height: 123.29px;
     letter-spacing: 0.12em;
-    color: #3E3937;
+    color: #3e3937;
   }
   & p {
     font-family: var(--font-secondary);
@@ -460,7 +470,7 @@ mark {
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0.05em;
-    color: #3E3937;
+    color: #3e3937;
     width: 908px;
   }
 }
@@ -481,7 +491,7 @@ mark {
     font-size: 76.2px;
     line-height: 123.29px;
     letter-spacing: 0.12em;
-    color: #3E3937;
+    color: #3e3937;
   }
   & p {
     font-family: var(--font-secondary);
@@ -490,7 +500,7 @@ mark {
     font-size: 18px;
     line-height: 29px;
     letter-spacing: 0.05em;
-    color: #3E3937;
+    color: #3e3937;
   }
 }
 #argentina-quote {
@@ -501,13 +511,13 @@ mark {
     font-size: 76.2px;
     line-height: 90px;
     letter-spacing: 0.05em;
-    color: #3E3937;
+    color: #3e3937;
     width: 1070px;
   }
   & h4 {
     font-family: var(--font-primary);
-    font-weight:500;
-    font-size:18px;
+    font-weight: 500;
+    font-size: 18px;
     line-height: 30px;
     letter-spacing: 0.07em;
   }
@@ -518,7 +528,7 @@ mark {
     font-size: 18px;
     line-height: 29px;
     letter-spacing: 0.025em;
-    color: #3E3937;
+    color: #3e3937;
   }
 }
 #visita-argentina {
@@ -529,9 +539,8 @@ mark {
     font-size: 76px;
     line-height: 90px;
     letter-spacing: 0.05em;
-    color: #3E3937;
+    color: #3e3937;
     width: 383px;
-    
   }
   & p {
     font-family: var(--font-secondary);
@@ -540,7 +549,7 @@ mark {
     font-size: 18px;
     line-height: 29px;
     letter-spacing: 0.025em;
-    color: #3E3937;
+    color: #3e3937;
   }
 }
 #paul-argentina {
@@ -551,9 +560,8 @@ mark {
     font-size: 76.2px;
     line-height: 89.76px;
     letter-spacing: 0.05em;
-    color: #3E3937;
+    color: #3e3937;
     width: 238px;
-    
   }
   & p {
     font-family: var(--font-secondary);
@@ -562,7 +570,7 @@ mark {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.01em;
-    color: #3E3937;
+    color: #3e3937;
   }
 }
 
@@ -574,7 +582,7 @@ mark {
     font-size: 47.12px;
     line-height: 55.5px;
     letter-spacing: 0.07em;
-    color: #3E3937;
+    color: #3e3937;
   }
   & p {
     font-family: var(--font-secondary);
@@ -583,20 +591,20 @@ mark {
     font-size: 18px;
     line-height: 29px;
     letter-spacing: 0.025em;
-    color: #3E3937;
+    color: #3e3937;
     width: 953px;
   }
 }
 
 //==================TERROIR ==============
 
-.terroir-origen-text{
-  font-family:var(--font-primary);
-  font-style:normal;
-  font-weight:500;
+.terroir-origen-text {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  letter-spacing:0.12em;
+  letter-spacing: 0.12em;
 }
 
 //================VARIETALES==================
@@ -673,15 +681,16 @@ mark {
   }
 }
 
+
 //VINOS
-#vinos-grid h6{
-font-family:var(--font-primary);
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 21px;
-letter-spacing: 0.12em;
-color: #1C1C1C
+#vinos-grid h6 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.12em;
+  color: #1c1c1c;
 }
 
 //=============CONTACTO================
@@ -756,7 +765,15 @@ color: #1C1C1C
       }
     }
   }
-
+  .expresion-text {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 65px;
+    letter-spacing: 0.05em;
+    color: #1c1c1c;
+  }
   //================HISTORIA====================
   #historia-prologo {
     & h2 {
@@ -777,7 +794,7 @@ color: #1C1C1C
       font-size: 18px;
       line-height: 24px;
       letter-spacing: 0.01em;
-      color: #3E3937;
+      color: #3e3937;
     }
   }
 
@@ -789,7 +806,7 @@ color: #1C1C1C
       font-size: 18px;
       line-height: 29px;
       letter-spacing: 0.05em;
-      color: #3E3937;
+      color: #3e3937;
     }
   }
   #argentina-quote {
@@ -800,13 +817,13 @@ color: #1C1C1C
       font-size: 40px;
       line-height: 47.12px;
       letter-spacing: 0.07em;
-      color: #3E3937;
+      color: #3e3937;
       width: 617px;
     }
     & h4 {
       font-family: var(--font-primary);
-      font-weight:500;
-      font-size:13px;
+      font-weight: 500;
+      font-size: 13px;
       line-height: 30px;
       letter-spacing: 0.07em;
     }
@@ -817,7 +834,7 @@ color: #1C1C1C
       font-size: 18px;
       line-height: 29px;
       letter-spacing: 0.025em;
-      color: #3E3937;
+      color: #3e3937;
     }
   }
   #visita-argentina {
@@ -828,7 +845,7 @@ color: #1C1C1C
       font-size: 47.1162px;
       line-height: 56px;
       letter-spacing: 0.07em;
-      color: #3E3937;
+      color: #3e3937;
       width: 224px;
     }
     & p {
@@ -838,7 +855,7 @@ color: #1C1C1C
       font-size: 18px;
       line-height: 29px;
       letter-spacing: 0.025em;
-      color: #3E3937;
+      color: #3e3937;
     }
   }
   #paul-argentina {
@@ -849,7 +866,7 @@ color: #1C1C1C
       font-size: 47.1162px;
       line-height: 56px;
       letter-spacing: 0.07em;
-      color: #3E3937;
+      color: #3e3937;
       width: 167px;
     }
     & p {
@@ -859,7 +876,7 @@ color: #1C1C1C
       font-size: 18px;
       line-height: 24px;
       letter-spacing: 0.01em;
-      color: #3E3937;
+      color: #3e3937;
     }
   }
   #argentina-cambio {
@@ -870,7 +887,7 @@ color: #1C1C1C
       font-size: 47.12px;
       line-height: 55.5px;
       letter-spacing: 0.07em;
-      color: #3E3937;
+      color: #3e3937;
     }
     & p {
       font-family: var(--font-secondary);
@@ -879,7 +896,7 @@ color: #1C1C1C
       font-size: 18px;
       line-height: 29px;
       letter-spacing: 0.025em;
-      color: #3E3937;
+      color: #3e3937;
       width: 1000px;
     }
   }
@@ -966,7 +983,7 @@ color: #1C1C1C
         line-height: 16px;
         color: #878581;
         max-width: 325px;
-        text-align : left;
+        text-align: left;
       }
     }
   }
@@ -978,8 +995,7 @@ color: #1C1C1C
         font-size: 29.12px;
         line-height: 48px;
         letter-spacing: 0.12em;
-        color: #1C1C1C;
-        ;
+        color: #1c1c1c;
       }
       &-subtitle {
         font-style: normal;
@@ -987,7 +1003,7 @@ color: #1C1C1C
         font-size: 18px;
         line-height: 28px;
         letter-spacing: 0.01em;
-        color:#1C1C1C;
+        color: #1c1c1c;
       }
       &-paragraph {
         font-family: var(--font-secondary);
@@ -995,7 +1011,7 @@ color: #1C1C1C
         font-weight: normal;
         font-size: 13px;
         line-height: 16px;
-        color: #1C1C1C;
+        color: #1c1c1c;
         max-width: 250px;
         letter-spacing: 0.05em;
       }
@@ -1013,14 +1029,14 @@ color: #1C1C1C
     }
   }
 }
-#vinos-grid-mobile h6{
-  font-family:var(--font-primary);
+#vinos-grid-mobile h6 {
+  font-family: var(--font-primary);
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 7px;
-  color: #1C1C1C
-  }
+  color: #1c1c1c;
+}
 
 // @media only screen and (max-width: 850px) {}
 @media only screen and (max-width: 550px) {
