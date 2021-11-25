@@ -869,14 +869,14 @@ footer {
 }
 #cobos-iconico {
   & h2 {
+    font-family: var(--color-primary);
     font-style: normal;
     font-weight: 500;
-    font-size: 29.124px;
-    line-height: 47px;
+    font-size: 32px;
+    line-height: 38px;
     text-align: left !important;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.07em;
     color: #f1eee9;
-    text-transform: uppercase;
   }
   & h3 {
     font-family: var(--font-secondary) !important;
@@ -909,7 +909,6 @@ footer {
     height: 500px;
     overflow: hidden;
   }
-  
 }
 
 #volturno-home {
@@ -2273,6 +2272,16 @@ footer {
       line-height: 16px;
       letter-spacing: 0.05em;
     }
+
+      & h3 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 30px;
+        letter-spacing: 0.01em;
+        color: #1c1c1c;
+      }
+    
   }
   #felino-detalles {
     & .felino-detalles-img:nth-child(odd) {
@@ -2522,6 +2531,18 @@ footer {
     width: 430px;
     color: #3e3937;
     width: 40%;
+  }
+}
+
+#vinos-grid {
+   & p {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #878581;
   }
 }
 
