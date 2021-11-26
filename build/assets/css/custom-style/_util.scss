@@ -282,7 +282,7 @@ footer {
   &-arrow{
     margin-left: 10px;
     transition: ease-in-out 0.25s;
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
   }
 
   &:hover{
@@ -294,7 +294,7 @@ footer {
 
 .main-vinos-dropdown{
   &:hover .vinos-dropdown-arrow{
-    transform: rotate(0deg);
+    transform: rotate(180deg);
   }
 }
 
