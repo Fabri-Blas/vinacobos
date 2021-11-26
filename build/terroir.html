@@ -74,8 +74,46 @@
                             class="f-header__link btn--nav">NOSOTROS</a></li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line-selected-black"><a href="../terroir"
                             class="f-header__link btn--nav">TERROIR</a></li>
-                    <li class="f-header__item margin-x-lg padding-y-xs nav--line-black"><a href="../vinos"
-                            class="f-header__link btn--nav">VINOS</a></li>
+                    <li
+                        class="f-header__item margin-x-lg padding-y-xs nav--line flex flex-row justify-center items-center position-relative main-vinos-dropdown">
+                        <a href="./vinos" class="f-header__link btn--nav">
+                            VINOS
+                            <svg class="vinos-dropdown-arrow" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+                                width="12px" height="6px" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 626.82 348" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+                                <defs>
+                                    <style type="text/css">
+                                        .vinos-dropdown-arrow-polygon {
+                                            fill: white
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer" />
+                                    <g id="_2101304143056">
+                                        <polygon class="vinos-dropdown-arrow-polygon"
+                                            points="596.56,0 315.57,287.47 30.26,6.48 -0,38.91 317.73,348 626.82,30.26 " />
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                        <div class="position-absolute vinos-dropdown"
+                            style="top: 38px;left: 0;width: 144px;height: 174px;">
+                            <a class="text-decoration-none vinos-dropdown-item-start"
+                                href="./vinos/cobos.html">Cobos</a>
+                            <a class="text-decoration-none vinos-dropdown-item"
+                                href="./vinos/cobos-volturno.html">Volturno</a>
+                            <a class="text-decoration-none vinos-dropdown-item" href="./vinos/vd.html">Vineyard
+                                designate</a>
+                            <a class="text-decoration-none vinos-dropdown-item" href="./vinos/bramare.html">Bramare</a>
+                            <a class="text-decoration-none vinos-dropdown-item"
+                                href="./vinos/cocodrilo.html">Cocodrilo</a>
+                            <a class="text-decoration-none vinos-dropdown-item-last"
+                                href="./vinos/felino.html">Felino</a>
+                        </div>
+                    </li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line-black"><a href="../contacto"
                             class="f-header__link btn--nav">CONTACTO</a></li>
                     <li class="f-header__item margin-x-lg padding-y-xs nav--line-black"><a href="#0"
@@ -138,8 +176,8 @@
             <!-- Componente1 -->
             <div id="hero" class="video-bg position-relative">
                 <div class="video-bg__media" aria-hidden="true">
-                    <video class="cinemagraph-speed" autoplay loop muted playsInline src="./assets/img/terroir/desktop/cinema-teroir-test.mp4"
-                        alt="cinema-video"></video>
+                    <video class="cinemagraph-speed" autoplay loop muted playsInline
+                        src="./assets/img/terroir/desktop/cinema-teroir-test.mp4" alt="cinema-video"></video>
                 </div>
                 <div class="container max-width-lg position-relative z-index-2">
                     <div class="flex flex-center padding-y-100vh">
@@ -183,7 +221,8 @@
                 <a id="sliding-panels-btn" class="is-hidden padding-top-xl" onclick="hideSlidingPanelsBtn()"
                     href="#panels">
                     <button class="reset s-panels__nav-control js-s-panels__nav-control js-tab-focus"
-                        aria-label="Toggle navigation" style="margin-top: 80px; margin-right: 18px; z-index: 3 !important;">
+                        aria-label="Toggle navigation"
+                        style="margin-top: 80px; margin-right: 18px; z-index: 3 !important;">
                         <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
                             <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round"
                                 stroke-linejoin="round" stroke-width="2">
@@ -917,7 +956,7 @@
                     <img src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-4.png" alt="preload">
                     <img src="./assets/img/terroir/mobile/gallery/panel2/panel2-etiqueta-5.png" alt="preload">
                 </div>
-                
+
                 <div class="main-gallery-mobile component-section">
                     <div class="gallery-actual-mobile width-100% text-center flex justify-center items-center">
                         <img class="padding-x-md varietales-foto"
