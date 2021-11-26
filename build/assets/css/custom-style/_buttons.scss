@@ -93,7 +93,6 @@ button {
   font-size: 15px;
   text-decoration: none;
   font-family: var(--font-primary);
-  // color: var(--color-secondary);
   color: black;
   letter-spacing: 0.12em;
   width: 240px;
@@ -102,7 +101,6 @@ button {
   background: transparent;
   text-transform: uppercase;
   border: 0px;
-  // border-bottom: 1px solid var(--color-secondary);
   transition: all 0.5s;
   z-index: 3 !important;
   &:hover {
@@ -166,6 +164,42 @@ button {
   &:hover ~ .btn--secondary-block-2-borderbottom2-desktop {
     transition: all 0.5s;
     width: 120px;
+  }
+}
+.btn--secondary-block-3 {
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  font-family: var(--font-primary);
+  color: black;
+  letter-spacing: 0.12em;
+  width: 150px;
+  padding-bottom: 8px;
+  text-align: center;
+  background: transparent;
+  border: 0px;
+  transition: all 0.5s;
+  &:hover {
+    letter-spacing: 0.2em;
+    width: 290px;
+    transition: all 0.5s;
+  }
+
+  &-borderbottom3 {
+    border-bottom: 1px solid black;
+    width: 90px;
+    margin: 0 auto;
+
+    &-desktop {
+      border-bottom: 1px solid black;
+      width: 120px;
+      margin: 0 auto;
+      transition: all 0.5s;
+    }
+  }
+  &:hover ~ .btn--secondary-block-3-borderbottom3-desktop {
+    transition: all 0.5s;
+    width: 50px;
   }
 }
 .btn--primary-right {

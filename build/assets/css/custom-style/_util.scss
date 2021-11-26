@@ -208,8 +208,8 @@ footer {
   }
 }
 
-.main-vinos-dropdown{
-  &:hover .vinos-dropdown{
+.main-vinos-dropdown {
+  &:hover .vinos-dropdown {
     transition: ease-in-out 0.25s;
     display: flex;
     opacity: 1;
@@ -230,7 +230,7 @@ footer {
     line-height: 16px;
     letter-spacing: 0.05em;
     color: #f1eee9;
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 16.66%;
     padding: 7px 15px;
@@ -243,7 +243,7 @@ footer {
       line-height: 16px;
       letter-spacing: 0.05em;
       color: #f1eee9;
-      background-color: rgba(0,0,0,.3);
+      background-color: rgba(0, 0, 0, 0.3);
       width: 100%;
       height: 16.66%;
       padding: 7px 15px;
@@ -251,7 +251,7 @@ footer {
       border-radius: 4px 4px 0px 0px;
       &:hover {
         transition: ease-in-out 0.25s;
-        background-color: rgba(0,0,0,.8);
+        background-color: rgba(0, 0, 0, 0.8);
       }
     }
     &-last {
@@ -261,7 +261,7 @@ footer {
       line-height: 16px;
       letter-spacing: 0.05em;
       color: #f1eee9;
-      background-color: rgba(0,0,0,.3);
+      background-color: rgba(0, 0, 0, 0.3);
       width: 100%;
       height: 16.66%;
       padding: 7px 15px;
@@ -269,32 +269,45 @@ footer {
       border-radius: 0px 0px 4px 4px;
       &:hover {
         transition: ease-in-out 0.25s;
-        background-color: rgba(0,0,0,.8);
+        background-color: rgba(0, 0, 0, 0.8);
       }
     }
 
     &:hover {
       transition: ease-in-out 0.25s;
-      background-color: rgba(0,0,0,.8);
+      background-color: rgba(0, 0, 0, 0.8);
     }
   }
 
-  &-arrow{
+  &-arrow {
     margin-left: 10px;
     transition: ease-in-out 0.25s;
     transform: rotate(0deg);
   }
 
-  &:hover{
+  &:hover {
     transition: ease-in-out 0.25s;
     display: flex;
     opacity: 1;
   }
 }
 
-.main-vinos-dropdown{
-  &:hover .vinos-dropdown-arrow{
+.main-vinos-dropdown {
+  &:hover .vinos-dropdown-arrow {
     transform: rotate(180deg);
+  }
+}
+
+.redireccion-figure {
+  & figcaption {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-5px);
   }
 }
 
