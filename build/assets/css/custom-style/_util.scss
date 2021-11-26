@@ -169,7 +169,7 @@ footer {
 }
 
 #vinos-home {
-  background-image: url("../img/vinos-bg.png");
+  background-image: url("../img/vinos/desktop/vinos-piano-background.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2622,19 +2622,24 @@ footer {
     color: #3e3937;
     width: 40%;
   }
+  #vinos-grid {
+    & p {
+     font-family: var(--font-secondary);
+     font-style: normal;
+     font-weight: normal;
+     font-size: 13px;
+     line-height: 16px;
+     text-align: center;
+     color: #878581;
+   }
+ }
+ 
+ .vinos-size{
+   width:auto;
+   height:380px;
+ }
 }
 
-#vinos-grid {
-  & p {
-    font-family: var(--font-secondary);
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 16px;
-    text-align: center;
-    color: #878581;
-  }
-}
 
 @media only screen and (max-width: 1024px) {
   .looping-tabs-header {
