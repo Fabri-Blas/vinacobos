@@ -168,27 +168,30 @@ button {
 }
 .btn--secondary-block-3 {
   cursor: pointer;
-  font-size: 15px;
-  text-decoration: none;
-  font-family: var(--font-primary);
-  color: black;
-  letter-spacing: 0.12em;
-  width: 150px;
-  padding-bottom: 8px;
-  text-align: center;
-  background: transparent;
-  border: 0px;
-  transition: all 0.5s;
+  font-size: 15px !important;
+  text-decoration: none !important;
+  font-family: var(--font-primary) !important;
+  color: black !important;
+  letter-spacing: 0.12em !important;
+  width: 150px !important;
+  height: 25px !important;
+  padding-bottom: 8px !important;
+  text-align: center !important;
+  background: transparent !important;
+  border: 0px !important;
+  border-radius: 0 !important;
+  transition: ease-in-out 0.5s !important;
+  transform: none !important;
   &:hover {
-    letter-spacing: 0.2em;
-    width: 290px;
-    transition: all 0.5s;
+    letter-spacing: 0.2em !important;
+    width: 290px !important;
+    transition: ease-in-out 0.5s !important;
   }
 
   &-borderbottom3 {
-    border-bottom: 1px solid black;
-    width: 90px;
-    margin: 0 auto;
+    border-bottom: 1px solid black !important;
+    width: 90px !important;
+    margin: 0 auto !important;
 
     &-desktop {
       border-bottom: 1px solid black;
@@ -198,8 +201,8 @@ button {
     }
   }
   &:hover ~ .btn--secondary-block-3-borderbottom3-desktop {
-    transition: all 0.5s;
-    width: 50px;
+    transition: all 0.5s !important;
+    width: 50px !important;
   }
 }
 .btn--primary-right {
