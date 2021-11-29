@@ -9,17 +9,17 @@ if (firstComponentAnimation && secondComponentReveal && window.innerWidth > 1024
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     window.addEventListener('scroll', () => {
-        revealFirstComponent(e);
-        resetFirstComponent(e);
+        revealFirstComponent();
+        resetFirstComponent();
     });
 
     window.addEventListener('wheel', (e) => {
-        revealFirstComponent(e);
-        resetFirstComponent(e);
+        revealFirstComponent();
+        resetFirstComponent();
     });
 
-    function revealFirstComponent(e) {
-        if (window.scrollY == 0 && firstComponentHidden && getDelta(e) > 0) {
+    function revealFirstComponent() {
+        if (window.scrollY == 0 && firstComponentHidden && getDelta() > 0) {
             setTimeout(() => {
                 firstComponentHidden = false;
             }, 1000);
@@ -29,8 +29,8 @@ if (firstComponentAnimation && secondComponentReveal && window.innerWidth > 1024
             secondComponentReveal.style.backdropFilter = 'blur(15px)';
         }
     }
-    function resetFirstComponent(e) {
-        if (window.scrollY == 0 && !firstComponentHidden && getDelta(e) < 0) {
+    function resetFirstComponent() {
+        if (window.scrollY == 0 && !firstComponentHidden && getDelta() < 0) {
             setTimeout(() => {
                 document.body.style.overflowY = 'overlay';
                 firstComponentHidden = true;
@@ -41,7 +41,7 @@ if (firstComponentAnimation && secondComponentReveal && window.innerWidth > 1024
         }
     }
 
-    function getDelta(e) {
+    function getDelta() {
         var e = window.event || e;
         return Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
     }

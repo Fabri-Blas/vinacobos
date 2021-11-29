@@ -32,6 +32,11 @@
 .component-section {
   position: relative;
   height: 100vh;
+
+  &-half {
+    position: relative;
+    height: 50vh;
+  }
 }
 
 .component-section-full {
@@ -1957,6 +1962,124 @@ footer {
   color: #3e3937;
   width: 43%;
 }
+
+.redireccion-terroir {
+  & h3 {
+    font-family: var(--font-primary);
+    font-size: 76.2px;
+    line-height: 90px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+  }
+
+  & p {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #f1eee9;
+  }
+
+  & .btn--secondary-block-4 {
+    cursor: pointer;
+    font-family: var(--font-primary) !important;
+    font-size: 47.1162px !important;
+    text-decoration: none !important;
+    color: #f1eee9 !important;
+    letter-spacing: 0.07em !important;
+    width: 500px !important;
+    height: 56px !important;
+    padding-bottom: 15px !important;
+    text-align: center !important;
+    background: transparent !important;
+    border: 0px !important;
+    border-radius: 0 !important;
+    transition: ease-in-out 0.5s !important;
+    transform: none !important;
+    &:hover {
+      letter-spacing: 0.2em !important;
+      width: 550px !important;
+      transition: ease-in-out 0.5s !important;
+    }
+
+    &-borderbottom4 {
+      border-bottom: 3px solid #f1eee9 !important;
+      width: 440px !important;
+      margin: 0 auto !important;
+
+      &-desktop {
+        border-bottom: 3px solid #f1eee9;
+        width: 440px;
+        margin: 0 auto;
+        transition: all 0.5s;
+      }
+    }
+    &:hover ~ .btn--secondary-block-4-borderbottom4-desktop {
+      transition: all 0.5s !important;
+      width: 250px !important;
+    }
+  }
+
+  &-mobile {
+    & h3 {
+      font-family: var(--font-primary);
+      font-size: 32px;
+      line-height: 38px;
+      letter-spacing: 0.07em;
+      color: #ffffff;
+    }
+
+    & p {
+      font-family: var(--font-secondary);
+      font-size: 13px;
+      line-height: 16px;
+      text-align: justify;
+      letter-spacing: 0.05em;
+      color: #878581;
+    }
+
+    & .btn--secondary-block-4 {
+      cursor: pointer;
+      font-family: var(--font-primary) !important;
+      font-size: 18px !important;
+      text-decoration: none !important;
+      color: #f1eee9 !important;
+      letter-spacing: 0.07em !important;
+      width: 200px !important;
+      height: 30px !important;
+      padding-bottom: 8px !important;
+      text-align: center !important;
+      background: transparent !important;
+      border: 0px !important;
+      border-radius: 0 !important;
+      transition: ease-in-out 0.5s !important;
+      transform: none !important;
+      &:hover {
+        letter-spacing: 0.2em !important;
+        width: 550px !important;
+        transition: ease-in-out 0.5s !important;
+      }
+
+      &-borderbottom4 {
+        border-bottom: 1px solid #f1eee9 !important;
+        width: 220px !important;
+        margin: 0 auto !important;
+
+        &-desktop {
+          border-bottom: 1px solid #f1eee9;
+          width: 220px;
+          margin: 0 auto;
+          transition: all 0.5s;
+        }
+      }
+      &:hover ~ .btn--secondary-block-4-borderbottom4-desktop {
+        transition: all 0.5s !important;
+        width: 100px !important;
+      }
+    }
+  }
+}
+
 //===== SECCCION CONTACTO =======
 
 #contacto-home {

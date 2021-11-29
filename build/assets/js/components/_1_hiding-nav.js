@@ -185,6 +185,7 @@
   const itemsDesktop = desktopHeader.querySelectorAll('.f-header__item');
   const linksDesktop = desktopHeader.querySelectorAll('.f-header__link');
   const headerLogo = document.querySelectorAll('.vinacobos-logo');
+  const dropdownArrow = document.querySelector('.vinos-dropdown-arrow-polygon');
 
 
 
@@ -236,6 +237,7 @@
             item.classList.remove('nav--line');
             item.classList.add('nav--line-black');
           }
+          dropdownArrow.style.fill = 'black';
         });
         linksDesktop.forEach(item => {
           item.classList.remove('btn--nav');
@@ -258,6 +260,7 @@
               item.classList.remove('nav--line-black');
               item.classList.add('nav--line');
             }
+            dropdownArrow.style.fill = 'white';
           });
           linksDesktop.forEach(item => {
             item.classList.remove('btn--nav-black');
