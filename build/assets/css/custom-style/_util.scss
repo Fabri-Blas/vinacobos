@@ -418,11 +418,70 @@ footer {
 }
 
 .vinos-hover {
-  transition: width 3s, height 3s, transform 3s;
-}
+  &-1 {
+    transition: ease-in-out 3s;
+    transform: scale(1);
+    width: 190px;
+    &:hover {
+      transition: ease-in-out 3s;
+      transform: scale(0.8);
+    }
+  }
 
-.vinos-hover:hover {
-  transform: scale(0.8);
+  &-2 {
+    transition: ease-in-out 3s;
+    transform: scale(1);
+    width: 250px;
+    &:hover {
+      transition: ease-in-out 3s;
+      transform: scale(0.8);
+    }
+  }
+  &-3 {
+    transition: ease-in-out 3s;
+    transform: scale(1);
+    width: 290px;
+    &:hover {
+      transition: ease-in-out 3s;
+      transform: scale(0.8);
+    }
+  }
+  &-4 {
+    transition: ease-in-out 3s;
+    transform: scale(1);
+    width: 287px;
+    &:hover {
+      transition: ease-in-out 3s;
+      transform: scale(0.8);
+    }
+  }
+  &-5 {
+    transition: ease-in-out 3s;
+    transform: scale(1);
+    width: 220px;
+    &:hover {
+      transition: ease-in-out 3s;
+      transform: scale(0.8);
+    }
+  }
+  &-6 {
+    transition: ease-in-out 3s;
+    transform: scale(1);
+    width: 292px;
+    &:hover {
+      transition: ease-in-out 3s;
+      transform: scale(0.8);
+    }
+  }
+  &-7 {
+    transition: ease-in-out 3s;
+    transform: scale(1);
+    width: 180px;
+    &:hover {
+      transition: ease-in-out 3s;
+      transform: scale(0.8);
+    }
+  }
 }
 
 .tabs-custom-hover {
@@ -709,10 +768,9 @@ footer {
   & h3 {
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 1.6px;
-    letter-spacing: 0.0025em;
-    color: #1c1c1c;
+    font-size: 13px;
+    line-height: 16px;
+    color: #878581;
   }
   & p {
     font-family: var(--font-secondary);
@@ -2637,22 +2695,47 @@ footer {
   }
   #vinos-grid {
     & p {
-     font-family: var(--font-secondary);
-     font-style: normal;
-     font-weight: normal;
-     font-size: 13px;
-     line-height: 16px;
-     text-align: center;
-     color: #878581;
-   }
- }
- 
- .vinos-size{
-   width:auto;
-   height:380px;
- }
-}
+      font-family: var(--font-secondary);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: center;
+      color: #878581;
+    }
+  }
 
+  .vinos-size {
+    width: auto;
+    height: 380px;
+  }
+
+  @media only screen and (max-width: 1366px) {
+    .vinos-hover {
+      &-1 {
+        width: 144px;
+      }
+      &-2 {
+        width: 194px;
+      }
+      &-3 {
+        width: 241px;
+      }
+      &-4 {
+        width: 229px;
+      }
+      &-5 {
+        width: 195px;
+      }
+      &-6 {
+        width: 233px;
+      }
+      &-7 {
+        width: 153px;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   .looping-tabs-header {
