@@ -191,10 +191,10 @@
     <!-- ==============================================MAIN============================================== -->
 
     <!-- scroll component -->
-    <div class="scroll-indicator-container display@md" data-title="Conoce Viña Cobos">
+    <div class="scroll-indicator-container display@md" data-title="Conoce Viña Cobos" style="z-index:30;">
         <div class="scroll-indicator-wrapper" style="height: 400px;">
             <div class="scroll-indicator-inner" style="height: 250px;">
-                <span class="scroll-indicator"></span>
+                <span class="scroll-indicator" id="scroll-slider" style="transition: ease-in-out 1s;"></span>
             </div>
             <div class="title">
                 <h3>Viña Cobos</h3>
@@ -340,6 +340,12 @@
                                 Argentina en el podio de los exclusivos vinos ultra premium del mundo. Hoy Viña Cobos
                                 expresa el carácter, personalidad y estilo de su fundador, que sigue con su sueño
                                 inagotable de elaborar los mejores vinos de este rincón del mundo.
+                                Obtuvo su licenciatura en química de la Universidad de Notre Dame en 1975, y su maestría
+                                en viticultura y enología de la Universidad de California, Davis en 1978. Poco después,
+                                se convirtió en miembro del equipo de enología de la bodega Robert Mondavi, y un año más
+                                tarde, a instancias del propio Robert Mondavi, Paul fue invitado a formar parte del
+                                equipo inaugural del Opus One.
+
 
                             </p>
                         </div>
@@ -366,18 +372,19 @@
                 style="transition: ease-in-out 0.8s;opacity: 1;background-color: white;backdrop-filter: blur(15px);">
             </div>
             <div class="flex flex-column justify-center items-center height-100%">
-                <div class="text-center flex flex-column justify-center items-center position-relative">
-                    <h2>HISTORIA</h2>
-                    <h3 class="position-absolute padding-top-sm">Inicio</h3>
+                <div class=" text-center width-100% flex flex-column justify-center items-center position-relative">
+                    <h2>PRIMERA</h2>
+                    <h3 class="position-absolute padding-top-sm">Visita a Argentina</h3>
                 </div>
                 <p class="text-center padding-top-xl padding-x-xxl">
-                    Paul obtuvo su licenciatura en química de la Universidad de Notre Dame en 1975, y su maestría en
-                    viticultura
-                    y enología de la Universidad de California, Davis en 1978. Poco después, se convirtió en miembro del
-                    equipo
-                    de enología de la bodega Robert Mondavi, y un año más tarde, a instancias del propio Robert Mondavi,
-                    Paul fue
-                    invitado a formar parte del equipo inaugural del Opus One.
+                    En 1988, llegó a Mendoza y se enamoró del paisaje y de la tierra. Con sus vinos, logró posicionar al
+                    Malbec en el mundo como una de las variedades más buscadas y lo impulsó como el vino argentino en el
+                    exterior. Abocado a la identificación de los terruños hoy llega a ser líder en la interpretación del
+                    terroir, logrando la mejor expresión de cada lugar.
+                    Actualmente es uno de los enólogos más reconocidos a nivel mundial, asesorando a más de 30 bodegas
+                    en Argentina, Chile, Uruguay, Canadá, España, Francia y Hungría, entre otros.
+                    Es propietario de Paul Hobbs Winery y Crossbarn en California, Viña Cobos en Argentina, Crocus en
+                    Francia, Yacoubian-Hobbs en Armenia y Alvaredos-Hobbs en Galicia.
 
                 </p>
             </div>
@@ -389,46 +396,6 @@
         <!-- _________________________________________________________________________________________ -->
 
 
-        <!-- PRIMERA VISITA ARGENTINA-->
-        <section id="visita-argentina" class="display@md bg-white fs-slider grid">
-            <div class="fs-slider-reveal display@md position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-3"
-                style="transition: ease-in-out 0.8s;opacity: 1;background-color: white;backdrop-filter: blur(15px);">
-            </div>
-            <div class="grid padding-x-md@sxl padding-x-sm@md max-width-xxxl margin-x-auto">
-                <div class="grid col-12 margin-y-auto">
-                    <div class="col-7 flex justify-center items-start">
-                        <div class="flex items-start padding-x-xl">
-                            <h3 class="text-right">
-                                Primera visita a Argentina
-                            </h3>
-                            <p class="padding-left-lg padding-x-md">
-                                En 1988, llegó a Mendoza y se enamoró del paisaje y de la tierra. Con sus vinos, logró
-                                posicionar al Malbec en
-                                el mundo como una de las variedades más buscadas y lo impulsó como el vino argentino en
-                                el exterior. Abocado a
-                                la identificación de los terruños hoy llega a ser líder en la interpretación del
-                                terroir, logrando la mejor
-                                expresión de cada lugar.
-                                Actualmente es uno de los enólogos más reconocidos a nivel mundial, asesorando a más de
-                                30 bodegas en Argentina,
-                                Chile, Uruguay, Canadá, España, Francia y Hungría, entre otros.
-                                Es propietario de Paul Hobbs Winery y Crossbarn en California, Viña Cobos en Argentina,
-                                Crocus en Francia,
-                                Yacoubian-Hobbs en Armenia y Alvaredos-Hobbs en Galicia.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-5 width-100% flex items-center padding-right-xxl@md">
-                        <img class="width-100%" src="./assets/img/historia/desktop/paul-hobbs-argentina-desktop.png"
-                            alt="Paul Hobbs en Mendoza">
-                    </div>
-                </div>
-            </div>
-            <div id="" class="position-absolute scroll-helper-historia">
-                <span class="scroll-line-historia init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
-                <span class="scroll-word" style="visibility: inherit; opacity: 1; color: black;">Scroll</span>
-            </div>
-        </section>
         <!-- _________________________________________________________________________________________ -->
 
 
@@ -448,19 +415,28 @@
                 </div>
                 <div class="flex justify-end width-70%">
                     <div class="historia-small-line"></div>
-                    <h4 class="padding-top-lg">Paul Hobbs</h4>
+                    <h4>Paul Hobbs</h4>
                 </div>
-                <div class="flex flex-column justify-center text-center padding-top-xxl">
+                <div class="flex flex-column justify-center text-center">
                     <p class="padding-x-xxxl">
                         Paul Hobbs es el soñador incansable que logró con su pionero Cobos Malbec 1999 ubicar a
-                        Argentina en el podio de
-                        los exclusivos vinos ultra premium del mundo. Hoy Viña Cobos expresa el carácter, personalidad y
-                        estilo de su
-                        fundador, que sigue con su sueño inagotable de elaborar los mejores vinos de este rincón del
-                        mundo.
+                        Argentina en el podio de los exclusivos vinos ultra premium del mundo. Hoy Viña Cobos expresa el
+                        carácter, personalidad y estilo de su fundador, que sigue con su sueño inagotable de elaborar
+                        los mejores vinos de este rincón del mundo. Abocado a la identificación de los terruños hoy
+                        llega a ser líder en concepto de single block.
+
+                        Actualmente es uno de los enólogos más reconocidos a nivel mundial, asesorando a más de 30
+                        bodegas en Argentina, Chile, Uruguay, Canadá, España, Francia y Hungría, entre otros.
 
                     </p>
+                    <div class="flex justify-center padding-top-md z-index-3">
+                        <a href="https://www.paulhobbswines.com/" target="_blank">
+                            <img class="paul-firma" src="./assets/img/historia/desktop/paul-hobbs-logo.png"
+                                alt="paul-firma">
+                        </a>
+                    </div>
                 </div>
+                
             </div>
             <div id="" class="position-absolute scroll-helper-historia">
                 <span class="scroll-line-historia init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
@@ -471,48 +447,7 @@
 
 
 
-
-
-        <!-- ARGENTINA  CAMBIO DESKTOP -->
-        <section id="argentina-cambio" class="display@md bg-white fs-slider flex justify-center">
-            <div class="fs-slider-reveal display@md position-absolute top-50% left-50% -translate-y-50% -translate-x-50% width-100% height-100vh z-index-1"
-                style="transition: ease-in-out 0.8s;opacity: 1;background-color: white;backdrop-filter: blur(15px);">
-            </div>
-            <div class="flex flex-column justify-center">
-                <h3 class="text-center">Un cambio en Argentina</h3>
-                <div class="historia-big-line margin-x-auto margin-y-md"></div>
-                <p class="text-center padding-top-md">
-                    Con sus vinos, logró posicionar al malbec en el mundo como una de las variedades más buscadas y lo
-                    impulsó como el vino argentino en el exterior.
-                    Abocado a la identificación de los terruños hoy llega a ser líder en concepto de single block.
-                </p>
-                <p class="text-center padding-top-md">
-                    Actualmente es uno de los enólogos más reconocidos a nivel mundial, asesorando a más de 30 bodegas
-                    en Argentina, Chile, Uruguay, Canadá, España,
-                    Francia y Hungría, entre otros.
-                </p>
-                <div class="flex justify-center padding-top-lg z-index-2">
-                    <a href="https://www.paulhobbswines.com/" target="_blank">
-                        <img class="paul-firma" src="./assets/img/historia/desktop/paul-hobbs-logo.png"
-                            alt="paul-firma">
-                    </a>
-                </div>
-
-            </div>
-            <div id="" class="position-absolute scroll-helper-historia">
-                <span class="scroll-line-historia init" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
-                <span class="scroll-word" style="visibility: inherit; opacity: 1; color: black;">Scroll</span>
-            </div>
-        </section>
         <!-- _________________________________________________________________________________________ -->
-
-
-
-
-
-
-
-
 
 
 

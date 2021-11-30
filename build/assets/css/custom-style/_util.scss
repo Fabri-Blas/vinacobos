@@ -1539,8 +1539,8 @@ footer {
 .historia {
   &-final-tree {
     height: 100%;
-    width: auto;
-    transform: translateY(-200px);
+    width: 65vh;
+    transform: translateY(-103px);
   }
   &-photo {
     max-width: 700px;
@@ -1589,6 +1589,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 
 #argentina-quote {
   background-image: url("../img/historia/desktop/argentina-quote-fondo-desktop.png");
@@ -2741,7 +2742,7 @@ footer {
   .historia {
     &-final-tree {
       height: 100%;
-      width: 40vw;
+      width: 34vw;
       transform: translateY(-100px);
     }
     &-photo {
