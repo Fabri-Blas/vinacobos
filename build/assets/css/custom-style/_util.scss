@@ -241,6 +241,16 @@ footer {
     padding: 7px 15px;
     cursor: pointer;
 
+    &-mobile {
+      font-family: var(--font-secondary);
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.05em;
+      color: #f1eee9;
+      text-transform: uppercase;
+      padding: 8px 50px;
+    }
+
     &-start {
       transition: ease-in-out 0.25s;
       font-family: var(--font-secondary);
@@ -295,6 +305,12 @@ footer {
     display: flex;
     opacity: 1;
   }
+}
+
+#header-mobile-vinos-dropdown{
+  transition: ease-in-out 0.25s;
+  opacity: 0;
+  transform: translateY(15px);
 }
 
 .main-vinos-dropdown {
@@ -2487,7 +2503,7 @@ footer {
       letter-spacing: 0.07em;
       color: #ffffff;
     }
-  
+
     & p {
       font-family: var(--font-secondary);
       font-size: 13px;
@@ -2515,9 +2531,8 @@ footer {
         letter-spacing: 0.2em !important;
         width: 550px !important;
         transition: ease-in-out 0.5s !important;
-      } 
+      }
     }
-    
   }
   .vinculum {
     &-conexion {

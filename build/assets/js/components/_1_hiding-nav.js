@@ -177,7 +177,6 @@
     if (Util.hasClass(mainNav[0], 'hide-nav--fixed')) Util.addClass(mainNav[0], 'hide-nav--has-bg');
   }
 
-
   var path = window.location.pathname;
   let actualPage = path.split("/").pop();
   actualPage = actualPage.split('.')[0];
@@ -187,12 +186,9 @@
   const headerLogo = document.querySelectorAll('.vinacobos-logo');
   const dropdownArrow = document.querySelector('.vinos-dropdown-arrow-polygon');
 
-
-
   let below = false;
   let doneAbove = false;
   let doneBelow = false;
-
 
 
   if (actualPage === 'historia' || actualPage === 'terroir' || actualPage === 'contacto' || actualPage === 'felino' || actualPage === 'felino-cabernet' || actualPage === 'felino-red-blend' || actualPage === 'felino-chardonnay' || actualPage === 'bramare' || actualPage === 'bramare-patagonia' || actualPage === 'bramare-valle-de-uco' || actualPage === 'cocodrilo') {
@@ -206,8 +202,6 @@
       checkBackdropBlur();
     });
   }
-
-
 
 
   function checkBackdropBlur() {
@@ -272,3 +266,32 @@
     }
   }
 }());
+
+const mobileDropdownButton = document.getElementById('header-mobile-vinos-arrow');
+const mobileVinosDropdown = document.getElementById('header-mobile-vinos-dropdown');
+
+let vinosDropdownOpen = false;
+
+if (mobileDropdownButton) {
+  mobileDropdownButton.addEventListener('click', () => {
+    if (!vinosDropdownOpen) {
+      mobileVinosDropdown.classList.remove('is-hidden');
+      setTimeout(() => {
+        mobileVinosDropdown.style.opacity = '1';
+        mobileVinosDropdown.style.transform = 'translateY(0px)';
+      }, 100);
+      mobileDropdownButton.style.transform = 'rotate(180deg)';
+      vinosDropdownOpen = true;
+    } else {
+      if (vinosDropdownOpen) {
+        mobileVinosDropdown.style.opacity = '0';
+        mobileVinosDropdown.style.transform = 'translateY(15px)';
+        setTimeout(() => {
+          mobileVinosDropdown.classList.add('is-hidden');
+          mobileDropdownButton.style.transform = 'rotate(0deg)';
+          vinosDropdownOpen = false;
+        }, 250);
+      }
+    }
+  });
+}
