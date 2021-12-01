@@ -2003,7 +2003,7 @@ footer {
     text-decoration: none !important;
     color: #f1eee9 !important;
     letter-spacing: 0.07em !important;
-    width: 550px !important;
+    width: 100% !important;
     height: 56px !important;
     padding-bottom: 15px !important;
     text-align: center !important;
@@ -2014,7 +2014,7 @@ footer {
     transform: none !important;
     &:hover {
       letter-spacing: 0.15em !important;
-      width: 700px !important;
+      width: auto !important;
       transition: ease-in-out 0.5s !important;
     }
 
@@ -2518,7 +2518,7 @@ footer {
       text-decoration: none !important;
       color: #f1eee9 !important;
       letter-spacing: 0.07em !important;
-      width: 500px !important;
+      width: auto !important;
       height: 56px !important;
       padding-bottom: 15px !important;
       text-align: center !important;
@@ -2529,7 +2529,7 @@ footer {
       transform: none !important;
       &:hover {
         letter-spacing: 0.2em !important;
-        width: 550px !important;
+        width: auto !important;
         transition: ease-in-out 0.5s !important;
       }
     }
