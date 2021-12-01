@@ -231,6 +231,7 @@ footer {
   &-item {
     transition: ease-in-out 0.25s;
     font-family: var(--font-secondary);
+    text-transform: uppercase;
     font-size: 13px;
     line-height: 16px;
     letter-spacing: 0.05em;
@@ -255,6 +256,7 @@ footer {
       transition: ease-in-out 0.25s;
       font-family: var(--font-secondary);
       font-size: 13px;
+      text-transform: uppercase;
       line-height: 16px;
       letter-spacing: 0.05em;
       color: #f1eee9;
@@ -273,6 +275,7 @@ footer {
       transition: ease-in-out 0.25s;
       font-family: var(--font-secondary);
       font-size: 13px;
+      text-transform: uppercase;
       line-height: 16px;
       letter-spacing: 0.05em;
       color: #f1eee9;
@@ -2756,9 +2759,9 @@ footer {
       height: auto;
     }
     &-quote {
-      top: -45px !important;
-      left: -170px !important;
-      width: 280px !important;
+      top: 0px !important;
+      left: -109px !important;
+      width: 220px !important;
       height: auto;
     }
   }
