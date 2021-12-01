@@ -2364,13 +2364,20 @@ footer {
 }
 
 .fs-slider {
-  transition: ease-in-out 0.8s;
+  transition: ease-in-out 1s;
   position: fixed;
   height: 100vh;
   width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
+  &-reveal{
+    transition: ease-in-out 1.1s;
+    opacity: 1;
+    background-color: white;
+    backdrop-filter: blur(15px);
+  }
 }
 
 //=================================================================================
