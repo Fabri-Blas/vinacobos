@@ -161,22 +161,27 @@
     if(carousel.options.autoplay) {
       startAutoplay(carousel);
       // pause autoplay if user is interacting with the carousel
-      carousel.element.addEventListener('mouseenter', function(event){
-        pauseAutoplay(carousel);
-        carousel.autoplayPaused = true;
-      });
-      carousel.element.addEventListener('focusin', function(event){
-        pauseAutoplay(carousel);
-        carousel.autoplayPaused = true;
-      });
-      carousel.element.addEventListener('mouseleave', function(event){
-        carousel.autoplayPaused = false;
-        startAutoplay(carousel);
-      });
-      carousel.element.addEventListener('focusout', function(event){
-        carousel.autoplayPaused = false;
-        startAutoplay(carousel);
-      });
+      if(!carousel.options.autoplayOnHover) {
+        carousel.element.addEventListener('mouseenter', function(event){
+          pauseAutoplay(carousel);
+          carousel.autoplayPaused = true;
+        });
+        carousel.element.addEventListener('mouseleave', function(event){
+          carousel.autoplayPaused = false;
+          startAutoplay(carousel);
+        });
+      }
+      if(!carousel.options.autoplayOnFocus) {
+        carousel.element.addEventListener('focusin', function(event){
+          pauseAutoplay(carousel);
+          carousel.autoplayPaused = true;
+        });
+      
+        carousel.element.addEventListener('focusout', function(event){
+          carousel.autoplayPaused = false;
+          startAutoplay(carousel);
+        });
+      }
     }
     // drag events
     if(carousel.options.drag && window.requestAnimationFrame) {
@@ -653,6 +658,8 @@
   Carousel.defaults = {
     element : '',
     autoplay : false,
+    autoplayOnHover: false,
+		autoplayOnFocus: false,
     autoplayInterval: 5000,
     loop: true,
     nav: false,
@@ -678,6 +685,8 @@
       (function(i){
         var autoplay = (carousels[i].getAttribute('data-autoplay') && carousels[i].getAttribute('data-autoplay') == 'on') ? true : false,
           autoplayInterval = (carousels[i].getAttribute('data-autoplay-interval')) ? carousels[i].getAttribute('data-autoplay-interval') : 5000,
+          autoplayOnHover = (carousels[i].getAttribute('data-autoplay-hover') && carousels[i].getAttribute('data-autoplay-hover') == 'on') ? true : false,
+					autoplayOnFocus = (carousels[i].getAttribute('data-autoplay-focus') && carousels[i].getAttribute('data-autoplay-focus') == 'on') ? true : false,
           drag = (carousels[i].getAttribute('data-drag') && carousels[i].getAttribute('data-drag') == 'on') ? true : false,
           loop = (carousels[i].getAttribute('data-loop') && carousels[i].getAttribute('data-loop') == 'off') ? false : true,
           nav = (carousels[i].getAttribute('data-navigation') && carousels[i].getAttribute('data-navigation') == 'on') ? true : false,
@@ -687,7 +696,7 @@
           overflowItems = (carousels[i].getAttribute('data-overflow-items') && carousels[i].getAttribute('data-overflow-items') == 'on') ? true : false,
           alignControls = carousels[i].getAttribute('data-align-controls') ? carousels[i].getAttribute('data-align-controls') : false,
           justifyContent = (carousels[i].getAttribute('data-justify-content') && carousels[i].getAttribute('data-justify-content') == 'on') ? true : false;
-        new Carousel({element: carousels[i], autoplay : autoplay, autoplayInterval : autoplayInterval, drag: drag, ariaLive: true, loop: loop, nav: nav, navigationItemClass: navigationItemClass, navigationPagination: navigationPagination, navigationClass: navigationClass, overflowItems: overflowItems, justifyContent: justifyContent, alignControls: alignControls});
+        new Carousel({element: carousels[i], autoplay : autoplay, autoplayOnHover: autoplayOnHover, autoplayOnFocus: autoplayOnFocus,autoplayInterval : autoplayInterval, drag: drag, ariaLive: true, loop: loop, nav: nav, navigationItemClass: navigationItemClass, navigationPagination: navigationPagination, navigationClass: navigationClass, overflowItems: overflowItems, justifyContent: justifyContent, alignControls: alignControls});
       })(i);
     }
   };

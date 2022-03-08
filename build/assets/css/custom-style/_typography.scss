@@ -1,67 +1,141 @@
+@use "../base" as *;
+
 // --------------------------------
+
 // (START) Global editor code https://codyhouse.co/ds/globals/typography
+
 // --------------------------------
 @font-face {
-  font-family: "Gill Sans Regular";
-  src: url(../fonts/gill-sans.otf);
+  font-family: "Mulish";
+  font-weight: 300;
+  src: url("../fonts/Mulish/Mulish.ttf");
 }
-
 @font-face {
-  font-family: "Gill Sans Medium";
-  src: url(../fonts/gill-sans-medium.otf);
+  font-family: Prata;
+  font-weight: 400;
+  src: url("../fonts/Prata/Prata.ttf");
 }
-
 @font-face {
-  font-family: "Miller Display Regular";
-  src: url(../fonts/miller-display.otf);
+  font-family: "Mulish";
+  font-weight: 600;
+  src: url("../fonts/Mulish/Mulish-semibold.ttf");
 }
 
 :root {
   // font family
-  --font-primary: "Miller Display Regular";
-  --font-secondary: "Gill Sans Regular";
-  --font-secondary-medium: "Gill Sans Medium";
+  --font-primary: Prata;
+  --font-secondary: Mulish;
+
   // font size
-  --text-base-size: 0.813em; // body font-size
-  --text-scale-ratio: 1.523; // multiplier used to generate the type scale values 👇
+  --text-base-size: 1em; // body font-size
+  --text-scale-ratio: 1.333; // multiplier used to generate the type scale values 👇
+
   // line-height
   --body-line-height: 1.4;
   --heading-line-height: 1.2;
+
   // capital letters - used in combo with the lhCrop mixin
   --font-primary-capital-letter: 1;
-  // unit - don't modify unless you want to change the typography unit (e.g., from Em to Rem units)
-  --text-unit: 1em; // if not Em units → --text-unit: var(--text-base-size);
+
+  // unit - don't modify unless you want to change the typography unit (e.g., from Rem to Em units)
+  --text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
 }
 
 :root,
 * {
   // type scale
-  --text-xs: 0.35em;
-  --text-sm: 0.695em;
-  --text-md: 1.125em;
-  --text-lg: 1.82em;
-  --text-xl: 2.945em;
-  --text-xxl: 4.765em;
-  --text-xxxl: 7.71em;
-  --text-xxxxl: 12.475em;
+  --text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-sm: 12px;
+  --text-base: 16px;
+  --text-md: 21px;
+  --text-lg: 28px;
+  --text-xl: 38px;
+  --text-xxl: 50px;
+  --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+  --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
 }
 
-body {
-  font-family: var(--font-primary);
+@include breakpoint(md) {
+  :root {
+    --text-base-size: 1em;
+    --text-scale-ratio: 1.333;
+  }
 }
 
 h1,
-h6 {
-  font-family: var(--font-primary);
-  letter-spacing: 12%;
-}
-
 h2,
 h3,
 h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: var(--text-xxl);
+  line-height: 67.75px;
+}
+
+h2 {
+  font-size: var(--text-xl);
+  line-height: 51.49px;
+}
+h3 {
+  font-size: var(--text-lg);
+  line-height: 37.94px;
+}
+h4 {
+  font-size: var(--text-md);
+  line-height: 28.46px;
+}
 h5 {
-  font-family: var(--font-secondary-medium);
-  letter-spacing: 12%;
+  font-size: var(--text-base);
+  line-height: 21.68px;
+}
+h6 {
+  font-size: var(--text-xs);
+  line-height: 16.26px;
+}
+
+.h1-secondary,
+.h2-secondary,
+.h3-secondary,
+.h4-secondary,
+.h5-secondary,
+.h6-secondary {
+  font-family: var(--font-secondary) !important;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.h1-secondary {
+  font-size: var(--text-xxl);
+  line-height: 60px;
+}
+
+.h2-secondary {
+  font-size: var(--text-xl);
+  line-height: 49.4px;
+}
+.h3-secondary {
+  font-size: var(--text-lg);
+  line-height: 36.4px;
+}
+.h4-secondary {
+  font-size: var(--text-md);
+  line-height: 27.3px;
+}
+.h5-secondary {
+  font-size: var(--text-base);
+  line-height: 23px;
+}
+.h6-secondary {
+  font-size: var(--text-xs);
+  line-height: 15.6px;
 }
 
 // font family
@@ -76,1029 +150,65 @@ h5 {
 .color-secondary-darker {
   color: alpha(var(--color-secondary-darker), var(--color-o, 1));
 }
-
 .color-secondary-dark {
   color: alpha(var(--color-secondary-dark), var(--color-o, 1));
 }
-
 .color-secondary {
   color: alpha(var(--color-secondary), var(--color-o, 1));
 }
-
 .color-secondary-light {
   color: alpha(var(--color-secondary-light), var(--color-o, 1));
 }
-
 .color-secondary-lighter {
   color: alpha(var(--color-secondary-lighter), var(--color-o, 1));
 }
 
-.to-upper-case {
-  text-transform: uppercase;
-}
+// --------------------------------
+
+// (END) Global editor code
 
 // --------------------------------
-// (END) Global editor code
-// --------------------------------
+
 // link style
-// a,
-// .link {}
+a,
+.link {
+  text-decoration: none;
+}
+
 mark {
   background-color: alpha(var(--color-accent), 0.2);
   color: inherit;
 }
 
-#vinos-caption {
-  & h2 {
-    color: #3e3937;
-    max-width: 1152px;
-    max-height: 112px;
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 47.1162px;
-    line-height: 56px;
-    text-align: center;
-    letter-spacing: 0.05em;
-  }
-  &-mobile {
-    h2 {
-      color: #3e3937;
-      max-width: 290px;
-      max-height: 191px;
-      font-family: var(--font-primary);
-      font-style: normal;
-      font-weight: 500;
-      font-size: 32px;
-      line-height: 38px;
-      text-align: center;
-      letter-spacing: 0.07em;
-    }
-  }
-}
-
-.vinos-especiales-unicos {
-  & .inner-vinos {
-    &-title {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 76.2px;
-      line-height: 123px;
-      letter-spacing: 0.12em;
-      color: #1c1c1c;
-    }
-    &-subtitle {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 29.1px;
-      line-height: 35px;
-      letter-spacing: 0.0025em;
-      color: #1c1c1c;
-    }
-    &-paragraph {
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 22px;
-      color: #878581;
-      max-width: 398px;
-    }
-  }
-}
-
 .text-component {
   --line-height-multiplier: 1;
-  --text-vspace-multiplier: 1;
+  --text-space-y-multiplier: 1;
+
+  > * {
+    // use Em units
+    --text-unit: 1em;
+    --space-unit: 1em;
+  }
+
   blockquote {
     padding-left: 1em;
-    border-left: 4px solid var(--color-contrast-low);
+    border-left: 4px solid var(--color-contrast-lower);
+    font-style: italic;
   }
+
   hr {
-    background: var(--color-contrast-low);
+    background: var(--color-contrast-lower);
     height: 1px;
   }
+
   figcaption {
     font-size: var(--text-sm);
-    color: var(--color-contrast-medium);
+    color: var(--color-contrast-low);
   }
-  .text-component-animation {
-    transition: all 0.5s ease-in;
-    opacity: 0;
-    transform: translateY(5%);
-  }
-  &:hover .text-component-animation {
-    transition: all 0.5s ease-in;
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  .text-component-title {
-    font-family: var(--font-secondary);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 47.12px;
-    letter-spacing: 12px;
-    line-height: 29px;
-    &-mobile {
-      padding-top: 0.125em;
-      max-width: 271px;
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: 500;
-      font-size: 29.1px !important;
-      letter-spacing: 4px;
-      line-height: 29.1px;
-    }
-  }
-  .text-component-title-2 {
-    font-family: var(--font-secondary);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 47.12px;
-    letter-spacing: 12px;
-    line-height: 57px;
-  }
-  .text-component-subtitle {
-    font-family: var(--font-secondary);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 3px;
-    line-height: 24px;
-    &-mobile {
-      max-width: 260px;
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: 500;
-      font-size: 18px !important;
-      letter-spacing: 1px;
-      line-height: 24px;
-    }
-    &-2 {
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: 700;
-      font-size: 18px;
-      letter-spacing: 0.1em;
-      line-height: 24px;
-      &-mobile {
-        font-family: var(--font-secondary);
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        letter-spacing: 0.1em;
-        line-height: 24px;
-      }
-    }
-  }
-  .text-component-description {
-    font-family: var(--font-secondary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-    line-height: 15.6px;
-    color: #878581;
-    width: 297px;
-    &-mobile {
-      max-width: 250px;
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: 500;
-      font-size: 13px !important;
-      letter-spacing: 0.05em;
-      line-height: 15.6px;
-      text-align: justify;
-    }
-  }
-}
-
-.timeline-vinos h3 {
-  margin-top: 0;
-}
-
-.text-component-title-3 {
-  letter-spacing: 0.25em;
-}
-.font-footer-title {
-  font-family: var(--font-secondary);
-  color: #f1eee9;
-  font-style: normal;
-  font-weight: 300px;
-  font-size: 29.124px;
-  line-height: 47px;
-  letter-spacing: 0.05em;
-}
-
-.fonts-footer-colums {
-  font-family: var(--font-secondary);
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
-  color: #f1eee9;
 }
 
 .article {
   // e.g., blog posts
   --body-line-height: 1.58; // set body line-height
-  --text-vspace-multiplier: 1.2; // increase vertical spacing
-}
-
-.fs-big-font {
-  top: 46%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  font-weight: 500;
-  color: rgba(28, 28, 28, 0.7);
-  font-size: 500px;
-  line-height: 457.08px;
-  letter-spacing: 0.12em;
-  font-style: italic;
-  z-index: -1;
-}
-
-.fs-big-font2 {
-  transform: translateY(-50px);
-  width: 100%;
-  font-size: 340px;
-  font-style: italic;
-  color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke: 1px rgba(191, 149, 124, 0.5);
-
-  &-mobile {
-    text-align: left;
-    font-size: 135px;
-    line-height: 110px;
-    font-weight: 500;
-    font-style: italic;
-    color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px rgba(191, 149, 124, 0.5);
-    letter-spacing: 0px;
-    width: 100%;
-    z-index: -5 !important;
-  }
-  &-div {
-    top: 30px;
-    width: 100%;
-    height: 220px;
-  }
-}
-.history-storyline {
-  transform: translate(60px, 0px);
-}
-
-.fs-med-font {
-  letter-spacing: 1px;
-  color: #f1eee9;
-  font-size: 76.2px;
-  font-weight: 500;
-}
-
-.fs-med-font-mobile {
-  letter-spacing: 1px;
-  color: #f1eee9;
-  font-size: 47.12px;
-  font-weight: 500;
-}
-
-.fs-small-font {
-  font-family: var(--font-primary);
-  font-size: 76px;
-  letter-spacing: 0.17em;
-}
-
-.p-content {
-  color: var(--color-secondary);
-  font-size: 17px;
-  font-family: var(--font-secondary);
-}
-
-.grey-number {
-  font-family: var(--font-secondary);
-  color: #878581;
-  font-size: 47.12px;
-  &-mobile {
-    font-family: var(--font-secondary);
-    color: #878581;
-    font-size: 18px;
-    width: 43px;
-    height: 22px;
-    letter-spacing: 1px;
-    line-height: 33px;
-  }
-}
-
-.looping-tab-description {
-  font-size: 18px;
-}
-.looping-tab-description2 {
-  font-size: 13px;
-}
-
-.expresion-text {
-  font-family: var(--font-primary);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 76.2px;
-  line-height: 90px;
-  letter-spacing: 0.05em;
-  color: #1c1c1c;
-}
-
-//=================FELINO=====================
-#felino-momentos-mobile {
-  & h2 {
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 47.12px;
-    line-height: 76.24px;
-    letter-spacing: 0.07em;
-    color: #1c1c1c;
-    width: 279px;
-  }
-}
-
-//================HISTORIA====================
-#historia-prologo {
-  & h2 {
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 140px;
-    line-height: 165px;
-    color: rgba(28, 28, 28, 0.2);
-    letter-spacing: 0.12em;
-    top: 55px;
-    left: 50px;
-    z-index: 2;
-  }
-  & p {
-    font-family: var(--font-secondary);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0.01em;
-    color: #3e3937;
-  }
-}
-#historia-paul-hobbs {
-  & h2 {
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 123.29px;
-    line-height: 145.24px;
-    color: rgba(28, 28, 28, 0.2);
-    letter-spacing: 0.12em;
-  }
-  & h3 {
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 76.2px;
-    line-height: 123.29px;
-    letter-spacing: 0.12em;
-    color: #3e3937;
-  }
-  & p {
-    font-family: var(--font-secondary);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
-    letter-spacing: 0.05em;
-    color: #3e3937;
-    width: 908px;
-  }
-}
-#historia-inicio {
-  & h2 {
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 123.29px;
-    line-height: 145.24px;
-    color: rgba(28, 28, 28, 0.2);
-    letter-spacing: 0.12em;
-  }
-  & h3 {
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 76.2px;
-    line-height: 123.29px;
-    letter-spacing: 0.12em;
-    color: #3e3937;
-  }
-  & p {
-    font-family: var(--font-secondary);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 29px;
-    letter-spacing: 0.05em;
-    color: #3e3937;
-  }
-}
-#argentina-quote {
-  & h3 {
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 76.2px;
-    line-height: 90px;
-    letter-spacing: 0.05em;
-    color: #3e3937;
-    width: 1070px;
-  }
-  & h4 {
-    font-family: var(--font-primary);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: 0.07em;
-  }
-  & p {
-    font-family: var(--font-secondary);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 29px;
-    letter-spacing: 0.025em;
-    color: #3e3937;
-  }
-}
-#visita-argentina {
-  & h3 {
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 76px;
-    line-height: 90px;
-    letter-spacing: 0.05em;
-    color: #3e3937;
-    width: 383px;
-  }
-  & p {
-    font-family: var(--font-secondary);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 29px;
-    letter-spacing: 0.025em;
-    color: #3e3937;
-  }
-}
-#paul-argentina {
-  & h3 {
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 76.2px;
-    line-height: 89.76px;
-    letter-spacing: 0.05em;
-    color: #3e3937;
-    width: 238px;
-  }
-  & p {
-    font-family: var(--font-secondary);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0.01em;
-    color: #3e3937;
-  }
-}
-
-#argentina-cambio {
-  & h3 {
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 47.12px;
-    line-height: 55.5px;
-    letter-spacing: 0.07em;
-    color: #3e3937;
-  }
-  & p {
-    font-family: var(--font-secondary);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 29px;
-    letter-spacing: 0.025em;
-    color: #3e3937;
-    width: 953px;
-  }
-}
-
-//==================TERROIR ==============
-
-.terroir-origen-text {
-  font-family: var(--font-primary);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.12em;
-}
-
-//================VARIETALES==================
-
-#cobos-icono {
-  & h1 {
-    max-width: 140px;
-    font-size: 29.124px;
-    line-height: 47px;
-    text-align: center;
-    letter-spacing: 0.12em;
-    color: #f1eee9;
-  }
-}
-
-.varietales {
-  &-title {
-    font-family: var(--font-primary);
-    font-weight: 500;
-    font-size: 47.11px;
-    font-style: normal;
-    letter-spacing: 0.12em;
-    color: white;
-  }
-  &-subtitle {
-    font-family: var(--font-primary);
-    font-weight: 500;
-    font-size: 18px;
-    font-style: normal;
-    transform: translateY(17px);
-    letter-spacing: 0.12em;
-    //width: 110px;
-    color: rgba(241, 238, 233, 0.5);
-  }
-  &-description {
-    font-family: var(--font-secondary);
-    font-weight: normal;
-    font-size: 18px;
-    font-style: normal;
-    transform: translateY(17px);
-    letter-spacing: 0.12em;
-    color: var(--color-primary-light);
-  }
-}
-
-.varietales-component {
-  & .inner-varietal {
-    &-title {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 76.2px;
-      line-height: 123px;
-      letter-spacing: 0.12em;
-      color: #878581;
-    }
-    &-subtitle {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 29.1px;
-      line-height: 35px;
-      letter-spacing: 0.0025em;
-      color: #f1eee9;
-    }
-    &-paragraph {
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 22px;
-      text-align: justify;
-      color: #878581;
-      max-width: 398px;
-    }
-  }
-}
-
-
-//VINOS
-#vinos-grid h6 {
-  font-family: var(--font-primary);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.12em;
-  color: #1c1c1c;
-}
-
-//=============CONTACTO================
-
-//================MEDIA QUERIES=================
-
-@media only screen and (max-width: 1790px) {
-  .fs-big-font2 {
-    padding-top: 10px;
-    font-size: 280px;
-    // padding-top: 75px;
-  }
-  .history-storyline {
-    transform: translateX(60px);
-  }
-  .fs-med-font {
-    font-size: 76.2px;
-  }
-}
-@media only screen and (max-width: 1422px) {
-  .fs-big-font2 {
-    font-size: 250px;
-    // padding-top: 75px;
-  }
-  .history-storyline {
-    transform: translateX(60px);
-  }
-}
-
-@media only screen and (max-width: 1590px) {
-  .fs-small-font {
-    font-size: 70px;
-  }
-}
-
-@media only screen and (max-width: 1366px) {
-  .fs-big-font2 {
-    font-size: 250px;
-  }
-  .history-storyline {
-    transform: translateX(60px);
-  }
-  .looping-tab-description {
-    font-size: 13px;
-  }
-  .vinos-especiales-unicos {
-    & .inner-vinos {
-      &-title {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 47.1162px;
-        line-height: 76px;
-        letter-spacing: 0.12em;
-        color: #1c1c1c;
-      }
-      &-subtitle {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: 0.0025em;
-        color: #1c1c1c;
-      }
-      &-paragraph {
-        font-family: var(--font-secondary);
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 16px;
-        color: #878581;
-        max-width: 398px;
-      }
-    }
-  }
-  .expresion-text {
-    font-family: var(--font-primary);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 55px;
-    line-height: 65px;
-    letter-spacing: 0.05em;
-    color: #1c1c1c;
-  }
-  //================HISTORIA====================
-  #historia-prologo {
-    & h2 {
-      font-family: var(--font-primary);
-      font-style: normal;
-      font-weight: 500;
-      font-size: 100px;
-      line-height: 118px;
-      color: rgba(28, 28, 28, 0.2);
-      letter-spacing: 0.12em;
-      top: 90px;
-      left: 35px;
-    }
-    & p {
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 24px;
-      letter-spacing: 0.01em;
-      color: #3e3937;
-    }
-  }
-
-  #historia-inicio {
-    & p {
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 29px;
-      letter-spacing: 0.05em;
-      color: #3e3937;
-    }
-  }
-  #argentina-quote {
-    & h3 {
-      font-family: var(--font-primary);
-      font-style: normal;
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 47.12px;
-      letter-spacing: 0.07em;
-      color: #3e3937;
-      width: 617px;
-    }
-    & h4 {
-      font-family: var(--font-primary);
-      font-weight: 500;
-      font-size: 13px;
-      line-height: 30px;
-      letter-spacing: 0.07em;
-    }
-    & p {
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 29px;
-      letter-spacing: 0.025em;
-      color: #3e3937;
-    }
-  }
-  #visita-argentina {
-    & h3 {
-      font-family: var(--font-primary);
-      font-style: normal;
-      font-weight: 500;
-      font-size: 47.1162px;
-      line-height: 56px;
-      letter-spacing: 0.07em;
-      color: #3e3937;
-      width: 224px;
-    }
-    & p {
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 29px;
-      letter-spacing: 0.025em;
-      color: #3e3937;
-    }
-  }
-  #paul-argentina {
-    & h3 {
-      font-family: var(--font-primary);
-      font-style: normal;
-      font-weight: 500;
-      font-size: 47.1162px;
-      line-height: 56px;
-      letter-spacing: 0.07em;
-      color: #3e3937;
-      width: 167px;
-    }
-    & p {
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 24px;
-      letter-spacing: 0.01em;
-      color: #3e3937;
-    }
-  }
-  #argentina-cambio {
-    & h3 {
-      font-family: var(--font-primary);
-      font-style: normal;
-      font-weight: 500;
-      font-size: 47.12px;
-      line-height: 55.5px;
-      letter-spacing: 0.07em;
-      color: #3e3937;
-    }
-    & p {
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 29px;
-      letter-spacing: 0.025em;
-      color: #3e3937;
-      width: 1000px;
-    }
-  }
-}
-
-@media only screen and (max-width: 1332px) {
-  .fs-big-font {
-    font-size: 290px;
-  }
-  .fs-big-font2 {
-    top: 20px;
-    font-size: 200px;
-  }
-  .fs-med-font {
-    font-size: 50px;
-  }
-}
-
-@media only screen and (max-width: 1240px) {
-  .fs-small-font {
-    font-size: 60px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .fs-big-font {
-    font-size: 190px;
-  }
-  .fs-small-font {
-    font-size: 70px;
-  }
-  .text-component {
-    & .text-component-title {
-      font-size: 30px;
-    }
-    & .text-component-title-2 {
-      font-size: 30px;
-    }
-  }
-  .fs-big-font2 {
-    text-align: initial;
-    font-size: 185px;
-    padding-top: 20px;
-    // transform: translateY(-35%);
-  }
-  .history-storyline {
-    font-size: 60px;
-    transform: translateX(-70px) translateY(-100px);
-    z-index: 3 !important;
-
-    &-mobile {
-      font-size: 47.1px;
-      padding-left: 15px;
-      line-height: 89px;
-      letter-spacing: 0.12em;
-      font-style: normal;
-      transform: translateY(10px);
-      z-index: 5 !important;
-    }
-  }
-  .varietales-component {
-    & .inner-varietal {
-      &-title {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 29.12px;
-        line-height: 48px;
-        letter-spacing: 0.12em;
-        color: #878581;
-      }
-      &-subtitle {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: 0.0025em;
-        color: #f1eee9;
-      }
-      &-paragraph {
-        font-family: var(--font-secondary);
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 16px;
-        color: #878581;
-        max-width: 325px;
-        text-align: left;
-      }
-    }
-  }
-  .varietales-component-baja {
-    & .inner-varietal {
-      &-title {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 29.12px;
-        line-height: 48px;
-        letter-spacing: 0.12em;
-        color: #1c1c1c;
-      }
-      &-subtitle {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: 0.01em;
-        color: #1c1c1c;
-      }
-      &-paragraph {
-        font-family: var(--font-secondary);
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 16px;
-        color: #1c1c1c;
-        max-width: 250px;
-        letter-spacing: 0.05em;
-      }
-    }
-  }
-  .varietales {
-    &-description {
-      font-family: var(--font-secondary);
-      font-weight: normal;
-      font-size: 13px;
-      font-style: normal;
-      transform: translateY(17px);
-      letter-spacing: 0.12em;
-      color: var(--color-primary-light);
-    }
-  }
-}
-#vinos-grid-mobile h6 {
-  font-family: var(--font-primary);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 7px;
-  color: #1c1c1c;
-}
-
-// @media only screen and (max-width: 850px) {}
-@media only screen and (max-width: 550px) {
-  .fs-big-font {
-    font-size: 140px;
-  }
-  .fs-big-font2 {
-    font-size: 120px;
-  }
-  .history-storyline {
-    font-size: 50px;
-    padding-top: 0;
-  }
-  .fs-med-font {
-    font-size: 25px;
-  }
-  .text-component-title {
-    font-size: 29.1px;
-  }
-  .text-component-title-3 {
-    letter-spacing: 0.22em;
-  }
-
-  .vinos-especiales-unicos {
-    & .inner-vinos {
-      &-title {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 47.1162px;
-        color: #1c1c1c;
-        line-height: 76px;
-        letter-spacing: 0.12em;
-      }
-      &-subtitle {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: 0.0025em;
-        color: #1c1c1c;
-      }
-      &-paragraph {
-        font-family: var(--font-secondary);
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 16px;
-        letter-spacing: 0.05em;
-        text-align: justify;
-        color: #878581;
-        max-width: 250px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 374px) {
-  .fs-big-font2 {
-    &-mobile {
-      font-size: 100px;
-    }
-  }
+  --text-space-y-multiplier: 1.2; // control vertical spacing
 }

@@ -10,13 +10,13 @@
 
 	function initSwipeContent(content) {
 		content.element.addEventListener('mousedown', handleEvent.bind(content));
-		content.element.addEventListener('touchstart', handleEvent.bind(content));
+		content.element.addEventListener('touchstart', handleEvent.bind(content), {passive: true});
 	};
 
 	function initDragging(content) {
 		//add event listeners
 		content.element.addEventListener('mousemove', handleEvent.bind(content));
-		content.element.addEventListener('touchmove', handleEvent.bind(content));
+		content.element.addEventListener('touchmove', handleEvent.bind(content), {passive: true});
 		content.element.addEventListener('mouseup', handleEvent.bind(content));
 		content.element.addEventListener('mouseleave', handleEvent.bind(content));
 		content.element.addEventListener('touchend', handleEvent.bind(content));

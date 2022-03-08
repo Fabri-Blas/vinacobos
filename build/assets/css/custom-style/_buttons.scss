@@ -1,3 +1,5 @@
+@use "../base" as *;
+
 // --------------------------------
 
 // (START) Global editor code https://codyhouse.co/ds/globals/buttons
@@ -8,26 +10,18 @@
   --btn-font-size: 1em;
   --btn-padding-x: var(--space-sm);
   --btn-padding-y: var(--space-xxs);
-  --btn-radius: 0.25em;
-}
-
-button {
-  font-family: var(--font-secondary);
-  text-transform: uppercase;
+  --btn-radius: var(--radius-md);
 }
 
 .btn {
+  background: var(--color-bg-dark);
+  color: var(--color-contrast-higher);
   cursor: pointer;
   text-decoration: none;
   line-height: 1.2;
   @include fontSmooth;
-  box-shadow: var(--shadow-xs);
   transition: all 0.2s ease;
   will-change: transform;
-
-  &:hover {
-    box-shadow: var(--shadow-sm);
-  }
 
   &:focus {
     box-shadow: 0px 0px 0px 2px alpha(var(--color-contrast-higher), 0.15);
@@ -41,295 +35,54 @@ button {
 
 // themes
 .btn--primary {
-  cursor: pointer;
-  position: absolute;
-  bottom: 70px;
-  left: 99px;
-  font-size: 13px;
-  text-decoration: none;
-  color: var(--color-primary);
-  letter-spacing: 0.12em;
-  width: 110px;
-  text-align: left;
-  background: transparent;
+  font-family: var(--font-secondary) !important;
+  font-size: 12px !important;
+  letter-spacing: 1px !important;
+  font-weight: 600;
   text-transform: uppercase;
-  border: 0px;
-  border-bottom: 2px solid black;
-  transition: all 0.5s;
-  padding-bottom: 8px;
-  z-index: 99;
-  font-family: var(--font-primary);
-  &:hover {
-    letter-spacing: 0.2em;
-    width: 83px;
-    transition: all 0.5s;
-  }
-}
-.btn--primary-block {
-  cursor: pointer;
-  font-size: 13px;
-  text-decoration: none;
-  font-family: var(--font-primary);
-  color: var(--color-primary);
-  letter-spacing: 0.12em;
-  width: 120px;
-  padding-bottom: 8px;
-  padding-left: 0;
-  text-align: left;
-  background: transparent;
-  text-transform: uppercase;
-  border: 0px;
-  border-bottom: 1px solid black;
-  transition: all 0.5s;
-  z-index: 99;
-  &:hover {
-    letter-spacing: 0.2em;
-    width: 81px;
-    transition: all 0.5s;
-  }
-}
-.btn--secondary-block {
-  cursor: pointer;
-  font-size: 15px;
-  text-decoration: none;
-  font-family: var(--font-primary);
-  color: black;
-  letter-spacing: 0.12em;
-  width: 240px;
-  padding-bottom: 8px;
-  text-align: center;
-  background: transparent;
-  text-transform: uppercase;
-  border: 0px;
-  transition: all 0.5s;
-  z-index: 3 !important;
-  &:hover {
-    letter-spacing: 0.2em;
-    width: 220px;
-    transition: all 0.5s;
-  }
 
-  &-borderbottom1 {
-    border-bottom: 1px solid black;
-    width: 150px;
-    margin: 0 auto;
-
-    &-desktop {
-      border-bottom: 1px solid black;
-      width: 220px;
-      margin: 0 auto;
-      transition: all 0.5s;
-    }
-  }
-
-  &:hover ~ .btn--secondary-block-borderbottom1-desktop {
-    transition: all 0.5s;
-    width: 150px;
-  }
-}
-.btn--secondary-block-2 {
-  cursor: pointer;
-  font-size: 15px;
-  text-decoration: none;
-  font-family: var(--font-primary);
-  // color: var(--color-secondary);
-  color: black;
-  letter-spacing: 0.12em;
-  width: 240px;
-  padding-bottom: 8px;
-  text-align: center;
-  background: transparent;
-  text-transform: uppercase;
-  border: 0px;
-  // border-bottom: 1px solid var(--color-secondary);
-  transition: all 0.5s;
-  &:hover {
-    letter-spacing: 0.2em;
-    width: 290px;
-    transition: all 0.5s;
-  }
-
-  &-borderbottom2 {
-    border-bottom: 1px solid black;
-    width: 120px;
-    margin: 0 auto;
-
-    &-desktop {
-      border-bottom: 1px solid black;
-      width: 190px;
-      margin: 0 auto;
-      transition: all 0.5s;
-    }
-  }
-  &:hover ~ .btn--secondary-block-2-borderbottom2-desktop {
-    transition: all 0.5s;
-    width: 120px;
-  }
-}
-.btn--secondary-block-3 {
-  cursor: pointer;
-  font-size: 18px !important;
-  text-decoration: none !important;
-  font-family: var(--font-primary) !important;
-  color: black !important;
-  letter-spacing: 0.12em !important;
-  width: 150px !important;
-  height: 25px !important;
-  padding-bottom: 8px !important;
-  text-align: center !important;
-  background: transparent !important;
-  border: 0px !important;
-  border-radius: 0 !important;
-  transition: ease-in-out 0.5s !important;
-  transform: none !important;
-  &:hover {
-    letter-spacing: 0.2em !important;
-    width: 290px !important;
-    transition: ease-in-out 0.5s !important;
-  }
-
-  &-borderbottom3 {
-    border-bottom: 1px solid black !important;
-    width: 90px !important;
-    margin: 0 auto !important;
-
-    &-desktop {
-      border-bottom: 1px solid black;
-      width: 120px;
-      margin: 0 auto;
-      transition: all 0.5s;
-    }
-  }
-  &:hover ~ .btn--secondary-block-3-borderbottom3-desktop {
-    transition: all 0.5s !important;
-    width: 50px !important;
-  }
-}
-.btn--primary-right {
-  cursor: pointer;
-  position: absolute;
-  font-size: 13px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--color-primary-light);
-  letter-spacing: 0.12em;
-  width: 110px;
-  text-align: right;
-  background: transparent;
-  border: 0px;
-  border-bottom: 1px solid var(--color-primary-light);
-  transition: all 0.5s;
-  bottom: 17px;
-  right: 100px;
-  padding-bottom: 8px;
-  padding-right: 0;
-  font-family: var(--font-primary);
+  background-color: #000000 !important;
+  color: #ffffff;
+  padding: 15px 30px !important;
+  transition: all 0.35s ease-in-out;
 
   &:hover {
-    letter-spacing: 0.2em;
-    width: 83px;
-    transition: all 0.5s;
+    background-color: #a0804f !important;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 8px rgb(211, 211, 211);
   }
 }
 
-.btn--nav {
-  font-size: 13px;
-  font-family: var(--font-secondary);
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--color-primary-light) !important;
-  // color: white;
-  letter-spacing: 0;
-  text-align: center;
-  // border: 0px;
-  // background: linear-gradient(var(--color-primary-light) 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
-  // transition: 0.3s, background-position 0s 0.3s;
-  padding: 0 0 8px 0;
-  margin: 0;
-
-  &-black {
-    font-size: 13px;
-    font-family: var(--font-secondary);
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black !important;
-    // color: white;
-    letter-spacing: 0;
-    text-align: center;
-    border: 0px;
-    padding: 0 0 8px 0;
-    margin: 0;
-    // background: linear-gradient(black 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
-    // transition: 0.3s, background-position 0s 0.3s;
-
-    &:hover {
-      cursor: pointer;
-      transition: all 0.5s;
-      color: black !important;
-    }
-  }
-  &-mobile {
-    color: white !important;
-  }
+.btn--subtle {
+  background: var(--color-bg-light);
+  color: var(--color-contrast-higher);
+  box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower), var(--shadow-xs);
 
   &:hover {
-    // --d: 100%;
-    // --p: 100%;
-    cursor: pointer;
-    font-weight: 700;
-    transition: all 0.5s;
-    color: var(--color-primary-light) !important;
-  }
-}
-
-.nav--line {
-  background: linear-gradient(var(--color-primary-light) 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
-  transition: 0.3s, background-position 0s 0.3s;
-  &:hover {
-    --d: 100%;
-    --p: 100%;
+    background: var(--color-bg-lighter);
+    box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower), var(--shadow-sm);
   }
 
-  &-black {
-    background: linear-gradient(black 0 0) var(--p, 0) 100% / var(--d, 0) 1px no-repeat;
-    transition: 0.3s, background-position 0s 0.3s;
-    &:hover {
-      --d: 100%;
-      --p: 100%;
-    }
-  }
-
-  &-selected {
-    background: linear-gradient(var(--color-primary-light) 0 0) var(--p, 35%) 100% / var(--d, 35%) 1px no-repeat;
-    background-position: center 37px;
-    transition: 0.3s, background-position 0s 0.3s;
-    &:hover {
-      --d: 100%;
-      --p: 100%;
-    }
-
-    &-black {
-      background: linear-gradient(black 0 0) var(--p, 35%) 100% / var(--d, 35%) 1px no-repeat;
-      background-position: center 37px;
-      transition: 0.3s, background-position 0s 0.3s;
-      &:hover {
-        --d: 100%;
-        --p: 100%;
-      }
-    }
+  &:focus {
+    box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower),
+      0px 0px 0px 2px alpha(var(--color-contrast-higher), 0.05);
   }
 }
 
 .btn--accent {
   background: var(--color-accent);
   color: var(--color-white);
+  box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), var(--shadow-xs);
 
   &:hover {
-    background: var(--color-accent-dark);
+    background: var(--color-accent-light);
+    box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), var(--shadow-sm);
   }
 
   &:focus {
-    box-shadow: 0px 0px 0px 2px alpha(var(--color-accent), 0.2);
+    box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 0px 0px 2px alpha(var(--color-accent), 0.2);
   }
 }
 
@@ -352,78 +105,6 @@ button {
 
 .btn--lg {
   font-size: 1.4em;
-}
-
-// BTN CONTACTO
-.btn--contacto {
-  cursor: pointer;
-  position: absolute;
-  right: 230px;
-  font-size: 13px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--color-primary-light);
-  letter-spacing: 0.12em;
-  width: 110px;
-  text-align: right;
-  background: transparent;
-  border: 0px;
-  border-bottom: 1px solid var(--color-primary-light);
-  transition: all 0.5s;
-  padding-bottom: 8px;
-  padding-right: 0;
-  font-family: var(--font-primary);
-
-  &:hover {
-    letter-spacing: 0.2em;
-    width: 83px;
-    transition: all 0.5s;
-  }
-
-  &-mobile {
-    cursor: pointer;
-    font-size: 13px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--color-primary-light);
-    letter-spacing: 0.12em;
-    width: 110px;
-    text-align: right;
-    background: transparent;
-    border: 0px;
-    border-bottom: 1px solid var(--color-primary-light);
-    transition: all 0.5s;
-    padding-bottom: 8px;
-    padding-right: 0;
-    font-family: var(--font-primary);
-  }
-}
-
-@media only screen and (max-width: 1366px) {
-  .btn--primary {
-    left: 70px;
-
-    &-right {
-      right: 71px;
-    }
-  }
-  .btn--contacto {
-    right: 180px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .btn--primary {
-    font-size: 13px;
-    width: 100px;
-    left: 20px;
-
-    &-right {
-      font-size: 13px;
-      width: 100px;
-      right: 25px;
-    }
-  }
 }
 
 // --------------------------------

@@ -1,3 +1,5 @@
+@use '../base' as *;
+
 /* -------------------------------- 
 
 File#: _2_carousel
@@ -60,14 +62,14 @@ Usage: codyhouse.co/license
 }
 
 .carousel__control {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  --size: 40px;
   width: 40px;
   height: 40px;
-  background-color: var(--color-bg);
+
+  display: flex;
+  background-color: var(--color-bg-light);
   border-radius: 50%;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--inner-glow), var(--shadow-sm);
   z-index: 1;
   transition: .2s;
 
@@ -76,19 +78,20 @@ Usage: codyhouse.co/license
   }
 
   &:hover {
-    box-shadow: var(--shadow-md);
+    background-color: var(--color-bg-lighter);
+    box-shadow: var(--inner-glow), var(--shadow-md);
   }
 
   &[disabled] {
     pointer-events: none;
-    background-color: var(--color-contrast-lower);
-    color: var(--color-contrast-low);
+    opacity: 0.5;
     box-shadow: none;
   }
 
   .icon {
+    --size: 20px;
     display: block;
-    font-size: 20px; // icon size
+    margin: auto;
   }
 }
  
@@ -135,7 +138,7 @@ Usage: codyhouse.co/license
       border: 1px solid var(--color-contrast-high);
       opacity: 0;
       transform: scale(0);
-      transition: 0.3s;
+      transition: 3s;
     }
     
     &:focus {
@@ -155,14 +158,14 @@ Usage: codyhouse.co/license
 
 // --pagination
 .carousel__navigation--pagination {
-  grid-template-columns: repeat(auto-fit, minmax(24px, auto));
+  grid-template-columns: repeat(auto-fit, 24px);
 
   .carousel__nav-item button {
-    width: 100%;
-    height: auto;
+    width: 24px;
+    height: 24px;
     color: var(--color-bg);
-    font-size: var(--text-xs);
-    padding: var(--space-xxxs) var(--space-xxs);
+    font-size: 12px;
+    line-height: 24px;
     border-radius: var(--radius-md);
     text-align: center;
 

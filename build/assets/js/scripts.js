@@ -5,24 +5,18 @@ function Util () {};
 	class manipulation functions
 */
 Util.hasClass = function(el, className) {
-	if (el.classList) return el.classList.contains(className);
-	else return !!el.getAttribute('class').match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+	return el.classList.contains(className);
 };
 
 Util.addClass = function(el, className) {
 	var classList = className.split(' ');
- 	if (el.classList) el.classList.add(classList[0]);
-  else if (!Util.hasClass(el, classList[0])) el.setAttribute('class', el.getAttribute('class') +  " " + classList[0]);
+ 	el.classList.add(classList[0]);
  	if (classList.length > 1) Util.addClass(el, classList.slice(1).join(' '));
 };
 
 Util.removeClass = function(el, className) {
 	var classList = className.split(' ');
-	if (el.classList) el.classList.remove(classList[0]);	
-	else if(Util.hasClass(el, classList[0])) {
-		var reg = new RegExp('(\\s|^)' + classList[0] + '(\\s|$)');
-    el.setAttribute('class', el.getAttribute('class').replace(reg, ' '));
-	}
+	el.classList.remove(classList[0]);	
 	if (classList.length > 1) Util.removeClass(el, classList.slice(1).join(' '));
 };
 
@@ -43,8 +37,8 @@ Util.setAttributes = function(el, attrs) {
 Util.getChildrenByClassName = function(el, className) {
   var children = el.children,
     childrenByClass = [];
-  for (var i = 0; i < el.children.length; i++) {
-    if (Util.hasClass(el.children[i], className)) childrenByClass.push(el.children[i]);
+  for (var i = 0; i < children.length; i++) {
+    if (Util.hasClass(children[i], className)) childrenByClass.push(children[i]);
   }
   return childrenByClass;
 };
@@ -321,2172 +315,6 @@ Math.easeOutElastic = function (t, b, c, d) {
 function resetFocusTabsStyle() {
   window.dispatchEvent(new CustomEvent('initFocusTabs'));
 };
-// File#: _1_anim-menu-btn
-// Usage: codyhouse.co/license
-(function() {
-	var menuBtns = document.getElementsByClassName('js-anim-menu-btn');
-	if( menuBtns.length > 0 ) {
-		for(var i = 0; i < menuBtns.length; i++) {(function(i){
-			initMenuBtn(menuBtns[i]);
-		})(i);}
-
-		function initMenuBtn(btn) {
-			btn.addEventListener('click', function(event){	
-				event.preventDefault();
-				var status = !Util.hasClass(btn, 'anim-menu-btn--state-b');
-				Util.toggleClass(btn, 'anim-menu-btn--state-b', status);
-				// emit custom event
-				var event = new CustomEvent('anim-menu-btn-clicked', {detail: status});
-				btn.dispatchEvent(event);
-			});
-		};
-	}
-}());
-// File#: _1_animated-headline
-// Usage: codyhouse.co/license
-(function() {
-  var TextAnim = function(element) {
-    this.element = element;
-    this.wordsWrapper = this.element.getElementsByClassName(' js-text-anim__wrapper');
-    this.words = this.element.getElementsByClassName('js-text-anim__word');
-    this.selectedWord = 0;
-    // interval between two animations
-    this.loopInterval = parseFloat(getComputedStyle(this.element).getPropertyValue('--text-anim-pause'))*1000 || 1000;
-    // duration of single animation (e.g., time for a single word to rotate)
-    this.transitionDuration = parseFloat(getComputedStyle(this.element).getPropertyValue('--text-anim-duration'))*1000 || 1000;
-    // keep animating after first loop was completed
-    this.loop = (this.element.getAttribute('data-loop') && this.element.getAttribute('data-loop') == 'off') ? false : true;
-    this.wordInClass = 'text-anim__word--in';
-    this.wordOutClass = 'text-anim__word--out';
-    // check for specific animations
-    this.isClipAnim = Util.hasClass(this.element, 'text-anim--clip');
-    if(this.isClipAnim) {
-      this.animBorderWidth = parseInt(getComputedStyle(this.element).getPropertyValue('--text-anim-border-width')) || 2;
-      this.animPulseClass = 'text-anim__wrapper--pulse';
-    }
-    initTextAnim(this);
-  };
-
-  function initTextAnim(element) {
-    // make sure there's a word with the wordInClass
-    setSelectedWord(element);
-    // if clip animation -> add pulse class
-    if(element.isClipAnim) {
-      Util.addClass(element.wordsWrapper[0], element.animPulseClass);
-    }
-    // init loop
-    loopWords(element);
-  };
-
-  function setSelectedWord(element) {
-    var selectedWord = element.element.getElementsByClassName(element.wordInClass);
-    if(selectedWord.length == 0) {
-      Util.addClass(element.words[0], element.wordInClass);
-    } else {
-      element.selectedWord = Util.getIndexInArray(element.words, selectedWord[0]);
-    }
-  };
-
-  function loopWords(element) {
-    // stop animation after first loop was completed
-    if(!element.loop && element.selectedWord == element.words.length - 1) {
-      return;
-    }
-    var newWordIndex = getNewWordIndex(element);
-    setTimeout(function() {
-      if(element.isClipAnim) { // clip animation only
-        switchClipWords(element, newWordIndex);
-      } else {
-        switchWords(element, newWordIndex);
-      }
-    }, element.loopInterval);
-  };
-
-  function switchWords(element, newWordIndex) {
-    // switch words
-    Util.removeClass(element.words[element.selectedWord], element.wordInClass);
-    Util.addClass(element.words[element.selectedWord], element.wordOutClass);
-    Util.addClass(element.words[newWordIndex], element.wordInClass);
-    // reset loop
-    resetLoop(element, newWordIndex);
-  };
-
-  function resetLoop(element, newIndex) {
-    setTimeout(function() { 
-      // set new selected word
-      Util.removeClass(element.words[element.selectedWord], element.wordOutClass);
-      element.selectedWord = newIndex;
-      loopWords(element); // restart loop
-    }, element.transitionDuration);
-  };
-
-  function switchClipWords(element, newWordIndex) {
-    // clip animation only
-    var startWidth =  element.words[element.selectedWord].offsetWidth,
-      endWidth = element.words[newWordIndex].offsetWidth;
-    
-    // remove pulsing animation
-    Util.removeClass(element.wordsWrapper[0], element.animPulseClass);
-    // close word
-    animateWidth(startWidth, element.animBorderWidth, element.wordsWrapper[0], element.transitionDuration, function() {
-      // switch words
-      Util.removeClass(element.words[element.selectedWord], element.wordInClass);
-      Util.addClass(element.words[newWordIndex], element.wordInClass);
-      element.selectedWord = newWordIndex;
-
-      // open word
-      animateWidth(element.animBorderWidth, endWidth, element.wordsWrapper[0], element.transitionDuration, function() {
-        // add pulsing class
-        Util.addClass(element.wordsWrapper[0], element.animPulseClass);
-        loopWords(element);
-      });
-    });
-  };
-
-  function getNewWordIndex(element) {
-    // get index of new word to be shown
-    var index = element.selectedWord + 1;
-    if(index >= element.words.length) index = 0;
-    return index;
-  };
-
-  function animateWidth(start, to, element, duration, cb) {
-    // animate width of a word for the clip animation
-    var currentTime = null;
-
-    var animateProperty = function(timestamp){  
-      if (!currentTime) currentTime = timestamp;         
-      var progress = timestamp - currentTime;
-      
-      var val = Math.easeInOutQuart(progress, start, to - start, duration);
-      element.style.width = val+"px";
-      if(progress < duration) {
-          window.requestAnimationFrame(animateProperty);
-      } else {
-        cb();
-      }
-    };
-  
-    //set the width of the element before starting animation -> fix bug on Safari
-    element.style.width = start+"px";
-    window.requestAnimationFrame(animateProperty);
-  };
-
-  // init TextAnim objects
-  var textAnim = document.getElementsByClassName('js-text-anim'),
-    reducedMotion = Util.osHasReducedMotion();
-  if( textAnim ) {
-    if(reducedMotion) return;
-    for( var i = 0; i < textAnim.length; i++) {
-      (function(i){ new TextAnim(textAnim[i]);})(i);
-    }
-  }
-}());
-// File#: _1_article-preview-v3
-// Usage: codyhouse.co/license
-(function () {
-    var Story3 = function (element) {
-        this.element = element;
-        // data attributes
-        this.src = this.element.getAttribute('data-story-img-src');
-        this.align = this.element.getAttribute('data-story-img-align') ? this.element.getAttribute('data-story-img-align') : 'right';
-        this.offset = this.element.getAttribute('data-story-img-offset-x') ? this.element.getAttribute('data-story-img-offset-x') : '0px';
-        this.width = this.element.getAttribute('data-story-img-width') ? this.element.getAttribute('data-story-img-width') : '30%';
-        this.customClasses = this.element.getAttribute('data-story-img-class') ? this.element.getAttribute('data-story-img-class') : 'display@lg';
-        // preview classes
-        this.previewClass = 'story-v3__preview-img js-story-v3__preview-img' + ' ' + this.customClasses;
-        this.previewVisibleClass = 'story-v3__preview-img--is-visible';
-        this.preview = false; // will use this to store the preview img element
-        // params needed for event listening
-        this.eventBind = false;
-        this.mousePosition = false;
-        // used during mousemove
-        this.previewMoving = false;
-        initStory3(this);
-    };
-
-    function initStory3(story) {
-        // create img preview element
-        createPreview(story);
-        // bind events
-        story.eventBind = handleEvent.bind(story);
-        story.element.addEventListener('mouseenter', story.eventBind);
-    };
-
-    function createPreview(story) {
-        story.preview = document.createElement('img');
-        story.element.appendChild(story.preview);
-        Util.addClass(story.preview, story.previewClass);
-        Util.setAttributes(story.preview, { 'aria-hidden': true, 'src': story.src });
-    };
-
-    function handleEvent(event) {
-        switch (event.type) {
-            case 'mouseenter': {
-                showPreview(this, event);
-                break;
-            }
-            case 'mouseleave': {
-                hidePreview(this, event);
-                break;
-            }
-            case 'mousemove': {
-                movePreview(this, event);
-                break;
-            }
-        }
-    };
-
-    function showPreview(story, event) {
-        // show preview
-        story.preview.setAttribute('style', getPreviewStyle(story));
-        Util.addClass(story.preview, story.previewVisibleClass);
-        // bind events
-        story.element.addEventListener('mouseleave', story.eventBind);
-        story.element.addEventListener('mousemove', story.eventBind);
-        // store mouse position
-        story.mousePosition = [event.clientX, event.clientY];
-    };
-
-    function hidePreview(story, event) {
-        // hide image
-        Util.removeClass(story.preview, story.previewVisibleClass);
-        story.preview.style.transform = '';
-        // remove events
-        story.element.removeEventListener('mouseleave', story.eventBind);
-        story.element.removeEventListener('mousemove', story.eventBind);
-    };
-
-    function movePreview(story, event) { // parallax effect
-        if (story.previewMoving) return;
-        story.previewMoving = true;
-        window.requestAnimationFrame(function () {
-            updatePreviewPosition(story, event);
-            story.previewMoving = false;
-        });
-    };
-
-    function updatePreviewPosition(story, event) {
-        // move preview image
-        var translateX = event.clientX - story.mousePosition[0],
-            translateY = event.clientY - story.mousePosition[1];
-        translateX = resetTranslateValue(translateX);
-        translateY = resetTranslateValue(translateY);
-        story.preview.style.transform = 'translateY(calc(-50% + ' + translateY + 'px)) translateX(' + translateX + 'px)';
-    };
-
-    function getPreviewStyle(story) {
-        var storyRect = story.element.getBoundingClientRect(),
-            horizontalStyle = '';
-        if (story.align == 'right') {
-            horizontalStyle = 'right:' + getValue(storyRect.width, story.offset) + 'px;';
-        } else {
-            horizontalStyle = 'left:' + getValue(storyRect.width, story.offset) + 'px;';
-        }
-        var style = 'width: ' + getValue(storyRect.width, story.width) + 'px;' + horizontalStyle;
-
-        return style;
-    };
-
-    function getValue(width, val) {
-        if (val.indexOf('%') > -1) {
-            return width * parseInt(val) / 100;
-        } else {
-            return parseInt(val);
-        }
-    };
-
-    function resetTranslateValue(val) {
-        return parseInt(val / 30);
-    };
-
-    window.Story3 = Story3;
-
-    // init the Story3 objects
-    var story3 = document.getElementsByClassName('js-story-v3');
-    if (story3.length > 0) {
-        for (var i = 0; i < story3.length; i++) {
-            (function (i) { new Story3(story3[i]); })(i);
-        }
-    }
-}());
-// File#: _1_diagonal-movement
-// Usage: codyhouse.co/license
-/*
-  Modified version of the jQuery-menu-aim plugin
-  https://github.com/kamens/jQuery-menu-aim
-  - Replaced jQuery with Vanilla JS
-  - Minor changes
-*/
-(function() {
-  var menuAim = function(opts) {
-    init(opts);
-  };
-
-  window.menuAim = menuAim;
-
-  function init(opts) {
-    var activeRow = null,
-      mouseLocs = [],
-      lastDelayLoc = null,
-      timeoutId = null,
-      options = Util.extend({
-        menu: '',
-        rows: false, //if false, get direct children - otherwise pass nodes list 
-        submenuSelector: "*",
-        submenuDirection: "right",
-        tolerance: 75,  // bigger = more forgivey when entering submenu
-        enter: function(){},
-        exit: function(){},
-        activate: function(){},
-        deactivate: function(){},
-        exitMenu: function(){}
-      }, opts),
-      menu = options.menu;
-
-    var MOUSE_LOCS_TRACKED = 3,  // number of past mouse locations to track
-      DELAY = 300;  // ms delay when user appears to be entering submenu
-
-    /**
-     * Keep track of the last few locations of the mouse.
-     */
-    var mouseMoveFallback = function(event) {
-      (!window.requestAnimationFrame) ? mousemoveDocument(event) : window.requestAnimationFrame(function(){mousemoveDocument(event);});
-    };
-
-    var mousemoveDocument = function(e) {
-      mouseLocs.push({x: e.pageX, y: e.pageY});
-
-      if (mouseLocs.length > MOUSE_LOCS_TRACKED) {
-        mouseLocs.shift();
-      }
-    };
-
-    /**
-     * Cancel possible row activations when leaving the menu entirely
-     */
-    var mouseleaveMenu = function() {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-
-      // If exitMenu is supplied and returns true, deactivate the
-      // currently active row on menu exit.
-      if (options.exitMenu(this)) {
-        if (activeRow) {
-          options.deactivate(activeRow);
-        }
-
-        activeRow = null;
-      }
-    };
-
-    /**
-     * Trigger a possible row activation whenever entering a new row.
-     */
-    var mouseenterRow = function() {
-      if (timeoutId) {
-        // Cancel any previous activation delays
-        clearTimeout(timeoutId);
-      }
-
-      options.enter(this);
-      possiblyActivate(this);
-    },
-    mouseleaveRow = function() {
-      options.exit(this);
-    };
-
-    /*
-     * Immediately activate a row if the user clicks on it.
-     */
-    var clickRow = function() {
-      activate(this);
-    };  
-
-    /**
-     * Activate a menu row.
-     */
-    var activate = function(row) {
-      if (row == activeRow) {
-        return;
-      }
-
-      if (activeRow) {
-        options.deactivate(activeRow);
-      }
-
-      options.activate(row);
-      activeRow = row;
-    };
-
-    /**
-     * Possibly activate a menu row. If mouse movement indicates that we
-     * shouldn't activate yet because user may be trying to enter
-     * a submenu's content, then delay and check again later.
-     */
-    var possiblyActivate = function(row) {
-      var delay = activationDelay();
-
-      if (delay) {
-        timeoutId = setTimeout(function() {
-          possiblyActivate(row);
-        }, delay);
-      } else {
-        activate(row);
-      }
-    };
-
-    /**
-     * Return the amount of time that should be used as a delay before the
-     * currently hovered row is activated.
-     *
-     * Returns 0 if the activation should happen immediately. Otherwise,
-     * returns the number of milliseconds that should be delayed before
-     * checking again to see if the row should be activated.
-     */
-    var activationDelay = function() {
-      if (!activeRow || !Util.is(activeRow, options.submenuSelector)) {
-        // If there is no other submenu row already active, then
-        // go ahead and activate immediately.
-        return 0;
-      }
-
-      function getOffset(element) {
-        var rect = element.getBoundingClientRect();
-        return { top: rect.top + window.pageYOffset, left: rect.left + window.pageXOffset };
-      };
-
-      var offset = getOffset(menu),
-          upperLeft = {
-              x: offset.left,
-              y: offset.top - options.tolerance
-          },
-          upperRight = {
-              x: offset.left + menu.offsetWidth,
-              y: upperLeft.y
-          },
-          lowerLeft = {
-              x: offset.left,
-              y: offset.top + menu.offsetHeight + options.tolerance
-          },
-          lowerRight = {
-              x: offset.left + menu.offsetWidth,
-              y: lowerLeft.y
-          },
-          loc = mouseLocs[mouseLocs.length - 1],
-          prevLoc = mouseLocs[0];
-
-      if (!loc) {
-        return 0;
-      }
-
-      if (!prevLoc) {
-        prevLoc = loc;
-      }
-
-      if (prevLoc.x < offset.left || prevLoc.x > lowerRight.x || prevLoc.y < offset.top || prevLoc.y > lowerRight.y) {
-        // If the previous mouse location was outside of the entire
-        // menu's bounds, immediately activate.
-        return 0;
-      }
-
-      if (lastDelayLoc && loc.x == lastDelayLoc.x && loc.y == lastDelayLoc.y) {
-        // If the mouse hasn't moved since the last time we checked
-        // for activation status, immediately activate.
-        return 0;
-      }
-
-      // Detect if the user is moving towards the currently activated
-      // submenu.
-      //
-      // If the mouse is heading relatively clearly towards
-      // the submenu's content, we should wait and give the user more
-      // time before activating a new row. If the mouse is heading
-      // elsewhere, we can immediately activate a new row.
-      //
-      // We detect this by calculating the slope formed between the
-      // current mouse location and the upper/lower right points of
-      // the menu. We do the same for the previous mouse location.
-      // If the current mouse location's slopes are
-      // increasing/decreasing appropriately compared to the
-      // previous's, we know the user is moving toward the submenu.
-      //
-      // Note that since the y-axis increases as the cursor moves
-      // down the screen, we are looking for the slope between the
-      // cursor and the upper right corner to decrease over time, not
-      // increase (somewhat counterintuitively).
-      function slope(a, b) {
-        return (b.y - a.y) / (b.x - a.x);
-      };
-
-      var decreasingCorner = upperRight,
-        increasingCorner = lowerRight;
-
-      // Our expectations for decreasing or increasing slope values
-      // depends on which direction the submenu opens relative to the
-      // main menu. By default, if the menu opens on the right, we
-      // expect the slope between the cursor and the upper right
-      // corner to decrease over time, as explained above. If the
-      // submenu opens in a different direction, we change our slope
-      // expectations.
-      if (options.submenuDirection == "left") {
-        decreasingCorner = lowerLeft;
-        increasingCorner = upperLeft;
-      } else if (options.submenuDirection == "below") {
-        decreasingCorner = lowerRight;
-        increasingCorner = lowerLeft;
-      } else if (options.submenuDirection == "above") {
-        decreasingCorner = upperLeft;
-        increasingCorner = upperRight;
-      }
-
-      var decreasingSlope = slope(loc, decreasingCorner),
-        increasingSlope = slope(loc, increasingCorner),
-        prevDecreasingSlope = slope(prevLoc, decreasingCorner),
-        prevIncreasingSlope = slope(prevLoc, increasingCorner);
-
-      if (decreasingSlope < prevDecreasingSlope && increasingSlope > prevIncreasingSlope) {
-        // Mouse is moving from previous location towards the
-        // currently activated submenu. Delay before activating a
-        // new menu row, because user may be moving into submenu.
-        lastDelayLoc = loc;
-        return DELAY;
-      }
-
-      lastDelayLoc = null;
-      return 0;
-    };
-
-    var reset = function(triggerDeactivate) {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-
-      if (activeRow && triggerDeactivate) {
-        options.deactivate(activeRow);
-      }
-
-      activeRow = null;
-    };
-
-    var destroyInstance = function() {
-      menu.removeEventListener('mouseleave', mouseleaveMenu);  
-      document.removeEventListener('mousemove', mouseMoveFallback);
-      if(rows.length > 0) {
-        for(var i = 0; i < rows.length; i++) {
-          rows[i].removeEventListener('mouseenter', mouseenterRow);  
-          rows[i].removeEventListener('mouseleave', mouseleaveRow);
-          rows[i].removeEventListener('click', clickRow);  
-        }
-      }
-      
-    };
-
-    /**
-     * Hook up initial menu events
-     */
-    menu.addEventListener('mouseleave', mouseleaveMenu);  
-    var rows = (options.rows) ? options.rows : menu.children;
-    if(rows.length > 0) {
-      for(var i = 0; i < rows.length; i++) {(function(i){
-        rows[i].addEventListener('mouseenter', mouseenterRow);  
-        rows[i].addEventListener('mouseleave', mouseleaveRow);
-        rows[i].addEventListener('click', clickRow);  
-      })(i);}
-    }
-
-    document.addEventListener('mousemove', mouseMoveFallback);
-
-    /* Reset/destroy menu */
-    menu.addEventListener('reset', function(event){
-      reset(event.detail);
-    });
-    menu.addEventListener('destroy', destroyInstance);
-  };
-}());
-
-
-// File#: _1_drawer
-// Usage: codyhouse.co/license
-(function() {
-	var Drawer = function(element) {
-		this.element = element;
-		this.content = document.getElementsByClassName('js-drawer__body')[0];
-		this.triggers = document.querySelectorAll('[aria-controls="'+this.element.getAttribute('id')+'"]');
-		this.firstFocusable = null;
-		this.lastFocusable = null;
-		this.selectedTrigger = null;
-		this.isModal = Util.hasClass(this.element, 'js-drawer--modal');
-		this.showClass = "drawer--is-visible";
-		this.initDrawer();
-	};
-
-	Drawer.prototype.initDrawer = function() {
-		var self = this;
-		//open drawer when clicking on trigger buttons
-		if ( this.triggers ) {
-			for(var i = 0; i < this.triggers.length; i++) {
-				this.triggers[i].addEventListener('click', function(event) {
-					event.preventDefault();
-					if(Util.hasClass(self.element, self.showClass)) {
-						self.closeDrawer(event.target);
-						return;
-					}
-					self.selectedTrigger = event.target;
-					self.showDrawer();
-					self.initDrawerEvents();
-				});
-			}
-		}
-
-		// if drawer is already open -> we should initialize the drawer events
-		if(Util.hasClass(this.element, this.showClass)) this.initDrawerEvents();
-	};
-
-	Drawer.prototype.showDrawer = function() {
-		var self = this;
-		this.content.scrollTop = 0;
-		Util.addClass(this.element, this.showClass);
-		this.getFocusableElements();
-		Util.moveFocus(this.element);
-		// wait for the end of transitions before moving focus
-		this.element.addEventListener("transitionend", function cb(event) {
-			Util.moveFocus(self.element);
-			self.element.removeEventListener("transitionend", cb);
-		});
-		this.emitDrawerEvents('drawerIsOpen', this.selectedTrigger);
-	};
-
-	Drawer.prototype.closeDrawer = function(target) {
-		Util.removeClass(this.element, this.showClass);
-		this.firstFocusable = null;
-		this.lastFocusable = null;
-		if(this.selectedTrigger) this.selectedTrigger.focus();
-		//remove listeners
-		this.cancelDrawerEvents();
-		this.emitDrawerEvents('drawerIsClose', target);
-	};
-
-	Drawer.prototype.initDrawerEvents = function() {
-		//add event listeners
-		this.element.addEventListener('keydown', this);
-		this.element.addEventListener('click', this);
-	};
-
-	Drawer.prototype.cancelDrawerEvents = function() {
-		//remove event listeners
-		this.element.removeEventListener('keydown', this);
-		this.element.removeEventListener('click', this);
-	};
-
-	Drawer.prototype.handleEvent = function (event) {
-		switch(event.type) {
-			case 'click': {
-				this.initClick(event);
-			}
-			case 'keydown': {
-				this.initKeyDown(event);
-			}
-		}
-	};
-
-	Drawer.prototype.initKeyDown = function(event) {
-		if( event.keyCode && event.keyCode == 27 || event.key && event.key == 'Escape' ) {
-			//close drawer window on esc
-			this.closeDrawer(false);
-		} else if( this.isModal && (event.keyCode && event.keyCode == 9 || event.key && event.key == 'Tab' )) {
-			//trap focus inside drawer
-			this.trapFocus(event);
-		}
-	};
-
-	Drawer.prototype.initClick = function(event) {
-		//close drawer when clicking on close button or drawer bg layer 
-		if( !event.target.closest('.js-drawer__close') && !Util.hasClass(event.target, 'js-drawer') ) return;
-		event.preventDefault();
-		this.closeDrawer(event.target);
-	};
-
-	Drawer.prototype.trapFocus = function(event) {
-		if( this.firstFocusable == document.activeElement && event.shiftKey) {
-			//on Shift+Tab -> focus last focusable element when focus moves out of drawer
-			event.preventDefault();
-			this.lastFocusable.focus();
-		}
-		if( this.lastFocusable == document.activeElement && !event.shiftKey) {
-			//on Tab -> focus first focusable element when focus moves out of drawer
-			event.preventDefault();
-			this.firstFocusable.focus();
-		}
-	}
-
-	Drawer.prototype.getFocusableElements = function() {
-		//get all focusable elements inside the drawer
-		var allFocusable = this.element.querySelectorAll('[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary');
-		this.getFirstVisible(allFocusable);
-		this.getLastVisible(allFocusable);
-	};
-
-	Drawer.prototype.getFirstVisible = function(elements) {
-		//get first visible focusable element inside the drawer
-		for(var i = 0; i < elements.length; i++) {
-			if( elements[i].offsetWidth || elements[i].offsetHeight || elements[i].getClientRects().length ) {
-				this.firstFocusable = elements[i];
-				return true;
-			}
-		}
-	};
-
-	Drawer.prototype.getLastVisible = function(elements) {
-		//get last visible focusable element inside the drawer
-		for(var i = elements.length - 1; i >= 0; i--) {
-			if( elements[i].offsetWidth || elements[i].offsetHeight || elements[i].getClientRects().length ) {
-				this.lastFocusable = elements[i];
-				return true;
-			}
-		}
-	};
-
-	Drawer.prototype.emitDrawerEvents = function(eventName, target) {
-		var event = new CustomEvent(eventName, {detail: target});
-		this.element.dispatchEvent(event);
-	};
-
-	window.Drawer = Drawer;
-
-	//initialize the Drawer objects
-	var drawer = document.getElementsByClassName('js-drawer');
-	if( drawer.length > 0 ) {
-		for( var i = 0; i < drawer.length; i++) {
-			(function(i){new Drawer(drawer[i]);})(i);
-		}
-	}
-}());
-// File#: _1_hiding-nav
-// Usage: codyhouse.co/license
-(function () {
-
-  const headerGlobal = document.getElementById('header-global');
-
-  if (window.innerWidth <= 1024) {
-    headerGlobal.classList.remove('js-hide-nav');
-    headerGlobal.classList.remove('js-hide-nav--main');
-  }
-
-  var hidingNav = document.getElementsByClassName('js-hide-nav');
-  if (hidingNav.length > 0 && window.requestAnimationFrame) {
-    var mainNav = Array.prototype.filter.call(hidingNav, function (element) {
-      return Util.hasClass(element, 'js-hide-nav--main');
-    }),
-      subNav = Array.prototype.filter.call(hidingNav, function (element) {
-        return Util.hasClass(element, 'js-hide-nav--sub');
-      });
-
-    var scrolling = false,
-      previousTop = window.scrollY,
-      currentTop = window.scrollY,
-      scrollDelta = 10,
-      scrollOffset = 150, // scrollY needs to be bigger than scrollOffset to hide navigation
-      headerHeight = 0;
-
-    var navIsFixed = false; // check if main navigation is fixed
-    if (mainNav.length > 0 && Util.hasClass(mainNav[0], 'hide-nav--fixed')) navIsFixed = true;
-
-    // store button that triggers navigation on mobile
-    var triggerMobile = getTriggerMobileMenu();
-    var prevElement = createPrevElement();
-    var mainNavTop = 0;
-    // list of classes the hide-nav has when it is expanded -> do not hide if it has those classes
-    var navOpenClasses = hidingNav[0].getAttribute('data-nav-target-class'),
-      navOpenArrayClasses = [];
-    if (navOpenClasses) navOpenArrayClasses = navOpenClasses.split(' ');
-    getMainNavTop();
-    if (mainNavTop > 0) {
-      scrollOffset = scrollOffset + mainNavTop;
-    }
-
-    // init navigation and listen to window scroll event
-    getHeaderHeight();
-    initSecondaryNav();
-    initFixedNav();
-    resetHideNav();
-    window.addEventListener('scroll', function (event) {
-      if (scrolling) return;
-      scrolling = true;
-      window.requestAnimationFrame(resetHideNav);
-    });
-
-    window.addEventListener('resize', function (event) {
-      if (scrolling) return;
-      scrolling = true;
-      window.requestAnimationFrame(function () {
-        if (headerHeight > 0) {
-          getMainNavTop();
-          getHeaderHeight();
-          initSecondaryNav();
-          initFixedNav();
-        }
-        // reset both navigation
-        hideNavScrollUp();
-
-        scrolling = false;
-      });
-    });
-
-    function getHeaderHeight() {
-      headerHeight = mainNav[0].offsetHeight;
-    };
-
-    function initSecondaryNav() { // if there's a secondary nav, set its top equal to the header height
-      if (subNav.length < 1 || mainNav.length < 1) return;
-      subNav[0].style.top = (headerHeight - 1) + 'px';
-    };
-
-    function initFixedNav() {
-      if (!navIsFixed || mainNav.length < 1) return;
-      mainNav[0].style.marginBottom = '-' + headerHeight + 'px';
-    };
-
-    function resetHideNav() { // check if navs need to be hidden/revealed
-      currentTop = window.scrollY;
-      if (currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
-        hideNavScrollDown();
-      } else if (previousTop - currentTop > scrollDelta || (previousTop - currentTop > 0 && currentTop < scrollOffset)) {
-        hideNavScrollUp();
-      } else if (previousTop - currentTop > 0 && subNav.length > 0 && subNav[0].getBoundingClientRect().top > 0) {
-        setTranslate(subNav[0], '0%');
-      }
-      // if primary nav is fixed -> toggle bg class
-      if (navIsFixed) {
-        var scrollTop = window.scrollY || window.pageYOffset;
-        Util.toggleClass(mainNav[0], 'hide-nav--has-bg', (scrollTop > headerHeight + mainNavTop));
-      }
-      previousTop = currentTop;
-      scrolling = false;
-    };
-
-    function hideNavScrollDown() {
-      // if there's a secondary nav -> it has to reach the top before hiding nav
-      if (subNav.length > 0 && subNav[0].getBoundingClientRect().top > headerHeight) return;
-      // on mobile -> hide navigation only if dropdown is not open
-      if (triggerMobile && triggerMobile.getAttribute('aria-expanded') == "true") return;
-      // check if main nav has one of the following classes
-      if (mainNav.length > 0 && (!navOpenClasses || !checkNavExpanded())) {
-        setTranslate(mainNav[0], '-100%');
-        mainNav[0].addEventListener('transitionend', addOffCanvasClass);
-      }
-      if (subNav.length > 0) setTranslate(subNav[0], '-' + headerHeight + 'px');
-    };
-
-    function hideNavScrollUp() {
-      if (mainNav.length > 0) { setTranslate(mainNav[0], '0%'); Util.removeClass(mainNav[0], 'hide-nav--off-canvas'); mainNav[0].removeEventListener('transitionend', addOffCanvasClass); }
-      if (subNav.length > 0) setTranslate(subNav[0], '0%');
-    };
-
-    function addOffCanvasClass() {
-      mainNav[0].removeEventListener('transitionend', addOffCanvasClass);
-      Util.addClass(mainNav[0], 'hide-nav--off-canvas');
-    };
-
-    function setTranslate(element, val) {
-      element.style.transform = 'translateY(' + val + ')';
-    };
-
-    function getTriggerMobileMenu() {
-      // store trigger that toggle mobile navigation dropdown
-      var triggerMobileClass = hidingNav[0].getAttribute('data-mobile-trigger');
-      if (!triggerMobileClass) return false;
-      if (triggerMobileClass.indexOf('#') == 0) { // get trigger by ID
-        var trigger = document.getElementById(triggerMobileClass.replace('#', ''));
-        if (trigger) return trigger;
-      } else { // get trigger by class name
-        var trigger = hidingNav[0].getElementsByClassName(triggerMobileClass);
-        if (trigger.length > 0) return trigger[0];
-      }
-
-      return false;
-    };
-
-    function createPrevElement() {
-      // create element to be inserted right before the mainNav to get its top value
-      if (mainNav.length < 1) return false;
-      var newElement = document.createElement("div");
-      newElement.setAttribute('aria-hidden', 'true');
-      mainNav[0].parentElement.insertBefore(newElement, mainNav[0]);
-      var prevElement = mainNav[0].previousElementSibling;
-      prevElement.style.opacity = '0';
-      return prevElement;
-    };
-
-    function getMainNavTop() {
-      if (!prevElement) return;
-      mainNavTop = prevElement.getBoundingClientRect().top + window.scrollY;
-    };
-
-    function checkNavExpanded() {
-      var navIsOpen = false;
-      for (var i = 0; i < navOpenArrayClasses.length; i++) {
-        if (Util.hasClass(mainNav[0], navOpenArrayClasses[i].trim())) {
-          navIsOpen = true;
-          break;
-        }
-      }
-      return navIsOpen;
-    };
-
-  } else {
-    // if window requestAnimationFrame is not supported -> add bg class to fixed header
-    var mainNav = document.getElementsByClassName('js-hide-nav--main');
-    if (mainNav.length < 1) return;
-    if (Util.hasClass(mainNav[0], 'hide-nav--fixed')) Util.addClass(mainNav[0], 'hide-nav--has-bg');
-  }
-
-  var path = window.location.pathname;
-  let actualPage = path.split("/").pop();
-  actualPage = actualPage.split('.')[0];
-  const desktopHeader = document.getElementById("desktop-header");
-  const itemsDesktop = desktopHeader.querySelectorAll('.f-header__item');
-  const linksDesktop = desktopHeader.querySelectorAll('.f-header__link');
-  const headerLogo = document.querySelectorAll('.vinacobos-logo');
-  const dropdownArrow = document.querySelector('.vinos-dropdown-arrow-polygon');
-
-  let below = false;
-  let doneAbove = false;
-  let doneBelow = false;
-
-
-  if (actualPage === 'historia' || actualPage === 'terroir' || actualPage === 'contacto' || actualPage === 'felino' || actualPage === 'felino-cabernet' || actualPage === 'felino-red-blend' || actualPage === 'felino-chardonnay' || actualPage === 'bramare' || actualPage === 'bramare-patagonia' || actualPage === 'bramare-valle-de-uco' || actualPage === 'cocodrilo') {
-    checkBackdropBlur2();
-    document.addEventListener('scroll', () => {
-      checkBackdropBlur2();
-    });
-  } else {
-    checkBackdropBlur();
-    document.addEventListener('scroll', () => {
-      checkBackdropBlur();
-    });
-  }
-
-
-  function checkBackdropBlur() {
-    if (window.pageYOffset === 0) {
-      headerGlobal.classList.remove('backdrop-blur-10');
-      headerGlobal.style.backgroundColor = 'rgba(0,0,0,0)';
-    } else {
-      if (window.pageYOffset > 0) {
-        headerGlobal.classList.add('backdrop-blur-10');
-        headerGlobal.style.backgroundColor = 'rgba(0,0,0,0.8)';
-      }
-    }
-  }
-  function checkBackdropBlur2() {
-    if (window.pageYOffset === 0) {
-      below = false;
-      doneBelow = false;
-      headerGlobal.classList.remove('backdrop-blur-10');
-      headerGlobal.style.backgroundColor = 'rgba(0,0,0,0)';
-      headerLogo[0].style.fill = "black"; headerLogo[1].style.fill = "black";
-      if (!below && !doneAbove) {
-        itemsDesktop.forEach(item => {
-          if (item.classList.contains('nav--line-selected')) {
-            item.classList.remove('nav--line-selected');
-            item.classList.add('nav--line-selected-black');
-          } else {
-            item.classList.remove('nav--line');
-            item.classList.add('nav--line-black');
-          }
-          dropdownArrow.style.fill = 'black';
-        });
-        linksDesktop.forEach(item => {
-          item.classList.remove('btn--nav');
-          item.classList.add('btn--nav-black');
-        });
-        doneAbove = true;
-      }
-    } else {
-      if (window.pageYOffset > 0) {
-        doneAbove = false;
-        headerGlobal.classList.add('backdrop-blur-10');
-        headerGlobal.style.backgroundColor = 'rgba(0,0,0,0.8)';
-        headerLogo[0].style.fill = "white"; headerLogo[1].style.fill = "white";
-        if (!below && !doneBelow) {
-          itemsDesktop.forEach(item => {
-            if (item.classList.contains('nav--line-selected-black')) {
-              item.classList.remove('nav--line-selected-black');
-              item.classList.add('nav--line-selected');
-            } else {
-              item.classList.remove('nav--line-black');
-              item.classList.add('nav--line');
-            }
-            dropdownArrow.style.fill = 'white';
-          });
-          linksDesktop.forEach(item => {
-            item.classList.remove('btn--nav-black');
-            item.classList.add('btn--nav');
-          });
-          doneBelow = true;
-        }
-      }
-    }
-  }
-}());
-
-const mobileDropdownButton = document.getElementById('header-mobile-vinos-arrow');
-const mobileVinosDropdown = document.getElementById('header-mobile-vinos-dropdown');
-
-let vinosDropdownOpen = false;
-
-if (mobileDropdownButton) {
-  mobileDropdownButton.addEventListener('click', () => {
-    if (!vinosDropdownOpen) {
-      mobileVinosDropdown.classList.remove('is-hidden');
-      setTimeout(() => {
-        mobileVinosDropdown.style.opacity = '1';
-        mobileVinosDropdown.style.transform = 'translateY(0px)';
-      }, 100);
-      mobileDropdownButton.style.transform = 'rotate(180deg)';
-      vinosDropdownOpen = true;
-    } else {
-      if (vinosDropdownOpen) {
-        mobileVinosDropdown.style.opacity = '0';
-        mobileVinosDropdown.style.transform = 'translateY(15px)';
-        setTimeout(() => {
-          mobileVinosDropdown.classList.add('is-hidden');
-          mobileDropdownButton.style.transform = 'rotate(0deg)';
-          vinosDropdownOpen = false;
-        }, 250);
-      }
-    }
-  });
-}
-// File#: _1_looping_tabs
-// Usage: codyhouse.co/license
-(function() { 
-  var LoopTab = function(opts) {
-    this.options = Util.extend(LoopTab.defaults , opts);
-		this.element = this.options.element;
-		this.tabList = this.element.getElementsByClassName('js-loop-tabs__controls')[0];
-		this.listItems = this.tabList.getElementsByTagName('li');
-		this.triggers = this.tabList.getElementsByTagName('a');
-		this.panelsList = this.element.getElementsByClassName('js-loop-tabs__panels')[0];
-    this.panels = Util.getChildrenByClassName(this.panelsList, 'js-loop-tabs__panel');
-    this.assetsList = this.element.getElementsByClassName('js-loop-tabs__assets')[0];
-		this.assets = this.assetsList.getElementsByTagName('li');
-		this.videos = getVideoElements(this);
-    this.panelShowClass = 'loop-tabs__panel--selected';
-		this.assetShowClass = 'loop-tabs__asset--selected';
-		this.assetExitClass = 'loop-tabs__asset--exit';
-    this.controlActiveClass = 'loop-tabs__control--selected';
-    // autoplay
-    this.autoplayPaused = false;
-		this.loopTabAutoId = false;
-		this.loopFillAutoId = false;
-		this.loopFill = 0;
-		initLoopTab(this);
-	};
-	
-	function getVideoElements(tab) {
-		var videos = [];
-		for(var i = 0; i < tab.assets.length; i++) {
-			var video = tab.assets[i].getElementsByTagName('video');
-			videos[i] = video.length > 0 ? video[0] : false;
-		}
-		return videos;
-	};
-  
-  function initLoopTab(tab) {
-    //set initial aria attributes
-		tab.tabList.setAttribute('role', 'tablist');
-		for( var i = 0; i < tab.triggers.length; i++) {
-			var bool = Util.hasClass(tab.triggers[i], tab.controlActiveClass),
-        panelId = tab.panels[i].getAttribute('id');
-			tab.listItems[i].setAttribute('role', 'presentation');
-			Util.setAttributes(tab.triggers[i], {'role': 'tab', 'aria-selected': bool, 'aria-controls': panelId, 'id': 'tab-'+panelId});
-			Util.addClass(tab.triggers[i], 'js-loop-tabs__trigger'); 
-      Util.setAttributes(tab.panels[i], {'role': 'tabpanel', 'aria-labelledby': 'tab-'+panelId});
-      Util.toggleClass(tab.panels[i], tab.panelShowClass, bool);
-			Util.toggleClass(tab.assets[i], tab.assetShowClass, bool);
-			
-			resetVideo(tab, i, bool); // play/pause video if available
-
-			if(!bool) tab.triggers[i].setAttribute('tabindex', '-1'); 
-		}
-		// add autoplay-off class if needed
-		!tab.options.autoplay && Util.addClass(tab.element, 'loop-tabs--autoplay-off');
-		//listen for Tab events
-		initLoopTabEvents(tab);
-  };
-
-  function initLoopTabEvents(tab) {
-		if(tab.options.autoplay) { 
-			initLoopTabAutoplay(tab); // init autoplay
-			// pause autoplay if user is interacting with the tabs
-			tab.element.addEventListener('focusin', function(event){
-				pauseLoopTabAutoplay(tab);
-				tab.autoplayPaused = true;
-			});
-			tab.element.addEventListener('focusout', function(event){
-				tab.autoplayPaused = false;
-				initLoopTabAutoplay(tab);
-			});
-		}
-
-    //click on a new tab -> select content
-		tab.tabList.addEventListener('click', function(event) {
-			if( event.target.closest('.js-loop-tabs__trigger') ) triggerLoopTab(tab, event.target.closest('.js-loop-tabs__trigger'), event);
-		});
-		
-    //arrow keys to navigate through tabs 
-		tab.tabList.addEventListener('keydown', function(event) {
-			if( !event.target.closest('.js-loop-tabs__trigger') ) return;
-			if( event.keyCode && event.keyCode == 39 || event.key && event.key.toLowerCase() == 'arrowright' ) {
-				pauseLoopTabAutoplay(tab);
-				selectNewLoopTab(tab, 'next', true);
-			} else if( event.keyCode && event.keyCode == 37 || event.key && event.key.toLowerCase() == 'arrowleft' ) {
-				pauseLoopTabAutoplay(tab);
-				selectNewLoopTab(tab, 'prev', true);
-			}
-		});
-  };
-
-  function initLoopTabAutoplay(tab) {
-		if(!tab.options.autoplay || tab.autoplayPaused) return;
-		tab.loopFill = 0;
-		var selectedTab = tab.tabList.getElementsByClassName(tab.controlActiveClass)[0];
-		// reset css variables
-		for(var i = 0; i < tab.triggers.length; i++) {
-			if(cssVariableSupport) tab.triggers[i].style.setProperty('--loop-tabs-filling', 0);
-		}
-		
-		tab.loopTabAutoId = setTimeout(function(){
-      selectNewLoopTab(tab, 'next', false);
-		}, tab.options.autoplayInterval);
-		
-		if(cssVariableSupport) { // tab fill effect
-			tab.loopFillAutoId = setInterval(function(){
-				tab.loopFill = tab.loopFill + 0.005;
-				selectedTab.style.setProperty('--loop-tabs-filling', tab.loopFill);
-			}, tab.options.autoplayInterval/200);
-		}
-  };
-
-  function pauseLoopTabAutoplay(tab) { // pause autoplay
-    if(tab.loopTabAutoId) {
-			clearTimeout(tab.loopTabAutoId);
-			tab.loopTabAutoId = false;
-			clearInterval(tab.loopFillAutoId);
-			tab.loopFillAutoId = false;
-			// make sure the filling line is scaled up
-			var selectedTab = tab.tabList.getElementsByClassName(tab.controlActiveClass);
-			if(selectedTab.length > 0) selectedTab[0].style.setProperty('--loop-tabs-filling', 1);
-		}
-  };
-
-  function selectNewLoopTab(tab, direction, bool) {
-    var selectedTab = tab.tabList.getElementsByClassName(tab.controlActiveClass)[0],
-			index = Util.getIndexInArray(tab.triggers, selectedTab);
-		index = (direction == 'next') ? index + 1 : index - 1;
-		//make sure index is in the correct interval 
-		//-> from last element go to first using the right arrow, from first element go to last using the left arrow
-		if(index < 0) index = tab.listItems.length - 1;
-		if(index >= tab.listItems.length) index = 0;	
-		triggerLoopTab(tab, tab.triggers[index]);
-		bool && tab.triggers[index].focus();
-  };
-
-  function triggerLoopTab(tab, tabTrigger, event) {
-		pauseLoopTabAutoplay(tab);
-		event && event.preventDefault();	
-		var index = Util.getIndexInArray(tab.triggers, tabTrigger);
-		//no need to do anything if tab was already selected
-		if(Util.hasClass(tab.triggers[index], tab.controlActiveClass)) return;
-		
-		for( var i = 0; i < tab.triggers.length; i++) {
-			var bool = (i == index),
-				exit = Util.hasClass(tab.triggers[i], tab.controlActiveClass);
-			Util.toggleClass(tab.triggers[i], tab.controlActiveClass, bool);
-      Util.toggleClass(tab.panels[i], tab.panelShowClass, bool);
-			Util.toggleClass(tab.assets[i], tab.assetShowClass, bool);
-			Util.toggleClass(tab.assets[i], tab.assetExitClass, exit);
-			tab.triggers[i].setAttribute('aria-selected', bool);
-			bool ? tab.triggers[i].setAttribute('tabindex', '0') : tab.triggers[i].setAttribute('tabindex', '-1');
-
-			resetVideo(tab, i, bool); // play/pause video if available
-
-			// listen for the end of animation on asset element and remove exit class
-			if(exit) {(function(i){
-				tab.assets[i].addEventListener('transitionend', function cb(event){
-					tab.assets[i].removeEventListener('transitionend', cb);
-					Util.removeClass(tab.assets[i], tab.assetExitClass);
-				});
-			})(i);}
-		}
-    
-    // restart tab autoplay
-    initLoopTabAutoplay(tab);
-	};
-
-	function resetVideo(tab, i, bool) {
-		if(tab.videos[i]) {
-			if(bool) {
-				tab.videos[i].play();
-			} else {
-				tab.videos[i].pause();
-				tab.videos[i].currentTime = 0;
-			} 
-		}
-	};
-
-  LoopTab.defaults = {
-    element : '',
-    autoplay : true,
-    autoplayInterval: 5000
-  };
-
-  //initialize the Tab objects
-	var loopTabs = document.getElementsByClassName('js-loop-tabs');
-	if( loopTabs.length > 0 ) {
-		var reducedMotion = Util.osHasReducedMotion(),
-			cssVariableSupport = ('CSS' in window) && Util.cssSupports('color', 'var(--var)');
-		for( var i = 0; i < loopTabs.length; i++) {
-			(function(i){
-        var autoplay = (loopTabs[i].getAttribute('data-autoplay') && loopTabs[i].getAttribute('data-autoplay') == 'off' || reducedMotion) ? false : true,
-        autoplayInterval = (loopTabs[i].getAttribute('data-autoplay-interval')) ? loopTabs[i].getAttribute('data-autoplay-interval') : 5000;
-        new LoopTab({element: loopTabs[i], autoplay : autoplay, autoplayInterval : autoplayInterval});
-      })(i);
-		}
-	}
-}());
-// File#: _1_modal-window
-// Usage: codyhouse.co/license
-(function() {
-	var Modal = function(element) {
-		this.element = element;
-		this.triggers = document.querySelectorAll('[aria-controls="'+this.element.getAttribute('id')+'"]');
-		this.firstFocusable = null;
-		this.lastFocusable = null;
-		this.moveFocusEl = null; // focus will be moved to this element when modal is open
-		this.modalFocus = this.element.getAttribute('data-modal-first-focus') ? this.element.querySelector(this.element.getAttribute('data-modal-first-focus')) : null;
-		this.selectedTrigger = null;
-		this.preventScrollEl = this.getPreventScrollEl();
-		this.showClass = "modal--is-visible";
-		this.initModal();
-	};
-
-	Modal.prototype.getPreventScrollEl = function() {
-		var scrollEl = false;
-		var querySelector = this.element.getAttribute('data-modal-prevent-scroll');
-		if(querySelector) scrollEl = document.querySelector(querySelector);
-		return scrollEl;
-	};
-
-	Modal.prototype.initModal = function() {
-		var self = this;
-		//open modal when clicking on trigger buttons
-		if ( this.triggers ) {
-			for(var i = 0; i < this.triggers.length; i++) {
-				this.triggers[i].addEventListener('click', function(event) {
-					event.preventDefault();
-					if(Util.hasClass(self.element, self.showClass)) {
-						self.closeModal();
-						return;
-					}
-					self.selectedTrigger = event.target;
-					self.showModal();
-					self.initModalEvents();
-				});
-			}
-		}
-
-		// listen to the openModal event -> open modal without a trigger button
-		this.element.addEventListener('openModal', function(event){
-			if(event.detail) self.selectedTrigger = event.detail;
-			self.showModal();
-			self.initModalEvents();
-		});
-
-		// listen to the closeModal event -> close modal without a trigger button
-		this.element.addEventListener('closeModal', function(event){
-			if(event.detail) self.selectedTrigger = event.detail;
-			self.closeModal();
-		});
-
-		// if modal is open by default -> initialise modal events
-		if(Util.hasClass(this.element, this.showClass)) this.initModalEvents();
-	};
-
-	Modal.prototype.showModal = function() {
-		var self = this;
-		Util.addClass(this.element, this.showClass);
-		this.getFocusableElements();
-		if(this.moveFocusEl) {
-			this.moveFocusEl.focus();
-			// wait for the end of transitions before moving focus
-			this.element.addEventListener("transitionend", function cb(event) {
-				self.moveFocusEl.focus();
-				self.element.removeEventListener("transitionend", cb);
-			});
-		}
-		this.emitModalEvents('modalIsOpen');
-		// change the overflow of the preventScrollEl
-		if(this.preventScrollEl) this.preventScrollEl.style.overflow = 'hidden';
-	};
-
-	Modal.prototype.closeModal = function() {
-		if(!Util.hasClass(this.element, this.showClass)) return;
-		Util.removeClass(this.element, this.showClass);
-		this.firstFocusable = null;
-		this.lastFocusable = null;
-		this.moveFocusEl = null;
-		if(this.selectedTrigger) this.selectedTrigger.focus();
-		//remove listeners
-		this.cancelModalEvents();
-		this.emitModalEvents('modalIsClose');
-		// change the overflow of the preventScrollEl
-		if(this.preventScrollEl) this.preventScrollEl.style.overflow = '';
-	};
-
-	Modal.prototype.initModalEvents = function() {
-		//add event listeners
-		this.element.addEventListener('keydown', this);
-		this.element.addEventListener('click', this);
-	};
-
-	Modal.prototype.cancelModalEvents = function() {
-		//remove event listeners
-		this.element.removeEventListener('keydown', this);
-		this.element.removeEventListener('click', this);
-	};
-
-	Modal.prototype.handleEvent = function (event) {
-		switch(event.type) {
-			case 'click': {
-				this.initClick(event);
-			}
-			case 'keydown': {
-				this.initKeyDown(event);
-			}
-		}
-	};
-
-	Modal.prototype.initKeyDown = function(event) {
-		if( event.keyCode && event.keyCode == 9 || event.key && event.key == 'Tab' ) {
-			//trap focus inside modal
-			this.trapFocus(event);
-		} else if( (event.keyCode && event.keyCode == 13 || event.key && event.key == 'Enter') && event.target.closest('.js-modal__close')) {
-			event.preventDefault();
-			this.closeModal(); // close modal when pressing Enter on close button
-		}	
-	};
-
-	Modal.prototype.initClick = function(event) {
-		//close modal when clicking on close button or modal bg layer 
-		if( !event.target.closest('.js-modal__close') && !Util.hasClass(event.target, 'js-modal') ) return;
-		event.preventDefault();
-		this.closeModal();
-	};
-
-	Modal.prototype.trapFocus = function(event) {
-		if( this.firstFocusable == document.activeElement && event.shiftKey) {
-			//on Shift+Tab -> focus last focusable element when focus moves out of modal
-			event.preventDefault();
-			this.lastFocusable.focus();
-		}
-		if( this.lastFocusable == document.activeElement && !event.shiftKey) {
-			//on Tab -> focus first focusable element when focus moves out of modal
-			event.preventDefault();
-			this.firstFocusable.focus();
-		}
-	}
-
-	Modal.prototype.getFocusableElements = function() {
-		//get all focusable elements inside the modal
-		var allFocusable = this.element.querySelectorAll(focusableElString);
-		this.getFirstVisible(allFocusable);
-		this.getLastVisible(allFocusable);
-		this.getFirstFocusable();
-	};
-
-	Modal.prototype.getFirstVisible = function(elements) {
-		//get first visible focusable element inside the modal
-		for(var i = 0; i < elements.length; i++) {
-			if( isVisible(elements[i]) ) {
-				this.firstFocusable = elements[i];
-				break;
-			}
-		}
-	};
-
-	Modal.prototype.getLastVisible = function(elements) {
-		//get last visible focusable element inside the modal
-		for(var i = elements.length - 1; i >= 0; i--) {
-			if( isVisible(elements[i]) ) {
-				this.lastFocusable = elements[i];
-				break;
-			}
-		}
-	};
-
-	Modal.prototype.getFirstFocusable = function() {
-		if(!this.modalFocus || !Element.prototype.matches) {
-			this.moveFocusEl = this.firstFocusable;
-			return;
-		}
-		var containerIsFocusable = this.modalFocus.matches(focusableElString);
-		if(containerIsFocusable) {
-			this.moveFocusEl = this.modalFocus;
-		} else {
-			this.moveFocusEl = false;
-			var elements = this.modalFocus.querySelectorAll(focusableElString);
-			for(var i = 0; i < elements.length; i++) {
-				if( isVisible(elements[i]) ) {
-					this.moveFocusEl = elements[i];
-					break;
-				}
-			}
-			if(!this.moveFocusEl) this.moveFocusEl = this.firstFocusable;
-		}
-	};
-
-	Modal.prototype.emitModalEvents = function(eventName) {
-		var event = new CustomEvent(eventName, {detail: this.selectedTrigger});
-		this.element.dispatchEvent(event);
-	};
-
-	function isVisible(element) {
-		return element.offsetWidth || element.offsetHeight || element.getClientRects().length;
-	};
-
-	window.Modal = Modal;
-
-	//initialize the Modal objects
-	var modals = document.getElementsByClassName('js-modal');
-	// generic focusable elements string selector
-	var focusableElString = '[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary';
-	if( modals.length > 0 ) {
-		var modalArrays = [];
-		for( var i = 0; i < modals.length; i++) {
-			(function(i){modalArrays.push(new Modal(modals[i]));})(i);
-		}
-
-		window.addEventListener('keydown', function(event){ //close modal window on esc
-			if(event.keyCode && event.keyCode == 27 || event.key && event.key.toLowerCase() == 'escape') {
-				for( var i = 0; i < modalArrays.length; i++) {
-					(function(i){modalArrays[i].closeModal();})(i);
-				};
-			}
-		});
-	}
-}());
-// File#: _1_off-canvas-content
-// Usage: codyhouse.co/license
-(function() {
-  var OffCanvas = function(element) {
-    this.element = element;
-    this.wrapper = document.getElementsByClassName('js-off-canvas')[0];
-    this.main = document.getElementsByClassName('off-canvas__main')[0];
-    this.triggers = document.querySelectorAll('[aria-controls="'+this.element.getAttribute('id')+'"]');
-    this.closeBtn = this.element.getElementsByClassName('js-off-canvas__close-btn');
-    this.selectedTrigger = false;
-    this.firstFocusable = null;
-    this.lastFocusable = null;
-    this.animating = false;
-    initOffCanvas(this);
-  };	
-
-  function initOffCanvas(panel) {
-    let lastScrollTop = 0;
-    panel.element.setAttribute('aria-hidden', 'true');
-    for(var i = 0 ; i < panel.triggers.length; i++) { // listen to the click on off-canvas content triggers
-      document.addEventListener('scroll', function(event){
-        const st = window.pageYOffset || document.documentElement.scrollTop;
-        console.log('scroll', window.pageYOffset)
-        if(st > lastScrollTop){
-          panel.selectedTrigger = event.currentTarget;
-          // togglePanel(panel);
-          openPanel(panel)
-          event.preventDefault();
-          // window.scrollTo(window.scrollX, window.scrollY - 1);
-          // window.scrollTo(window.scrollX, window.scrollY + 1);
-        }else{
-          panel.selectedTrigger = event.currentTarget;
-          // togglePanel(panel);
-          closePanel(panel)
-          event.preventDefault();
-        }
-        
-        lastScrollTop = st <= 0 ? 0 : st;
-      });
-    }
-
-    // listen to the triggerOpenPanel event -> open panel without a trigger button
-    panel.element.addEventListener('triggerOpenPanel', function(event){
-      if(event.detail) panel.selectedTrigger = event.detail;
-      openPanel(panel);
-    });
-    // listen to the triggerClosePanel event -> open panel without a trigger button
-    panel.element.addEventListener('triggerClosePanel', function(event){
-      closePanel(panel);
-    });
-  };
-
-  function togglePanel(panel) {
-    var status = (panel.element.getAttribute('aria-hidden') == 'true') ? 'close' : 'open';
-    if(status == 'close') openPanel(panel);
-    else closePanel(panel);
-  };
-
-  function openPanel(panel) {
-    if(panel.animating) return; // already animating
-    emitPanelEvents(panel, 'openPanel', '');
-    panel.animating = true;
-    panel.element.setAttribute('aria-hidden', 'false');
-    Util.addClass(panel.wrapper, 'off-canvas--visible');
-    getFocusableElements(panel);
-    var transitionEl = panel.element;
-    if(panel.closeBtn.length > 0 && !Util.hasClass(panel.closeBtn[0], 'js-off-canvas__a11y-close-btn')) transitionEl = 	panel.closeBtn[0];
-    transitionEl.addEventListener('transitionend', function cb(){
-      // wait for the end of transition to move focus and update the animating property
-      panel.animating = false;
-      Util.moveFocus(panel.element);
-      transitionEl.removeEventListener('transitionend', cb);
-    });
-    if(!transitionSupported) panel.animating = false;
-    initPanelEvents(panel);
-  };
-
-  function closePanel(panel, bool) {
-    if(panel.animating) return;
-    panel.animating = true;
-    panel.element.setAttribute('aria-hidden', 'true');
-    Util.removeClass(panel.wrapper, 'off-canvas--visible');
-    panel.main.addEventListener('transitionend', function cb(){
-      panel.animating = false;
-      if(panel.selectedTrigger) panel.selectedTrigger.focus();
-      setTimeout(function(){panel.selectedTrigger = false;}, 10);
-      panel.main.removeEventListener('transitionend', cb);
-    });
-    if(!transitionSupported) panel.animating = false;
-    cancelPanelEvents(panel);
-    emitPanelEvents(panel, 'closePanel', bool);
-  };
-
-  function initPanelEvents(panel) { //add event listeners
-    panel.element.addEventListener('keydown', handleEvent.bind(panel));
-    panel.element.addEventListener('click', handleEvent.bind(panel));
-  };
-
-  function cancelPanelEvents(panel) { //remove event listeners
-    panel.element.removeEventListener('keydown', handleEvent.bind(panel));
-    panel.element.removeEventListener('click', handleEvent.bind(panel));
-  };
-
-  function handleEvent(event) {
-    switch(event.type) {
-      case 'keydown':
-        initKeyDown(this, event);
-        break;
-      case 'click':
-        initClick(this, event);
-        break;
-    }
-  };
-
-  function initClick(panel, event) { // close panel when clicking on close button
-    if( !event.target.closest('.js-off-canvas__close-btn')) return;
-    event.preventDefault();
-    closePanel(panel, 'close-btn');
-  };
-
-  function initKeyDown(panel, event) {
-    if( event.keyCode && event.keyCode == 27 || event.key && event.key == 'Escape' ) {
-      //close off-canvas panel on esc
-      closePanel(panel, 'key');
-    } else if( event.keyCode && event.keyCode == 9 || event.key && event.key == 'Tab' ) {
-      //trap focus inside panel
-      trapFocus(panel, event);
-    }
-  };
-
-  function trapFocus(panel, event) {
-    if( panel.firstFocusable == document.activeElement && event.shiftKey) {
-      //on Shift+Tab -> focus last focusable element when focus moves out of panel
-      event.preventDefault();
-      panel.lastFocusable.focus();
-    }
-    if( panel.lastFocusable == document.activeElement && !event.shiftKey) {
-      //on Tab -> focus first focusable element when focus moves out of panel
-      event.preventDefault();
-      panel.firstFocusable.focus();
-    }
-  };
-
-  function getFocusableElements(panel) { //get all focusable elements inside the off-canvas content
-    var allFocusable = panel.element.querySelectorAll('[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary');
-    getFirstVisible(panel, allFocusable);
-    getLastVisible(panel, allFocusable);
-  };
-
-  function getFirstVisible(panel, elements) { //get first visible focusable element inside the off-canvas content
-    for(var i = 0; i < elements.length; i++) {
-      if( elements[i].offsetWidth || elements[i].offsetHeight || elements[i].getClientRects().length ) {
-        panel.firstFocusable = elements[i];
-        return true;
-      }
-    }
-  };
-
-  function getLastVisible(panel, elements) { //get last visible focusable element inside the off-canvas content
-    for(var i = elements.length - 1; i >= 0; i--) {
-      if( elements[i].offsetWidth || elements[i].offsetHeight || elements[i].getClientRects().length ) {
-        panel.lastFocusable = elements[i];
-        return true;
-      }
-    }
-  };
-
-  function emitPanelEvents(panel, eventName, target) { // emit custom event
-    var event = new CustomEvent(eventName, {detail: target});
-    panel.element.dispatchEvent(event);
-  };
-
-  //initialize the OffCanvas objects
-  var offCanvas = document.getElementsByClassName('js-off-canvas__panel'),
-    transitionSupported = Util.cssSupports('transition');
-  if( offCanvas.length > 0 ) {
-    for( var i = 0; i < offCanvas.length; i++) {
-      (function(i){new OffCanvas(offCanvas[i]);})(i);
-    }
-  }
-}());
-// File#: _1_overscroll-section
-// Usage: codyhouse.co/license
-(function() {
-  var OverscrollSection = function(element) {
-    this.element = element;
-    this.stickyContent = this.element.getElementsByClassName('js-overscroll-section__sticky-content');
-    this.scrollContent = this.element.getElementsByClassName('js-overscroll-section__scroll-content');
-    this.scrollingFn = false;
-    this.scrolling = false;
-    this.resetOpacity = false;
-    this.disabledClass = 'overscroll-section--disabled';
-    initOverscrollSection(this);
-  };
-
-  function initOverscrollSection(element) {
-    // set position of sticky element
-    setTop(element);
-    // create a new node - to be inserted before the scroll element
-    createPrevElement(element);
-    // on resize -> reset element top position
-    element.element.addEventListener('update-overscroll-section', function(){
-      setTop(element);
-      setPrevElementTop(element);
-    });
-    // set initial opacity value
-    animateOverscrollSection.bind(element)(); 
-    // change opacity of layer
-    var observer = new IntersectionObserver(overscrollSectionCallback.bind(element));
-    observer.observe(element.prevElement);
-  };
-
-  function createPrevElement(element) {
-    if(element.scrollContent.length == 0) return;
-    var newElement = document.createElement("div"); 
-    newElement.setAttribute('aria-hidden', 'true');
-    element.element.insertBefore(newElement, element.scrollContent[0]);
-    element.prevElement =  element.scrollContent[0].previousElementSibling;
-    element.prevElement.style.opacity = '0';
-    setPrevElementTop(element);
-  };
-
-  function setPrevElementTop(element) {
-    element.prevElementTop = element.prevElement.getBoundingClientRect().top + window.scrollY;
-  };
-
-  function overscrollSectionCallback(entries) {
-    if(entries[0].isIntersecting) {
-      if(this.scrollingFn) return; // listener for scroll event already added
-      overscrollSectionInitEvent(this);
-    } else {
-      if(!this.scrollingFn) return; // listener for scroll event already removed
-      window.removeEventListener('scroll', this.scrollingFn);
-      updateOpacityValue(this, 0);
-      this.scrollingFn = false;
-    }
-  };
-
-  function overscrollSectionInitEvent(element) {
-    element.scrollingFn = overscrollSectionScrolling.bind(element);
-    window.addEventListener('scroll', element.scrollingFn);
-  };
-
-  function overscrollSectionScrolling() {
-    if(this.scrolling) return;
-    this.scrolling = true;
-    window.requestAnimationFrame(animateOverscrollSection.bind(this));
-  };
-
-  function animateOverscrollSection() {
-    if(this.stickyContent.length == 0) return;
-    setPrevElementTop(this);
-    if( parseInt(this.stickyContent[0].style.top) != window.innerHeight - this.stickyContent[0].offsetHeight) {
-      setTop(this);
-    }
-    if(this.prevElementTop - window.scrollY < window.innerHeight*2/3) {
-      var opacity = Math.easeOutQuart(window.innerHeight*2/3 + window.scrollY - this.prevElementTop, 0, 1, window.innerHeight*2/3);
-      if(opacity > 0 ) {
-        this.resetOpacity = false;
-        updateOpacityValue(this, opacity);
-      } else if(!this.resetOpacity) {
-        this.resetOpacity = true;
-        updateOpacityValue(this, 0);
-      } 
-    } else {
-      updateOpacityValue(this, 0);
-    }
-    this.scrolling = false;
-  };
-
-  function updateOpacityValue(element, value) {
-    element.element.style.setProperty('--overscroll-section-opacity', value);
-  };
-
-  function setTop(element) {
-    if(element.stickyContent.length == 0) return;
-    var translateValue = window.innerHeight - element.stickyContent[0].offsetHeight;
-    element.stickyContent[0].style.top = translateValue+'px';
-    // check if effect should be disabled
-    Util.toggleClass(element.element, element.disabledClass, translateValue > 2);
-  };
-
-  //initialize the OverscrollSection objects
-  var overscrollSections = document.getElementsByClassName('js-overscroll-section');
-  var stickySupported = Util.cssSupports('position', 'sticky') || Util.cssSupports('position', '-webkit-sticky'),
-    intObservSupported = ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype),
-    reducedMotion = Util.osHasReducedMotion();
-	if( overscrollSections.length > 0 && stickySupported && !reducedMotion && intObservSupported) {
-    var overscrollSectionsArray = [];
-		for( var i = 0; i < overscrollSections.length; i++) {
-      (function(i){overscrollSectionsArray.push(new OverscrollSection(overscrollSections[i]));})(i);
-    }
-    
-    var resizingId = false,
-      customEvent = new CustomEvent('update-overscroll-section');
-
-    window.addEventListener('resize', function() {
-      clearTimeout(resizingId);
-      resizingId = setTimeout(doneResizing, 100);
-    });
-
-    // wait for font to be loaded
-    document.fonts.onloadingdone = function (fontFaceSetEvent) {
-      doneResizing();
-    };
-
-    function doneResizing() {
-      for( var i = 0; i < overscrollSectionsArray.length; i++) {
-        (function(i){overscrollSectionsArray[i].element.dispatchEvent(customEvent)})(i);
-      };
-    };
-	}
-}());
-// File#: _1_parallax-image
-// Usage: codyhouse.co/license
-(function () {
-  setTimeout(() => {
-    var ParallaxImg = function (element, rotationLevel) {
-      this.element = element;
-      this.figure = this.element.getElementsByClassName('js-parallax-img__assets')[0];
-      this.imgs = this.element.getElementsByTagName('img');
-      this.maxRotation = rotationLevel || 2; // rotate level
-      if (this.maxRotation > 5) this.maxRotation = 5;
-      this.scale = 1;
-      this.animating = false;
-      initParallax(this);
-      initParallaxEvents(this);
-    };
-
-    function initParallax(element) {
-      element.count = 0;
-      window.requestAnimationFrame(checkImageLoaded.bind(element));
-      for (var i = 0; i < element.imgs.length; i++) {
-        (function (i) {
-          var loaded = false;
-          element.imgs[i].addEventListener('load', function () {
-            if (loaded) return;
-            element.count = element.count + 1;
-          });
-          if (element.imgs[i].complete && !loaded) {
-            loaded = true;
-            element.count = element.count + 1;
-          }
-        })(i);
-      }
-    };
-
-    function checkImageLoaded() {
-      if (this.count >= this.imgs.length) {
-        initScale(this);
-        if (this.loaded) {
-          window.cancelAnimationFrame(this.loaded);
-          this.loaded = false;
-        }
-      } else {
-        this.loaded = window.requestAnimationFrame(checkImageLoaded.bind(this));
-      }
-    };
-
-    function initScale(element) {
-      var maxImgResize = getMaxScale(element);
-      element.scale = maxImgResize / (Math.sin(Math.PI / 2 - element.maxRotation * Math.PI / 180));
-      element.figure.style.transform = 'scale(' + element.scale + ')';
-      Util.addClass(element.element, 'parallax-img--loaded');
-    };
-
-    function getMaxScale(element) {
-      var minWidth = 0;
-      var maxWidth = 0;
-      for (var i = 0; i < element.imgs.length; i++) {
-        var width = element.imgs[i].getBoundingClientRect().width;
-        if (width < minWidth || i == 0) minWidth = width;
-        if (width > maxWidth || i == 0) maxWidth = width;
-      }
-      var scale = Math.ceil(10 * maxWidth / minWidth) / 10;
-      if (scale < 1.1) scale = 1.1;
-      return scale;
-    }
-
-    function initParallaxEvents(element) {
-      element.element.addEventListener('mousemove', function (event) {
-        if (element.animating) return;
-        element.animating = true;
-        window.requestAnimationFrame(moveImage.bind(element, event));
-      });
-    };
-
-    function moveImage(event, timestamp) {
-      var wrapperPosition = this.element.getBoundingClientRect();
-      var rotateY = 2 * (this.maxRotation / wrapperPosition.width) * (wrapperPosition.left - event.clientX + wrapperPosition.width / 2);
-      var rotateX = 2 * (this.maxRotation / wrapperPosition.height) * (event.clientY - wrapperPosition.top - wrapperPosition.height / 2);
-
-      if (rotateY > this.maxRotation) rotateY = this.maxRotation;
-      if (rotateY < -1 * this.maxRotation) rotateY = -this.maxRotation;
-      if (rotateX > this.maxRotation) rotateX = this.maxRotation;
-      if (rotateX < -1 * this.maxRotation) rotateX = -this.maxRotation;
-      this.figure.style.transform = 'scale(' + this.scale + ') rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
-      this.animating = false;
-    };
-
-    window.ParallaxImg = ParallaxImg;
-
-    //initialize the ParallaxImg objects
-    var parallaxImgs = document.getElementsByClassName('js-parallax-img');
-    if (parallaxImgs.length > 0 && Util.cssSupports('transform', 'translateZ(0px)')) {
-      for (var i = 0; i < parallaxImgs.length; i++) {
-        (function (i) {
-          var rotationLevel = parallaxImgs[i].getAttribute('data-perspective');
-          new ParallaxImg(parallaxImgs[i], rotationLevel);
-        })(i);
-      }
-    };
-
-    console.log("Parallax inicializado");
-  }, 1000);
-}());
-// File#: _1_reveal-effects
-// Usage: codyhouse.co/license
-(function() {
-    var fxElements = document.getElementsByClassName('reveal-fx');
-    var intersectionObserverSupported = ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype);
-    if(fxElements.length > 0) {
-      // deactivate effect if Reduced Motion is enabled
-      if (Util.osHasReducedMotion() || !intersectionObserverSupported) {
-        fxRemoveClasses();
-        return;
-      }
-      //on small devices, do not animate elements -> reveal all
-      if( fxDisabled(fxElements[0]) ) {
-        fxRevealAll();
-        return;
-      }
-  
-      var fxRevealDelta = 120; // amount (in pixel) the element needs to enter the viewport to be revealed - if not custom value (data-reveal-fx-delta)
-      
-      var viewportHeight = window.innerHeight,
-        fxChecking = false,
-        fxRevealedItems = [],
-        fxElementDelays = fxGetDelays(), //elements animation delay
-        fxElementDeltas = fxGetDeltas(); // amount (in px) the element needs enter the viewport to be revealed (default value is fxRevealDelta) 
-      
-      
-      // add event listeners
-      window.addEventListener('load', fxReveal);
-      window.addEventListener('resize', fxResize);
-      window.addEventListener('restartAll', fxRestart);
-  
-      // observe reveal elements
-      var observer = [];
-      initObserver();
-  
-      function initObserver() {
-        for(var i = 0; i < fxElements.length; i++) {
-          observer[i] = new IntersectionObserver(
-            function(entries, observer) { 
-              if(entries[0].isIntersecting) {
-                fxRevealItemObserver(entries[0].target);
-                observer.unobserve(entries[0].target);
-              }
-            }, 
-            {rootMargin: "0px 0px -"+fxElementDeltas[i]+"px 0px"}
-          );
-    
-          observer[i].observe(fxElements[i]);
-        }
-      };
-  
-      function fxRevealAll() { // reveal all elements - small devices
-        for(var i = 0; i < fxElements.length; i++) {
-          Util.addClass(fxElements[i], 'reveal-fx--is-visible');
-        }
-      };
-  
-      function fxResize() { // on resize - check new window height and reveal visible elements
-        if(fxChecking) return;
-        fxChecking = true;
-        (!window.requestAnimationFrame) ? setTimeout(function(){fxReset();}, 250) : window.requestAnimationFrame(fxReset);
-      };
-  
-      function fxReset() {
-        viewportHeight = window.innerHeight;
-        fxReveal();
-      };
-  
-      function fxReveal() { // reveal visible elements
-        for(var i = 0; i < fxElements.length; i++) {(function(i){
-          if(fxRevealedItems.indexOf(i) != -1 ) return; //element has already been revelead
-          if(fxElementIsVisible(fxElements[i], i)) {
-            fxRevealItem(i);
-            fxRevealedItems.push(i);
-          }})(i); 
-        }
-        fxResetEvents(); 
-        fxChecking = false;
-      };
-  
-      function fxRevealItem(index) {
-        if(fxElementDelays[index] && fxElementDelays[index] != 0) {
-          // wait before revealing element if a delay was added
-          setTimeout(function(){
-            Util.addClass(fxElements[index], 'reveal-fx--is-visible');
-          }, fxElementDelays[index]);
-        } else {
-          Util.addClass(fxElements[index], 'reveal-fx--is-visible');
-        }
-      };
-  
-      function fxRevealItemObserver(item) {
-        var index = Util.getIndexInArray(fxElements, item);
-        if(fxRevealedItems.indexOf(index) != -1 ) return; //element has already been revelead
-        fxRevealItem(index);
-        fxRevealedItems.push(index);
-        fxResetEvents(); 
-        fxChecking = false;
-      };
-  
-      function fxGetDelays() { // get anmation delays
-        var delays = [];
-        for(var i = 0; i < fxElements.length; i++) {
-          delays.push( fxElements[i].getAttribute('data-reveal-fx-delay') ? parseInt(fxElements[i].getAttribute('data-reveal-fx-delay')) : 0);
-        }
-        return delays;
-      };
-  
-      function fxGetDeltas() { // get reveal delta
-        var deltas = [];
-        for(var i = 0; i < fxElements.length; i++) {
-          deltas.push( fxElements[i].getAttribute('data-reveal-fx-delta') ? parseInt(fxElements[i].getAttribute('data-reveal-fx-delta')) : fxRevealDelta);
-        }
-        return deltas;
-      };
-  
-      function fxDisabled(element) { // check if elements need to be animated - no animation on small devices
-        return !(window.getComputedStyle(element, '::before').getPropertyValue('content').replace(/'|"/g, "") == 'reveal-fx');
-      };
-  
-      function fxElementIsVisible(element, i) { // element is inside viewport
-        return (fxGetElementPosition(element) <= viewportHeight - fxElementDeltas[i]);
-      };
-  
-      function fxGetElementPosition(element) { // get top position of element
-        return element.getBoundingClientRect().top;
-      };
-  
-      function fxResetEvents() { 
-        if(fxElements.length > fxRevealedItems.length) return;
-        // remove event listeners if all elements have been revealed
-        window.removeEventListener('load', fxReveal);
-        window.removeEventListener('resize', fxResize);
-      };
-  
-      function fxRemoveClasses() {
-        // Reduced Motion on or Intersection Observer not supported
-        while(fxElements[0]) {
-          // remove all classes starting with 'reveal-fx--'
-          var classes = fxElements[0].getAttribute('class').split(" ").filter(function(c) {
-            return c.lastIndexOf('reveal-fx--', 0) !== 0;
-          });
-          fxElements[0].setAttribute('class', classes.join(" ").trim());
-          Util.removeClass(fxElements[0], 'reveal-fx');
-        }
-      };
-  
-      function fxRestart() {
-        // restart the reveal effect -> hide all elements and re-init the observer
-        if (Util.osHasReducedMotion() || !intersectionObserverSupported || fxDisabled(fxElements[0])) {
-          return;
-        }
-        // check if we need to add the event listensers back
-        if(fxElements.length <= fxRevealedItems.length) {
-          window.addEventListener('load', fxReveal);
-          window.addEventListener('resize', fxResize);
-        }
-        // remove observer and reset the observer array
-        for(var i = 0; i < observer.length; i++) {
-          if(observer[i]) observer[i].disconnect();
-        }
-        observer = [];
-        // remove visible class
-        for(var i = 0; i < fxElements.length; i++) {
-          Util.removeClass(fxElements[i], 'reveal-fx--is-visible');
-        }
-        // reset fxRevealedItems array
-        fxRevealedItems = [];
-        // restart observer
-        initObserver();
-      };
-    }
-  }());
-// File#: _1_revealing-section
-// Usage: codyhouse.co/license
-(function() {
-  var RevealingSection = function(element) {
-    this.element = element;
-    this.scrollingFn = false;
-    this.scrolling = false;
-    this.resetOpacity = false;
-    initRevealingSection(this);
-  };
-
-  function initRevealingSection(element) {
-    // set position of sticky element
-    setBottom(element);
-    // create a new node - to be inserted before the sticky element
-    createPrevElement(element);
-    // on resize -> reset element bottom position
-    element.element.addEventListener('update-reveal-section', function(){
-      setBottom(element);
-      setPrevElementTop(element);
-    });
-    animateRevealingSection.bind(element)(); // set initial status
-    // change opacity of layer
-    var observer = new IntersectionObserver(revealingSectionCallback.bind(element));
-		observer.observe(element.prevElement);
-  };
-
-  function createPrevElement(element) {
-    var newElement = document.createElement("div"); 
-    newElement.setAttribute('aria-hidden', 'true');
-    element.element.parentElement.insertBefore(newElement, element.element);
-    element.prevElement =  element.element.previousElementSibling;
-    element.prevElement.style.opacity = '0';
-    element.prevElement.style.height = '1px';
-    setPrevElementTop(element);
-  };
-
-  function setPrevElementTop(element) {
-    element.prevElementTop = element.prevElement.getBoundingClientRect().top + window.scrollY;
-  };
-
-  function revealingSectionCallback(entries, observer) {
-		if(entries[0].isIntersecting) {
-      if(this.scrollingFn) return; // listener for scroll event already added
-      revealingSectionInitEvent(this);
-    } else {
-      if(!this.scrollingFn) return; // listener for scroll event already removed
-      window.removeEventListener('scroll', this.scrollingFn);
-      updateOpacityValue(this, 0);
-      this.scrollingFn = false;
-    }
-  };
-  
-  function revealingSectionInitEvent(element) {
-    element.scrollingFn = revealingSectionScrolling.bind(element);
-    window.addEventListener('scroll', element.scrollingFn);
-  };
-
-  function revealingSectionScrolling() {
-    if(this.scrolling) return;
-    this.scrolling = true;
-    window.requestAnimationFrame(animateRevealingSection.bind(this));
-  };
-
-  function animateRevealingSection() {
-    if(this.prevElementTop - window.scrollY < window.innerHeight) {
-      var opacity = (1 - (window.innerHeight + window.scrollY - this.prevElementTop)/window.innerHeight).toFixed(2);
-      if(opacity > 0 ) {
-        this.resetOpacity = false;
-        updateOpacityValue(this, opacity);
-      } else if(!this.resetOpacity) {
-        this.resetOpacity = true;
-        updateOpacityValue(this, 0);
-      } 
-    }
-    this.scrolling = false;
-  };
-
-  function updateOpacityValue(element, value) {
-    element.element.style.setProperty('--reavealing-section-overlay-opacity', value);
-  };
-
-  function setBottom(element) {
-    var translateValue = window.innerHeight - element.element.offsetHeight;
-    if(translateValue > 0) translateValue = 0;
-    element.element.style.bottom = ''+translateValue+'px';
-  };
-
-  //initialize the Revealing Section objects
-  var revealingSection = document.getElementsByClassName('js-revealing-section');
-  var stickySupported = Util.cssSupports('position', 'sticky') || Util.cssSupports('position', '-webkit-sticky');
-	if( revealingSection.length > 0 && stickySupported) {
-    var revealingSectionArray = [];
-		for( var i = 0; i < revealingSection.length; i++) {
-      (function(i){revealingSectionArray.push(new RevealingSection(revealingSection[i]));})(i);
-    }
-    
-    var resizingId = false,
-      customEvent = new CustomEvent('update-reveal-section');
-
-    window.addEventListener('resize', function() {
-      clearTimeout(resizingId);
-      resizingId = setTimeout(doneResizing, 100);
-    });
-
-    // wait for font to be loaded
-    if(document.fonts) {
-      document.fonts.onloadingdone = function (fontFaceSetEvent) {
-        doneResizing();
-      };
-    }
-
-    function doneResizing() {
-      for( var i = 0; i < revealingSectionArray.length; i++) {
-        (function(i){revealingSectionArray[i].element.dispatchEvent(customEvent)})(i);
-      };
-    };
-	}
-}());
 // File#: _1_scrolling-animations
 // Usage: codyhouse.co/license
 (function() {
@@ -2735,8 +563,8 @@ if (mobileDropdownButton) {
 }());
 // File#: _1_sliding-panels
 // Usage: codyhouse.co/license
-(function () {
-  var SlidingPanels = function (element) {
+(function() {
+  var SlidingPanels = function(element) {
     this.element = element;
     this.itemsList = this.element.getElementsByClassName('js-s-panels__projects-list');
     this.items = this.itemsList[0].getElementsByClassName('js-s-panels__project-preview');
@@ -2752,13 +580,13 @@ if (mobileDropdownButton) {
 
   function initSlidingPanels(element) {
     // detect click on toggle menu
-    if (element.navigationToggle.length > 0 && element.navigation.length > 0) {
-      element.navigationToggle[0].addEventListener('click', function (event) {
-        if (element.animating) return;
-
+    if(element.navigationToggle.length > 0 && element.navigation.length > 0) {
+      element.navigationToggle[0].addEventListener('click', function(event) {
+        if(element.animating) return;
+        
         // if project is open -> close project
-        if (closeProjectIfVisible(element)) return;
-
+        if(closeProjectIfVisible(element)) return;
+        
         // toggle navigation
         var openNav = Util.hasClass(element.navigation[0], 'is-hidden');
         toggleNavigation(element, openNav);
@@ -2766,11 +594,11 @@ if (mobileDropdownButton) {
     }
 
     // open project
-    element.element.addEventListener('click', function (event) {
-      if (element.animating) return;
+    element.element.addEventListener('click', function(event) {
+      if(element.animating) return;
 
       var link = event.target.closest('.js-s-panels__project-control');
-      if (!link) return;
+      if(!link) return;
       event.preventDefault();
       openProject(element, event.target.closest('.js-s-panels__project-preview'), link.getAttribute('href').replace('#', ''));
     });
@@ -2779,7 +607,7 @@ if (mobileDropdownButton) {
   // check if there's a visible project to close and close it
   function closeProjectIfVisible(element) {
     var visibleProject = element.element.getElementsByClassName('s-panels__project-preview--selected');
-    if (visibleProject.length > 0) {
+    if(visibleProject.length > 0) {
       element.animating = true;
       closeProject(element);
       return true;
@@ -2790,10 +618,10 @@ if (mobileDropdownButton) {
 
   function toggleNavigation(element, openNavigation) {
     element.animating = true;
-    if (openNavigation) Util.removeClass(element.navigation[0], 'is-hidden');
-    slideProjects(element, openNavigation, false, function () {
+    if(openNavigation) Util.removeClass(element.navigation[0], 'is-hidden');
+    slideProjects(element, openNavigation, false, function(){
       element.animating = false;
-      if (!openNavigation) Util.addClass(element.navigation[0], 'is-hidden');
+      if(!openNavigation) Util.addClass(element.navigation[0], 'is-hidden');
     });
     Util.toggleClass(element.navigationToggle[0], 's-panels__nav-control--arrow-down', openNavigation);
   };
@@ -2806,13 +634,13 @@ if (mobileDropdownButton) {
     // expand selected projects
     Util.addClass(project, 's-panels__project-preview--selected');
     // hide remaining projects
-    slideProjects(element, true, projectIndex, function () {
+    slideProjects(element, true, projectIndex, function() {
       // reveal section content
       element.selectedSection = document.getElementById(id);
-      if (element.selectedSection) Util.removeClass(element.selectedSection, 'is-hidden');
+      if(element.selectedSection) Util.removeClass(element.selectedSection, 'is-hidden');
       element.animating = false;
       // trigger a custom event - this can be used to init the project content (if required)
-      element.element.dispatchEvent(new CustomEvent('slidingPanelOpen', { detail: projectIndex }));
+		  element.element.dispatchEvent(new CustomEvent('slidingPanelOpen', {detail: projectIndex}));
     });
     // modify toggle button appearance
     Util.addClass(element.navigationToggle[0], 's-panels__nav-control--close');
@@ -2829,16 +657,16 @@ if (mobileDropdownButton) {
     Util.addClass(element.transitionLayer[0], 's-panels__overlay-layer--visible');
     // wait for end of transition layer effect
     element.transitionLayer[0].addEventListener('transitionend', function cb(event) {
-      if (event.propertyName != 'opacity') return;
+      if(event.propertyName != 'opacity') return;
       element.transitionLayer[0].removeEventListener('transitionend', cb);
       // update projects classes
       resetProjects(element);
 
-      setTimeout(function () {
+      setTimeout(function(){
         // hide transition layer
         Util.removeClass(element.transitionLayer[0], 's-panels__overlay-layer--visible');
         // reveal projects
-        slideProjects(element, false, false, function () {
+        slideProjects(element, false, false, function() {
           Util.addClass(element.itemsList[0], 'bg-opacity-0');
           element.animating = false;
         });
@@ -2854,40 +682,38 @@ if (mobileDropdownButton) {
   function slideProjects(element, openNav, exclude, cb) {
     // projects will slide out in a random order
     var randomList = getRandomList(element.items.length, exclude);
-    for (var i = 0; i < randomList.length; i++) {
-      (function (i) {
-        setTimeout(function () {
-          Util.toggleClass(element.items[randomList[i]], 's-panels__project-preview--hide', openNav);
-          toggleProjectAccessibility(element.items[randomList[i]], openNav);
-          if (cb && i == randomList.length - 1) {
-            // last item to be animated -> execute callback function at the end of the animation
-            element.items[randomList[i]].addEventListener('transitionend', function cbt() {
-              if (event.propertyName != 'transform') return;
-              if (cb) cb();
-              element.items[randomList[i]].removeEventListener('transitionend', cbt);
-            });
-          }
-        }, i * 100);
-      })(i);
-    }
+    for(var i = 0; i < randomList.length; i++) {(function(i){
+      setTimeout(function(){
+        Util.toggleClass(element.items[randomList[i]], 's-panels__project-preview--hide', openNav);
+        toggleProjectAccessibility(element.items[randomList[i]], openNav);
+        if(cb && i == randomList.length - 1) {
+          // last item to be animated -> execute callback function at the end of the animation
+          element.items[randomList[i]].addEventListener('transitionend', function cbt() {
+            if(event.propertyName != 'transform') return;
+            if(cb) cb();
+            element.items[randomList[i]].removeEventListener('transitionend', cbt);
+          });
+        }
+      }, i*100);
+    })(i);}
   };
 
   function toggleTransitionProjects(element, bool) {
     // remove transitions from project elements
-    for (var i = 0; i < element.items.length; i++) {
+    for(var i = 0; i < element.items.length; i++) {
       Util.toggleClass(element.items[i], 's-panels__project-preview--no-transition', bool);
     }
   };
 
   function resetProjects(element) {
     // reset projects classes -> remove selected/no-transition class + add hide class
-    for (var i = 0; i < element.items.length; i++) {
+    for(var i = 0; i < element.items.length; i++) {
       Util.removeClass(element.items[i], 's-panels__project-preview--selected s-panels__project-preview--no-transition');
       Util.addClass(element.items[i], 's-panels__project-preview--hide');
     }
 
     // hide project content
-    if (element.selectedSection) Util.addClass(element.selectedSection, 'is-hidden');
+    if(element.selectedSection) Util.addClass(element.selectedSection, 'is-hidden');
     element.selectedSection = false;
   };
 
@@ -2895,12 +721,12 @@ if (mobileDropdownButton) {
     // get list of random integer from 0 to (maxVal - 1) excluding (exclude) if defined
     var uniqueRandoms = [];
     var randomArray = [];
-
+    
     function makeUniqueRandom() {
       // refill the array if needed
       if (!uniqueRandoms.length) {
         for (var i = 0; i < maxVal; i++) {
-          if (exclude === false || i != exclude) uniqueRandoms.push(i);
+          if(exclude === false || i != exclude) uniqueRandoms.push(i);
         }
       }
       var index = Math.floor(Math.random() * uniqueRandoms.length);
@@ -2910,7 +736,7 @@ if (mobileDropdownButton) {
       return val;
     }
 
-    for (var j = 0; j < maxVal; j++) {
+    for(var j = 0; j < maxVal; j++) {
       randomArray.push(makeUniqueRandom());
     }
 
@@ -2920,106 +746,16 @@ if (mobileDropdownButton) {
   function toggleProjectAccessibility(project, bool) {
     bool ? project.setAttribute('aria-hidden', 'true') : project.removeAttribute('aria-hidden');
     var link = project.getElementsByClassName('js-s-panels__project-control');
-    if (link.length > 0) {
+    if(link.length > 0) {
       bool ? link[0].setAttribute('tabindex', '-1') : link[0].removeAttribute('tabindex');
     }
   };
 
   //initialize the SlidingPanels objects
-  var slidingPanels = document.getElementsByClassName('js-s-panels');
-  if (slidingPanels.length > 0) {
-    for (var i = 0; i < slidingPanels.length; i++) {
-      (function (i) { new SlidingPanels(slidingPanels[i]); })(i);
-    }
-  }
-}());
-
-
-
-// Custom Desktop Functions
-const slidingPanelsBtn = document.getElementById("sliding-panels-btn");
-let slidingPanelsBtnState = false; // False = hidden | True = show
-
-function showSlidingPanelsBtn() {
-  if (!slidingPanelsBtnState) {
-    slidingPanelsBtn.classList.remove('is-hidden');
-    slidingPanelsBtnState = true;
-  }
-}
-
-function hideSlidingPanelsBtn() {
-  if (slidingPanelsBtnState) {
-    slidingPanelsBtn.classList.add('is-hidden');
-    slidingPanelsBtnState = false;
-  }
-}
-
-// Custom Mobile Functions
-const terroirMobileCustompanels = document.getElementById('terroir-mobile-custompanels');
-const slidingpanelsMobile = document.getElementById('terroir-mobile-slidingpanels');
-const panelMobileChanares = document.getElementById('slidingpanel-chanares');
-const panelMobileZingaretti = document.getElementById('slidingpanel-zingaretti');
-const panelMobileMarchiori = document.getElementById('slidingpanel-marchiori');
-let actualOpenPanel;
-
-function openMobilePanel(panel) {
-  terroirMobileCustompanels.scrollIntoView({behavior: 'smooth'});
-  slidingpanelsMobile.classList.remove('is-hidden');
-  slidingpanelsMobile.classList.remove('close-panel-animation');
-  slidingpanelsMobile.classList.add('open-panel-animation');
-  panel.classList.remove('is-hidden');
-  console.log('OPEN PANEL');
-
-  actualOpenPanel = panel;
-
-  document.body.style.overflowY = "hidden";
-}
-function closeMobilePanel(panel) {
-  slidingpanelsMobile.classList.remove('open-panel-animation');
-  slidingpanelsMobile.classList.add('close-panel-animation');
-  setTimeout(() => {
-    panel.classList.add('is-hidden');
-    slidingpanelsMobile.classList.add('is-hidden');
-    document.body.style.overflowY = "scroll";
-  }, 450);
-  console.log('CLOSE PANEL');
-}
-
-// File#: _1_sticky-hero
-// Usage: codyhouse.co/license
-(function() {
-	var StickyBackground = function(element) {
-		this.element = element;
-		this.scrollingElement = this.element.getElementsByClassName('sticky-hero__content')[0];
-		this.nextElement = this.element.nextElementSibling;
-		this.scrollingTreshold = 0;
-		this.nextTreshold = 0;
-		initStickyEffect(this);
-	};
-
-	function initStickyEffect(element) {
-		var observer = new IntersectionObserver(stickyCallback.bind(element), { threshold: [0, 0.1, 1] });
-		observer.observe(element.scrollingElement);
-		if(element.nextElement) observer.observe(element.nextElement);
-	};
-
-	function stickyCallback(entries, observer) {
-		var threshold = entries[0].intersectionRatio.toFixed(1);
-		(entries[0].target ==  this.scrollingElement)
-			? this.scrollingTreshold = threshold
-			: this.nextTreshold = threshold;
-
-		Util.toggleClass(this.element, 'sticky-hero--media-is-fixed', (this.nextTreshold > 0 || this.scrollingTreshold > 0));
-	};
-
-
-	var stickyBackground = document.getElementsByClassName('js-sticky-hero'),
-		intersectionObserverSupported = ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype);
-	if(stickyBackground.length > 0 && intersectionObserverSupported) { // if IntersectionObserver is not supported, animations won't be triggeres
-		for(var i = 0; i < stickyBackground.length; i++) {
-			(function(i){ // if animations are enabled -> init the StickyBackground object
-        if( Util.hasClass(stickyBackground[i], 'sticky-hero--overlay-layer') || Util.hasClass(stickyBackground[i], 'sticky-hero--scale')) new StickyBackground(stickyBackground[i]);
-      })(i);
+	var slidingPanels = document.getElementsByClassName('js-s-panels');
+	if( slidingPanels.length > 0 ) {
+		for( var i = 0; i < slidingPanels.length; i++) {
+			(function(i){new SlidingPanels(slidingPanels[i]);})(i);
 		}
 	}
 }());
@@ -3035,13 +771,13 @@ function closeMobilePanel(panel) {
 
 	function initSwipeContent(content) {
 		content.element.addEventListener('mousedown', handleEvent.bind(content));
-		content.element.addEventListener('touchstart', handleEvent.bind(content));
+		content.element.addEventListener('touchstart', handleEvent.bind(content), {passive: true});
 	};
 
 	function initDragging(content) {
 		//add event listeners
 		content.element.addEventListener('mousemove', handleEvent.bind(content));
-		content.element.addEventListener('touchmove', handleEvent.bind(content));
+		content.element.addEventListener('touchmove', handleEvent.bind(content), {passive: true});
 		content.element.addEventListener('mouseup', handleEvent.bind(content));
 		content.element.addEventListener('mouseleave', handleEvent.bind(content));
 		content.element.addEventListener('touchend', handleEvent.bind(content));
@@ -3161,45 +897,6 @@ function closeMobilePanel(panel) {
 		}
 	}
 }());
-// File#: _1_vertical-timeline
-// Usage: codyhouse.co/license
-(function() {
-    var VTimeline = function(element) {
-      this.element = element;
-      this.sections = this.element.getElementsByClassName('js-v-timeline__section');
-      this.animate = this.element.getAttribute('data-animation') && this.element.getAttribute('data-animation') == 'on' ? true : false;
-      this.animationClass = 'v-timeline__section--animate';
-      this.animationDelta = '-150px';
-      initVTimeline(this);
-    };
-  
-    function initVTimeline(element) {
-      if(!element.animate) return;
-      for(var i = 0; i < element.sections.length; i++) {
-        var observer = new IntersectionObserver(vTimelineCallback.bind(element, i),
-        {rootMargin: "0px 0px "+element.animationDelta+" 0px"});
-        observer.observe(element.sections[i]);
-      }
-    };
-  
-    function vTimelineCallback(index, entries, observer) {
-      if(entries[0].isIntersecting) {
-        Util.addClass(this.sections[index], this.animationClass);
-        observer.unobserve(this.sections[index]);
-      } 
-    };
-  
-    //initialize the VTimeline objects
-    var timelines = document.querySelectorAll('.js-v-timeline'),
-      intersectionObserverSupported = ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype),
-      reducedMotion = Util.osHasReducedMotion();
-    if( timelines.length > 0) {
-      for( var i = 0; i < timelines.length; i++) {
-        if(intersectionObserverSupported && !reducedMotion) (function(i){new VTimeline(timelines[i]);})(i);
-        else timelines[i].removeAttribute('data-animation');
-      }
-    }
-  }());
 // File#: _2_carousel
 // Usage: codyhouse.co/license
 (function() {
@@ -3363,22 +1060,27 @@ function closeMobilePanel(panel) {
     if(carousel.options.autoplay) {
       startAutoplay(carousel);
       // pause autoplay if user is interacting with the carousel
-      carousel.element.addEventListener('mouseenter', function(event){
-        pauseAutoplay(carousel);
-        carousel.autoplayPaused = true;
-      });
-      carousel.element.addEventListener('focusin', function(event){
-        pauseAutoplay(carousel);
-        carousel.autoplayPaused = true;
-      });
-      carousel.element.addEventListener('mouseleave', function(event){
-        carousel.autoplayPaused = false;
-        startAutoplay(carousel);
-      });
-      carousel.element.addEventListener('focusout', function(event){
-        carousel.autoplayPaused = false;
-        startAutoplay(carousel);
-      });
+      if(!carousel.options.autoplayOnHover) {
+        carousel.element.addEventListener('mouseenter', function(event){
+          pauseAutoplay(carousel);
+          carousel.autoplayPaused = true;
+        });
+        carousel.element.addEventListener('mouseleave', function(event){
+          carousel.autoplayPaused = false;
+          startAutoplay(carousel);
+        });
+      }
+      if(!carousel.options.autoplayOnFocus) {
+        carousel.element.addEventListener('focusin', function(event){
+          pauseAutoplay(carousel);
+          carousel.autoplayPaused = true;
+        });
+      
+        carousel.element.addEventListener('focusout', function(event){
+          carousel.autoplayPaused = false;
+          startAutoplay(carousel);
+        });
+      }
     }
     // drag events
     if(carousel.options.drag && window.requestAnimationFrame) {
@@ -3855,6 +1557,8 @@ function closeMobilePanel(panel) {
   Carousel.defaults = {
     element : '',
     autoplay : false,
+    autoplayOnHover: false,
+		autoplayOnFocus: false,
     autoplayInterval: 5000,
     loop: true,
     nav: false,
@@ -3880,6 +1584,8 @@ function closeMobilePanel(panel) {
       (function(i){
         var autoplay = (carousels[i].getAttribute('data-autoplay') && carousels[i].getAttribute('data-autoplay') == 'on') ? true : false,
           autoplayInterval = (carousels[i].getAttribute('data-autoplay-interval')) ? carousels[i].getAttribute('data-autoplay-interval') : 5000,
+          autoplayOnHover = (carousels[i].getAttribute('data-autoplay-hover') && carousels[i].getAttribute('data-autoplay-hover') == 'on') ? true : false,
+					autoplayOnFocus = (carousels[i].getAttribute('data-autoplay-focus') && carousels[i].getAttribute('data-autoplay-focus') == 'on') ? true : false,
           drag = (carousels[i].getAttribute('data-drag') && carousels[i].getAttribute('data-drag') == 'on') ? true : false,
           loop = (carousels[i].getAttribute('data-loop') && carousels[i].getAttribute('data-loop') == 'off') ? false : true,
           nav = (carousels[i].getAttribute('data-navigation') && carousels[i].getAttribute('data-navigation') == 'on') ? true : false,
@@ -3889,7 +1595,7 @@ function closeMobilePanel(panel) {
           overflowItems = (carousels[i].getAttribute('data-overflow-items') && carousels[i].getAttribute('data-overflow-items') == 'on') ? true : false,
           alignControls = carousels[i].getAttribute('data-align-controls') ? carousels[i].getAttribute('data-align-controls') : false,
           justifyContent = (carousels[i].getAttribute('data-justify-content') && carousels[i].getAttribute('data-justify-content') == 'on') ? true : false;
-        new Carousel({element: carousels[i], autoplay : autoplay, autoplayInterval : autoplayInterval, drag: drag, ariaLive: true, loop: loop, nav: nav, navigationItemClass: navigationItemClass, navigationPagination: navigationPagination, navigationClass: navigationClass, overflowItems: overflowItems, justifyContent: justifyContent, alignControls: alignControls});
+        new Carousel({element: carousels[i], autoplay : autoplay, autoplayOnHover: autoplayOnHover, autoplayOnFocus: autoplayOnFocus,autoplayInterval : autoplayInterval, drag: drag, ariaLive: true, loop: loop, nav: nav, navigationItemClass: navigationItemClass, navigationPagination: navigationPagination, navigationClass: navigationClass, overflowItems: overflowItems, justifyContent: justifyContent, alignControls: alignControls});
       })(i);
     }
   };
@@ -4087,1205 +1793,354 @@ function closeMobilePanel(panel) {
     };
   }
 }());
-// File#: _2_drawer-navigation
+// File#: _2_slideshow
 // Usage: codyhouse.co/license
 (function() {
-  function initDrNavControl(element) {
-    var circle = element.getElementsByTagName('circle');
-    if(circle.length > 0) {
-      // set svg attributes to create fill-in animation on click
-      initCircleAttributes(element, circle[0]);
-    }
-
-    var drawerId = element.getAttribute('aria-controls'),
-      drawer = document.getElementById(drawerId);
-    if(drawer) {
-      // when the drawer is closed without click (e.g., user presses 'Esc') -> reset trigger status
-      drawer.addEventListener('drawerIsClose', function(event){ 
-        if(!event.detail || (event.detail && !event.detail.closest('.js-dr-nav-control[aria-controls="'+drawerId+'"]')) ) resetTrigger(element);
-      });
-    }
-  };
-
-  function initCircleAttributes(element, circle) {
-    // set circle stroke-dashoffset/stroke-dasharray values
-    var circumference = (2*Math.PI*circle.getAttribute('r')).toFixed(2);
-    circle.setAttribute('stroke-dashoffset', circumference);
-    circle.setAttribute('stroke-dasharray', circumference);
-    Util.addClass(element, 'dr-nav-control--ready-to-animate');
-  };
-
-  function resetTrigger(element) {
-    Util.removeClass(element, 'anim-menu-btn--state-b'); 
-  };
-
-  var drNavControl = document.getElementsByClassName('js-dr-nav-control');
-  if(drNavControl.length > 0) initDrNavControl(drNavControl[0]);
-}());
-// File#: _2_flexi-header
-// Usage: codyhouse.co/license
-(function () {
-	var flexHeader = document.getElementsByClassName('js-f-header');
-
-	if (flexHeader.length > 0) {
-		var menuTrigger = flexHeader[0].getElementsByClassName('js-anim-menu-btn')[0],
-			firstFocusableElement = getMenuFirstFocusable();
-
-		// we'll use these to store the node that needs to receive focus when the mobile menu is closed 
-		var focusMenu = false;
-
-		resetFlexHeaderOffset();
-
-		menuTrigger.addEventListener('anim-menu-btn-clicked', function (event) {
-			toggleMenuNavigation(event.detail);
-		});
-
-		// listen for key events
-		window.addEventListener('keyup', function (event) {
-			// listen for esc key
-			if ((event.keyCode && event.keyCode == 27) || (event.key && event.key.toLowerCase() == 'escape')) {
-				// close navigation on mobile if open
-				if (menuTrigger.getAttribute('aria-expanded') == 'true' && isVisible(menuTrigger)) {
-					focusMenu = menuTrigger; // move focus to menu trigger when menu is close
-					menuTrigger.click();
-				}
-			}
-			// listen for tab key
-			if ((event.keyCode && event.keyCode == 9) || (event.key && event.key.toLowerCase() == 'tab')) {
-				// close navigation on mobile if open when nav loses focus
-				if (menuTrigger.getAttribute('aria-expanded') == 'true' && isVisible(menuTrigger) && !document.activeElement.closest('.js-f-header')) menuTrigger.click();
-			}
-		});
-
-		// listen for resize
-		var resizingId = false;
-		window.addEventListener('resize', function () {
-			clearTimeout(resizingId);
-			resizingId = setTimeout(doneResizing, 500);
-		});
-
-		function getMenuFirstFocusable() {
-			var focusableEle = flexHeader[0].getElementsByClassName('f-header__nav')[0].querySelectorAll('[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary'),
-				firstFocusable = false;
-			for (var i = 0; i < focusableEle.length; i++) {
-				if (focusableEle[i].offsetWidth || focusableEle[i].offsetHeight || focusableEle[i].getClientRects().length) {
-					firstFocusable = focusableEle[i];
-					break;
-				}
-			}
-
-			return firstFocusable;
-		};
-
-		function isVisible(element) {
-			return (element.offsetWidth || element.offsetHeight || element.getClientRects().length);
-		};
-
-		function doneResizing() {
-			if (!isVisible(menuTrigger) && Util.hasClass(flexHeader[0], 'f-header--expanded')) {
-				menuTrigger.click();
-			}
-			resetFlexHeaderOffset();
-		};
-
-		function toggleMenuNavigation(bool) { // toggle menu visibility on small devices
-			Util.toggleClass(document.getElementsByClassName('f-header__nav')[0], 'f-header__nav--is-visible', bool);
-			Util.toggleClass(flexHeader[0], 'f-header--expanded', bool);
-			menuTrigger.setAttribute('aria-expanded', bool);
-			if (bool) firstFocusableElement.focus(); // move focus to first focusable element
-			else if (focusMenu) {
-				focusMenu.focus();
-				focusMenu = false;
-			}
-		};
-
-		function resetFlexHeaderOffset() {
-			// on mobile -> update max height of the flexi header based on its offset value (e.g., if there's a fixed pre-header element)
-			document.documentElement.style.setProperty('--f-header-offset', flexHeader[0].getBoundingClientRect().top + 'px');
-		};
-	}
-}());
-// File#: _2_modal-video
-// Usage: codyhouse.co/license
-(function() {
-	var ModalVideo = function(element) {
-		this.element = element;
-		this.modalContent = this.element.getElementsByClassName('js-modal-video__content')[0];
-		this.media = this.element.getElementsByClassName('js-modal-video__media')[0];
-		this.contentIsIframe = this.media.tagName.toLowerCase() == 'iframe';
-		this.modalIsOpen = false;
-		this.initModalVideo();
+	var Slideshow = function(opts) {
+		this.options = Util.extend(Slideshow.defaults , opts);
+		this.element = this.options.element;
+		this.items = this.element.getElementsByClassName('js-slideshow__item');
+		this.controls = this.element.getElementsByClassName('js-slideshow__control'); 
+		this.selectedSlide = 0;
+		this.autoplayId = false;
+		this.autoplayPaused = false;
+		this.navigation = false;
+		this.navCurrentLabel = false;
+		this.ariaLive = false;
+		this.moveFocus = false;
+		this.animating = false;
+		this.supportAnimation = Util.cssSupports('transition');
+		this.animationOff = (!Util.hasClass(this.element, 'slideshow--transition-fade') && !Util.hasClass(this.element, 'slideshow--transition-slide') && !Util.hasClass(this.element, 'slideshow--transition-prx'));
+		this.animationType = Util.hasClass(this.element, 'slideshow--transition-prx') ? 'prx' : 'slide';
+		this.animatingClass = 'slideshow--is-animating';
+		initSlideshow(this);
+		initSlideshowEvents(this);
+		initAnimationEndEvents(this);
 	};
 
-	ModalVideo.prototype.initModalVideo = function() {
-		var self = this;
-		// reveal modal content when iframe is ready
-		this.addLoadListener();
-		// listen for the modal element to be open -> set new iframe src attribute
-		this.element.addEventListener('modalIsOpen', function(event){
-			self.modalIsOpen = true;
-			self.media.setAttribute('src', event.detail.closest('[aria-controls]').getAttribute('data-url'));
-		});
-		// listen for the modal element to be close -> reset iframe and hide modal content
-		this.element.addEventListener('modalIsClose', function(event){
-			self.modalIsOpen = false;
-			Util.addClass(self.element, 'modal--is-loading');
-			self.media.setAttribute('src', '');
-		});
+	Slideshow.prototype.showNext = function() {
+		showNewItem(this, this.selectedSlide + 1, 'next');
 	};
 
-	ModalVideo.prototype.addLoadListener = function() {
+	Slideshow.prototype.showPrev = function() {
+		showNewItem(this, this.selectedSlide - 1, 'prev');
+	};
+
+	Slideshow.prototype.showItem = function(index) {
+		showNewItem(this, index, false);
+	};
+
+	Slideshow.prototype.startAutoplay = function() {
 		var self = this;
-		if(this.contentIsIframe) {
-			this.media.onload = function () {
-				self.revealContent();
-			};
-		} else {
-			this.media.addEventListener('loadedmetadata', function(){
-				self.revealContent();
+		if(this.options.autoplay && !this.autoplayId && !this.autoplayPaused) {
+			self.autoplayId = setInterval(function(){
+				self.showNext();
+			}, self.options.autoplayInterval);
+		}
+	};
+
+	Slideshow.prototype.pauseAutoplay = function() {
+		var self = this;
+		if(this.options.autoplay) {
+			clearInterval(self.autoplayId);
+			self.autoplayId = false;
+		}
+	};
+
+	function initSlideshow(slideshow) { // basic slideshow settings
+		// if no slide has been selected -> select the first one
+		if(slideshow.element.getElementsByClassName('slideshow__item--selected').length < 1) Util.addClass(slideshow.items[0], 'slideshow__item--selected');
+		slideshow.selectedSlide = Util.getIndexInArray(slideshow.items, slideshow.element.getElementsByClassName('slideshow__item--selected')[0]);
+		// create an element that will be used to announce the new visible slide to SR
+		var srLiveArea = document.createElement('div');
+		Util.setAttributes(srLiveArea, {'class': 'sr-only js-slideshow__aria-live', 'aria-live': 'polite', 'aria-atomic': 'true'});
+		slideshow.element.appendChild(srLiveArea);
+		slideshow.ariaLive = srLiveArea;
+	};
+
+	function initSlideshowEvents(slideshow) {
+		// if slideshow navigation is on -> create navigation HTML and add event listeners
+		if(slideshow.options.navigation) {
+			// check if navigation has already been included
+			if(slideshow.element.getElementsByClassName('js-slideshow__navigation').length == 0) {
+				var navigation = document.createElement('ol'),
+					navChildren = '';
+
+				var navClasses = slideshow.options.navigationClass+' js-slideshow__navigation';
+				if(slideshow.items.length <= 1) {
+					navClasses = navClasses + ' is-hidden';
+				}
+				
+				navigation.setAttribute('class', navClasses);
+				for(var i = 0; i < slideshow.items.length; i++) {
+					var className = (i == slideshow.selectedSlide) ? 'class="'+slideshow.options.navigationItemClass+' '+slideshow.options.navigationItemClass+'--selected js-slideshow__nav-item"' :  'class="'+slideshow.options.navigationItemClass+' js-slideshow__nav-item"',
+						navCurrentLabel = (i == slideshow.selectedSlide) ? '<span class="sr-only js-slideshow__nav-current-label">Current Item</span>' : '';
+					navChildren = navChildren + '<li '+className+'><button class="reset"><span class="sr-only">'+ (i+1) + '</span>'+navCurrentLabel+'</button></li>';
+				}
+				navigation.innerHTML = navChildren;
+				slideshow.element.appendChild(navigation);
+			}
+			
+			slideshow.navCurrentLabel = slideshow.element.getElementsByClassName('js-slideshow__nav-current-label')[0]; 
+			slideshow.navigation = slideshow.element.getElementsByClassName('js-slideshow__nav-item');
+
+			var dotsNavigation = slideshow.element.getElementsByClassName('js-slideshow__navigation')[0];
+
+			dotsNavigation.addEventListener('click', function(event){
+				navigateSlide(slideshow, event, true);
+			});
+			dotsNavigation.addEventListener('keyup', function(event){
+				navigateSlide(slideshow, event, (event.key.toLowerCase() == 'enter'));
 			});
 		}
-		
-	};
-
-	ModalVideo.prototype.revealContent = function() {
-		if( !this.modalIsOpen ) return;
-		Util.removeClass(this.element, 'modal--is-loading');
-		this.contentIsIframe ? this.media.contentWindow.focus() : this.media.focus();
-	};
-
-	//initialize the ModalVideo objects
-	var modalVideos = document.getElementsByClassName('js-modal-video__media');
-	if( modalVideos.length > 0 ) {
-		for( var i = 0; i < modalVideos.length; i++) {
-			(function(i){new ModalVideo(modalVideos[i].closest('.js-modal'));})(i);
-		}
-	}
-}());
-// File#: _3_main-header-v2
-// Usage: codyhouse.co/license
-(function() {
-	var Submenu = function(element) {
-		this.element = element;
-		this.trigger = this.element.getElementsByClassName('header-v2__nav-link')[0];
-		this.dropdown = this.element.getElementsByClassName('header-v2__nav-dropdown')[0];
-		this.triggerFocus = false;
-		this.dropdownFocus = false;
-		this.hideInterval = false;
-		this.prevFocus = false; // nested dropdown - store element that was in focus before focus changed
-		initSubmenu(this);
-		initNestedDropdown(this);
-	};
-
-	function initSubmenu(list) {
-		initElementEvents(list, list.trigger);
-		initElementEvents(list, list.dropdown);
-	};
-
-	function initElementEvents(list, element, bool) {
-		element.addEventListener('focus', function(){
-			bool = true;
-			showDropdown(list);
-		});
-		element.addEventListener('focusout', function(event){
-			bool = false;
-			hideDropdown(list, event);
-		});
-	};
-
-	function showDropdown(list) {
-		if(list.hideInterval) clearInterval(list.hideInterval);
-		Util.addClass(list.dropdown, 'header-v2__nav-list--is-visible');
-		resetDropdownStyle(list.dropdown, true);
-	};
-
-	function hideDropdown(list, event) {
-		if(list.hideInterval) clearInterval(this.hideInterval);
-		list.hideInterval = setTimeout(function(){
-			var submenuFocus = document.activeElement.closest('.header-v2__nav-item--main'),
-				inFocus = submenuFocus && (submenuFocus == list.element);
-			if(!list.triggerFocus && !list.dropdownFocus && !inFocus) { // hide if focus is outside submenu
-				Util.removeClass(list.dropdown, 'header-v2__nav-list--is-visible');
-				resetDropdownStyle(list.dropdown, false);
-				hideSubLevels(list);
-				list.prevFocus = false;
+		// slideshow arrow controls
+		if(slideshow.controls.length > 0) {
+			// hide controls if one item available
+			if(slideshow.items.length <= 1) {
+				Util.addClass(slideshow.controls[0], 'is-hidden');
+				Util.addClass(slideshow.controls[1], 'is-hidden');
 			}
+			slideshow.controls[0].addEventListener('click', function(event){
+				event.preventDefault();
+				slideshow.showPrev();
+				updateAriaLive(slideshow);
+			});
+			slideshow.controls[1].addEventListener('click', function(event){
+				event.preventDefault();
+				slideshow.showNext();
+				updateAriaLive(slideshow);
+			});
+		}
+		// swipe events
+		if(slideshow.options.swipe) {
+			//init swipe
+			new SwipeContent(slideshow.element);
+			slideshow.element.addEventListener('swipeLeft', function(event){
+				slideshow.showNext();
+			});
+			slideshow.element.addEventListener('swipeRight', function(event){
+				slideshow.showPrev();
+			});
+		}
+		// autoplay
+		if(slideshow.options.autoplay) {
+			slideshow.startAutoplay();
+			// pause autoplay if user is interacting with the slideshow
+			if(!slideshow.options.autoplayOnHover) {
+				slideshow.element.addEventListener('mouseenter', function(event){
+					slideshow.pauseAutoplay();
+					slideshow.autoplayPaused = true;
+				});
+				slideshow.element.addEventListener('mouseleave', function(event){
+					slideshow.autoplayPaused = false;
+					slideshow.startAutoplay();
+				});
+			}
+			if(!slideshow.options.autoplayOnFocus) {
+				slideshow.element.addEventListener('focusin', function(event){
+					slideshow.pauseAutoplay();
+					slideshow.autoplayPaused = true;
+				});
+				slideshow.element.addEventListener('focusout', function(event){
+					slideshow.autoplayPaused = false;
+					slideshow.startAutoplay();
+				});
+			}
+		}
+		// detect if external buttons control the slideshow
+		var slideshowId = slideshow.element.getAttribute('id');
+		if(slideshowId) {
+			var externalControls = document.querySelectorAll('[data-controls="'+slideshowId+'"]');
+			for(var i = 0; i < externalControls.length; i++) {
+				(function(i){externalControlSlide(slideshow, externalControls[i]);})(i);
+			}
+		}
+		// custom event to trigger selection of a new slide element
+		slideshow.element.addEventListener('selectNewItem', function(event){
+			// check if slide is already selected
+			if(event.detail) {
+				if(event.detail - 1 == slideshow.selectedSlide) return;
+				showNewItem(slideshow, event.detail - 1, false);
+			}
+		});
+
+		// keyboard navigation
+		slideshow.element.addEventListener('keydown', function(event){
+			if(event.keyCode && event.keyCode == 39 || event.key && event.key.toLowerCase() == 'arrowright') {
+				slideshow.showNext();
+			} else if(event.keyCode && event.keyCode == 37 || event.key && event.key.toLowerCase() == 'arrowleft') {
+				slideshow.showPrev();
+			}
+		});
+	};
+
+	function navigateSlide(slideshow, event, keyNav) { 
+		// user has interacted with the slideshow navigation -> update visible slide
+		var target = ( Util.hasClass(event.target, 'js-slideshow__nav-item') ) ? event.target : event.target.closest('.js-slideshow__nav-item');
+		if(keyNav && target && !Util.hasClass(target, 'slideshow__nav-item--selected')) {
+			slideshow.showItem(Util.getIndexInArray(slideshow.navigation, target));
+			slideshow.moveFocus = true;
+			updateAriaLive(slideshow);
+		}
+	};
+
+	function initAnimationEndEvents(slideshow) {
+		// remove animation classes at the end of a slide transition
+		for( var i = 0; i < slideshow.items.length; i++) {
+			(function(i){
+				slideshow.items[i].addEventListener('animationend', function(){resetAnimationEnd(slideshow, slideshow.items[i]);});
+				slideshow.items[i].addEventListener('transitionend', function(){resetAnimationEnd(slideshow, slideshow.items[i]);});
+			})(i);
+		}
+	};
+
+	function resetAnimationEnd(slideshow, item) {
+		setTimeout(function(){ // add a delay between the end of animation and slideshow reset - improve animation performance
+			if(Util.hasClass(item,'slideshow__item--selected')) {
+				if(slideshow.moveFocus) Util.moveFocus(item);
+				emitSlideshowEvent(slideshow, 'newItemVisible', slideshow.selectedSlide);
+				slideshow.moveFocus = false;
+			}
+			Util.removeClass(item, 'slideshow__item--'+slideshow.animationType+'-out-left slideshow__item--'+slideshow.animationType+'-out-right slideshow__item--'+slideshow.animationType+'-in-left slideshow__item--'+slideshow.animationType+'-in-right');
+			item.removeAttribute('aria-hidden');
+			slideshow.animating = false;
+			Util.removeClass(slideshow.element, slideshow.animatingClass); 
 		}, 100);
 	};
 
-	function initNestedDropdown(list) {
-		var dropdownMenu = list.element.getElementsByClassName('header-v2__nav-list');
-		for(var i = 0; i < dropdownMenu.length; i++) {
-			var listItems = dropdownMenu[i].children;
-			// bind hover
-	    new menuAim({
-	      menu: dropdownMenu[i],
-	      activate: function(row) {
-	      	var subList = row.getElementsByClassName('header-v2__nav-dropdown')[0];
-	      	if(!subList) return;
-	      	Util.addClass(row.querySelector('a.header-v2__nav-link'), 'header-v2__nav-link--hover');
-	      	showLevel(list, subList);
-	      },
-	      deactivate: function(row) {
-	      	var subList = row.getElementsByClassName('header-v2__nav-dropdown')[0];
-	      	if(!subList) return;
-	      	Util.removeClass(row.querySelector('a.header-v2__nav-link'), 'header-v2__nav-link--hover');
-	      	hideLevel(list, subList);
-	      },
-	      exitMenu: function() {
-	        return true;
-	      },
-	      submenuSelector: '.header-v2__nav-item--has-children',
-	    });
+	function showNewItem(slideshow, index, bool) {
+		if(slideshow.items.length <= 1) return;
+		if(slideshow.animating && slideshow.supportAnimation) return;
+		slideshow.animating = true;
+		Util.addClass(slideshow.element, slideshow.animatingClass); 
+		if(index < 0) index = slideshow.items.length - 1;
+		else if(index >= slideshow.items.length) index = 0;
+		// skip slideshow item if it is hidden
+		if(bool && Util.hasClass(slideshow.items[index], 'is-hidden')) {
+			slideshow.animating = false;
+			index = bool == 'next' ? index + 1 : index - 1;
+			showNewItem(slideshow, index, bool);
+			return;
 		}
-		// store focus element before change in focus
-		list.element.addEventListener('keydown', function(event) { 
-			if( event.keyCode && event.keyCode == 9 || event.key && event.key == 'Tab' ) {
-				list.prevFocus = document.activeElement;
-			}
-		});
-		// make sure that sublevel are visible when their items are in focus
-		list.element.addEventListener('keyup', function(event) {
-			if( event.keyCode && event.keyCode == 9 || event.key && event.key == 'Tab' ) {
-				// focus has been moved -> make sure the proper classes are added to subnavigation
-				var focusElement = document.activeElement,
-					focusElementParent = focusElement.closest('.header-v2__nav-dropdown'),
-					focusElementSibling = focusElement.nextElementSibling;
-
-				// if item in focus is inside submenu -> make sure it is visible
-				if(focusElementParent && !Util.hasClass(focusElementParent, 'header-v2__nav-list--is-visible')) {
-					showLevel(list, focusElementParent);
-				}
-				// if item in focus triggers a submenu -> make sure it is visible
-				if(focusElementSibling && !Util.hasClass(focusElementSibling, 'header-v2__nav-list--is-visible')) {
-					showLevel(list, focusElementSibling);
-				}
-
-				// check previous element in focus -> hide sublevel if required 
-				if( !list.prevFocus) return;
-				var prevFocusElementParent = list.prevFocus.closest('.header-v2__nav-dropdown'),
-					prevFocusElementSibling = list.prevFocus.nextElementSibling;
-				
-				if( !prevFocusElementParent ) return;
-				
-				// element in focus and element prev in focus are siblings
-				if( focusElementParent && focusElementParent == prevFocusElementParent) {
-					if(prevFocusElementSibling) hideLevel(list, prevFocusElementSibling);
-					return;
-				}
-
-				// element in focus is inside submenu triggered by element prev in focus
-				if( prevFocusElementSibling && focusElementParent && focusElementParent == prevFocusElementSibling) return;
-				
-				// shift tab -> element in focus triggers the submenu of the element prev in focus
-				if( focusElementSibling && prevFocusElementParent && focusElementSibling == prevFocusElementParent) return;
-				
-				var focusElementParentParent = focusElementParent.parentNode.closest('.header-v2__nav-dropdown');
-				
-				// shift tab -> element in focus is inside the dropdown triggered by a siblings of the element prev in focus
-				if(focusElementParentParent && focusElementParentParent == prevFocusElementParent) {
-					if(prevFocusElementSibling) hideLevel(list, prevFocusElementSibling);
-					return;
-				}
-				
-				if(prevFocusElementParent && Util.hasClass(prevFocusElementParent, 'header-v2__nav-list--is-visible')) {
-					hideLevel(list, prevFocusElementParent);
-				}
-			}
-		});
-	};
-
-	function hideSubLevels(list) {
-		var visibleSubLevels = list.dropdown.getElementsByClassName('header-v2__nav-list--is-visible');
-		if(visibleSubLevels.length == 0) return;
-		while (visibleSubLevels[0]) {
-			hideLevel(list, visibleSubLevels[0]);
-	 	}
-	 	var hoveredItems = list.dropdown.getElementsByClassName('header-v2__nav-link--hover');
-	 	while (hoveredItems[0]) {
-			Util.removeClass(hoveredItems[0], 'header-v2__nav-link--hover');
-	 	}
-	};
-
-	function showLevel(list, level, bool) {
-		if(bool == undefined) {
-			//check if the sublevel needs to be open to the left
-			Util.removeClass(level, 'header-v2__nav-dropdown--nested-left');
-			var boundingRect = level.getBoundingClientRect();
-			if(window.innerWidth - boundingRect.right < 5 && boundingRect.left + window.scrollX > 2*boundingRect.width) Util.addClass(level, 'header-v2__nav-dropdown--nested-left');
+		// index of new slide is equal to index of slide selected item
+		if(index == slideshow.selectedSlide) {
+			slideshow.animating = false;
+			return;
 		}
-		Util.addClass(level, 'header-v2__nav-list--is-visible');
-	};
-
-	function hideLevel(list, level) {
-		if(!Util.hasClass(level, 'header-v2__nav-list--is-visible')) return;
-		Util.removeClass(level, 'header-v2__nav-list--is-visible');
-		
-		level.addEventListener('transition', function cb(){
-			level.removeEventListener('transition', cb);
-			Util.removeClass(level, 'header-v2__nav-dropdown--nested-left');
-		});
-	};
-
-	var mainHeader = document.getElementsByClassName('js-header-v2');
-	if(mainHeader.length > 0) {
-		var menuTrigger = mainHeader[0].getElementsByClassName('js-anim-menu-btn')[0],
-			firstFocusableElement = getMenuFirstFocusable();
-
-		// we'll use these to store the node that needs to receive focus when the mobile menu is closed 
-		var focusMenu = false;
-
-		menuTrigger.addEventListener('anim-menu-btn-clicked', function(event){ // toggle menu visibility an small devices
-			Util.toggleClass(document.getElementsByClassName('header-v2__nav')[0], 'header-v2__nav--is-visible', event.detail);
-			Util.toggleClass(mainHeader[0], 'header-v2--expanded', event.detail);
-			menuTrigger.setAttribute('aria-expanded', event.detail);
-			if(event.detail) firstFocusableElement.focus(); // move focus to first focusable element
-			else if(focusMenu) {
-				focusMenu.focus();
-				focusMenu = false;
-			}
-		});
-
-		// take care of submenu
-		var mainList = mainHeader[0].getElementsByClassName('header-v2__nav-list--main');
-		if(mainList.length > 0) {
-			for( var i = 0; i < mainList.length; i++) {
-				(function(i){
-					new menuAim({ // use diagonal movement detection for main submenu
-			      menu: mainList[i],
-			      activate: function(row) {
-			      	var submenu = row.getElementsByClassName('header-v2__nav-dropdown');
-			      	if(submenu.length == 0 ) return;
-			      	Util.addClass(submenu[0], 'header-v2__nav-list--is-visible');
-			      	resetDropdownStyle(submenu[0], true);
-			      },
-			      deactivate: function(row) {
-			      	var submenu = row.getElementsByClassName('header-v2__nav-dropdown');
-			      	if(submenu.length == 0 ) return;
-			      	Util.removeClass(submenu[0], 'header-v2__nav-list--is-visible');
-			      	resetDropdownStyle(submenu[0], false);
-			      },
-			      exitMenu: function() {
-			        return true;
-			      },
-			      submenuSelector: '.header-v2__nav-item--has-children',
-			      submenuDirection: 'below'
-			    });
-
-			    // take care of focus event for main submenu
-					var subMenu = mainList[i].getElementsByClassName('header-v2__nav-item--main');
-					for(var j = 0; j < subMenu.length; j++) {(function(j){if(Util.hasClass(subMenu[j], 'header-v2__nav-item--has-children')) new Submenu(subMenu[j]);})(j);};
-				})(i);
-			}
-		}
-
-		// if data-animation-offset is set -> check scrolling
-		var animateHeader = mainHeader[0].getAttribute('data-animation');
-		if(animateHeader && animateHeader == 'on') {
-			var scrolling = false,
-				scrollOffset = (mainHeader[0].getAttribute('data-animation-offset')) ? parseInt(mainHeader[0].getAttribute('data-animation-offset')) : 400,
-				mainHeaderHeight = mainHeader[0].offsetHeight,
-				mainHeaderWrapper = mainHeader[0].getElementsByClassName('header-v2__wrapper')[0];
-
-			window.addEventListener("scroll", function(event) {
-				if( !scrolling ) {
-					scrolling = true;
-					(!window.requestAnimationFrame) ? setTimeout(function(){checkMainHeader();}, 250) : window.requestAnimationFrame(checkMainHeader);
-				}
-			});
-
-			function checkMainHeader() {
-				var windowTop = window.scrollY || document.documentElement.scrollTop;
-				Util.toggleClass(mainHeaderWrapper, 'header-v2__wrapper--is-fixed', windowTop >= mainHeaderHeight);
-				Util.toggleClass(mainHeaderWrapper, 'header-v2__wrapper--slides-down', windowTop >= scrollOffset);
-				scrolling = false;
-			};
-		}
-
-		// listen for key events
-		window.addEventListener('keyup', function(event){
-			// listen for esc key
-			if( (event.keyCode && event.keyCode == 27) || (event.key && event.key.toLowerCase() == 'escape' )) {
-				// close navigation on mobile if open
-				if(menuTrigger.getAttribute('aria-expanded') == 'true' && isVisible(menuTrigger)) {
-					focusMenu = menuTrigger; // move focus to menu trigger when menu is close
-					menuTrigger.click();
-				}
-			}
-			// listen for tab key
-			if( (event.keyCode && event.keyCode == 9) || (event.key && event.key.toLowerCase() == 'tab' )) {
-				// close navigation on mobile if open when nav loses focus
-				if(menuTrigger.getAttribute('aria-expanded') == 'true' && isVisible(menuTrigger) && !document.activeElement.closest('.js-header-v2')) menuTrigger.click();
-			}
-		});
-
-		// listen for resize
-		var resizingId = false;
-		window.addEventListener('resize', function() {
-			clearTimeout(resizingId);
-			resizingId = setTimeout(doneResizing, 500);
-		});
-
-		function doneResizing() {
-			if( !isVisible(menuTrigger) && Util.hasClass(mainHeader[0], 'header-v2--expanded')) menuTrigger.click();
-		};
-
-		function getMenuFirstFocusable() {
-			var focusableEle = mainHeader[0].getElementsByClassName('header-v2__nav')[0].querySelectorAll('[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary'),
-				firstFocusable = false;
-			for(var i = 0; i < focusableEle.length; i++) {
-				if( focusableEle[i].offsetWidth || focusableEle[i].offsetHeight || focusableEle[i].getClientRects().length ) {
-					firstFocusable = focusableEle[i];
-					break;
-				}
-			}
-
-			return firstFocusable;
-		};
-	}
-
-	function resetDropdownStyle(dropdown, bool) {
-		if(!bool) {
-			dropdown.addEventListener('transitionend', function cb(){
-				dropdown.removeAttribute('style');
-				dropdown.removeEventListener('transitionend', cb);
-			});
+		var exitItemClass = getExitItemClass(slideshow, bool, slideshow.selectedSlide, index);
+		var enterItemClass = getEnterItemClass(slideshow, bool, slideshow.selectedSlide, index);
+		// transition between slides
+		if(!slideshow.animationOff) Util.addClass(slideshow.items[slideshow.selectedSlide], exitItemClass);
+		Util.removeClass(slideshow.items[slideshow.selectedSlide], 'slideshow__item--selected');
+		slideshow.items[slideshow.selectedSlide].setAttribute('aria-hidden', 'true'); //hide to sr element that is exiting the viewport
+		if(slideshow.animationOff) {
+			Util.addClass(slideshow.items[index], 'slideshow__item--selected');
 		} else {
-			var boundingRect = dropdown.getBoundingClientRect();
-			if(window.innerWidth - boundingRect.right < 5 && boundingRect.left + window.scrollX > 2*boundingRect.width) {
-				var left = parseFloat(window.getComputedStyle(dropdown).getPropertyValue('left'));
-				dropdown.style.left = (left + window.innerWidth - boundingRect.right - 5) + 'px';
-			}
+			Util.addClass(slideshow.items[index], enterItemClass+' slideshow__item--selected');
+		}
+		// reset slider navigation appearance
+		resetSlideshowNav(slideshow, index, slideshow.selectedSlide);
+		slideshow.selectedSlide = index;
+		// reset autoplay
+		slideshow.pauseAutoplay();
+		slideshow.startAutoplay();
+		// reset controls/navigation color themes
+		resetSlideshowTheme(slideshow, index);
+		// emit event
+		emitSlideshowEvent(slideshow, 'newItemSelected', slideshow.selectedSlide);
+		if(slideshow.animationOff) {
+			slideshow.animating = false;
+			Util.removeClass(slideshow.element, slideshow.animatingClass);
 		}
 	};
 
-	function isVisible(element) {
-		return (element.offsetWidth || element.offsetHeight || element.getClientRects().length);
+	function getExitItemClass(slideshow, bool, oldIndex, newIndex) {
+		var className = '';
+		if(bool) {
+			className = (bool == 'next') ? 'slideshow__item--'+slideshow.animationType+'-out-right' : 'slideshow__item--'+slideshow.animationType+'-out-left'; 
+		} else {
+			className = (newIndex < oldIndex) ? 'slideshow__item--'+slideshow.animationType+'-out-left' : 'slideshow__item--'+slideshow.animationType+'-out-right';
+		}
+		return className;
 	};
+
+	function getEnterItemClass(slideshow, bool, oldIndex, newIndex) {
+		var className = '';
+		if(bool) {
+			className = (bool == 'next') ? 'slideshow__item--'+slideshow.animationType+'-in-right' : 'slideshow__item--'+slideshow.animationType+'-in-left'; 
+		} else {
+			className = (newIndex < oldIndex) ? 'slideshow__item--'+slideshow.animationType+'-in-left' : 'slideshow__item--'+slideshow.animationType+'-in-right';
+		}
+		return className;
+	};
+
+	function resetSlideshowNav(slideshow, newIndex, oldIndex) {
+		if(slideshow.navigation) {
+			Util.removeClass(slideshow.navigation[oldIndex], 'slideshow__nav-item--selected');
+			Util.addClass(slideshow.navigation[newIndex], 'slideshow__nav-item--selected');
+			slideshow.navCurrentLabel.parentElement.removeChild(slideshow.navCurrentLabel);
+			slideshow.navigation[newIndex].getElementsByTagName('button')[0].appendChild(slideshow.navCurrentLabel);
+		}
+	};
+
+	function resetSlideshowTheme(slideshow, newIndex) {
+		var dataTheme = slideshow.items[newIndex].getAttribute('data-theme');
+		if(dataTheme) {
+			if(slideshow.navigation) slideshow.navigation[0].parentElement.setAttribute('data-theme', dataTheme);
+			if(slideshow.controls[0]) slideshow.controls[0].parentElement.setAttribute('data-theme', dataTheme);
+		} else {
+			if(slideshow.navigation) slideshow.navigation[0].parentElement.removeAttribute('data-theme');
+			if(slideshow.controls[0]) slideshow.controls[0].parentElement.removeAttribute('data-theme');
+		}
+	};
+
+	function emitSlideshowEvent(slideshow, eventName, detail) {
+		var event = new CustomEvent(eventName, {detail: detail});
+		slideshow.element.dispatchEvent(event);
+	};
+
+	function updateAriaLive(slideshow) {
+		slideshow.ariaLive.innerHTML = 'Item '+(slideshow.selectedSlide + 1)+' of '+slideshow.items.length;
+	};
+
+	function externalControlSlide(slideshow, button) { // control slideshow using external element
+		button.addEventListener('click', function(event){
+			var index = button.getAttribute('data-index');
+			if(!index || index == slideshow.selectedSlide + 1) return;
+			event.preventDefault();
+			showNewItem(slideshow, index - 1, false);
+		});
+	};
+
+	Slideshow.defaults = {
+    element : '',
+    navigation : true,
+    autoplay : false,
+		autoplayOnHover: false,
+		autoplayOnFocus: false,
+    autoplayInterval: 5000,
+		navigationItemClass: 'slideshow__nav-item',
+    navigationClass: 'slideshow__navigation',
+    swipe: false
+  };
+
+	window.Slideshow = Slideshow;
+	
+	//initialize the Slideshow objects
+	var slideshows = document.getElementsByClassName('js-slideshow');
+	if( slideshows.length > 0 ) {
+		for( var i = 0; i < slideshows.length; i++) {
+			(function(i){
+				var navigation = (slideshows[i].getAttribute('data-navigation') && slideshows[i].getAttribute('data-navigation') == 'off') ? false : true,
+					autoplay = (slideshows[i].getAttribute('data-autoplay') && slideshows[i].getAttribute('data-autoplay') == 'on') ? true : false,
+					autoplayOnHover = (slideshows[i].getAttribute('data-autoplay-hover') && slideshows[i].getAttribute('data-autoplay-hover') == 'on') ? true : false,
+					autoplayOnFocus = (slideshows[i].getAttribute('data-autoplay-focus') && slideshows[i].getAttribute('data-autoplay-focus') == 'on') ? true : false,
+					autoplayInterval = (slideshows[i].getAttribute('data-autoplay-interval')) ? slideshows[i].getAttribute('data-autoplay-interval') : 5000,
+					swipe = (slideshows[i].getAttribute('data-swipe') && slideshows[i].getAttribute('data-swipe') == 'on') ? true : false,
+					navigationItemClass = slideshows[i].getAttribute('data-navigation-item-class') ? slideshows[i].getAttribute('data-navigation-item-class') : 'slideshow__nav-item',
+          navigationClass = slideshows[i].getAttribute('data-navigation-class') ? slideshows[i].getAttribute('data-navigation-class') : 'slideshow__navigation';
+				new Slideshow({element: slideshows[i], navigation: navigation, autoplay : autoplay, autoplayOnHover: autoplayOnHover, autoplayOnFocus: autoplayOnFocus, autoplayInterval : autoplayInterval, swipe : swipe, navigationItemClass: navigationItemClass, navigationClass: navigationClass});
+			})(i);
+		}
+	}
 }());
-const cinemagraphs = document.querySelectorAll('.cinemagraph-speed');
-if(cinemagraphs.length > 0){
-    cinemagraphs.forEach(graph => {
-        graph.playbackRate = 0.75;
-        console.log(`Cinemagraph speed: ${graph.playbackRate * 100}%`);
-    });
-}
-const terroirContenedor = document.getElementById('origen-contenedor');
-// =================================GALLERY CLASS=================================
-class galleryPreview {
-    constructor(preview, path, selected) {
-        this.preview = preview;
-        this.path = path;
-        this.selected = selected;
-    }
-}
-
-
-// =================================GALLERY VARS=================================
-const mainGalleryVars = document.querySelectorAll('.main-gallery');
-const mainGalleryVarsMobile = document.querySelectorAll('.main-gallery-mobile');
-
-// =================================DESKTOP GALLERY=================================
-if (mainGalleryVars) {
-    mainGalleryVars.forEach(mainGallery => {
-        let galleryActual = mainGallery.querySelector('.gallery-actual');
-
-        if (galleryActual) {
-
-            galleryActual = galleryActual.firstElementChild;
-            let galleryPreviewBackdrop = mainGallery.querySelectorAll('.gallery-preview-selected');
-
-            clearGalleryBackdrops();
-
-            galleryPreviewBackdrop.forEach(previewBackdrop => {
-                previewBackdrop.addEventListener('click', () => {
-                    clearGalleryBackdrops();
-                    setGalleryBackdrops(previewBackdrop);
-                });
-            });
-
-            const allGalleryPreviews = mainGallery.querySelectorAll('.gallery-preview');
-            const previewsCont = allGalleryPreviews.length;
-
-            const galleryObjects = [];
-
-            for (let i = 0; i < previewsCont; i++) {
-                const galleryObject = new galleryPreview(
-                    preview = allGalleryPreviews[i],
-                    path = allGalleryPreviews[i].childNodes[3].getAttribute('gallery-src'),
-                    false
-                );
-                galleryObjects.push(galleryObject);
-            }
-
-            galleryObjects.forEach(gallery => {
-                galleryClickEvent(gallery);
-            });
-
-            clearGalleryBackdrops();
-            clearGallerySelect();
-            galleryObjects[0].preview.click();
-            setGalleryBackdrops(galleryPreviewBackdrop[0]);
-
-            function clearGalleryBackdrops() {
-                galleryPreviewBackdrop.forEach(preview => {
-                    preview.style.opacity = '0';
-                    preview.firstElementChild.setAttribute('style', 'transform: scale(0.5) rotate(-360deg); opacity: 0;');
-                });
-            }
-
-            function setGalleryBackdrops(preview) {
-                preview.style.opacity = '1';
-                preview.firstElementChild.setAttribute('style', 'transform: scale(1) rotate(0deg); opacity: 1;');
-            }
-
-            function galleryClickEvent(gallery) {
-                gallery.preview.addEventListener('click', () => {
-                    if (!gallery.selected) {
-                        clearGallerySelect(); gallerySelect(gallery);
-                        gallery.selected = true;
-                    }
-                });
-            }
-
-            function clearGallerySelect() {
-                galleryObjects.forEach(gallery => {
-                    gallery.preview.firstElementChild.style.boxShadow = "none";
-                    gallery.selected = false;
-                });
-            }
-
-            function gallerySelect(gallery) {
-                galleryActual.style.opacity = '0';
-                galleryActual.style.filter = 'blur(20px)';
-                galleryActual.style.transform = 'translateY(30px)';
-
-                setTimeout(() => {
-                    galleryActual.setAttribute('src', gallery.path);
-                    galleryActual.style.opacity = '1';
-                    galleryActual.style.filter = 'blur(0px)';
-                    galleryActual.style.transform = 'translateY(0px)';
-                }, 900);
-            }
-
-        }
-    });
-}
-
-// =================================MOBILE GALLERY=================================
-if (mainGalleryVarsMobile) {
-    mainGalleryVarsMobile.forEach(mainGalleryMobile => {
-        let galleryActualMobile = mainGalleryMobile.querySelector('.gallery-actual-mobile');
-
-        if (galleryActualMobile) {
-
-            galleryActualMobile = galleryActualMobile.firstElementChild;
-
-            let galleryPreviewBackdropMobile = mainGalleryMobile.querySelectorAll('.gallery-preview-selected-mobile');
-
-            clearGalleryBackdropsMobile();
-
-            galleryPreviewBackdropMobile.forEach(preview => {
-                preview.addEventListener('click', () => {
-                    clearGalleryBackdropsMobile();
-                    setGalleryBackdropsMobile(preview);
-                });
-            });
-
-
-            const galleryObjectsMobile = [];
-
-            const allGalleryPreviewsMobile = mainGalleryMobile.querySelectorAll('.gallery-preview');
-            const previewsContMobile = allGalleryPreviewsMobile.length;
-
-            for (let i = 0; i < previewsContMobile; i++) {
-                const galleryObject = new galleryPreview(
-                    preview = allGalleryPreviewsMobile[i],
-                    path = allGalleryPreviewsMobile[i].childNodes[3].getAttribute('gallery-src'),
-                    false
-                )
-                galleryObjectsMobile.push(galleryObject);
-            }
-
-
-            galleryObjectsMobile.forEach(gallery => {
-                galleryClickEventMobile(gallery);
-            });
-
-            clearGalleryBackdropsMobile();
-            clearGallerySelectMobile();
-            galleryObjectsMobile[0].preview.click();
-            setGalleryBackdropsMobile(galleryPreviewBackdropMobile[0]);
-
-            function galleryClickEventMobile(gallery) {
-                gallery.preview.addEventListener('click', () => {
-                    if (!gallery.selected) {
-                        clearGallerySelectMobile(); gallerySelectMobile(gallery);
-                        gallery.selected = true;
-                    }
-                });
-            }
-
-            function clearGallerySelectMobile() {
-                galleryObjectsMobile.forEach(gallery => {
-                    gallery.selected = false;
-                });
-            }
-
-            function clearGalleryBackdropsMobile() {
-                galleryPreviewBackdropMobile.forEach(preview => {
-                    preview.style.opacity = '0';
-                    preview.firstElementChild.setAttribute('style', 'transform: scale(0.5) rotate(-360deg); opacity: 0;');
-                });
-            }
-            function setGalleryBackdropsMobile(preview) {
-                preview.style.opacity = '1';
-                preview.firstElementChild.setAttribute('style', 'transform: scale(1) rotate(0deg); opacity: 1;');
-            }
-
-            function gallerySelectMobile(gallery) {
-                galleryActualMobile.style.opacity = '0';
-                galleryActualMobile.style.filter = 'blur(20px)';
-                galleryActualMobile.style.transform = 'translateY(30px)';
-
-                setTimeout(() => {
-                    galleryActualMobile.setAttribute('src', gallery.path);
-                    galleryActualMobile.style.opacity = '1';
-                    galleryActualMobile.style.filter = 'blur(0px)';
-                    galleryActualMobile.style.transform = 'translateY(0px)';
-                }, 900);
-            }
-        }
-
-    });
-}
-
-const firstComponentAnimation = document.querySelector(".first-component-animation");
-const secondComponentReveal = document.getElementById("second-component-reveal");
-
-if (firstComponentAnimation && secondComponentReveal && window.innerWidth > 1024) {
-    document.body.style.overflowY = 'hidden';
-
-    let firstComponentHidden = false;
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    window.addEventListener('scroll', () => {
-        revealFirstComponent();
-        resetFirstComponent();
-    });
-
-    window.addEventListener('wheel', (e) => {
-        revealFirstComponent();
-        resetFirstComponent();
-    });
-
-    function revealFirstComponent() {
-        if (window.scrollY == 0 && firstComponentHidden && getDelta() > 0) {
-            setTimeout(() => {
-                firstComponentHidden = false;
-            }, 1000);
-            document.body.style.overflowY = 'hidden';
-            firstComponentAnimation.style.top = "50%";
-            secondComponentReveal.style.backgroundColor = 'black';
-            secondComponentReveal.style.backdropFilter = 'blur(15px)';
-        }
-    }
-    function resetFirstComponent() {
-        if (window.scrollY == 0 && !firstComponentHidden && getDelta() < 0) {
-            setTimeout(() => {
-                document.body.style.overflowY = 'overlay';
-                firstComponentHidden = true;
-            }, 1000);
-            firstComponentAnimation.style.top = '-52%';
-            secondComponentReveal.style.backgroundColor = 'transparent';
-            secondComponentReveal.style.backdropFilter = 'blur(0px)';
-        }
-    }
-
-    function getDelta() {
-        var e = window.event || e;
-        return Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-    }
-}
-const body = document.getElementsByTagName('body');
-const outline = document.getElementById('outline-card');
-const cardContainer = document.getElementById('floating-card');
-const svgLine = document.getElementById('svg-line');
-const textCard = document.getElementById('text-card');
-const sContainer = document.querySelector('.scroll-indicator-container');
-const sIndicator = document.querySelector('.scroll-indicator');
-let scrollH = window.pageYOffset / 23.4;
-
-const vinosHome = document.getElementById("vinos-home");
-const cobosHome = document.getElementById("cobos-home");
-const contactoHome = document.getElementById("contacto-home");
-const terroirHome = document.getElementById("terroir-home");
-const historiaHome = document.getElementById("historia-home");
-const volturnoHome = document.getElementById("volturno-home");
-const vdChanaresHome = document.getElementById("vd-chanares-home");
-const vdZingarettiHome = document.getElementById("vd-zingaretti-home");
-const vdMarchioriHome = document.getElementById("vd-marchiori-home");
-const vinculumHome = document.getElementById("vinculum-malbec-home");
-const vinculumChardonnayHome = document.getElementById("vinculum-chardonnay-home");
-const felinoHome = document.getElementById("felino-home");
-const felinoCabernetHome = document.getElementById("felino-cabernet-home");
-const felinoChardonnayHome = document.getElementById("felino-chardonnay-home");
-const felinoRedBlendHome = document.getElementById("felino-redblend-home");
-const bramareHome = document.getElementById("bramare-home");
-const cocodriloHome = document.getElementById("cocodrilo-home");
-
-function inViewport(el) {
-    if (el.getBoundingClientRect()) {
-        var bb = el.getBoundingClientRect();
-        return !(bb.top > innerHeight || bb.bottom < 0);
-    }
-}
-
-function sContainerCheck(elem) {
-    if (!inViewport(elem)) {
-        sContainer.classList.remove('is-hidden')
-    } else {
-        if (!sContainer.classList.contains('is-hidden')) {
-            sContainer.classList.add('is-hidden')
-        }
-    }
-    sIndicator.setAttribute('style', `height: ${(window.pageYOffset - 912) / 40}%`);
-}
-
-sContainer.classList.add('is-hidden');
-
-document.addEventListener('scroll', () => {
-
-    if (hero) {
-        sContainerCheck(hero);
-    } else if (vinosHome) {
-        sContainerCheck(vinosHome);
-    } else if (felinoHome) {
-        sContainerCheck(felinoHome);
-    } else if (cobosHome) {
-        sContainerCheck(cobosHome);
-    } else if (contactoHome) {
-        sContainerCheck(contactoHome);
-    } else if (terroirHome) {
-        sContainerCheck(terroirHome);
-    } else if (historiaHome) {
-        sContainerCheck(historiaHome);
-    } else if (volturnoHome) {
-        sContainerCheck(volturnoHome);
-    } else if (vdChanaresHome) {
-        sContainerCheck(vdChanaresHome);
-    } else if (vdZingarettiHome) {
-        sContainerCheck(vdZingarettiHome);
-    } else if (vdMarchioriHome) {
-        sContainerCheck(vdMarchioriHome);
-    } else if (vinculumHome) {
-        sContainerCheck(vinculumHome);
-    } else if (vinculumChardonnayHome) {
-        sContainerCheck(vinculumChardonnayHome);
-    } else if (felinoCabernetHome) {
-        sContainerCheck(felinoCabernetHome);
-    } else if (felinoChardonnayHome) {
-        sContainerCheck(felinoChardonnayHome);
-    } else if (felinoRedBlendHome) {
-        sContainerCheck(felinoRedBlendHome);
-    } else if (bramareHome) {
-        sContainerCheck(bramareHome);
-    } else if (cocodriloHome) {
-        sContainerCheck(cocodriloHome);
-    }
-});
-
-const contactBox = document.querySelector('.contact-box');
-
-if (contactBox && svgLine) {
-    svgLine.style.strokeWidth = "5";
-    svgLine.style.strokeDasharray = "2305";
-    svgLine.style.strokeDashoffset = "2305";
-    svgLine.style.width = "100%";
-    svgLine.style.height = "100%";
-    svgLine.style.opacity = "0";
-    svgLine.style.transition = "ease-in-out 1.5s";
-
-    contactBox.style.transform = "scale(0.9)";
-    contactBox.style.filter = "blur(5px)";
-    contactBox.style.opacity = "0";
-    contactBox.style.transition = "ease-in-out 1.5s";
-
-    window.addEventListener('scroll', () => {
-        console.log(inViewport(svgLine));
-
-        if (inViewport(svgLine)) {
-            svgLine.style.strokeDashoffset = "507";
-            svgLine.style.opacity = "1";
-
-            contactBox.style.transform = "scale(1)";
-            contactBox.style.filter = "blur(0px)";
-            contactBox.style.opacity = "1";
-        } else {
-            svgLine.style.strokeDashoffset = "2305";
-            svgLine.style.opacity = "0";
-
-            contactBox.style.transform = "scale(0.9)";
-            contactBox.style.filter = "blur(5px)";
-            contactBox.style.opacity = "0";
-        }
-    });
-}
-const fs_slider = document.querySelectorAll(".fs-slider");
-const fs_slider_reveal = document.querySelectorAll(".fs-slider-reveal");
-const fs_scroll_slider = document.getElementById("scroll-slider");
-const desktopHeaderHistoria = document.getElementById("desktop-header");
-const headerLogoHistoria = document.querySelectorAll('.vinacobos-logo');
-const itemsDesktopHistoria = desktopHeaderHistoria.querySelectorAll('.f-header__item');
-const linksDesktopHistoria = desktopHeaderHistoria.querySelectorAll('.f-header__link');
-const dropdownArrowHistoria = document.querySelector('.vinos-dropdown-arrow-polygon');
-
-let actualSlider = 0;
-let inAnimation = false;
-
-if (fs_slider.length > 0 && window.innerWidth > 1024) {
-    let fsSliderLenght = fs_slider.length - 1;
-    let scrollValue = 100 / fsSliderLenght;
-    setTimeout(() => {
-        document.querySelector(".scroll-indicator-container").classList.remove("is-hidden");
-    }, 100);
-    fs_scroll_slider.style.height = "0%";
-    fs_slider.forEach(slider => slider.style.zIndex = `${fsSliderLenght--}`);
-    fs_slider.forEach(slider => (fs_slider.length--) > 0 ? slider.style.top = '65%' : console.log('slider component init'));
-
-    fsSliderLenght = fs_slider.length - 1;
-
-    fs_slider_reveal.forEach(reveal => {
-        reveal.style.backgroundColor = 'white';
-        reveal.style.backdropFilter = 'blur(15px)';
-    });
-
-    document.body.style.overflowY = 'hidden';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    fs_slider[0].style.top = '50%';
-
-    window.addEventListener('wheel', (e) => {
-
-        if (actualSlider == 1 && !inAnimation && getDelta() > 0) {
-            console.log('Start');
-            inAnimation = true;
-            fs_slider[0].style.top = '50%';
-            fs_scroll_slider.style.height = '0%';
-            setTimeout(() => inAnimation = false, 1750);
-
-            actualSlider = 0;
-        } else {
-            if (actualSlider == (fsSliderLenght - 1) && !inAnimation && getDelta() < 0) {
-                console.log('End');
-                inAnimation = true;
-                fs_slider[actualSlider].style.top = '-52%';
-                fs_slider[actualSlider + 1].style.top = '50%';
-                fs_slider_reveal[actualSlider].style.backgroundColor = 'transparent';
-                fs_slider_reveal[actualSlider].style.backdropFilter = 'blur(0px)';
-                headerLogoHistoria[0].style.fill = "white"; headerLogoHistoria[1].style.fill = "white";
-                itemsDesktopHistoria.forEach(item => {
-                    if (item.classList.contains('nav--line-selected-black')) {
-                        item.classList.remove('nav--line-selected-black');
-                        item.classList.add('nav--line-selected');
-                    } else {
-                        item.classList.remove('nav--line-black');
-                        item.classList.add('nav--line');
-                    }
-                    dropdownArrowHistoria.style.fill = 'white';
-                });
-                linksDesktopHistoria.forEach(item => {
-                    item.classList.remove('btn--nav-black');
-                    item.classList.add('btn--nav');
-                });
-                setTimeout(() => inAnimation = false, 1750);
-
-                actualSlider++;
-            } else {
-                switch (getDelta()) {
-                    case -1:
-                        if (actualSlider < fs_slider.length - 1 && fs_slider[actualSlider + 1] && !inAnimation) {
-                            inAnimation = true;
-                            fs_slider[actualSlider].style.top = '-52%';
-                            fs_slider[actualSlider + 1].style.top = '50%';
-                            fs_slider_reveal[actualSlider].style.backgroundColor = 'transparent';
-                            fs_slider_reveal[actualSlider].style.backdropFilter = 'blur(0px)';
-                            actualSlider++;
-                            setTimeout(() => inAnimation = false, 1750);
-                        }
-                        break;
-                    case 1:
-                        if (actualSlider >= 0 && fs_slider[actualSlider - 1] && !inAnimation) {
-                            inAnimation = true;
-                            fs_slider[actualSlider - 1].style.top = '50%';
-                            fs_slider[actualSlider].style.top = '65%';
-                            fs_slider_reveal[actualSlider - 1].style.backgroundColor = 'white';
-                            fs_slider_reveal[actualSlider - 1].style.backdropFilter = 'blur(15px)';
-                            actualSlider--;
-                            setTimeout(() => inAnimation = false, 1750);
-                        }
-                        break;
-                }
-                fs_scroll_slider.style.height = `${actualSlider * scrollValue}%`;
-                itemsDesktopHistoria.forEach(item => {
-                    if (item.classList.contains('nav--line-selected')) {
-                        item.classList.remove('nav--line-selected');
-                        item.classList.add('nav--line-selected-black');
-                    } else {
-                        item.classList.remove('nav--line');
-                        item.classList.add('nav--line-black');
-                    }
-                    dropdownArrowHistoria.style.fill = 'black';
-                });
-                linksDesktopHistoria.forEach(item => {
-                    item.classList.remove('btn--nav');
-                    item.classList.add('btn--nav-black');
-                });
-                headerLogoHistoria[0].style.fill = "black"; headerLogoHistoria[1].style.fill = "black";
-            }
-
-        }
-    });
-
-    function getDelta() {
-        var e = window.event || e;
-        return Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-    }
-}
-const logoVolturno = document.getElementById("vino-volturno-logo");
-const logoCobos = document.getElementById("vino-cobos-logo");
-
-
-if(logoCobos && logoVolturno){
-    const vinoVolturno = document.getElementById("vino-volturno-img");
-    const vinoCobos = document.getElementById("vino-cobos-img");
-    
-    logoVolturno.addEventListener('mouseover',() =>{
-        vinoVolturno.style.opacity = '1';
-        vinoCobos.style.opacity = '0';
-    });
-    
-    logoVolturno.addEventListener('mouseout',() =>{
-        vinoVolturno.style.opacity = '0';
-        vinoCobos.style.opacity = '1';
-    });
-}
-
-
-
-const felinoMomentos = document.getElementById('felino-momentos-first');
-
-if (felinoMomentos) {
-    const felinoCards = document.querySelectorAll('.momentos-card');
-    felinoMomentos.addEventListener('mousemove', (e) => {
-        felinoCards.forEach(card => {
-            const speed = card.getAttribute('data-speed');
-
-            const x = (window.innerWidth - e.pageX * speed) / 100;
-            const y = (window.innerHeight - e.pageY * speed) / 100;
-
-            card.style.transform = `translateX(${x}px) translateY(${y}px)`;
-        });
-    });
-}
-var hero = document.getElementById('hero')
-
-function smoothScroll(starget, duration){
-    let sctarget = document.querySelector(starget),
-    targetPosition = sctarget.getBoundingClientRect().top,
-    startPosition = window.pageYOffset,
-    distance = targetPosition - startPosition,
-    startTime = null
-
-
-
-    function animation(currentTime){
-        if(startTime === null) startTime = currentTime
-        let timeElapsed = currentTime - startTime
-        let run = ease(timeElapsed, startPosition, distance, duration)
-        window.scrollTo(0, run)
-        if(timeElapsed < duration) requestAnimationFrame(animation)
-    }
-
-    function ease(t, b, c, d) {
-        t /= d/2;
-        if (t < 1) return c/2*t*t*t + b;
-        t -= 2;
-        return c/2*(t*t*t + 2) + b;
-    };
-
-    requestAnimationFrame(animation)
-}
-function inViewport(el){
-    var bb = el.getBoundingClientRect();
-    return !(bb.top > innerHeight || bb.bottom < 0);
-}
-
-// document.addEventListener('scroll',(e)=>{
-//     // if(window.pageYOffset < 500){
-//     //     e.preventDefault
-//     //     console.log('scrolleando')
-//     //     smoothScroll('.model-3d', 1000)
-//     //  }
-//     // console.log('pageoffset', window.pageYOffset)
-// })
-
-
-const BOX_CONTACTO = document.getElementById("box-contacto");
-const BOX_VISITAS = document.getElementById("box-visitas");
-const BOX_ADMINISTRACION = document.getElementById("box-administracion");
-const BOX_UBICACION = document.getElementById("box-ubicacion");
-
-const FORM_CONTACTO = document.getElementById('form-contacto');
-const FORM_VISITAS = document.getElementById('form-visitas');
-const INFO_ADMINISTRACION = document.getElementById('info-administracion');
-const INFO_UBICACION = document.getElementById('info-ubicacion');
-
-const BOX_CONTACTO_MOBILE = document.getElementById("box-contacto-mobile");
-const BOX_VISITAS_MOBILE = document.getElementById("box-visitas-mobile");
-const BOX_ADMINISTRACION_MOBILE = document.getElementById("box-administracion-mobile");
-const BOX_UBICACION_MOBILE = document.getElementById("box-ubicacion-mobile");
-
-const FORM_CONTACTO_MOBILE = document.getElementById('form-contacto-mobile');
-const FORM_VISITAS_MOBILE = document.getElementById('form-visitas-mobile');
-const INFO_ADMINISTRACION_MOBILE = document.getElementById('info-administracion-mobile');
-const INFO_UBICACION_MOBILE = document.getElementById('info-ubicacion-mobile');
-
-
-
-// =================DESKTOP FUNCTIONS=================
-function resetForms() {
-    BOX_CONTACTO.classList.remove('contact-section-inactive');
-    BOX_CONTACTO.classList.add('contact-section-selected');
-
-    BOX_VISITAS.classList.add('contact-section-inactive');
-    BOX_VISITAS.classList.remove('contact-section-selected');
-    BOX_ADMINISTRACION.classList.add('contact-section-inactive');
-    BOX_ADMINISTRACION.classList.remove('contact-section-selected');
-    BOX_UBICACION.classList.add('contact-section-inactive');
-    BOX_UBICACION.classList.remove('contact-section-selected');
-    
-    FORM_CONTACTO.classList.remove('is-hidden');
-    FORM_VISITAS.classList.add('is-hidden');
-    INFO_ADMINISTRACION.classList.add('is-hidden');
-    INFO_UBICACION.classList.add('is-hidden');
-}
-
-function showVisitas(){
-    BOX_VISITAS.classList.remove('contact-section-inactive');
-    BOX_VISITAS.classList.add('contact-section-selected');
-
-    BOX_CONTACTO.classList.add('contact-section-inactive');
-    BOX_CONTACTO.classList.remove('contact-section-selected');
-    BOX_ADMINISTRACION.classList.add('contact-section-inactive');
-    BOX_ADMINISTRACION.classList.remove('contact-section-selected');
-    BOX_UBICACION.classList.add('contact-section-inactive');
-    BOX_UBICACION.classList.remove('contact-section-selected');
-
-    FORM_CONTACTO.classList.add('is-hidden');
-    FORM_VISITAS.classList.remove('is-hidden');
-    INFO_ADMINISTRACION.classList.add('is-hidden');
-    INFO_UBICACION.classList.add('is-hidden');
-}
-function showAdministracion(){
-    BOX_ADMINISTRACION.classList.remove('contact-section-inactive');
-    BOX_ADMINISTRACION.classList.add('contact-section-selected');
-
-    BOX_VISITAS.classList.add('contact-section-inactive');
-    BOX_VISITAS.classList.remove('contact-section-selected');
-    BOX_CONTACTO.classList.add('contact-section-inactive');
-    BOX_CONTACTO.classList.remove('contact-section-selected');
-    BOX_UBICACION.classList.add('contact-section-inactive');
-    BOX_UBICACION.classList.remove('contact-section-selected');
-
-    FORM_CONTACTO.classList.add('is-hidden');
-    FORM_VISITAS.classList.add('is-hidden');
-    INFO_ADMINISTRACION.classList.remove('is-hidden');
-    INFO_UBICACION.classList.add('is-hidden');
-}
-function showUbicacion(){
-    BOX_UBICACION.classList.remove('contact-section-inactive');
-    BOX_UBICACION.classList.add('contact-section-selected');
-
-    BOX_ADMINISTRACION.classList.add('contact-section-inactive');
-    BOX_ADMINISTRACION.classList.remove('contact-section-selected');
-    BOX_VISITAS.classList.add('contact-section-inactive');
-    BOX_VISITAS.classList.remove('contact-section-selected');
-    BOX_CONTACTO.classList.add('contact-section-inactive');
-    BOX_CONTACTO.classList.remove('contact-section-selected');
-
-    FORM_CONTACTO.classList.add('is-hidden');
-    FORM_VISITAS.classList.add('is-hidden');
-    INFO_ADMINISTRACION.classList.add('is-hidden');
-    INFO_UBICACION.classList.remove('is-hidden');
-}
-
-
-// =================MOBILE FUNCTIONS=================
-
-function resetFormsMobile() {
-    BOX_CONTACTO_MOBILE.classList.remove('contact-section-inactive');
-    BOX_CONTACTO_MOBILE.classList.add('contact-section-selected');
-
-    BOX_VISITAS_MOBILE.classList.add('contact-section-inactive');
-    BOX_VISITAS_MOBILE.classList.remove('contact-section-selected');
-    BOX_ADMINISTRACION_MOBILE.classList.add('contact-section-inactive');
-    BOX_ADMINISTRACION_MOBILE.classList.remove('contact-section-selected');
-    BOX_UBICACION_MOBILE.classList.add('contact-section-inactive');
-    BOX_UBICACION_MOBILE.classList.remove('contact-section-selected');
-    
-    FORM_CONTACTO_MOBILE.classList.remove('is-hidden');
-    FORM_VISITAS_MOBILE.classList.add('is-hidden');
-    INFO_ADMINISTRACION_MOBILE.classList.add('is-hidden');
-    INFO_UBICACION_MOBILE.classList.add('is-hidden');
-}
-
-function showVisitasMobile(){
-    BOX_VISITAS_MOBILE.classList.remove('contact-section-inactive');
-    BOX_VISITAS_MOBILE.classList.add('contact-section-selected');
-
-    BOX_CONTACTO_MOBILE.classList.add('contact-section-inactive');
-    BOX_CONTACTO_MOBILE.classList.remove('contact-section-selected');
-    BOX_ADMINISTRACION_MOBILE.classList.add('contact-section-inactive');
-    BOX_ADMINISTRACION_MOBILE.classList.remove('contact-section-selected');
-    BOX_UBICACION_MOBILE.classList.add('contact-section-inactive');
-    BOX_UBICACION_MOBILE.classList.remove('contact-section-selected');
-
-    FORM_CONTACTO_MOBILE.classList.add('is-hidden');
-    FORM_VISITAS_MOBILE.classList.remove('is-hidden');
-    INFO_ADMINISTRACION_MOBILE.classList.add('is-hidden');
-    INFO_UBICACION_MOBILE.classList.add('is-hidden');
-}
-function showAdministracionMobile(){
-    BOX_ADMINISTRACION_MOBILE.classList.remove('contact-section-inactive');
-    BOX_ADMINISTRACION_MOBILE.classList.add('contact-section-selected');
-
-    BOX_VISITAS_MOBILE.classList.add('contact-section-inactive');
-    BOX_VISITAS_MOBILE.classList.remove('contact-section-selected');
-    BOX_CONTACTO_MOBILE.classList.add('contact-section-inactive');
-    BOX_CONTACTO_MOBILE.classList.remove('contact-section-selected');
-    BOX_UBICACION_MOBILE.classList.add('contact-section-inactive');
-    BOX_UBICACION_MOBILE.classList.remove('contact-section-selected');
-
-    FORM_CONTACTO_MOBILE.classList.add('is-hidden');
-    FORM_VISITAS_MOBILE.classList.add('is-hidden');
-    INFO_ADMINISTRACION_MOBILE.classList.remove('is-hidden');
-    INFO_UBICACION_MOBILE.classList.add('is-hidden');
-}
-function showUbicacionMobile(){
-    BOX_UBICACION_MOBILE.classList.remove('contact-section-inactive');
-    BOX_UBICACION_MOBILE.classList.add('contact-section-selected');
-
-    BOX_ADMINISTRACION_MOBILE.classList.add('contact-section-inactive');
-    BOX_ADMINISTRACION_MOBILE.classList.remove('contact-section-selected');
-    BOX_VISITAS_MOBILE.classList.add('contact-section-inactive');
-    BOX_VISITAS_MOBILE.classList.remove('contact-section-selected');
-    BOX_CONTACTO_MOBILE.classList.add('contact-section-inactive');
-    BOX_CONTACTO_MOBILE.classList.remove('contact-section-selected');
-
-    FORM_CONTACTO_MOBILE.classList.add('is-hidden');
-    FORM_VISITAS_MOBILE.classList.add('is-hidden');
-    INFO_ADMINISTRACION_MOBILE.classList.add('is-hidden');
-    INFO_UBICACION_MOBILE.classList.remove('is-hidden');
-}

@@ -1,7 +1,7 @@
 // File#: _1_sliding-panels
 // Usage: codyhouse.co/license
-(function () {
-  var SlidingPanels = function (element) {
+(function() {
+  var SlidingPanels = function(element) {
     this.element = element;
     this.itemsList = this.element.getElementsByClassName('js-s-panels__projects-list');
     this.items = this.itemsList[0].getElementsByClassName('js-s-panels__project-preview');
@@ -17,13 +17,13 @@
 
   function initSlidingPanels(element) {
     // detect click on toggle menu
-    if (element.navigationToggle.length > 0 && element.navigation.length > 0) {
-      element.navigationToggle[0].addEventListener('click', function (event) {
-        if (element.animating) return;
-
+    if(element.navigationToggle.length > 0 && element.navigation.length > 0) {
+      element.navigationToggle[0].addEventListener('click', function(event) {
+        if(element.animating) return;
+        
         // if project is open -> close project
-        if (closeProjectIfVisible(element)) return;
-
+        if(closeProjectIfVisible(element)) return;
+        
         // toggle navigation
         var openNav = Util.hasClass(element.navigation[0], 'is-hidden');
         toggleNavigation(element, openNav);
@@ -31,11 +31,11 @@
     }
 
     // open project
-    element.element.addEventListener('click', function (event) {
-      if (element.animating) return;
+    element.element.addEventListener('click', function(event) {
+      if(element.animating) return;
 
       var link = event.target.closest('.js-s-panels__project-control');
-      if (!link) return;
+      if(!link) return;
       event.preventDefault();
       openProject(element, event.target.closest('.js-s-panels__project-preview'), link.getAttribute('href').replace('#', ''));
     });
@@ -44,7 +44,7 @@
   // check if there's a visible project to close and close it
   function closeProjectIfVisible(element) {
     var visibleProject = element.element.getElementsByClassName('s-panels__project-preview--selected');
-    if (visibleProject.length > 0) {
+    if(visibleProject.length > 0) {
       element.animating = true;
       closeProject(element);
       return true;
@@ -55,10 +55,10 @@
 
   function toggleNavigation(element, openNavigation) {
     element.animating = true;
-    if (openNavigation) Util.removeClass(element.navigation[0], 'is-hidden');
-    slideProjects(element, openNavigation, false, function () {
+    if(openNavigation) Util.removeClass(element.navigation[0], 'is-hidden');
+    slideProjects(element, openNavigation, false, function(){
       element.animating = false;
-      if (!openNavigation) Util.addClass(element.navigation[0], 'is-hidden');
+      if(!openNavigation) Util.addClass(element.navigation[0], 'is-hidden');
     });
     Util.toggleClass(element.navigationToggle[0], 's-panels__nav-control--arrow-down', openNavigation);
   };
@@ -71,13 +71,13 @@
     // expand selected projects
     Util.addClass(project, 's-panels__project-preview--selected');
     // hide remaining projects
-    slideProjects(element, true, projectIndex, function () {
+    slideProjects(element, true, projectIndex, function() {
       // reveal section content
       element.selectedSection = document.getElementById(id);
-      if (element.selectedSection) Util.removeClass(element.selectedSection, 'is-hidden');
+      if(element.selectedSection) Util.removeClass(element.selectedSection, 'is-hidden');
       element.animating = false;
       // trigger a custom event - this can be used to init the project content (if required)
-      element.element.dispatchEvent(new CustomEvent('slidingPanelOpen', { detail: projectIndex }));
+		  element.element.dispatchEvent(new CustomEvent('slidingPanelOpen', {detail: projectIndex}));
     });
     // modify toggle button appearance
     Util.addClass(element.navigationToggle[0], 's-panels__nav-control--close');
@@ -94,16 +94,16 @@
     Util.addClass(element.transitionLayer[0], 's-panels__overlay-layer--visible');
     // wait for end of transition layer effect
     element.transitionLayer[0].addEventListener('transitionend', function cb(event) {
-      if (event.propertyName != 'opacity') return;
+      if(event.propertyName != 'opacity') return;
       element.transitionLayer[0].removeEventListener('transitionend', cb);
       // update projects classes
       resetProjects(element);
 
-      setTimeout(function () {
+      setTimeout(function(){
         // hide transition layer
         Util.removeClass(element.transitionLayer[0], 's-panels__overlay-layer--visible');
         // reveal projects
-        slideProjects(element, false, false, function () {
+        slideProjects(element, false, false, function() {
           Util.addClass(element.itemsList[0], 'bg-opacity-0');
           element.animating = false;
         });
@@ -119,40 +119,38 @@
   function slideProjects(element, openNav, exclude, cb) {
     // projects will slide out in a random order
     var randomList = getRandomList(element.items.length, exclude);
-    for (var i = 0; i < randomList.length; i++) {
-      (function (i) {
-        setTimeout(function () {
-          Util.toggleClass(element.items[randomList[i]], 's-panels__project-preview--hide', openNav);
-          toggleProjectAccessibility(element.items[randomList[i]], openNav);
-          if (cb && i == randomList.length - 1) {
-            // last item to be animated -> execute callback function at the end of the animation
-            element.items[randomList[i]].addEventListener('transitionend', function cbt() {
-              if (event.propertyName != 'transform') return;
-              if (cb) cb();
-              element.items[randomList[i]].removeEventListener('transitionend', cbt);
-            });
-          }
-        }, i * 100);
-      })(i);
-    }
+    for(var i = 0; i < randomList.length; i++) {(function(i){
+      setTimeout(function(){
+        Util.toggleClass(element.items[randomList[i]], 's-panels__project-preview--hide', openNav);
+        toggleProjectAccessibility(element.items[randomList[i]], openNav);
+        if(cb && i == randomList.length - 1) {
+          // last item to be animated -> execute callback function at the end of the animation
+          element.items[randomList[i]].addEventListener('transitionend', function cbt() {
+            if(event.propertyName != 'transform') return;
+            if(cb) cb();
+            element.items[randomList[i]].removeEventListener('transitionend', cbt);
+          });
+        }
+      }, i*100);
+    })(i);}
   };
 
   function toggleTransitionProjects(element, bool) {
     // remove transitions from project elements
-    for (var i = 0; i < element.items.length; i++) {
+    for(var i = 0; i < element.items.length; i++) {
       Util.toggleClass(element.items[i], 's-panels__project-preview--no-transition', bool);
     }
   };
 
   function resetProjects(element) {
     // reset projects classes -> remove selected/no-transition class + add hide class
-    for (var i = 0; i < element.items.length; i++) {
+    for(var i = 0; i < element.items.length; i++) {
       Util.removeClass(element.items[i], 's-panels__project-preview--selected s-panels__project-preview--no-transition');
       Util.addClass(element.items[i], 's-panels__project-preview--hide');
     }
 
     // hide project content
-    if (element.selectedSection) Util.addClass(element.selectedSection, 'is-hidden');
+    if(element.selectedSection) Util.addClass(element.selectedSection, 'is-hidden');
     element.selectedSection = false;
   };
 
@@ -160,12 +158,12 @@
     // get list of random integer from 0 to (maxVal - 1) excluding (exclude) if defined
     var uniqueRandoms = [];
     var randomArray = [];
-
+    
     function makeUniqueRandom() {
       // refill the array if needed
       if (!uniqueRandoms.length) {
         for (var i = 0; i < maxVal; i++) {
-          if (exclude === false || i != exclude) uniqueRandoms.push(i);
+          if(exclude === false || i != exclude) uniqueRandoms.push(i);
         }
       }
       var index = Math.floor(Math.random() * uniqueRandoms.length);
@@ -175,7 +173,7 @@
       return val;
     }
 
-    for (var j = 0; j < maxVal; j++) {
+    for(var j = 0; j < maxVal; j++) {
       randomArray.push(makeUniqueRandom());
     }
 
@@ -185,67 +183,16 @@
   function toggleProjectAccessibility(project, bool) {
     bool ? project.setAttribute('aria-hidden', 'true') : project.removeAttribute('aria-hidden');
     var link = project.getElementsByClassName('js-s-panels__project-control');
-    if (link.length > 0) {
+    if(link.length > 0) {
       bool ? link[0].setAttribute('tabindex', '-1') : link[0].removeAttribute('tabindex');
     }
   };
 
   //initialize the SlidingPanels objects
-  var slidingPanels = document.getElementsByClassName('js-s-panels');
-  if (slidingPanels.length > 0) {
-    for (var i = 0; i < slidingPanels.length; i++) {
-      (function (i) { new SlidingPanels(slidingPanels[i]); })(i);
-    }
-  }
+	var slidingPanels = document.getElementsByClassName('js-s-panels');
+	if( slidingPanels.length > 0 ) {
+		for( var i = 0; i < slidingPanels.length; i++) {
+			(function(i){new SlidingPanels(slidingPanels[i]);})(i);
+		}
+	}
 }());
-
-
-
-// Custom Desktop Functions
-const slidingPanelsBtn = document.getElementById("sliding-panels-btn");
-let slidingPanelsBtnState = false; // False = hidden | True = show
-
-function showSlidingPanelsBtn() {
-  if (!slidingPanelsBtnState) {
-    slidingPanelsBtn.classList.remove('is-hidden');
-    slidingPanelsBtnState = true;
-  }
-}
-
-function hideSlidingPanelsBtn() {
-  if (slidingPanelsBtnState) {
-    slidingPanelsBtn.classList.add('is-hidden');
-    slidingPanelsBtnState = false;
-  }
-}
-
-// Custom Mobile Functions
-const terroirMobileCustompanels = document.getElementById('terroir-mobile-custompanels');
-const slidingpanelsMobile = document.getElementById('terroir-mobile-slidingpanels');
-const panelMobileChanares = document.getElementById('slidingpanel-chanares');
-const panelMobileZingaretti = document.getElementById('slidingpanel-zingaretti');
-const panelMobileMarchiori = document.getElementById('slidingpanel-marchiori');
-let actualOpenPanel;
-
-function openMobilePanel(panel) {
-  terroirMobileCustompanels.scrollIntoView({behavior: 'smooth'});
-  slidingpanelsMobile.classList.remove('is-hidden');
-  slidingpanelsMobile.classList.remove('close-panel-animation');
-  slidingpanelsMobile.classList.add('open-panel-animation');
-  panel.classList.remove('is-hidden');
-  console.log('OPEN PANEL');
-
-  actualOpenPanel = panel;
-
-  document.body.style.overflowY = "hidden";
-}
-function closeMobilePanel(panel) {
-  slidingpanelsMobile.classList.remove('open-panel-animation');
-  slidingpanelsMobile.classList.add('close-panel-animation');
-  setTimeout(() => {
-    panel.classList.add('is-hidden');
-    slidingpanelsMobile.classList.add('is-hidden');
-    document.body.style.overflowY = "scroll";
-  }, 450);
-  console.log('CLOSE PANEL');
-}

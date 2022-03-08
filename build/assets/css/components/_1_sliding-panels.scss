@@ -1,3 +1,4 @@
+@use '../base' as *;
 
 /* -------------------------------- 
 
@@ -8,7 +9,7 @@ Usage: codyhouse.co/license
 
 -------------------------------- */
 
-$s-panels-projects: 3; // number of projects - edit to change the layout
+$s-panels-projects: 4; // number of projects - edit to change the layout
 
 .s-panels {}
 
