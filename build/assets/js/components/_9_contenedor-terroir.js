@@ -1,1 +1,0 @@
-const terroirContenedor = document.getElementById('origen-contenedor');
