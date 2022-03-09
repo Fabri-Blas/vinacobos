@@ -1,4 +1,4 @@
-@use '../base' as *;
+@use "../base" as *;
 
 /* -------------------------------- 
 
@@ -9,14 +9,15 @@ Usage: codyhouse.co/license
 
 -------------------------------- */
 
-$s-panels-projects: 4; // number of projects - edit to change the layout
+$s-panels-projects: 3; // number of projects - edit to change the layout
 
-.s-panels {}
+.s-panels {
+}
 
 // menu button
 .s-panels__nav-control {
   position: fixed;
-  z-index: var(--z-index-fixed-element, 10); 
+  z-index: var(--z-index-fixed-element, 10);
   top: var(--space-md);
   right: var(--space-md);
   width: 48px;
@@ -28,7 +29,7 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   justify-content: center;
   align-items: center;
   color: var(--color-white);
-  transition: transform .3s var(--ease-in-out);
+  transition: transform 0.3s var(--ease-in-out);
 
   &:active {
     transform: translateY(2px);
@@ -36,7 +37,7 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
 
   .icon__group {
     * {
-      transition: transform .3s var(--ease-in-out), stroke-dashoffset .3s var(--ease-in-out);
+      transition: transform 0.3s var(--ease-in-out), stroke-dashoffset 0.3s var(--ease-in-out);
       stroke-dasharray: 24;
     }
 
@@ -90,7 +91,7 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
     &:active {
       transform: translateY(2px);
     }
-    
+
     .icon__group {
       *:nth-child(1) {
         transform: translateX(2.93px) translateY(-1.07px) rotate(45deg);
@@ -123,23 +124,24 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   z-index: 2;
   width: 100%;
   height: 100%;
-  transition: transform .4s var(--ease-in-out);
+  transition: transform 0.4s var(--ease-in-out);
 }
 
 @media (orientation: landscape) {
   @for $i from 2 through $s-panels-projects {
     .s-panels__project-preview:nth-child(#{$i}) {
       .s-panels__project-figure {
-        transform: translateX(($i - 1)*100%/$s-panels-projects) scaleX(1/$s-panels-projects);
+        transform: translateX(($i - 1) * 100% / $s-panels-projects) scaleX(1 / $s-panels-projects);
       }
 
       .s-panels__project-intro {
-        transform: translateX(100%*($i - 1));
+        transform: translateX(100% * ($i - 1));
       }
     }
   }
 
-  .s-panels__project-preview--hide { // hide project
+  .s-panels__project-preview--hide {
+    // hide project
     transform: translateY(-100%);
   }
 }
@@ -148,21 +150,23 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   @for $i from 2 through $s-panels-projects {
     .s-panels__project-preview:nth-child(#{$i}) {
       .s-panels__project-figure {
-        transform: translateY(($i - 1)*100%/$s-panels-projects) scaleY(1/$s-panels-projects);
+        transform: translateY(($i - 1) * 100% / $s-panels-projects) scaleY(1 / $s-panels-projects);
       }
 
       .s-panels__project-intro {
-        transform: translateY(100%*($i - 1));
+        transform: translateY(100% * ($i - 1));
       }
     }
   }
 
-  .s-panels__project-preview--hide { // hide project
+  .s-panels__project-preview--hide {
+    // hide project
     transform: translateX(-100%);
   }
 }
 
-.s-panels__project-preview--selected { // project is selected
+.s-panels__project-preview--selected {
+  // project is selected
   z-index: 1;
   pointer-events: auto;
 
@@ -191,38 +195,38 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   .s-panels__project-title-wrapper {
     opacity: 1;
     visibility: visible;
-    transition: opacity .4s .2s;
+    transition: opacity 0.4s 0.2s;
   }
 
   .s-panels__project-title {
     transform: translateY(0);
-    transition-delay: .2s;
+    transition-delay: 0.2s;
   }
 }
 
 @media (orientation: landscape) {
   .s-panels__project-preview--selected .s-panels__project-figure {
-    transform: translateX(calc(50% - 50%/#{$s-panels-projects})) scaleX(1/$s-panels-projects) !important;
+    transform: translateX(calc(50% - 50% /#{$s-panels-projects})) scaleX(1 / $s-panels-projects) !important;
   }
 }
 
 @media (orientation: portrait) {
   .s-panels__project-preview--selected .s-panels__project-figure {
-    transform: translateY(calc(50% - 50%/#{$s-panels-projects})) scaleY(1/$s-panels-projects) !important;
+    transform: translateY(calc(50% - 50% /#{$s-panels-projects})) scaleY(1 / $s-panels-projects) !important;
   }
 }
 
 .s-panels__project-preview--no-transition {
   transition: none !important;
 
-   > * {
+  > * {
     transition: none !important;
-   }
+  }
 }
 
 .s-panels__project-figure,
 .s-panels__project-img,
-.s-panels__project-intro, 
+.s-panels__project-intro,
 .s-panels__project-control {
   position: absolute;
   top: 0;
@@ -233,20 +237,20 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
 
 .s-panels__project-figure {
   overflow: hidden;
-  transition: transform .4s var(--ease-in-out);
+  transition: transform 0.4s var(--ease-in-out);
 }
 
 @media (orientation: landscape) {
   .s-panels__project-figure {
     transform-origin: left center;
-    transform: scaleX(1/$s-panels-projects);
+    transform: scaleX(1 / $s-panels-projects);
   }
 }
 
 @media (orientation: portrait) {
   .s-panels__project-figure {
     transform-origin: center top;
-    transform: scaleY(1/$s-panels-projects);
+    transform: scaleY(1 / $s-panels-projects);
   }
 }
 
@@ -255,7 +259,7 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   object-fit: cover;
   opacity: 0.25;
   filter: grayscale(100%);
-  transition: opacity .4s, filter .4s, transform .4s var(--ease-in-out);
+  transition: opacity 0.4s, filter 0.4s, transform 0.4s var(--ease-in-out);
 
   @include breakpoint(md) {
     opacity: 0.15;
@@ -268,9 +272,10 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   justify-content: center;
   align-items: center;
   pointer-events: auto;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 
-  &:hover, &:focus-within {
+  &:hover,
+  &:focus-within {
     + .s-panels__project-figure .s-panels__project-img {
       opacity: 0.5;
       filter: grayscale(50%);
@@ -292,7 +297,7 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   }
 
   .s-panels__project-intro {
-    width: 100%/$s-panels-projects;
+    width: 100% / $s-panels-projects;
   }
 }
 
@@ -302,7 +307,7 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   }
 
   .s-panels__project-intro {
-    height: 100%/$s-panels-projects;
+    height: 100% / $s-panels-projects;
   }
 }
 
@@ -312,14 +317,17 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   --icon-margin-top: 12px;
   position: relative;
 
-  &::before, &::after { // "+" icon
-    content: '';
+  &::before,
+  &::after {
+    // "+" icon
+    content: "";
     position: absolute;
     background-color: var(--color-white);
-    transition: transform .2s var(--ease-in-out);
+    transition: transform 0.2s var(--ease-in-out);
   }
 
-  &::before { // vertical icon line
+  &::before {
+    // vertical icon line
     width: var(--icon-stroke-width);
     height: var(--icon-size);
     bottom: calc(-1 * var(--icon-size) - var(--icon-margin-top));
@@ -327,7 +335,8 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
     transform: scaleY(0);
   }
 
-  &::after { // horizontal icon line
+  &::after {
+    // horizontal icon line
     width: var(--icon-size);
     height: var(--icon-stroke-width);
     bottom: calc(-0.5 * (var(--icon-size) + var(--icon-stroke-width)) - var(--icon-margin-top));
@@ -341,7 +350,8 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   }
 }
 
-.s-panels__project-control { // link to the project content
+.s-panels__project-control {
+  // link to the project content
   color: transparent;
 
   &:focus {
@@ -357,12 +367,12 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   background: linear-gradient(alpha(var(--color-black), 0), alpha(var(--color-black), 0.7));
   opacity: 0;
   visibility: hidden;
-  transition: opacity .4s, visibility 0s .4s;
+  transition: opacity 0.4s, visibility 0s 0.4s;
 }
 
 .s-panels__project-title {
   transform: translateY(50px);
-  transition: transform .4s var(--ease-out);
+  transition: transform 0.4s var(--ease-out);
 }
 
 // navigation
@@ -383,8 +393,9 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   padding: var(--space-xxxxs) 0;
   line-height: 1;
 
-  &::before, &::after {
-    content: '';
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -400,7 +411,7 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   &::after {
     transform-origin: right center;
     transform: scaleX(0);
-    transition: transform .3s var(--ease-in-out);
+    transition: transform 0.3s var(--ease-in-out);
   }
 
   &:hover::after {
@@ -413,7 +424,7 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   color: var(--color-bg);
   text-decoration: none;
   opacity: 1;
-  transition: .2s;
+  transition: 0.2s;
 
   &:hover {
     opacity: 0.65;
@@ -436,7 +447,7 @@ $s-panels-projects: 4; // number of projects - edit to change the layout
   opacity: 0;
   z-index: 2;
   visibility: hidden;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .s-panels__overlay-layer--visible {

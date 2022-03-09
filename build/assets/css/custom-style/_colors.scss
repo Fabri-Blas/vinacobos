@@ -1,4 +1,4 @@
-@use '../base' as *;
+@use "../base" as *;
 
 // --------------------------------
 
@@ -6,7 +6,8 @@
 
 // --------------------------------
 
-:root, [data-theme="default"] {
+:root,
+[data-theme="default"] {
   // main
   @include defineColorHSL(--color-primary-darker, 0, 0%, 0%);
   @include defineColorHSL(--color-primary-dark, 0, 0%, 5%);
@@ -63,7 +64,7 @@
   @include defineColorHSL(--color-contrast-higher, 204, 28%, 7%);
 }
 
-@supports(--css: variables) {
+@supports (--css: variables) {
   [data-theme="dark"] {
     // main
     @include defineColorHSL(--color-primary-darker, 250, 93%, 57%);
@@ -127,18 +128,38 @@
 }
 
 // background color
-.bg-secondary-darker { background-color: alpha(var(--color-secondary-darker), var(--bg-o, 1)); }
-.bg-secondary-dark { background-color: alpha(var(--color-secondary-dark), var(--bg-o, 1)); }
-.bg-secondary { background-color: alpha(var(--color-secondary), var(--bg-o, 1)); }
-.bg-secondary-light { background-color: alpha(var(--color-secondary-light), var(--bg-o, 1)); }
-.bg-secondary-lighter { background-color: alpha(var(--color-secondary-lighter), var(--bg-o, 1)); }
+.bg-secondary-darker {
+  background-color: alpha(var(--color-secondary-darker), var(--bg-o, 1));
+}
+.bg-secondary-dark {
+  background-color: alpha(var(--color-secondary-dark), var(--bg-o, 1));
+}
+.bg-secondary {
+  background-color: alpha(var(--color-secondary), var(--bg-o, 1));
+}
+.bg-secondary-light {
+  background-color: alpha(var(--color-secondary-light), var(--bg-o, 1));
+}
+.bg-secondary-lighter {
+  background-color: alpha(var(--color-secondary-lighter), var(--bg-o, 1));
+}
 
 // border color
-.border-secondary-darker { border-color: alpha(var(--color-secondary-darker), var(--bg-o, 1)); }
-.border-secondary-dark { border-color: alpha(var(--color-secondary-dark), var(--bg-o, 1)); }
-.border-secondary { border-color: alpha(var(--color-secondary), var(--bg-o, 1)); }
-.border-secondary-light { border-color: alpha(var(--color-secondary-light), var(--bg-o, 1)); }
-.border-secondary-lighter { border-color: alpha(var(--color-secondary-lighter), var(--bg-o, 1)); }
+.border-secondary-darker {
+  border-color: alpha(var(--color-secondary-darker), var(--bg-o, 1));
+}
+.border-secondary-dark {
+  border-color: alpha(var(--color-secondary-dark), var(--bg-o, 1));
+}
+.border-secondary {
+  border-color: alpha(var(--color-secondary), var(--bg-o, 1));
+}
+.border-secondary-light {
+  border-color: alpha(var(--color-secondary-light), var(--bg-o, 1));
+}
+.border-secondary-lighter {
+  border-color: alpha(var(--color-secondary-lighter), var(--bg-o, 1));
+}
 
 // --------------------------------
 

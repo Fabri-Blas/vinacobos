@@ -1,6 +1,6 @@
 // File#: _1_swipe-content
-(function() {
-	var SwipeContent = function(element) {
+(function () {
+	var SwipeContent = function (element) {
 		this.element = element;
 		this.delta = [false, false];
 		this.dragging = false;
@@ -10,13 +10,13 @@
 
 	function initSwipeContent(content) {
 		content.element.addEventListener('mousedown', handleEvent.bind(content));
-		content.element.addEventListener('touchstart', handleEvent.bind(content), {passive: true});
+		content.element.addEventListener('touchstart', handleEvent.bind(content), { passive: true });
 	};
 
 	function initDragging(content) {
 		//add event listeners
 		content.element.addEventListener('mousemove', handleEvent.bind(content));
-		content.element.addEventListener('touchmove', handleEvent.bind(content), {passive: true});
+		content.element.addEventListener('touchmove', handleEvent.bind(content), { passive: true });
 		content.element.addEventListener('mouseup', handleEvent.bind(content));
 		content.element.addEventListener('mouseleave', handleEvent.bind(content));
 		content.element.addEventListener('touchend', handleEvent.bind(content));
@@ -24,7 +24,7 @@
 
 	function cancelDragging(content) {
 		//remove event listeners
-		if(content.intervalId) {
+		if (content.intervalId) {
 			(!window.requestAnimationFrame) ? clearInterval(content.intervalId) : window.cancelAnimationFrame(content.intervalId);
 			content.intervalId = false;
 		}
@@ -36,7 +36,7 @@
 	};
 
 	function handleEvent(event) {
-		switch(event.type) {
+		switch (event.type) {
 			case 'mousedown':
 			case 'touchstart':
 				startDrag(this, event);
@@ -65,39 +65,39 @@
 	function endDrag(content, event) {
 		cancelDragging(content);
 		// credits: https://css-tricks.com/simple-swipe-with-vanilla-javascript/
-		var dx = parseInt(unify(event).clientX), 
-	    dy = parseInt(unify(event).clientY);
-	  
-	  // check if there was a left/right swipe
-		if(content.delta && (content.delta[0] || content.delta[0] === 0)) {
-	    var s = getSign(dx - content.delta[0]);
-			
-			if(Math.abs(dx - content.delta[0]) > 30) {
-				(s < 0) ? emitSwipeEvents(content, 'swipeLeft', [dx, dy]) : emitSwipeEvents(content, 'swipeRight', [dx, dy]);	
+		var dx = parseInt(unify(event).clientX),
+			dy = parseInt(unify(event).clientY);
+
+		// check if there was a left/right swipe
+		if (content.delta && (content.delta[0] || content.delta[0] === 0)) {
+			var s = getSign(dx - content.delta[0]);
+
+			if (Math.abs(dx - content.delta[0]) > 30) {
+				(s < 0) ? emitSwipeEvents(content, 'swipeLeft', [dx, dy]) : emitSwipeEvents(content, 'swipeRight', [dx, dy]);
 			}
-	    
-	    content.delta[0] = false;
-	  }
+
+			content.delta[0] = false;
+		}
 		// check if there was a top/bottom swipe
-	  if(content.delta && (content.delta[1] || content.delta[1] === 0)) {
-	  	var y = getSign(dy - content.delta[1]);
+		if (content.delta && (content.delta[1] || content.delta[1] === 0)) {
+			var y = getSign(dy - content.delta[1]);
 
-	  	if(Math.abs(dy - content.delta[1]) > 30) {
-	    	(y < 0) ? emitSwipeEvents(content, 'swipeUp', [dx, dy]) : emitSwipeEvents(content, 'swipeDown', [dx, dy]);
-	    }
+			if (Math.abs(dy - content.delta[1]) > 30) {
+				(y < 0) ? emitSwipeEvents(content, 'swipeUp', [dx, dy]) : emitSwipeEvents(content, 'swipeDown', [dx, dy]);
+			}
 
-	    content.delta[1] = false;
-	  }
+			content.delta[1] = false;
+		}
 		// emit drag end event
-	  emitSwipeEvents(content, 'dragEnd', [dx, dy]);
-	  content.dragging = false;
+		emitSwipeEvents(content, 'dragEnd', [dx, dy]);
+		content.dragging = false;
 	};
 
 	function drag(content, event) {
-		if(!content.dragging) return;
+		if (!content.dragging) return;
 		// emit dragging event with coordinates
-		(!window.requestAnimationFrame) 
-			? content.intervalId = setTimeout(function(){emitDrag.bind(content, event);}, 250) 
+		(!window.requestAnimationFrame)
+			? content.intervalId = setTimeout(function () { emitDrag.bind(content, event); }, 250)
 			: content.intervalId = window.requestAnimationFrame(emitDrag.bind(content, event));
 	};
 
@@ -105,21 +105,21 @@
 		emitSwipeEvents(this, 'dragging', [parseInt(unify(event).clientX), parseInt(unify(event).clientY)]);
 	};
 
-	function unify(event) { 
+	function unify(event) {
 		// unify mouse and touch events
-		return event.changedTouches ? event.changedTouches[0] : event; 
+		return event.changedTouches ? event.changedTouches[0] : event;
 	};
 
 	function emitSwipeEvents(content, eventName, detail, el) {
 		var trigger = false;
-		if(el) trigger = el;
+		if (el) trigger = el;
 		// emit event with coordinates
-		var event = new CustomEvent(eventName, {detail: {x: detail[0], y: detail[1], origin: trigger}});
+		var event = new CustomEvent(eventName, { detail: { x: detail[0], y: detail[1], origin: trigger } });
 		content.element.dispatchEvent(event);
 	};
 
 	function getSign(x) {
-		if(!Math.sign) {
+		if (!Math.sign) {
 			return ((x > 0) - (x < 0)) || +x;
 		} else {
 			return Math.sign(x);
@@ -127,12 +127,12 @@
 	};
 
 	window.SwipeContent = SwipeContent;
-	
+
 	//initialize the SwipeContent objects
 	var swipe = document.getElementsByClassName('js-swipe-content');
-	if( swipe.length > 0 ) {
-		for( var i = 0; i < swipe.length; i++) {
-			(function(i){new SwipeContent(swipe[i]);})(i);
+	if (swipe.length > 0) {
+		for (var i = 0; i < swipe.length; i++) {
+			(function (i) { new SwipeContent(swipe[i]); })(i);
 		}
 	}
 }());

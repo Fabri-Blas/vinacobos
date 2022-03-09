@@ -1,4 +1,4 @@
-@use '../base' as *;
+@use "../base" as *;
 
 /* -------------------------------- 
 
@@ -38,7 +38,8 @@ Usage: codyhouse.co/license
   height: 100%;
   overflow: hidden;
 
-  img, video {
+  img,
+  video {
     position: absolute;
     top: 0;
     left: 0;
@@ -47,12 +48,14 @@ Usage: codyhouse.co/license
     width: 100%;
   }
 
-  img { // video fallback - visible if Reduced Motion is enabled
+  img {
+    // video fallback - visible if Reduced Motion is enabled
     display: none;
   }
 
-  @media (prefers-reduced-motion: reduce) { // don't play video if Reduced Motion is enabled - show fallback image
-    video { 
+  @media (prefers-reduced-motion: reduce) {
+    // don't play video if Reduced Motion is enabled - show fallback image
+    video {
       visibility: hidden;
     }
 
@@ -63,7 +66,7 @@ Usage: codyhouse.co/license
 }
 
 .video-feature__link {
-  --transition-duration: .4s;
+  --transition-duration: 0.4s;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -75,7 +78,7 @@ Usage: codyhouse.co/license
   border-radius: inherit;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  
+
   color: var(--color-contrast-higher);
   text-decoration: none;
   @include fontSmooth;
@@ -87,15 +90,16 @@ Usage: codyhouse.co/license
     z-index: 2;
   }
 
-  &::before { // animated background
-    content: '';
+  &::before {
+    // animated background
+    content: "";
     position: absolute;
     bottom: -20%;
     left: -5%;
     width: 110%;
     height: 140%;
     background-color: alpha(var(--color-contrast-higher), 0.9);
-    
+
     will-change: transform;
     transform: scaleY(0) skewY(10deg);
     transform-origin: center bottom;
@@ -121,7 +125,8 @@ Usage: codyhouse.co/license
   }
 }
 
-.video-feature__link-icon { // arrow icon
+.video-feature__link-icon {
+  // arrow icon
   > * {
     will-change: transform;
     transition: transform var(--transition-duration) var(--ease-in-out);

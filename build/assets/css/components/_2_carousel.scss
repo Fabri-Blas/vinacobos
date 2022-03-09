@@ -1,4 +1,4 @@
-@use '../base' as *;
+@use "../base" as *;
 
 /* -------------------------------- 
 
@@ -27,7 +27,7 @@ Usage: codyhouse.co/license
 
 .carousel__item {
   flex-shrink: 0;
-  width: var(--carousel-item-auto-size); 
+  width: var(--carousel-item-auto-size);
   margin-right: var(--carousel-grid-gap);
   margin-bottom: var(--carousel-grid-gap);
 }
@@ -39,20 +39,26 @@ Usage: codyhouse.co/license
     transition-timing-function: var(--ease-out);
   }
 
-  .carousel__item { // hide items while the carousel is initialized in JS
+  .carousel__item {
+    // hide items while the carousel is initialized in JS
     opacity: 0;
     margin-bottom: 0;
   }
 
-  .carousel--loaded .carousel__item { // reveal items
+  .carousel--loaded .carousel__item {
+    // reveal items
     opacity: 1;
   }
 
-  .carousel:not(.carousel--is-dragging) .carousel__list:not(.carousel__list--animating) .carousel__item[tabindex="-1"] > * {
-    visibility: hidden; // hide content of off-canvas items so that they are not focusable 
+  .carousel:not(.carousel--is-dragging)
+    .carousel__list:not(.carousel__list--animating)
+    .carousel__item[tabindex="-1"]
+    > * {
+    visibility: hidden; // hide content of off-canvas items so that they are not focusable
   }
 
-  .carousel[data-drag="on"] .carousel__item { // if drag = enabled
+  .carousel[data-drag="on"] .carousel__item {
+    // if drag = enabled
     user-select: none;
 
     img {
@@ -71,7 +77,7 @@ Usage: codyhouse.co/license
   border-radius: 50%;
   box-shadow: var(--inner-glow), var(--shadow-sm);
   z-index: 1;
-  transition: .2s;
+  transition: 0.2s;
 
   &:active {
     transform: translateY(1px);
@@ -94,9 +100,10 @@ Usage: codyhouse.co/license
     margin: auto;
   }
 }
- 
+
 // carousel dots navigation
-.carousel__navigation { // created in JS
+.carousel__navigation {
+  // created in JS
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, 10px); // = button size 👇
@@ -114,7 +121,8 @@ Usage: codyhouse.co/license
     margin: 0;
   }
 
-  button { // dot
+  button {
+    // dot
     display: block;
     position: relative;
     font-size: 10px; // ⚠️ button size
@@ -124,10 +132,11 @@ Usage: codyhouse.co/license
     background-color: var(--color-contrast-high);
     opacity: 0.4;
     cursor: pointer;
-    transition: background .3s;
+    transition: background 0.3s;
 
-    &::before { // focus circle
-      content: '';
+    &::before {
+      // focus circle
+      content: "";
       position: absolute;
       top: calc(50% - 0.5em);
       left: calc(50% - 0.5em);
@@ -140,10 +149,10 @@ Usage: codyhouse.co/license
       transform: scale(0);
       transition: 3s;
     }
-    
+
     &:focus {
       outline: none;
-      
+
       &::before {
         opacity: 1;
         transform: scale(1);
@@ -181,7 +190,8 @@ html:not(.js) .carousel__list {
 }
 
 .carousel--hide-controls {
-  .carousel__navigation, .carousel__control {
+  .carousel__navigation,
+  .carousel__control {
     display: none;
   }
 }

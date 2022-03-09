@@ -1,4 +1,4 @@
-@use '../base' as *;
+@use "../base" as *;
 
 /* -------------------------------- 
 
@@ -11,10 +11,10 @@ Usage: codyhouse.co/license
 
 :root {
   --drag-gallery-img-width: 260px; // single image width
-  --drag-gallery-img-gap: var(--space-lg);   // gap
+  --drag-gallery-img-gap: var(--space-lg); // gap
 }
 
-@supports(--css: variables) {
+@supports (--css: variables) {
   :root {
     @include breakpoint(sm) {
       --drag-gallery-img-width: 400px;
@@ -42,9 +42,10 @@ Usage: codyhouse.co/license
   overflow: auto;
   padding: 0 var(--component-padding);
 
-  &::after { // never visible - make sure .drag-gallery__list padding-right is applied
+  &::after {
+    // never visible - make sure .drag-gallery__list padding-right is applied
     display: block;
-    content: '';
+    content: "";
     height: 1px;
     padding-right: inherit;
   }
@@ -107,7 +108,8 @@ Usage: codyhouse.co/license
     opacity: 1;
   }
 
-  .drag-gallery--anim-off .drag-gallery__item { // remove opacity animation if reduced motion is on
+  .drag-gallery--anim-off .drag-gallery__item {
+    // remove opacity animation if reduced motion is on
     opacity: 1;
   }
 
@@ -116,40 +118,46 @@ Usage: codyhouse.co/license
     opacity: 0;
     transform: translateX(0) scale(1);
   }
-  
+
   .drag-gallery__gesture-hint--animate {
     animation: drag-gallery-gesture-hint 2.8s;
   }
 }
 
 @keyframes drag-gallery-gesture-hint {
-  0%, 60% {
+  0%,
+  60% {
     opacity: 0;
     transform: translateX(0) scale(1);
   }
 
-  5%, 65% {
+  5%,
+  65% {
     opacity: 1;
     transform: translateX(0) scale(1);
   }
 
-  10%, 70% {
+  10%,
+  70% {
     opacity: 1;
     transform: translateX(0) scale(0.8);
   }
 
-  30%, 90% {
+  30%,
+  90% {
     opacity: 1;
     transform: translateX(-200%) scale(0.8);
     animation-timing-function: var(--ease-in-out);
   }
 
-  35%, 95% {
+  35%,
+  95% {
     opacity: 1;
     transform: translateX(-200%) scale(1);
   }
 
-  40%, 100% {
+  40%,
+  100% {
     opacity: 0;
     transform: translateX(-200%) scale(1);
   }

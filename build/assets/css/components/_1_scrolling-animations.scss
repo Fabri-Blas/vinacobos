@@ -1,4 +1,4 @@
-@use '../base' as *;
+@use "../base" as *;
 
 /* -------------------------------- 
 
@@ -31,7 +31,10 @@ Usage: codyhouse.co/license
 }
 
 @mixin scrollFxProps {
-  transform: translate3d(var(--scroll-fx-translate-x), var(--scroll-fx-translate-y), var(--scroll-fx-translate-z)) rotateX(var(--scroll-fx-rotate-x)) rotateY(var(--scroll-fx-rotate-y)) rotateZ(var(--scroll-fx-rotate-z)) skewX(var(--scroll-fx-skew-x)) skewY(var(--scroll-fx-skew-y)) scaleX(var(--scroll-fx-scale-x)) scaleY(var(--scroll-fx-scale-y)) !important;
+  transform: translate3d(var(--scroll-fx-translate-x), var(--scroll-fx-translate-y), var(--scroll-fx-translate-z))
+    rotateX(var(--scroll-fx-rotate-x)) rotateY(var(--scroll-fx-rotate-y)) rotateZ(var(--scroll-fx-rotate-z))
+    skewX(var(--scroll-fx-skew-x)) skewY(var(--scroll-fx-skew-y)) scaleX(var(--scroll-fx-scale-x))
+    scaleY(var(--scroll-fx-scale-y)) !important;
   opacity: var(--scroll-fx-opacity) !important;
   stroke-dashoffset: var(--scroll-fx-stroke-dashoffset) !important;
 }
@@ -43,7 +46,7 @@ Usage: codyhouse.co/license
 
   .scroll-fx.scroll-fx--theme-transition,
   .scroll-fx.scroll-fx--theme-transition > * {
-    transition: .3s;
+    transition: 0.3s;
   }
 }
 
@@ -57,7 +60,7 @@ Usage: codyhouse.co/license
 
       .scroll-fx\@#{$breakpoint}.scroll-fx--theme-transition,
       .scroll-fx\@#{$breakpoint}.scroll-fx--theme-transition > * {
-        transition: .3s;
+        transition: 0.3s;
       }
     }
   }
@@ -65,7 +68,7 @@ Usage: codyhouse.co/license
 
 // 👇 color theme created for the demo (⛔️ delete in production)
 // 🔗 CodyFrame color themes  https://codyhouse.co/ds/docs/framework/colors#themes
-@supports(--css: variables) {
+@supports (--css: variables) {
   [data-theme="demo-dark"] {
     // main
     @include defineColorHSL(--color-primary-darker, 319, 78%, 49%);

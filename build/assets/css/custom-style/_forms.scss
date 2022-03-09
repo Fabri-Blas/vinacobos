@@ -1,4 +1,4 @@
-@use '../base' as *;
+@use "../base" as *;
 
 // --------------------------------
 
@@ -20,33 +20,42 @@
   transition: all 0.2s ease;
 
   &::placeholder {
-    opacity: 1;  
+    opacity: 1;
     color: var(--color-contrast-low);
   }
 
-  &:focus, &:focus-within {
+  &:focus,
+  &:focus-within {
     background: var(--color-bg);
-    box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-primary), var(--shadow-sm);
+    box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-primary),
+      var(--shadow-sm);
     outline: none;
   }
 }
 
-.form-control--disabled, .form-control[disabled], .form-control[readonly] {
+.form-control--disabled,
+.form-control[disabled],
+.form-control[readonly] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.form-control[aria-invalid="true"], .form-control.form-control--error {
+.form-control[aria-invalid="true"],
+.form-control.form-control--error {
   box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-error);
 
-  &:focus, &:focus-within {
-    box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-error), var(--shadow-sm);
+  &:focus,
+  &:focus-within {
+    box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0), 0px 0px 0px 2px var(--color-error),
+      var(--shadow-sm);
   }
 }
 
-.form-legend {}
+.form-legend {
+}
 
-.form-label {}
+.form-label {
+}
 
 // --------------------------------
 
