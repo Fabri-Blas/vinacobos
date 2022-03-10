@@ -14497,6 +14497,15 @@ footer i {
   height: 100vh;
 }
 
+/*HOSPITALITY */
+/*Inputs - forms  */
+.input-style {
+  border: 1px solid #A0A0A0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 438px;
+}
+
 /*! purgecss start ignore */
 * {
   margin: 0;

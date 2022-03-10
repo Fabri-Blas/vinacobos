@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Viña Cobos</title>
@@ -124,203 +125,36 @@
 
 
     <!-- Component 4 -->
-    <section class="display@md" style="background: #000000;">
-      <div class="padding-top-xl">
-        <h1 class="text-center" style="color:#ffffff">The Vineyards</h1>
-      </div>
-      <div class="s-panels js-s-panels padding-top-xl padding-bottom-xxl">
-        <button class="reset s-panels__nav-control js-s-panels__nav-control js-tab-focus"
-          aria-label="Toggle navigation">
-          <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
-            <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-              stroke-width="2">
-              <line x1="2" y1="6" x2="22" y2="6" />
-              <line x1="2" y1="12" x2="22" y2="12" />
-              <line x1="2" y1="18" x2="22" y2="18" />
-            </g>
-          </svg>
-        </button>
+    <section class="width-100% height-100vh" style="background-color:#000000">
+      <h1 class="text-center" style="color:#ffffff"> The vineyards</h1>
+      <div
+        class="width-100% height-100% homepage-panels width-100% height-100% padding-xl flex flex-row justify-center items-center">
 
-        <!-- preview panels -->
-        <!-- ⚠️ don't remove the bg-opacity-0 class (toggled in JS) - the background color (bg-black) should be equal to the one of the .s-panels__project-figure elements -->
-        <ul class="s-panels__projects-list js-s-panels__projects-list bg-black bg-opacity-0">
-          <!-- project 1 preview -->
-          <li class="s-panels__project-preview js-s-panels__project-preview">
-            <div class="s-panels__project-intro">
-              <div
-                class="s-panels__text-component text-component text-center padding-x-md color-white font-smooth text-shadow-lg">
-                <h3 class="color-inherit">Chañares</h3>
-              </div>
+        <article
+          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center padding-bottom-xl"
+          style="background-image: url('./assets/img/farming/desktop/sliding-chanares.png');">
+          <h2 class="color-primary-light z-index-2 text-center">Chañares</h2>
+          <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
+        </article>
 
-              <a class="s-panels__project-control js-s-panels__project-control" href="#project-1">Open Project 1</a>
-            </div>
+        <article
+          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center padding-bottom-xl"
+          style="background-image: url('./assets/img/farming/desktop/sliding-zigaretti.png');">
+          <h2 class="color-primary-light z-index-2 text-center">Zingaretti</h2>
+          <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
+        </article>
 
-            <figure class="s-panels__project-figure bg-black">
-              <img class="s-panels__project-img" src="./assets/img/farming/desktop/sliding-chanares.png"
-                alt="Image description">
-            </figure>
+        <article
+          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center padding-bottom-xl"
+          style="background-image: url('./assets/img/farming/desktop/sliding-marchiori.png');">
+          <h2 class="color-primary-light z-index-2 text-center">Marchiori</h2>
+          <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
+        </article>
 
-            <div class="s-panels__project-title-wrapper padding-bottom-lg padding-top-xl">
-              <div class="container max-width-md">
-                <h1 class="s-panels__project-title text-center text-xxxl color-white text-shadow-md">Chañares</h1>
-              </div>
-            </div>
-          </li>
-
-          <!-- project 2 preview -->
-          <li class="s-panels__project-preview js-s-panels__project-preview">
-            <div class="s-panels__project-intro">
-              <div
-                class="s-panels__text-component text-component text-center padding-x-md color-white font-smooth text-shadow-lg">
-                <h3 class="color-inherit">Zingaretti</h3>
-              </div>
-
-              <a class="s-panels__project-control js-s-panels__project-control" href="#project-2">Open Project 2</a>
-            </div>
-
-            <figure class="s-panels__project-figure bg-black">
-              <img class="s-panels__project-img" src="./assets/img/farming/desktop/sliding-zigaretti.png"
-                alt="Image description">
-            </figure>
-
-            <div class="s-panels__project-title-wrapper padding-bottom-lg padding-top-xl">
-              <div class="container max-width-md">
-                <h1 class="s-panels__project-title text-center text-xxxl color-white text-shadow-md">Zingaretti</h1>
-              </div>
-            </div>
-          </li>
-
-          <!-- project 3 preview -->
-          <li class="s-panels__project-preview js-s-panels__project-preview">
-            <div class="s-panels__project-intro">
-              <div
-                class="s-panels__text-component text-component text-center padding-x-md color-white font-smooth text-shadow-lg">
-                <h3 class="color-inherit">Marchiori</h3>
-              </div>
-
-              <a class="s-panels__project-control js-s-panels__project-control" href="#project-3">Open Project 3</a>
-            </div>
-
-            <figure class="s-panels__project-figure bg-black">
-              <img class="s-panels__project-img" src="./assets/img/farming/desktop/sliding-marchiori.png"
-                alt="Image description">
-            </figure>
-
-            <div class="s-panels__project-title-wrapper padding-bottom-lg padding-top-xl">
-              <div class="container max-width-md">
-                <h1 class="s-panels__project-title text-center text-xxxl color-white text-shadow-md">Marchiori</h1>
-              </div>
-            </div>
-          </li>
-
-        </ul>
-
-        <!-- main navigation -->
-        <div class="s-panels__nav-wrapper bg-contrast-higher font-smooth is-hidden js-s-panels__nav-wrapper">
-          
-        </div>
-
-        <!-- project 1 -->
-        <section id="project-1" class="s-panels__project-content bg padding-y-lg is-hidden">
-          <article class="article text-component container max-width-sm">
-            <p class="color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum voluptate nam
-              sunt vitae id quos illo autem temporibus. Et qui quidem magni architecto modi pariatur vel libero, a
-              consequuntur dignissimos omnis hic accusantium nesciunt consequatur quam soluta autem tenetur. Quidem odit
-              accusantium, sequi nulla minima natus adipisci, labore sint recusandae ullam quasi magnam totam eveniet
-              cupiditate perferendis non aspernatur, tenetur temporibus incidunt consequuntur accusamus iste quae
-              distinctio eum? Atque distinctio illo nam maiores, veniam non officia laborum porro aperiam pariatur?</p>
-
-            <p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla
-              inventore maxime itaque fugiat. Blanditiis officiis illum nostrum, sit possimus ut omnis ullam iste
-              aspernatur nisi nesciunt molestias maiores ratione? Dolore soluta, cum officia aliquam quae natus eligendi
-              quis nostrum?</p>
-
-            <p class="color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum voluptate nam
-              sunt vitae id quos illo autem temporibus. Et qui quidem magni architecto modi pariatur vel libero, a
-              consequuntur dignissimos omnis hic accusantium nesciunt consequatur quam soluta autem tenetur. Quidem odit
-              accusantium, sequi nulla minima natus adipisci, labore sint recusandae ullam quasi magnam totam eveniet
-              cupiditate perferendis non aspernatur, tenetur temporibus incidunt consequuntur accusamus iste quae
-              distinctio eum? Atque distinctio illo nam maiores, veniam non officia laborum porro aperiam pariatur?</p>
-          </article>
-        </section>
-
-        <!-- project 2 -->
-        <section id="project-2" class="s-panels__project-content bg padding-y-lg is-hidden">
-          <article class="article text-component container max-width-sm">
-            <p class="color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum voluptate nam
-              sunt vitae id quos illo autem temporibus. Et qui quidem magni architecto modi pariatur vel libero, a
-              consequuntur dignissimos omnis hic accusantium nesciunt consequatur quam soluta autem tenetur. Quidem odit
-              accusantium, sequi nulla minima natus adipisci, labore sint recusandae ullam quasi magnam totam eveniet
-              cupiditate perferendis non aspernatur, tenetur temporibus incidunt consequuntur accusamus iste quae
-              distinctio eum? Atque distinctio illo nam maiores, veniam non officia laborum porro aperiam pariatur?</p>
-
-            <p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla
-              inventore maxime itaque fugiat. Blanditiis officiis illum nostrum, sit possimus ut omnis ullam iste
-              aspernatur nisi nesciunt molestias maiores ratione? Dolore soluta, cum officia aliquam quae natus eligendi
-              quis nostrum?</p>
-
-            <p class="color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum voluptate nam
-              sunt vitae id quos illo autem temporibus. Et qui quidem magni architecto modi pariatur vel libero, a
-              consequuntur dignissimos omnis hic accusantium nesciunt consequatur quam soluta autem tenetur. Quidem odit
-              accusantium, sequi nulla minima natus adipisci, labore sint recusandae ullam quasi magnam totam eveniet
-              cupiditate perferendis non aspernatur, tenetur temporibus incidunt consequuntur accusamus iste quae
-              distinctio eum? Atque distinctio illo nam maiores, veniam non officia laborum porro aperiam pariatur?</p>
-          </article>
-        </section>
-
-        <!-- project 3 -->
-        <section id="project-3" class="s-panels__project-content bg padding-y-lg is-hidden">
-          <article class="article text-component container max-width-sm">
-            <p class="color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum voluptate nam
-              sunt vitae id quos illo autem temporibus. Et qui quidem magni architecto modi pariatur vel libero, a
-              consequuntur dignissimos omnis hic accusantium nesciunt consequatur quam soluta autem tenetur. Quidem odit
-              accusantium, sequi nulla minima natus adipisci, labore sint recusandae ullam quasi magnam totam eveniet
-              cupiditate perferendis non aspernatur, tenetur temporibus incidunt consequuntur accusamus iste quae
-              distinctio eum? Atque distinctio illo nam maiores, veniam non officia laborum porro aperiam pariatur?</p>
-
-            <p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla
-              inventore maxime itaque fugiat. Blanditiis officiis illum nostrum, sit possimus ut omnis ullam iste
-              aspernatur nisi nesciunt molestias maiores ratione? Dolore soluta, cum officia aliquam quae natus eligendi
-              quis nostrum?</p>
-
-            <p class="color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum voluptate nam
-              sunt vitae id quos illo autem temporibus. Et qui quidem magni architecto modi pariatur vel libero, a
-              consequuntur dignissimos omnis hic accusantium nesciunt consequatur quam soluta autem tenetur. Quidem odit
-              accusantium, sequi nulla minima natus adipisci, labore sint recusandae ullam quasi magnam totam eveniet
-              cupiditate perferendis non aspernatur, tenetur temporibus incidunt consequuntur accusamus iste quae
-              distinctio eum? Atque distinctio illo nam maiores, veniam non officia laborum porro aperiam pariatur?</p>
-          </article>
-        </section>
-
-        <!-- project 4 -->
-        <section id="project-4" class="s-panels__project-content bg padding-y-lg is-hidden">
-          <article class="article text-component container max-width-sm">
-            <p class="color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum voluptate nam
-              sunt vitae id quos illo autem temporibus. Et qui quidem magni architecto modi pariatur vel libero, a
-              consequuntur dignissimos omnis hic accusantium nesciunt consequatur quam soluta autem tenetur. Quidem odit
-              accusantium, sequi nulla minima natus adipisci, labore sint recusandae ullam quasi magnam totam eveniet
-              cupiditate perferendis non aspernatur, tenetur temporibus incidunt consequuntur accusamus iste quae
-              distinctio eum? Atque distinctio illo nam maiores, veniam non officia laborum porro aperiam pariatur?</p>
-
-            <p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla
-              inventore maxime itaque fugiat. Blanditiis officiis illum nostrum, sit possimus ut omnis ullam iste
-              aspernatur nisi nesciunt molestias maiores ratione? Dolore soluta, cum officia aliquam quae natus eligendi
-              quis nostrum?</p>
-
-            <p class="color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum voluptate nam
-              sunt vitae id quos illo autem temporibus. Et qui quidem magni architecto modi pariatur vel libero, a
-              consequuntur dignissimos omnis hic accusantium nesciunt consequatur quam soluta autem tenetur. Quidem odit
-              accusantium, sequi nulla minima natus adipisci, labore sint recusandae ullam quasi magnam totam eveniet
-              cupiditate perferendis non aspernatur, tenetur temporibus incidunt consequuntur accusamus iste quae
-              distinctio eum? Atque distinctio illo nam maiores, veniam non officia laborum porro aperiam pariatur?</p>
-          </article>
-        </section>
-
-        <!-- transition overlay layer -->
-        <div class="s-panels__overlay-layer bg-black js-s-panels__overlay-layer" aria-hidden="true"></div>
       </div>
 
-    
+    </section>
+
 
     </section>
     <!-- End Component 4 -->
@@ -328,6 +162,7 @@
 
 
   </main>
+
 
   <footer class="flex justify-center items-center">
 
@@ -421,7 +256,6 @@
     </div>
 
   </footer>
-
 
   <script src="assets/js/scripts.js"></script>
 </body>
