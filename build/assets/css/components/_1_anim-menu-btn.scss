@@ -24,6 +24,9 @@ Usage: codyhouse.co/license
     align-items: center;
     width: var(--anim-menu-btn-size);
     height: var(--anim-menu-btn-size);
+    transition: all 0.5s ease-in-out;
+    color: white;
+    padding: 35px 0px;
 }
 
 // icons
@@ -33,7 +36,6 @@ Usage: codyhouse.co/license
     font-size: var(--anim-menu-btn-icon-size);
     width: 1em;
     height: var(--anim-menu-btn-icon-stroke);
-    color: inherit;
     background-image: linear-gradient(currentColor, currentColor);
     background-repeat: no-repeat;
     transform: scale(1);

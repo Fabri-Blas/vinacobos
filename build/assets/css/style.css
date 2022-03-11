@@ -14455,10 +14455,36 @@ mark {
   align-items: center;
   text-align: center;
   z-index: 3;
-  background-color: black;
+  transition: all 0.5s ease-in-out;
 }
-.header-toggle i {
-  color: white !important;
+
+header {
+  position: fixed;
+  right: -85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  height: 100vh;
+  width: 75%;
+  background-color: black;
+  background-image: url("../img/header.png");
+  background-position: 110% 100%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all 1.2s ease-in-out;
+  z-index: 2;
+}
+header .animation-header-link {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 1s ease-in-out;
+}
+
+main {
+  z-index: 0;
+  transition: all 1.2s ease-in-out;
 }
 
 footer {
@@ -14475,6 +14501,10 @@ footer h4 {
 }
 footer i {
   font-size: 20px;
+}
+
+.opacity-fade {
+  filter: brightness(70%);
 }
 
 .bg-fullscreen {
@@ -14500,10 +14530,15 @@ footer i {
 /*HOSPITALITY */
 /*Inputs - forms  */
 .input-style {
-  border: 1px solid #A0A0A0;
+  border: 1px solid #a0a0a0;
   box-sizing: border-box;
   border-radius: 2px;
   width: 438px;
+}
+
+/* CHANARES  */
+.info-line {
+  border: 1px solid #dcbd84;
 }
 
 /*! purgecss start ignore */
@@ -14550,6 +14585,9 @@ Usage: codyhouse.co/license
   align-items: center;
   width: var(--anim-menu-btn-size);
   height: var(--anim-menu-btn-size);
+  transition: all 0.5s ease-in-out;
+  color: white;
+  padding: 35px 0px;
 }
 
 .anim-menu-btn__icon {
@@ -14558,7 +14596,6 @@ Usage: codyhouse.co/license
   font-size: var(--anim-menu-btn-icon-size);
   width: 1em;
   height: var(--anim-menu-btn-icon-stroke);
-  color: inherit;
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
   transform: scale(1);

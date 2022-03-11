@@ -15,11 +15,35 @@
 <body>
 
     <header>
+        <ul>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">Home</h3>
+            </li>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">History</h3>
+            </li>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">Farming &amp; Terroir</h3>
+            </li>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">Sustainability</h3>
+            </li>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">Wines</h3>
+            </li>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">Hospitality</h3>
+            </li>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">Contact</h3>
+            </li>
+        </ul>
     </header>
 
     <div class="header-toggle">
         <button class="reset anim-menu-btn color-contrast-high js-anim-menu-btn js-tab-focus" aria-label="Toggle menu">
-            <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
+            <i id="header-toggle-btn" class="header-toggle-btn anim-menu-btn__icon anim-menu-btn__icon--close"
+                aria-hidden="true"></i>
         </button>
     </div>
 
@@ -30,7 +54,7 @@
         <!-- Component 1 -->
         <section
             class="width-100% height-100vh bg-fullscreen flex flex-column justify-between items-center padding-y-xxl"
-            style="background-image: url('./assets/img/chanares/chanares-background.png');">
+            style="background-image: url('./assets/img/chanares/Desktop/chanares-hero.png');">
 
             <div>
                 <figure class="text-center padding-bottom-sm">
@@ -73,7 +97,7 @@
 
         <!-- Component 2 -->
 
-        <section class="padding-top-xl">
+        <section class="padding-y-xs padding-x-md max-width-lg margin-x-auto">
             <div class="slideshow js-slideshow" data-swipe="on">
                 <p class="sr-only">Slideshow Items</p>
 
@@ -81,24 +105,28 @@
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
                         <div class='container max-width-xxl'>
-                            <div class='text-component'><img src="./assets/img/farming/desktop/farming-cobos.png"></div>
+                            <div class='text-component'><img src="./assets/img/farming/desktop/farming-cobos.png"
+                                    alt="farming-cobos"></div>
                         </div>
                     </li>
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
                         <div class='container max-width-xxl'>
-                            <div class='text-component'><img src="./assets/img/farming/desktop/demo-foto.png"></div>
+                            <div class='text-component'><img src="./assets/img/farming/desktop/demo-foto.png"
+                                    alt="demo-foto"></div>
                         </div>
                     </li>
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
                         <div class='container max-width-xxl'>
-                            <div class='text-component'><img src="./assets/img/farming/desktop/farming-cobos.png"></div>
+                            <div class='text-component'><img src="./assets/img/farming/desktop/farming-cobos.png"
+                                    alt="farming-cobos"></div>
                         </div>
                     </li>
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
                         <div class='container max-width-xxl'>
-                            <div class='text-component'><img src="./assets/img/farming/desktop/demo-foto.png"></div>
+                            <div class='text-component'><img src="./assets/img/farming/desktop/demo-foto.png"
+                                    alt="demo-foto"></div>
                         </div>
                     </li>
 
@@ -148,8 +176,8 @@
 
 
         <!--Coomponent 3-->
-        <section class="">
-            <article class="padding-x-xxxl margin-x-md padding-top-xl" style="background-color:#ffffff">
+        <section class="padding-y-xs padding-x-md max-width-lg margin-x-auto">
+            <article class="padding-x-lg margin-x-xxxxs padding-top-xl" style="background-color:#ffffff">
                 <h5 class="h5-secondary sliding-paragraph"> Esta propiedad tiene una superficie plantada de 17,3 ha de
                     Malbec,
                     Cabernet Franc y Cabernet Sauvignon.
@@ -183,64 +211,92 @@
 
         <!-- Componente 4 -->
 
-        <section class="padding-y-xs margin-x-md ">
+        <section class="padding-y-xs padding-x-md max-width-lg margin-x-auto">
             <div class="width-100%" style="background-color:#000000">
                 <h1 class="text-center" style="color:#ffffff">Datos demograficos</h1>
             </div>
             <div class="width-100% padding-y-xs" style="background-color:#ffffff">
-            <div class="padding-x-sm margin-x-md padding-top-lg" >
-                <h2 class="">Valle de Uco</h2>
-                <h5 class="h5-secondary" >Nulla at lobortis non nec. Rhoncus eu tellus est purus diam fringilla leo, augue. Tristique aliquet
-                    gravida sollicitudin adipiscing sit vestibulum ipsum nunc duis. Donec aliquet ultricies non
-                    tincidunt. Pulvinar lectus eget elementum ultrices. Netus quis leo eget sollicitudin. Velit gravida
-                    orci mauris in.</h5>
-            </div>
+                <div class="padding-x-lg padding-top-lg">
+                    <h2 class="">Valle de Uco</h2>
+                    <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam fringilla leo,
+                        augue. Tristique aliquet
+                        gravida sollicitudin adipiscing sit vestibulum ipsum nunc duis. Donec aliquet ultricies non
+                        tincidunt. Pulvinar lectus eget elementum ultrices. Netus quis leo eget sollicitudin. Velit
+                        gravida
+                        orci mauris in.</h5>
+                </div>
             </div>
 
             <!-- Mapa con datos -->
-            <div class="grid width-100% padding-top-xl" style="background-color: #ffffff;">
-                <div class="col-8">
-                 <div class="width-50%">
-                  <div class="flex justify-between">
-                      <h5 class="h5-secondary">Region</h5>
-                      <h5> Linea</h5>
-                      <h5 class="h5-secondary">Cuyo</h5>
+            <div class="grid width-100% padding-top-xl padding-x-lg" style="background-color: #ffffff;">
+                <div class="col-6">
+                    <div class="grid gap-x-sm width-100% padding-y-xs">
+                        <div class="col-4">
+                            <h5 class="h5-secondary">Region</h5>
+                        </div>
 
-                  </div>
+                        <div class="col-2 flex justify-center items-center">
+                            <div class="info-line width-100%">
+                            </div>
+                        </div>
 
-                 </div>
-                 <div class="width-50%">
-                    <div class="flex justify-between">
-                        <h5 class="h5-secondary">Elevation</h5>
-                        <h5> Linea</h5>
-                        <h5 class="h5-secondary">900 - 1.400 m eters | 2.950-4000 Feet</h5>
-  
+                        <div class="col-6 padding-left-md">
+                            <h5 class="h5-secondary">Cuyo</h5>
+                        </div>
                     </div>
-  
-                   </div>
-                   <div class="width-50%">
-                    <div class="flex justify-between">
-                        <h5 class="h5-secondary">Presipitations</h5>
-                        <h5> Linea</h5>
-                        <h5 class="h5-secondary">300 ml per year</h5>
-  
-                    </div>
-  
-                   </div>
-                   <div class="width-50%">
-                    <div class="flex justify-between">
-                        <h5 class="h5-secondary">Thermal amplitude</h5>
-                        <h5> Linea</h5>
-                        <h5 class="h5-secondary">14.6°C | 62.2° F</h5>
-  
-                    </div>
-  
-                   </div>
+                    <!-- Grid 2 -->
+                    <div class="grid gap-x-sm width-100% padding-y-xs">
+                        <div class="col-4">
+                            <h5 class="h5-secondary">Elevation</h5>
+                        </div>
 
+                        <div class="col-2 flex justify-center items-center">
+                            <div class="info-line width-100%">
+                            </div>
+                        </div>
+
+                        <div class="col-6 padding-left-md">
+                            <h5 class="h5-secondary">900 - 1.400 meters | 2.950-4000 Feet</h5>
+                        </div>
+                    </div>
+                    <!-- Grid 3 -->
+                    <div class="grid gap-x-sm width-100% padding-y-xs">
+                        <div class="col-4">
+                            <h5 class="h5-secondary">Presipitations</h5>
+                        </div>
+
+                        <div class="col-2 flex justify-center items-center">
+                            <div class="info-line width-100%">
+                            </div>
+                        </div>
+
+                        <div class="col-6 padding-left-md">
+                            <h5 class="h5-secondary">300 ml per year</h5>
+                        </div>
+                    </div>
+
+                    <!-- Grid 4 -->
+                    <div class="grid gap-x-sm width-100% padding-y-xs">
+                        <div class="col-4">
+                            <h5 class="h5-secondary">Thermal amplitude</h5>
+                        </div>
+
+                        <div class="col-2 flex justify-center items-center">
+                            <div class="info-line width-100%">
+                            </div>
+                        </div>
+
+                        <div class="col-6 padding-left-md">
+                            <h5 class="h5-secondary">14.6°C | 62.2° F</h5>
+                        </div>
+                    </div>
                 </div>
-               
-                <div class="col-4">
-                 <img src="./assets/img/farming/desktop/celeste-vineyard.png">
+
+                <div class="col-6">
+                    <figure class="text-center">
+                        <img class="width-100%" src="./assets/img/farming/desktop/celeste-vineyard.png"
+                            alt="celeste-vineyard">
+                    </figure>
                 </div>
 
             </div>
