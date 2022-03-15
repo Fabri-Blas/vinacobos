@@ -13,6 +13,10 @@
 @use "custom-style/forms";
 @use "custom-style/util";
 
+// ======== PAGES ========
+@use "custom-style/pages/chanares.scss";
+@use "custom-style/pages/farming.scss";
+
 /*! purgecss start ignore */
 
 * {

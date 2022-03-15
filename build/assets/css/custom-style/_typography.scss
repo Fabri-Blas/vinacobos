@@ -96,7 +96,7 @@ h5 {
   line-height: 21.68px;
 }
 h6 {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   line-height: 16.26px;
 }
 
@@ -134,7 +134,7 @@ h6 {
   line-height: 23px;
 }
 .h6-secondary {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   line-height: 15.6px;
 }
 
@@ -144,6 +144,10 @@ h6 {
 }
 .font-secondary {
   font-family: var(--font-secondary);
+  &-semibold{
+    font-family: var(--font-secondary);
+    font-weight: 600;
+  }
 }
 
 // color

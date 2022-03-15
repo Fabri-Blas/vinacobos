@@ -14196,7 +14196,7 @@ h5 {
 }
 
 h6 {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   line-height: 16.26px;
 }
 
@@ -14238,7 +14238,7 @@ h6 {
 }
 
 .h6-secondary {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   line-height: 15.6px;
 }
 
@@ -14248,6 +14248,10 @@ h6 {
 
 .font-secondary {
   font-family: var(--font-secondary);
+}
+.font-secondary-semibold {
+  font-family: var(--font-secondary);
+  font-weight: 600;
 }
 
 .color-secondary-darker {
@@ -14517,28 +14521,33 @@ footer i {
   background: linear-gradient(360deg, #000000 0.09%, rgba(0, 0, 0, 0) 100%);
 }
 
-/* ======HOMEPAGE====== */
-/* ======FARMING====== */
+/*Inputs - forms  */
+.input-style {
+  border: 1px solid #a0a0a0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.custom-textarea {
+  border: 1px solid #B1B1B1;
+  border-radius: 4px;
+}
+
+.info-line {
+  border: 1px solid #dcbd84;
+}
+
+.custom-gallery-buton {
+  width: 98px !important;
+}
+
 .farming-hero {
   background-image: url("../img/farming/desktop/grapes-background.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
-}
-
-/*HOSPITALITY */
-/*Inputs - forms  */
-.input-style {
-  border: 1px solid #a0a0a0;
-  box-sizing: border-box;
-  border-radius: 2px;
-  width: 438px;
-}
-
-/* CHANARES  */
-.info-line {
-  border: 1px solid #dcbd84;
 }
 
 /*! purgecss start ignore */

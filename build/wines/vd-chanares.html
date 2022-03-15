@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   <title>Viña Cobos</title>
 
   <script src="https://kit.fontawesome.com/f16f463c5c.js" crossorigin="anonymous"></script>
@@ -47,13 +47,13 @@
     </button>
   </div>
 
-  <main class="width-100% min-height-100vh">
+  <main class="bg-black width-100% min-height-100vh">
 
     <!-- Component 1 -->
-    <section class="width-100% height-100vh bg-fullscreen flex flex-column justify-between items-center padding-y-xxl"
-      style="background-image: url('./assets/img/homepage/intro.png');">
+    <section class="position-relative width-100% height-100vh bg-fullscreen"
+      style="background-image: url('../assets/img/wines/vd-chanares/intro.png');">
 
-      <div>
+      <div class="padding-top-xl">
         <figure class="text-center padding-bottom-sm">
           <svg class="cobos-logo" width="62" height="61" viewBox="0 0 62 61" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -80,12 +80,9 @@
         </figure>
 
         <figure class="text-center">
-          <img src="./assets/img/homepage/vinacobos-title.png" alt="">
+          <img src="../assets/img/homepage/vinacobos-title.png" alt="">
         </figure>
       </div>
-
-
-      <h1 class="color-primary-light">Rooted in our origins</h1>
 
     </section>
     <!-- End Component 1 -->
@@ -93,39 +90,37 @@
 
 
     <!-- Component 2 -->
-    <section class="width-100% height-100vh">
+    <section class="width-100% min-height-100vh padding-y-xl bg-black flex flex-column justify-start items-center">
 
-      <div
-        class="max-width-xxl margin-x-auto width-100% height-100% homepage-panels width-100% height-100% padding-y-xl padding-x-md flex flex-row justify-center items-center">
+      <div class="width-100% height-100% max-width-xxl margin-x-auto flex flex-column justify-start items-center">
+        <figure class="text-center">
+          <img src="../assets/img/wines/vd-logo.png" alt="">
+          <figcaption>
+            <h5 class="color-white max-width-md margin-x-auto">Poda a cordón pitoneado. Riego por goteo. La exposición
+              norte con una pendiente oeste-este de 2,7°
+              favorece a la circulación del aire y las condiciones de sanidad del viñedo.
+            </h5>
+          </figcaption>
+        </figure>
+      </div>
 
-        <article
-          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center padding-bottom-xl"
-          style="background-image: url('./assets/img/homepage/panel-1.png');">
-          <h2 class="color-primary-light z-index-2 text-center">Identity</h2>
-          <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
-        </article>
-
-        <article
-          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center padding-bottom-xl"
-          style="background-image: url('./assets/img/homepage/panel-2.png');">
-          <h2 class="color-primary-light z-index-2 text-center">Terroir &amp; Farming</h2>
-          <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
-        </article>
-
-        <article
-          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center padding-bottom-xl"
-          style="background-image: url('./assets/img/homepage/panel-3.png');">
-          <h2 class="color-primary-light z-index-2 text-center">Wines</h2>
-          <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
-        </article>
-
-        <article
-          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center padding-bottom-xl"
-          style="background-image: url('./assets/img/homepage/panel-4.png');">
-          <h2 class="color-primary-light z-index-2 text-center">Hospitality</h2>
-          <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
-        </article>
-
+      <div class="width-100% height-100vh padding-y-xl grid">
+        <div class="col-12 col-6@md bg-fullscreen"
+          style="background-image: url('../assets/img/wines/vd-chanares/side-photo.png');">
+        </div>
+        <div class="col-12 col-6@md flex flex-column justify-center items-center bg-white padding-y-lg padding-x-xl">
+          <div class="padding-y-md">
+            <h2>Name Origin</h2>
+            <h5 class="font-secondary">Following Paul Hobbs Winery nomenclature of naming a wine after a specific,
+              distinctive small ‘true terroir’ parcel that, when farmed appropriately, produces consistently superlative
+              wines.</h5>
+          </div>
+          <div class="padding-y-md">
+            <h2>Concept</h2>
+            <h5 class="font-secondary">Reflects our intensive study and understanding of grand cru sites to unveil
+              what makes them unique and distinctive.</h5>
+          </div>
+        </div>
       </div>
 
     </section>
@@ -133,28 +128,80 @@
 
 
     <!-- Component 3 -->
+    <section class="width-100% min-height-100vh bg-black padding-bottom-xxxxl margin-bottom-xxl">
 
-    <section class="width-100% padding-x-md max-width-xxl margin-x-auto margin-bottom-xl">
+      <!-- Fichas Técnicas -->
+      <div class="grid gap-x-sm gap-y-lg max-width-xxl margin-x-auto padding-x-xl">
 
-      <div class="flex justify-center items-center width-100% padding-x-lg max-width-xxl margin-x-auto bg-fullscreen"
-        style="background-image: url('./assets/img/homepage/background-3.png'); height: 600px;">
-
-        <div class="height-80% bg-white flex flex-column justify-center items-center padding-lg" style="max-width: 565px;">
-
-          <h2>Who we are</h2>
-          <h5 class="h5-secondary padding-y-xl">
-            We were born from the vision of a dreamer who took on the challenge of making wines like never before seen
-            in Argentina. His expertise and philosophy is what drives us to improve year after year.
-          </h5>
-          <button class="btn--primary">History</button>
-
+        <!-- Ficha 1 -->
+        <div class="col-12 col-4@md">
+          <h3 class="color-white">Malbec</h3>
+          <h5 class="text-uppercase font-secondary color-secondary-light">BOTELLA</h5>
+          <h5 class="text-uppercase font-secondary color-secondary-light">FICHA TÉCNICA</h5>
         </div>
+        <div class="col-12 col-4@md">
+          <h4 class="color-white font-secondary-semibold">Crianza y puesta en botella</h4>
+          <h5 class="color-white font-secondary">Criado durante 18 meses en barricas de roble francés nuevo (53%) y de
+            segundo uso (47%). Embotellado en noviembre de 2019</h5>
+        </div>
+        <div class="col-12 col-4@md">
+          <h4 class="color-white font-secondary-semibold">Notas de degustación</h4>
+          <h5 class="color-white font-secondary">De color brillante y agradables tonos violáceos. En nariz es fresco,
+            concentrado, con notas de tomillo, jarilla y moras maduras. Los taninos son aterciopelados pero firmes. Es
+            un vino carnoso y de lago final.</h5>
+        </div>
+        <!-- End Ficha 1 -->
+
+        <!-- Ficha 2 -->
+        <div class="col-12 col-4@md">
+          <h3 class="color-white">Cabernet Franc</h3>
+          <h5 class="text-uppercase font-secondary color-secondary-light">BOTELLA</h5>
+          <h5 class="text-uppercase font-secondary color-secondary-light">FICHA TÉCNICA</h5>
+        </div>
+        <div class="col-12 col-4@md">
+          <h4 class="color-white font-secondary-semibold">Crianza y puesta en botella</h4>
+          <h5 class="color-white font-secondary">Criado durante 18 meses en barricas de roble francés nuevo (53%) y de
+            segundo uso (46%). Embotellado en noviembre de 2019</h5>
+        </div>
+        <div class="col-12 col-4@md">
+          <h4 class="color-white font-secondary-semibold">Notas de degustación</h4>
+          <h5 class="color-white font-secondary">De color rojo vivo, con tonalidades oscuras. En nariz aparecen hierbas
+            andinas, pimiento morrón y notas de caja de cigarros. En boca, muestra una fuerte presencia de taninos, una
+            textura horizontal y un final largo.</h5>
+        </div>
+        <!-- End Ficha 2 -->
 
       </div>
+      <!-- End Fichas Técnicas -->
+
+      <div class="width-90% margin-top-xl margin-x-auto padding-x-lg bg-fullscreen"
+        style="background-image: url('../assets/img/wines/vd-chanares/etiqueta.png'); height: 373px;"></div>
 
     </section>
-
     <!-- EndComponent 3 -->
+
+
+
+    <!-- Component 4 -->
+    <section class="bg-white width-100% flex flex-column justify-start items-center" style="height: 574px;">
+
+      <div class="width-100% height-100% position-relative flex flex-column justify-center items-center max-width-xxl margin-x-auto padding-x-xl">
+        <figure class="position-absolute top-0" style="transform: translateY(-70%);">
+          <img src="../assets/img/wines/vd-chanares/vinedo.png" alt="">
+        </figure>
+
+        <h2 class="padding-top-xl text-center">Chañares state</h2>
+        <h5 class="font-secondary text-center padding-y-lg max-width-md">Esta propiedad tiene una superficie plantada de 17,3 ha de Malbec, Cabernet Franc y Cabernet Sauvignon.
+          La zona se caracteriza por tener suelo de origen aluvial, pobre, pedregoso y de buen drenaje. En cuanto a la
+          topografía, el viñedo tiene una exposición norte, con una pendiente oeste-este de 2,7%, que favorece la
+          circulación de aire y las condiciones de sanidad del viñedo.
+        </h5>
+        <button class="btn--primary">Conocé más de Chañares</button>
+      </div>
+
+
+    </section>
+    <!-- EndComponent 4 -->
 
 
 
@@ -253,7 +300,7 @@
 
   </footer>
 
-  <script src="assets/js/scripts.js"></script>
+  <script src="../assets/js/scripts.js"></script>
 </body>
 
 </html>
