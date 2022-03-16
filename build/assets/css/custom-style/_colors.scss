@@ -128,6 +128,24 @@
 }
 
 // background color
+.bg-black{
+  background-color: #000;
+}
+.bg-primary-darker {
+  background-color: alpha(var(--color-primary-darker), var(--bg-o, 1));
+}
+.bg-primary-dark {
+  background-color: alpha(var(--color-primary-dark), var(--bg-o, 1));
+}
+.bg-primary {
+  background-color: alpha(var(--color-primary), var(--bg-o, 1));
+}
+.bg-primary-light {
+  background-color: alpha(var(--color-primary-light), var(--bg-o, 1));
+}
+.bg-primary-lighter {
+  background-color: alpha(var(--color-primary-lighter), var(--bg-o, 1));
+}
 .bg-secondary-darker {
   background-color: alpha(var(--color-secondary-darker), var(--bg-o, 1));
 }
@@ -145,6 +163,21 @@
 }
 
 // border color
+.border-primary-darker {
+  background-color: alpha(var(--color-primary-darker), var(--bg-o, 1));
+}
+.border-primary-dark {
+  background-color: alpha(var(--color-primary-dark), var(--bg-o, 1));
+}
+.border-primary {
+  background-color: alpha(var(--color-primary), var(--bg-o, 1));
+}
+.border-primary-light {
+  background-color: alpha(var(--color-primary-light), var(--bg-o, 1));
+}
+.border-primary-lighter {
+  background-color: alpha(var(--color-primary-lighter), var(--bg-o, 1));
+}
 .border-secondary-darker {
   border-color: alpha(var(--color-secondary-darker), var(--bg-o, 1));
 }

@@ -14020,6 +14020,30 @@ html:not(.js) .no-js\:is-hidden {
     -moz-osx-font-smoothing: grayscale;
   }
 }
+.bg-black {
+  background-color: #000;
+}
+
+.bg-primary-darker {
+  background-color: hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), var(--bg-o, 1));
+}
+
+.bg-primary-dark {
+  background-color: hsla(var(--color-primary-dark-h), var(--color-primary-dark-s), var(--color-primary-dark-l), var(--bg-o, 1));
+}
+
+.bg-primary {
+  background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), var(--bg-o, 1));
+}
+
+.bg-primary-light {
+  background-color: hsla(var(--color-primary-light-h), var(--color-primary-light-s), var(--color-primary-light-l), var(--bg-o, 1));
+}
+
+.bg-primary-lighter {
+  background-color: hsla(var(--color-primary-lighter-h), var(--color-primary-lighter-s), var(--color-primary-lighter-l), var(--bg-o, 1));
+}
+
 .bg-secondary-darker {
   background-color: hsla(var(--color-secondary-darker-h), var(--color-secondary-darker-s), var(--color-secondary-darker-l), var(--bg-o, 1));
 }
@@ -14038,6 +14062,26 @@ html:not(.js) .no-js\:is-hidden {
 
 .bg-secondary-lighter {
   background-color: hsla(var(--color-secondary-lighter-h), var(--color-secondary-lighter-s), var(--color-secondary-lighter-l), var(--bg-o, 1));
+}
+
+.border-primary-darker {
+  background-color: hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), var(--bg-o, 1));
+}
+
+.border-primary-dark {
+  background-color: hsla(var(--color-primary-dark-h), var(--color-primary-dark-s), var(--color-primary-dark-l), var(--bg-o, 1));
+}
+
+.border-primary {
+  background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), var(--bg-o, 1));
+}
+
+.border-primary-light {
+  background-color: hsla(var(--color-primary-light-h), var(--color-primary-light-s), var(--color-primary-light-l), var(--bg-o, 1));
+}
+
+.border-primary-lighter {
+  background-color: hsla(var(--color-primary-lighter-h), var(--color-primary-lighter-s), var(--color-primary-lighter-l), var(--bg-o, 1));
 }
 
 .border-secondary-darker {
@@ -14532,6 +14576,28 @@ footer i {
 .custom-textarea {
   border: 1px solid #B1B1B1;
   border-radius: 4px;
+}
+
+.lineas-horizontales {
+  display: inline-block;
+  position: relative;
+}
+
+.lineas-horizontales::after, .lineas-horizontales::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 1px;
+  background-color: #FFF;
+  top: 0.6em;
+}
+
+.lineas-horizontales::after {
+  right: -440px;
+}
+
+.lineas-horizontales::before {
+  left: -440px;
 }
 
 .info-line {
@@ -15963,7 +16029,6 @@ Usage: codyhouse.co/license
 }
 
 .slideshow__item {
-  display: flex;
   align-items: center;
   justify-content: center;
   height: var(--slideshow-height);
@@ -15973,6 +16038,9 @@ Usage: codyhouse.co/license
 }
 .slideshow__item:focus {
   outline: none;
+}
+.slideshow__item div.flex.bg-white img {
+  width: 629px;
 }
 
 .slideshow--ratio-16\:9 .slideshow__item {
@@ -16288,15 +16356,14 @@ Usage: codyhouse.co/license
 .js .slideshow__control {
   display: block;
   position: absolute;
-  z-index: 4;
-  top: 50%;
-  transform: translateY(-50%);
+  z-index: 10;
+  bottom: -20px;
 }
 .js .slideshow__control:first-of-type {
-  left: var(--slideshow-btn-offset);
+  left: 25px;
 }
 .js .slideshow__control:last-of-type {
-  right: var(--slideshow-btn-offset);
+  right: 25px;
 }
 @media (min-width: 64rem) {
   .js .slideshow[data-swipe=on] .slideshow__control {
@@ -16405,4 +16472,13 @@ Usage: codyhouse.co/license
   .slideshow__nav-item button::before {
     font-size: 16px;
   }
+}
+.flechita-izquierda {
+  top: 20%;
+  left: 0px !important;
+}
+
+.flechita-derecha {
+  top: 20%;
+  right: 0px !important;
 }

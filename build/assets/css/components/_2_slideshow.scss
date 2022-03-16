@@ -37,7 +37,7 @@ Usage: codyhouse.co/license
 
 // slide
 .slideshow__item {
-  display: flex;
+  //display: flex;
   align-items: center;
   justify-content: center;
   height: var(--slideshow-height);
@@ -47,6 +47,10 @@ Usage: codyhouse.co/license
 
   &:focus {
     outline: none;
+  }
+
+  div.flex.bg-white img {
+    width: 629px;
   }
 }
 
@@ -327,16 +331,17 @@ Usage: codyhouse.co/license
   .slideshow__control {
     display: block;
     position: absolute;
-    z-index: 4;
-    top: 50%;
-    transform: translateY(-50%);
+    z-index: 10;
+    bottom: -20px;
+    //top: 50%;
+   // transform: translateY(-50%);
 
     &:first-of-type {
-      left: var(--slideshow-btn-offset);
+      left: 25px //var(--slideshow-btn-offset);
     }
 
     &:last-of-type {
-      right: var(--slideshow-btn-offset);
+      right: 25px //var(--slideshow-btn-offset);
     }
   }
 
@@ -465,4 +470,14 @@ Usage: codyhouse.co/license
       }
     }
   }
+}
+
+.flechita-izquierda {
+  top: 20%;
+  left: 0px !important;
+}
+
+.flechita-derecha {
+  top: 20%;
+  right: 0px !important;
 }

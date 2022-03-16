@@ -89,3 +89,22 @@ footer {
     border: 1px solid #B1B1B1;
     border-radius: 4px;
 }
+
+.lineas-horizontales {
+    display: inline-block;
+    position: relative;
+}
+.lineas-horizontales::after,.lineas-horizontales::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 1px;
+    background-color: #FFF;
+    top: 0.6em;
+}
+.lineas-horizontales::after {
+    right: -440px;
+}
+.lineas-horizontales::before {
+    left: -440px;
+}
