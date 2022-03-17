@@ -15,62 +15,31 @@
 <body>
 
     <header>
-        <div class="flex">
-            <ul class="col-6">
-                <li class="animation-header-link padding-y-sm">
-                    <div class="flex">
-                        <h5 class="h5-secondary color-primary-light padding-left-xxl">EN</h5>
-                        <h5 class="h5-secondary color-primary-light padding-left-xs">ES</h5>
-                    </div>
-                </li>
-                <li class="animation-header-link padding-y-sm">
-                    <a href="./index.html">
-                    <h3 class="h3-secondary color-primary-light padding-left-xxl">Home</h3>
-                    </a>
-                </li>
-
-                <li class="animation-header-link padding-y-sm">
-                    <a href="./history.html">
-                        <h3 class="h3-secondary color-primary-light padding-left-xxl">History</h3>
-                    </a>
-                </li>
-                <li class="animation-header-link padding-y-sm">
-                    <a href="./identity.html">
-                        <h3 class="h3-secondary color-secondary padding-left-xxl">Identity</h3>
-                    </a>
-                </li>
-
-                <li class="animation-header-link padding-y-sm">
-                    <a href="./farming.html">
-                        <h3 class="h3-secondary color-primary-light padding-left-xxl">Farming &amp; Terroir</h3>
-                    </a>
-                </li>
-                <li class="animation-header-link padding-y-sm">
-                    <a href="./wines.html">
-                        <h3 class="h3-secondary color-primary-light padding-left-xxl">Wines</h3>
-                    </a>
-                </li>
-                <li class="animation-header-link padding-y-sm">
-                    <a href="./hospitality.html">
-                        <h3 class="h3-secondary color-primary-light padding-left-xxl">Hospitality &amp; Contact</h3>
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="col-6 margin-top-lg padding-top-md">
-                <li class="animation-header-link padding-y-xxs">
-                    <a href="./wines.html">
-                        <h4 class="h4-secondary color-primary-light padding-left-xl">Shop</h4>
-                    </a>
-                </li>
-                <li class="animation-header-link padding-y-xxs">
-                    <a href="./hospitality.html">
-                        <h4 class="h4-secondary color-primary-light padding-left-xl">Legal</h4>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <ul>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">Home</h3>
+            </li>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">History</h3>
+            </li>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">Farming &amp; Terroir</h3>
+            </li>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">Sustainability</h3>
+            </li>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">Wines</h3>
+            </li>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">Hospitality</h3>
+            </li>
+            <li class="animation-header-link padding-y-sm">
+                <h3 class="color-primary-light padding-left-xxl">Contact</h3>
+            </li>
+        </ul>
     </header>
+
     <div class="header-toggle">
         <button class="reset anim-menu-btn color-contrast-high js-anim-menu-btn js-tab-focus" aria-label="Toggle menu">
             <i id="header-toggle-btn" class="header-toggle-btn anim-menu-btn__icon anim-menu-btn__icon--close"
@@ -84,11 +53,12 @@
 
         <!-- Component 1 -->
         <section
-            class="width-100% height-100vh bg-fullscreen flex flex-column justify-between items-center padding-y-xxl"
-            style="background-image: url('./assets/img/farming/chanares/Desktop/chanares-hero.png');">
+            class="width-100% height-100vh bg-fullscreen flex flex-column justify-between items-center margin-bottom-xxl">
+            <div class="width-100% position-relative">
 
-            <div>
-                <figure class="text-center padding-bottom-sm">
+                <video class="video-bg__media position-absolute" autoplay loop muted playsInline
+                    src="./assets/img/identity/identity-video-hero.mp4" style="z-index: -1;"></video>
+                <figure class="text-center padding-bottom-sm padding-top-xxl">
                     <svg class="cobos-logo" width="62" height="61" viewBox="0 0 62 61" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_151_1531)">
@@ -118,9 +88,9 @@
                 </figure>
             </div>
 
-
-            <h1 class="color-primary-light">Identity</h1>
-
+            <div class="margin-bottom-xxl">
+                <h1 class="color-primary-light">Identity</h1>
+            </div>
         </section>
         <!-- End Component 1 -->
 
