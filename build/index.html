@@ -15,29 +15,59 @@
 <body>
 
   <header>
-    <ul>
-      <li class="animation-header-link padding-y-sm">
-        <h3 class="color-primary-light padding-left-xxl">Home</h3>
-      </li>
-      <li class="animation-header-link padding-y-sm">
-        <h3 class="color-primary-light padding-left-xxl">History</h3>
-      </li>
-      <li class="animation-header-link padding-y-sm">
-        <h3 class="color-primary-light padding-left-xxl">Farming &amp; Terroir</h3>
-      </li>
-      <li class="animation-header-link padding-y-sm">
-        <h3 class="color-primary-light padding-left-xxl">Sustainability</h3>
-      </li>
-      <li class="animation-header-link padding-y-sm">
-        <h3 class="color-primary-light padding-left-xxl">Wines</h3>
-      </li>
-      <li class="animation-header-link padding-y-sm">
-        <h3 class="color-primary-light padding-left-xxl">Hospitality</h3>
-      </li>
-      <li class="animation-header-link padding-y-sm">
-        <h3 class="color-primary-light padding-left-xxl">Contact</h3>
-      </li>
-    </ul>
+    <div class="flex">
+      <ul class="col-6">
+        <li class="animation-header-link padding-y-sm">
+          <div class="flex">
+            <h5 class="h5-secondary color-primary-light padding-left-xxl">EN</h5>
+            <h5 class="h5-secondary color-primary-light padding-left-xs">ES</h5>
+          </div>
+        </li>
+        <li class="animation-header-link padding-y-sm">
+          <h3 class="h3-secondary color-secondary padding-left-xxl">Home</h3>
+        </li>
+
+        <li class="animation-header-link padding-y-sm">
+          <a href="./history.html">
+            <h3 class="h3-secondary color-primary-light padding-left-xxl">History</h3>
+          </a>
+        </li>
+        <li class="animation-header-link padding-y-sm">
+          <a href="./identity.html">
+            <h3 class="h3-secondary color-primary-light padding-left-xxl">Identity</h3>
+          </a>
+        </li>
+
+        <li class="animation-header-link padding-y-sm">
+          <a href="./farming.html">
+            <h3 class="h3-secondary color-primary-light padding-left-xxl">Farming &amp; Terroir</h3>
+          </a>
+        </li>
+        <li class="animation-header-link padding-y-sm">
+          <a href="./wines.html">
+            <h3 class="h3-secondary color-primary-light padding-left-xxl">Wines</h3>
+          </a>
+        </li>
+        <li class="animation-header-link padding-y-sm">
+          <a href="./hospitality.html">
+            <h3 class="h3-secondary color-primary-light padding-left-xxl">Hospitality &amp; Contact</h3>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="col-6 margin-top-lg padding-top-md">
+        <li class="animation-header-link padding-y-xxs">
+          <a href="">
+            <h4 class="h4-secondary color-primary-light padding-left-xl">Shop</h4>
+          </a>
+        </li>
+        <li class="animation-header-link padding-y-xxs">
+          <a href="">
+            <h4 class="h4-secondary color-primary-light padding-left-xl">Legal</h4>
+          </a>
+        </li>
+      </ul>
+    </div>
   </header>
 
   <div class="header-toggle">
@@ -98,33 +128,44 @@
       <div
         class="max-width-xxl margin-x-auto width-100% height-100% homepage-panels width-100% height-100% padding-y-xl padding-x-md flex flex-row justify-center items-center">
 
-        <article
-          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center padding-bottom-xl"
-          style="background-image: url('./assets/img/homepage/panel-1.png');">
-          <h2 class="color-primary-light z-index-2 text-center">Identity</h2>
-          <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
-        </article>
+        <a href="identity.html"
+          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center">
+          <article
+            class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center padding-bottom-xl"
+            style="background-image: url('./assets/img/homepage/panel-1.png');">
+            <h2 class="color-primary-light z-index-2 text-center">Identity</h2>
+            <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
+          </article>
+        </a>
+        <a href="farming.html"
+          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center">
+          <article
+            class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center padding-bottom-xl"
+            style="background-image: url('./assets/img/homepage/panel-2.png');">
+            <h2 class="color-primary-light z-index-2 text-center">Terroir &amp; Farming</h2>
+            <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
+          </article>
+        </a>
 
-        <article
-          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center padding-bottom-xl"
-          style="background-image: url('./assets/img/homepage/panel-2.png');">
-          <h2 class="color-primary-light z-index-2 text-center">Terroir &amp; Farming</h2>
-          <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
-        </article>
+        <a href="wines.html"
+          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center">
+          <article
+            class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center padding-bottom-xl"
+            style="background-image: url('./assets/img/homepage/panel-3.png');">
+            <h2 class="color-primary-light z-index-2 text-center">Wines</h2>
+            <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
+          </article>
+        </a>
 
-        <article
-          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center padding-bottom-xl"
-          style="background-image: url('./assets/img/homepage/panel-3.png');">
-          <h2 class="color-primary-light z-index-2 text-center">Wines</h2>
-          <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
-        </article>
-
-        <article
-          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center padding-bottom-xl"
-          style="background-image: url('./assets/img/homepage/panel-4.png');">
-          <h2 class="color-primary-light z-index-2 text-center">Hospitality</h2>
-          <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
-        </article>
+        <a href="hospitality.html"
+          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center">
+          <article
+            class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center padding-bottom-xl"
+            style="background-image: url('./assets/img/homepage/panel-4.png');">
+            <h2 class="color-primary-light z-index-2 text-center">Hospitality</h2>
+            <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
+          </article>
+        </a>
 
       </div>
 
@@ -139,7 +180,8 @@
       <div class="flex justify-center items-center width-100% padding-x-lg max-width-xxl margin-x-auto bg-fullscreen"
         style="background-image: url('./assets/img/homepage/background-3.png'); height: 600px;">
 
-        <div class="height-80% bg-white flex flex-column justify-center items-center padding-lg" style="max-width: 565px;">
+        <div class="height-80% bg-white flex flex-column justify-center items-center padding-lg"
+          style="max-width: 565px;">
 
           <h2>Who we are</h2>
           <h5 class="h5-secondary padding-y-xl">
@@ -171,25 +213,25 @@
       <div class="col-5 grid">
 
         <div class="col-6 padding-left-lg flex flex-column gap-y-xs">
-          <a href="#">
+          <a href="./history.html">
             <h4 class="h4-secondary">History</h4>
           </a>
-          <a href="#">
+          <a href="./identity.html">
             <h4 class="h4-secondary">Identity</h4>
           </a>
-          <a href="#">
+          <a href="./farming.html">
             <h4 class="h4-secondary">Farming and Terroir</h4>
           </a>
           <a href="#">
             <h4 class="h4-secondary">Sustainability</h4>
           </a>
-          <a href="#">
+          <a href="./wines.html">
             <h4 class="h4-secondary">Wines</h4>
           </a>
-          <a href="#">
+          <a href="./hospitality.html">
             <h4 class="h4-secondary">Hospitality</h4>
           </a>
-          <a href="#">
+          <a href="./hospitality.html">
             <h4 class="h4-secondary">Contact</h4>
           </a>
           <a href="#">
