@@ -25,7 +25,7 @@
                 </li>
                 <li class="animation-header-link padding-y-sm">
                     <a href="./index.html">
-                    <h3 class="h3-secondary color-primary-light padding-left-xxl">Home</h3>
+                        <h3 class="h3-secondary color-primary-light padding-left-xxl">Home</h3>
                     </a>
                 </li>
 
@@ -179,56 +179,189 @@
         background-position: top right; background-repeat: no-repeat;">
             <div class="grid padding-y-lg">
                 <div class="col-4 col-4 flex flex-column justify-center">
-                    <h3 class="text-center" style="color:#1c1c1c">Schedule a visit</h3>
+                    <button id="btn-visit" class="btn-hospitality flex flex-column items-center" onclick="visit()">
+                        <h3 class="text-center">Schedule a visit</h3>
+                        <hr id="hr-btn-visit" class="hide" style="border: 1px solid #A0804F; width: 121px !important;">
+                    </button>
                 </div>
                 <div class="col-4 flex flex-column justify-center items-center">
-                    <h1 class="text-center" style="color:#A0804F">Contact</h1>
-                    <hr style="border: 1px solid #A0804F; width: 121px !important;">
+                    <button id="btn-contact" class="btn-hospitality-active flex flex-column items-center"
+                        onclick="contact(event)">
+                        <h3 class="text-center">Contact</h3>
+                        <hr id="hr-btn-contact" style="border: 1px solid #A0804F; width: 121px !important;">
+                    </button>
                 </div>
                 <div class="col-4 col-4 flex flex-column justify-center">
-                    <h3 class="text-center" style="color:#1c1c1c">Location</h3>
+                    <button id="btn-maps" class="btn-hospitality flex flex-column items-center" onclick="maps(event)">
+                        <h3 class="text-center">Location</h3>
+                        <hr id="hr-btn-maps" class="hide" style="border: 1px solid #A0804F; width: 121px !important;">
+                    </button>
                 </div>
             </div>
 
-
-            <div class="grid gap-x-lg padding-bottom-lg">
-                <div class="col-6 padding-x-sm">
-                    <label class="h6-secondary padding-left-lg">
-                        FIRST NAME*
-                    </label>
-                    <input type="text" id="contact-name" class="input-style">
-                </div>
-                <div class="col-6  padding-x-sm">
-                    <label class="h6-secondary padding-left-lg">
-                        LAST NAME*
-                    </label>
-                    <input type="text" id="contact-name" class="input-style">
-                </div>
-                <div class="col-6 padding-x-sm">
-                    <label class="h6-secondary padding-left-lg">
-                        EMAIL*
-                    </label>
-                    <input type="text" id="contact-name" class="input-style">
-                </div>
-
-                <div class="col-6 padding-x-sm">
-                    <label class="h6-secondary padding-left-lg">
-                        PHONE
-                    </label>
-                    <input type="text" id="contact-name" class="input-style">
-                </div>
-
-                <div class="col-12 padding-x-sm">
-                    <label class="padding-left-lg  form-text h6-secondary">YOUR MESSAGE*</label>
-                    <textarea class="input-style" id="contacto-mensaje" name="contacto-mensaje" rows="6"></textarea>
-                    <div class="text-center padding-top-md padding-bottom-lg">
-                        <button class="btn--primary h6-secondary">Enviar</button>
+            <section id="form-contact">
+                <div class="grid gap-x-lg padding-bottom-lg">
+                    <div class="col-6 padding-x-sm">
+                        <label class="h6-secondary padding-left-lg">
+                            FIRST NAME*
+                        </label>
+                        <input type="text" id="contact-name" class="input-style">
                     </div>
+                    <div class="col-6  padding-x-sm">
+                        <label class="h6-secondary padding-left-lg">
+                            LAST NAME*
+                        </label>
+                        <input type="text" id="contact-name" class="input-style">
+                    </div>
+                    <div class="col-6 padding-x-sm">
+                        <label class="h6-secondary padding-left-lg">
+                            EMAIL*
+                        </label>
+                        <input type="text" id="contact-name" class="input-style">
+                    </div>
+
+                    <div class="col-6 padding-x-sm">
+                        <label class="h6-secondary padding-left-lg">
+                            PHONE
+                        </label>
+                        <input type="text" id="contact-name" class="input-style">
+                    </div>
+
+                    <div class="col-12 padding-x-sm">
+                        <label class="padding-left-lg form-text h6-secondary">YOUR MESSAGE*</label>
+                        <textarea class="input-style" id="contacto-mensaje" name="contacto-mensaje" rows="6"></textarea>
+                        <div class="text-center padding-top-md padding-bottom-lg">
+                            <button class="btn--primary h6-secondary">Enviar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="form-visitas" class="hide">
+                <div id="form-visitas-div" class="">
+                    <form class="contacto grid gap-md" action="" method="POST">
+                        <div class="col-6 flex flex-column justify-center">
+                            <div class="margin-y-md flex flex-column  padding-x-md">
+                                <label class="padding-left-md form-text h6-secondary text-uppercase color-black">Nombre
+                                    *</label>
+                                <input type="text" id="visitas-nombre" name="visita-nombre" class="input-style">
+                            </div>
+
+                            <div class="margin-y-md flex flex-column  padding-x-md">
+                                <label class="padding-left-md form-text h6-secondary text-uppercase">Email *</label>
+                                <input type="email" id="visitas-email" name="visita-email" class="input-style">
+                            </div>
+
+                            <div class="margin-y-md flex flex-column  padding-x-md">
+                                <label class="padding-left-md form-text h6-secondary text-uppercase">Teléfono</label>
+                                <input type="tel" id="visitas-telefono" name="visita-telefono" class="input-style">
+                            </div>
+
+                        </div>
+                        <div class="col-6 flex flex-wrap items-center text-center">
+                            <div class="col-6 flex flex-column padding-left-md">
+                                <label class="form-text h6-secondary text-uppercase">Fecha</label>
+                                <input type="date" id="visitas-fecha" name="visita-fecha" class="input-style">
+                            </div>
+
+                            <div class="col-6 flex flex-column  padding-left-sm ">
+                                <label class="  form-text h6-secondary text-uppercase">Horario </label>
+                                <select id="visitas-horario" name=" visita-horario" class="input-style">
+                                    <option value="0800">08:00</option>
+                                    <option value="0900">09:00</option>
+                                    <option value="1000">10:00</option>
+                                    <option value="1100">11:00</option>
+                                    <option value="1200">12:00</option>
+                                    <option value="1300">13:00</option>
+                                    <option value="1400">14:00</option>
+                                    <option value="1500">15:00</option>
+                                    <option value="1600">16:00</option>
+                                    <option value="1700">17:00</option>
+                                </select>
+                            </div>
+                            <div class="margin-top-xs col-6 flex flex-column  padding-left-md">
+                                <label class="g  form-text h6-secondary text-uppercase">Cantidad de personas *</label>
+                                <select id="visitas-cantidad" name="visita-telefono" class="input-style">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="margin-top-xs col-6 flex flex-column  padding-left-sm">
+                                <label class="  form-text h6-secondary text-uppercase">¿Incluye menores de edad?
+                                </label>
+                                <select id="visitas-menores" name="visita-menores" class="input-style">
+                                    <option value="no">No</option>
+                                    <option value="si">Si</option>
+                                </select>
+                            </div>
+                            <div class="col-6 flex flex-column  padding-left-md">
+                                <label class="  form-text h6-secondary text-uppercase padding-x-md">¿Existe alguna
+                                    dificultad
+                                    motriz?</label>
+                                <select id="visitas-motriz" name="visita-telefono" class="input-style">
+                                    <option value="no">No</option>
+                                    <option value="si">Si</option>
+                                </select>
+                            </div>
+
+                            <div class="col-6 flex flex-column  padding-left-sm padding-top-xs">
+                                <label class=" form-text h6-secondary text-uppercase"> Idioma </label>
+                                <select id="visitas-idioma" name="visita-email" class="input-style">
+                                    <option value="es">Español</option>
+                                    <option value="en">Inglés</option>
+                                    <option value="pt">Portugués</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12 margin-y-lg flex flex-column padding-x-sm">
+                            <textarea class="input-style" id="visita-mensaje" name="visitas-mensaje"
+                                rows="6"></textarea>
+                        </div>
+                        <div class="text-center padding-top-md padding-bottom-lg">
+                            <button class="btn--primary h6-secondary">Enviar</button>
+                        </div>
+                    </form>
+
                 </div>
 
+            </section>
+
+            <section id="maps" class="hide">
+                <div id="info-ubicacion" class="flex flex-column justify-center">
+
+                    <iframe class="width-100% "
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3342.448900725683!2d-68.92664348440918!3d-33.097280386860255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967ddf45e662edf1%3A0x1a5ff0b645f0b641!2sVi%C3%B1a%20Cobos%20S.A.!5e0!3m2!1ses!2sar!4v1634583016078!5m2!1ses!2sar"
+                        style="border:0; height: 474px;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="text-center">
+                        <p class="text-ubicacion margin-y-xs">Viña Cobos</p>
+                        <p class="text-ubicacion">Costa Flores y Ruta 7, Pedriel, Luján de Cuyo - Mendoza -
+                            Argentina
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="flex justify-between margin-x-xl margin-y-xl text-center">
+                <div>
+                    <h4 class="h4-secondary font-secondary-semibold">Suppliers</h4>
+                    <h5 class="h5-secondary margin-top-sm">proveedores@vinacobos.com</h5>
+                </div>
+                <div>
+                    <h4 class="h4-secondary font-secondary-semibold">Marketing</h4>
+                    <h5 class="h5-secondary margin-top-sm">macarenaesteller@vinacobos.com</h5>
+                </div>
+                <div>
+                    <h4 class="h4-secondary font-secondary-semibold">Hospitality</h4>
+                    <h5 class="h5-secondary margin-top-sm">hospitality@vinacobos.com</h5>
+                </div>
             </div>
-
-
 
 
         </section>

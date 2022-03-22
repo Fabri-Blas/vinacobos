@@ -14567,10 +14567,18 @@ footer i {
 
 /*Inputs - forms  */
 .input-style {
+  font-family: "mulish";
   border: 1px solid #a0a0a0;
   box-sizing: border-box;
   border-radius: 2px;
   width: 100%;
+}
+.input-style[type=date] {
+  text-align: center;
+}
+
+select.input-style {
+  text-align: center;
 }
 
 .custom-textarea {
@@ -14598,6 +14606,31 @@ footer i {
 
 .lineas-horizontales::before {
   left: -440px;
+}
+
+button.btn-hospitality {
+  cursor: pointer;
+  color: #000000;
+}
+button.btn-hospitality-active {
+  cursor: pointer;
+}
+button.btn-hospitality-active h3 {
+  font-size: 48px;
+  color: #A0804F;
+}
+
+/* Varietals lines */
+.varietales-small-line {
+  border-bottom: 3px solid rgba(241, 238, 233, 0.5);
+  width: 30px;
+  margin: 0px 30px;
+}
+
+.varietales-big-line {
+  border-bottom: 3px solid rgba(241, 238, 233, 0.5);
+  width: 100%;
+  margin-left: 30px;
 }
 
 .info-line {
