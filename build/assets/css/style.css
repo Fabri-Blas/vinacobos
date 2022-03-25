@@ -14556,7 +14556,7 @@ footer i {
 }
 
 .bg-fullscreen {
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -14631,6 +14631,59 @@ button.btn-hospitality-active h3 {
   border-bottom: 3px solid rgba(241, 238, 233, 0.5);
   width: 100%;
   margin-left: 30px;
+}
+
+.list-wines {
+  cursor: pointer;
+  list-style: none;
+}
+.list-wines figure {
+  text-align: center;
+}
+.list-wines figure svg path {
+  fill: white !important;
+  fill-opacity: 0.3 !important;
+}
+.list-wines:hover {
+  transform: scale(1.2);
+}
+.list-wines:hover path {
+  fill: #DCBE84 !important;
+  fill-opacity: 1 !important;
+}
+.list-wines-white figure svg path {
+  fill: #000000 !important;
+  fill-opacity: 0.3 !important;
+}
+.list-wines-white figure svg path:hover {
+  fill: #DCBE84 !important;
+}
+.list-wines-active {
+  cursor: pointer;
+  list-style: none;
+}
+.list-wines-active figure svg path {
+  fill: #A0804F !important;
+  fill-opacity: 1 !important;
+}
+.list-wines-active figure {
+  transform: scale(1.2);
+  text-align: center;
+}
+
+.info-wines h2, .info-wines p {
+  color: #000000;
+}
+.info-wines h2:hover {
+  cursor: pointer;
+  color: #A0804F;
+}
+.info-wines-white h2, .info-wines-white p {
+  color: white;
+}
+.info-wines-white h2:hover {
+  cursor: pointer;
+  color: #A0804F;
 }
 
 .info-line {

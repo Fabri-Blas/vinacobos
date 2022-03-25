@@ -67,7 +67,7 @@ footer {
 }
 
 .bg-fullscreen {
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -143,3 +143,64 @@ button.btn-hospitality {
 }
 
 
+.list-wines {
+    cursor: pointer;
+    list-style: none;
+    figure {
+        text-align:center
+    }
+    figure svg  path{
+        fill: white !important;
+        fill-opacity: 0.3 !important;
+    }
+    &:hover{
+        transform: scale(1.2);
+        path {
+            fill: #DCBE84 !important;
+            fill-opacity: 1 !important;
+    }
+    }
+    &-white {
+        figure svg path {
+            fill: #000000 !important;
+            fill-opacity: 0.3 !important;
+            &:hover {
+                fill: #DCBE84 !important ;
+            }
+        }
+    }
+    &-active {
+        cursor: pointer;
+        list-style: none;
+        figure svg path {
+            fill: #A0804F !important;
+            fill-opacity: 1 !important;
+        }
+        figure {
+            transform: scale(1.2);
+            text-align:center
+        }
+    }
+}
+
+.info-wines {
+    h2, p {
+        color: #000000;
+    }
+
+    h2:hover {
+        cursor: pointer;
+        color: #A0804F;
+    }
+
+    &-white  {
+        h2, p {
+            color: white;
+        }
+    
+        h2:hover {
+            cursor: pointer;
+            color: #A0804F;
+        }
+    }
+}
