@@ -14537,7 +14537,7 @@ main {
 
 footer {
   width: 100%;
-  height: 520px;
+  min-height: 520px;
   background-image: url("../img/footer.png");
   background-position: center;
   background-size: cover;
@@ -14556,6 +14556,12 @@ footer i {
 }
 
 .bg-fullscreen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-fullscreen-wines {
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -16560,11 +16566,11 @@ Usage: codyhouse.co/license
   }
 }
 .flechita-izquierda {
-  top: 20%;
+  top: 10%;
   left: 0px !important;
 }
 
 .flechita-derecha {
-  top: 20%;
+  top: 10%;
   right: 0px !important;
 }

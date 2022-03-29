@@ -46,7 +46,7 @@ main{
 
 footer {
     width: 100%;
-    height: 520px;
+    min-height: 520px;
     background-image: url("../img/footer.png");
     background-position: center;
     background-size: cover;
@@ -67,6 +67,11 @@ footer {
 }
 
 .bg-fullscreen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg-fullscreen-wines {
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
