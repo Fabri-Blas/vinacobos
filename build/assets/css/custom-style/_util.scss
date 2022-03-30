@@ -151,15 +151,12 @@ button.btn-hospitality {
 .list-wines {
     cursor: pointer;
     list-style: none;
-    figure {
-        text-align:center
-    }
     figure svg  path{
         fill: white !important;
         fill-opacity: 0.3 !important;
     }
     &:hover{
-        transform: scale(1.2);
+        
         path {
             fill: #DCBE84 !important;
             fill-opacity: 1 !important;
@@ -180,10 +177,6 @@ button.btn-hospitality {
         figure svg path {
             fill: #A0804F !important;
             fill-opacity: 1 !important;
-        }
-        figure {
-            transform: scale(1.2);
-            text-align:center
         }
     }
 }
@@ -208,4 +201,28 @@ button.btn-hospitality {
             color: #A0804F;
         }
     }
+}
+
+.identity {
+    color: #878581;
+    cursor: pointer;
+        &:hover{
+            color: #A0804F;
+        }
+    &-active{
+        cursor: pointer;
+        color: #BC9559;
+        font-size: var(--text-xl);
+        line-height: 51.49px;
+        border-bottom: #BC9559 1px solid;
+    }
+}
+
+/* History */
+.history-small-line {
+    border-bottom: 0.5px solid #404040;
+    width: 18px;
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+    margin: 0px 10px;
 }

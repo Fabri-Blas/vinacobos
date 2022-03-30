@@ -14104,6 +14104,10 @@ html:not(.js) .no-js\:is-hidden {
   border-color: hsla(var(--color-secondary-lighter-h), var(--color-secondary-lighter-s), var(--color-secondary-lighter-l), var(--bg-o, 1));
 }
 
+.color-secondary {
+  color: #A0804F;
+}
+
 @media (min-width: 64rem) {
   :root,
 * {
@@ -14643,15 +14647,9 @@ button.btn-hospitality-active h3 {
   cursor: pointer;
   list-style: none;
 }
-.list-wines figure {
-  text-align: center;
-}
 .list-wines figure svg path {
   fill: white !important;
   fill-opacity: 0.3 !important;
-}
-.list-wines:hover {
-  transform: scale(1.2);
 }
 .list-wines:hover path {
   fill: #DCBE84 !important;
@@ -14672,10 +14670,6 @@ button.btn-hospitality-active h3 {
   fill: #A0804F !important;
   fill-opacity: 1 !important;
 }
-.list-wines-active figure {
-  transform: scale(1.2);
-  text-align: center;
-}
 
 .info-wines h2, .info-wines p {
   color: #000000;
@@ -14690,6 +14684,29 @@ button.btn-hospitality-active h3 {
 .info-wines-white h2:hover {
   cursor: pointer;
   color: #A0804F;
+}
+
+.identity {
+  color: #878581;
+  cursor: pointer;
+}
+.identity:hover {
+  color: #A0804F;
+}
+.identity-active {
+  cursor: pointer;
+  color: #BC9559;
+  font-size: var(--text-xl);
+  line-height: 51.49px;
+  border-bottom: #BC9559 1px solid;
+}
+
+/* History */
+.history-small-line {
+  border-bottom: 0.5px solid #404040;
+  width: 18px;
+  transform: translateY(-15px);
+  margin: 0px 10px;
 }
 
 .info-line {

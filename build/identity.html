@@ -15,8 +15,8 @@
 <body>
 
     <header>
-        <div class="flex">
-            <ul class="col-6">
+        <div class="grid">
+            <ul class="col-9">
                 <li class="animation-header-link padding-y-sm">
                     <div class="flex">
                         <h5 class="h5-secondary color-primary-light padding-left-xxl">EN</h5>
@@ -24,9 +24,7 @@
                     </div>
                 </li>
                 <li class="animation-header-link padding-y-sm">
-                    <a href="./index.html">
-                        <h3 class="h3-secondary color-primary-light padding-left-xxl">Home</h3>
-                    </a>
+                    <h3 class="h3-secondary color-primary-light padding-left-xxl">Home</h3>
                 </li>
 
                 <li class="animation-header-link padding-y-sm">
@@ -57,7 +55,7 @@
                 </li>
             </ul>
 
-            <ul class="col-6 margin-top-lg padding-top-md">
+            <ul class="col-3 margin-top-lg padding-top-md">
                 <li class="animation-header-link padding-y-xxs">
                     <a href="">
                         <h4 class="h4-secondary color-primary-light padding-left-xl">Shop</h4>
@@ -71,6 +69,7 @@
             </ul>
         </div>
     </header>
+
 
 
     <div class="header-toggle">
@@ -145,20 +144,18 @@
 
             <div class="flex margin-x-md justify-between items-center margin-bottom-md">
                 <div>
-                    <h3 class="text-center" style="color: #707070;">Respect and care <br> for nature</h3>
+                    <h3 id="respect" class="text-center identity" onclick="respect()">Respect and care</h3>
                 </div>
                 <div>
-                    <h1 class="text-center" style="color: #A0804F; border-bottom: 1px solid #A0804F;">
-                        Teamwork</h1>
-
+                    <h3 id="teamwork" class="text-center identity identity-active" onclick="teamwork()">Teamwork</h3>
                 </div>
                 <div>
-                    <h3 class="text-center" style="color: #707070;">Atention to detail</h3>
+                    <h3 id="atention" class="text-center identity" onclick="atention()">Atention to detail</h3>
                 </div>
             </div>
 
             <!-- Teamwork -->
-            <div class="slideshow js-slideshow" data-swipe="on">
+            <div id="carousel-teamwork" class="slideshow js-slideshow" data-swipe="on">
                 <p class="sr-only">Slideshow Items</p>
 
                 <ul class="slideshow__content">
@@ -168,7 +165,8 @@
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/teamwork/Josevina.png" alt="farming-cobos">
                             <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>José Gimenez</h2>
+                                <h3>José Gimenez</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
                                     fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
                                     vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
@@ -183,7 +181,8 @@
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/teamwork/Andres.png" alt="farming-cobos">
                             <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Andres Vignoni</h2>
+                                <h3>Andres Vignoni</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
                                     fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
                                     vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
@@ -198,7 +197,8 @@
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/teamwork/Facundo.png" alt="farming-cobos">
                             <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Facundo Implagliazzo</h2>
+                                <h3>Facundo Implagliazzo</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
                                     fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
                                     vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
@@ -213,7 +213,8 @@
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/teamwork/PaulHobs.png" alt="farming-cobos">
                             <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Paul Hobs</h2>
+                                <h3>Paul Hobs</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
                                     fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
                                     vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
@@ -228,7 +229,8 @@
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/teamwork/Workers.png" alt="farming-cobos">
                             <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Team</h2>
+                                <h3>Team</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
                                     fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
                                     vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
@@ -243,7 +245,8 @@
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/teamwork/Team.png" alt="farming-cobos">
                             <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Team</h2>
+                                <h3>Team</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
                                     fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
                                     vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
@@ -284,7 +287,7 @@
             </div>
 
             <!-- Respect and Care -->
-            <div class="slideshow js-slideshow hide" data-swipe="on">
+            <div id="carousel-respect" class="slideshow js-slideshow hide" data-swipe="on">
                 <p class="sr-only">Slideshow Items</p>
 
                 <ul class="slideshow__content">
@@ -293,13 +296,26 @@
 
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/respectandcare/vinedo.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Jose</h2>
-                                <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
-                                    fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
-                                    vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
-                                    lectus eget elementum ultrices. Netus quis leo eget sollicitudin. Velit gravida
-                                    orci mauris in.</h5>
+                            <div class="flex  flex-column margin-x-md">
+                                <h5 class="color-secondary padding-top-md">Cuidado y Respeto: por la naturaleza y la
+                                    comunidad</h5>
+                                <h3 class="padding-top-md">Manejo sustentable del suelo y viñedos</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
+                                <h5 class="h5-secondary">Realizamos análisis de fertilidad del suelo, junto con
+                                    análisis
+                                    nutricionales en hojas y así también llevamos a cabo las fertilizaciones
+                                    adecuadas
+                                    en función a lo que la planta requiere.
+                                    A través de una labranza mínima y con el objetivo de generar una cobertura
+                                    vegetal
+                                    que proteja al suelo contra la erosión, realizamos siembra de verdeos post
+                                    cosecha y
+                                    así mejoramos las propiedades físicas y químicas del suelo logrando una mejora
+                                    en la
+                                    biodiversidad.
+                                    No utilizamos herbicidas: Controlamos el uso de productos químicos para
+                                    minimizar el
+                                    impacto y asegurar la calidad de la uva.</h5>
                             </div>
                         </div>
                     </li>
@@ -308,13 +324,23 @@
 
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/respectandcare/riegoporgoteo.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Riego por goteo</h2>
-                                <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
-                                    fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
-                                    vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
-                                    lectus eget elementum ultrices. Netus quis leo eget sollicitudin. Velit gravida
-                                    orci mauris in.</h5>
+                            <div class="flex  flex-column  margin-x-md">
+                                <h5 class="color-secondary padding-top-md">Cuidado y Respeto: por la naturaleza y la
+                                    comunidad</h5>
+                                <h3 class="padding-top-md">Manejo del consumo y calidad del agua</h3>
+                                <hr class="margin-y-xs" style="border: 1px solid #A0804F; width: 121px;">
+                                <h5 class="h5-secondary">-Contamos con pozo propio y realizamos mantenimiento preventivo
+                                    de la red de agua. <br>
+                                    -Invertimos en insumos que regulan el agua, para utilizar la cantidad exacta que se
+                                    necesita.<br>
+                                    -Renovamos los pisos de la bodega, que nos permiten utilizar menos agua para su
+                                    limpieza.<br>
+                                    -Manejo de riego mediante caudalímetros.<br>
+                                    -Realizamos seguimiento del estado hídrico de las plantas para tomar las mejores
+                                    decisiones en la distribución y suministro del agua.<br>
+                                    -Riego por goteo en un 100% de Chañares Estate.<br>
+                                    -Reúso agrícola de efluentes derivados de la actividad enológica.
+                                </h5>
                             </div>
                         </div>
                     </li>
@@ -323,13 +349,15 @@
 
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/respectandcare/cellar2.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Cosecha nocturna</h2>
-                                <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
-                                    fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
-                                    vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
-                                    lectus eget elementum ultrices. Netus quis leo eget sollicitudin. Velit gravida
-                                    orci mauris in.</h5>
+                            <div class="flex  flex-column margin-x-md">
+                                <h5 class="color-secondary padding-top-md">Cuidado y Respeto: por la naturaleza y la
+                                    comunidad</h5>
+                                <h3 class="padding-top-md">Compromiso con la gestión de la calidad e inocuidad</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 121px;">
+                                <h5 class="h5-secondary">Implementamos Buenas Prácticas de Manufactura (BPM). Realizamos
+                                    y registramos la limpieza según los Procedimientos Operativos Estandarizados de
+                                    Saneamiento.
+                                </h5>
                             </div>
                         </div>
                     </li>
@@ -337,13 +365,19 @@
 
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/respectandcare/cosecha.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Cosecha nocturna</h2>
-                                <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
-                                    fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
-                                    vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
-                                    lectus eget elementum ultrices. Netus quis leo eget sollicitudin. Velit gravida
-                                    orci mauris in.</h5>
+                            <div class="flex  flex-column margin-x-md">
+                                <h5 class="color-secondary padding-top-md">Cuidado y Respeto: por la naturaleza y la
+                                    comunidad</h5>
+                                <h3 class="padding-top-md">Compromiso con nuestros colaboradores</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 121px;">
+                                <h5 class="h5-secondary">Promovemos el crecimiento y la formación profesional de
+                                    nuestros colaboradores ofreciendo planes de capacitación anual y becas de estudios.
+                                    <br>
+                                    Desarrollo de objetivos individuales alineados con los planes de la empresa. <br>
+                                    Compromiso con la salud y seguridad de nuestros colaboradores. <br>
+                                    Compromiso con la comunidad, constante desarrollo de acciones que aporten a la
+                                    alimentación, educación y economía social.
+                                </h5>
                             </div>
                         </div>
                     </li>
@@ -379,7 +413,7 @@
             </div>
 
             <!-- Attention to detail -->
-            <div class="slideshow js-slideshow hide" data-swipe="on">
+            <div id="carousel-atention" class="slideshow js-slideshow hide" data-swipe="on">
                 <p class="sr-only">Slideshow Items</p>
 
                 <ul class="slideshow__content">
@@ -389,12 +423,13 @@
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/attentiontodetail/cosehanocturna.png" alt="farming-cobos">
                             <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Jose</h2>
-                                <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
-                                    fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
-                                    vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
-                                    lectus eget elementum ultrices. Netus quis leo eget sollicitudin. Velit gravida
-                                    orci mauris in.</h5>
+                                <h3>Cosecha nocturna</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
+                                <h5 class="h5-secondary">La cosecha nocturna con sus bajas temperaturas, nos permite
+                                    preservar la calidad de la fruta, evitar la oxidación y ayudar a mantener la
+                                    frescura y aromas, resultando en vinos más complejos, afrutados y elegantes.La
+                                    cosecha es manual para todas las líneas, se cargan en bines, sin superar los 400kg,
+                                    para que la uva no se dañe.</h5>
                             </div>
                         </div>
                     </li>
@@ -404,12 +439,15 @@
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/attentiontodetail/seleccionUva.png" alt="farming-cobos">
                             <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Riego por goteo</h2>
-                                <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
-                                    fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
-                                    vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
-                                    lectus eget elementum ultrices. Netus quis leo eget sollicitudin. Velit gravida
-                                    orci mauris in.</h5>
+                                <h3>Selección de uva</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
+                                <h5 class="h5-secondary">La recepción de la uva se lleva a cabo en la playa central
+                                    entre las dos naves. En la nave, a través de una cinta donde se seleccionan los
+                                    racimos y se separan las hojas de estos, todo se realiza manualmente. Luego los
+                                    granos pasan por la despalilladora para ser separados de semillas y escobajo, para
+                                    posteriormente pasar por una segunda selección donde se separan granos de cualquier
+                                    parte de escobajo/hoja que pueda haber quedado.
+                                </h5>
                             </div>
                         </div>
                     </li>
@@ -419,12 +457,11 @@
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/attentiontodetail/etiquetado.png" alt="farming-cobos">
                             <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Cosecha nocturna</h2>
-                                <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
-                                    fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
-                                    vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
-                                    lectus eget elementum ultrices. Netus quis leo eget sollicitudin. Velit gravida
-                                    orci mauris in.</h5>
+                                <h3>Etiquetado manual</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
+                                <h5 class="h5-secondary">En el lugar correcto, en la medida exacta, y con el cuidado que
+                                    corresponde, nuestros vinos de alta gama son etiquetados manualmente.
+                                </h5>
                             </div>
                         </div>
                     </li>
@@ -434,12 +471,15 @@
                         <div class='container max-width-xxl flex bg-white'>
                             <img src="./assets/img/identity/attentiontodetail/conteoGranos.png" alt="farming-cobos">
                             <div class="flex  flex-column justify-center margin-x-md">
-                                <h2>Cosecha nocturna</h2>
-                                <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
-                                    fringilla leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit
-                                    vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt. Pulvinar
-                                    lectus eget elementum ultrices. Netus quis leo eget sollicitudin. Velit gravida
-                                    orci mauris in.</h5>
+                                <h3>Conteo de granos</h3>
+                                <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
+                                <h5 class="h5-secondary">Cada año la bodega adquiere nuevas barricas de roble francés en
+                                    las cuales se controla el tipo de grano por el cual se encuentran constituidas y de
+                                    estas forma se corrobora que cumplan con los parámetros establecidos. Según el tipo
+                                    de grano la composición de la madera es diferente y por lo tanto los compuestos que
+                                    aportan al vino también. Conocer la estructura de la madera permite comprender las
+                                    propiedades enológicas que al vino queremos transmitir.
+                                </h5>
                             </div>
                         </div>
                     </li>
