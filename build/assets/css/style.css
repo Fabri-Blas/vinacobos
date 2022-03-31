@@ -14108,6 +14108,10 @@ html:not(.js) .no-js\:is-hidden {
   color: #A0804F;
 }
 
+.color-text-light {
+  color: #F1EEE9;
+}
+
 @media (min-width: 64rem) {
   :root,
 * {
