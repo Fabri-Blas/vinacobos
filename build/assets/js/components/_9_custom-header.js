@@ -15,6 +15,11 @@ if (headerToggle && headerContainer) {
             headerToggle.style.backgroundColor = 'white';
             headerToggle.style.color = 'black';
             headerContainer.style.right = '0%';
+            if (window.innerWidth <= 800) {
+                console.log('entra')
+                headerContainer.style.width = '100vw'
+            }
+
             isHeaderToggleOpen = true;
 
             setTimeout(() => headerLinksAnimation(links, 1, 'translateY(0px)', 50), 500);
@@ -23,7 +28,7 @@ if (headerToggle && headerContainer) {
 
             headerToggle.style.backgroundColor = 'black';
             headerToggle.style.color = 'white';
-            headerContainer.style.right = '-85%';
+            headerContainer.style.right = '-100%';
             isHeaderToggleOpen = false;
 
             headerLinksAnimation(links, 0, 'translateY(15px)', 25);

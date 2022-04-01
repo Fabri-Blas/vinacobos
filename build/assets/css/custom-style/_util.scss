@@ -1,4 +1,4 @@
-@use "../base" as *;
+@use "../base"as *;
 
 .header-toggle {
     position: fixed;
@@ -14,7 +14,7 @@
     transition: all 0.5s ease-in-out;
 }
 
-header{
+header {
     position: fixed;
     right: -85%;
     display: flex;
@@ -32,14 +32,14 @@ header{
     transition: all 1.2s ease-in-out;
     z-index: 2;
 
-    & .animation-header-link{
+    & .animation-header-link {
         opacity: 0;
         transform: translateY(15px);
         transition: all 1s ease-in-out;
     }
 }
 
-main{
+main {
     z-index: 0;
     transition: all 1.2s ease-in-out;
 }
@@ -62,7 +62,7 @@ footer {
     }
 }
 
-.opacity-fade{
+.opacity-fade {
     filter: brightness(70%);
 }
 
@@ -71,6 +71,7 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .bg-fullscreen-wines {
     background-size: 100% 100%;
     background-position: center;
@@ -89,7 +90,8 @@ footer {
     box-sizing: border-box;
     border-radius: 2px;
     width: 100%;
-    &[type="date"]{
+
+    &[type="date"] {
         text-align: center;
     }
 }
@@ -98,7 +100,7 @@ select.input-style {
     text-align: center;
 }
 
-.custom-textarea{
+.custom-textarea {
     border: 1px solid #B1B1B1;
     border-radius: 4px;
 }
@@ -107,7 +109,9 @@ select.input-style {
     display: inline-block;
     position: relative;
 }
-.lineas-horizontales::after,.lineas-horizontales::before {
+
+.lineas-horizontales::after,
+.lineas-horizontales::before {
     content: '';
     position: absolute;
     width: 400px;
@@ -115,9 +119,11 @@ select.input-style {
     background-color: #FFF;
     top: 0.6em;
 }
+
 .lineas-horizontales::after {
     right: -440px;
 }
+
 .lineas-horizontales::before {
     left: -440px;
 }
@@ -125,24 +131,27 @@ select.input-style {
 button.btn-hospitality {
     cursor: pointer;
     color: #000000;
+
     &-active {
         cursor: pointer;
-        h3{
-        font-size: 48px;
-        color: #A0804F;
-    }
+
+        h3 {
+            font-size: 48px;
+            color: #A0804F;
+        }
     }
 }
+
 /* Varietals lines */
 
 .varietales-small-line {
-    border-bottom: 3px solid rgba(241,238,233,0.5);
+    border-bottom: 3px solid rgba(241, 238, 233, 0.5);
     width: 30px;
     margin: 0px 30px;
 }
 
 .varietales-big-line {
-    border-bottom: 3px solid rgba(241,238,233,0.5);
+    border-bottom: 3px solid rgba(241, 238, 233, 0.5);
     width: 100%;
     margin-left: 30px;
 }
@@ -151,29 +160,35 @@ button.btn-hospitality {
 .list-wines {
     cursor: pointer;
     list-style: none;
-    figure svg  path{
+
+    figure svg path {
         fill: white !important;
         fill-opacity: 0.3 !important;
     }
-    &:hover{
-        
+
+    &:hover {
+
         path {
             fill: #DCBE84 !important;
             fill-opacity: 1 !important;
+        }
     }
-    }
+
     &-white {
         figure svg path {
             fill: #000000 !important;
             fill-opacity: 0.3 !important;
+
             &:hover {
-                fill: #DCBE84 !important ;
+                fill: #DCBE84 !important;
             }
         }
     }
+
     &-active {
         cursor: pointer;
         list-style: none;
+
         figure svg path {
             fill: #A0804F !important;
             fill-opacity: 1 !important;
@@ -182,7 +197,9 @@ button.btn-hospitality {
 }
 
 .info-wines {
-    h2, p {
+
+    h2,
+    p {
         color: #000000;
     }
 
@@ -191,11 +208,13 @@ button.btn-hospitality {
         color: #A0804F;
     }
 
-    &-white  {
-        h2, p {
+    &-white {
+
+        h2,
+        p {
             color: white;
         }
-    
+
         h2:hover {
             cursor: pointer;
             color: #A0804F;
@@ -206,16 +225,21 @@ button.btn-hospitality {
 .identity {
     color: #878581;
     cursor: pointer;
-        &:hover{
-            color: #A0804F;
-        }
-    &-active{
+
+    &:hover {
+        color: #A0804F;
+    }
+
+    &-active {
         cursor: pointer;
         color: #BC9559;
-        font-size: var(--text-xl);
         line-height: 51.49px;
         border-bottom: #BC9559 1px solid;
     }
+}
+
+.image-identity {
+    height: 100%;
 }
 
 /* History */
@@ -225,4 +249,9 @@ button.btn-hospitality {
     -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
     margin: 0px 10px;
+}
+
+.text-history {
+    bottom: -30px;
+    z-index: 10;
 }

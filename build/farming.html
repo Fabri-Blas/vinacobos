@@ -80,8 +80,6 @@
 
   <main class="width-100% min-height-100vh bg-dark">
 
-
-
     <!-- Component 1 -->
     <section class="width-100% height-100vh bg-fullscreen flex flex-column justify-between items-center padding-y-xxl"
       style="background-image: url('./assets/img/farming/desktop/farming-hero.png');">
@@ -139,9 +137,9 @@
         </a>
       </div>
 
-
-      <h1 class="color-primary-light">Farming and Terroir</h1>
-
+      <div class="flex text-center">
+        <h1 class="color-primary-light">Farming and Terroir</h1>
+      </div>
     </section>
     <!-- End Component 1 -->
 
@@ -150,14 +148,15 @@
     <!-- Component 2 -->
     <section class="width-100% margin-top-xl padding-x-xxxxs max-width-lg margin-x-auto" style="background:#ffffff">
       <div class="grid col-12 margin-y-auto">
-        <div class="col-5">
+        <div class="col-5@md">
           <figure>
             <img src="./assets/img/farming/desktop/hands-grapes-desktop.png" alt="grapes-desktop">
           </figure>
         </div>
-        <div class="col-7 padding-top-lg">
-          <h1>Built with passion for winemaking and respect for the land</h1>
-          <div class="padding-top-xl">
+        <div class="col-7@md padding-top-lg padding-x-md padding-x-0@md">
+          <h1 class="display@md">Built with passion for winemaking and respect for the land</h1>
+          <h2 class="hide@md">Built with passion for winemaking and respect for the land</h2>
+          <div class="padding-top-xl@md">
             <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam fringilla leo, augue.
               Tristique aliquet
               gravida sollicitudin adipiscing sit vestibulum ipsum nunc duis. Donec aliquet ultricies non tincidunt.
@@ -172,32 +171,32 @@
 
     <!-- Component 3 -->
     <section class="padding-top-xl padding-x-sm max-width-lg margin-x-auto">
-      <div class="slideshow js-slideshow" data-swipe="on">
+      <div class="slideshow js-slideshow" data-swipe="off">
         <p class="sr-only">Slideshow Items</p>
 
         <ul class="slideshow__content">
           <a class="card-v13__figure-wrapper" href="#0">
             <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
-              <div class='container max-width-xxl'>
+              <div class='container@md max-width-xxl'>
                 <div class='text-component'><img src="./assets/img/farming/desktop/farming-preview-1.png"
                     alt="farming-cobos"></div>
               </div>
             </li>
 
             <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
-              <div class='container max-width-xxl'>
+              <div class='container@md max-width-xxl'>
                 <div class='text-component'><img src="./assets/img/farming/desktop/demo-foto.png" alt="demo-foto"></div>
               </div>
             </li>
 
             <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
-              <div class='container max-width-xxl'>
+              <div class='container@md max-width-xxl'>
                 <div class='text-component'><img src="./assets/img/farming/desktop/farming-cobos.png"
                     alt="farming-3-preview"></div>
               </div>
             </li>
             <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
-              <div class='container max-width-xxl'>
+              <div class='container@md max-width-xxl'>
                 <div class='text-component'><img src="./assets/img/farming/desktop/demo-foto.png"
                     alt="farming-4-previw"></div>
               </div>
@@ -232,7 +231,9 @@
         </ul>
       </div>
       <div class="padding-top-lg padding-bottom-xxl">
-        <h5 class="h5-secondary text-center margin-x-xxxl">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
+        <h5 class="h5-secondary text-center margin-x-xxxl@md margin-lg">Nulla at lobortis non nec. Rhoncus eu tellus
+          est purus
+          diam
           fringilla leo,
           augue. Tristique aliquet gravida sollicitudin adipiscing sit vestibulum ipsum nunc duis. Donec aliquet
           ultricies non tincidunt. Pulvinar lectus eget elementum ultrices. Netus quis leo eget sollicitudin. Velit
@@ -245,34 +246,35 @@
 
 
     <!-- Component 4 -->
-    <section class="width-100% height-100vh padding-top-md padding-bottom-xxxl" style="background-color:#000000">
+    <section class="width-100% height-100vh padding-top-md padding-bottom-xxxxl padding-bottom-xxxl@md"
+      style="background-color:#000000">
       <div class="margin-bottom-xl padding-top-md">
         <h1 class="text-center" style="color:#ffffff"> The vineyards</h1>
       </div>
 
-      <div class="width-100% height-100% flex flex-row justify-center items-center gap-x-xxs">
+      <div class="width-100% height-100% flex flex-column flex-row@md justify-center items-center gap-x-xxs">
         <a href="farming-chanares.html"
-          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center">
+          class="position-relative bg-fullscreen width-25%@md width-100% padding-x-sm padding-x-0@md height-100% flex flex-column justify-end items-center">
           <article
-            class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center padding-bottom-xl"
+            class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center padding-bottom-xl padding-y-xl padding-y-0@md"
             style="background-image: url('./assets/img/farming/desktop/sliding-chanares.png');">
             <h2 class="color-primary-light z-index-2 text-center">Chañares</h2>
             <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
           </article>
         </a>
         <a href="farming-zingaretti.html"
-          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center">
+          class="position-relative bg-fullscreen width-25%@md width-100% padding-x-sm padding-x-0@md height-100% flex flex-column justify-end items-center">
           <article
-            class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center padding-bottom-xl"
+            class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center padding-bottom-xl padding-y-xl padding-y-0@md"
             style="background-image: url('./assets/img/farming/desktop/sliding-zigaretti.png');">
             <h2 class="color-primary-light z-index-2 text-center">Zingaretti</h2>
             <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
           </article>
         </a>
         <a href="farming-marchiori.html"
-          class="position-relative bg-fullscreen width-25% height-100% flex flex-column justify-end items-center">
+          class="position-relative bg-fullscreen width-25%@md width-100% padding-x-sm padding-x-0@md height-100% flex flex-column justify-end items-center">
           <article
-            class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center padding-bottom-xl"
+            class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center padding-bottom-xl padding-y-xl padding-y-0@md"
             style="background-image: url('./assets/img/farming/desktop/sliding-marchiori.png');">
             <h2 class="color-primary-light z-index-2 text-center">Marchiori</h2>
             <div class="position-absolute bottom-0 width-100% height-90% blackfade-to-bottom"></div>
@@ -291,50 +293,51 @@
 
   </main>
 
-  <footer class="flex justify-center items-center">
+  <footer class="flex flex-column flex-row@md justify-center items-center padding-y-lg padding-y-0@md">
 
-    <div class="grid padding-x-xl width-100% max-width-xxl margin-x-auto">
+    <div class="grid padding-x-md padding-x-xl@md width-100% max-width-xxl margin-x-auto">
 
-      <div class="col-7">
+      <div class="col-12 col-7@md">
         <h3 class="h3-secondary text-uppercase max-width-xxs">El origen<br>nos determina</h3>
       </div>
 
-      <div class="col-5 grid">
+      <div class="col-12 col-5@md grid">
 
-        <div class="col-6 padding-left-lg flex flex-column gap-y-xs">
-          <a href="./history.html">
+        <div
+          class="col-12 col-6@md padding-left-lg@md padding-top-lg padding-top-0@md padding-bottom-xs flex flex-column gap-y-xs">
+          <a class="padding-y-xxxs padding-y-0@md" href="./history.html">
             <h4 class="h4-secondary">History</h4>
           </a>
-          <a href="./identity.html">
+          <a class="padding-y-xxxs padding-y-0@md" href="./identity.html">
             <h4 class="h4-secondary">Identity</h4>
           </a>
-          <a href="./farming.html">
+          <a class="padding-y-xxxs padding-y-0@md" href="./farming.html">
             <h4 class="h4-secondary">Farming and Terroir</h4>
           </a>
-          <a href="#">
+          <a class="padding-y-xxxs padding-y-0@md" href="#">
             <h4 class="h4-secondary">Sustainability</h4>
           </a>
-          <a href="./wines.html">
+          <a class="padding-y-xxxs padding-y-0@md" href="./wines.html">
             <h4 class="h4-secondary">Wines</h4>
           </a>
-          <a href="./hospitality.html">
+          <a class="padding-y-xxxs padding-y-0@md" href="./hospitality.html">
             <h4 class="h4-secondary">Hospitality</h4>
           </a>
-          <a href="./hospitality.html">
+          <a class="padding-y-xxxs padding-y-0@md" href="./hospitality.html">
             <h4 class="h4-secondary">Contact</h4>
           </a>
-          <a href="#">
+          <a class="padding-y-xxxs padding-y-0@md" href="#">
             <h4 class="h4-secondary">Shop</h4>
           </a>
         </div>
-        <div class="col-6 padding-left-lg flex flex-column gap-y-xs">
-          <a href="#">
+        <div class="col-12 col-6@md padding-left-lg@md padding-bottom-lg flex flex-column gap-y-xs">
+          <a class="padding-y-xxxs padding-y-0@md" href="#">
             <h4 class="h4-secondary">Paul Hobbs selection</h4>
           </a>
-          <a href="#">
+          <a class="padding-y-xxxs padding-y-0@md" href="#">
             <h4 class="h4-secondary">Legal</h4>
           </a>
-          <a href="#">
+          <a class="padding-y-xxxs padding-y-0@md" href="#">
             <h4 class="h4-secondary">Recibir noticias</h4>
           </a>
         </div>
@@ -368,7 +371,7 @@
         </a>
       </div>
 
-      <div class="col-6 padding-right-xl flex justify-end items-center gap-x-sm">
+      <div class="col-6 padding-right-xl@md flex justify-end items-center gap-x-sm">
         <a href="#">
           <em class="fa-brands fa-facebook color-primary-light"></em>
         </a>

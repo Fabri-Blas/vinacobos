@@ -16,46 +16,51 @@
 
     <header>
         <div class="grid">
-            <ul class="col-9">
+            <ul class="col-9@md">
                 <li class="animation-header-link padding-y-sm">
                     <div class="flex">
-                        <h5 class="h5-secondary color-primary-light padding-left-xxl">EN</h5>
+                        <h5 class="h5-secondary color-primary-light padding-left-xxl@md padding-left-xl">EN</h5>
                         <h5 class="h5-secondary color-primary-light padding-left-xs">ES</h5>
                     </div>
                 </li>
                 <li class="animation-header-link padding-y-sm">
-                    <h3 class="h3-secondary color-primary-light padding-left-xxl">Home</h3>
+                    <a href="./index.html">
+                        <h3 class="h3-secondary color-primary-light padding-left-xxl@md padding-left-xl">Home</h3>
+                    </a>
                 </li>
 
                 <li class="animation-header-link padding-y-sm">
                     <a href="./history.html">
-                        <h3 class="h3-secondary color-primary-light padding-left-xxl">History</h3>
+                        <h3 class="h3-secondary color-primary-light padding-left-xxl@md padding-left-xl">History</h3>
                     </a>
                 </li>
                 <li class="animation-header-link padding-y-sm">
                     <a href="./identity.html">
-                        <h3 class="h3-secondary color-secondary padding-left-xxl">Identity</h3>
+                        <h3 class="h3-secondary color-secondary padding-left-xxl@md padding-left-xl">Identity</h3>
                     </a>
                 </li>
 
                 <li class="animation-header-link padding-y-sm">
                     <a href="./farming.html">
-                        <h3 class="h3-secondary color-primary-light padding-left-xxl">Farming &amp; Terroir</h3>
+                        <h3 class="h3-secondary color-primary-light padding-left-xxl@md padding-left-xl">Farming &amp;
+                            Terroir</h3>
                     </a>
                 </li>
                 <li class="animation-header-link padding-y-sm">
                     <a href="./wines.html">
-                        <h3 class="h3-secondary color-primary-light padding-left-xxl">Wines</h3>
+                        <h3 class="h3-secondary color-primary-light padding-left-xxl@md padding-left-xl">Wines</h3>
                     </a>
                 </li>
                 <li class="animation-header-link padding-y-sm">
                     <a href="./hospitality.html">
-                        <h3 class="h3-secondary color-primary-light padding-left-xxl">Hospitality &amp; Contact</h3>
+                        <h3 class="h3-secondary color-primary-light padding-left-xxl@md padding-left-xl">Hospitality
+                            &amp; Contact
+                        </h3>
                     </a>
                 </li>
             </ul>
 
-            <ul class="col-3 margin-top-lg padding-top-md">
+            <ul class="col-3@md margin-top-lg padding-top-md">
                 <li class="animation-header-link padding-y-xxs">
                     <a href="">
                         <h4 class="h4-secondary color-primary-light padding-left-xl">Shop</h4>
@@ -87,9 +92,11 @@
         <section
             class="width-100% height-100vh bg-fullscreen flex flex-column justify-between items-center margin-bottom-xxl">
             <div class="width-100% position-relative">
-
-                <video class="video-bg__media position-absolute" autoplay loop muted playsInline
-                    src="./assets/img/identity/identity-video-hero.mp4" style="z-index: -1;"></video>
+                <div class="height-100vh width-100% position-absolute">
+                    <video class=" video-bg__media position-relative height-100vh width-100% object-cover" autoplay loop
+                        muted playsInline src="./assets/img/identity/identity-video-hero.mp4"
+                        style="z-index: -1;"></video>
+                </div>
                 <figure class="text-center padding-bottom-sm padding-top-xxl">
                     <svg class="cobos-logo" width="62" height="61" viewBox="0 0 62 61" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -130,9 +137,9 @@
 
         <!-- Component 2 -->
 
-        <section class="position-relative padding-y-xs padding-x-md max-width-lg margin-x-auto">
+        <section class="position-relative padding-top-xs padding-bottom-xl padding-x-md max-width-lg margin-x-auto">
             <div class=" padding-y-lg">
-                <h5 class="h5-secondary text-center margin-x-xxxl">Nulla at lobortis non nec. Rhoncus eu tellus est
+                <h5 class="h5-secondary text-center margin-x-xxxl@md">Nulla at lobortis non nec. Rhoncus eu tellus est
                     purus diam
                     fringilla leo,
                     augue. Tristique aliquet gravida sollicitudin adipiscing sit vestibulum ipsum nunc duis. Donec
@@ -142,12 +149,14 @@
                     gravida orci mauris in.</h5>
             </div>
 
-            <div class="flex margin-x-md justify-between items-center margin-bottom-md">
+            <div class="flex flex-column flex-row@md margin-x-md justify-between items-center margin-bottom-md">
                 <div>
                     <h3 id="respect" class="text-center identity" onclick="respect()">Respect and care</h3>
                 </div>
-                <div>
+                <div class="margin-y-md">
+
                     <h3 id="teamwork" class="text-center identity identity-active" onclick="teamwork()">Teamwork</h3>
+
                 </div>
                 <div>
                     <h3 id="atention" class="text-center identity" onclick="atention()">Atention to detail</h3>
@@ -155,16 +164,17 @@
             </div>
 
             <!-- Teamwork -->
-            <div id="carousel-teamwork" class="slideshow js-slideshow" data-swipe="on">
+            <div id="carousel-teamwork" class="slideshow js-slideshow" data-swipe="off">
                 <p class="sr-only">Slideshow Items</p>
 
                 <ul class="slideshow__content">
 
-                    <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
+                    <li class="slideshow__item bg-light js-slideshow__item">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/teamwork/Josevina.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/teamwork/Josevina.png"
+                                alt="farming-cobos">
+                            <div class="flex  flex-column justify-center margin-x-md margin-top-lg">
                                 <h3>José Gimenez</h3>
                                 <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
@@ -178,9 +188,10 @@
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/teamwork/Andres.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/teamwork/Andres.png"
+                                alt="farming-cobos">
+                            <div class="flex  flex-column justify-center margin-x-md margin-top-lg">
                                 <h3>Andres Vignoni</h3>
                                 <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
@@ -194,9 +205,10 @@
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/teamwork/Facundo.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/teamwork/Facundo.png"
+                                alt="farming-cobos">
+                            <div class="flex  flex-column justify-center margin-x-md margin-top-lg">
                                 <h3>Facundo Implagliazzo</h3>
                                 <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
@@ -210,9 +222,10 @@
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/teamwork/PaulHobs.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/teamwork/PaulHobs.png"
+                                alt="farming-cobos">
+                            <div class="flex  flex-column justify-center margin-x-md margin-top-lg">
                                 <h3>Paul Hobbs</h3>
                                 <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
@@ -226,9 +239,10 @@
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/teamwork/Workers.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/teamwork/Workers.png"
+                                alt="farming-cobos">
+                            <div class="flex  flex-column justify-center margin-x-md margin-top-lg">
                                 <h3>Team</h3>
                                 <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
@@ -242,9 +256,10 @@
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/teamwork/Team.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/teamwork/Team.png"
+                                alt="farming-cobos">
+                            <div class="flex  flex-column justify-center margin-x-md margin-top-lg">
                                 <h3>Team</h3>
                                 <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
@@ -287,15 +302,16 @@
             </div>
 
             <!-- Respect and Care -->
-            <div id="carousel-respect" class="slideshow js-slideshow hide" data-swipe="on">
+            <div id="carousel-respect" class="slideshow js-slideshow hide" data-swipe="off">
                 <p class="sr-only">Slideshow Items</p>
 
                 <ul class="slideshow__content">
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/respectandcare/vinedo.png" alt="farming-cobos">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/respectandcare/vinedo.png"
+                                alt="farming-cobos">
                             <div class="flex  flex-column margin-x-md">
                                 <h5 class="color-secondary padding-top-md">Cuidado y Respeto: por la naturaleza y la
                                     comunidad</h5>
@@ -322,8 +338,9 @@
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/respectandcare/riegoporgoteo.png" alt="farming-cobos">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/respectandcare/riegoporgoteo.png"
+                                alt="farming-cobos">
                             <div class="flex  flex-column  margin-x-md">
                                 <h5 class="color-secondary padding-top-md">Cuidado y Respeto: por la naturaleza y la
                                     comunidad</h5>
@@ -347,8 +364,9 @@
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/respectandcare/cellar2.png" alt="farming-cobos">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/respectandcare/cellar2.png"
+                                alt="farming-cobos">
                             <div class="flex  flex-column margin-x-md">
                                 <h5 class="color-secondary padding-top-md">Cuidado y Respeto: por la naturaleza y la
                                     comunidad</h5>
@@ -363,8 +381,9 @@
                     </li>
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/respectandcare/cosecha.png" alt="farming-cobos">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/respectandcare/cosecha.png"
+                                alt="farming-cobos">
                             <div class="flex  flex-column margin-x-md">
                                 <h5 class="color-secondary padding-top-md">Cuidado y Respeto: por la naturaleza y la
                                     comunidad</h5>
@@ -413,16 +432,17 @@
             </div>
 
             <!-- Attention to detail -->
-            <div id="carousel-atention" class="slideshow js-slideshow hide" data-swipe="on">
+            <div id="carousel-atention" class="slideshow js-slideshow hide" data-swipe="off">
                 <p class="sr-only">Slideshow Items</p>
 
                 <ul class="slideshow__content">
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/attentiontodetail/cosehanocturna.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/attentiontodetail/cosehanocturna.png"
+                                alt="farming-cobos">
+                            <div class="flex  flex-column justify-center margin-x-md margin-top-lg">
                                 <h3>Cosecha nocturna</h3>
                                 <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">La cosecha nocturna con sus bajas temperaturas, nos permite
@@ -436,9 +456,10 @@
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/attentiontodetail/seleccionUva.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/attentiontodetail/seleccionUva.png"
+                                alt="farming-cobos">
+                            <div class="flex  flex-column justify-center margin-x-md margin-top-lg">
                                 <h3>Selección de uva</h3>
                                 <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">La recepción de la uva se lleva a cabo en la playa central
@@ -454,9 +475,10 @@
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/attentiontodetail/etiquetado.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/attentiontodetail/etiquetado.png"
+                                alt="farming-cobos">
+                            <div class="flex  flex-column justify-center margin-x-md margin-top-lg">
                                 <h3>Etiquetado manual</h3>
                                 <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">En el lugar correcto, en la medida exacta, y con el cuidado que
@@ -468,9 +490,10 @@
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
 
-                        <div class='container max-width-xxl flex bg-white'>
-                            <img src="./assets/img/identity/attentiontodetail/conteoGranos.png" alt="farming-cobos">
-                            <div class="flex  flex-column justify-center margin-x-md">
+                        <div class='container max-width-xxl flex flex-column flex-row@md bg-white'>
+                            <img class="image-identity" src="./assets/img/identity/attentiontodetail/conteoGranos.png"
+                                alt="farming-cobos">
+                            <div class="flex  flex-column justify-center margin-x-md margin-top-lg">
                                 <h3>Conteo de granos</h3>
                                 <hr class="margin-y-sm" style="border: 1px solid #A0804F; width: 123px;">
                                 <h5 class="h5-secondary">Cada año la bodega adquiere nuevas barricas de roble francés en
@@ -523,50 +546,51 @@
     </main>
 
 
-    <footer class="flex justify-center items-center">
+    <footer class="flex flex-column flex-row@md justify-center items-center padding-y-lg padding-y-0@md">
 
-        <div class="grid padding-x-xl width-100% max-width-xxl margin-x-auto">
+        <div class="grid padding-x-md padding-x-xl@md width-100% max-width-xxl margin-x-auto">
 
-            <div class="col-7">
+            <div class="col-12 col-7@md">
                 <h3 class="h3-secondary text-uppercase max-width-xxs">El origen<br>nos determina</h3>
             </div>
 
-            <div class="col-5 grid">
+            <div class="col-12 col-5@md grid">
 
-                <div class="col-6 padding-left-lg flex flex-column gap-y-xs">
-                    <a href="./history.html">
+                <div
+                    class="col-12 col-6@md padding-left-lg@md padding-top-lg padding-top-0@md padding-bottom-xs flex flex-column gap-y-xs">
+                    <a class="padding-y-xxxs padding-y-0@md" href="./history.html">
                         <h4 class="h4-secondary">History</h4>
                     </a>
-                    <a href="./identity.html">
+                    <a class="padding-y-xxxs padding-y-0@md" href="./identity.html">
                         <h4 class="h4-secondary">Identity</h4>
                     </a>
-                    <a href="./farming.html">
+                    <a class="padding-y-xxxs padding-y-0@md" href="./farming.html">
                         <h4 class="h4-secondary">Farming and Terroir</h4>
                     </a>
-                    <a href="#">
+                    <a class="padding-y-xxxs padding-y-0@md" href="#">
                         <h4 class="h4-secondary">Sustainability</h4>
                     </a>
-                    <a href="./wines.html">
+                    <a class="padding-y-xxxs padding-y-0@md" href="./wines.html">
                         <h4 class="h4-secondary">Wines</h4>
                     </a>
-                    <a href="./hospitality.html">
+                    <a class="padding-y-xxxs padding-y-0@md" href="./hospitality.html">
                         <h4 class="h4-secondary">Hospitality</h4>
                     </a>
-                    <a href="./hospitality.html">
+                    <a class="padding-y-xxxs padding-y-0@md" href="./hospitality.html">
                         <h4 class="h4-secondary">Contact</h4>
                     </a>
-                    <a href="#">
+                    <a class="padding-y-xxxs padding-y-0@md" href="#">
                         <h4 class="h4-secondary">Shop</h4>
                     </a>
                 </div>
-                <div class="col-6 padding-left-lg flex flex-column gap-y-xs">
-                    <a href="#">
+                <div class="col-12 col-6@md padding-left-lg@md padding-bottom-lg flex flex-column gap-y-xs">
+                    <a class="padding-y-xxxs padding-y-0@md" href="#">
                         <h4 class="h4-secondary">Paul Hobbs selection</h4>
                     </a>
-                    <a href="#">
+                    <a class="padding-y-xxxs padding-y-0@md" href="#">
                         <h4 class="h4-secondary">Legal</h4>
                     </a>
-                    <a href="#">
+                    <a class="padding-y-xxxs padding-y-0@md" href="#">
                         <h4 class="h4-secondary">Recibir noticias</h4>
                     </a>
                 </div>
@@ -600,7 +624,7 @@
                 </a>
             </div>
 
-            <div class="col-6 padding-right-xl flex justify-end items-center gap-x-sm">
+            <div class="col-6 padding-right-xl@md flex justify-end items-center gap-x-sm">
                 <a href="#">
                     <em class="fa-brands fa-facebook color-primary-light"></em>
                 </a>

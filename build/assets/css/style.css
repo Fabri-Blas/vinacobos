@@ -14605,7 +14605,8 @@ select.input-style {
   position: relative;
 }
 
-.lineas-horizontales::after, .lineas-horizontales::before {
+.lineas-horizontales::after,
+.lineas-horizontales::before {
   content: "";
   position: absolute;
   width: 400px;
@@ -14675,14 +14676,16 @@ button.btn-hospitality-active h3 {
   fill-opacity: 1 !important;
 }
 
-.info-wines h2, .info-wines p {
+.info-wines h2,
+.info-wines p {
   color: #000000;
 }
 .info-wines h2:hover {
   cursor: pointer;
   color: #A0804F;
 }
-.info-wines-white h2, .info-wines-white p {
+.info-wines-white h2,
+.info-wines-white p {
   color: white;
 }
 .info-wines-white h2:hover {
@@ -14700,9 +14703,12 @@ button.btn-hospitality-active h3 {
 .identity-active {
   cursor: pointer;
   color: #BC9559;
-  font-size: var(--text-xl);
   line-height: 51.49px;
   border-bottom: #BC9559 1px solid;
+}
+
+.image-identity {
+  height: 100%;
 }
 
 /* History */
@@ -14711,6 +14717,11 @@ button.btn-hospitality-active h3 {
   width: 18px;
   transform: translateY(-15px);
   margin: 0px 10px;
+}
+
+.text-history {
+  bottom: -30px;
+  z-index: 10;
 }
 
 .info-line {
@@ -16186,6 +16197,8 @@ Usage: codyhouse.co/license
   left: 0;
   width: 100%;
   visibility: hidden;
+  background: none;
+  height: 100%;
 }
 .js .slideshow__item--selected {
   position: relative;
@@ -16520,9 +16533,7 @@ Usage: codyhouse.co/license
 }
 
 .slideshow__navigation {
-  position: absolute;
   z-index: 4;
-  bottom: 0;
   width: 100%;
   height: 32px;
   display: flex;
