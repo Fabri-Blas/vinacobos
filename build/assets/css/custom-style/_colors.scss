@@ -1,4 +1,4 @@
-@use "../base" as *;
+@use "../base"as *;
 
 // --------------------------------
 
@@ -128,36 +128,46 @@
 }
 
 // background color
-.bg-black{
+.bg-black {
   background-color: #000;
 }
+
 .bg-primary-darker {
   background-color: alpha(var(--color-primary-darker), var(--bg-o, 1));
 }
+
 .bg-primary-dark {
   background-color: alpha(var(--color-primary-dark), var(--bg-o, 1));
 }
+
 .bg-primary {
   background-color: alpha(var(--color-primary), var(--bg-o, 1));
 }
+
 .bg-primary-light {
   background-color: alpha(var(--color-primary-light), var(--bg-o, 1));
 }
+
 .bg-primary-lighter {
   background-color: alpha(var(--color-primary-lighter), var(--bg-o, 1));
 }
+
 .bg-secondary-darker {
   background-color: alpha(var(--color-secondary-darker), var(--bg-o, 1));
 }
+
 .bg-secondary-dark {
   background-color: alpha(var(--color-secondary-dark), var(--bg-o, 1));
 }
+
 .bg-secondary {
   background-color: alpha(var(--color-secondary), var(--bg-o, 1));
 }
+
 .bg-secondary-light {
   background-color: alpha(var(--color-secondary-light), var(--bg-o, 1));
 }
+
 .bg-secondary-lighter {
   background-color: alpha(var(--color-secondary-lighter), var(--bg-o, 1));
 }
@@ -166,30 +176,39 @@
 .border-primary-darker {
   background-color: alpha(var(--color-primary-darker), var(--bg-o, 1));
 }
+
 .border-primary-dark {
   background-color: alpha(var(--color-primary-dark), var(--bg-o, 1));
 }
+
 .border-primary {
   background-color: alpha(var(--color-primary), var(--bg-o, 1));
 }
+
 .border-primary-light {
   background-color: alpha(var(--color-primary-light), var(--bg-o, 1));
 }
+
 .border-primary-lighter {
   background-color: alpha(var(--color-primary-lighter), var(--bg-o, 1));
 }
+
 .border-secondary-darker {
   border-color: alpha(var(--color-secondary-darker), var(--bg-o, 1));
 }
+
 .border-secondary-dark {
   border-color: alpha(var(--color-secondary-dark), var(--bg-o, 1));
 }
+
 .border-secondary {
   border-color: alpha(var(--color-secondary), var(--bg-o, 1));
 }
+
 .border-secondary-light {
   border-color: alpha(var(--color-secondary-light), var(--bg-o, 1));
 }
+
 .border-secondary-lighter {
   border-color: alpha(var(--color-secondary-lighter), var(--bg-o, 1));
 }
@@ -198,8 +217,12 @@
   color: #A0804F;
 }
 
-.color-text-light{
-  color:#F1EEE9;
+.color-text-light {
+  color: #F1EEE9;
+}
+
+.color-text-primary {
+  color: #1C1C1C;
 }
 
 // --------------------------------

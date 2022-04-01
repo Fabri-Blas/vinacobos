@@ -140,7 +140,8 @@
                 </a>
             </div>
 
-            <h1 class="color-primary-light">Visit Us</h1>
+            <h1 class="color-primary-light display@md">Visit Us</h1>
+            <h2 class="color-primary-light hide@md">Visit Us</h2>
 
         </section>
         <!-- End Component 1 -->
@@ -150,13 +151,13 @@
         <!-- Component 2 -->
 
         <section class="width-100% margin-top-xl padding-x-sm max-width-lg margin-x-auto" style="background:#ffffff">
-            <div class="grid col-12 margin-y-auto">
-                <div class="col-5">
+            <div class="grid col-12 margin-y-auto padding-bottom-lg">
+                <div class="col-5@md">
                     <figure>
                         <img src="./assets/img/hospitality/desktop/hospitality-plates.png" alt="hospitality-grapes">
                     </figure>
                 </div>
-                <div class="col-7 padding-top-lg padding-x-md">
+                <div class="col-7@md padding-top-lg padding-x-md">
                     <h1>Tasting
                         Experiences</h1>
                     <div class="padding-y-xxl">
@@ -182,7 +183,7 @@
 
         <!--Component 3-->
 
-        <section class="padding-top-xl padding-x-sm max-width-lg margin-x-auto">
+        <section class="padding-top-xl padding-x-sm@md padding-x-xxs max-width-lg margin-x-auto">
             <div class="video-bg__media" aria-hidden="true" style="height: 100.1% !important;">
                 <video autoplay loop muted playsInline
                     src="./assets/img/hospitality/desktop/wine-desktop-shop.mp4"></video>
@@ -191,30 +192,30 @@
         </section>
 
         <!--End component 3-->
-        <div class="padding-x-xxxl">
+        <div class="padding-x-xxxxl@md padding-top-lg">
             <p class="h5-secondary text-center">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam fringilla
                 leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit vestibulum ipsum nunc duis. Donec
                 aliquet ultricies non tincidunt. Pulvinar lectus eget elementum ultrices. Netus quis leo eget
                 sollicitudin. Velit gravida orci mauris in.</p>
         </div>
         <!-- Component 4 -->
-        <section class="padding-top-xxl padding-x-xxl margin-x-auto min-height-100vh" style="background-image: url('./assets/img/hospitality/desktop/bg-rebon-contact.png');
+        <section class="padding-top-xxl padding-x-xxl@md padding-x-md margin-x-auto min-height-100vh" style="background-image: url('./assets/img/hospitality/desktop/bg-rebon-contact.png');
         background-position: top right; background-repeat: no-repeat;">
             <div class="grid padding-y-lg">
-                <div class="col-4 col-4 flex flex-column justify-center">
+                <div class="col-4@md flex flex-column justify-center">
                     <button id="btn-visit" class="btn-hospitality flex flex-column items-center" onclick="visit()">
                         <h3 class="text-center">Schedule a visit</h3>
                         <hr id="hr-btn-visit" class="hide" style="border: 1px solid #A0804F; width: 121px !important;">
                     </button>
                 </div>
-                <div class="col-4 flex flex-column justify-center items-center">
+                <div class="col-4@md flex flex-column justify-center items-center padding-y-md">
                     <button id="btn-contact" class="btn-hospitality-active flex flex-column items-center"
                         onclick="contact(event)">
                         <h3 class="text-center">Contact</h3>
                         <hr id="hr-btn-contact" style="border: 1px solid #A0804F; width: 121px !important;">
                     </button>
                 </div>
-                <div class="col-4 col-4 flex flex-column justify-center">
+                <div class="col-4@md flex flex-column justify-center">
                     <button id="btn-maps" class="btn-hospitality flex flex-column items-center" onclick="maps(event)">
                         <h3 class="text-center">Location</h3>
                         <hr id="hr-btn-maps" class="hide" style="border: 1px solid #A0804F; width: 121px !important;">
@@ -224,26 +225,26 @@
 
             <section id="form-contact">
                 <div class="grid gap-x-lg padding-bottom-lg">
-                    <div class="col-6 padding-x-sm">
+                    <div class="col-6@md padding-x-sm">
                         <label class="h6-secondary padding-left-lg">
                             FIRST NAME*
                         </label>
                         <input type="text" id="contact-name" class="input-style">
                     </div>
-                    <div class="col-6  padding-x-sm">
+                    <div class="col-6@md  padding-x-sm">
                         <label class="h6-secondary padding-left-lg">
                             LAST NAME*
                         </label>
                         <input type="text" id="contact-name" class="input-style">
                     </div>
-                    <div class="col-6 padding-x-sm">
+                    <div class="col-6@md padding-x-sm">
                         <label class="h6-secondary padding-left-lg">
                             EMAIL*
                         </label>
                         <input type="text" id="contact-name" class="input-style">
                     </div>
 
-                    <div class="col-6 padding-x-sm">
+                    <div class="col-6@md padding-x-sm">
                         <label class="h6-secondary padding-left-lg">
                             PHONE
                         </label>
@@ -264,8 +265,8 @@
             <section id="form-visitas" class="hide">
                 <div id="form-visitas-div" class="">
                     <form class="contacto grid gap-md" action="" method="POST">
-                        <div class="col-6 flex flex-column justify-center">
-                            <div class="margin-y-md flex flex-column  padding-x-md">
+                        <div class="col-6@md flex flex-column justify-center">
+                            <div class="margin-y-md@md flex flex-column  padding-x-md">
                                 <label class="padding-left-md form-text h6-secondary text-uppercase color-black">Nombre
                                     *</label>
                                 <input type="text" id="visitas-nombre" name="visita-nombre" class="input-style">
@@ -276,19 +277,21 @@
                                 <input type="email" id="visitas-email" name="visita-email" class="input-style">
                             </div>
 
-                            <div class="margin-y-md flex flex-column  padding-x-md">
+                            <div class="margin-y-md@md flex flex-column  padding-x-md">
                                 <label class="padding-left-md form-text h6-secondary text-uppercase">Teléfono</label>
                                 <input type="tel" id="visitas-telefono" name="visita-telefono" class="input-style">
                             </div>
 
                         </div>
-                        <div class="col-6 flex flex-wrap items-center text-center">
-                            <div class="col-6 flex flex-column padding-left-md">
+                        <div
+                            class="col-6@md flex flex-wrap@md flex-column flex-row@md items-center text-center@md width-100% padding-x-md padding-x-0@md">
+                            <div class="col-6@md flex flex-column padding-left-md@md width-100%">
                                 <label class="form-text h6-secondary text-uppercase">Fecha</label>
                                 <input type="date" id="visitas-fecha" name="visita-fecha" class="input-style">
                             </div>
 
-                            <div class="col-6 flex flex-column  padding-left-sm ">
+                            <div
+                                class="col-6@md flex flex-column padding-left-sm@md width-100% margin-y-md margin-y-0@md">
                                 <label class="  form-text h6-secondary text-uppercase">Horario </label>
                                 <select id="visitas-horario" name=" visita-horario" class="input-style">
                                     <option value="0800">08:00</option>
@@ -303,7 +306,7 @@
                                     <option value="1700">17:00</option>
                                 </select>
                             </div>
-                            <div class="margin-top-xs col-6 flex flex-column  padding-left-md">
+                            <div class="margin-top-xs col-6@md flex flex-column  padding-left-md@md width-100%">
                                 <label class="g  form-text h6-secondary text-uppercase">Cantidad de personas *</label>
                                 <select id="visitas-cantidad" name="visita-telefono" class="input-style">
                                     <option value="1">1</option>
@@ -314,7 +317,8 @@
                                 </select>
                             </div>
 
-                            <div class="margin-top-xs col-6 flex flex-column  padding-left-sm">
+                            <div
+                                class="margin-top-xs col-6@md flex flex-column  padding-left-sm@md width-100% margin-y-md margin-y-0@md">
                                 <label class="  form-text h6-secondary text-uppercase">¿Incluye menores de edad?
                                 </label>
                                 <select id="visitas-menores" name="visita-menores" class="input-style">
@@ -322,7 +326,7 @@
                                     <option value="si">Si</option>
                                 </select>
                             </div>
-                            <div class="col-6 flex flex-column  padding-left-md">
+                            <div class="col-6@md flex flex-column  padding-left-md@md width-100%">
                                 <label class="  form-text h6-secondary text-uppercase padding-x-md">¿Existe alguna
                                     dificultad
                                     motriz?</label>
@@ -332,7 +336,8 @@
                                 </select>
                             </div>
 
-                            <div class="col-6 flex flex-column  padding-left-sm padding-top-xs">
+                            <div
+                                class="col-6@md flex flex-column  padding-left-sm@md padding-top-xs width-100% margin-y-md margin-y-0@md">
                                 <label class=" form-text h6-secondary text-uppercase"> Idioma </label>
                                 <select id="visitas-idioma" name="visita-email" class="input-style">
                                     <option value="es">Español</option>
@@ -343,6 +348,7 @@
                         </div>
 
                         <div class="col-12 margin-y-lg flex flex-column padding-x-sm">
+                            <label for="visitas-mensaje" class="form-text h6-secondary text-uppercase">Mensaje</label>
                             <textarea class="input-style" id="visita-mensaje" name="visitas-mensaje"
                                 rows="6"></textarea>
                         </div>
@@ -371,12 +377,12 @@
                 </div>
             </section>
 
-            <div class="flex justify-between margin-x-xl margin-y-xl text-center">
+            <div class="flex flex-column flex-row@md justify-between margin-x-xl margin-y-xl text-center">
                 <div>
                     <h4 class="h4-secondary font-secondary-semibold">Suppliers</h4>
                     <h5 class="h5-secondary margin-top-sm">proveedores@vinacobos.com</h5>
                 </div>
-                <div>
+                <div class="padding-y-lg">
                     <h4 class="h4-secondary font-secondary-semibold">Marketing</h4>
                     <h5 class="h5-secondary margin-top-sm">macarenaesteller@vinacobos.com</h5>
                 </div>
@@ -399,50 +405,51 @@
     </main>
 
 
-    <footer class="flex justify-center items-center">
+    <footer class="flex flex-column flex-row@md justify-center items-center padding-y-lg padding-y-0@md">
 
-        <div class="grid padding-x-xl width-100% max-width-xxl margin-x-auto">
+        <div class="grid padding-x-md padding-x-xl@md width-100% max-width-xxl margin-x-auto">
 
-            <div class="col-7">
+            <div class="col-12 col-7@md">
                 <h3 class="h3-secondary text-uppercase max-width-xxs">El origen<br>nos determina</h3>
             </div>
 
-            <div class="col-5 grid">
+            <div class="col-12 col-5@md grid">
 
-                <div class="col-6 padding-left-lg flex flex-column gap-y-xs">
-                    <a href="./history.html">
+                <div
+                    class="col-12 col-6@md padding-left-lg@md padding-top-lg padding-top-0@md padding-bottom-xs flex flex-column gap-y-xs">
+                    <a class="padding-y-xxxs padding-y-0@md" href="./history.html">
                         <h4 class="h4-secondary">History</h4>
                     </a>
-                    <a href="./identity.html">
+                    <a class="padding-y-xxxs padding-y-0@md" href="./identity.html">
                         <h4 class="h4-secondary">Identity</h4>
                     </a>
-                    <a href="./farming.html">
+                    <a class="padding-y-xxxs padding-y-0@md" href="./farming.html">
                         <h4 class="h4-secondary">Farming and Terroir</h4>
                     </a>
-                    <a href="#">
+                    <a class="padding-y-xxxs padding-y-0@md" href="#">
                         <h4 class="h4-secondary">Sustainability</h4>
                     </a>
-                    <a href="./wines.html">
+                    <a class="padding-y-xxxs padding-y-0@md" href="./wines.html">
                         <h4 class="h4-secondary">Wines</h4>
                     </a>
-                    <a href="./hospitality.html">
+                    <a class="padding-y-xxxs padding-y-0@md" href="./hospitality.html">
                         <h4 class="h4-secondary">Hospitality</h4>
                     </a>
-                    <a href="./hospitality.html">
+                    <a class="padding-y-xxxs padding-y-0@md" href="./hospitality.html">
                         <h4 class="h4-secondary">Contact</h4>
                     </a>
-                    <a href="#">
+                    <a class="padding-y-xxxs padding-y-0@md" href="#">
                         <h4 class="h4-secondary">Shop</h4>
                     </a>
                 </div>
-                <div class="col-6 padding-left-lg flex flex-column gap-y-xs">
-                    <a href="#">
+                <div class="col-12 col-6@md padding-left-lg@md padding-bottom-lg flex flex-column gap-y-xs">
+                    <a class="padding-y-xxxs padding-y-0@md" href="#">
                         <h4 class="h4-secondary">Paul Hobbs selection</h4>
                     </a>
-                    <a href="#">
+                    <a class="padding-y-xxxs padding-y-0@md" href="#">
                         <h4 class="h4-secondary">Legal</h4>
                     </a>
-                    <a href="#">
+                    <a class="padding-y-xxxs padding-y-0@md" href="#">
                         <h4 class="h4-secondary">Recibir noticias</h4>
                     </a>
                 </div>
@@ -476,7 +483,7 @@
                 </a>
             </div>
 
-            <div class="col-6 padding-right-xl flex justify-end items-center gap-x-sm">
+            <div class="col-6 padding-right-xl@md flex justify-end items-center gap-x-sm">
                 <a href="#">
                     <em class="fa-brands fa-facebook color-primary-light"></em>
                 </a>
