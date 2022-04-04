@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   width: calc(100% - 2 * var(--component-padding));
   margin-left: auto;
@@ -14024,6 +14025,10 @@ html:not(.js) .no-js\:is-hidden {
   background-color: #000;
 }
 
+.bg-wines {
+  background-color: #E5E5E5;
+}
+
 .bg-primary-darker {
   background-color: hsla(var(--color-primary-darker-h), var(--color-primary-darker-s), var(--color-primary-darker-l), var(--bg-o, 1));
 }
@@ -14114,6 +14119,10 @@ html:not(.js) .no-js\:is-hidden {
 
 .color-text-primary {
   color: #1C1C1C;
+}
+
+.color-secondary-text {
+  color: #878581;
 }
 
 @media (min-width: 64rem) {
@@ -15141,6 +15150,182 @@ Usage: codyhouse.co/license
 }
 
 /* #endregion */
+/* -------------------------------- 
+
+File#: _1_responsive-sidebar
+Title: Responsive Sidebar
+Descr: Responsive sidebar container
+Usage: codyhouse.co/license
+
+-------------------------------- */
+/* mobile version only (--default) 👇 */
+.sidebar:not(.sidebar--static) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-index-fixed-element, 10);
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition: visibility 0s 0.3s;
+}
+.sidebar:not(.sidebar--static)::after {
+  /* overlay layer */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0);
+  transition: background-color 0.3s;
+  z-index: 1;
+}
+.sidebar:not(.sidebar--static) .sidebar__panel {
+  /* content */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  max-width: 380px;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: var(--color-bg);
+  transform: translateX(-100%);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.sidebar:not(.sidebar--static).sidebar--right-on-mobile .sidebar__panel {
+  left: auto;
+  right: 0;
+  transform: translateX(100%);
+}
+.sidebar:not(.sidebar--static).sidebar--is-visible {
+  visibility: visible;
+  transition: none;
+}
+.sidebar:not(.sidebar--static).sidebar--is-visible::after {
+  background-color: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.85);
+}
+.sidebar:not(.sidebar--static).sidebar--is-visible .sidebar__panel {
+  transform: translateX(0);
+  box-shadow: var(--shadow-md);
+}
+
+/* end mobile version */
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar__close-btn {
+  --size: 32px;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  background-color: transparent;
+  transition: 0.2s;
+  flex-shrink: 0;
+}
+.sidebar__close-btn .icon {
+  display: block;
+  margin: auto;
+}
+
+/* desktop version only (--static) 👇 */
+.sidebar--static,
+html:not(.js) .sidebar {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+.sidebar--static .sidebar__header,
+html:not(.js) .sidebar .sidebar__header {
+  display: none;
+}
+
+.sidebar--sticky-on-desktop {
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--space-sm);
+  max-height: calc(100vh - var(--space-sm));
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* end desktop version */
+.js .sidebar,
+.js .sidebar-loaded\:show {
+  opacity: 0;
+  /* hide sidebar - or other elements using the .sidebar-loaded:show class - while it is initialized in JS */
+}
+.js .sidebar--loaded {
+  opacity: 1;
+}
+
+/* no-js */
+html:not(.js) .sidebar {
+  position: static;
+}
+
+/* detect when the sidebar needs to switch from the mobile layout to a static one - used in JS */
+[class*=sidebar--static]::before {
+  display: none;
+}
+
+.sidebar--static::before {
+  content: "static";
+}
+
+.sidebar--static\@xs::before {
+  content: "mobile";
+}
+@media (min-width: 32rem) {
+  .sidebar--static\@xs::before {
+    content: "static";
+  }
+}
+
+.sidebar--static\@sm::before {
+  content: "mobile";
+}
+@media (min-width: 48rem) {
+  .sidebar--static\@sm::before {
+    content: "static";
+  }
+}
+
+.sidebar--static\@md::before {
+  content: "mobile";
+}
+@media (min-width: 64rem) {
+  .sidebar--static\@md::before {
+    content: "static";
+  }
+}
+
+.sidebar--static\@lg::before {
+  content: "mobile";
+}
+@media (min-width: 80rem) {
+  .sidebar--static\@lg::before {
+    content: "static";
+  }
+}
+
+.sidebar--static\@xl::before {
+  content: "mobile";
+}
+@media (min-width: 90rem) {
+  .sidebar--static\@xl::before {
+    content: "static";
+  }
+}
+
 /* -------------------------------- 
 
 File#: _1_scrolling-animations

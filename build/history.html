@@ -83,8 +83,9 @@
   <main class="width-100% min-height-100vh bg-dark">
 
     <!-- Component 1 -->
-    <section class="position-relative width-100% height-100vh bg-fullscreen flex flex-row justify-center items-center"
-      style="background-image: url('./assets/img/history/intro.png');">
+    <section
+      class="position-relative width-100% height-100vh bg-fullscreen flex flex-row justify-center items-center padding-bottom-xl"
+      style=" background-image: url('./assets/img/history/intro.png');">
       <div class="position-absolute top-0 padding-top-xl z-index-2">
         <a href="./index.html">
           <svg width="126" height="70" viewBox="0 0 126 70" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,7 +141,7 @@
       </div>
 
       <div class="flex flex-column flex-row@md items-center@md">
-        <div class="padding-x-lg padding-left-0@md padding-right-xl@md">
+        <div class="padding-x-lg padding-left-0@md padding-right-xl@md padding-top-xxxl padding-top-0@md">
           <svg width="428" height="426" viewBox="0 0 428 426" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle class="history-pointer" cx="215.5" cy="42.5" r="4.5" transform="rotate(-180 215.5 42.5)"
               fill="white" />
@@ -241,7 +242,7 @@
           </p>
         </div>
         <div class="padding-left-md padding-top-md hide@md">
-          <button class="btn--primary">ver más</button>
+          <button class="btn--primary" aria-controls="sidebar">ver más</button>
         </div>
       </div>
 
@@ -509,6 +510,223 @@
     </div>
 
   </footer>
+
+  <div class="flex flex-column hide"
+    style="background-color: black; opacity: 0.9; position: absolute; top: 0; overflow-y: auto; z-index: 999;">
+    <div class="flex justify-between padding-top-md padding-x-md">
+      <svg width="46" height="24" viewBox="0 0 46 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939339 10.9393ZM46 10.5L2 10.5V13.5L46 13.5V10.5Z"
+          fill="white" />
+      </svg>
+
+      <svg width="42" height="39" viewBox="0 0 42 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M20.7242 2.89432V1.01194C20.7242 1.01194 19.1859 -0.0597249 17.6949 0.0870514C16.2037 0.233828 10.7442 1.3039 12.0334 9.09435C12.4289 11.4677 12.3363 10.75 12.3363 10.75C12.3363 10.75 7.35981 9.27049 4.14878 11.0909C1.56711 12.559 0.596042 14.6289 0.846774 16.3335C1.09757 18.0381 1.73202 18.6563 1.73202 18.6563H3.79191L3.78182 17.9892C3.78182 17.9892 2.38501 17.6956 1.98275 16.6843C1.58057 15.6729 1.29276 14.6567 3.0093 13.7319C4.89932 12.714 7.59702 12.0452 10.8468 12.8885C14.0966 13.7319 13.7263 13.541 15.586 15.3891C17.4457 17.2373 18.2788 17.9305 18.6457 18.1246C18.9454 18.2717 19.259 18.3988 19.5779 18.5027C19.6067 18.5085 19.636 18.5112 19.6652 18.5112C19.8278 18.5112 19.9777 18.4265 20.0577 18.2893C20.2596 17.9974 19.6303 16.9175 19.6303 16.9175C19.6303 16.9175 19.3593 16.4412 18.3277 15.2733C16.6363 13.3616 16.2627 13.4888 16.0372 13.0941C15.4077 11.9816 14.3239 9.34235 14.4467 6.49263C14.5983 3.01502 16.0221 -0.319078 18.9335 1.35286C19.8406 1.87321 20.041 2.88779 20.041 2.88779L20.7243 2.89432H20.7242Z"
+          fill="white" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M38.3754 19.3093H40.3181C40.3181 19.3093 41.425 17.8152 41.2739 16.3732C41.1222 14.9313 40.0186 9.6381 31.9768 10.886C29.5302 11.266 30.2703 11.1714 30.2703 11.1714C30.2703 11.1714 31.7967 6.34799 29.9187 3.23411C28.4127 0.735159 26.2669 -0.206032 24.5083 0.0370181C22.7496 0.280068 22.1133 0.894997 22.1133 0.894997V2.89484L22.7998 2.88183C22.7998 2.88183 23.1045 1.53122 24.1461 1.14134C25.1884 0.751513 26.2385 0.472564 27.1924 2.13632C28.2445 3.96974 28.9345 6.58289 28.0644 9.73272C27.1944 12.8825 27.3909 12.5236 25.4826 14.3261C23.5742 16.1285 22.8605 16.936 22.6586 17.2932C22.5069 17.5847 22.376 17.8882 22.2698 18.1969C22.2641 18.2247 22.2612 18.2531 22.2612 18.2815C22.2612 18.4385 22.3488 18.5835 22.4904 18.6601C22.7912 18.8575 23.9054 18.2458 23.9054 18.2458C23.9054 18.2458 24.3968 17.9848 25.602 16.9833C27.573 15.352 27.4417 14.9818 27.8487 14.7649C28.9985 14.1531 31.7196 13.1027 34.6616 13.2217C38.2613 13.3669 41.6961 14.7485 39.9691 17.5721C39.4328 18.4529 38.3873 18.6438 38.3873 18.6438L38.3761 19.3093L38.3754 19.3093Z"
+          fill="white" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M21.4924 36.1115V37.9956C21.4924 37.9956 23.0338 39.0673 24.522 38.9205C26.0095 38.7737 31.472 37.7037 30.1831 29.9116C29.7879 27.5399 29.8803 28.256 29.8803 28.256C29.8803 28.256 34.8567 29.7354 38.0692 27.915C40.6497 26.447 41.6207 24.377 41.37 22.6724C41.1187 20.9678 40.4861 20.3497 40.4861 20.3497L38.428 20.3496L38.4412 21.0167C38.4412 21.0167 39.8364 21.312 40.2354 22.3217C40.6345 23.3314 40.9274 24.3476 39.2104 25.2741C37.3191 26.2935 34.6212 26.9623 31.3711 26.1174C28.1217 25.2724 28.4937 25.4649 26.6322 23.6168C24.7706 21.7687 23.9395 21.0754 23.5727 20.8797C23.2713 20.7323 22.9579 20.6048 22.638 20.5012C22.611 20.4962 22.5826 20.4935 22.5542 20.4935C22.3916 20.4935 22.2413 20.5789 22.162 20.7165C21.9567 21.0085 22.5892 22.0883 22.5892 22.0883C22.5892 22.0883 22.859 22.5647 23.8907 23.7309C25.5833 25.6427 25.9573 25.5154 26.181 25.9118C26.8123 27.0243 27.8961 29.6635 27.7714 32.5132C27.623 36.0022 26.1994 39.3299 23.2831 37.6579C22.3774 37.1359 22.1805 36.1229 22.1805 36.1229L21.4922 36.1115H21.4924Z"
+          fill="white" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M3.75801 19.6982H1.81587C1.81587 19.6982 0.711879 21.1907 0.861619 22.6343C1.01143 24.0779 2.11884 29.3711 10.1583 28.12C12.6053 27.7399 11.8648 27.828 11.8648 27.828C11.8648 27.828 10.3367 32.6514 12.2182 35.7653C13.7244 38.266 15.8652 39.2055 17.6255 38.9624C19.3859 38.7194 20.0204 38.1077 20.0204 38.1077L20.0205 36.1128L19.3338 36.1242C19.3338 36.1242 19.0292 37.4748 17.9874 37.8647C16.9457 38.2545 15.8955 38.5351 14.9429 36.8713C13.8928 35.0379 13.2028 32.4248 14.0712 29.275C14.9396 26.1252 14.7444 26.4823 16.6512 24.6816C18.558 22.8807 19.2732 22.0717 19.4752 21.7144C19.6272 21.423 19.7574 21.1181 19.8655 20.809C19.8707 20.7829 19.8732 20.7561 19.8732 20.7294C19.8732 20.5713 19.7855 20.4254 19.6435 20.3476C19.3439 20.1486 18.2282 20.7603 18.2282 20.7603C18.2282 20.7603 17.7368 21.0213 16.5335 22.0228C14.561 23.6621 14.6957 24.0259 14.2834 24.2428C13.1372 24.8545 10.4125 25.9049 7.47579 25.7842C3.87265 25.6391 0.441094 24.2591 2.16608 21.4356C2.70125 20.5547 3.74805 20.3639 3.74805 20.3639L3.75814 19.6983L3.75801 19.6982Z"
+          fill="white" />
+      </svg>
+    </div>
+    <div class="padding-top-md padding-x-md">
+      <hr style="border: 1px solid #A0804F; width: 121px !important;">
+      <h6 class="color-secondary-text padding-y-sm">1988</h6>
+      <h4 class="color-text-light">Inspiración</h4>
+      <h5 class="color-text-light padding-top-md">Llegada de Paul a Argentina y específicamente a Mendoza.
+        Allí, se
+        enamoró de su gente,
+        de su clima, de su
+        cultura. Descubrió el potencial de calidad de los vinos y las condiciones únicas para producirlos.
+      </h5>
+    </div>
+    <div class="padding-top-md padding-x-md">
+      <hr style="border: 1px solid #A0804F; width: 121px !important;">
+      <h6 class="color-secondary-text padding-y-sm">1992</h6>
+      <h4 class="color-text-light">Pioneros del Malbec</h4>
+      <h5 class="color-text-light padding-top-md">Comienza el trabajo con Malbec, con Paul como pieza fundamental en el
+        desarrollo de esta cepa como la variedad insignia de Argentina para el mundo.
+      </h5>
+    </div>
+    <div class="padding-top-md padding-x-md">
+      <hr style="border: 1px solid #A0804F; width: 121px !important;">
+      <h6 class="color-secondary-text padding-y-sm">1997</h6>
+      <h4 class="color-text-light">Comienzos</h4>
+      <h5 class="color-text-light padding-top-md">Paul decide establecerse en Argentina fundando Viña Cobos para
+        producir
+        vinos íconos argentinos.
+      </h5>
+    </div>
+    <div class="padding-top-md padding-x-md">
+      <hr style="border: 1px solid #A0804F; width: 121px !important;">
+      <h6 class="color-secondary-text padding-y-sm">1999</h6>
+      <h4 class="color-text-light">Cosecha inaugural</h4>
+      <h5 class="color-text-light padding-top-md">Cobos Marchiori Malbec vino que ubicó a Argentina en el podio de los
+        vinos ultra premium del mundo.
+      </h5>
+    </div>
+    <div class="padding-top-md padding-x-md">
+      <hr style="border: 1px solid #A0804F; width: 121px !important;">
+      <h6 class="color-secondary-text padding-y-sm">2013</h6>
+      <h4 class="color-text-light">Bandera en el Valle de Uco</h4>
+      <h5 class="color-text-light padding-top-md">Se adquiere Chañares Estate, ubicado en Los Arboles, Tunuyán. Lugar
+        que
+        expresa el ADN de Viña Cobos y fuente fundamental para nuestro vino Cobos y Vineyard Designate.
+      </h5>
+    </div>
+    <div class="padding-top-md padding-x-md">
+      <hr style="border: 1px solid #A0804F; width: 121px !important;">
+      <h6 class="color-secondary-text padding-y-sm">2014</h6>
+      <h4 class="color-text-light">Primer vino perfecto de Sudamérica.</h4>
+      <h5 class="color-text-light padding-top-md">La añada 2011 obtuvo 100 puntos por parte de James Suckling, el primer
+        vino sudamericano en obtener la máxima puntuación.
+      </h5>
+    </div>
+    <div class="padding-top-md padding-x-md">
+      <hr style="border: 1px solid #A0804F; width: 121px !important;">
+      <h6 class="color-secondary-text padding-y-sm">2017</h6>
+      <h4 class="color-text-light">Evolución de la calidad</h4>
+      <h5 class="color-text-light padding-top-md">Nace Cobos Malbec único, a partir de las mejores plantas de Malbec,
+        reflejando el verdadero potencial de la variedad. Una versión auténtica y superadora, una obra de arte en la
+        cual convergen el conocimiento, experiencia y pasión para lograr un vino elegante, de exquisito balance y
+        concentración, cuya estructura le permitirá vivir por décadas. Premiado con 100 puntos por James Suckling
+      </h5>
+    </div>
+    <div class="padding-top-md padding-x-md">
+      <hr style="border: 1px solid #A0804F; width: 121px !important;">
+      <h6 class="color-secondary-text padding-y-sm">2022</h6>
+      <h4 class="color-text-light">Consistencia en la calidad</h4>
+      <h5 class="color-text-light padding-top-md">Cobos Malbec recibe por tercera vez en menos de una década 100 puntos
+        por el crítico internacional James Suckling. Reafirmando a Viña Cobos como uno de los líderes de la industria en
+        términos de calidad y consistencia en el tiempo, así también reconociendo al trabajo en equipo, esfuerzo y
+        pasión por la elaboración y posicionamiento del vino argentino al más alto nivel en el mundo.
+      </h5>
+    </div>
+  </div>
+
+  <div class="flex@md hide@md">
+    <aside class="sidebar sidebar--right-on-mobile sidebar--static@md js-sidebar"
+      data-static-class="position-relative z-index-1 width-100% max-width-xxxxs border-right" id="sidebar"
+      aria-labelledby="sidebar-title">
+      <div class="sidebar__panel">
+        <!-- 👇 header visible only on mobile -->
+        <div class="flex flex-column padding-bottom-lg"
+          style="background-color: black; opacity: 0.9; position: absolute; top: 0; overflow-y: auto; z-index: 999;">
+          <div class="flex justify-between padding-top-md padding-x-md">
+            <button class="reset sidebar__close-btn js-sidebar__close-btn js-tab-focus">
+              <svg width="46" height="24" viewBox="0 0 46 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939339 10.9393ZM46 10.5L2 10.5V13.5L46 13.5V10.5Z"
+                  fill="white" />
+              </svg>
+            </button>
+            <svg width="42" height="39" viewBox="0 0 42 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M20.7242 2.89432V1.01194C20.7242 1.01194 19.1859 -0.0597249 17.6949 0.0870514C16.2037 0.233828 10.7442 1.3039 12.0334 9.09435C12.4289 11.4677 12.3363 10.75 12.3363 10.75C12.3363 10.75 7.35981 9.27049 4.14878 11.0909C1.56711 12.559 0.596042 14.6289 0.846774 16.3335C1.09757 18.0381 1.73202 18.6563 1.73202 18.6563H3.79191L3.78182 17.9892C3.78182 17.9892 2.38501 17.6956 1.98275 16.6843C1.58057 15.6729 1.29276 14.6567 3.0093 13.7319C4.89932 12.714 7.59702 12.0452 10.8468 12.8885C14.0966 13.7319 13.7263 13.541 15.586 15.3891C17.4457 17.2373 18.2788 17.9305 18.6457 18.1246C18.9454 18.2717 19.259 18.3988 19.5779 18.5027C19.6067 18.5085 19.636 18.5112 19.6652 18.5112C19.8278 18.5112 19.9777 18.4265 20.0577 18.2893C20.2596 17.9974 19.6303 16.9175 19.6303 16.9175C19.6303 16.9175 19.3593 16.4412 18.3277 15.2733C16.6363 13.3616 16.2627 13.4888 16.0372 13.0941C15.4077 11.9816 14.3239 9.34235 14.4467 6.49263C14.5983 3.01502 16.0221 -0.319078 18.9335 1.35286C19.8406 1.87321 20.041 2.88779 20.041 2.88779L20.7243 2.89432H20.7242Z"
+                fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M38.3754 19.3093H40.3181C40.3181 19.3093 41.425 17.8152 41.2739 16.3732C41.1222 14.9313 40.0186 9.6381 31.9768 10.886C29.5302 11.266 30.2703 11.1714 30.2703 11.1714C30.2703 11.1714 31.7967 6.34799 29.9187 3.23411C28.4127 0.735159 26.2669 -0.206032 24.5083 0.0370181C22.7496 0.280068 22.1133 0.894997 22.1133 0.894997V2.89484L22.7998 2.88183C22.7998 2.88183 23.1045 1.53122 24.1461 1.14134C25.1884 0.751513 26.2385 0.472564 27.1924 2.13632C28.2445 3.96974 28.9345 6.58289 28.0644 9.73272C27.1944 12.8825 27.3909 12.5236 25.4826 14.3261C23.5742 16.1285 22.8605 16.936 22.6586 17.2932C22.5069 17.5847 22.376 17.8882 22.2698 18.1969C22.2641 18.2247 22.2612 18.2531 22.2612 18.2815C22.2612 18.4385 22.3488 18.5835 22.4904 18.6601C22.7912 18.8575 23.9054 18.2458 23.9054 18.2458C23.9054 18.2458 24.3968 17.9848 25.602 16.9833C27.573 15.352 27.4417 14.9818 27.8487 14.7649C28.9985 14.1531 31.7196 13.1027 34.6616 13.2217C38.2613 13.3669 41.6961 14.7485 39.9691 17.5721C39.4328 18.4529 38.3873 18.6438 38.3873 18.6438L38.3761 19.3093L38.3754 19.3093Z"
+                fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M21.4924 36.1115V37.9956C21.4924 37.9956 23.0338 39.0673 24.522 38.9205C26.0095 38.7737 31.472 37.7037 30.1831 29.9116C29.7879 27.5399 29.8803 28.256 29.8803 28.256C29.8803 28.256 34.8567 29.7354 38.0692 27.915C40.6497 26.447 41.6207 24.377 41.37 22.6724C41.1187 20.9678 40.4861 20.3497 40.4861 20.3497L38.428 20.3496L38.4412 21.0167C38.4412 21.0167 39.8364 21.312 40.2354 22.3217C40.6345 23.3314 40.9274 24.3476 39.2104 25.2741C37.3191 26.2935 34.6212 26.9623 31.3711 26.1174C28.1217 25.2724 28.4937 25.4649 26.6322 23.6168C24.7706 21.7687 23.9395 21.0754 23.5727 20.8797C23.2713 20.7323 22.9579 20.6048 22.638 20.5012C22.611 20.4962 22.5826 20.4935 22.5542 20.4935C22.3916 20.4935 22.2413 20.5789 22.162 20.7165C21.9567 21.0085 22.5892 22.0883 22.5892 22.0883C22.5892 22.0883 22.859 22.5647 23.8907 23.7309C25.5833 25.6427 25.9573 25.5154 26.181 25.9118C26.8123 27.0243 27.8961 29.6635 27.7714 32.5132C27.623 36.0022 26.1994 39.3299 23.2831 37.6579C22.3774 37.1359 22.1805 36.1229 22.1805 36.1229L21.4922 36.1115H21.4924Z"
+                fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3.75801 19.6982H1.81587C1.81587 19.6982 0.711879 21.1907 0.861619 22.6343C1.01143 24.0779 2.11884 29.3711 10.1583 28.12C12.6053 27.7399 11.8648 27.828 11.8648 27.828C11.8648 27.828 10.3367 32.6514 12.2182 35.7653C13.7244 38.266 15.8652 39.2055 17.6255 38.9624C19.3859 38.7194 20.0204 38.1077 20.0204 38.1077L20.0205 36.1128L19.3338 36.1242C19.3338 36.1242 19.0292 37.4748 17.9874 37.8647C16.9457 38.2545 15.8955 38.5351 14.9429 36.8713C13.8928 35.0379 13.2028 32.4248 14.0712 29.275C14.9396 26.1252 14.7444 26.4823 16.6512 24.6816C18.558 22.8807 19.2732 22.0717 19.4752 21.7144C19.6272 21.423 19.7574 21.1181 19.8655 20.809C19.8707 20.7829 19.8732 20.7561 19.8732 20.7294C19.8732 20.5713 19.7855 20.4254 19.6435 20.3476C19.3439 20.1486 18.2282 20.7603 18.2282 20.7603C18.2282 20.7603 17.7368 21.0213 16.5335 22.0228C14.561 23.6621 14.6957 24.0259 14.2834 24.2428C13.1372 24.8545 10.4125 25.9049 7.47579 25.7842C3.87265 25.6391 0.441094 24.2591 2.16608 21.4356C2.70125 20.5547 3.74805 20.3639 3.74805 20.3639L3.75814 19.6983L3.75801 19.6982Z"
+                fill="white" />
+            </svg>
+          </div>
+          <div class="padding-top-md padding-x-md">
+            <hr style="border: 1px solid #A0804F; width: 121px !important;">
+            <h6 class="color-secondary-text padding-y-sm">1988</h6>
+            <h4 class="color-text-light">Inspiración</h4>
+            <h5 class="color-text-light padding-top-md">Llegada de Paul a Argentina y específicamente a Mendoza.
+              Allí, se
+              enamoró de su gente,
+              de su clima, de su
+              cultura. Descubrió el potencial de calidad de los vinos y las condiciones únicas para producirlos.
+            </h5>
+          </div>
+          <div class="padding-top-md padding-x-md">
+            <hr style="border: 1px solid #A0804F; width: 121px !important;">
+            <h6 class="color-secondary-text padding-y-sm">1992</h6>
+            <h4 class="color-text-light">Pioneros del Malbec</h4>
+            <h5 class="color-text-light padding-top-md">Comienza el trabajo con Malbec, con Paul como pieza fundamental
+              en el
+              desarrollo de esta cepa como la variedad insignia de Argentina para el mundo.
+            </h5>
+          </div>
+          <div class="padding-top-md padding-x-md">
+            <hr style="border: 1px solid #A0804F; width: 121px !important;">
+            <h6 class="color-secondary-text padding-y-sm">1997</h6>
+            <h4 class="color-text-light">Comienzos</h4>
+            <h5 class="color-text-light padding-top-md">Paul decide establecerse en Argentina fundando Viña Cobos para
+              producir
+              vinos íconos argentinos.
+            </h5>
+          </div>
+          <div class="padding-top-md padding-x-md">
+            <hr style="border: 1px solid #A0804F; width: 121px !important;">
+            <h6 class="color-secondary-text padding-y-sm">1999</h6>
+            <h4 class="color-text-light">Cosecha inaugural</h4>
+            <h5 class="color-text-light padding-top-md">Cobos Marchiori Malbec vino que ubicó a Argentina en el podio de
+              los
+              vinos ultra premium del mundo.
+            </h5>
+          </div>
+          <div class="padding-top-md padding-x-md">
+            <hr style="border: 1px solid #A0804F; width: 121px !important;">
+            <h6 class="color-secondary-text padding-y-sm">2013</h6>
+            <h4 class="color-text-light">Bandera en el Valle de Uco</h4>
+            <h5 class="color-text-light padding-top-md">Se adquiere Chañares Estate, ubicado en Los Arboles, Tunuyán.
+              Lugar
+              que
+              expresa el ADN de Viña Cobos y fuente fundamental para nuestro vino Cobos y Vineyard Designate.
+            </h5>
+          </div>
+          <div class="padding-top-md padding-x-md">
+            <hr style="border: 1px solid #A0804F; width: 121px !important;">
+            <h6 class="color-secondary-text padding-y-sm">2014</h6>
+            <h4 class="color-text-light">Primer vino perfecto de Sudamérica.</h4>
+            <h5 class="color-text-light padding-top-md">La añada 2011 obtuvo 100 puntos por parte de James Suckling, el
+              primer
+              vino sudamericano en obtener la máxima puntuación.
+            </h5>
+          </div>
+          <div class="padding-top-md padding-x-md">
+            <hr style="border: 1px solid #A0804F; width: 121px !important;">
+            <h6 class="color-secondary-text padding-y-sm">2017</h6>
+            <h4 class="color-text-light">Evolución de la calidad</h4>
+            <h5 class="color-text-light padding-top-md">Nace Cobos Malbec único, a partir de las mejores plantas de
+              Malbec,
+              reflejando el verdadero potencial de la variedad. Una versión auténtica y superadora, una obra de arte en
+              la
+              cual convergen el conocimiento, experiencia y pasión para lograr un vino elegante, de exquisito balance y
+              concentración, cuya estructura le permitirá vivir por décadas. Premiado con 100 puntos por James Suckling
+            </h5>
+          </div>
+          <div class="padding-top-md padding-x-md">
+            <hr style="border: 1px solid #A0804F; width: 121px !important;">
+            <h6 class="color-secondary-text padding-y-sm">2022</h6>
+            <h4 class="color-text-light">Consistencia en la calidad</h4>
+            <h5 class="color-text-light padding-top-md">Cobos Malbec recibe por tercera vez en menos de una década 100
+              puntos
+              por el crítico internacional James Suckling. Reafirmando a Viña Cobos como uno de los líderes de la
+              industria en
+              términos de calidad y consistencia en el tiempo, así también reconociendo al trabajo en equipo, esfuerzo y
+              pasión por la elaboración y posicionamiento del vino argentino al más alto nivel en el mundo.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </aside>
+    </main>
+  </div>
 
   <script src="assets/js/scripts.js"></script>
 </body>

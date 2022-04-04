@@ -132,6 +132,10 @@
   background-color: #000;
 }
 
+.bg-wines {
+  background-color: #E5E5E5;
+}
+
 .bg-primary-darker {
   background-color: alpha(var(--color-primary-darker), var(--bg-o, 1));
 }
@@ -223,6 +227,10 @@
 
 .color-text-primary {
   color: #1C1C1C;
+}
+
+.color-secondary-text {
+  color: #878581
 }
 
 // --------------------------------
