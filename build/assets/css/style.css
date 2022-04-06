@@ -14588,6 +14588,9 @@ header .animation-header-link {
   transform: translateY(15px);
   transition: all 1s ease-in-out;
 }
+header .h4-secondary:hover {
+  color: #A0804F !important;
+}
 
 main {
   z-index: 0;
@@ -14695,6 +14698,19 @@ button.btn-hospitality-active h3 {
 
 .varietales-big-line {
   border-bottom: 3px solid rgba(241, 238, 233, 0.5);
+  width: 100%;
+  margin-left: 30px;
+}
+
+/* Varietals low lines */
+.varietales-low-small-line {
+  border-bottom: 3px solid #1c1c1c;
+  width: 30px;
+  margin: 0px 30px;
+}
+
+.varietales-low-big-line {
+  border-bottom: 3px solid #1c1c1c;
   width: 100%;
   margin-left: 30px;
 }
