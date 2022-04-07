@@ -86,7 +86,7 @@
     <!-- Component 1 -->
     <section
       class="position-relative width-100% height-100vh bg-fullscreen flex flex-row justify-center items-center padding-bottom-xl"
-      style=" background-image: url('./assets/img/history/intro.png');">
+      style=" background-image: url('./assets/img/history/background-history.png');">
       <div class="position-absolute top-0 padding-top-xl z-index-2">
         <a href="./index.html">
           <svg width="126" height="70" viewBox="0 0 126 70" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,7 +143,8 @@
 
       <div class="flex flex-column flex-row@md items-center@md">
         <div class="padding-x-lg padding-left-0@md padding-right-xl@md padding-top-xxxl padding-top-0@md">
-          <svg width="428" height="426" viewBox="0 0 428 426" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="display@md" width="428" height="426" viewBox="0 0 428 426" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <circle class="history-pointer" cx="215.5" cy="42.5" r="4.5" transform="rotate(-180 215.5 42.5)"
               fill="white" />
             <circle class="history-pointer" cx="45.5" cy="213.5" r="4.5" transform="rotate(-180 45.5 213.5)"
@@ -233,10 +234,15 @@
             <circle class="history-pointer" cx="269.5" cy="283.5" r="4" transform="rotate(-180 269.5 283.5)"
               fill="#4B3D3F" stroke="white" />
           </svg>
+          <div class="hide@md">
+          <img id="gif-history" src="./assets/img/history/Logo gif.gif" alt="logo-gif">
+          <img id="img-history" class="is-hidden" src="./assets/img/history/Logo completo.png" alt="">
+          </div>
         </div>
 
         <div class="max-width-xxxxs@md padding-x-md">
-          <h2 class="color-primary-light padding-bottom-xxxs">Historia</h2>
+          <h2 class="color-primary-light padding-bottom-xxxs display@md">Historia</h2>
+          <h3 class="color-primary-light padding-bottom-xxxs hide@md">Historia</h3>
           <p class="color-primary-light font-secondary">Viña Cobos nació hace más de 20 años con la intención de lograr
             vinos sublimes y de calidad sobresaliente, destacando al Malbec como cepa emblemática de Mendoza. Te
             invitamos a recorrer nuestra historia.
@@ -254,7 +260,7 @@
     <!-- Component 2 -->
     <section
       class="width-100% height-100vh@md bg-black padding-y-xl@md padding-top-xl padding-bottom-sm padding-x-lg@md padding-x-sm flex justify-center items-center height-100%">
-      <div class="width-100% height-100% bg-white grid">
+      <div class="width-100% height-auto bg-white grid">
         <div class="col-12 col-6@md flex flex-column justify-center padding-lg order-2 order-1@md height-100%">
           <h2>Paul Hobbs</h2>
           <div class="margin-bottom-md padding-top-md" style="width: 96px; border-bottom: 1px solid #A0804F;"></div>
@@ -269,7 +275,7 @@
           </h5>
         </div>
         <div class="col-12 col-6@md bg-fullscreen order-1 order-2@md">
-          <img class="height-100%" src="./assets/img/history/paul.png">
+          <img class="height-100%" src="./assets/img/history/paul.png" alt="history-paul">
         </div>
       </div>
     </section>
@@ -278,7 +284,8 @@
 
 
     <!-- Component 3 -->
-    <section class="padding-y-xs@md margin-top-md margin-top-0@md padding-x-md@md max-width-lg margin-x-auto">
+    <section
+      class="padding-y-xs@md margin-top-md margin-top-0@md padding-x-sm padding-x-md@md max-width-lg margin-x-auto">
       <div class="slideshow js-slideshow" data-swipe="off">
         <p class="sr-only">Slideshow Items</p>
         <ul class="slideshow__content">
@@ -347,23 +354,40 @@
         </ul>
 
         <ul>
-          <li class="slideshow__control js-slideshow__control">
-            <button class="reset slideshow__btn js-tab-focus custom-gallery-buton">
-              <svg width="85" height="16" viewBox="0 0 85 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <li class="slideshow__control js-slideshow__control flechita-izquierda">
+            <button class="reset slideshow__btn js-tab-focus custom-gallery-buton padding-left-xxxfa-stack-1x">
+              <svg class="display@md" width="85" height="16" viewBox="0 0 85 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M0.292893 7.29289C-0.0976333 7.68341 -0.0976334 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6568L2.41422 7.99999L8.07107 2.34314C8.46159 1.95261 8.46159 1.31945 8.07107 0.928925C7.68054 0.538401 7.04738 0.538401 6.65685 0.928925L0.292893 7.29289ZM85 7L1 6.99999L1 8.99999L85 9L85 7Z"
                   fill="black" />
               </svg>
 
+              <svg class="hide@md" width="41" height="16" viewBox="0 0 41 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.292892 8.7071C-0.0976296 8.31658 -0.0976295 7.68341 0.292893 7.29289L6.65685 0.928929C7.04738 0.538405 7.68054 0.538405 8.07107 0.928929C8.46159 1.31945 8.46159 1.95262 8.07107 2.34314L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.7071ZM41 9L1 9L1 7L41 7L41 9Z"
+                  fill="#A0804F" />
+              </svg>
+
+
             </button>
           </li>
 
-          <li class="slideshow__control js-slideshow__control">
+          <li class="slideshow__control js-slideshow__control flechita-derecha">
             <button class="reset slideshow__btn js-tab-focus custom-gallery-buton">
-              <svg width="85" height="16" viewBox="0 0 85 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="display@md" width="85" height="16" viewBox="0 0 85 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M84.7071 7.29289C85.0976 7.68341 85.0976 8.31658 84.7071 8.7071L78.3431 15.0711C77.9526 15.4616 77.3195 15.4616 76.9289 15.0711C76.5384 14.6805 76.5384 14.0474 76.9289 13.6568L82.5858 7.99999L76.9289 2.34314C76.5384 1.95261 76.5384 1.31945 76.9289 0.928925C77.3195 0.538401 77.9526 0.538401 78.3431 0.928925L84.7071 7.29289ZM-8.74228e-08 7L84 6.99999L84 8.99999L8.74228e-08 9L-8.74228e-08 7Z"
                   fill="black" />
+              </svg>
+
+              <svg class="hide@md" width="41" height="16" viewBox="0 0 41 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M40.7071 8.7071C41.0976 8.31658 41.0976 7.68341 40.7071 7.29289L34.3431 0.928929C33.9526 0.538405 33.3195 0.538405 32.9289 0.928929C32.5384 1.31945 32.5384 1.95262 32.9289 2.34314L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.7071ZM8.74228e-08 9L40 9L40 7L-8.74228e-08 7L8.74228e-08 9Z"
+                  fill="#A0804F" />
               </svg>
 
             </button>
@@ -376,7 +400,7 @@
     </section>
     <!-- End Component 3 -->
     <!-- Component 4 -->
-    <section class="bg-dark width-100% height-100vh padding-top-lg padding-top-0@md">
+    <section class="bg-dark width-100% height-100vh padding-top-md padding-top-0@md">
       <div>
         <div class="flex flex-column items-center justify-center position-relative margin-x-xxxl@md padding-top-xl@md">
           <div class="z-index-2 padding-top-xxxl padding-top-0@md">
@@ -396,16 +420,17 @@
         </div>
       </div>
 
-      <div class=" padding-top-xl">
+      <div class=" padding-top-xl@md padding-top-sm text-center">
         <h5 class="h5-secondary padding-x-xxxl@md padding-x-md">
           Actualmente es uno de los enólogos más reconocidos a nivel mundial, asesorando a más de 30 bodegas en
           Argentina, Chile, Uruguay, Canadá, España, Francia y Hungría, entre otros.
+        </h5>
+        <h5 class="h5-secondary padding-x-xxxl@md padding-x-md">
           Es propietario de Paul Hobbs Winery y Crossbarn en California, Viña Cobos en Argentina, Crocus en Francia,
           Yacoubian-Hobbs en Armenia y Alvaredos-Hobbs en Galicia
-
         </h5>
       </div>
-      <div class="text-center padding-top-xl">
+      <div class="text-center padding-top-md">
         <img src="./assets/img/history/paul-hobbs-sign.png" alt="paul-sign">
       </div>
 

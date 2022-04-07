@@ -14799,6 +14799,15 @@ button.btn-hospitality-active h3 {
   width: 98px !important;
 }
 
+@media screen and (max-width: 1024px) {
+  .custom-gallery-buton {
+    width: 40px !important;
+  }
+
+  button.slideshow__btn:hover {
+    background-color: transparent !important;
+  }
+}
 .farming-hero {
   background-image: url("../img/farming/desktop/grapes-background.png");
   background-size: cover;
@@ -16848,4 +16857,16 @@ Usage: codyhouse.co/license
 .flechita-derecha {
   top: 10%;
   right: 0px !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .flechita-izquierda {
+    top: 5%;
+    left: 0px !important;
+  }
+
+  .flechita-derecha {
+    top: 5%;
+    right: 0px !important;
+  }
 }
