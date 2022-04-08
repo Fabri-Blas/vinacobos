@@ -7,9 +7,11 @@
   <meta name="robots" content="noindex">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Viña Cobos | Homepage</title>
 
   <script src="https://kit.fontawesome.com/f16f463c5c.js" crossorigin="anonymous"></script>
+  
 </head>
 
 <body>
@@ -86,7 +88,7 @@
     <section class="width-100% height-100vh bg-fullscreen flex flex-column justify-between items-center padding-y-xxl"
       style="background-image: url('./assets/img/homepage/intro.png');">
 
-      <div>
+      <div data-aos="fade-down" data-aos-duration="1000">
         <a href="./index.html">
           <svg width="126" height="70" viewBox="0 0 126 70" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_1126_6669)">
@@ -140,7 +142,7 @@
       </div>
 
 
-      <h1 class="color-primary-light text-center text-left@md">Rooted in our origins</h1>
+      <h1 class="color-primary-light text-center text-left@md" data-aos="fade-up" data-aos-duration="1000">Rooted in our origins</h1>
 
     </section>
     <!-- End Component 1 -->
@@ -203,16 +205,16 @@
     <section class="width-100% padding-x-md max-width-xxl margin-x-auto margin-bottom-xl">
 
       <div class="flex justify-end items-center width-100% padding-x-lg max-width-xxl margin-x-auto bg-fullscreen"
-        style="background-image: url('./assets/img/homepage/background-3.png'); height: 600px;">
+        style="background-image: url('./assets/img/homepage/background-3.png'); height: 600px;" data-aos="fade-up" data-aos-duration="1500">
 
         <div class="height-80%  flex flex-column justify-start items-end gap-y-md" style="max-width: 565px;">
 
-          <h1>Who we are</h1>
-          <h5 class="h5-secondary text-right">
+          <h1 data-aos="fade-up" data-aos-duration="1000">Who we are</h1>
+          <h5 class="h5-secondary text-right" data-aos="fade-up" data-aos-duration="1000">
             We were born from the vision of a dreamer who took on the challenge of making wines like never before seen
             in Argentina. His expertise and philosophy is what drives us to improve year after year.
           </h5>
-          <a href="./history.html">
+          <a href="./history.html" data-aos="fade-up" data-aos-duration="1000">
             <button class="btn--primary">History</button>
           </a>
 
@@ -512,6 +514,10 @@
   </div>
 
   <script src="assets/js/scripts.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

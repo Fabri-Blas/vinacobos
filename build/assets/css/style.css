@@ -14435,9 +14435,6 @@ mark {
 .btn-wines-black:hover {
   background-color: #a0804f !important;
 }
-.btn-wines-black:focus {
-  box-shadow: 0px 0px 8px lightgray;
-}
 
 .btn-wines-white {
   font-family: var(--font-secondary) !important;
@@ -14453,9 +14450,6 @@ mark {
 }
 .btn-wines-white:hover {
   background-color: #a0804f !important;
-}
-.btn-wines-white:focus {
-  box-shadow: 0px 0px 8px lightgray;
 }
 
 .btn--subtle {
