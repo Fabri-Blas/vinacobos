@@ -16850,10 +16850,10 @@ Usage: codyhouse.co/license
   }
 
   .slideshow__nav-item button {
-    font-size: 10px;
+    font-size: 7px;
   }
   .slideshow__nav-item button::before {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 .flechita-izquierda {
