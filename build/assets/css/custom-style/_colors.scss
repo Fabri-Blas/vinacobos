@@ -233,6 +233,18 @@
   color: #878581
 }
 
+.color-subtitle {
+
+  color: #F1EEE9;
+
+&:hover{
+  color:#A0804F;
+}
+&-active{
+  color: #BC9559;
+}
+  
+}
 // --------------------------------
 
 // (END) Global editor code

@@ -14125,6 +14125,16 @@ html:not(.js) .no-js\:is-hidden {
   color: #878581;
 }
 
+.color-subtitle {
+  color: #F1EEE9;
+}
+.color-subtitle:hover {
+  color: #A0804F;
+}
+.color-subtitle-active {
+  color: #BC9559;
+}
+
 @media (min-width: 64rem) {
   :root,
 * {
@@ -14707,6 +14717,7 @@ button.btn-hospitality-active h3 {
   border-bottom: 3px solid #1c1c1c;
   width: 100%;
   margin-left: 30px;
+  align-items: flex-end;
 }
 
 .list-wines {
@@ -16751,12 +16762,14 @@ Usage: codyhouse.co/license
   border-radius: var(--radius-md);
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
-}
-.slideshow__btn:hover {
-  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.85);
-}
-.slideshow__btn:hover .icon {
-  color: var(--color-bg);
+  /* 
+    &:hover {
+      background-color: alpha(var(--color-contrast-higher), 0.85);
+
+      .icon {
+        color: var(--color-bg);
+      }
+    } */
 }
 .slideshow:not(.slideshow--is-animating) .slideshow__btn:active {
   transform: translateY(2px);

@@ -370,14 +370,14 @@ Usage: codyhouse.co/license
   border-radius: var(--radius-md);
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
-
+/* 
   &:hover {
     background-color: alpha(var(--color-contrast-higher), 0.85);
 
     .icon {
       color: var(--color-bg);
     }
-  }
+  } */
 
   .slideshow:not(.slideshow--is-animating) &:active {
     // active effect

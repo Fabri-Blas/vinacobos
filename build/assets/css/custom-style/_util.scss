@@ -37,10 +37,11 @@ header {
         transform: translateY(15px);
         transition: all 1s ease-in-out;
     }
-    & .h4-secondary{
+
+    & .h4-secondary {
         &:hover {
             color: #A0804F !important;
-          }
+        }
     }
 }
 
@@ -167,11 +168,14 @@ button.btn-hospitality {
     width: 30px;
     margin: 0px 30px;
 }
+
 .varietales-low-big-line {
     border-bottom: 3px solid #1c1c1c;
     width: 100%;
     margin-left: 30px;
+    align-items: flex-end;
 }
+
 
 .list-wines {
     cursor: pointer;
