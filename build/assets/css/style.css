@@ -14215,7 +14215,7 @@ html:not(.js) .no-js\:is-hidden {
   src: url("../fonts/Montserrat/Montserrat-Light.ttf");
 }
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Montserrat-Semibold";
   font-weight: 600;
   src: url("../fonts/Montserrat/Montserrat-Semibold.ttf");
 }
