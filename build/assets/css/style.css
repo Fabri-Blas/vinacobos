@@ -14735,6 +14735,56 @@ button.btn-hospitality-active h3 {
   align-items: flex-end;
 }
 
+.varietales-low-big-line-cuyo {
+  border-bottom: 3px solid #1c1c1c;
+  width: 60%;
+  margin-left: 40px;
+  align-items: flex-end;
+}
+
+.varietales-low-big-line-valle {
+  border-bottom: 3px solid #1c1c1c;
+  width: 62%;
+  margin-left: 32px;
+  align-items: flex-end;
+}
+
+.varietales-low-big-line-patagonia {
+  border-bottom: 3px solid #1c1c1c;
+  width: 150%;
+  margin-left: 32px;
+  align-items: flex-end;
+}
+
+/* FELINO */
+.varietales-low-big-line-felino {
+  border-bottom: 3px solid #1c1c1c;
+  width: 60%;
+  margin-left: 27px;
+  align-items: flex-end;
+}
+
+.varietales-low-big-line-cabernet {
+  border-bottom: 3px solid #1c1c1c;
+  width: 59%;
+  margin-left: 24px;
+  align-items: flex-end;
+}
+
+.varietales-low-big-line-red {
+  border-bottom: 3px solid #1c1c1c;
+  width: 58%;
+  margin-left: 27px;
+  align-items: flex-end;
+}
+
+.varietales-low-big-line-chardonnay {
+  border-bottom: 3px solid #1c1c1c;
+  width: 56%;
+  margin-left: 38px;
+  align-items: flex-end;
+}
+
 .list-wines {
   cursor: pointer;
   list-style: none;
@@ -14811,6 +14861,59 @@ button.btn-hospitality-active h3 {
   z-index: 10;
 }
 
+/* 1366  */
+@media only screen and (max-width: 1366px) {
+  /* VARIETALES LINEAS BAJAS */
+  .varietales-low-big-line-cuyo {
+    border-bottom: 3px solid #1c1c1c;
+    width: 44%;
+    margin-left: 27px;
+    align-items: flex-end;
+  }
+
+  .varietales-low-big-line-valle {
+    border-bottom: 3px solid #1c1c1c;
+    width: 45%;
+    margin-left: 40px;
+    align-items: flex-end;
+  }
+
+  .varietales-low-big-line-patagonia {
+    border-bottom: 3px solid #1c1c1c;
+    width: 116%;
+    margin-left: 32px;
+    align-items: flex-end;
+  }
+
+  /* FELINO */
+  .varietales-low-big-line-felino {
+    border-bottom: 3px solid #1c1c1c;
+    width: 43%;
+    margin-left: 36px;
+    align-items: flex-end;
+  }
+
+  .varietales-low-big-line-cabernet {
+    border-bottom: 3px solid #1c1c1c;
+    width: 42%;
+    margin-left: 25px;
+    align-items: flex-end;
+  }
+
+  .varietales-low-big-line-red {
+    border-bottom: 3px solid #1c1c1c;
+    width: 41%;
+    margin-left: 25px;
+    align-items: flex-end;
+  }
+
+  .varietales-low-big-line-chardonnay {
+    border-bottom: 3px solid #1c1c1c;
+    width: 39%;
+    margin-left: 25px;
+    align-items: flex-end;
+  }
+}
 .info-line {
   border: 1px solid #dcbd84;
 }
