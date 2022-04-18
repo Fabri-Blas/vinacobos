@@ -370,7 +370,7 @@ Usage: codyhouse.co/license
   border-radius: var(--radius-md);
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
-/* 
+  /* 
   &:hover {
     background-color: alpha(var(--color-contrast-higher), 0.85);
 
@@ -480,24 +480,24 @@ Usage: codyhouse.co/license
 }
 
 .flechita-izquierda {
-  top: 10%;
+  top: 20px;
   left: 0px !important;
 }
 
 .flechita-derecha {
-  top: 10%;
+  top: 20px;
   right: 0px !important;
 }
 
 @media screen and (max-width:1024px) {
 
   .flechita-izquierda {
-    top: 5%;
+    top: 10px;
     left: 0px !important;
   }
 
   .flechita-derecha {
-    top: 5%;
+    top: 10px;
     right: 0px !important;
   }
 }

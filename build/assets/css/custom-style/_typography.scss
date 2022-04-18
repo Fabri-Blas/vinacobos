@@ -10,21 +10,38 @@
   font-weight: 300;
   src: url("../fonts/Mulish/Mulish.ttf");
 }
-@font-face {
+/* @font-face {
   font-family: Prata;
   font-weight: 400;
   src: url("../fonts/Prata/Prata.ttf");
-}
+} */
 @font-face {
   font-family: "Mulish";
   font-weight: 600;
   src: url("../fonts/Mulish/Mulish-semibold.ttf");
 }
 
+@font-face {
+  font-family: "Taviraj";
+  font-weight: 300;
+  src: url("../fonts/Taviraj/Taviraj-Light.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  src: url("../fonts/Montserrat/Montserrat-Semibold.ttf");
+}
+
 :root {
   // font family
-  --font-primary: Prata;
-  --font-secondary: Mulish;
+  --font-primary: Taviraj;
+  --font-secondary: Montserrat;
 
   // font size
   --text-base-size: 1em; // body font-size
@@ -70,7 +87,7 @@ h5,
 h6 {
   font-family: var(--font-primary);
   letter-spacing: 0;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
