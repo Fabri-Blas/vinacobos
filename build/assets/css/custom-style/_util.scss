@@ -237,7 +237,7 @@ button.btn-hospitality {
     &:hover {
 
         path {
-            fill: #DCBE84 !important;
+            fill: #A0804F !important;
             fill-opacity: 1 !important;
         }
     }
@@ -258,7 +258,7 @@ button.btn-hospitality {
         list-style: none;
 
         figure svg path {
-            fill: #A0804F !important;
+            fill: #BC9559 !important;
             fill-opacity: 1 !important;
         }
     }
@@ -278,7 +278,9 @@ button.btn-hospitality {
 
     &-white {
 
-        h2,
+        h2{
+            color:#878581;
+        }
         p {
             color: white;
         }
@@ -352,7 +354,7 @@ button.btn-hospitality {
     /* FELINO */
 .varietales-low-big-line-felino {
     border-bottom: 3px solid #1c1c1c;
-    width: 43%;
+    width: 41%;
     margin-left: 36px;
     align-items: flex-end;
 }
@@ -365,14 +367,14 @@ button.btn-hospitality {
 
 .varietales-low-big-line-red {
     border-bottom: 3px solid #1c1c1c;
-    width: 41%;
+    width: 40%;
     margin-left: 25px;
     align-items: flex-end;
 }
 
 .varietales-low-big-line-chardonnay {
     border-bottom: 3px solid #1c1c1c;
-    width: 39%;
+    width: 38%;
     margin-left: 25px;
     align-items: flex-end;
 }

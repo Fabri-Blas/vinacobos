@@ -14438,12 +14438,12 @@ mark {
   color: #ffffff;
   padding: 15px 30px !important;
   transition: all 0.35s ease-in-out;
+  /* &:focus {
+    box-shadow: 0px 0px 8px rgb(211, 211, 211);
+  } */
 }
 .btn--primary:hover {
   background-color: #a0804f !important;
-}
-.btn--primary:focus {
-  box-shadow: 0px 0px 8px lightgray;
 }
 
 .btn-wines-black {
@@ -14795,7 +14795,7 @@ button.btn-hospitality-active h3 {
   fill-opacity: 0.3 !important;
 }
 .list-wines:hover path {
-  fill: #DCBE84 !important;
+  fill: #A0804F !important;
   fill-opacity: 1 !important;
 }
 .list-wines-white figure svg path {
@@ -14810,7 +14810,7 @@ button.btn-hospitality-active h3 {
   list-style: none;
 }
 .list-wines-active figure svg path {
-  fill: #A0804F !important;
+  fill: #BC9559 !important;
   fill-opacity: 1 !important;
 }
 
@@ -14822,7 +14822,9 @@ button.btn-hospitality-active h3 {
   cursor: pointer;
   color: #A0804F;
 }
-.info-wines-white h2,
+.info-wines-white h2 {
+  color: #878581;
+}
 .info-wines-white p {
   color: white;
 }
@@ -14889,7 +14891,7 @@ button.btn-hospitality-active h3 {
   /* FELINO */
   .varietales-low-big-line-felino {
     border-bottom: 3px solid #1c1c1c;
-    width: 43%;
+    width: 41%;
     margin-left: 36px;
     align-items: flex-end;
   }
@@ -14903,14 +14905,14 @@ button.btn-hospitality-active h3 {
 
   .varietales-low-big-line-red {
     border-bottom: 3px solid #1c1c1c;
-    width: 41%;
+    width: 40%;
     margin-left: 25px;
     align-items: flex-end;
   }
 
   .varietales-low-big-line-chardonnay {
     border-bottom: 3px solid #1c1c1c;
-    width: 39%;
+    width: 38%;
     margin-left: 25px;
     align-items: flex-end;
   }
