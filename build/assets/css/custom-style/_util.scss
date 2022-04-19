@@ -212,6 +212,7 @@ button.btn-hospitality {
     margin-left: 24px;
     align-items: flex-end;
 }
+
 .varietales-low-big-line-red {
     border-bottom: 3px solid #1c1c1c;
     width: 58%;
@@ -225,6 +226,7 @@ button.btn-hospitality {
     margin-left: 38px;
     align-items: flex-end;
 }
+
 .list-wines {
     cursor: pointer;
     list-style: none;
@@ -278,9 +280,10 @@ button.btn-hospitality {
 
     &-white {
 
-        h2{
-            color:#878581;
+        h2 {
+            color: #878581;
         }
+
         p {
             color: white;
         }
@@ -326,6 +329,37 @@ button.btn-hospitality {
     z-index: 10;
 }
 
+/* home */
+
+.figcaption-text {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: -moz-linear-gradient(top, transparent 0%, black 63%, black 100%);
+    background: -webkit-linear-gradient(top, transparent 0%, black 63%, black 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 90%, #000000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
+    z-index: 1;
+}
+
+.post-img {
+    overflow: hidden;
+}
+
+.img-home {
+    transform: scale(1);
+    transition: transform 3s ease-out 0s;
+
+    &:hover {
+        backface-visibility: hidden;
+        transform: scale(1.2);
+        transition: transform 3s ease-out 0s;
+    }
+}
+
 /* 1366  */
 @media only screen and (max-width: 1366px) {
 
@@ -343,39 +377,40 @@ button.btn-hospitality {
         margin-left: 40px;
         align-items: flex-end;
     }
-    
+
     .varietales-low-big-line-patagonia {
         border-bottom: 3px solid #1c1c1c;
         width: 116%;
         margin-left: 32px;
         align-items: flex-end;
     }
-    
+
     /* FELINO */
-.varietales-low-big-line-felino {
-    border-bottom: 3px solid #1c1c1c;
-    width: 41%;
-    margin-left: 36px;
-    align-items: flex-end;
-}
-.varietales-low-big-line-cabernet {
-    border-bottom: 3px solid #1c1c1c;
-    width: 42%;
-    margin-left: 25px;
-    align-items: flex-end;
-}
+    .varietales-low-big-line-felino {
+        border-bottom: 3px solid #1c1c1c;
+        width: 41%;
+        margin-left: 36px;
+        align-items: flex-end;
+    }
 
-.varietales-low-big-line-red {
-    border-bottom: 3px solid #1c1c1c;
-    width: 40%;
-    margin-left: 25px;
-    align-items: flex-end;
-}
+    .varietales-low-big-line-cabernet {
+        border-bottom: 3px solid #1c1c1c;
+        width: 42%;
+        margin-left: 25px;
+        align-items: flex-end;
+    }
 
-.varietales-low-big-line-chardonnay {
-    border-bottom: 3px solid #1c1c1c;
-    width: 38%;
-    margin-left: 25px;
-    align-items: flex-end;
-}
+    .varietales-low-big-line-red {
+        border-bottom: 3px solid #1c1c1c;
+        width: 40%;
+        margin-left: 25px;
+        align-items: flex-end;
+    }
+
+    .varietales-low-big-line-chardonnay {
+        border-bottom: 3px solid #1c1c1c;
+        width: 38%;
+        margin-left: 25px;
+        align-items: flex-end;
+    }
 }

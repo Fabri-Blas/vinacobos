@@ -1,6 +1,4 @@
-@use "base" with (
-  $breakpoints: (
-    // ~512px
+@use "base"with ($breakpoints: ( // ~512px
     "xs": 32rem,
     // ~768px
     "sm": 48rem,
@@ -11,8 +9,7 @@
     // ~1440px
     "xl": 90rem,
   ),
-  $grid-columns: 12
-);
+  $grid-columns: 12);
 
 @use "custom-style";
 @use "components/**/*.scss";

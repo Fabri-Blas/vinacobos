@@ -1,0 +1,246 @@
+/*--------------------------------------------------------------
+## Featured image box
+--------------------------------------------------------------*/
+.featured-image-box {
+    position: relative;
+}
+
+.featured-image-box a.wrapper-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    /* z-index: 4; */
+}
+
+.featured-image-box figure {
+    margin: 0;
+    position: relative;
+}
+
+.featured-image-box figure .image-wrapper {
+    position: relative;
+}
+
+.featured-image-box figure img {
+    position: relative;
+    display: inline-block;
+}
+
+// .featured-image-box figure figcaption {
+//     /* padding: 1.5em 3em; */
+// }
+
+.featured-image-box figure figcaption h2 {
+    line-height: normal;
+    font-size: 1.2rem;
+    margin-bottom: 2em;
+}
+
+@media (min-width: 992px) {
+    .featured-image-box figure figcaption h2 {
+        font-size: 1.675rem;
+    }
+}
+
+.featured-image-box figure figcaption h2 span {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0.5em;
+}
+
+.featured-image-box.use_border_effect figure .image-wrapper {
+    padding: 3em 1.5em 1.5em 1.5em;
+}
+
+.featured-image-box.use_border_effect figure .image-wrapper .border-effect {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    transform: translateY(0);
+    transition: transform 2s;
+}
+
+.featured-image-box.use_border_effect figure .image-wrapper .border-effect.top-border {
+    width: 100%;
+    height: 15px;
+    background: #fff;
+}
+
+.featured-image-box.use_border_effect figure .image-wrapper .border-effect.left-border,
+.featured-image-box.use_border_effect figure .image-wrapper .border-effect.right-border {
+    width: 15px;
+    height: 100%;
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0)));
+    background-image: -moz-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.featured-image-box.use_border_effect figure .image-wrapper .border-effect.right-border {
+    right: 0;
+    left: auto;
+}
+
+.featured-image-box.use_border_effect figure img {
+    z-index: 2;
+    transform: translateY(0);
+    transition: transform .5s;
+}
+
+.featured-image-box.use_border_effect figure:hover img {
+    transform: translateY(-30px);
+}
+
+.featured-image-box.use_border_effect figure:hover .border-effect {
+    transform: translateY(60px);
+}
+
+.featured-image-box.normal_box figure img {
+    display: block;
+    margin: 0 auto;
+}
+
+.featured-image-box.normal_box figcaption {
+    padding: 0;
+}
+
+.featured-image-box.normal_box figcaption .inner-box {
+    padding: 15% 10%;
+    background: #fff;
+}
+
+.featured-image-box.normal_box figcaption .inner-box h2 {
+    font-size: 1.75rem;
+}
+
+.featured-image-box.normal_box figcaption .inner-box p {
+    margin-bottom: 0;
+}
+
+.featured-image-box.normal_box figcaption .inner-box a.gg-special-link {
+    margin-top: 1.4em;
+    display: inline-block;
+}
+
+.featured-image-box.overlay_style_1 figure {
+    overflow: hidden;
+    background: #000000;
+}
+
+.featured-image-box.overlay_style_1 figure img {
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    transform: scale(1);
+    transition: transform 3s ease-out 0s;
+}
+
+.featured-image-box.overlay_style_1 figure figcaption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* -webkit-backface-visibility: hidden; */
+    /* backface-visibility: hidden; */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /* -webkit-box-align: center; */
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    justify-content: flex-end;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.featured-image-box.overlay_style_1 figure figcaption:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+63,000000+100&0+0,1+63,1+100 */
+    background: -moz-linear-gradient(top, transparent 0%, black 63%, black 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, transparent 0%, black 63%, black 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 63%, #000000 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
+    /* IE6-9 */
+    z-index: 1;
+}
+
+.featured-image-box.overlay_style_1 figure figcaption h2 {
+    color: #fff;
+    z-index: 2;
+}
+
+.featured-image-box.overlay_style_1 figure figcaption h2 span {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.featured-image-box.overlay_style_1 figure figcaption p {
+    z-index: 2;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    transform: translateY(0);
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.featured-image-box.overlay_style_1 figure figcaption h2 {
+    transform: translateY(0);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.featured-image-box.overlay_style_1 figure figcaption .featured-image-link-arrow {
+    display: none;
+    color: #fff;
+    opacity: 0;
+    position: relative;
+    z-index: 3;
+    transition: opacity 1s ease 0s, transform 1s ease 0s;
+}
+
+.featured-image-box.overlay_style_1:hover figcaption h2 {
+    transform: translateY(20px);
+}
+
+.featured-image-box.overlay_style_1:hover figcaption p {
+    transform: translateY(-40px);
+    opacity: 1;
+}
+
+.featured-image-box.overlay_style_1:hover figcaption .featured-image-link-arrow {
+    display: block;
+    opacity: 1;
+}
+
+.featured-image-box.overlay_style_1:hover img {
+    transform: scale(1.1);
+    transition: transform 3s ease-out 0s;
+}
