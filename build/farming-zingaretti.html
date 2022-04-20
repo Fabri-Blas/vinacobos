@@ -154,22 +154,19 @@
         </section>
         <!-- End Component 1 -->
 
-
-
         <!-- Component 2 -->
 
         <section
-            class="position-relative padding-top-xs padding-bottom-xxxxl margin-bottom-xxxl padding-x-md@md padding-x-xs max-width-lg margin-x-auto">
-            <div class="slideshow js-slideshow" data-swipe="off">
+            class="position-relative padding-top-xl padding-bottom-xxxxl margin-bottom-xxxl padding-x-md@md padding-x-xxs max-width-lg margin-x-auto">
+            <div class="slideshow js-slideshow" data-swipe="on">
                 <p class="sr-only">Slideshow Items</p>
 
                 <ul class="slideshow__content">
 
                     <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
                         <div class='container@md max-width-xxl'>
-                            <div class='text-component'><img
-                                    src="./assets/img/farming/zingaretti/desktop/zingaretti-gallery.png"
-                                    alt="zingaretti-gallery-1"></div>
+                            <div class='text-component'><img src="./assets/img/farming/desktop/demo-foto.png"
+                                    alt="farming-cobos"></div>
                         </div>
                     </li>
 
@@ -239,7 +236,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="padding-top-lg padding-bottom-xxl@md padding-bottom-md">
+            <div class="padding-top-lg padding-bottom-xl@md padding-bottom-md">
                 <h5 class="h5-secondary text-center margin-x-xxxl@md margin-x-xs">Nulla at lobortis non nec. Rhoncus eu
                     tellus est
                     purus diam
@@ -258,8 +255,8 @@
 
 
             <!--Component 3-->
-            <div class="padding-y-xs margin-bottom-md padding-x-md@ max-width-lg margin-x-auto">
-                <article class="padding-x-lg margin-x-xxxxs padding-top-xl@md padding-top-sm"
+            <div class="padding-y-xs margin-bottom-md max-width-lg margin-x-auto">
+                <article class="padding-x-lg padding-x-xxl@md margin-x-xxxxs padding-top-xl@md padding-top-sm"
                     style="background-color:#ffffff">
                     <h5 class="h5-secondary sliding-paragraph"> Esta propiedad tiene una superficie plantada de 17,3 ha
                         de
@@ -305,10 +302,10 @@
                     <h1 class="text-center display@md" style="color:#ffffff">Datos demograficos</h1>
                     <h3 class="text-center hide@md" style="color:#ffffff">Datos demograficos</h3>
                 </div>
-                <div class="width-100% padding-y-xs" style="background-color:#ffffff">
-                    <div class="padding-x-lg padding-top-lg">
+                <div class="width-100% padding-y-xs padding-x-xl" style="background-color:#ffffff">
+                    <div class="padding-x-lg padding-top-md">
                         <h2 class="display@md">Valle de Uco</h2>
-                        <h2 class="hide@md">Valle de Uco</h2>
+                        <h3 class="hide@md">Valle de Uco</h3>
                         <h5 class="h5-secondary display@md">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
                             fringilla
                             leo,
@@ -317,7 +314,8 @@
                             tincidunt. Pulvinar lectus eget elementum ultrices. Netus quis leo eget sollicitudin. Velit
                             gravida
                             orci mauris in.</h5>
-                        <h6 class="h6-secondary hide@md">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam
+                        <h6 class="h6-secondary hide@md padding-top-sm">Nulla at lobortis non nec. Rhoncus eu tellus est
+                            purus diam
                             fringilla
                             leo,
                             augue. Tristique aliquet
@@ -328,91 +326,52 @@
                     </div>
                 </div>
 
-                <!-- Mapa con datos -->
-                <div class="bg-white grid width-100% padding-top-xl padding-x-lg">
-                    <div class="col-6@md">
-                        <div class="grid gap-x-sm width-100% padding-y-xs">
-                            <div class="col-4">
-                                <h5 class="h5-secondary display@md">Region</h5>
-                                <h6 class="h6-secondary hide@md">Region</h6>
-                            </div>
-
-                            <div class="col-2 flex justify-center items-center">
-                                <div class="info-line width-100%">
-                                </div>
-                            </div>
-
-                            <div class="col-6 padding-left-md">
-                                <h5 class="h5-secondary display@md color-secondary-text">Cuyo</h5>
-                                <h6 class="h6-secondary hide@md">Region</h6>
-                            </div>
+                <!-- Gallery con datos -->
+                <div class="bg-white grid width-100%  padding-x-xl padding-y-xl">
+                    <div class="main-gallery flex flex-row justify-center padding-x-sm margin-x-xs">
+                        <div class="gallery-actual padding-x-sm width-100%">
+                            <img class="width-100%" src="./assets/img/farming/gallery/panel2/panel2-etiqueta-1.png"
+                                alt="" loading="lazy">
                         </div>
-                        <!-- Grid 2 -->
-                        <div class="grid gap-x-sm width-100% padding-y-xs">
-                            <div class="col-4">
-                                <h5 class="h5-secondary display@md">Elevation</h5>
-                                <h6 class="h6-secondary hide@md">Region</h6>
+                        <div class="gallery-previews padding-x-sm">
+                            <div class="gallery-preview margin-bottom-md position-relative">
+                                <img class="width-100%" src="./assets/img/farming/gallery/panel1/panel1-preview-1.png"
+                                    alt="" loading="lazy">
+                                <span class="is-hidden"
+                                    gallery-src="./assets/img/farming/gallery/panel2/panel2-etiqueta-1.png"></span>
+                                <div
+                                    class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
+                                    <img src="./assets/img/farming/gallery/panel1/selected.svg" width="35" alt=""
+                                        loading="lazy">
+                                </div>
                             </div>
-
-                            <div class="col-2 flex justify-center items-center">
-                                <div class="info-line width-100%">
+                            <div class="gallery-preview margin-y-md position-relative">
+                                <img class="width-100%" src="./assets/img/farming/gallery/panel1/panel1-preview-2.png"
+                                    alt="">
+                                <span class="is-hidden"
+                                    gallery-src="./assets/img/farming/gallery/panel2/panel2-etiqueta-2.png"></span>
+                                <div
+                                    class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
+                                    <img src="./assets/img/farming/gallery/panel1/selected.svg" width="35" alt=""
+                                        loading="lazy">
+                                </div>
+                            </div>
+                            <div class="gallery-preview margin-y-md position-relative">
+                                <img class="width-100%" src="./assets/img/farming/gallery/panel1/panel1-preview-3.png"
+                                    alt="" loading="lazy">
+                                <span class="is-hidden"
+                                    gallery-src="./assets/img/farming/gallery/panel2/panel2-etiqueta-3.png"></span>
+                                <div
+                                    class="width-100% height-100% flex justify-center items-center gallery-preview-selected">
+                                    <img src="./assets/img/farming/gallery/panel1/selected.svg" width="35" alt=""
+                                        loading="lazy">
                                 </div>
                             </div>
 
-                            <div class="col-6 padding-left-md">
-                                <h5 class="h5-secondary display@md color-secondary-text">900 - 1.400 meters | 2.950-4000
-                                    Feet</h5>
-                                <h6 class="h6-secondary hide@md">Region</h6>
-                            </div>
-                        </div>
-                        <!-- Grid 3 -->
-                        <div class="grid gap-x-sm width-100% padding-y-xs">
-                            <div class="col-4">
-                                <h5 class="h5-secondary display@md">Presipitations</h5>
-                                <h6 class="h6-secondary hide@md">Region</h6>
-                            </div>
 
-                            <div class="col-2 flex justify-center items-center">
-                                <div class="info-line width-100%">
-                                </div>
-                            </div>
-
-                            <div class="col-6 padding-left-md">
-                                <h5 class="h5-secondary display@md color-secondary-text">300 ml per year</h5>
-                                <h6 class="h6-secondary hide@md">Region</h6>
-                            </div>
-                        </div>
-
-                        <!-- Grid 4 -->
-                        <div class="grid gap-x-sm width-100% padding-y-xs">
-                            <div class="col-4">
-                                <h5 class="h5-secondary display@md">Thermal amplitude</h5>
-                                <h6 class="h6-secondary hide@md">Region</h6>
-                            </div>
-
-                            <div class="col-2 flex justify-center items-center">
-                                <div class="info-line width-100%">
-                                </div>
-                            </div>
-
-                            <div class="col-6 padding-left-md">
-                                <h5 class="h5-secondary display@md color-secondary-text">14.6°C | 62.2° F</h5>
-                                <h6 class="h6-secondary hide@md">Region</h6>
-                            </div>
                         </div>
                     </div>
-
-                    <div class="col-6@md">
-                        <figure class="text-center">
-                            <img class="" src="./assets/img/farming/zingaretti/ZingarettiMapa.png" alt="region-map">
-
-                        </figure>
-                    </div>
-
                 </div>
-
-
-            </div>
 
         </section>
 
@@ -586,30 +545,69 @@
             </div>
 
             <div class="flex flex-column flex-row@md justify-between margin-x-xxxxl@xl margin-x-xs">
-                <div class="col-6@md position-relative">
-                    <figure class="flex justify-center">
-                        <img src="./assets/img/farming/chanares/Desktop/chanares-malbec.png" alt="chanares-malbec">
-                        <h2 class="color-white position-absolute bottom-md display@md">Malbec</h2>
-                        <h3 class="color-white position-absolute bottom-md hide@md">Malbec</h3>
-                    </figure>
+                <a class="col-6@md position-relative" href="/wines/vd-zingaretti.html">
+                    <div>
+                        <figure class="flex justify-center">
+                            <img src="./assets/img/farming/chanares/Desktop/chanares-malbec.png" alt="chanares-malbec">
+                            <h2 class="color-white position-absolute bottom-md display@md">Malbec</h2>
+                            <h3 class="color-white position-absolute bottom-md hide@md">Malbec</h3>
+                        </figure>
+                    </div>
+                </a>
+                <a class="col-6@md position-relative flex padding-top-md padding-top-0@md"
+                    href="/wines/vd-zingaretti.html">
+                    <div>
+                        <figure class="flex justify-center">
+                            <img src="./assets/img/farming/chanares/Desktop/chanares-franc.png" alt="chanares-franc">
+                            <h2 class="color-white position-absolute bottom-md display@md">Chardonnay</h2>
+                            <h3 class="color-white position-absolute bottom-md hide@md">Chardonnay</h>
+                        </figure>
 
-                </div>
-                <div class="col-6@md position-relative flex padding-top-md padding-top-0@md">
-                    <figure class="flex justify-center">
-                        <img src="./assets/img/farming/chanares/Desktop/chanares-franc.png" alt="chanares-franc">
-                        <h2 class="color-white position-absolute bottom-md display@md">Chardonnay</h2>
-                        <h3 class="color-white position-absolute bottom-md hide@md">Chardonnay</h>
-                    </figure>
-
-                </div>
+                    </div>
+                </a>
             </div>
 
-            <div class="flex justify-center margin-top-xl">
-                <a href="wines/vd-zingaretti.html">
-                    <button class="btn--primary" type="button">
-                        <h6 class="h6-secondary text-uppercase color-white">ir al vino</h6>
-                    </button>
-                </a>
+            <div class="width-100% flex flex-column justify-center margin-top-lg margin-x-lg@md margin-x-xs">
+                <h1 class="color-white text-center margin-bottom-md display@md">The Vineyards</h1>
+                <div class=" width-100% flex flex-column flex-row@md" style="justify-content: space-around;">
+                    <a class=" col-6@md position-relative" href="/farming-chanares.html">
+                        <div class="">
+                            <img class="width-100% height-100%" src="./assets/img/farming/zingaretti/ChañaresEstate.png"
+                                alt="">
+                            <h2 class="display@md color-white position-absolute bottom-xl left-md z-index-2">Chañares
+                                estate</h2>
+                            <h3 class="hide@md color-white position-absolute bottom-xl left-md z-index-2">Chañares
+                                estate</h3>
+                            <svg class="position-absolute bottom-sm left-md z-index-2" width="180" height="24"
+                                viewBox="0 0 180 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.939346 10.9393C0.353546 11.5251 0.353546 12.4749 0.939346 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939346 10.9393ZM180 10.5L2 10.5V13.5L180 13.5V10.5Z"
+                                    fill="white" />
+                            </svg>
+                            <div class="position-absolute bottom-0 width-100% height-100% blackfade-to-right"></div>
+                        </div>
+                    </a>
+                    <a class="col-6@md position-relative margin-left-xxs@md" href="/farming-marchiori.html">
+                        <div class="">
+                            <img class="width-100% height-100%"
+                                src="./assets/img/farming/zingaretti/marchioriVineyard.png" alt="">
+                            <h2 class="display@md color-white position-absolute bottom-xl right-md z-index-2">Marchiori
+                                vineyard
+                            </h2>
+                            <h3 class="hide@md color-white position-absolute bottom-xl right-md z-index-2">Marchiori
+                                vineyard
+                            </h3>
+                            <svg class="position-absolute bottom-sm right-md z-index-2" width="180" height="24"
+                                viewBox="0 0 180 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M179.061 13.0606C179.646 12.4749 179.646 11.5251 179.061 10.9393L169.515 1.39338C168.929 0.807597 167.979 0.807597 167.393 1.39338C166.808 1.97917 166.808 2.92892 167.393 3.5147L175.879 12L167.393 20.4853C166.808 21.0711 166.808 22.0208 167.393 22.6066C167.979 23.1924 168.929 23.1924 169.515 22.6066L179.061 13.0606ZM1.31134e-07 13.5L178 13.5L178 10.5L-1.31134e-07 10.5L1.31134e-07 13.5Z"
+                                    fill="white" />
+                            </svg>
+                            <div class="position-absolute bottom-0 width-100% height-100% blackfade-to-left">
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
 
         </section>

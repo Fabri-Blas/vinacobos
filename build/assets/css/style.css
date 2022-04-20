@@ -14653,6 +14653,14 @@ footer i {
   background: linear-gradient(360deg, #000000 0.09%, rgba(0, 0, 0, 0) 100%);
 }
 
+.blackfade-to-left {
+  background: linear-gradient(to left, #000000 0.09%, rgba(0, 0, 0, 0) 100%);
+}
+
+.blackfade-to-right {
+  background: linear-gradient(to right, #000000 0.09%, rgba(0, 0, 0, 0) 100%);
+}
+
 /*Inputs - forms  */
 .input-style {
   font-family: "mulish";
@@ -14892,6 +14900,80 @@ button.btn-hospitality-active h3 {
   transition: transform 3s ease-out 0s;
 }
 
+/* Farming gallery desktop */
+.main-gallery {
+  position: relative;
+}
+.main-gallery .gallery {
+  position: absolute;
+  left: 110px;
+  width: 1550px;
+  height: auto;
+}
+.main-gallery .gallery-actual img {
+  transition: all 0.9s;
+}
+.main-gallery .gallery-preview, .main-gallery .gallery-preview img {
+  transition: all 0.4s;
+  transform: scale(1);
+  border-radius: 4px;
+  box-shadow: none;
+}
+.main-gallery .gallery-preview:hover, .main-gallery .gallery-preview img:hover {
+  transition: all 0.4s;
+  transform: scale(1.05);
+  border-radius: 4px;
+}
+.main-gallery .gallery-preview-selected {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 0.4s;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.main-gallery .gallery-preview-selected img {
+  transition: all 0.7s;
+  opacity: 0;
+  width: 25px;
+  transform: scale(0.5) rotate(-360deg);
+}
+
+/* Farming gallery  mobile */
+.main-gallery-mobile .gallery-actual-mobile img {
+  transition: all 0.9s;
+}
+.main-gallery-mobile .gallery-preview, .main-gallery-mobile .gallery-preview img {
+  transition: all 0.4s;
+  transform: scale(1);
+  border-radius: 4px;
+}
+.main-gallery-mobile .gallery-preview:hover, .main-gallery-mobile .gallery-preview:active, .main-gallery-mobile .gallery-preview img:hover, .main-gallery-mobile .gallery-preview img:active {
+  transition: all 0.4s;
+  transform: scale(1.05);
+  border-radius: 4px;
+}
+.main-gallery-mobile .gallery-preview-selected-mobile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 0.4s;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.main-gallery-mobile .gallery-preview-selected-mobile img {
+  transition: all 0.7s;
+  opacity: 0;
+  width: 20px;
+  transform: scale(0.5) rotate(-360deg);
+}
+
 /* 1366  */
 @media only screen and (max-width: 1366px) {
   /* VARIETALES LINEAS BAJAS */
@@ -14926,7 +15008,7 @@ button.btn-hospitality-active h3 {
 
   .varietales-low-big-line-cabernet {
     border-bottom: 3px solid #1c1c1c;
-    width: 42%;
+    width: 41%;
     margin-left: 25px;
     align-items: flex-end;
   }
@@ -14945,6 +15027,7 @@ button.btn-hospitality-active h3 {
     align-items: flex-end;
   }
 }
+/* farming */
 .info-line {
   border: 1px solid #dcbd84;
 }
@@ -16881,9 +16964,6 @@ Usage: codyhouse.co/license
 .js .slideshow[data-controls=hover]:hover .slideshow__control {
   opacity: 1;
 }
-.js .slideshow[data-swipe=on] .slideshow__control {
-  display: none;
-}
 .js .slideshow__control {
   display: block;
   position: absolute;
@@ -17192,7 +17272,7 @@ Usage: codyhouse.co/license
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+63,000000+100&0+0,1+63,1+100 */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 63%, #000000 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 90%, #000000 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#000000", GradientType=0);
   /* IE6-9 */

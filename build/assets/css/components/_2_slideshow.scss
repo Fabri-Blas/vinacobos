@@ -334,9 +334,9 @@ Usage: codyhouse.co/license
     opacity: 1; // show arrows on hover
   }
 
-  .slideshow[data-swipe="on"] .slideshow__control {
-    display: none; // hide arrows on mobile if swipe is enabled
-  }
+  // .slideshow[data-swipe="on"] .slideshow__control {
+  //   display: none; // hide arrows on mobile if swipe is enabled
+  // }
 
   .slideshow__control {
     display: block;

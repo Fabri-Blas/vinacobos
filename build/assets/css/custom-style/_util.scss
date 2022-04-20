@@ -88,6 +88,14 @@ footer {
     background: linear-gradient(360deg, #000000 0.09%, rgba(0, 0, 0, 0) 100%);
 }
 
+.blackfade-to-left {
+    background: linear-gradient(to left, #000000 0.09%, rgba(0, 0, 0, 0) 100%);
+}
+
+.blackfade-to-right {
+    background: linear-gradient(to right, #000000 0.09%, rgba(0, 0, 0, 0) 100%);
+}
+
 /*Inputs - forms  */
 
 .input-style {
@@ -359,7 +367,97 @@ button.btn-hospitality {
         transition: transform 3s ease-out 0s;
     }
 }
-
+/* Farming gallery desktop */
+.main-gallery {
+    position: relative;
+  
+    & .gallery {
+      position: absolute;
+      left: 110px;
+      width: 1550px;
+      height: auto;
+  
+      &-actual img {
+        transition: all 0.9s;
+      }
+  
+      &-preview,
+      &-preview img {
+        transition: all 0.4s;
+        transform: scale(1);
+        border-radius: 4px;
+        box-shadow: none;
+  
+        &:hover {
+          transition: all 0.4s;
+          transform: scale(1.05);
+          border-radius: 4px;
+        }
+      }
+  
+      &-preview-selected {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: all 0.4s;
+        transform: translate(-50%, -50%);
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
+  
+        & img {
+          transition: all 0.7s;
+          opacity: 0;
+          width: 25px;
+          transform: scale(0.5) rotate(-360deg);
+        }
+      }
+    }
+    
+  }
+  
+  
+/* Farming gallery  mobile */
+.main-gallery-mobile {
+  
+    .gallery {
+      &-actual-mobile img {
+        transition: all 0.9s;
+      }
+  
+      &-preview,
+      &-preview img {
+        transition: all 0.4s;
+        transform: scale(1);
+        border-radius: 4px;
+  
+        &:hover,
+        &:active {
+          transition: all 0.4s;
+          transform: scale(1.05);
+          border-radius: 4px;
+        }
+      }
+  
+      &-preview-selected-mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: all 0.4s;
+        transform: translate(-50%, -50%);
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
+  
+        & img {
+          transition: all 0.7s;
+          opacity: 0;
+          width: 20px;
+          transform: scale(0.5) rotate(-360deg);
+        }
+      }
+    }
+  }
 /* 1366  */
 @media only screen and (max-width: 1366px) {
 
@@ -395,7 +493,7 @@ button.btn-hospitality {
 
     .varietales-low-big-line-cabernet {
         border-bottom: 3px solid #1c1c1c;
-        width: 42%;
+        width: 41%;
         margin-left: 25px;
         align-items: flex-end;
     }
@@ -414,3 +512,17 @@ button.btn-hospitality {
         align-items: flex-end;
     }
 }
+
+/* farming */
+// .gradient-wines-left {
+//     background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, #000000 90%, #000000 100%);
+//     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
+//     background-size: 100%;
+//     width: 100%;
+// }
+
+// .gradient-wines-right {
+//     background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.8));
+//     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
+//     background-size: 100%;
+// }
