@@ -337,6 +337,397 @@ button.btn-hospitality {
     z-index: 10;
 }
 
+.history-date {
+    &:hover {
+        fill: #A0804F !important;
+    }
+
+}
+
+.history-pointer {
+    &:hover {
+        fill: #A0804F !important;
+    }
+
+}
+
+.menuHistoria {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    // border: 1px solid red;
+    margin-top: 129px;
+    margin-left: -13px;
+    z-index: 20;
+}
+
+.zoneReactive {
+    position: absolute;
+    background-color: transparent;
+    width: 624px;
+    height: 358px;
+    left: -463px;
+    top: -72px;
+    z-index: 1;
+}
+
+.zoneReactive1 {
+    position: absolute;
+    background-color: transparent;
+    width: 150px;
+    height: 130px;
+    left: -44px;
+    top: -28px;
+    z-index: 1;
+}
+
+
+.selected {
+    animation-name: text-animation;
+    animation-duration: 1s;
+}
+
+@keyframes text-animation {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.history-text {
+    transition: all .75s ease-out;
+    animation-name: text-animation;
+}
+
+.item {
+    position: absolute;
+    z-index: 2;
+
+    // cursor: pointer;
+    &:hover {
+        color: #A0804F;
+    }
+}
+
+.item1 {
+    top: 80px;
+    right: 171px;
+}
+
+.item2 {
+    top: -10px;
+    right: 29px;
+}
+
+.item3 {
+    top: -105px;
+    right: 171px;
+}
+
+.item4 {
+    top: 15px;
+    right: 305px;
+}
+
+.item5 {
+    top: 175px;
+    right: 223px;
+}
+
+.item6 {
+    top: -10px;
+    right: 419px;
+}
+
+.item7 {
+    top: -196px;
+    right: 222px;
+}
+
+.item8 {
+    top: -107px;
+    right: 305px;
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1921px) {
+    .zoneReactive {
+        position: absolute;
+        background-color: transparent;
+        width: 754px;
+        height: 358px;
+        left: -463px;
+        top: -72px;
+        z-index: 1;
+    }
+
+    .item1 {
+        top: 80px;
+        right: 254px;
+    }
+
+    .item2 {
+        top: -10px;
+        right: 115px;
+    }
+
+    .item3 {
+        top: -105px;
+        right: 255px;
+    }
+
+    .item4 {
+        top: 15px;
+        right: 385px;
+    }
+
+    .item5 {
+        top: 175px;
+        right: 307px;
+    }
+
+    .item6 {
+        top: -10px;
+        right: 502px;
+    }
+
+    .item7 {
+        top: -196px;
+        right: 306px;
+    }
+
+    .item8 {
+        top: -107px;
+        right: 388px;
+    }
+}
+
+@media screen and (min-width: 1282px) and (max-width: 1367px) {
+    .zoneReactive {
+        position: absolute;
+        background-color: transparent;
+        width: 671px;
+        height: 358px;
+        left: -463px;
+        top: -72px;
+        z-index: 1;
+    }
+
+    .item1 {
+        top: 80px;
+        right: 254px;
+    }
+
+    .item2 {
+        top: -10px;
+        right: 115px;
+    }
+
+    .item3 {
+        top: -105px;
+        right: 255px;
+    }
+
+    .item4 {
+        top: 15px;
+        right: 385px;
+    }
+
+    .item5 {
+        top: 175px;
+        right: 307px;
+    }
+
+    .item6 {
+        top: -10px;
+        right: 502px;
+    }
+
+    .item7 {
+        top: -196px;
+        right: 306px;
+    }
+
+    .item8 {
+        top: -107px;
+        right: 388px;
+    }
+}
+
+@media screen and (min-width: 1370px) and (max-width: 1441px) {
+    .zoneReactive {
+        position: absolute;
+        background-color: transparent;
+        width: 671px;
+        height: 358px;
+        left: -463px;
+        top: -72px;
+        z-index: 1;
+    }
+
+    .item1 {
+        top: 80px;
+        right: 243px;
+    }
+
+    .item2 {
+        top: -10px;
+        right: 103px;
+    }
+
+    .item3 {
+        top: -105px;
+        right: 240px;
+    }
+
+    .item4 {
+        top: 15px;
+        right: 372px;
+    }
+
+    .item5 {
+        top: 175px;
+        right: 294px;
+    }
+
+    .item6 {
+        top: -10px;
+        right: 491px;
+    }
+
+    .item7 {
+        top: -196px;
+        right: 296px;
+    }
+
+    .item8 {
+        top: -107px;
+        right: 375px;
+    }
+}
+
+@media screen and (min-width: 1450px) and (max-width: 1681px) {
+    .zoneReactive {
+        position: absolute;
+        background-color: transparent;
+        width: 671px;
+        height: 358px;
+        left: -463px;
+        top: -72px;
+        z-index: 1;
+    }
+
+    .item1 {
+        top: 80px;
+        right: 206px;
+    }
+
+    .item2 {
+        top: -10px;
+        right: 66px;
+    }
+
+    .item3 {
+        top: -105px;
+        right: 203px;
+    }
+
+    .item4 {
+        top: 15px;
+        right: 335px;
+    }
+
+    .item5 {
+        top: 175px;
+        right: 257px;
+    }
+
+    .item6 {
+        top: -10px;
+        right: 454px;
+    }
+
+    .item7 {
+        top: -196px;
+        right: 259px;
+    }
+
+    .item8 {
+        top: -107px;
+        right: 338px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1281px) {
+    .zoneReactive {
+        position: absolute;
+        background-color: transparent;
+        width: 671px;
+        height: 358px;
+        left: -463px;
+        top: -72px;
+        z-index: 1;
+    }
+
+    .item1 {
+        top: 80px;
+        right: 266px;
+    }
+
+    .item2 {
+        top: -10px;
+        right: 127px;
+    }
+
+    .item3 {
+        top: -105px;
+        right: 268px;
+    }
+
+    .item4 {
+        top: 15px;
+        right: 395px;
+    }
+
+    .item5 {
+        top: 175px;
+        right: 319px;
+    }
+
+    .item6 {
+        top: -10px;
+        right: 515px;
+    }
+
+    .item7 {
+        top: -196px;
+        right: 320px;
+    }
+
+    .item8 {
+        top: -107px;
+        right: 400px;
+    }
+}
+
+
+
 /* home */
 
 .figcaption-text {
@@ -367,97 +758,99 @@ button.btn-hospitality {
         transition: transform 3s ease-out 0s;
     }
 }
+
 /* Farming gallery desktop */
 .main-gallery {
     position: relative;
-  
+
     & .gallery {
-      position: absolute;
-      left: 110px;
-      width: 1550px;
-      height: auto;
-  
-      &-actual img {
-        transition: all 0.9s;
-      }
-  
-      &-preview,
-      &-preview img {
-        transition: all 0.4s;
-        transform: scale(1);
-        border-radius: 4px;
-        box-shadow: none;
-  
-        &:hover {
-          transition: all 0.4s;
-          transform: scale(1.05);
-          border-radius: 4px;
-        }
-      }
-  
-      &-preview-selected {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transition: all 0.4s;
-        transform: translate(-50%, -50%);
-        border-radius: 4px;
-        background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(4px);
-  
-        & img {
-          transition: all 0.7s;
-          opacity: 0;
-          width: 25px;
-          transform: scale(0.5) rotate(-360deg);
+        left: 110px;
+        width: 1550px;
+        height: auto;
+
+        &-actual img {
+            transition: all 0.9s;
         }
-      }
+
+        &-preview,
+        &-preview img {
+            transition: all 0.4s;
+            transform: scale(1);
+            border-radius: 4px;
+            box-shadow: none;
+
+            &:hover {
+                transition: all 0.4s;
+                transform: scale(1.05);
+                border-radius: 4px;
+            }
+        }
+
+        &-preview-selected {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: all 0.4s;
+            transform: translate(-50%, -50%);
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+
+            & img {
+                transition: all 0.7s;
+                opacity: 0;
+                width: 25px;
+                transform: scale(0.5) rotate(-360deg);
+            }
+        }
     }
-    
-  }
-  
-  
+
+}
+
+
 /* Farming gallery  mobile */
 .main-gallery-mobile {
-  
+
     .gallery {
-      &-actual-mobile img {
-        transition: all 0.9s;
-      }
-  
-      &-preview,
-      &-preview img {
-        transition: all 0.4s;
-        transform: scale(1);
-        border-radius: 4px;
-  
-        &:hover,
-        &:active {
-          transition: all 0.4s;
-          transform: scale(1.05);
-          border-radius: 4px;
+        &-actual-mobile img {
+            transition: all 0.9s;
         }
-      }
-  
-      &-preview-selected-mobile {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transition: all 0.4s;
-        transform: translate(-50%, -50%);
-        border-radius: 4px;
-        background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(4px);
-  
-        & img {
-          transition: all 0.7s;
-          opacity: 0;
-          width: 20px;
-          transform: scale(0.5) rotate(-360deg);
+
+        &-preview,
+        &-preview img {
+            transition: all 0.4s;
+            transform: scale(1);
+            border-radius: 4px;
+
+            &:hover,
+            &:active {
+                transition: all 0.4s;
+                transform: scale(1.05);
+                border-radius: 4px;
+            }
         }
-      }
+
+        &-preview-selected-mobile {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: all 0.4s;
+            transform: translate(-50%, -50%);
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+
+            & img {
+                transition: all 0.7s;
+                opacity: 0;
+                width: 20px;
+                transform: scale(0.5) rotate(-360deg);
+            }
+        }
     }
-  }
+}
+
 /* 1366  */
 @media only screen and (max-width: 1366px) {
 
