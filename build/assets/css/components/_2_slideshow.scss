@@ -91,12 +91,14 @@ Usage: codyhouse.co/license
     visibility: hidden;
     background: none;
     height: 100%;
+    transition: all 1s ease-out;
   }
 
   .slideshow__item--selected {
     position: relative;
     z-index: 3;
     visibility: visible;
+    transition: all 1s ease-out;
   }
 }
 
@@ -481,12 +483,27 @@ Usage: codyhouse.co/license
 
 .flechita-izquierda {
   top: 20px;
-  left: 0px !important;
+  left: -5px !important;
+
+  button {
+    &:hover {
+      margin-left: -2px !important;
+      z-index: 999;
+    }
+  }
+
 }
 
 .flechita-derecha {
   top: 20px;
-  right: 0px !important;
+  right: -5px !important;
+
+  button {
+    &:hover {
+      margin-right: -2px !important;
+      z-index: 999;
+    }
+  }
 }
 
 @media screen and (max-width:1024px) {

@@ -7,6 +7,7 @@
   <meta name="robots" content="noindex">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Viña Cobos | Farming</title>
 
   <script src="https://kit.fontawesome.com/f16f463c5c.js" crossorigin="anonymous"
@@ -90,7 +91,7 @@
     <section class="width-100% height-100vh bg-fullscreen flex flex-column justify-between items-center padding-y-xxl"
       style="background-image: url('./assets/img/farming/desktop/farming-hero.png');">
 
-      <div>
+      <div data-aos="fade-down" data-aos-duration="1000">
         <a href="/index.html">
           <svg width="126" height="70" viewBox="0 0 126 70" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_1126_6669)">
@@ -143,7 +144,8 @@
         </a>
       </div>
 
-      <h1 class="color-primary-light text-center text-left@md display@md">Farming and Terroir</h1>
+      <h1 class="color-primary-light text-center text-left@md display@md" data-aos="fade-up" data-aos-duration="1000">
+        Farming and Terroir</h1>
       <h2 class="color-primary-light text-center text-left@md hide@md">Farming and Terroir</h2>
     </section>
     <!-- End Component 1 -->
@@ -152,8 +154,8 @@
 
     <!-- Component 2 -->
     <section class=" width-100% margin-top-xl  max-width-lg margin-x-auto padding-x-sm">
-      <div class="grid margin-y-auto@md bg-white">
-        <div class=" bg-white padding-y-lg padding-y-xl@md padding-x-md padding-x-xl@md">
+      <div class="grid margin-y-auto@md bg-white margin-x-sm">
+        <div class=" bg-white padding-y-lg padding-y-lg@md padding-x-md padding-x-xxl@md">
           <h2 class="display@md">Prácticas agronómicas/Viticultura de calidad para producir viñedos de clase mundial
           </h2>
           <h3 class="hide@md">Prácticas agronómicas/Viticultura de calidad para producir viñedos de clase mundial</h3>
@@ -193,13 +195,13 @@
 
     <!-- Component 3 -->
     <section class="padding-top-xl padding-x-sm max-width-lg margin-x-auto">
-      <div class="slideshow js-slideshow" data-swipe="on">
+      <div class="slideshow js-slideshow slideshow--transition-fade" data-swipe="on">
         <p class="sr-only">Slideshow Items</p>
 
         <ul class="slideshow__content">
 
           <li class="slideshow__item bg-light js-slideshow__item" style="background:none">
-            <div class='container@md max-width-xxl'>
+            <div class='container@md padding-x-sm max-width-xxl'>
               <div class='text-component'><img class="display@md"
                   src="./assets/img/farming/desktop/farming-preview-1.png" alt="farming-cobos">
                 <img class="hide@md" src="./assets/img/farming/farmingCarousel.png" alt="farming-cobos">
@@ -288,14 +290,15 @@
     <!-- Component 4 -->
     <section class="width-100% height-100vh padding-top-md padding-bottom-xxxxl padding-bottom-xxxl@md"
       style="background-color:#000000">
-      <div class="margin-bottom-xl padding-top-md">
+      <div class="margin-bottom-md padding-top-md">
         <h1 class="text-center display@md" style="color:#ffffff"> The vineyards</h1>
         <h2 class="text-center hide@md" style="color:#ffffff"> The vineyards</h2>
       </div>
 
-      <div class="width-100% height-100%@md flex flex-column flex-row@md justify-center items-center gap-x-xxs">
+      <div
+        class="width-100% height-100%@md flex flex-column flex-row@md justify-center items-center gap-x-xs padding-x-sm">
         <a href="farming-chanares.html"
-          class="position-relative bg-fullscreen width-25%@md width-100% padding-x-sm padding-x-0@md height-100% flex flex-column justify-end items-center">
+          class="position-relative bg-fullscreen width-30%@md width-100% padding-x-sm padding-x-0@md height-100% flex flex-column justify-end items-center">
           <article
             class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center"
             style="background-image: url('./assets/img/farming/desktop/sliding-chanares.png');">
@@ -304,7 +307,7 @@
           </article>
         </a>
         <a href="farming-zingaretti.html"
-          class="position-relative bg-fullscreen width-25%@md width-100% padding-x-sm padding-x-0@md height-100% flex flex-column justify-end items-center">
+          class="position-relative bg-fullscreen width-30%@md width-100% padding-x-sm padding-x-0@md height-100% flex flex-column justify-end items-center">
           <article
             class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center"
             style="background-image: url('./assets/img/farming/desktop/sliding-zigaretti.png');">
@@ -313,7 +316,7 @@
           </article>
         </a>
         <a href="farming-marchiori.html"
-          class="position-relative bg-fullscreen width-25%@md width-100% padding-x-sm padding-x-0@md height-100% flex flex-column justify-end items-center">
+          class="position-relative bg-fullscreen width-30%@md width-100% padding-x-sm padding-x-0@md height-100% flex flex-column justify-end items-center">
           <article
             class="position-relative bg-fullscreen width-100% height-100% flex flex-column justify-end items-center"
             style="background-image: url('./assets/img/farming/desktop/sliding-marchiori.png');">
@@ -424,6 +427,10 @@
 
 
   <script src="assets/js/scripts.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

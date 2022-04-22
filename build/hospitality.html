@@ -7,6 +7,7 @@
     <meta name="robots" content="noindex">
     <script>document.getElementsByTagName("html")[0].className += " js";</script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Viña Cobos | Hospitality</title>
 
     <script src="https://kit.fontawesome.com/f16f463c5c.js" crossorigin="anonymous"></script>
@@ -96,7 +97,7 @@
             class="width-100% height-100vh bg-fullscreen flex flex-column justify-between items-center padding-y-xxl"
             style="background-image: url('./assets/img/hospitality/desktop/hospitality-hero.png');">
 
-            <div>
+            <div data-aos="fade-down" data-aos-duration="1000">
                 <a href="/index.html">
                     <svg width="126" height="70" viewBox="0 0 126 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1126_6669)">
@@ -149,7 +150,7 @@
                 </a>
             </div>
 
-            <h1 class="color-primary-light display@md">Visit Us</h1>
+            <h1 class="color-primary-light display@md" data-aos="fade-up" data-aos-duration="1000">Visit Us</h1>
             <h2 class="color-primary-light hide@md">Visit Us</h2>
 
         </section>
@@ -167,17 +168,17 @@
                     </figure>
                 </div>
                 <div class="col-7@md padding-top-lg padding-x-md">
-                    <h1>Tasting
-                        Experiences</h1>
+                    <h1>Tasting </h1>
+                    <h1> Experiences</h1>
                     <div class="margin-y-xxl">
-                        <h5 class="h5-secondary">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam fringilla
-                            leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit vestibulum ipsum nunc
+                        <h5 class="h5-secondary"> at lobortis non nec. Rhoncus eu tellus est purus diam fringilla
+                            leo, augue. Tristique aliquet gravida sollicitudin aNulladipiscing sit vestibulum ipsum nunc
                             duis. Donec aliquet ultricies non tincidunt. Pulvinar lectus eget elementum ultrices. Netus
                             quis leo eget sollicitudin. Velit gravida orci mauris in.
                         </h5>
                     </div>
                     <a href="">
-                        <button class="btn--primary">PROGRAMA DE DEGUSTACIÓN</button>
+                        <button class="btn-program">PROGRAMA DE DEGUSTACIÓN</button>
                     </a>
                 </div>
             </div>
@@ -202,10 +203,9 @@
 
         <!--End component 3-->
         <div class="padding-x-xxxxl@md padding-top-lg padding-x-lg">
-            <p class="h5-secondary text-center">Nulla at lobortis non nec. Rhoncus eu tellus est purus diam fringilla
-                leo, augue. Tristique aliquet gravida sollicitudin adipiscing sit vestibulum ipsum nunc duis. Donec
-                aliquet ultricies non tincidunt. Pulvinar lectus eget elementum ultrices. Netus quis leo eget
-                sollicitudin. Velit gravida orci mauris in.</p>
+            <p class="h5-secondary text-center">En la sala de hospitalidad se reciben visitantes provenientes de
+                diversos países, llegando a su récord, en el año 2019, con 9000 visitas.
+            </p>
         </div>
         <!-- Component 4 -->
         <section class="padding-top-xxl padding-x-xxl@md padding-x-md margin-x-auto min-height-100vh" style="background-image: url('./assets/img/hospitality/desktop/bg-rebon-contact.png');
@@ -503,6 +503,10 @@
     </footer>
 
     <script src="assets/js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

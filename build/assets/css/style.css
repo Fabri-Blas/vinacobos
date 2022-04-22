@@ -14470,11 +14470,33 @@ mark {
   text-transform: uppercase;
   border: 1px solid #1C1C1C;
   background-color: transparent !important;
-  color: #1C1C1C;
+  color: #000000;
   padding: 15px 30px !important;
   transition: all 0.35s ease-in-out;
 }
 .btn-wines-white:hover {
+  background-color: #a0804f !important;
+  border: none;
+}
+
+/* Hospitality */
+.btn-program {
+  font-family: var(--font-secondary) !important;
+  font-size: 12px !important;
+  letter-spacing: 1px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #000000 !important;
+  color: #ffffff;
+  padding: 15px 30px !important;
+  width: 279px;
+  height: 45px;
+  transition: all 0.35s ease-in-out;
+  /* &:focus {
+    box-shadow: 0px 0px 8px rgb(211, 211, 211);
+  } */
+}
+.btn-program:hover {
   background-color: #a0804f !important;
 }
 
@@ -14523,6 +14545,7 @@ mark {
   font-size: 1.4em;
 }
 
+/* Hospitality */
 :root {
   --form-control-font-size: 1em;
   --form-control-padding-x: var(--space-xs);
@@ -14860,6 +14883,15 @@ button.btn-hospitality-active h3 {
 }
 
 /* History */
+.paul-sign {
+  transform: scale(1);
+  transition: transform 1s ease-in-out;
+}
+.paul-sign:hover {
+  transform: scale(1.3);
+  transition: transform 1s ease-in-out;
+}
+
 .history-small-line {
   border-bottom: 0.5px solid #404040;
   width: 18px;
@@ -15426,7 +15458,6 @@ button.btn-hospitality-active h3 {
     align-items: flex-end;
   }
 }
-/* farming */
 .info-line {
   border: 1px solid #dcbd84;
 }
@@ -17086,11 +17117,13 @@ Usage: codyhouse.co/license
   visibility: hidden;
   background: none;
   height: 100%;
+  transition: all 1s ease-out;
 }
 .js .slideshow__item--selected {
   position: relative;
   z-index: 3;
   visibility: visible;
+  transition: all 1s ease-out;
 }
 
 .js .slideshow--transition-fade .slideshow__item {
@@ -17485,12 +17518,20 @@ Usage: codyhouse.co/license
 }
 .flechita-izquierda {
   top: 20px;
-  left: 0px !important;
+  left: -5px !important;
+}
+.flechita-izquierda button:hover {
+  margin-left: -2px !important;
+  z-index: 999;
 }
 
 .flechita-derecha {
   top: 20px;
-  right: 0px !important;
+  right: -5px !important;
+}
+.flechita-derecha button:hover {
+  margin-right: -2px !important;
+  z-index: 999;
 }
 
 @media screen and (max-width: 1024px) {
