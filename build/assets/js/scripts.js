@@ -2640,8 +2640,8 @@ if (window.location.pathname === '/index.html') {
     hospitality.classList.remove('color-subtitle-active');
     shop.classList.remove('color-subtitle-active')
     legal.classList.remove('color-subtitle-active')
-     
-}  
+
+}
 
 if (window.location.pathname === '/history.html') {
     historia.classList.add('color-subtitle-active');
@@ -2652,8 +2652,8 @@ if (window.location.pathname === '/history.html') {
     hospitality.classList.remove('color-subtitle-active');
     shop.classList.remove('color-subtitle-active')
     legal.classList.remove('color-subtitle-active')
-     
-}  
+
+}
 
 if (window.location.pathname === '/identity.html') {
     identity.classList.add('color-subtitle-active');
@@ -2664,8 +2664,8 @@ if (window.location.pathname === '/identity.html') {
     hospitality.classList.remove('color-subtitle-active');
     shop.classList.remove('color-subtitle-active')
     legal.classList.remove('color-subtitle-active')
-     
-}  
+
+}
 
 
 if (window.location.pathname === '/farming.html') {
@@ -2677,8 +2677,8 @@ if (window.location.pathname === '/farming.html') {
     hospitality.classList.remove('color-subtitle-active');
     shop.classList.remove('color-subtitle-active')
     legal.classList.remove('color-subtitle-active')
-     
-}  
+
+}
 
 
 if (window.location.pathname === '/wines.html' || window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/')) === '/wines') {
@@ -2690,8 +2690,8 @@ if (window.location.pathname === '/wines.html' || window.location.pathname.subst
     hospitality.classList.remove('color-subtitle-active');
     shop.classList.remove('color-subtitle-active')
     legal.classList.remove('color-subtitle-active')
-     
-}  
+
+}
 
 
 if (window.location.pathname === '/hospitality.html') {
@@ -2703,8 +2703,8 @@ if (window.location.pathname === '/hospitality.html') {
     home.classList.remove('color-subtitle-active');
     shop.classList.remove('color-subtitle-active')
     legal.classList.remove('color-subtitle-active')
-     
-}  
+
+}
 
 if (window.location.pathname === '/legal.html') {
     legal.classList.add('color-subtitle-active');
@@ -2715,8 +2715,41 @@ if (window.location.pathname === '/legal.html') {
     hospitality.classList.remove('color-subtitle-active');
     shop.classList.remove('color-subtitle-active')
     home.classList.remove('color-subtitle-active')
-     
-}  
+
+}
+
+
+function selectedPage() {
+    if (window.location.pathname.substring(1, window.location.pathname.lastIndexOf('.html')) === 'index') {
+        document.getElementById('pageSelected').innerHTML +=
+            '<div class="bg-black color-white text-vertical width-100% text-uppercase">home</div>'
+    } else if (window.location.pathname.substring(1, window.location.pathname.lastIndexOf('/')) === 'wines') {
+
+        if (window.location.pathname.indexOf('-') === -1) {
+            document.getElementById('pageSelected').innerHTML +=
+                '<div class="bg-black color-white text-vertical width-100% text-uppercase">' +
+                window.location.pathname.substring(7, window.location.pathname.lastIndexOf('.html')) + '</div>'
+        } else if (window.location.pathname.substring(7, window.location.pathname.indexOf('vd'))) {
+            document.getElementById('pageSelected').innerHTML +=
+                '<div class="bg-black color-white text-vertical width-100% text-uppercase">' +
+                window.location.pathname.substring(7, window.location.pathname.indexOf('-')) + '</div>'
+
+        } else {
+            document.getElementById('pageSelected').innerHTML +=
+                '<div class="bg-black color-white text-vertical width-100% text-uppercase">vineyard</div>'
+
+        }
+
+    } else {
+        document.getElementById('pageSelected').innerHTML +=
+            '<div class="bg-black color-white text-vertical width-100% text-uppercase">' +
+            window.location.pathname.substring(1, window.location.pathname.lastIndexOf('.html')) + '</div>'
+    }
+
+}
+
+selectedPage();
+
 if (window.location.pathname === '/history.html') {
 
     const gif = document.getElementById('gif-history')

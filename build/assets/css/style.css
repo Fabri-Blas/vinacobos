@@ -14601,6 +14601,7 @@ mark {
   width: 49px;
   height: 62px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -14633,6 +14634,18 @@ header .animation-header-link {
 }
 header .h4-secondary:hover {
   color: #A0804F !important;
+}
+
+div#pageSelected {
+  margin-left: 2px;
+}
+div#pageSelected .text-vertical {
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
 }
 
 main {
@@ -14685,6 +14698,15 @@ footer i {
 }
 
 /*Inputs - forms  */
+#form-contact input,
+#form-visitas input {
+  height: 30px;
+}
+#form-contact select,
+#form-visitas select {
+  height: 30px;
+}
+
 .input-style {
   font-family: "mulish";
   border: 1px solid #a0a0a0;
@@ -14735,8 +14757,10 @@ button.btn-hospitality {
 button.btn-hospitality-active {
   cursor: pointer;
 }
+button.btn-hospitality-active h2 {
+  color: #A0804F;
+}
 button.btn-hospitality-active h3 {
-  font-size: 48px;
   color: #A0804F;
 }
 

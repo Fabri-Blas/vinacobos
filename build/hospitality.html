@@ -26,7 +26,7 @@
                     </div>
                 </li>
                 <li class="animation-header-link padding-y-sm">
-                    <a href="index.html">
+                    <a href="/index.html">
                         <h4 class="h4-secondary color-subtitle-active color-subtitle padding-left-xxl@md padding-left-xl"
                             id="home">Home</h4>
                     </a>
@@ -73,7 +73,7 @@
                     </a>
                 </li>
                 <li class="animation-header-link padding-y-xxs">
-                    <a href="./legal.html">
+                    <a href="/legal.html">
                         <h4 class="h4-secondary color-subtitle padding-left-xl" id="legal">Legal</h4>
                     </a>
                 </li>
@@ -86,6 +86,8 @@
             <i id="header-toggle-btn" class="header-toggle-btn anim-menu-btn__icon anim-menu-btn__icon--close"
                 aria-hidden="true"></i>
         </button>
+        <div class="width-100% bg-black" id="pageSelected">
+        </div>
     </div>
 
     <main class="width-100% min-height-100vh bg-dark">
@@ -160,8 +162,8 @@
 
         <!-- Component 2 -->
 
-        <section class="width-100% margin-top-xl margin-x-sm max-width-lg margin-x-auto padding-x-xs">
-            <div class="grid col-12 margin-bottom-lg bg-white padding-bottom-lg">
+        <section class="width-100% margin-top-xl margin-x-sm max-width-lg margin-x-auto padding-x-xs padding-x-xl@md">
+            <div class="grid col-12 margin-bottom-lg bg-white padding-bottom-lg padding-bottom-0@md">
                 <div class="col-5@md">
                     <figure>
                         <img src="./assets/img/hospitality/desktop/hospitality-plates.png" alt="hospitality-grapes">
@@ -170,7 +172,7 @@
                 <div class="col-7@md padding-top-lg padding-x-md">
                     <h1>Tasting </h1>
                     <h1> Experiences</h1>
-                    <div class="margin-y-xxl">
+                    <div class="margin-y-xl">
                         <h5 class="h5-secondary"> at lobortis non nec. Rhoncus eu tellus est purus diam fringilla
                             leo, augue. Tristique aliquet gravida sollicitudin aNulladipiscing sit vestibulum ipsum nunc
                             duis. Donec aliquet ultricies non tincidunt. Pulvinar lectus eget elementum ultrices. Netus
@@ -193,40 +195,37 @@
 
         <!--Component 3-->
 
-        <section class="padding-top-xl padding-x-sm@md padding-x-xxs max-width-lg margin-x-auto">
-            <div class="video-bg__media" aria-hidden="true" style="height: 100.1% !important;">
-                <video autoplay loop muted playsInline
-                    src="./assets/img/hospitality/desktop/wine-desktop-shop.mp4"></video>
+        <section class="padding-top-xl padding-x-sm@md padding-x-xxs max-width-lg margin-x-auto flex justify-center">
+            <div class="video-bg__media" aria-hidden="true">
+                <video autoplay loop muted playsInline src="./assets/img/hospitality/desktop/wine-desktop-shop.mp4"
+                    style="height: 630px;"></video>
             </div>
 
         </section>
 
-        <!--End component 3-->
-        <div class="padding-x-xxxxl@md padding-top-lg padding-x-lg">
-            <p class="h5-secondary text-center">En la sala de hospitalidad se reciben visitantes provenientes de
-                diversos países, llegando a su récord, en el año 2019, con 9000 visitas.
-            </p>
-        </div>
         <!-- Component 4 -->
-        <section class="padding-top-xxl padding-x-xxl@md padding-x-md margin-x-auto min-height-100vh" style="background-image: url('./assets/img/hospitality/desktop/bg-rebon-contact.png');
+        <section class="padding-top-xl padding-x-xxl@md padding-x-md margin-x-auto min-height-100vh" style="background-image: url('./assets/img/hospitality/desktop/bg-rebon-contact.png');
         background-position: top right; background-repeat: no-repeat;">
             <div class="grid padding-y-lg">
                 <div class="col-4@md flex flex-column justify-center">
                     <button id="btn-visit" class="btn-hospitality flex flex-column items-center" onclick="visit()">
-                        <h3 class="text-center color-secondary-text">Schedule a visit</h3>
+                        <h2 class="text-center color-secondary-text display@md">Schedule a visit</h2>
+                        <h3 class="text-center color-secondary-text hide@md">Schedule a visit</h3>
                         <hr id="hr-btn-visit" class="hide" style="border: 1px solid #A0804F; width: 121px !important;">
                     </button>
                 </div>
                 <div class="col-4@md flex flex-column justify-center items-center padding-y-md">
                     <button id="btn-contact" class="btn-hospitality-active flex flex-column items-center"
                         onclick="contact(event)">
-                        <h3 class="text-center color-secondary-text">Contact</h3>
+                        <h2 class="text-center color-secondary-text display@md">Contact</h2>
+                        <h3 class="text-center color-secondary-text hide@md">Contact</h3>
                         <hr id="hr-btn-contact" style="border: 1px solid #A0804F; width: 121px !important;">
                     </button>
                 </div>
                 <div class="col-4@md flex flex-column justify-center">
                     <button id="btn-maps" class="btn-hospitality flex flex-column items-center" onclick="maps(event)">
-                        <h3 class="text-center color-secondary-text">Location</h3>
+                        <h3 class="text-center color-secondary-text hide@md">Location</h3>
+                        <h2 class="text-center color-secondary-text display@md">Location</h2>
                         <hr id="hr-btn-maps" class="hide" style="border: 1px solid #A0804F; width: 121px !important;">
                     </button>
                 </div>

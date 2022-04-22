@@ -7,6 +7,7 @@
     width: 49px;
     height: 62px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -44,6 +45,19 @@ header {
         }
     }
 }
+
+div#pageSelected {
+    margin-left: 2px;
+
+    .text-vertical {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        display: flex;
+        align-items: center;
+        padding: 10px 0px;
+    }
+}
+
 
 main {
     z-index: 0;
@@ -98,6 +112,17 @@ footer {
 
 /*Inputs - forms  */
 
+#form-contact,
+#form-visitas {
+    input {
+        height: 30px;
+    }
+
+    select {
+        height: 30px;
+    }
+}
+
 .input-style {
     font-family: 'mulish';
     border: 1px solid #a0a0a0;
@@ -149,8 +174,11 @@ button.btn-hospitality {
     &-active {
         cursor: pointer;
 
+        h2 {
+            color: #A0804F;
+        }
+
         h3 {
-            font-size: 48px;
             color: #A0804F;
         }
     }
