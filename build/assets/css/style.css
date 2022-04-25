@@ -17606,6 +17606,17 @@ Usage: codyhouse.co/license
   margin-bottom: 2em;
 }
 
+.featured-image-box figure figcaption h3 {
+  line-height: normal;
+  margin-bottom: 2em;
+}
+
+@media screen and (max-width: 800px) {
+  .featured-image-box figure figcaption h3 {
+    line-height: normal;
+    margin-bottom: 0px !important;
+  }
+}
 @media (min-width: 992px) {
   .featured-image-box figure figcaption h2 {
     font-size: 1.675rem;
@@ -17761,9 +17772,10 @@ Usage: codyhouse.co/license
   margin: 0;
 }
 
-.featured-image-box.overlay_style_1 figure figcaption h2 {
+.featured-image-box.overlay_style_1 figure figcaption h2,
+.featured-image-box.overlay_style_1 figure figcaption h3 {
   transform: translateY(0);
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .featured-image-box.overlay_style_1 figure figcaption .featured-image-link-arrow {
@@ -17775,12 +17787,30 @@ Usage: codyhouse.co/license
   transition: opacity 1s ease 0s, transform 1s ease 0s;
 }
 
-.featured-image-box.overlay_style_1:hover figcaption h2 {
+.featured-image-box.overlay_style_1 figure figcaption svg.featured-image-link-arrow {
+  display: none;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  color: #A0804F;
+  opacity: 0;
+  position: relative;
+  z-index: 3;
+  transition: opacity 1s ease 0s, transform 1s ease 0s;
+}
+
+.featured-image-box.overlay_style_1:hover figcaption h2,
+.featured-image-box.overlay_style_1:hover figcaption h3 {
   transform: translateY(20px);
 }
 
-.featured-image-box.overlay_style_1:hover figcaption p {
-  transform: translateY(-40px);
+.featured-image-box.overlay_style_1:hover figcaption h5,
+.featured-image-box.overlay_style_1:hover figcaption svg {
+  transform: translateY(0px);
+  -webkit-animation-name: text-animation;
+          animation-name: text-animation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   opacity: 1;
 }
 
