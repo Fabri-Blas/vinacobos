@@ -118,6 +118,10 @@ function selectedPage() {
 
         }
 
+    } else if (window.location.pathname.substring(1, window.location.pathname.lastIndexOf('-')) === 'farming') {
+        document.getElementById('pageSelected').innerHTML +=
+            '<div class="bg-black color-white text-vertical width-100% text-uppercase font-secondary">farming</div>'
+
     } else {
         document.getElementById('pageSelected').innerHTML +=
             '<div class="bg-black color-white text-vertical width-100% text-uppercase font-secondary">' +
