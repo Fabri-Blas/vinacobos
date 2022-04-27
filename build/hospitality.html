@@ -19,16 +19,12 @@
     <header>
         <div class="grid">
             <ul class="col-9@md">
-                <li class="animation-header-link padding-y-sm">
-                    <div class="flex">
-                        <h5 class="h5-secondary color-subtitle padding-left-xxl@md padding-left-xl" id="en">EN</h5>
-                        <h5 class="h5-secondary color-subtitle padding-left-xs" id="es">ES</h5>
-                    </div>
-                </li>
+
                 <li class="animation-header-link padding-y-sm">
                     <a href="/index.html">
                         <h4 class="h4-secondary color-subtitle-active color-subtitle padding-left-xxl@md padding-left-xl"
-                            id="home">Home</h4>
+                            id="home">
+                            Home</h4>
                     </a>
                 </li>
 
@@ -48,7 +44,8 @@
                 <li class="animation-header-link padding-y-sm">
                     <a href="/farming.html">
                         <h4 class="h4-secondary color-subtitle padding-left-xxl@md padding-left-xl" id="farming">Farming
-                            &amp; Terroir</h4>
+                            &amp;
+                            Terroir</h4>
                     </a>
                 </li>
                 <li class="animation-header-link padding-y-sm">
@@ -60,21 +57,33 @@
                 <li class="animation-header-link padding-y-sm">
                     <a href="/hospitality.html">
                         <h4 class="h4-secondary color-subtitle padding-left-xxl@md padding-left-xl" id="hospitality">
-                            Hospitality &amp; Contact
+                            Hospitality
+                            &amp; Contact
                         </h4>
                     </a>
                 </li>
             </ul>
 
             <ul class="col-3@md margin-top-lg padding-top-md">
+                <li class="animation-header-link padding-y-sm">
+                    <div class="flex">
+                        <h5 class="h5-secondary color-subtitle padding-left-xl" id="en">EN</h5>
+                        <h5 class="h5-secondary color-subtitle padding-left-xs" id="es">ES</h5>
+                    </div>
+                </li>
                 <li class="animation-header-link padding-y-xxs">
                     <a href="https://tienda.vinacobos.com/">
                         <h4 class="h4-secondary color-subtitle padding-left-xl" id="shop">Shop</h4>
                     </a>
                 </li>
                 <li class="animation-header-link padding-y-xxs">
-                    <a href="/legal.html">
+                    <a href="./legal.html">
                         <h4 class="h4-secondary color-subtitle padding-left-xl" id="legal">Legal</h4>
+                    </a>
+                </li>
+                <li class="animation-header-link padding-y-xxs">
+                    <a href="./legal.html">
+                        <h4 class="h4-secondary color-subtitle padding-left-xl" id="legal">Suppliers</h4>
                     </a>
                 </li>
             </ul>
@@ -207,19 +216,21 @@
         <section class="padding-top-xl padding-x-xxl@md padding-x-md margin-x-auto min-height-100vh" style="background-image: url('./assets/img/hospitality/desktop/bg-rebon-contact.png');
         background-position: top right; background-repeat: no-repeat;">
             <div class="grid padding-y-lg">
-                <div class="col-4@md flex flex-column justify-center">
-                    <button id="btn-visit" class="btn-hospitality flex flex-column items-center" onclick="visit()">
-                        <h2 class="text-center color-secondary-text display@md">Schedule a visit</h2>
-                        <h3 class="text-center color-secondary-text hide@md">Schedule a visit</h3>
-                        <hr id="hr-btn-visit" class="hide" style="border: 1px solid #A0804F; width: 121px !important;">
-                    </button>
-                </div>
                 <div class="col-4@md flex flex-column justify-center items-center padding-y-md">
-                    <button id="btn-contact" class="btn-hospitality-active flex flex-column items-center"
+                    <button id="btn-contact" class="btn-hospitality flex flex-column items-center"
                         onclick="contact(event)">
                         <h2 class="text-center color-secondary-text display@md">Contact</h2>
                         <h3 class="text-center color-secondary-text hide@md">Contact</h3>
-                        <hr id="hr-btn-contact" style="border: 1px solid #A0804F; width: 121px !important;">
+                        <hr id="hr-btn-contact" class="hide"
+                            style="border: 1px solid #A0804F; width: 121px !important;">
+                    </button>
+                </div>
+                <div class="col-4@md flex flex-column justify-center">
+                    <button id="btn-visit" class="btn-hospitality-active flex flex-column items-center"
+                        onclick="visit()">
+                        <h2 class="text-center color-secondary-text display@md">Schedule a visit</h2>
+                        <h3 class="text-center color-secondary-text hide@md">Schedule a visit</h3>
+                        <hr id="hr-btn-visit" style="border: 1px solid #A0804F; width: 121px !important;">
                     </button>
                 </div>
                 <div class="col-4@md flex flex-column justify-center">
@@ -231,7 +242,7 @@
                 </div>
             </div>
 
-            <section id="form-contact">
+            <section id="form-contact" class="hide">
                 <div class="grid gap-x-lg padding-bottom-lg">
                     <div class="col-6@md padding-x-sm">
                         <label class="h6-secondary padding-left-lg">
@@ -270,7 +281,7 @@
                 </div>
             </section>
 
-            <section id="form-visitas" class="hide">
+            <section id="form-visitas">
                 <div id="form-visitas-div" class="">
                     <form class="contacto grid gap-md" action="" method="POST">
                         <div class="col-6@md flex flex-column justify-center">
@@ -419,7 +430,7 @@
         <div class="grid padding-x-md padding-x-xl@md width-100% max-width-xxl margin-x-auto">
 
             <div class="col-12 col-7@md">
-                <h3 class="h3-secondary text-uppercase max-width-xxs">El origen<br>nos determina</h3>
+                <h3 class="h3-secondary text-uppercase max-width-xxs">Rooted in our<br>origins</h3>
             </div>
 
             <div class="col-12 col-5@md grid">

@@ -14219,9 +14219,15 @@ html:not(.js) .no-js\:is-hidden {
   font-weight: 600;
   src: url("../fonts/Montserrat/Montserrat-Semibold.ttf");
 }
+@font-face {
+  font-family: "Taviraj-italic";
+  font-weight: 300;
+  src: url(../../fonts/Taviraj/Taviraj-LightItalic.ttf);
+}
 :root {
   --font-primary: Taviraj;
   --font-secondary: Montserrat;
+  --font-italic: Taviraj-italic;
   --text-base-size: 1em;
   --text-scale-ratio: 1.333;
   --body-line-height: 1.4;
@@ -14234,7 +14240,7 @@ html:not(.js) .no-js\:is-hidden {
 * {
   --text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
   --text-sm: 12px;
-  --text-base: 16px;
+  --text-base: 15px;
   --text-md: 21px;
   --text-lg: 28px;
   --text-xl: 38px;
@@ -14343,6 +14349,10 @@ h6 {
 .font-secondary-semibold {
   font-family: var(--font-secondary);
   font-weight: 600;
+}
+
+.font-italic {
+  font-family: --font-italic !important;
 }
 
 .color-secondary-darker {
@@ -14645,7 +14655,7 @@ div#pageSelected .text-vertical {
   transform: rotate(180deg);
   display: flex;
   align-items: center;
-  padding: 10px 0px;
+  padding: 30px 0px 10px 0px;
 }
 
 main {
@@ -15482,6 +15492,13 @@ button.btn-hospitality-active h3 {
     align-items: flex-end;
   }
 }
+.flechas-farming-derecha:hover svg {
+  right: 20px;
+}
+.flechas-farming-izquierda:hover svg {
+  left: 20px;
+}
+
 .info-line {
   border: 1px solid #dcbd84;
 }

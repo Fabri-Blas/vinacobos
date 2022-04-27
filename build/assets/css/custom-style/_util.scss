@@ -54,7 +54,7 @@ div#pageSelected {
         transform: rotate(180deg);
         display: flex;
         align-items: center;
-        padding: 10px 0px;
+        padding: 30px 0px 10px 0px;
     }
 }
 
@@ -956,5 +956,20 @@ button.btn-hospitality {
         width: 38%;
         margin-left: 25px;
         align-items: flex-end;
+    }
+}
+
+.flechas-farming {
+    &-derecha:hover {
+        svg {
+            right: 20px;
+        }
+    }
+
+    &-izquierda:hover {
+        svg {
+            left: 20px;
+        }
+
     }
 }
