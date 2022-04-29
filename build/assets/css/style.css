@@ -14255,6 +14255,12 @@ html:not(.js) .no-js\:is-hidden {
     --text-scale-ratio: 1.333;
   }
 }
+@media screen and (min-width: 1919px) {
+  :root,
+* {
+    --text-base: 17px;
+  }
+}
 h1,
 h2,
 h3,
@@ -14922,7 +14928,7 @@ button.btn-hospitality-active h3 {
   transition: transform 1s ease-in-out;
 }
 .paul-sign:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
   transition: transform 1s ease-in-out;
 }
 

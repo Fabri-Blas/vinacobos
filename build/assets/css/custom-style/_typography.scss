@@ -85,6 +85,15 @@
     --text-base-size: 1em;
     --text-scale-ratio: 1.333;
   }
+
+}
+
+@media screen and (min-width:1919px) {
+  :root,
+* {
+  --text-base: 17px;
+}
+  
 }
 
 h1,
