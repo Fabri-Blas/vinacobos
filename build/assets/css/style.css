@@ -18378,6 +18378,7 @@ mark {
 }
 .btn-wines-black:hover {
   background-color: #a0804f !important;
+  border: none;
 }
 
 .btn-wines-white {
@@ -18395,6 +18396,7 @@ mark {
 .btn-wines-white:hover {
   background-color: #a0804f !important;
   border: none;
+  color: #ffffff;
 }
 
 /* Hospitality */
