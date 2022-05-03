@@ -18032,8 +18032,31 @@ html:not(.js) .no-js\:is-hidden {
 }
 .color-subtitle:hover {
   color: #A0804F;
+  cursor: pointer;
 }
 .color-subtitle-active {
+  color: #BC9559;
+}
+
+.color-subtitle-2 {
+  color: #878581;
+}
+.color-subtitle-2:hover {
+  color: #A0804F;
+  cursor: pointer;
+}
+.color-subtitle-2-active {
+  color: #BC9559;
+}
+
+.color-language {
+  color: #F1EEE9;
+}
+.color-language:hover {
+  color: #A0804F;
+  cursor: pointer;
+}
+.color-language-active {
   color: #BC9559;
 }
 
@@ -18162,6 +18185,10 @@ html:not(.js) .no-js\:is-hidden {
 * {
     --text-base: 17px;
   }
+
+  h5 {
+    line-height: 25px !important;
+  }
 }
 h1,
 h2,
@@ -18197,7 +18224,7 @@ h4 {
 
 h5 {
   font-size: var(--text-base);
-  line-height: 21.68px;
+  line-height: 23px;
 }
 
 h6 {
@@ -18558,6 +18585,7 @@ header .h4-secondary:hover {
 
 div#pageSelected {
   margin-left: 2px;
+  cursor: pointer;
 }
 div#pageSelected .text-vertical {
   -ms-writing-mode: tb-lr;
@@ -19481,6 +19509,7 @@ Usage: codyhouse.co/license
   transition: all 0.5s ease-in-out;
   color: white;
   padding: 35px 0px;
+  cursor: pointer;
 }
 
 .anim-menu-btn__icon {

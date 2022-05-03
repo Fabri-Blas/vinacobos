@@ -239,6 +239,36 @@
 
 &:hover{
   color:#A0804F;
+  cursor:pointer;
+}
+&-active{
+  color: #BC9559;
+}
+  
+}
+
+.color-subtitle-2 {
+
+  color: #878581;
+
+&:hover{
+  color:#A0804F;
+  cursor:pointer;
+}
+&-active{
+  color: #BC9559;
+}
+  
+}
+
+
+.color-language {
+
+  color: #F1EEE9;
+
+&:hover{
+  color:#A0804F;
+  cursor:pointer;
 }
 &-active{
   color: #BC9559;

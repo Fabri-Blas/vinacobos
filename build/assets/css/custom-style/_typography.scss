@@ -85,15 +85,18 @@
     --text-base-size: 1em;
     --text-scale-ratio: 1.333;
   }
-
 }
 
 @media screen and (min-width:1919px) {
+
   :root,
-* {
-  --text-base: 17px;
-}
-  
+  * {
+    --text-base: 17px;
+  }
+
+  h5 {
+    line-height: 25px !important;
+  }
 }
 
 h1,
@@ -130,7 +133,7 @@ h4 {
 
 h5 {
   font-size: var(--text-base);
-  line-height: 21.68px;
+  line-height: 23px;
 }
 
 h6 {
