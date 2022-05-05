@@ -1,0 +1,183 @@
+@use "../base"as *;
+
+// --------------------------------
+
+// (START) Global editor code https://codyhouse.co/ds/globals/buttons
+
+// --------------------------------
+
+:root {
+  --btn-font-size: 1em;
+  --btn-padding-x: var(--space-sm);
+  --btn-padding-y: var(--space-xxs);
+  --btn-radius: var(--radius-md);
+}
+
+.btn {
+  background: var(--color-bg-dark);
+  color: var(--color-contrast-higher);
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.2;
+  @include fontSmooth;
+  transition: all 0.2s ease;
+  will-change: transform;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px alpha(var(--color-contrast-higher), 0.15);
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+// themes
+.btn--primary {
+  font-family: var(--font-secondary) !important;
+  font-size: 12px !important;
+  letter-spacing: 1px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  background-color: #000000 !important;
+  color: #ffffff;
+  padding: 15px 30px !important;
+  transition: all 0.35s ease-in-out;
+
+  &:hover {
+    background-color: #a0804f !important;
+  }
+
+  /* &:focus {
+    box-shadow: 0px 0px 8px rgb(211, 211, 211);
+  } */
+}
+
+.btn-wines-black {
+  font-family: var(--font-secondary) !important;
+  font-size: 12px !important;
+  letter-spacing: 1px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid white;
+
+  background-color: transparent !important;
+  color: #ffffff;
+  padding: 15px 30px !important;
+  transition: all 0.35s ease-in-out;
+
+  &:hover {
+    background-color: #a0804f !important;
+    border:none;
+  }
+
+}
+
+.btn-wines-white {
+  font-family: var(--font-secondary) !important;
+  font-size: 12px !important;
+  letter-spacing: 1px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid #1C1C1C;
+
+  background-color: transparent !important;
+  color: #000000;
+  padding: 15px 30px !important;
+  transition: all 0.35s ease-in-out;
+
+  &:hover {
+    background-color: #a0804f !important;
+    border:none;
+    color:#ffffff;
+  }
+
+}
+
+/* Hospitality */
+.btn-program {
+  font-family: var(--font-secondary) !important;
+  font-size: 12px !important;
+  letter-spacing: 1px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  background-color: #000000 !important;
+  color: #ffffff;
+  padding: 15px 30px !important;
+  width:279px;
+  height:45px;
+  transition: all 0.35s ease-in-out;
+
+  &:hover {
+    background-color: #a0804f !important;
+  }
+
+  /* &:focus {
+    box-shadow: 0px 0px 8px rgb(211, 211, 211);
+  } */
+}
+
+.btn--subtle {
+  background: var(--color-bg-light);
+  color: var(--color-contrast-higher);
+  box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower), var(--shadow-xs);
+
+  &:hover {
+    background: var(--color-bg-lighter);
+    box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower), var(--shadow-sm);
+  }
+
+  &:focus {
+    box-shadow: inset 0px 0px 0px 1px var(--color-contrast-lower),
+      0px 0px 0px 2px alpha(var(--color-contrast-higher), 0.05);
+  }
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), var(--shadow-xs);
+
+  &:hover {
+    background: var(--color-accent-light);
+    box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), var(--shadow-sm);
+  }
+
+  &:focus {
+    box-shadow: inset 0px 1px 0px alpha(var(--color-white), 0.15), 0px 0px 0px 2px alpha(var(--color-accent), 0.2);
+  }
+}
+
+// feedback
+.btn--disabled,
+.btn[disabled],
+.btn[readonly] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+// size
+.btn--sm {
+  font-size: 0.8em;
+}
+
+.btn--md {
+  font-size: 1.2em;
+}
+
+.btn--lg {
+  font-size: 1.4em;
+}
+
+/* Hospitality */
+
+
+
+// --------------------------------
+
+// (END) Global editor code
+
+// --------------------------------

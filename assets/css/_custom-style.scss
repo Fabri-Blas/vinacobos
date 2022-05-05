@@ -1,0 +1,42 @@
+// --------------------------------
+
+// Custom Style - Your bespoke style
+
+// --------------------------------
+
+@use "custom-style/colors";
+@use "custom-style/spacing";
+@use "custom-style/shared-styles";
+@use "custom-style/typography";
+@use "custom-style/icons";
+@use "custom-style/buttons";
+@use "custom-style/forms";
+@use "custom-style/util";
+
+// ======== PAGES ========
+@use "custom-style/pages/chanares.scss";
+@use "custom-style/pages/farming.scss";
+
+/*! purgecss start ignore */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: none;
+    background: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+}
